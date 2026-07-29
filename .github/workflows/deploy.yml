@@ -9,19 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via SFTP
+        uses: wangyucode/sftp-upload-action@v2.0.2
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/football-passion/
-          local-dir: ./
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/**
-            **/.DS_Store
-            **/*.md
+          port: 22
+          local_path: './*'
+          remote_path: '/public_html/football-passion/'
+          overwrite: true
+          delete: false

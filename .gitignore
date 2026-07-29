@@ -1,0 +1,35 @@
+# Config sensibles
+config/db.php
+config/api-keys.php
+.env
+.env.local
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error_log
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (si Tailwind CLI)
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# Dépendances (si besoin composer)
+vendor/
+composer.lock

@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Ligue 1", "slug": "ligue-1", "description": "Ligue 1 - Championnat de France" },
+  { "id": 2, "name": "Ligue 2", "slug": "ligue-2", "description": "Ligue 2 - Deuxième division française" },
+  { "id": 3, "name": "Champions League", "slug": "champions-league", "description": "Ligue des Champions" },
+  { "id": 4, "name": "Europa League", "slug": "europa-league", "description": "Ligue Europa" },
+  { "id": 5, "name": "Euro", "slug": "euro", "description": "Championnat d'Europe" },
+  { "id": 6, "name": "Coupe du Monde", "slug": "coupe-du-monde", "description": "Coupe du Monde FIFA" },
+  { "id": 7, "name": "CAN", "slug": "can", "description": "Coupe d'Afrique des Nations" },
+  { "id": 8, "name": "France", "slug": "france", "description": "Équipe de France" }
+]

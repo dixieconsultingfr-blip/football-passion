@@ -1,4 +1,5 @@
 <?php
+// Hub evergreen football - Accueil
 // Charger les données
 $articles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
 $categories = json_decode(file_get_contents(__DIR__ . '/data/categories.json'), true) ?? [];

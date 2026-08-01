@@ -138,6 +138,13 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - Étapes côté Hostinger (hPanel → Avancé → Git) : dépôt `https://github.com/dixieconsultingfr-blip/football-passion.git`, branche `deploy`, répertoire d'installation laissé vide (déploiement direct dans `public_html`).
 - **Reste à faire côté utilisateur** : finaliser la connexion du dépôt dans hPanel, récupérer l'URL de webhook générée par Hostinger, l'ajouter comme secret GitHub `HOSTINGER_WEBHOOK_URL` sur le repo `football-passion`.
 
+### 3.18 Finalisation du déploiement Git automatique
+- Dépôt Git connecté avec succès dans hPanel (public_html vidé au préalable côté serveur — condition requise par Hostinger : "Project directory is not empty" sinon).
+- Secret GitHub `HOSTINGER_WEBHOOK_URL` ajouté par l'utilisateur (URL nettoyée des paramètres de tracking marketing parasites — `?_gl=...&_gcl_aw=...` etc. — copiés par erreur depuis la barre d'adresse ; seule la partie `https://webhooks.hostinger.com/deploy/<id>` est le vrai endpoint).
+- Premier essai après ajout du secret : échec HTTP 400. Diagnostic par tests `curl` manuels directement sur le webhook : la requête échoue sans header `Content-Type`, réussit (`200`) avec `-H "Content-Type: application/json" -d '{}'`.
+- `deploy.yml` corrigé en conséquence (ajout du header et d'un corps JSON vide à l'appel `curl`).
+- ⚠️ Rappel : `config/secrets.php` (clé Turnstile) doit être re-uploadé manuellement sur Hostinger après le premier déploiement Git, puisqu'il n'est pas suivi par git et que `public_html` a été vidé.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

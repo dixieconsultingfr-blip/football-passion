@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: 🔔 Notify Hostinger webhook
         run: |
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.HOSTINGER_WEBHOOK_URL }}")
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" -d '{}' "${{ secrets.HOSTINGER_WEBHOOK_URL }}")
           echo "Hostinger webhook response: $HTTP_CODE"
           if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
             echo "✅ Déploiement déclenché avec succès"

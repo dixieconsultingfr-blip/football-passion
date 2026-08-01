@@ -194,6 +194,8 @@ Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à v
 
 **Workflow à construire** : `Football Passion — Récupération matchs`, sur le même principe que `CDM 2026 — Récupération matchs` (instance self-hébergée `https://n8n.srv814711.hstgr.cloud`).
 
+📄 **Guide détaillé node par node (avec code JavaScript prêt à copier-coller)** : voir `guide-n8n-workflow.md` à la racine du projet.
+
 **⚠️ Différence clé avec CDM 2026** : football-data.org gratuit ne couvre pas correctement les matchs amicaux de l'équipe de France hors grands tournois (WC/EC). La branche "France" du workflow devra donc rester **alimentée manuellement** dans un premier temps (ou explorer une source alternative), contrairement aux branches L1/L2/CL/Europa qui peuvent être 100% automatiques.
 
 **Construction du workflow (étape par étape) :**

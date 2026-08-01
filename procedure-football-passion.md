@@ -152,6 +152,11 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Limite identifiée** : football-data.org gratuit ne couvre pas bien les matchs amicaux de l'équipe de France hors grands tournois — cette branche restera manuelle pour l'instant.
 - **Non fait par Claude** : la construction du workflow n8n lui-même (pas d'accès API/credentials à l'instance n8n dans cette session) — à faire par l'utilisateur dans l'interface n8n en suivant le guide, ou lors d'une session future avec accès approprié.
 
+### 3.20 Guide n8n détaillé
+- Création de **`guide-n8n-workflow.md`** (racine, documentation uniquement) : guide node par node pour construire le workflow n8n dans l'interface — Schedule Trigger, 4 nœuds HTTP Request (L1/L2/CL/EL), Merge (Append), nœud Code de transformation (code JS fourni intégralement), nœud GitHub "Get file", nœud Code de comparaison `hasUpdate` (code JS fourni), nœud IF, nœud GitHub "Edit file" (commit conditionnel).
+- Prérequis credentials documentés : Header Auth football-data.org (réutilisation du même token que CDM 2026, attention à la limite globale 10 req/min tous projets confondus), GitHub PAT (probablement déjà réutilisable depuis le credential CDM 2026 si scope `repo` classique).
+- Référencé depuis `CLAUDE.md`.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

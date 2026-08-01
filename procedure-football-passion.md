@@ -145,6 +145,13 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - `deploy.yml` corrigé en conséquence (ajout du header et d'un corps JSON vide à l'appel `curl`).
 - ⚠️ Rappel : `config/secrets.php` (clé Turnstile) doit être re-uploadé manuellement sur Hostinger après le premier déploiement Git, puisqu'il n'est pas suivi par git et que `public_html` a été vidé.
 
+### 3.19 Page calendrier + préparation automatisation n8n
+- Création de **`calendrier.php`** : page listant "Prochains matchs" et "Derniers résultats", filtrable par compétition (L1, L2, CL, Europa, France), à partir de `data/matchs.json`. Gère l'état vide proprement (fichier actuellement `[]`).
+- Schéma de `data/matchs.json` documenté dans `CLAUDE.md` (`competition`, `domicile`, `exterieur`, `date`, `heure`, `stade`, `status`, `score_dom`, `score_ext`).
+- Guide de construction du workflow n8n documenté dans `CLAUDE.md` (section "n8n — Automation"), sur le modèle de CDM 2026 : Schedule Trigger 5 min, appels football-data.org (FL1/FL2/CL/EL), transformation vers le schéma du projet, comparaison `hasUpdate` avant commit (garde-fou anti-quota), commit GitHub direct sur `deploy` → déploiement auto via le webhook Hostinger désormais fonctionnel.
+- **Limite identifiée** : football-data.org gratuit ne couvre pas bien les matchs amicaux de l'équipe de France hors grands tournois — cette branche restera manuelle pour l'instant.
+- **Non fait par Claude** : la construction du workflow n8n lui-même (pas d'accès API/credentials à l'instance n8n dans cette session) — à faire par l'utilisateur dans l'interface n8n en suivant le guide, ou lors d'une session future avec accès approprié.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

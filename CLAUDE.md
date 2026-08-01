@@ -150,6 +150,29 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ---
 
+## 📅 Structure d'un match (data/matchs.json)
+
+Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à venir, décroissant pour les résultats — géré côté PHP, pas besoin de trier le fichier).
+
+```json
+{
+  "id": 1,
+  "competition": "L1 | L2 | CL | Europa | France",
+  "domicile": "Paris Saint-Germain",
+  "exterieur": "Olympique de Marseille",
+  "date": "2026-08-15",
+  "heure": "21:00",
+  "stade": "Parc des Princes",
+  "status": "SCHEDULED | LIVE | FINISHED",
+  "score_dom": null,
+  "score_ext": null
+}
+```
+
+- `status: FINISHED` + `score_dom`/`score_ext` renseignés → apparaît dans "Derniers résultats"
+- Sinon → apparaît dans "Prochains matchs"
+- `id` unique et stable (utile pour que n8n sache quelle entrée mettre à jour plutôt que dupliquer)
+
 ## 🔄 Données en direct
 
 ### football-data.org
@@ -169,10 +192,30 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ### n8n — Automation
 
-**Workflow** : récupère données football-data.org toutes les 5 min
-- Branches : scores L1/L2/CL/Europa, posts Facebook auto
-- Commit direct sur `data/matchs.json` via GitHub
-- **Garde-fous** : ne committe que si changement réel (sinon épuise quota GitHub Actions)
+**Workflow à construire** : `Football Passion — Récupération matchs`, sur le même principe que `CDM 2026 — Récupération matchs` (instance self-hébergée `https://n8n.srv814711.hstgr.cloud`).
+
+**⚠️ Différence clé avec CDM 2026** : football-data.org gratuit ne couvre pas correctement les matchs amicaux de l'équipe de France hors grands tournois (WC/EC). La branche "France" du workflow devra donc rester **alimentée manuellement** dans un premier temps (ou explorer une source alternative), contrairement aux branches L1/L2/CL/Europa qui peuvent être 100% automatiques.
+
+**Construction du workflow (étape par étape) :**
+
+1. **Schedule Trigger** — toutes les 5 minutes (identique à CDM 2026)
+2. **HTTP Request** — un nœud par compétition à suivre :
+   - `https://api.football-data.org/v4/competitions/FL1/matches` (Ligue 1)
+   - `https://api.football-data.org/v4/competitions/FL2/matches` (Ligue 2)
+   - `https://api.football-data.org/v4/competitions/CL/matches` (Champions League)
+   - `https://api.football-data.org/v4/competitions/EL/matches` (Europa League)
+   - Header requis : `X-Auth-Token` (même clé que CDM 2026, `config/api-keys.php` de ce projet — **ne pas dupliquer la clé en clair dans n8n**, utiliser les credentials n8n)
+   - ⚠️ Limite 10 req/min tier gratuit — avec 4 compétitions + Schedule Trigger toutes les 5 min, ça passe large. Si on ajoute France plus tard, vérifier le total.
+3. **Function/Code node** — transformer chaque réponse API vers le schéma `matchs.json` du projet (voir section "Structure d'un match" ci-dessus) : mapper `homeTeam.name` → `domicile`, `awayTeam.name` → `exterieur`, `utcDate` → `date`+`heure`, `status` FIFA → `status` du projet, `score.fullTime.home/away` → `score_dom`/`score_ext`, ajouter `"competition": "L1"` (ou L2/CL/Europa) en dur selon la branche.
+4. **Merge** — fusionner les 4 branches en un seul tableau
+5. **Comparaison `hasUpdate`** — **obligatoire**, sur le modèle du garde-fou CDM 2026 : récupérer le `data/matchs.json` actuel (nœud GitHub "Get file"), comparer au nouveau tableau construit. Si identique → **ne rien committer** (sinon épuisement du quota GitHub Actions, incident déjà vécu sur CDM 2026 en juin 2026).
+6. **IF `hasUpdate === true`** → nœud GitHub "Edit file" : commit direct sur `data/matchs.json`, branche `deploy`, repo `football-passion`
+7. Le commit déclenche automatiquement `.github/workflows/deploy.yml` → webhook Hostinger → site à jour en ~1-2 min
+
+**Garde-fous obligatoires** (reproduire le pattern CDM 2026) :
+- Ne committer que si changement réel (étape 5-6 ci-dessus)
+- Toujours écrire le JSON sans BOM
+- `id` de chaque match stable dans le temps pour permettre les mises à jour (pas de recréation à chaque run)
 
 ---
 

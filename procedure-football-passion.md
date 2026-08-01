@@ -125,6 +125,19 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - Repository nettoyé : anciens fichiers racine (pré-réorganisation) supprimés du suivi git, contenu de `public_html/` ajouté.
 - **Reste à faire côté utilisateur** : vérifier/configurer les secrets GitHub Actions `FTP_SERVER`, `FTP_USER`, `FTP_PASSWORD` (Settings → Secrets and variables → Actions du repo `football-passion`) avec les identifiants SFTP Hostinger, pour que le déploiement automatique fonctionne réellement.
 
+### 3.16 Abandon de la structure public_html/ — retour à plat (comme CDM 2026)
+- Constat après le premier échec de déploiement (voir 3.15) : Hostinger propose une intégration Git native (hPanel → Avancé → Git), identique au mécanisme utilisé par coupe-du-monde-2026.info, bien plus fiable que SFTP.
+- Contrainte de cette intégration : elle clone l'intégralité du dépôt tel quel dans le dossier `public_html` du serveur. Avec un dossier `public_html/` imbriqué dans le dépôt local, ça aurait créé `public_html/public_html/index.php` sur le serveur — cassé.
+- Deux options proposées à l'utilisateur : (a) revenir à une structure à plat comme CDM 2026, ou (b) garder `public_html/` localement avec une branche Git technique séparée (`git subtree`) ne contenant que ce sous-dossier.
+- **Décision : option (a)**, structure à plat. Tous les fichiers (`index.php`, `templates/`, `data/`, `images/`, `blog/`, `config/`, pages) déplacés de `public_html/` vers la racine du dépôt via `git mv` (historique préservé), `config/secrets.php` déplacé manuellement (non suivi par git).
+- Fichiers mis à jour en conséquence : `.gitignore` (`public_html/config/secrets.php` → `config/secrets.php`), `CLAUDE.md` (règle d'emplacement des fichiers entièrement réécrite, arborescence à jour).
+- `contact-send.php` n'a nécessité aucune modification de code : son `require __DIR__ . '/config/secrets.php'` reste valide puisque `config/` s'est déplacé avec lui.
+
+### 3.17 Remplacement SFTP → intégration Git native Hostinger
+- `.github/workflows/deploy.yml` réécrit pour abandonner `wangyucode/sftp-upload-action` (7 tentatives échouées : `Timed out while waiting for handshake` — port 22 probablement incorrect pour Hostinger mutualisé) au profit d'un simple `curl -X POST` vers un **webhook Hostinger** (secret GitHub `HOSTINGER_WEBHOOK_URL`), stratégie identique à `coupe-du-monde-2026.info`.
+- Étapes côté Hostinger (hPanel → Avancé → Git) : dépôt `https://github.com/dixieconsultingfr-blip/football-passion.git`, branche `deploy`, répertoire d'installation laissé vide (déploiement direct dans `public_html`).
+- **Reste à faire côté utilisateur** : finaliser la connexion du dépôt dans hPanel, récupérer l'URL de webhook générée par Hostinger, l'ajouter comme secret GitHub `HOSTINGER_WEBHOOK_URL` sur le repo `football-passion`.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)
@@ -158,33 +171,41 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 
 ## 6. État actuel — récapitulatif des fichiers clés
 
+Structure à plat depuis le 1er août 2026 (voir 3.16) — plus de dossier `public_html/` local, le dépôt racine EST la racine du site.
+
 ```
-football-passion/
+football-passion/                  ← racine du dépôt = racine du site
 ├── CLAUDE.md
 ├── procedure-football-passion.md   ← ce fichier
-└── public_html/
+├── .gitignore
+├── .github/workflows/deploy.yml    ← webhook Hostinger
+├── index.php
+├── equipe-france.php
+├── euro.php
+├── a-propos.php
+├── mentions-legales.php
+├── politique-confidentialite.php
+├── contact.php                 ← formulaire (Turnstile + honeypot)
+├── contact-send.php            ← traitement (mail() natif, destinataire caché)
+├── 404.php                     ← page erreur personnalisée
+├── .htaccess                   ← ErrorDocument 404
+├── config/
+│   └── secrets.php             ← gitignore, jamais commité (clé Turnstile)
+├── templates/
+│   ├── header.php
+│   └── footer.php
+├── data/
+│   ├── articles.json
+│   ├── categories.json
+│   ├── equipes.json
+│   └── matchs.json
+├── images/
+└── blog/
     ├── index.php
-    ├── calendrier.php
-    ├── equipe-france.php
-    ├── a-propos.php
-    ├── mentions-legales.php
-    ├── politique-confidentialite.php
-    ├── contact.php                 ← formulaire (Turnstile + honeypot)
-    ├── contact-send.php            ← traitement (mail() natif, destinataire caché)
-    ├── 404.php                     ← page erreur personnalisée
-    ├── .htaccess                   ← ErrorDocument 404
-    ├── templates/
-    │   ├── header.php
-    │   └── footer.php
-    ├── data/
-    │   ├── articles.json
-    │   ├── categories.json
-    │   ├── equipes.json
-    │   └── matchs.json
-    └── blog/
-        ├── index.php
-        └── helpers.php
+    └── helpers.php
 ```
+
+⚠️ **`calendrier.php` n'existe toujours pas** — lié depuis le header/footer (donc sur toutes les pages) et depuis `equipe-france.php`/`euro.php`/`404.php`, mais jamais créé. Toujours en attente (cf. échange du 1er août sur les liens cassés).
 
 **Adresse de contact officielle** : `info@coupe-du-monde-2026.info` (destinataire caché côté serveur, jamais affiché en HTML).
 

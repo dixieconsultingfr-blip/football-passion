@@ -1,23 +1,23 @@
-name: Deploy to Hostinger
+name: 🚀 Deploy to Hostinger
 
 on:
   push:
-    branches: [deploy]
+    branches:
+      - deploy
 
 jobs:
   deploy:
+    name: Trigger Hostinger auto-deploy
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Deploy via SFTP
-        uses: wangyucode/sftp-upload-action@v2.0.2
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          localDir: './public_html'
-          remoteDir: 'domains/football-passion.fr/public_html/'
-          forceUpload: true
+      - name: 🔔 Notify Hostinger webhook
+        run: |
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.HOSTINGER_WEBHOOK_URL }}")
+          echo "Hostinger webhook response: $HTTP_CODE"
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ Déploiement déclenché avec succès"
+          else
+            echo "❌ Erreur webhook : code $HTTP_CODE"
+            exit 1
+          fi

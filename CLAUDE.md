@@ -13,7 +13,7 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Auteur** : Jérôme Henry (Dixie Consulting)
 **Stack** : PHP 8 vanilla + Tailwind CSS + JSON + n8n
 **Hébergement** : Hostinger (même config que CDM 2026)
-**Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`, upload SFTP vers Hostinger) — nécessite les secrets `FTP_SERVER`/`FTP_USER`/`FTP_PASSWORD` configurés sur le repo GitHub
+**Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`) ping le webhook Hostinger (secret `HOSTINGER_WEBHOOK_URL`) → Hostinger pull automatiquement via son intégration Git native (hPanel → Avancé → Git). Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
 ## 🚨 Règle critique — Journal de procédure
 
@@ -23,41 +23,46 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 Le dépôt `football-passion` sur GitHub est **public** (contrairement à `coupe-du-monde-2026` qui est privé). **Ne jamais committer de clé secrète, mot de passe ou token en clair dans le code** (Turnstile secret, clés API, etc.).
 
-Tout secret va dans **`public_html/config/secrets.php`** (fichier gitignore, jamais versionné) et est chargé via `require`. Après création/modification de ce fichier, il doit être **uploadé manuellement une seule fois** sur Hostinger — il n'est jamais déployé par GitHub Actions puisqu'il n'est pas dans le repo.
+Tout secret va dans **`config/secrets.php`** (fichier gitignore, jamais versionné) et est chargé via `require`. Après création/modification de ce fichier, il doit être **uploadé manuellement une seule fois** sur Hostinger — il n'est jamais déployé automatiquement puisqu'il n'est pas dans le repo.
 
-## 🚨 Règle critique — Emplacement des fichiers
+## 🚨 Règle critique — Emplacement des fichiers (structure à PLAT, comme CDM 2026)
 
-**Tous les fichiers du site doivent être créés dans :**
-```
-C:\Users\DIXIE\Projets-Claude\football-passion\public_html\
-```
+**Tous les fichiers du site vont directement à la racine du dépôt** — pas de dossier `public_html/` local.
 
-**Jamais à la racine** `C:\Users\DIXIE\Projets-Claude\football-passion\` — seuls `CLAUDE.md`, `.gitignore` et les fichiers git restent à la racine.
+**Raison** : le déploiement automatique passe par l'intégration Git native de Hostinger (hPanel → Avancé → Git), qui clone l'intégralité du dépôt tel quel dans le dossier `public_html` du serveur. Un dossier `public_html/` imbriqué dans le dépôt créerait un niveau de profondeur en trop (`public_html/public_html/index.php`) et casserait le déploiement.
 
-**Raison** : le contenu de `public_html\` est uploadé tel quel sur Hostinger (le dossier `public_html` du serveur). Cette structure miroir simplifie le transfert.
+> ⚠️ Historique : une structure `public_html/` locale a été utilisée un temps pour faciliter l'upload manuel, avant l'activation du déploiement Git automatique. Elle a été abandonnée le 1er août 2026 au profit de la structure à plat — voir `procedure-football-passion.md` section 3.16.
 
 ```
-football-passion/
-├── CLAUDE.md           ← racine uniquement
-├── .gitignore          ← racine uniquement
-└── public_html/        ← TOUT le site va ici
+football-passion/                  ← racine du dépôt = racine du site
+├── CLAUDE.md
+├── .gitignore
+├── procedure-football-passion.md
+├── .github/workflows/deploy.yml
+├── index.php
+├── a-propos.php
+├── mentions-legales.php
+├── politique-confidentialite.php
+├── equipe-france.php
+├── euro.php
+├── contact.php           ← formulaire (Turnstile + honeypot)
+├── contact-send.php      ← traitement (mail() natif, destinataire caché)
+├── 404.php
+├── .htaccess
+├── config/
+│   └── secrets.php        ← gitignore, jamais commité
+├── templates/
+│   ├── header.php
+│   └── footer.php
+├── data/
+│   ├── articles.json
+│   ├── categories.json
+│   ├── equipes.json
+│   └── matchs.json
+├── images/
+└── blog/
     ├── index.php
-    ├── a-propos.php
-    ├── mentions-legales.php
-    ├── politique-confidentialite.php
-    ├── contact.php          ← formulaire (Turnstile + honeypot)
-    ├── contact-send.php     ← traitement (Brevo API, email caché côté serveur)
-    ├── templates/
-    │   ├── header.php
-    │   └── footer.php
-    ├── data/
-    │   ├── articles.json
-    │   ├── categories.json
-    │   ├── equipes.json
-    │   └── matchs.json
-    └── blog/
-        ├── index.php
-        └── helpers.php
+    └── helpers.php
 ```
 
 ---
@@ -106,7 +111,7 @@ football-passion/
 - **Largeur max** : 1200px, ratio 16:9 recommandé
 - **Poids cible** : 100-300 Ko — jamais de PNG brut ou d'export Canva non compressé
 - **Nommage** : kebab-case descriptif, ex. `deschamps-bilan-14-ans-bleus.webp`
-- **Emplacement** : `public_html/images/`
+- **Emplacement** : `images/`
 - Renseigner le même chemin dans `"image"` et `"vignette"` de `articles.json`
 
 ## 📁 Dossiers clés
@@ -227,9 +232,12 @@ Toujours utiliser `rel="nofollow noopener noreferrer"` sur les liens de licence 
 git push origin deploy
 
 # GitHub Actions se déclenche automatiquement
-# → FTP push vers Hostinger
-# → Site live en ~2 minutes
+# → ping du webhook Hostinger (secret HOSTINGER_WEBHOOK_URL)
+# → Hostinger pull automatiquement via son intégration Git
+# → Site live en ~1-2 minutes
 ```
+
+Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
 ---
 

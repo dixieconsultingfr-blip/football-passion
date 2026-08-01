@@ -13,7 +13,52 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Auteur** : Jérôme Henry (Dixie Consulting)
 **Stack** : PHP 8 vanilla + Tailwind CSS + JSON + n8n
 **Hébergement** : Hostinger (même config que CDM 2026)
-**Déploiement** : GitHub Actions → `deploy` branch
+**Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`, upload SFTP vers Hostinger) — nécessite les secrets `FTP_SERVER`/`FTP_USER`/`FTP_PASSWORD` configurés sur le repo GitHub
+
+## 🚨 Règle critique — Journal de procédure
+
+**Après chaque action sur ce projet** (nouvelle page, fonctionnalité, config, service tiers, correction), mettre à jour `procedure-football-passion.md` (à la racine, hors `public_html/`) en ajoutant une entrée décrivant l'action, dans l'ordre chronologique.
+
+## 🚨 Règle critique — Dépôt GitHub PUBLIC, jamais de secret en clair
+
+Le dépôt `football-passion` sur GitHub est **public** (contrairement à `coupe-du-monde-2026` qui est privé). **Ne jamais committer de clé secrète, mot de passe ou token en clair dans le code** (Turnstile secret, clés API, etc.).
+
+Tout secret va dans **`public_html/config/secrets.php`** (fichier gitignore, jamais versionné) et est chargé via `require`. Après création/modification de ce fichier, il doit être **uploadé manuellement une seule fois** sur Hostinger — il n'est jamais déployé par GitHub Actions puisqu'il n'est pas dans le repo.
+
+## 🚨 Règle critique — Emplacement des fichiers
+
+**Tous les fichiers du site doivent être créés dans :**
+```
+C:\Users\DIXIE\Projets-Claude\football-passion\public_html\
+```
+
+**Jamais à la racine** `C:\Users\DIXIE\Projets-Claude\football-passion\` — seuls `CLAUDE.md`, `.gitignore` et les fichiers git restent à la racine.
+
+**Raison** : le contenu de `public_html\` est uploadé tel quel sur Hostinger (le dossier `public_html` du serveur). Cette structure miroir simplifie le transfert.
+
+```
+football-passion/
+├── CLAUDE.md           ← racine uniquement
+├── .gitignore          ← racine uniquement
+└── public_html/        ← TOUT le site va ici
+    ├── index.php
+    ├── a-propos.php
+    ├── mentions-legales.php
+    ├── politique-confidentialite.php
+    ├── contact.php          ← formulaire (Turnstile + honeypot)
+    ├── contact-send.php     ← traitement (Brevo API, email caché côté serveur)
+    ├── templates/
+    │   ├── header.php
+    │   └── footer.php
+    ├── data/
+    │   ├── articles.json
+    │   ├── categories.json
+    │   ├── equipes.json
+    │   └── matchs.json
+    └── blog/
+        ├── index.php
+        └── helpers.php
+```
 
 ---
 
@@ -54,6 +99,15 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 - ✅ Varier les introductions — ne pas répéter le même pattern
 
 ---
+
+## 🖼️ Vignettes d'articles — format
+
+- **Format** : `.webp` (25-35 % plus léger qu'un `.jpg` à qualité égale — meilleur pour le LCP)
+- **Largeur max** : 1200px, ratio 16:9 recommandé
+- **Poids cible** : 100-300 Ko — jamais de PNG brut ou d'export Canva non compressé
+- **Nommage** : kebab-case descriptif, ex. `deschamps-bilan-14-ans-bleus.webp`
+- **Emplacement** : `public_html/images/`
+- Renseigner le même chemin dans `"image"` et `"vignette"` de `articles.json`
 
 ## 📁 Dossiers clés
 
@@ -129,6 +183,29 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 | **Euro** | Championnat d'Europe | Juin-juillet 2028 |
 | **CDM** | Coupe du Monde | Juin-juillet 2026/2030/2034 |
 | **France** | Équipe de France | Année-rond |
+
+---
+
+## 🔗 Liens externes — règle absolue
+
+**Tout lien vers un site tiers doit avoir `rel="nofollow noopener noreferrer"`**, sans exception.
+
+```html
+<a href="https://exemple.com" target="_blank" rel="nofollow noopener noreferrer">Texte</a>
+```
+
+- `nofollow` : ne transmet pas de jus SEO vers le site externe
+- `noopener` : sécurité (empêche le site cible d'accéder à `window.opener`)
+- `noreferrer` : ne transmet pas le referrer HTTP
+
+**Cas concernés :**
+- Liens de licences (CC BY, CC BY-SA…)
+- Liens vers hébergeur, APIs tierces (football-data.org, Meta, CNIL…)
+- Liens vers réseaux sociaux (Facebook, Instagram…)
+- Liens vers sources d'articles
+- Tout lien dans les pages légales (mentions légales, politique de confidentialité)
+
+**Seule exception : liens internes** (entre pages de football-passion.fr) → pas de `nofollow`, pas de `target="_blank"`.
 
 ---
 

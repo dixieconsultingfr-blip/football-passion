@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          localDir: '.'
+          localDir: './public_html'
           remoteDir: 'domains/football-passion.fr/public_html/'
           forceUpload: true

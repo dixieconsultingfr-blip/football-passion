@@ -192,32 +192,15 @@ Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à v
 
 ### n8n — Automation
 
-**Workflow à construire** : `Football Passion — Récupération matchs`, sur le même principe que `CDM 2026 — Récupération matchs` (instance self-hébergée `https://n8n.srv814711.hstgr.cloud`).
+✅ **Statut : construit, testé et ACTIF depuis le 4 août 2026.** Workflow `Football Passion — Récupération matchs` sur l'instance self-hébergée `https://n8n.srv814711.hstgr.cloud`, publié et tournant en autonomie toutes les 5 minutes.
 
-📄 **Guide détaillé node par node (avec code JavaScript prêt à copier-coller)** : voir `guide-n8n-workflow.md` à la racine du projet.
+📄 **Documentation complète du workflow réel (architecture, code des nœuds, écarts par rapport au plan initial et pourquoi)** : voir `guide-n8n-workflow.md` à la racine du projet.
 
-**⚠️ Différence clé avec CDM 2026** : football-data.org gratuit ne couvre pas correctement les matchs amicaux de l'équipe de France hors grands tournois (WC/EC). La branche "France" du workflow devra donc rester **alimentée manuellement** dans un premier temps (ou explorer une source alternative), contrairement aux branches L1/L2/CL/Europa qui peuvent être 100% automatiques.
-
-**Construction du workflow (étape par étape) :**
-
-1. **Schedule Trigger** — toutes les 5 minutes (identique à CDM 2026)
-2. **HTTP Request** — un nœud par compétition à suivre :
-   - `https://api.football-data.org/v4/competitions/FL1/matches` (Ligue 1)
-   - `https://api.football-data.org/v4/competitions/FL2/matches` (Ligue 2)
-   - `https://api.football-data.org/v4/competitions/CL/matches` (Champions League)
-   - `https://api.football-data.org/v4/competitions/EL/matches` (Europa League)
-   - Header requis : `X-Auth-Token` (même clé que CDM 2026, `config/api-keys.php` de ce projet — **ne pas dupliquer la clé en clair dans n8n**, utiliser les credentials n8n)
-   - ⚠️ Limite 10 req/min tier gratuit — avec 4 compétitions + Schedule Trigger toutes les 5 min, ça passe large. Si on ajoute France plus tard, vérifier le total.
-3. **Function/Code node** — transformer chaque réponse API vers le schéma `matchs.json` du projet (voir section "Structure d'un match" ci-dessus) : mapper `homeTeam.name` → `domicile`, `awayTeam.name` → `exterieur`, `utcDate` → `date`+`heure`, `status` FIFA → `status` du projet, `score.fullTime.home/away` → `score_dom`/`score_ext`, ajouter `"competition": "L1"` (ou L2/CL/Europa) en dur selon la branche.
-4. **Merge** — fusionner les 4 branches en un seul tableau
-5. **Comparaison `hasUpdate`** — **obligatoire**, sur le modèle du garde-fou CDM 2026 : récupérer le `data/matchs.json` actuel (nœud GitHub "Get file"), comparer au nouveau tableau construit. Si identique → **ne rien committer** (sinon épuisement du quota GitHub Actions, incident déjà vécu sur CDM 2026 en juin 2026).
-6. **IF `hasUpdate === true`** → nœud GitHub "Edit file" : commit direct sur `data/matchs.json`, branche `deploy`, repo `football-passion`
-7. Le commit déclenche automatiquement `.github/workflows/deploy.yml` → webhook Hostinger → site à jour en ~1-2 min
-
-**Garde-fous obligatoires** (reproduire le pattern CDM 2026) :
-- Ne committer que si changement réel (étape 5-6 ci-dessus)
-- Toujours écrire le JSON sans BOM
-- `id` de chaque match stable dans le temps pour permettre les mises à jour (pas de recréation à chaque run)
+**Résumé** :
+- Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) ont été testées et renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit, pas un bug. Pour les activer un jour : upgrade du plan football-data.org.
+- Équipe de France (amicaux/qualifs) : toujours hors périmètre, reste manuel (football-data.org ne couvre pas ces matchs).
+- Architecture : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
+- Piège n8n à connaître : un champ contenant `{{ }}` doit être explicitement basculé en mode **"Expression"** (toggle à côté de "Fixed") pour être évalué — sinon n8n écrit le texte littéral. Déjà corrigé dans ce workflow, mais à surveiller pour tout futur nœud.
 
 ---
 

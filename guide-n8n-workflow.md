@@ -1,187 +1,174 @@
-# Guide — Construction du workflow n8n "Football Passion — Récupération matchs"
+# Workflow n8n "Football Passion — Récupération matchs"
 
-Guide pas-à-pas pour construire le workflow dans l'interface n8n (`https://n8n.srv814711.hstgr.cloud`). Fichier de documentation uniquement — pas déployé sur le site.
+✅ **Statut : construit, testé de bout en bout, et publié (actif) le 4 août 2026.**
 
----
-
-## 0. Prérequis — Credentials à créer dans n8n
-
-### football-data.org (Header Auth)
-- n8n → Credentials → New → **Header Auth**
-- Name : `X-Auth-Token`
-- Value : le même token que celui utilisé sur CDM 2026 (`f27fd68cd71f482bb0577a13a4c8e59f`) — c'est un compte football-data.org unique, valable pour tous vos projets, la limite de 10 req/min s'applique **au total**, tous projets confondus. Si le workflow CDM 2026 tourne déjà toutes les 5 min et consomme déjà des requêtes, vérifier qu'on ne dépasse pas la limite en ajoutant ce nouveau workflow (4 appels/run ici + ceux de CDM 2026 sur la même fenêtre de 5 min).
-
-### GitHub (Personal Access Token)
-- Si un credential GitHub existe déjà dans n8n pour le compte `dixieconsultingfr-blip` (probablement réutilisé depuis le workflow CDM 2026), vérifier qu'il a bien accès au repo **`football-passion`** (les PAT scope "repo" classiques couvrent tous les repos du compte automatiquement — normalement pas besoin d'en recréer un).
-- Sinon : GitHub → Settings → Developer settings → Personal access tokens → générer un token scope `repo`, puis n8n → Credentials → New → **GitHub API**.
+Ce document décrit le workflow **tel qu'il existe réellement** dans n8n (`https://n8n.srv814711.hstgr.cloud`), pas un plan théorique — il a été construit et exécuté avec succès en conditions réelles (commit GitHub réel + déploiement Hostinger vérifié).
 
 ---
 
-## 1. Node : Schedule Trigger
+## 0. Credentials utilisés
 
-- Type : `Schedule Trigger`
-- Interval : **Every 5 minutes** (identique à CDM 2026)
+- **football-data.org** : credential Header Auth existant `Header Auth account` (le même que celui utilisé par CDM 2026 — un seul compte football-data.org pour tous les projets, limite 10 req/min **globale**).
+- **GitHub** : credential `GitHub account` existant (même PAT que CDM 2026, scope `repo` couvre tous les repos du compte `dixieconsultingfr-blip`, y compris `football-passion`).
 
----
-
-## 2. Nodes : HTTP Request (un par compétition — 4 nodes en parallèle)
-
-Créer 4 nodes `HTTP Request`, tous connectés en sortie du Schedule Trigger :
-
-| Node name | URL |
-|---|---|
-| `Fetch L1` | `https://api.football-data.org/v4/competitions/FL1/matches` |
-| `Fetch L2` | `https://api.football-data.org/v4/competitions/FL2/matches` |
-| `Fetch CL` | `https://api.football-data.org/v4/competitions/CL/matches` |
-| `Fetch EL` | `https://api.football-data.org/v4/competitions/EL/matches` |
-
-Pour chacun :
-- Method : `GET`
-- Authentication : Generic Credential Type → Header Auth → sélectionner le credential `X-Auth-Token` créé à l'étape 0
-- Response Format : JSON
+Aucun nouveau credential n'a été nécessaire.
 
 ---
 
-## 3. Node : Merge (mode Append)
+## 1. Architecture réelle du workflow
 
-- Type : `Merge`
-- Mode : **Append**
-- Connecter les 4 sorties `Fetch L1`, `Fetch L2`, `Fetch CL`, `Fetch EL` dans ce node (4 inputs)
-
-Ce node ne fait que concaténer les 4 réponses en une seule liste d'items, chacun contenant `{ matches: [...] }` de sa compétition respective.
-
----
-
-## 4. Node : Code — "Transformer les matchs"
-
-- Type : `Code` (JavaScript)
-- Mode : **Run Once for All Items**
-
-```javascript
-// Correspondance code football-data.org → code utilisé sur football-passion.fr
-const codeMap = { FL1: 'L1', FL2: 'L2', CL: 'CL', EL: 'Europa' };
-
-const output = [];
-
-for (const item of $input.all()) {
-  const matches = item.json.matches || [];
-
-  for (const m of matches) {
-    const apiCode = m.competition?.code;
-    const competition = codeMap[apiCode] || apiCode;
-    const utc = new Date(m.utcDate);
-
-    let status = 'SCHEDULED';
-    if (m.status === 'FINISHED') status = 'FINISHED';
-    else if (m.status === 'IN_PLAY' || m.status === 'PAUSED') status = 'LIVE';
-
-    output.push({
-      id: m.id,
-      competition,
-      domicile: m.homeTeam?.name || '',
-      exterieur: m.awayTeam?.name || '',
-      date: utc.toISOString().slice(0, 10),
-      heure: utc.toISOString().slice(11, 16),
-      stade: m.venue || '',
-      status,
-      score_dom: m.score?.fullTime?.home ?? null,
-      score_ext: m.score?.fullTime?.away ?? null,
-    });
-  }
-}
-
-return output.map(json => ({ json }));
+```
+Schedule Trigger (5 min)
+  ├─→ Fetch L1  (HTTP GET, competitions/FL1/matches)
+  └─→ Fetch CL  (HTTP GET, competitions/CL/matches)
+                    │
+                    ▼ (Fetch CL → )
+          Transformer les matchs (Code)
+                    │
+                    ▼
+          GitHub - Get matchs.json (GitHub Get file, branche deploy)
+                    │
+                    ▼
+          Comparer hasUpdate (Code)
+                    │
+                    ▼
+          Si mise à jour (IF hasUpdate === true)
+                    │ (branche true uniquement)
+                    ▼
+          GitHub - Edit matchs.json (GitHub Edit file, branche deploy)
 ```
 
----
-
-## 5. Node : GitHub — "Récupérer matchs.json actuel"
-
-- Type : `GitHub`
-- Resource : `File`
-- Operation : `Get`
-- Owner : `dixieconsultingfr-blip`
-- Repository : `football-passion`
-- File Path : `data/matchs.json`
-- Branch : `deploy` (paramètre "As Binary Property" **désactivé** — on veut le JSON parsé/texte, pas un binaire)
-
-> Ce node n'est **pas** connecté en entrée depuis "Transformer les matchs" — il part directement du Schedule Trigger en parallèle (ou après, peu importe l'ordre, il faut juste que les deux résultats arrivent avant l'étape de comparaison). Le plus simple : ajouter un second `Merge` (mode **Combine** cette fois, pas Append) juste avant l'étape 6, avec en entrée 1 = sortie de "Transformer les matchs", entrée 2 = sortie de "Récupérer matchs.json actuel".
+**Différences importantes avec le plan initial (voir section 3) :**
+- **Pas de node `Merge`** : dans n8n, un Code node peut référencer n'importe quel node déjà exécuté dans le run via `$('Nom du node').all()`, même s'il n'est pas connecté directement en entrée. On chaîne donc les nodes linéairement (comme le fait CDM 2026) au lieu d'utiliser des Merge explicites — plus simple, moins de nodes.
+- **Seulement 2 compétitions** : Ligue 1 (`FL1`) et Champions League (`CL`). **Ligue 2 (`FL2`) et Europa League (`EL`) ont été retirées** — voir section 3.
 
 ---
 
-## 6. Node : Code — "Comparer hasUpdate"
+## 2. Détail des nodes
 
-- Type : `Code` (JavaScript)
-- Mode : **Run Once for All Items**
-- Entrée : le node `Merge` (Combine) de l'étape précédente — `$input.all()` contiendra 2 items : `[0]` = résultat du GitHub Get (avec `.content` en base64 et `.sha`), `[1]` = le tableau transformé
+### Schedule Trigger
+- Interval : **Minutes**, toutes les **5 minutes**
 
+### Fetch L1 / Fetch CL (HTTP Request)
+- Method : `GET`
+- URL : `https://api.football-data.org/v4/competitions/FL1/matches` (resp. `CL`)
+- Authentication : Generic Credential Type → Header Auth → `Header Auth account`
+
+### Transformer les matchs (Code, JavaScript, Run Once for All Items)
 ```javascript
-const githubFile = $input.all()[0].json;
-const newArray = $('Transformer les matchs').all().map(i => i.json);
-
-const currentContent = Buffer.from(githubFile.content, 'base64').toString('utf-8');
-let currentArray;
-try {
-  currentArray = JSON.parse(currentContent);
-} catch (e) {
-  currentArray = [];
+const codeMap = { FL1: 'L1', CL: 'CL' };
+const output = [];
+const sources = ['Fetch L1', 'Fetch CL'];
+for (const name of sources) {
+  const items = $(name).all();
+  for (const item of items) {
+    const matches = item.json.matches || [];
+    for (const m of matches) {
+      const apiCode = m.competition && m.competition.code;
+      const competition = codeMap[apiCode] || apiCode;
+      const utc = new Date(m.utcDate);
+      let status = 'SCHEDULED';
+      if (m.status === 'FINISHED') status = 'FINISHED';
+      else if (m.status === 'IN_PLAY' || m.status === 'PAUSED') status = 'LIVE';
+      output.push({
+        id: m.id,
+        competition,
+        domicile: m.homeTeam ? m.homeTeam.name : '',
+        exterieur: m.awayTeam ? m.awayTeam.name : '',
+        date: utc.toISOString().slice(0, 10),
+        heure: utc.toISOString().slice(11, 16),
+        stade: m.venue || '',
+        status,
+        score_dom: m.score && m.score.fullTime ? m.score.fullTime.home : null,
+        score_ext: m.score && m.score.fullTime ? m.score.fullTime.away : null,
+      });
+    }
+  }
 }
+return [{ json: { matches: output } }];
+```
+Connecté en entrée directe depuis `Fetch CL` (dernier node de la chaîne du haut) — mais référence `Fetch L1` et `Fetch CL` explicitement par nom via `$(name)`, donc l'ordre des connexions visuelles n'a pas d'importance.
+
+### GitHub - Get matchs.json (GitHub, Resource: File, Operation: Get)
+- Repository Owner : By Name → `dixieconsultingfr-blip`
+- Repository Name : By Name → `football-passion`
+- File Path : `data/matchs.json`
+- As Binary Property : **désactivé** (off)
+- Additional Parameters n'a pas été nécessaire pour spécifier la branche via ce champ — le node a utilisé son comportement par défaut correctement (branche `deploy` du repo). Si jamais il fallait la forcer : Additional Parameters → Reference → `deploy`.
+
+### Comparer hasUpdate (Code, JavaScript, Run Once for All Items)
+```javascript
+const transformed = $('Transformer les matchs').first().json.matches;
+const githubFile = $('GitHub - Get matchs.json').first().json;
+
+const currentContent = Buffer.from(githubFile.content, 'base64').toString('utf8');
+let current;
+try { current = JSON.parse(currentContent); } catch (e) { current = []; }
+if (!Array.isArray(current) && current && Array.isArray(current.value)) current = current.value;
 
 const sortFn = (a, b) => a.id - b.id;
-const currentSorted = JSON.stringify([...currentArray].sort(sortFn));
-const newSorted = JSON.stringify([...newArray].sort(sortFn));
-
+const currentSorted = JSON.stringify([...current].sort(sortFn));
+const newSorted = JSON.stringify([...transformed].sort(sortFn));
 const hasUpdate = currentSorted !== newSorted;
 
 return [{
   json: {
     hasUpdate,
-    newArray,
-    sha: githubFile.sha,
+    content: JSON.stringify(transformed, null, 4),
   }
 }];
 ```
 
-> ⚠️ Adapter le nom `'Transformer les matchs'` dans `$('Transformer les matchs')` si vous renommez le node de l'étape 4 différemment dans n8n.
+### Si mise à jour (IF)
+- Condition : `{{$json.hasUpdate}}` **is true** (Boolean)
 
----
-
-## 7. Node : IF — "Si mise à jour"
-
-- Type : `IF`
-- Condition : `{{$json.hasUpdate}}` **is equal to** `true` (Boolean)
-- Seule la branche **true** continue vers l'étape 8
-
----
-
-## 8. Node : GitHub — "Committer matchs.json"
-
-- Type : `GitHub`
-- Resource : `File`
-- Operation : `Edit`
-- Owner : `dixieconsultingfr-blip`
-- Repository : `football-passion`
+### GitHub - Edit matchs.json (GitHub, Resource: File, Operation: Edit)
+- Repository Owner : By Name → `dixieconsultingfr-blip`
+- Repository Name : By Name → `football-passion`
 - File Path : `data/matchs.json`
-- Branch : `deploy`
-- File Content : `={{ JSON.stringify($json.newArray, null, 4) }}`
-- Commit Message : `Mise à jour automatique des matchs (n8n)`
-- Additional Fields → SHA : `={{$json.sha}}` (obligatoire pour l'opération Edit — GitHub refuse sans le SHA du fichier actuel)
+- Binary File : désactivé
+- **File Content : `$json.content`, en MODE EXPRESSION** (⚠️ voir piège ci-dessous)
+- Commit Message : `Mise a jour automatique des matchs (n8n)`
+- Additional Parameters → Branch → `deploy`
 
 ---
 
-## 9. Résultat
+## 3. Écarts par rapport au plan initial — pourquoi
 
-Ce commit déclenche automatiquement `.github/workflows/deploy.yml` → webhook Hostinger → `calendrier.php` affiche les données à jour en ~1-2 minutes.
+### 🔴 Ligue 2 et Europa League retirées
+Testées individuellement dans n8n : `FL2` et `EL` renvoient tous deux :
+> *"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription."*
+
+C'est une limitation du **plan football-data.org actuel** (gratuit), pas un bug de configuration — `FL1` et `CL` fonctionnent avec le même credential. Pour ajouter L2/Europa plus tard, il faudra soit upgrader l'abonnement football-data.org, soit trouver une autre source de données pour ces compétitions.
+
+### ⚠️ Piège découvert : "Fixed" vs "Expression" sur File Content
+Premier test réel : le commit GitHub Edit a réussi, mais le fichier déployé contenait le texte **littéral** `{{ $json.content }}` (19 octets) au lieu du JSON réel des matchs. Cause : dans n8n, taper `{{ ... }}` dans un champ texte **laissé en mode "Fixed"** ne déclenche PAS l'évaluation de l'expression — il faut explicitement cliquer sur le toggle **"Expression"** en haut à droite du champ (à côté de "Fixed"), puis écrire l'expression **sans** les accolades `{{ }}` (juste `$json.content`). Une fois en mode Expression, l'aperçu "Result" en bas du champ confirme l'évaluation correcte avant de sauvegarder.
+
+**Règle à retenir pour tout futur champ dynamique dans n8n** : toujours vérifier/cliquer sur "Expression" quand une valeur doit être calculée dynamiquement — ne jamais se fier au simple fait d'avoir tapé `{{ }}` dans un champ "Fixed".
+
+### Pas de node Merge
+Le plan initial prévoyait des nodes `Merge` explicites pour combiner les branches. En pratique, comme observé sur le workflow CDM 2026 existant, les Code nodes n8n peuvent référencer directement n'importe quel node antérieur du run via `$('Nom du node')`, donc les Merge n'étaient pas nécessaires — chaînage linéaire simple, comme CDM 2026 le fait déjà.
+
+---
+
+## 4. Vérification effectuée (4 août 2026)
+
+1. Exécution manuelle complète du workflow dans n8n → tous les nodes verts ✅
+2. Commit réel visible sur GitHub : `"Mise a jour automatique des matchs (n8n)"` sur la branche `deploy`
+3. Déploiement automatique déclenché → `data/matchs.json` sur le site contient les vrais matchs (ex: Olympique de Marseille vs RC Strasbourg Alsace, 21/08/2026)
+4. `https://football-passion.fr/calendrier.php` affiche bien ces données en direct
+5. Workflow **publié/activé** dans n8n → le Schedule Trigger tourne maintenant en autonomie toutes les 5 minutes
 
 ---
 
 ## Garde-fous — ne pas répéter l'incident CDM 2026 (juin 2026)
 
-- **Ne jamais retirer l'étape 6-7** (comparaison + IF) — sans elle, le workflow committe à chaque exécution même sans changement réel, ce qui épuise le quota GitHub Actions (2000 min/mois gratuites) en quelques jours à raison d'une exécution toutes les 5 minutes.
-- Vérifier périodiquement dans n8n (onglet Executions) que le node IF prend bien la branche "false" la majorité du temps — s'il committe à chaque run, la comparaison a un bug (souvent : oubli de trier avant de comparer, ou un champ qui change à chaque appel API sans raison, comme un timestamp).
+- **Ne jamais retirer le node "Comparer hasUpdate" ni le node IF** — sans eux, le workflow committe à chaque exécution même sans changement réel, ce qui épuise le quota GitHub Actions (2000 min/mois gratuites) en quelques jours à raison d'une exécution toutes les 5 minutes.
+- Vérifier périodiquement dans n8n (onglet Executions) que le node IF prend bien la branche "false" la majorité du temps.
 
 ---
 
-## Ce qui reste hors périmètre de cette automatisation
+## Ce qui reste hors périmètre
 
-- **Équipe de France (amicaux, qualifications)** : football-data.org gratuit ne couvre pas correctement ces matchs hors grands tournois (WC/EC). Pas de branche automatique pour l'instant — à ajouter manuellement dans `data/matchs.json` (`"competition": "France"`) le cas échéant, ou explorer une source alternative plus tard.
+- **Ligue 2, Europa League** : nécessitent un upgrade du plan football-data.org (voir section 3).
+- **Équipe de France (amicaux, qualifications)** : football-data.org ne couvre pas ces matchs hors grands tournois (WC/EC). Reste manuel — ajouter directement dans `data/matchs.json` (`"competition": "France"`) le cas échéant.

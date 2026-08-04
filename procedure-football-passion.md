@@ -157,6 +157,16 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - Prérequis credentials documentés : Header Auth football-data.org (réutilisation du même token que CDM 2026, attention à la limite globale 10 req/min tous projets confondus), GitHub PAT (probablement déjà réutilisable depuis le credential CDM 2026 si scope `repo` classique).
 - Référencé depuis `CLAUDE.md`.
 
+### 3.21 Construction réelle du workflow n8n — via contrôle navigateur Claude in Chrome
+- Le workflow a été **effectivement construit et activé** dans n8n (pas seulement documenté) : Claude a piloté l'interface n8n directement via l'extension Claude in Chrome (session déjà connectée dans le navigateur de l'utilisateur — aucun mot de passe saisi).
+- Inspection préalable du workflow CDM 2026 existant pour valider les types de nœuds, credentials à réutiliser (`Header Auth account`, `GitHub account`) et le pattern de chaînage (référencement de nœuds par nom `$('Nom du node')` sans passer par des nœuds Merge explicites).
+- Workflow construit : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP, football-data.org) → Transformer les matchs (Code) → GitHub - Get matchs.json → Comparer hasUpdate (Code) → Si mise à jour (IF) → GitHub - Edit matchs.json.
+- **Écart majeur découvert en testant** : `FL2` (Ligue 2) et `EL` (Europa League) renvoient tous deux une erreur 403 *"restricted and apparently not within your permissions — check your subscription"* sur football-data.org. Confirmé que ce n'est pas un bug de credentials (FL1 et CL fonctionnent avec le même credential) mais une limitation du plan gratuit. **Nœuds Fetch L2 et Fetch EL supprimés du workflow**, code du nœud Transformer adapté en conséquence (uniquement L1 + CL).
+- **Bug découvert et corrigé** : le champ "File Content" du nœud GitHub Edit, laissé en mode "Fixed" avec le texte `{{ $json.content }}` tapé littéralement, ne s'évalue PAS comme une expression en n8n — le premier commit réel a écrasé `data/matchs.json` avec le texte littéral (19 octets) au lieu du JSON des matchs. Corrigé en basculant explicitement le champ en mode **"Expression"** (toggle dédié à côté de "Fixed") et en retapant `$json.content` sans les accolades.
+- Après correction : workflow exécuté avec succès de bout en bout, commit réel vérifié sur GitHub (`git log` API), fichier `data/matchs.json` déployé contient les vrais matchs Ligue 1 / Champions League, `https://football-passion.fr/calendrier.php` affiche les données en direct.
+- **Workflow publié/activé** dans n8n — tourne désormais en autonomie toutes les 5 minutes.
+- `guide-n8n-workflow.md` entièrement réécrit pour refléter l'architecture réelle (et non plus le plan théorique initial), avec la section "écarts et pourquoi" documentant les deux découvertes ci-dessus.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

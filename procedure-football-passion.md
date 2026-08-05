@@ -167,6 +167,20 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Workflow publié/activé** dans n8n — tourne désormais en autonomie toutes les 5 minutes.
 - `guide-n8n-workflow.md` entièrement réécrit pour refléter l'architecture réelle (et non plus le plan théorique initial), avec la section "écarts et pourquoi" documentant les deux découvertes ci-dessus.
 
+### 3.22 Matchs de qualification Champions League — ajout manuel + garde-fou n8n
+- Constat : les matchs de qualification/barrages de la Ligue des Champions (tours 2/3 + playoffs, juillet-août 2026) n'apparaissaient pas dans `calendrier.php` — investigation confirmant que **football-data.org**, **api-football.com/api-sports.io** (plan gratuit verrouillé aux saisons 2022-2024) et l'API RapidAPI "Free API Live Football Data" (endpoints fixtures peu fiables) ne couvrent aucun ces tours qualificatifs. Aucune solution API viable trouvée — décision : saisie manuelle.
+- **Convention adoptée** : les matchs ajoutés manuellement utilisent des `id >= 9000000` (séquentiels), pour les distinguer des IDs réels football-data.org (plage 300000-600000) et permettre à n8n de les identifier et les préserver.
+- 33 matchs ajoutés à `data/matchs.json` (tours 2 et 3 de qualification + barrages), sourcés depuis des captures d'écran fournies par l'utilisateur.
+- **Bug d'encodage découvert** : les noms d'équipes accentués tapés en dur dans un script `.ps1` (`AGF Århus`, `Bodø/Glimt`, `Kauno Žalgiris`...) ressortaient corrompus (mojibake, ex. `AGF Ã…rhus`) une fois déployés — cause probable : PowerShell lit le code source `.ps1` avec l'encodage ANSI système en l'absence de BOM. **Correction adoptée définitivement pour ce projet** : ne jamais taper de caractères accentués en dur dans un script `.ps1` — soit utiliser des noms d'équipes translittérés en ASCII pur pour toute donnée manuelle (`AGF Aarhus`, `Bodo/Glimt`, `Etoile Rouge`, `Fenerbahce`, `Zalgiris Kaunas`...), soit écrire le contenu accentué dans un fichier JSON séparé (via l'outil Write) et le faire lire par le script PowerShell en UTF-8 plutôt que de l'écrire en dur dans le `.ps1`.
+- **Bug PowerShell découvert et documenté** : `@(ConvertFrom-Json $texte)` peut silencieusement tronquer un grand tableau JSON racine à un seul élément (reproduit deux fois sur un fichier de 495 entrées → `.Count` = 1 au lieu de 495). **Ne jamais wrapper `ConvertFrom-Json` dans `@()`** pour un tableau — utiliser `$var = ConvertFrom-Json $texte` directement.
+- **Correctif n8n appliqué** : le nœud Code "Comparer hasUpdate" du workflow comparait l'intégralité du tableau API vs fichier existant, et écrasait tout `data/matchs.json` (y compris les entrées manuelles) à chaque différence détectée. Corrigé en filtrant `current` sur `id >= 9000000` et en les réinjectant (`merged = [...transformed, ...manual]`) avant comparaison et écriture. Workflow republié dans n8n (version "Preserve les matchs ajoutes manuellement...").
+- Un conflit de fusion Git est survenu entre-temps (le workflow n8n non corrigé avait déjà écrasé les 33 matchs manuels via un commit automatique) — résolu en reconstruisant `data/matchs.json` à partir de la version fraîche d'`origin/deploy` (495 entrées) + réinjection des 33 matchs manuels ASCII-safe (528 entrées au total), commité et poussé.
+
+### 3.23 Article n°3 — Mercato OM (Nayef Aguerd)
+- Ajout de l'**article n°3** dans `data/articles.json` : *"OM : Nayef Aguerd vers un retour en Espagne ? La Real Sociedad accélère"* — catégorie `L1`, étiquettes `OM`, `Mercato`, `Real Sociedad`, `Aguerd`.
+- Pas d'image/vignette fournie pour cet article — champs `image`/`vignette` laissés vides (le template `blog/index.php` gère cet état proprement avec un bloc dégradé de repli).
+- Contenu accentué écrit via un fichier JSON de données intermédiaire (plutôt qu'en dur dans un script `.ps1`), conformément à la règle établie en 3.22 pour éviter la corruption d'encodage.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)
@@ -240,4 +254,4 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ---
 
-*Dernière mise à jour : 1er août 2026*
+*Dernière mise à jour : 5 août 2026*

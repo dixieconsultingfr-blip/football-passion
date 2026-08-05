@@ -181,6 +181,12 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - Pas d'image/vignette fournie pour cet article — champs `image`/`vignette` laissés vides (le template `blog/index.php` gère cet état proprement avec un bloc dégradé de repli).
 - Contenu accentué écrit via un fichier JSON de données intermédiaire (plutôt qu'en dur dans un script `.ps1`), conformément à la règle établie en 3.22 pour éviter la corruption d'encodage.
 
+### 3.24 Articles n°4 et n°5 + règle de limitation des étiquettes
+- Ajout de l'**article n°4** : *"Zinédine Zidane sélectionneur des Bleus : le rêve est devenu réalité"* — catégorie `France`, étiquettes `France`, `Zidane`, `CDM`, `Euro`, avec intégration d'une vidéo Facebook (iframe officielle) de la conférence de présentation. Vignette ajoutée ensuite (`zidane-nouveau-selectionneur-equipe-de-france-2030.webp`).
+- Ajout de l'**article n°5** : *"Ligue des champions : Lyon battu à Prague, l'OL devra renverser la situation au retour"* — catégorie `L1`.
+- **Constat utilisateur** : trop d'étiquettes par article (initialement `OL`, `Champions League`, `Sparta Prague`, `Fonseca` sur l'article n°5) diluent le filtrage par tag et n'apportent pas de valeur — retiré à `OL` + `Champions League` uniquement.
+- **Règle ajoutée à `CLAUDE.md`** (section structure d'un article) : se limiter à **2 étiquettes pertinentes** (typiquement club + compétition), ne plus ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) pour les prochains articles.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

@@ -148,6 +148,8 @@ football-passion/                  ← racine du dépôt = racine du site
 
 **Important** : articles.json doit être **trié par ID décroissant** (plus récent en tête).
 
+**Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
+
 ---
 
 ## 📅 Structure d'un match (data/matchs.json)

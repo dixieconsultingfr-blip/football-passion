@@ -198,6 +198,14 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - `data/articles.json` retiré du suivi Git (supplanté par la nouvelle structure) et documenté dans `CLAUDE.md` (nouvelle section "Structure d'un article" avec procédure obligatoire en 2 étapes pour tout futur article).
 - Aucun changement d'URL ni de rendu HTML — migration invisible pour le SEO/Google (confirmé à l'utilisateur qui s'en inquiétait).
 
+### 3.26 Sitemap XML dynamique + robots.txt
+- **Constat** : le site n'avait ni `sitemap.xml` ni `robots.txt`. Google découvrait les articles uniquement par exploration de liens (accueil → blog → article), suffisant pour quelques articles mais insuffisant à l'échelle de plusieurs centaines évoquée pour la migration de la section 3.25 — risque que d'anciens articles (au-delà de la première page du blog) deviennent difficiles à (re)découvrir par le crawl seul.
+- **Création de `sitemap.php`** (racine) : génère le XML à la volée à chaque requête, en lisant `data/articles-index.json` (via `load_articles_index()`) pour la liste des articles (`<lastmod>` = champ `date`) + un tableau statique des pages fixes du site (accueil, blog, calendrier, équipe de France, euro, à-propos, contact, mentions légales, confidentialité) avec `changefreq`/`priority` adaptés.
+- **Accessible en `/sitemap.xml`** via une règle de réécriture ajoutée dans `.htaccess` (`RewriteRule ^sitemap\.xml$ sitemap.php [L]`).
+- **Création de `robots.txt`** (racine) : autorise tout le crawl (`Allow: /`) et référence `Sitemap: https://football-passion.fr/sitemap.xml`.
+- **Mise à jour automatique, par construction** : `sitemap.php` interroge `articles-index.json` en direct à chaque appel — aucun script de régénération, cron ou action manuelle n'est nécessaire. La seule condition est de continuer à suivre la procédure en 2 étapes de la section 3.25 (fichier article + entrée index) pour chaque nouvel article ; le sitemap reflète alors automatiquement l'état courant.
+- **Reste à faire côté utilisateur** : soumettre `https://football-passion.fr/sitemap.xml` dans Google Search Console pour accélérer la découverte initiale (le fichier fonctionnera aussi passivement, référencé par `robots.txt`, mais la soumission manuelle accélère l'indexation).
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

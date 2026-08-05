@@ -161,6 +161,8 @@ football-passion/                  ← racine du dépôt = racine du site
 2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`.
 3. Les deux fichiers doivent être commités ensemble — ne jamais ajouter l'un sans l'autre.
 
+**Sitemap** : `sitemap.php` (accessible en `/sitemap.xml` via réécriture `.htaccess`) lit `data/articles-index.json` **à la volée à chaque requête** — aucune régénération manuelle n'est nécessaire. Tant que l'étape 2 ci-dessus est respectée pour chaque nouvel article, le sitemap est automatiquement à jour. `robots.txt` référence son URL.
+
 **Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
 
 ⚠️ Toujours écrire le contenu accentué (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1`, pour éviter la corruption d'encodage (mojibake) documentée dans `procedure-football-passion.md` section 3.22.

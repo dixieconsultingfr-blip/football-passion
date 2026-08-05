@@ -26,8 +26,8 @@ function date_fr_long(string $date): string {
     return $d->format('j') . ' ' . $mois[(int)$d->format('n')] . ' ' . $d->format('Y');
 }
 
-function load_articles(string $basePath): array {
-    $raw = @file_get_contents($basePath . '/data/articles.json');
+function load_articles_index(string $basePath): array {
+    $raw = @file_get_contents($basePath . '/data/articles-index.json');
     if (!$raw) return [];
     if (str_starts_with($raw, "\xEF\xBB\xBF")) {
         $raw = substr($raw, 3);
@@ -35,4 +35,16 @@ function load_articles(string $basePath): array {
     $articles = json_decode($raw, true) ?? [];
     usort($articles, fn($a, $b) => strcmp($b['date'], $a['date']));
     return $articles;
+}
+
+function load_article(string $basePath, string $slug): ?array {
+    if (!preg_match('/^[a-z0-9-]+$/', $slug)) return null;
+    $file = $basePath . '/data/articles/' . $slug . '.json';
+    if (!is_file($file)) return null;
+    $raw = @file_get_contents($file);
+    if (!$raw) return null;
+    if (str_starts_with($raw, "\xEF\xBB\xBF")) {
+        $raw = substr($raw, 3);
+    }
+    return json_decode($raw, true) ?: null;
 }

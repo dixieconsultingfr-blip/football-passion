@@ -55,7 +55,9 @@ football-passion/                  ← racine du dépôt = racine du site
 │   ├── header.php
 │   └── footer.php
 ├── data/
-│   ├── articles.json
+│   ├── articles-index.json    ← index léger (liste, filtres, homepage)
+│   ├── articles/
+│   │   └── {slug}.json        ← un fichier par article (contenu complet)
 │   ├── categories.json
 │   ├── equipes.json
 │   └── matchs.json
@@ -126,7 +128,14 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ---
 
-## 📰 Structure d'un article (articles.json)
+## 📰 Structure d'un article — un fichier JSON par article
+
+**Depuis le 5 août 2026**, les articles ne vivent plus dans un unique `data/articles.json` monolithique (non scalable au-delà de quelques dizaines d'articles — diffs Git énormes, tout le contenu HTML relu à chaque page liste). Nouvelle architecture à deux niveaux :
+
+- **`data/articles/{slug}.json`** — un fichier par article, contenu complet (structure ci-dessous). Chargé uniquement à la vue d'un article précis (`load_article($basePath, $slug)` dans `blog/helpers.php`), jamais en liste.
+- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, categorie, etiquettes, date, extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
+
+**Structure complète d'un fichier `data/articles/{slug}.json`** :
 
 ```json
 {
@@ -135,8 +144,9 @@ football-passion/                  ← racine du dépôt = racine du site
   "auteur": "Jérôme Henry",
   "meta_title": "Titre SEO < 60 caractères",
   "meta_desc": "Description SEO < 160 caractères",
-  "image": "/images/nom-kebab-case.jpg",
+  "image": "/images/nom-kebab-case.webp",
   "image_alt": "Description alternative",
+  "vignette": "/images/nom-kebab-case.webp",
   "categorie": "L1 | L2 | CL | Europa | Euro | CDM | CAN | France",
   "etiquettes": ["Tag1", "Tag2"],
   "slug": "slug-en-kebab-case",
@@ -146,9 +156,14 @@ football-passion/                  ← racine du dépôt = racine du site
 }
 ```
 
-**Important** : articles.json doit être **trié par ID décroissant** (plus récent en tête).
+**🚨 Procédure obligatoire pour ajouter un nouvel article** :
+1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
+2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`.
+3. Les deux fichiers doivent être commités ensemble — ne jamais ajouter l'un sans l'autre.
 
 **Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
+
+⚠️ Toujours écrire le contenu accentué (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1`, pour éviter la corruption d'encodage (mojibake) documentée dans `procedure-football-passion.md` section 3.22.
 
 ---
 

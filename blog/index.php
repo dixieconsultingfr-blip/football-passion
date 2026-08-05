@@ -3,15 +3,11 @@ header('Content-Type: text/html; charset=utf-8');
 define('BASE_PATH', __DIR__ . '/..');
 require_once __DIR__ . '/helpers.php';
 
-$articles = load_articles(BASE_PATH);
 $slug = trim($_GET['slug'] ?? '');
 
 // ── Vue article individuel ───────────────────────────────────────────────────
 if ($slug !== '') {
-    $article = null;
-    foreach ($articles as $a) {
-        if ($a['slug'] === $slug) { $article = $a; break; }
-    }
+    $article = preg_match('/^[a-z0-9-]+$/', $slug) ? load_article(BASE_PATH, $slug) : null;
 
     if (!$article) {
         http_response_code(404);
@@ -103,6 +99,8 @@ if ($slug !== '') {
 }
 
 // ── Vue liste ────────────────────────────────────────────────────────────────
+$articles = load_articles_index(BASE_PATH);
+
 $cat_filtre = trim($_GET['cat'] ?? '');
 $articles_affiches = $cat_filtre
     ? array_values(array_filter($articles, fn($a) =>

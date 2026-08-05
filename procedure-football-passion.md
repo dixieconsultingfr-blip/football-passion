@@ -187,6 +187,17 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Constat utilisateur** : trop d'étiquettes par article (initialement `OL`, `Champions League`, `Sparta Prague`, `Fonseca` sur l'article n°5) diluent le filtrage par tag et n'apportent pas de valeur — retiré à `OL` + `Champions League` uniquement.
 - **Règle ajoutée à `CLAUDE.md`** (section structure d'un article) : se limiter à **2 étiquettes pertinentes** (typiquement club + compétition), ne plus ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) pour les prochains articles.
 
+### 3.25 Migration articles.json → un fichier JSON par article
+- **Motivation** : anticipation de plusieurs centaines d'articles à terme. Un unique `data/articles.json` posait deux problèmes réels : la page liste (`/blog`) chargeait et parsait le `contenu` HTML complet de tous les articles juste pour afficher les extraits, et chaque ajout d'article produisait un diff Git portant sur l'intégralité du fichier (risque de corruption accru — cf. bugs `@()` de la section 3.22).
+- **Nouvelle architecture** : `data/articles/{slug}.json` (un fichier par article, contenu complet) + `data/articles-index.json` (tableau léger : id, slug, titre, categorie, etiquettes, date, extrait, vignette, image_alt — utilisé pour la liste, l'accueil, et les pages hub `equipe-france.php`/`euro.php`).
+- **Fichiers modifiés** :
+  - `blog/helpers.php` : `load_articles()` remplacée par `load_articles_index($basePath)` (lit `articles-index.json`) et `load_article($basePath, $slug)` (lit directement `data/articles/{slug}.json`, avec validation regex du slug contre le path traversal).
+  - `blog/index.php` : vue article utilise `load_article()` (lecture ciblée, plus de scan du tableau complet) ; vue liste utilise `load_articles_index()`.
+  - `index.php` (accueil) et `equipe-france.php`/`euro.php` : basculés sur `load_articles_index()` au lieu de lire `data/articles.json` directement.
+- Script de migration one-shot (`split-articles.ps1`, hors repo) : a splitté les 5 articles existants en 5 fichiers `data/articles/{slug}.json` + généré `data/articles-index.json` trié par date décroissante.
+- `data/articles.json` retiré du suivi Git (supplanté par la nouvelle structure) et documenté dans `CLAUDE.md` (nouvelle section "Structure d'un article" avec procédure obligatoire en 2 étapes pour tout futur article).
+- Aucun changement d'URL ni de rendu HTML — migration invisible pour le SEO/Google (confirmé à l'utilisateur qui s'en inquiétait).
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

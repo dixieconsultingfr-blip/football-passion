@@ -1,7 +1,8 @@
 <?php
 // Hub evergreen football - Accueil
 // Charger les données
-$articles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+require_once __DIR__ . '/blog/helpers.php';
+$articles = load_articles_index(__DIR__);
 $categories = json_decode(file_get_contents(__DIR__ . '/data/categories.json'), true) ?? [];
 
 $page_title = 'Football Passion — L1, L2, Champions League, Europa, Euro, CDM';

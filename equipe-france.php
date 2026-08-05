@@ -1,5 +1,6 @@
 <?php
-$articlesAll = json_decode(@file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+require_once __DIR__ . '/blog/helpers.php';
+$articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 

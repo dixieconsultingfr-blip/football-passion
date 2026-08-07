@@ -26,7 +26,7 @@ include __DIR__ . '/templates/header.php';
         <?php foreach ($categories as $cat): ?>
         <?php
         $hubs = ['france' => '/equipe-france.php', 'euro' => '/euro.php'];
-        $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['name']);
+        $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']);
         ?>
         <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
             <h3 class="font-bold text-green-400"><?php echo htmlspecialchars($cat['name']); ?></h3>

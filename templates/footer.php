@@ -22,8 +22,8 @@
                 <div>
                     <h3 class="text-green-400 font-bold mb-4 text-sm uppercase tracking-wider">Réseaux</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="https://www.facebook.com/footballpassionfr" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">📘 Facebook</a></li>
-                        <li><a href="https://www.instagram.com/footballpassionfr" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">📸 Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61589544344140" target="_blank" rel="nofollow noopener noreferrer" class="hover:text-green-400 transition-colors">📘 Facebook</a></li>
+                        <li><a href="https://www.instagram.com/cdm2026.info/" target="_blank" rel="nofollow noopener noreferrer" class="hover:text-green-400 transition-colors">📸 Instagram</a></li>
                     </ul>
                 </div>
                 <div>

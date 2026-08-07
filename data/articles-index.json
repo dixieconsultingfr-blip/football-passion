@@ -1,0 +1,82 @@
+[
+    {
+        "id":  3,
+        "slug":  "om-aguerd-retour-real-sociedad-mercato",
+        "titre":  "OM : Nayef Aguerd vers un retour en Espagne ? La Real Sociedad accélère",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OM",
+                           "Mercato",
+                           "Real Sociedad",
+                           "Aguerd"
+                       ],
+        "date":  "2026-08-05",
+        "extrait":  "Arrivé à l\u0027OM il y a un an, Nayef Aguerd serait désormais dans le viseur de la Real Sociedad, qui souhaite le faire revenir en Liga. Un accord de principe entre le joueur et le club basque aurait déjà été trouvé.",
+        "vignette":  "/images/om-aguerd-real-sociedad.webp",
+        "image_alt":  "Nayef Aguerd sous le maillot de l\u0027OM, possible retour a la Real Sociedad"
+    },
+    {
+        "id":  4,
+        "slug":  "zidane-selectionneur-equipe-de-france-officiel",
+        "titre":  "Zinédine Zidane sélectionneur des Bleus : le rêve est devenu réalité",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "France",
+                           "Zidane",
+                           "CDM",
+                           "Euro"
+                       ],
+        "date":  "2026-08-05",
+        "extrait":  "Zinédine Zidane a été présenté ce 28 juillet comme nouveau sélectionneur de l\u0027équipe de France, devant 120 journalistes au siège de la FFF. Un contrat signé jusqu\u0027en 2030, avec un objectif clairement affiché : la Coupe du Monde organisée en Espagne, au Maroc et au Portugal.",
+        "vignette":  "/images/zidane-nouveau-selectionneur-equipe-de-france-2030.webp",
+        "image_alt":  "Zinedine Zidane presente comme nouveau selectionneur des Bleus"
+    },
+    {
+        "id":  5,
+        "slug":  "ol-lyon-battu-sparta-prague-ligue-des-champions",
+        "titre":  "Ligue des champions : Lyon battu à Prague, l\u0027OL devra renverser la situation au retour",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OL",
+                           "Champions League"
+                       ],
+        "date":  "2026-08-05",
+        "extrait":  "L\u0027Olympique lyonnais s\u0027est incliné 2-1 à Prague face au Sparta lors du match aller du 3e tour préliminaire de la Ligue des champions. Les hommes de Paulo Fonseca devront renverser cet écart le 11 août au Groupama Stadium pour continuer de viser les barrages.",
+        "vignette":  "/images/lyon-battu-a-prague-ldc-2026.webp",
+        "image_alt":  "Un joueur de l\u0027OL dans le match retour face au Sparta Prague en Ligue des champions"
+    },
+    {
+        "id":  1,
+        "slug":  "fifa-forward-enterprise-infantino-capitule-uefa",
+        "titre":  "FIFA Forward Enterprise : comment Infantino s\u0027est retrouvé seul contre le monde du football",
+        "categorie":  "CDM",
+        "etiquettes":  [
+                           "CDM 2030",
+                           "FIFA",
+                           "Infantino",
+                           "UEFA",
+                           "Gouvernance"
+                       ],
+        "date":  "2026-08-01",
+        "extrait":  "En moins de sept jours, la FIFA Forward Enterprise (FFE) est passée de grand projet d\u0027Infantino à projet enterré. Boycott de l\u0027UEFA, démission de ses conseillers, critiques politiques : analyse d\u0027un épisode révélateur pour le football mondial et CDM 2030.",
+        "vignette":  "/images/FIFA-Forward-Enterprise-seul-face-au-monde.webp",
+        "image_alt":  "FIFA Forward Enterprise : Gianni Infantino seul face aux drapeaux des confédérations UEFA, CONMEBOL, CONCACAF, AFC, CAF et OFC"
+    },
+    {
+        "id":  2,
+        "slug":  "deschamps-bilan-chiffre-14-ans-selectionneur-bleus",
+        "titre":  "Équipe de France : le bilan chiffré des 14 ans de Didier Deschamps sur le banc des Bleus",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "France",
+                           "Deschamps",
+                           "Statistiques",
+                           "Zidane",
+                           "CDM 2026"
+                       ],
+        "date":  "2026-07-19",
+        "extrait":  "Nommé en juillet 2012, Didier Deschamps a dirigé son dernier match le 18 juillet 2026 face à l\u0027Angleterre. Retour chiffré sur 14 ans de mandat : 185 matchs, 2 trophées, et une rivalité devenue cruciale avec l\u0027Espagne.",
+        "vignette":  "/images/Deschamps-14-ans-chez-bleu.webp",
+        "image_alt":  "Didier Deschamps sur le banc des Bleus apres 14 ans de mandat"
+    }
+]

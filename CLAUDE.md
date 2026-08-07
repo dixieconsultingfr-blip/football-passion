@@ -13,7 +13,59 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Auteur** : Jérôme Henry (Dixie Consulting)
 **Stack** : PHP 8 vanilla + Tailwind CSS + JSON + n8n
 **Hébergement** : Hostinger (même config que CDM 2026)
-**Déploiement** : GitHub Actions → `deploy` branch
+**Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`) ping le webhook Hostinger (secret `HOSTINGER_WEBHOOK_URL`) → Hostinger pull automatiquement via son intégration Git native (hPanel → Avancé → Git). Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
+
+## 🚨 Règle critique — Journal de procédure
+
+**Après chaque action sur ce projet** (nouvelle page, fonctionnalité, config, service tiers, correction), mettre à jour `procedure-football-passion.md` (à la racine, hors `public_html/`) en ajoutant une entrée décrivant l'action, dans l'ordre chronologique.
+
+## 🚨 Règle critique — Dépôt GitHub PUBLIC, jamais de secret en clair
+
+Le dépôt `football-passion` sur GitHub est **public** (contrairement à `coupe-du-monde-2026` qui est privé). **Ne jamais committer de clé secrète, mot de passe ou token en clair dans le code** (Turnstile secret, clés API, etc.).
+
+Tout secret va dans **`config/secrets.php`** (fichier gitignore, jamais versionné) et est chargé via `require`. Après création/modification de ce fichier, il doit être **uploadé manuellement une seule fois** sur Hostinger — il n'est jamais déployé automatiquement puisqu'il n'est pas dans le repo.
+
+## 🚨 Règle critique — Emplacement des fichiers (structure à PLAT, comme CDM 2026)
+
+**Tous les fichiers du site vont directement à la racine du dépôt** — pas de dossier `public_html/` local.
+
+**Raison** : le déploiement automatique passe par l'intégration Git native de Hostinger (hPanel → Avancé → Git), qui clone l'intégralité du dépôt tel quel dans le dossier `public_html` du serveur. Un dossier `public_html/` imbriqué dans le dépôt créerait un niveau de profondeur en trop (`public_html/public_html/index.php`) et casserait le déploiement.
+
+> ⚠️ Historique : une structure `public_html/` locale a été utilisée un temps pour faciliter l'upload manuel, avant l'activation du déploiement Git automatique. Elle a été abandonnée le 1er août 2026 au profit de la structure à plat — voir `procedure-football-passion.md` section 3.16.
+
+```
+football-passion/                  ← racine du dépôt = racine du site
+├── CLAUDE.md
+├── .gitignore
+├── procedure-football-passion.md
+├── .github/workflows/deploy.yml
+├── index.php
+├── a-propos.php
+├── mentions-legales.php
+├── politique-confidentialite.php
+├── equipe-france.php
+├── euro.php
+├── contact.php           ← formulaire (Turnstile + honeypot)
+├── contact-send.php      ← traitement (mail() natif, destinataire caché)
+├── 404.php
+├── .htaccess
+├── config/
+│   └── secrets.php        ← gitignore, jamais commité
+├── templates/
+│   ├── header.php
+│   └── footer.php
+├── data/
+│   ├── articles-index.json    ← index léger (liste, filtres, homepage)
+│   ├── articles/
+│   │   └── {slug}.json        ← un fichier par article (contenu complet)
+│   ├── categories.json
+│   ├── equipes.json
+│   └── matchs.json
+├── images/
+└── blog/
+    ├── index.php
+    └── helpers.php
+```
 
 ---
 
@@ -55,6 +107,15 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 ---
 
+## 🖼️ Vignettes d'articles — format
+
+- **Format** : `.webp` (25-35 % plus léger qu'un `.jpg` à qualité égale — meilleur pour le LCP)
+- **Largeur max** : 1200px, ratio 16:9 recommandé
+- **Poids cible** : 100-300 Ko — jamais de PNG brut ou d'export Canva non compressé
+- **Nommage** : kebab-case descriptif, ex. `deschamps-bilan-14-ans-bleus.webp`
+- **Emplacement** : `images/`
+- Renseigner le même chemin dans `"image"` et `"vignette"` de `articles.json`
+
 ## 📁 Dossiers clés
 
 | Dossier | Rôle |
@@ -67,7 +128,14 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 ---
 
-## 📰 Structure d'un article (articles.json)
+## 📰 Structure d'un article — un fichier JSON par article
+
+**Depuis le 5 août 2026**, les articles ne vivent plus dans un unique `data/articles.json` monolithique (non scalable au-delà de quelques dizaines d'articles — diffs Git énormes, tout le contenu HTML relu à chaque page liste). Nouvelle architecture à deux niveaux :
+
+- **`data/articles/{slug}.json`** — un fichier par article, contenu complet (structure ci-dessous). Chargé uniquement à la vue d'un article précis (`load_article($basePath, $slug)` dans `blog/helpers.php`), jamais en liste.
+- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, categorie, etiquettes, date, extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
+
+**Structure complète d'un fichier `data/articles/{slug}.json`** :
 
 ```json
 {
@@ -76,8 +144,9 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
   "auteur": "Jérôme Henry",
   "meta_title": "Titre SEO < 60 caractères",
   "meta_desc": "Description SEO < 160 caractères",
-  "image": "/images/nom-kebab-case.jpg",
+  "image": "/images/nom-kebab-case.webp",
   "image_alt": "Description alternative",
+  "vignette": "/images/nom-kebab-case.webp",
   "categorie": "L1 | L2 | CL | Europa | Euro | CDM | CAN | France",
   "etiquettes": ["Tag1", "Tag2"],
   "slug": "slug-en-kebab-case",
@@ -87,9 +156,54 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 }
 ```
 
-**Important** : articles.json doit être **trié par ID décroissant** (plus récent en tête).
+**🚨 Procédure obligatoire pour ajouter un nouvel article** :
+1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
+2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`.
+3. Les deux fichiers doivent être commités ensemble — ne jamais ajouter l'un sans l'autre.
+
+**Sitemap** : `sitemap.php` (accessible en `/sitemap.xml` via réécriture `.htaccess`) lit `data/articles-index.json` **à la volée à chaque requête** — aucune régénération manuelle n'est nécessaire. Tant que l'étape 2 ci-dessus est respectée pour chaque nouvel article, le sitemap est automatiquement à jour. `robots.txt` référence son URL.
+
+**Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
+
+⚠️ Toujours écrire le contenu accentué (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1`, pour éviter la corruption d'encodage (mojibake) documentée dans `procedure-football-passion.md` section 3.22.
 
 ---
+
+## 📅 Structure d'un match (data/matchs.json)
+
+Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à venir, décroissant pour les résultats — géré côté PHP, pas besoin de trier le fichier).
+
+```json
+{
+  "id": 1,
+  "competition": "L1 | L2 | CL | Europa | France",
+  "domicile": "Paris Saint-Germain",
+  "exterieur": "Olympique de Marseille",
+  "date": "2026-08-15",
+  "heure": "21:00",
+  "stade": "Parc des Princes",
+  "status": "SCHEDULED | LIVE | FINISHED",
+  "score_dom": null,
+  "score_ext": null
+}
+```
+
+- `status: FINISHED` + `score_dom`/`score_ext` renseignés → apparaît dans "Derniers résultats"
+- Sinon → apparaît dans "Prochains matchs"
+- `id` unique et stable (utile pour que n8n sache quelle entrée mettre à jour plutôt que dupliquer)
+- `saison` (optionnel, ex. `"2026-2027"`) : ajouté automatiquement par le script d'archivage si absent (calculé depuis `date` : saison = année de juillet à juin suivant)
+
+### Archivage — éviter que matchs.json grossisse indéfiniment
+
+**Depuis le 7 août 2026**, `data/matchs.json` est une **fenêtre glissante** (résultats récents + tous les matchs à venir), pas un historique complet. Les matchs `FINISHED` de plus de 45 jours sont déplacés vers `data/archives/{competition}-{saison}.json` (un fichier par compétition+saison), consultables via `archives.php`.
+
+**Script** : `scripts/archive-old-matches.ps1` — à exécuter périodiquement (manuellement pour l'instant, pas encore automatisé) :
+```bash
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/archive-old-matches.ps1
+```
+Recalcule la saison à la volée depuis `date` (indépendant du champ `saison`, donc fonctionne même sur des matchs synchronisés par n8n qui ne le renseigne pas), fusionne avec l'archive existante sans dupliquer (dédoublonnage par `id`), puis retire ces entrées de `matchs.json`.
+
+`archives.php` liste les saisons/compétitions disponibles en scannant `data/archives/` et affiche les résultats de la sélection. `sitemap.php` référence automatiquement chaque page d'archive existante.
 
 ## 🔄 Données en direct
 
@@ -110,10 +224,15 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 ### n8n — Automation
 
-**Workflow** : récupère données football-data.org toutes les 5 min
-- Branches : scores L1/L2/CL/Europa, posts Facebook auto
-- Commit direct sur `data/matchs.json` via GitHub
-- **Garde-fous** : ne committe que si changement réel (sinon épuise quota GitHub Actions)
+✅ **Statut : construit, testé et ACTIF depuis le 4 août 2026.** Workflow `Football Passion — Récupération matchs` sur l'instance self-hébergée `https://n8n.srv814711.hstgr.cloud`, publié et tournant en autonomie toutes les 5 minutes.
+
+📄 **Documentation complète du workflow réel (architecture, code des nœuds, écarts par rapport au plan initial et pourquoi)** : voir `guide-n8n-workflow.md` à la racine du projet.
+
+**Résumé** :
+- Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) ont été testées et renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit, pas un bug. Pour les activer un jour : upgrade du plan football-data.org.
+- Équipe de France (amicaux/qualifs) : toujours hors périmètre, reste manuel (football-data.org ne couvre pas ces matchs).
+- Architecture : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
+- Piège n8n à connaître : un champ contenant `{{ }}` doit être explicitement basculé en mode **"Expression"** (toggle à côté de "Fixed") pour être évalué — sinon n8n écrit le texte littéral. Déjà corrigé dans ce workflow, mais à surveiller pour tout futur nœud.
 
 ---
 
@@ -129,6 +248,29 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 | **Euro** | Championnat d'Europe | Juin-juillet 2028 |
 | **CDM** | Coupe du Monde | Juin-juillet 2026/2030/2034 |
 | **France** | Équipe de France | Année-rond |
+
+---
+
+## 🔗 Liens externes — règle absolue
+
+**Tout lien vers un site tiers doit avoir `rel="nofollow noopener noreferrer"`**, sans exception.
+
+```html
+<a href="https://exemple.com" target="_blank" rel="nofollow noopener noreferrer">Texte</a>
+```
+
+- `nofollow` : ne transmet pas de jus SEO vers le site externe
+- `noopener` : sécurité (empêche le site cible d'accéder à `window.opener`)
+- `noreferrer` : ne transmet pas le referrer HTTP
+
+**Cas concernés :**
+- Liens de licences (CC BY, CC BY-SA…)
+- Liens vers hébergeur, APIs tierces (football-data.org, Meta, CNIL…)
+- Liens vers réseaux sociaux (Facebook, Instagram…)
+- Liens vers sources d'articles
+- Tout lien dans les pages légales (mentions légales, politique de confidentialité)
+
+**Seule exception : liens internes** (entre pages de football-passion.fr) → pas de `nofollow`, pas de `target="_blank"`.
 
 ---
 
@@ -150,9 +292,12 @@ Toujours utiliser `rel="nofollow noopener noreferrer"` sur les liens de licence 
 git push origin deploy
 
 # GitHub Actions se déclenche automatiquement
-# → FTP push vers Hostinger
-# → Site live en ~2 minutes
+# → ping du webhook Hostinger (secret HOSTINGER_WEBHOOK_URL)
+# → Hostinger pull automatiquement via son intégration Git
+# → Site live en ~1-2 minutes
 ```
+
+Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
 ---
 

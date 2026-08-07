@@ -1,6 +1,8 @@
 <?php
+// Hub evergreen football - Accueil
 // Charger les données
-$articles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+require_once __DIR__ . '/blog/helpers.php';
+$articles = load_articles_index(__DIR__);
 $categories = json_decode(file_get_contents(__DIR__ . '/data/categories.json'), true) ?? [];
 
 $page_title = 'Football Passion — L1, L2, Champions League, Europa, Euro, CDM';
@@ -22,7 +24,11 @@ include __DIR__ . '/templates/header.php';
     <h2 class="text-3xl font-bold mb-6">Catégories</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <?php foreach ($categories as $cat): ?>
-        <a href="/?cat=<?php echo urlencode($cat['slug']); ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
+        <?php
+        $hubs = ['france' => '/equipe-france.php', 'euro' => '/euro.php'];
+        $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']);
+        ?>
+        <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
             <h3 class="font-bold text-green-400"><?php echo htmlspecialchars($cat['name']); ?></h3>
             <p class="text-xs text-gray-400 mt-1"><?php echo htmlspecialchars($cat['description']); ?></p>
         </a>

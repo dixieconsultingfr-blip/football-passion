@@ -6136,12 +6136,12 @@
         "competition":  "CL",
         "domicile":  "AGF Aarhus",
         "exterieur":  "Sabah FK",
-        "date":  "2026-08-04",
+        "date":  "2026-08-05",
         "heure":  "18:30",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null
+        "status":  "FINISHED",
+        "score_dom":  2,
+        "score_ext":  1
     },
     {
         "id":  9000018,
@@ -6163,9 +6163,9 @@
         "date":  "2026-08-05",
         "heure":  "20:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null
+        "status":  "FINISHED",
+        "score_dom":  2,
+        "score_ext":  0
     },
     {
         "id":  9000020,

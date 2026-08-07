@@ -191,6 +191,19 @@ Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à v
 - `status: FINISHED` + `score_dom`/`score_ext` renseignés → apparaît dans "Derniers résultats"
 - Sinon → apparaît dans "Prochains matchs"
 - `id` unique et stable (utile pour que n8n sache quelle entrée mettre à jour plutôt que dupliquer)
+- `saison` (optionnel, ex. `"2026-2027"`) : ajouté automatiquement par le script d'archivage si absent (calculé depuis `date` : saison = année de juillet à juin suivant)
+
+### Archivage — éviter que matchs.json grossisse indéfiniment
+
+**Depuis le 7 août 2026**, `data/matchs.json` est une **fenêtre glissante** (résultats récents + tous les matchs à venir), pas un historique complet. Les matchs `FINISHED` de plus de 45 jours sont déplacés vers `data/archives/{competition}-{saison}.json` (un fichier par compétition+saison), consultables via `archives.php`.
+
+**Script** : `scripts/archive-old-matches.ps1` — à exécuter périodiquement (manuellement pour l'instant, pas encore automatisé) :
+```bash
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/archive-old-matches.ps1
+```
+Recalcule la saison à la volée depuis `date` (indépendant du champ `saison`, donc fonctionne même sur des matchs synchronisés par n8n qui ne le renseigne pas), fusionne avec l'archive existante sans dupliquer (dédoublonnage par `id`), puis retire ces entrées de `matchs.json`.
+
+`archives.php` liste les saisons/compétitions disponibles en scannant `data/archives/` et affiche les résultats de la sélection. `sitemap.php` référence automatiquement chaque page d'archive existante.
 
 ## 🔄 Données en direct
 

@@ -8,6 +8,7 @@ $staticPages = [
     ['loc' => '/',                              'changefreq' => 'daily',   'priority' => '1.0'],
     ['loc' => '/blog',                          'changefreq' => 'daily',   'priority' => '0.9'],
     ['loc' => '/calendrier.php',                'changefreq' => 'hourly',  'priority' => '0.9'],
+    ['loc' => '/archives.php',                  'changefreq' => 'monthly', 'priority' => '0.4'],
     ['loc' => '/equipe-france.php',             'changefreq' => 'weekly',  'priority' => '0.8'],
     ['loc' => '/euro.php',                      'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/a-propos.php',                  'changefreq' => 'monthly', 'priority' => '0.3'],
@@ -15,6 +16,17 @@ $staticPages = [
     ['loc' => '/mentions-legales.php',          'changefreq' => 'yearly',  'priority' => '0.1'],
     ['loc' => '/politique-confidentialite.php', 'changefreq' => 'yearly',  'priority' => '0.1'],
 ];
+
+$archivePages = [];
+$archiveDir = __DIR__ . '/data/archives';
+if (is_dir($archiveDir)) {
+    foreach (glob($archiveDir . '/*.json') as $file) {
+        $base = basename($file, '.json');
+        if (preg_match('/^([A-Za-z0-9]+)-(\d{4}-\d{4})$/', $base, $mtc)) {
+            $archivePages[] = "/archives.php?comp=" . urlencode($mtc[1]) . "&saison=" . urlencode($mtc[2]);
+        }
+    }
+}
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?>
@@ -32,6 +44,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     <lastmod><?= htmlspecialchars($a['date']) ?></lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+<?php endforeach; ?>
+<?php foreach ($archivePages as $loc): ?>
+  <url>
+    <loc>https://football-passion.fr<?= htmlspecialchars($loc) ?></loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 <?php endforeach; ?>
 </urlset>

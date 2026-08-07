@@ -212,6 +212,16 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Correction** : pilotage direct de l'éditeur n8n via Claude in Chrome (session déjà connectée), ouverture du node en plein écran ("Edit JavaScript"), suppression des lignes orphelines (30-34), workflow republié sous le nom "Corrige une erreur de syntaxe (accolades orphelines)...".
 - **Point d'attention pour l'avenir** : après toute édition de code dans un nœud n8n via automatisation navigateur, toujours relire l'intégralité du code affiché (scroll jusqu'en bas) avant de fermer le panneau, pour repérer d'éventuels restes de l'ancien contenu non supprimés par un `Ctrl+Shift+End` + `Delete` mal positionné.
 
+### 3.28 Archivage des matchs — matchs.json en fenêtre glissante
+- **Motivation** : question de l'utilisateur sur la gestion des résultats "au fil de la saison, sur plusieurs années", en référence à flashscore.fr (calendrier courant séparé des archives par saison). Anticipation du même problème que celui résolu pour les articles (section 3.25) : `data/matchs.json` grossirait indéfiniment sans purge, saison après saison.
+- **Architecture retenue** : `data/matchs.json` devient une **fenêtre glissante** — résultats `FINISHED` récents (moins de 45 jours) + tous les matchs à venir. Les résultats plus anciens sont déplacés vers `data/archives/{competition}-{saison}.json` (un fichier par compétition+saison, ex. `CL-2025-2026.json`).
+- **Script créé** : `scripts/archive-old-matches.ps1` (versionné dans le repo, contrairement aux scripts habituels en scratchpad car destiné à être réexécuté régulièrement). Calcule la saison à la volée depuis le champ `date` (indépendant d'un éventuel champ `saison` manquant — donc pas besoin de modifier le node n8n "Transformer les matchs", limite les risques après le bug de la section 3.27), fusionne avec l'archive existante en dédoublonnant par `id`, retire les entrées archivées de `matchs.json`.
+- **Premier run** : a archivé 189 matchs Champions League phase de ligue 2025-2026 (données réelles football-data.org, datées de septembre 2025, largement hors fenêtre de 45 jours) vers `data/archives/CL-2025-2026.json`. `matchs.json` passé de 554 à 365 entrées ; tous les 59 matchs ajoutés manuellement (qualifs CL + Europa League) préservés car soit récents soit à venir.
+- **Champ `saison`** ajouté à toutes les entrées existantes de `matchs.json` (calculé depuis `date`, format `"YYYY-YYYY+1"`, année sportive de juillet à juin).
+- **Nouvelle page `archives.php`** : scanne `data/archives/` pour lister les couples compétition+saison disponibles, affiche les résultats de la sélection (`?comp=CL&saison=2025-2026`). Lien ajouté depuis `calendrier.php`.
+- **`sitemap.php`** mis à jour pour référencer automatiquement chaque page d'archive existante (une entrée par fichier trouvé dans `data/archives/`).
+- **Pas encore automatisé** : le script d'archivage s'exécute manuellement pour l'instant (pas de cron ni de déclenchement n8n) — à réévaluer si le volume de matchs justifie une automatisation, mais pas prioritaire tant que `matchs.json` reste sous ~1000 entrées.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

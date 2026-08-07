@@ -206,6 +206,12 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Mise à jour automatique, par construction** : `sitemap.php` interroge `articles-index.json` en direct à chaque appel — aucun script de régénération, cron ou action manuelle n'est nécessaire. La seule condition est de continuer à suivre la procédure en 2 étapes de la section 3.25 (fichier article + entrée index) pour chaque nouvel article ; le sitemap reflète alors automatiquement l'état courant.
 - **Reste à faire côté utilisateur** : soumettre `https://football-passion.fr/sitemap.xml` dans Google Search Console pour accélérer la découverte initiale (le fichier fonctionnera aussi passivement, référencé par `robots.txt`, mais la soumission manuelle accélère l'indexation).
 
+### 3.27 Bug critique n8n — accolades orphelines bloquant toute mise à jour des matchs
+- **Symptôme signalé par l'utilisateur** : plus de "derniers résultats" affichés sur `calendrier.php`, alors que des matchs récents avaient bien été joués.
+- **Diagnostic** (capture d'écran n8n fournie par l'utilisateur) : le nœud Code "Comparer hasUpdate" affichait une erreur `SyntaxError: Unexpected token '}'`. Cause : des accolades de fermeture orphelines (`}`, `}]`, `}`, `}`, `}`) laissées après le `return` légitime lors d'une édition précédente du node (section 3.22) — reliquat non nettoyé. Résultat : le node échouait à **chaque exécution** depuis cette édition, empêchant toute mise à jour de `data/matchs.json` par l'automatisation.
+- **Correction** : pilotage direct de l'éditeur n8n via Claude in Chrome (session déjà connectée), ouverture du node en plein écran ("Edit JavaScript"), suppression des lignes orphelines (30-34), workflow republié sous le nom "Corrige une erreur de syntaxe (accolades orphelines)...".
+- **Point d'attention pour l'avenir** : après toute édition de code dans un nœud n8n via automatisation navigateur, toujours relire l'intégralité du code affiché (scroll jusqu'en bas) avant de fermer le panneau, pour repérer d'éventuels restes de l'ancien contenu non supprimés par un `Ctrl+Shift+End` + `Delete` mal positionné.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

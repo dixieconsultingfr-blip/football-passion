@@ -37,9 +37,14 @@ usort($classement, fn($a, $b) =>
     ?: strcmp($a['club'], $b['club'])
 );
 
-// ── Prochains matchs ──
+// ── Prochains matchs, groupés par journée (date) pour éviter de répéter la date à chaque ligne ──
 $aVenir = array_values(array_filter($matchsL2, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
+$aVenir = array_slice($aVenir, 0, 15);
+$parJournee = [];
+foreach ($aVenir as $m) {
+    $parJournee[$m['date']][] = $m;
+}
 
 // ── Actualités liées ──
 $articlesAll = load_articles_index(__DIR__);
@@ -81,7 +86,7 @@ include __DIR__ . '/templates/header.php';
 </header>
 
 <!-- Classement -->
-<section class="mb-12">
+<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
     <h2 class="text-2xl font-bold text-white mb-4">Classement</h2>
     <?php if (empty($classement)): ?>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
@@ -104,46 +109,57 @@ include __DIR__ . '/templates/header.php';
                     <th class="text-center px-4 py-3 font-semibold text-green-400">Pts</th>
                 </tr>
             </thead>
-            <tbody class="divide-y divide-gray-700">
+            <tbody class="divide-y divide-gray-700/60">
                 <?php foreach ($classement as $i => $c): $rang = $i + 1; ?>
-                <tr class="<?= $rang <= 3 ? 'bg-green-900/10' : ($rang >= count($classement) - 2 ? 'bg-red-900/10' : '') ?>">
+                <tr class="<?= $rang <= 3 ? 'bg-green-900/10' : ($rang >= count($classement) - 2 ? 'bg-red-900/10' : ($i % 2 === 1 ? 'bg-white/[0.02]' : '')) ?>">
                     <td class="px-4 py-2.5 text-gray-500 font-semibold"><?= $rang ?></td>
-                    <td class="px-2 py-2.5 text-white font-semibold"><?= htmlspecialchars($c['club']) ?></td>
+                    <td class="px-2 py-2.5 text-white font-semibold whitespace-nowrap"><?= htmlspecialchars($c['club']) ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['MJ'] ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['G'] ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['N'] ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['P'] ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BP'] ?></td>
                     <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BC'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['DB'] > 0 ? '+' . $c['DB'] : $c['DB'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400 font-medium"><?= $c['DB'] > 0 ? '+' . $c['DB'] : $c['DB'] ?></td>
                     <td class="px-4 py-2.5 text-center text-green-400 font-bold"><?= $c['Pts'] ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé automatiquement à partir des résultats enregistrés.</p>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-gray-600 text-xs">
+        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-green-900/40 border border-green-800/60 inline-block"></span>Barrages / montée</span>
+        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-red-900/40 border border-red-800/60 inline-block"></span>Zone de relégation</span>
+        <span class="italic ml-auto">Calculé automatiquement à partir des résultats enregistrés.</span>
+    </div>
     <?php endif; ?>
 </section>
 
 <!-- Prochains matchs -->
-<section class="mb-12">
+<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
     <h2 class="text-2xl font-bold text-white mb-5">Prochains matchs</h2>
-    <?php if (empty($aVenir)): ?>
+    <?php if (empty($parJournee)): ?>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
         Aucun match programmé pour le moment.
     </div>
     <?php else: ?>
-    <div class="space-y-3">
-        <?php foreach (array_slice($aVenir, 0, 10) as $m): ?>
-        <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <div class="text-gray-500 text-xs sm:w-32 shrink-0">
-                <?= date('d/m/Y', strtotime($m['date'])) ?><?= !empty($m['heure']) ? ' · ' . htmlspecialchars($m['heure']) : '' ?>
-            </div>
-            <div class="flex-1 flex items-center justify-center gap-3">
-                <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                <span class="text-gray-600 text-xs px-2">vs</span>
-                <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+    <div class="space-y-6">
+        <?php foreach ($parJournee as $date => $matchsJour): ?>
+        <div>
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2"><?= date_fr_jour($date) ?></p>
+            <div class="space-y-2">
+                <?php foreach ($matchsJour as $m): ?>
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-3.5 flex items-center gap-3 sm:gap-6">
+                    <?php if (!empty($m['heure'])): ?>
+                    <div class="text-gray-500 text-xs w-12 shrink-0"><?= htmlspecialchars($m['heure']) ?></div>
+                    <?php endif; ?>
+                    <div class="flex-1 flex items-center justify-center gap-3">
+                        <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-gray-600 text-xs px-2">vs</span>
+                        <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                    </div>
+                </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <?php endforeach; ?>
@@ -152,7 +168,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Actualités liées -->
-<section class="mb-12">
+<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
     <h2 class="text-2xl font-bold text-white mb-5">Actualités — Ligue 2</h2>
     <?php if (empty($articlesL2)): ?>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-sm">

@@ -26,6 +26,13 @@ function date_fr_long(string $date): string {
     return $d->format('j') . ' ' . $mois[(int)$d->format('n')] . ' ' . $d->format('Y');
 }
 
+function date_fr_jour(string $date): string {
+    $jours = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+    $d = new DateTime($date);
+    $jour = ucfirst($jours[(int)$d->format('w')]);
+    return $jour . ' ' . date_fr_long($date);
+}
+
 function load_articles_index(string $basePath): array {
     $raw = @file_get_contents($basePath . '/data/articles-index.json');
     if (!$raw) return [];

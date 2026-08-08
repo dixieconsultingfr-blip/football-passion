@@ -15,6 +15,7 @@
                     <h3 class="text-green-400 font-bold mb-4 text-sm uppercase tracking-wider">Compétitions</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="/blog?cat=L1" class="hover:text-green-400 transition-colors">Ligue 1</a></li>
+                        <li><a href="/ligue-2.php" class="hover:text-green-400 transition-colors">Ligue 2</a></li>
                         <li><a href="/blog?cat=CL" class="hover:text-green-400 transition-colors">Champions League</a></li>
                         <li><a href="/equipe-france.php" class="hover:text-green-400 transition-colors">Équipe de France</a></li>
                         <li><a href="/blog?cat=CDM" class="hover:text-green-400 transition-colors">Coupe du Monde</a></li>

@@ -229,10 +229,22 @@ Recalcule la saison à la volée depuis `date` (indépendant du champ `saison`, 
 📄 **Documentation complète du workflow réel (architecture, code des nœuds, écarts par rapport au plan initial et pourquoi)** : voir `guide-n8n-workflow.md` à la racine du projet.
 
 **Résumé** :
-- Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) ont été testées et renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit, pas un bug. Pour les activer un jour : upgrade du plan football-data.org.
-- Équipe de France (amicaux/qualifs) : toujours hors périmètre, reste manuel (football-data.org ne couvre pas ces matchs).
-- Architecture : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
+- Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit.
+- **Décision définitive (7 août 2026) : pas d'upgrade payant.** Ligue 2, Europa League, les tours de qualification/barrages de Champions League, et l'Équipe de France (amicaux/qualifs) restent **manuels en permanence** — ce n'est pas un état transitoire en attendant un upgrade, c'est le mode de fonctionnement retenu.
+- Architecture automatisée : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota, **préserve les entrées manuelles `id >= 9000000`** — voir procédure 3.22) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
 - Piège n8n à connaître : un champ contenant `{{ }}` doit être explicitement basculé en mode **"Expression"** (toggle à côté de "Fixed") pour être évalué — sinon n8n écrit le texte littéral. Déjà corrigé dans ce workflow, mais à surveiller pour tout futur nœud.
+
+### Procédure pour les compétitions manuelles (L2, Europa, qualifs CL, Équipe de France)
+
+L'utilisateur colle des captures d'écran ou du texte copié depuis un site de scores en direct (type flashscore.fr). Procédure standard, à appliquer sans redemander confirmation à chaque fois :
+
+1. **Extraire** les matchs (équipes, date, heure, score si le match est terminé) — ne jamais inventer une info absente (règle anti-hallucination).
+2. **ID** : prochain `id` libre à partir de `9000000` (convention établie section 3.22 de `procedure-football-passion.md`), incrémental.
+3. **Noms d'équipes en ASCII pur** (pas d'accents) pour éviter le bug de mojibake documenté en 3.22 — ex. `Saint-Etienne` pas `Saint-Étienne`, `Bodo/Glimt` pas `Bodø/Glimt`.
+4. **`status`** : `FINISHED` + scores si le match a déjà eu lieu, sinon `SCHEDULED` avec `heure` renseignée et scores `null`.
+5. `git pull origin deploy` **avant** toute modification (n8n peut avoir committé entre-temps sur L1/CL), puis ajouter les entrées via script PowerShell (jamais de JSON écrit en dur dans le message pour de gros volumes — toujours passer par `ConvertFrom-Json`/`ConvertTo-Json`, sans wrapper `@()` autour de `ConvertFrom-Json` — voir bug documenté en 3.22).
+6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
+7. `git add data/matchs.json && git commit && git push origin deploy`.
 
 ---
 

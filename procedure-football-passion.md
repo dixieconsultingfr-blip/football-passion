@@ -222,6 +222,11 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **`sitemap.php`** mis à jour pour référencer automatiquement chaque page d'archive existante (une entrée par fichier trouvé dans `data/archives/`).
 - **Pas encore automatisé** : le script d'archivage s'exécute manuellement pour l'instant (pas de cron ni de déclenchement n8n) — à réévaluer si le volume de matchs justifie une automatisation, mais pas prioritaire tant que `matchs.json` reste sous ~1000 entrées.
 
+### 3.29 Décision définitive — pas d'upgrade payant football-data.org, L2/Europa/qualifs CL/Équipe de France restent manuels
+- **Décision de l'utilisateur** : ne pas payer pour un plan football-data.org supérieur afin de débloquer Ligue 2 et Europa League via n8n. Ces compétitions (+ les tours de qualification/barrages de Champions League, + l'Équipe de France) resteront **manuelles en permanence** — pas un état transitoire.
+- Ajout des résultats/matchs L2 journée 1 et 2 (18 entrées, `id` 9000060-9000077) selon le même procédé que les qualifs CL et Europa League.
+- **Documentation formalisée dans `CLAUDE.md`** (section n8n — Automation) : procédure standard en 7 étapes pour toute compétition manuelle (extraction sans hallucination, ID `>= 9000000`, noms ASCII purs, `git pull` avant modification, script PowerShell sans `@()` autour de `ConvertFrom-Json`, vérification anti-mojibake, commit+push) — à appliquer directement sans redemander confirmation à chaque nouvelle capture d'écran fournie par l'utilisateur.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

@@ -163,8 +163,36 @@ include __DIR__ . '/templates/header.php';
 
     </div>
 
-    <!-- Colonne latérale : classement compact + actualités -->
+    <!-- Colonne latérale : actualités + classement compact -->
     <div class="lg:col-span-1 space-y-6">
+
+        <!-- Actualités liées -->
+        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
+            <h2 class="text-lg font-bold text-white mb-3">Actualités</h2>
+            <?php if (empty($articlesL2)): ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
+                Aucun article publié pour le moment.
+                <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
+            </div>
+            <?php else: ?>
+            <div class="space-y-3">
+                <?php foreach (array_slice($articlesL2, 0, 4) as $a): ?>
+                <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
+                    <?php if (!empty($a['vignette'])): ?>
+                    <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
+                        <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <?php endif; ?>
+                    <div class="min-w-0 flex flex-col justify-center gap-0.5">
+                        <p class="text-gray-500 text-[11px]"><?= date('d/m/Y', strtotime($a['date'])) ?></p>
+                        <h3 class="text-white font-semibold text-xs leading-snug line-clamp-2"><?= htmlspecialchars($a['titre']) ?></h3>
+                    </div>
+                </a>
+                <?php endforeach; ?>
+            </div>
+            <a href="/blog?cat=L2" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L2 →</a>
+            <?php endif; ?>
+        </section>
 
         <!-- Classement -->
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
@@ -199,34 +227,6 @@ include __DIR__ . '/templates/header.php';
                 </table>
             </div>
             <p class="text-gray-600 text-[11px] mt-2 italic">Calculé automatiquement à partir des résultats.</p>
-            <?php endif; ?>
-        </section>
-
-        <!-- Actualités liées -->
-        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
-            <h2 class="text-lg font-bold text-white mb-3">Actualités</h2>
-            <?php if (empty($articlesL2)): ?>
-            <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
-                Aucun article publié pour le moment.
-                <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
-            </div>
-            <?php else: ?>
-            <div class="space-y-3">
-                <?php foreach (array_slice($articlesL2, 0, 4) as $a): ?>
-                <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
-                    <?php if (!empty($a['vignette'])): ?>
-                    <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
-                        <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <?php endif; ?>
-                    <div class="min-w-0 flex flex-col justify-center gap-0.5">
-                        <p class="text-gray-500 text-[11px]"><?= date('d/m/Y', strtotime($a['date'])) ?></p>
-                        <h3 class="text-white font-semibold text-xs leading-snug line-clamp-2"><?= htmlspecialchars($a['titre']) ?></h3>
-                    </div>
-                </a>
-                <?php endforeach; ?>
-            </div>
-            <a href="/blog?cat=L2" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L2 →</a>
             <?php endif; ?>
         </section>
 

@@ -7,6 +7,7 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="/" class="hover:text-green-400 transition-colors">Accueil</a></li>
                         <li><a href="/calendrier.php" class="hover:text-green-400 transition-colors">Calendrier</a></li>
+                        <li><a href="/archives.php" class="hover:text-green-400 transition-colors">Archives</a></li>
                         <li><a href="/blog" class="hover:text-green-400 transition-colors">Blog</a></li>
                     </ul>
                 </div>

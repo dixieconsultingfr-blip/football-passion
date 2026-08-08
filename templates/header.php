@@ -21,6 +21,7 @@
             <ul class="flex gap-6">
                 <li><a href="/" class="hover:text-green-400">Accueil</a></li>
                 <li><a href="/calendrier.php" class="hover:text-green-400">Calendrier</a></li>
+                <li><a href="/archives.php" class="hover:text-green-400">Archives</a></li>
                 <li><a href="/blog" class="hover:text-green-400">Blog</a></li>
             </ul>
         </nav>

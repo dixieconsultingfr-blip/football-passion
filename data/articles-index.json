@@ -1,5 +1,19 @@
 [
     {
+        "id":  6,
+        "slug":  "l2-saint-etienne-victoire-sochaux-journee-1",
+        "titre":  "Ligue 2 : Saint-Étienne frappe un grand coup dès la première journée",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "Saint-Etienne",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-08-08",
+        "extrait":  "Pour son retour en Ligue 2, l\u0027AS Saint-Étienne n\u0027a pas tremblé : victoire 3-0 à Sochaux grâce notamment à un doublé d\u0027Irvin Cardona. De son côté, Nantes rate ses retrouvailles avec la division en s\u0027inclinant à domicile face au Red Star.",
+        "vignette":  "",
+        "image_alt":  ""
+    },
+    {
         "id":  3,
         "slug":  "om-aguerd-retour-real-sociedad-mercato",
         "titre":  "OM : Nayef Aguerd vers un retour en Espagne ? La Real Sociedad accélère",

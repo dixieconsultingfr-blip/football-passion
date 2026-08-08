@@ -5,6 +5,13 @@ require_once __DIR__ . '/blog/helpers.php';
 $articles = load_articles_index(__DIR__);
 $categories = json_decode(file_get_contents(__DIR__ . '/data/categories.json'), true) ?? [];
 
+$logosCompetitions = [
+    'L1'     => '/images/logo/logo-ligue-1.webp',
+    'L2'     => '/images/logo/logo-ligue-2.png',
+    'CL'     => '/images/logo/logo-champions-league.webp',
+    'Europa' => '/images/logo/logo-europa-league.webp',
+];
+
 $page_title = 'Football Passion — L1, L2, Champions League, Europa, Euro, CDM';
 $meta_desc = 'Hub evergreen football. Calendriers, matchs, analyses, actualités de la Ligue 1, Champions League, Europa League, Euro, Coupe du Monde, CAN et Équipe de France.';
 
@@ -29,7 +36,14 @@ include __DIR__ . '/templates/header.php';
         $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']);
         ?>
         <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
-            <h3 class="font-bold text-green-400"><?php echo htmlspecialchars($cat['name']); ?></h3>
+            <div class="flex items-center gap-2 mb-1">
+                <?php if (!empty($logosCompetitions[$cat['code']])): ?>
+                <span class="inline-flex items-center justify-center w-6 h-6 bg-white rounded-full p-1 shrink-0">
+                    <img src="<?php echo htmlspecialchars($logosCompetitions[$cat['code']]); ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                </span>
+                <?php endif; ?>
+                <h3 class="font-bold text-green-400"><?php echo htmlspecialchars($cat['name']); ?></h3>
+            </div>
             <p class="text-xs text-gray-400 mt-1"><?php echo htmlspecialchars($cat['description']); ?></p>
         </a>
         <?php endforeach; ?>

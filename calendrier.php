@@ -9,6 +9,13 @@ $competitions = [
     'France'  => 'Équipe de France',
 ];
 
+$logosCompetitions = [
+    'L1'     => '/images/logo/logo-ligue-1.webp',
+    'L2'     => '/images/logo/logo-ligue-2.png',
+    'CL'     => '/images/logo/logo-champions-league.webp',
+    'Europa' => '/images/logo/logo-europa-league.webp',
+];
+
 $filtre = $_GET['comp'] ?? '';
 $matchsFiltres = $filtre
     ? array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === $filtre))
@@ -43,7 +50,12 @@ include __DIR__ . '/templates/header.php';
         Tout
     </a>
     <?php foreach ($competitions as $code => $label): ?>
-    <a href="/calendrier.php?comp=<?= urlencode($code) ?>" class="px-4 py-1.5 text-xs font-semibold rounded-full border transition-colors <?= $filtre === $code ? 'bg-green-700 text-white border-green-700' : 'border-gray-600 text-gray-400 hover:border-green-600 hover:text-green-400' ?>">
+    <a href="/calendrier.php?comp=<?= urlencode($code) ?>" class="flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold rounded-full border transition-colors <?= $filtre === $code ? 'bg-green-700 text-white border-green-700' : 'border-gray-600 text-gray-400 hover:border-green-600 hover:text-green-400' ?>">
+        <?php if (!empty($logosCompetitions[$code])): ?>
+        <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+            <img src="<?= htmlspecialchars($logosCompetitions[$code]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+        </span>
+        <?php endif; ?>
         <?= htmlspecialchars($label) ?>
     </a>
     <?php endforeach; ?>
@@ -70,8 +82,15 @@ include __DIR__ . '/templates/header.php';
                 <span class="text-gray-600 text-xs px-2">vs</span>
                 <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
             </div>
-            <div class="text-green-500 text-xs font-semibold uppercase sm:w-28 sm:text-right shrink-0">
-                <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
+                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                </span>
+                <?php endif; ?>
+                <span class="text-green-500 text-xs font-semibold uppercase">
+                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                </span>
             </div>
         </div>
         <?php endforeach; ?>
@@ -97,8 +116,15 @@ include __DIR__ . '/templates/header.php';
                 <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
                 <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
             </div>
-            <div class="text-gray-500 text-xs font-semibold uppercase sm:w-28 sm:text-right shrink-0">
-                <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
+                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                </span>
+                <?php endif; ?>
+                <span class="text-gray-500 text-xs font-semibold uppercase">
+                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                </span>
             </div>
         </div>
         <?php endforeach; ?>

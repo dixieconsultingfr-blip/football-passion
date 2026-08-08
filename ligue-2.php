@@ -37,6 +37,12 @@ usort($classement, fn($a, $b) =>
     ?: strcmp($a['club'], $b['club'])
 );
 
+// ── Derniers résultats : uniquement la dernière journée jouée (dernière date FINISHED) ──
+$resultats = array_values($termines);
+usort($resultats, fn($a, $b) => strcmp($b['date'], $a['date']));
+$derniereDate = $resultats[0]['date'] ?? null;
+$derniersResultats = $derniereDate ? array_values(array_filter($resultats, fn($m) => $m['date'] === $derniereDate)) : [];
+
 // ── Prochains matchs, groupés par journée (date) pour éviter de répéter la date à chaque ligne ──
 $aVenir = array_values(array_filter($matchsL2, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
@@ -85,120 +91,153 @@ include __DIR__ . '/templates/header.php';
     </div>
 </header>
 
-<!-- Classement -->
-<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
-    <h2 class="text-2xl font-bold text-white mb-4">Classement</h2>
-    <?php if (empty($classement)): ?>
-    <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
-        Le classement s'affichera dès les premiers résultats de la saison.
-    </div>
-    <?php else: ?>
-    <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-x-auto">
-        <table class="w-full text-sm min-w-[520px]">
-            <thead>
-                <tr class="text-gray-500 text-xs uppercase border-b border-gray-700">
-                    <th class="text-left px-4 py-3 font-semibold">#</th>
-                    <th class="text-left px-2 py-3 font-semibold">Club</th>
-                    <th class="text-center px-2 py-3 font-semibold">MJ</th>
-                    <th class="text-center px-2 py-3 font-semibold">G</th>
-                    <th class="text-center px-2 py-3 font-semibold">N</th>
-                    <th class="text-center px-2 py-3 font-semibold">P</th>
-                    <th class="text-center px-2 py-3 font-semibold">BP</th>
-                    <th class="text-center px-2 py-3 font-semibold">BC</th>
-                    <th class="text-center px-2 py-3 font-semibold">Diff.</th>
-                    <th class="text-center px-4 py-3 font-semibold text-green-400">Pts</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-700/60">
-                <?php foreach ($classement as $i => $c): $rang = $i + 1; ?>
-                <tr class="<?= $rang <= 3 ? 'bg-green-900/10' : ($rang >= count($classement) - 2 ? 'bg-red-900/10' : ($i % 2 === 1 ? 'bg-white/[0.02]' : '')) ?>">
-                    <td class="px-4 py-2.5 text-gray-500 font-semibold"><?= $rang ?></td>
-                    <td class="px-2 py-2.5 text-white font-semibold whitespace-nowrap"><?= htmlspecialchars($c['club']) ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['MJ'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['G'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['N'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['P'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BP'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BC'] ?></td>
-                    <td class="px-2 py-2.5 text-center text-gray-400 font-medium"><?= $c['DB'] > 0 ? '+' . $c['DB'] : $c['DB'] ?></td>
-                    <td class="px-4 py-2.5 text-center text-green-400 font-bold"><?= $c['Pts'] ?></td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-gray-600 text-xs">
-        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-green-900/40 border border-green-800/60 inline-block"></span>Barrages / montée</span>
-        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-red-900/40 border border-red-800/60 inline-block"></span>Zone de relégation</span>
-        <span class="italic ml-auto">Calculé automatiquement à partir des résultats enregistrés.</span>
-    </div>
-    <?php endif; ?>
-</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-<!-- Prochains matchs -->
-<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
-    <h2 class="text-2xl font-bold text-white mb-5">Prochains matchs</h2>
-    <?php if (empty($parJournee)): ?>
-    <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
-        Aucun match programmé pour le moment.
-    </div>
-    <?php else: ?>
-    <div class="space-y-6">
-        <?php foreach ($parJournee as $date => $matchsJour): ?>
-        <div>
-            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2"><?= date_fr_jour($date) ?></p>
-            <div class="space-y-2">
-                <?php foreach ($matchsJour as $m): ?>
-                <div class="bg-gray-800 border border-gray-700 rounded-xl p-3.5 flex items-center gap-3 sm:gap-6">
-                    <?php if (!empty($m['heure'])): ?>
-                    <div class="text-gray-500 text-xs w-12 shrink-0"><?= htmlspecialchars($m['heure']) ?></div>
-                    <?php endif; ?>
-                    <div class="flex-1 flex items-center justify-center gap-3">
-                        <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                        <span class="text-gray-600 text-xs px-2">vs</span>
-                        <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+    <!-- Colonne principale : résultats + prochains matchs -->
+    <div class="lg:col-span-2 space-y-6">
+
+        <!-- Derniers résultats -->
+        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-white">Derniers résultats</h2>
+                <a href="/calendrier.php?comp=L2" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Tout voir →</a>
+            </div>
+            <?php if (empty($derniersResultats)): ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
+                Aucun résultat disponible pour le moment.
+            </div>
+            <?php else: ?>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <?php foreach ($derniersResultats as $m): ?>
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-3">
+                    <div class="flex-1 min-w-0 space-y-1.5">
+                        <div class="flex justify-between items-center gap-2 text-sm">
+                            <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                            <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
+                        </div>
+                        <div class="flex justify-between items-center gap-2 text-sm">
+                            <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                            <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
+                        </div>
+                    </div>
+                    <div class="text-right text-xs text-gray-500 shrink-0 leading-snug">
+                        Terminé<br><?= date_fr_relatif($m['date']) ?>
                     </div>
                 </div>
                 <?php endforeach; ?>
             </div>
-        </div>
-        <?php endforeach; ?>
-    </div>
-    <?php endif; ?>
-</section>
+            <?php endif; ?>
+        </section>
 
-<!-- Actualités liées -->
-<section class="mb-8 bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
-    <h2 class="text-2xl font-bold text-white mb-5">Actualités — Ligue 2</h2>
-    <?php if (empty($articlesL2)): ?>
-    <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-sm">
-        Aucun article publié pour le moment dans cette catégorie.
-        <a href="/blog" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
-    </div>
-    <?php else: ?>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <?php foreach (array_slice($articlesL2, 0, 6) as $a): ?>
-        <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex flex-col bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl overflow-hidden transition-colors">
-            <?php if (!empty($a['vignette'])): ?>
-            <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
-                <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">
+        <!-- Prochains matchs -->
+        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
+            <h2 class="text-xl font-bold text-white mb-4">Prochains matchs</h2>
+            <?php if (empty($parJournee)): ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
+                Aucun match programmé pour le moment.
+            </div>
+            <?php else: ?>
+            <div class="space-y-5">
+                <?php foreach ($parJournee as $date => $matchsJour): ?>
+                <div>
+                    <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2"><?= date_fr_jour($date) ?></p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <?php foreach ($matchsJour as $m): ?>
+                        <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center gap-3">
+                            <?php if (!empty($m['heure'])): ?>
+                            <div class="text-gray-500 text-xs w-10 shrink-0"><?= htmlspecialchars($m['heure']) ?></div>
+                            <?php endif; ?>
+                            <div class="flex-1 min-w-0 flex items-center justify-center gap-2">
+                                <span class="text-white text-sm text-right flex-1 truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                                <span class="text-gray-600 text-xs px-1 shrink-0">vs</span>
+                                <span class="text-white text-sm flex-1 truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
             </div>
             <?php endif; ?>
-            <div class="p-4 flex flex-col gap-2 flex-1">
-                <p class="text-gray-500 text-xs"><?= date('d/m/Y', strtotime($a['date'])) ?></p>
-                <h3 class="text-white font-semibold text-sm leading-snug"><?= htmlspecialchars($a['titre']) ?></h3>
-                <p class="text-gray-400 text-xs leading-relaxed flex-1"><?= htmlspecialchars($a['extrait']) ?></p>
-            </div>
-        </a>
-        <?php endforeach; ?>
+        </section>
+
     </div>
-    <?php endif; ?>
-</section>
+
+    <!-- Colonne latérale : classement compact + actualités -->
+    <div class="lg:col-span-1 space-y-6">
+
+        <!-- Classement -->
+        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
+            <h2 class="text-lg font-bold text-white mb-3">Classement</h2>
+            <?php if (empty($classement)): ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-xs">
+                Le classement s'affichera dès les premiers résultats.
+            </div>
+            <?php else: ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-x-auto">
+                <table class="w-full text-xs">
+                    <thead>
+                        <tr class="text-gray-500 uppercase border-b border-gray-700">
+                            <th class="text-left px-3 py-2 font-semibold">Club</th>
+                            <th class="text-center px-1.5 py-2 font-semibold">MJ</th>
+                            <th class="text-center px-1.5 py-2 font-semibold">DB</th>
+                            <th class="text-center px-3 py-2 font-semibold text-green-400">Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700/60">
+                        <?php foreach ($classement as $i => $c): $rang = $i + 1; ?>
+                        <tr class="<?= $rang <= 3 ? 'bg-green-900/10' : ($rang >= count($classement) - 2 ? 'bg-red-900/10' : ($i % 2 === 1 ? 'bg-white/[0.02]' : '')) ?>">
+                            <td class="px-3 py-2 text-white font-medium whitespace-nowrap">
+                                <span class="text-gray-500 font-normal mr-1.5"><?= $rang ?></span><?= htmlspecialchars($c['club']) ?>
+                            </td>
+                            <td class="px-1.5 py-2 text-center text-gray-400"><?= $c['MJ'] ?></td>
+                            <td class="px-1.5 py-2 text-center text-gray-400"><?= $c['DB'] > 0 ? '+' . $c['DB'] : $c['DB'] ?></td>
+                            <td class="px-3 py-2 text-center text-green-400 font-bold"><?= $c['Pts'] ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-gray-600 text-[11px] mt-2 italic">Calculé automatiquement à partir des résultats.</p>
+            <?php endif; ?>
+        </section>
+
+        <!-- Actualités liées -->
+        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
+            <h2 class="text-lg font-bold text-white mb-3">Actualités</h2>
+            <?php if (empty($articlesL2)): ?>
+            <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
+                Aucun article publié pour le moment.
+                <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
+            </div>
+            <?php else: ?>
+            <div class="space-y-3">
+                <?php foreach (array_slice($articlesL2, 0, 4) as $a): ?>
+                <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
+                    <?php if (!empty($a['vignette'])): ?>
+                    <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
+                        <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <?php endif; ?>
+                    <div class="min-w-0 flex flex-col justify-center gap-0.5">
+                        <p class="text-gray-500 text-[11px]"><?= date('d/m/Y', strtotime($a['date'])) ?></p>
+                        <h3 class="text-white font-semibold text-xs leading-snug line-clamp-2"><?= htmlspecialchars($a['titre']) ?></h3>
+                    </div>
+                </a>
+                <?php endforeach; ?>
+            </div>
+            <a href="/blog?cat=L2" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L2 →</a>
+            <?php endif; ?>
+        </section>
+
+    </div>
+
+</div>
 
 <!-- Liens internes -->
-<section class="flex flex-wrap gap-4 justify-center pb-4">
-    <a href="/calendrier.php?comp=L2" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier complet</a>
-    <a href="/blog?cat=L2" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles L2</a>
+<section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">
+    <a href="/blog?cat=L1" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">⚽ Ligue 1</a>
+    <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier toutes compétitions</a>
     <a href="/archives.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Archives des saisons</a>
 </section>
 

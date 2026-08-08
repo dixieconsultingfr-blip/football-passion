@@ -33,6 +33,16 @@ function date_fr_jour(string $date): string {
     return $jour . ' ' . date_fr_long($date);
 }
 
+function date_fr_relatif(string $date): string {
+    $today = new DateTime('today');
+    $d = new DateTime($date);
+    $diff = (int)$today->diff($d)->format('%r%a');
+    if ($diff === 0)  { return "Aujourd'hui"; }
+    if ($diff === -1) { return 'Hier'; }
+    if ($diff === 1)  { return 'Demain'; }
+    return date_fr_long($date);
+}
+
 function load_articles_index(string $basePath): array {
     $raw = @file_get_contents($basePath . '/data/articles-index.json');
     if (!$raw) return [];

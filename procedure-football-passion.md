@@ -266,6 +266,12 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Références mises à jour** : `templates/header.php` (favicon, apple-touch-icon, logo header) et `index.php` (logo du bandeau héro) pointent désormais vers `/images/charte-graphique/...`.
 - `charte-graphique.md` et cette procédure mis à jour avec les nouveaux chemins.
 
+### 3.35 Post d'annonce Facebook — transition CDM 2026 → Football Passion
+- **Vignette** générée : `images/charte-graphique/facebook-post-annonce-nouveau-nom.png` (1200×630) — "Coupe du Monde 2026" barré, flèche vers le badge FP + wordmark "Football Passion", tagline `football-passion.fr`. Texte dessiné en ASCII pur dans le script PowerShell (flèche dessinée en formes vectorielles, pas en caractère Unicode) pour éviter le bug de mojibake habituel.
+- **Texte du post rédigé** (ton passion + fair-play, cohérent avec la ligne éditoriale de `CLAUDE.md`), en texte brut sans Markdown — rappel fait à l'utilisateur que Facebook ne supporte pas `**gras**` dans le composeur, seulement retours à la ligne/emojis/URL brutes auto-cliquables.
+- **Formats vidéo Facebook** communiqués à l'utilisateur (post feed, vidéo de couverture, Reels) suite à sa question.
+- **L'utilisateur a transformé l'image 1200×630 en vidéo via Canva** pour publier le post — ratio proche du 16:9 recommandé, compatible sans ajustement nécessaire.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

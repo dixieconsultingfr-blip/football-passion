@@ -98,6 +98,8 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 
 **Cohérence avec le site** : réutiliser la palette (fond sombre `#030712`/`#111827`, accent vert `#4ade80`/`#22c55e`) sur les visuels de couverture et les images de publication, pour que la Page FB soit immédiatement identifiable comme la même marque que football-passion.fr.
 
+**Photo de couverture — faite** : `images/facebook-cover.png` (820×312), même identité que le bandeau héro du site (logo FP, texture terrain, halos verts), zone bas-gauche laissée libre pour ne pas être recouverte par l'avatar de la Page. À uploader manuellement sur `facebook.com/footballpassionfr` (upload de fichier non automatisable depuis cet environnement).
+
 **État actuel — à mettre à jour** (voir section 7) : couverture et photo de profil encore à l'identité "Coupe du Monde 2026" (trophée doré sur fond noir), bio encore "Actu, analyses et pronostics CDM 2026", lien site encore `coupe-du-monde-2026.info`.
 
 ---
@@ -106,7 +108,7 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 
 - [x] Créer un logo Football Passion (image, pas juste texte) — concept C implémenté, voir section 4
 - [x] Ajouter `images/favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
-- [ ] Remplacer photo de couverture Facebook (identité CDM 2026 → Football Passion)
+- [x] Créer la photo de couverture Facebook — `images/facebook-cover.png` (820×312), à uploader manuellement sur la Page (fichier prêt, upload non automatisable)
 - [ ] Remplacer photo de profil Facebook (utiliser `images/logo-fp-icon-512.png`)
 - [ ] Mettre à jour la bio Facebook (retirer mention CDM 2026)
 - [ ] Mettre à jour le lien site Facebook → `football-passion.fr`

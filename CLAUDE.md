@@ -165,7 +165,7 @@ football-passion/                  ← racine du dépôt = racine du site
 
 **Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
 
-⚠️ Toujours écrire le contenu accentué (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1`, pour éviter la corruption d'encodage (mojibake) documentée dans `procedure-football-passion.md` section 3.22.
+⚠️ Toujours écrire le contenu accentué **ou contenant des emoji** (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1` — le bug de mojibake touche aussi les emoji, pas seulement les caractères accentués (vu en pratique sur `▶️` dans un lien vidéo, section 3.31 de `procedure-football-passion.md`). Voir aussi section 3.22.
 
 ---
 

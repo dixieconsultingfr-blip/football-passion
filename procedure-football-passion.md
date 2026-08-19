@@ -240,6 +240,19 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Correction** : remplacé l'`<iframe>` par un lien externe classique (`<a target="_blank" rel="nofollow noopener noreferrer">`) vers la page YouTube, stylé comme une carte cliquable.
 - **Règle pour l'avenir** : ne pas utiliser d'iframe `youtube.com/embed/...` pour du contenu vidéo officiel LFP/Ligue 1 — toujours un lien externe direct. Les vidéos Facebook et les vidéos YouTube non-LFP peuvent en revanche être embarquées normalement (déjà validé avec l'article Zidane).
 
+### 3.32 Renommage de la page Facebook CDM 2026 → Football Passion (étape 1)
+- **Contexte** : la page Facebook "Coupe du Monde 2026 INFO" (227 followers, marquée Inactive dans le portefeuille business Meta) devait être réutilisée pour "Football Passion" plutôt que d'en créer une nouvelle, pour ne pas perdre l'audience déjà acquise (cf. `project_cdm_strategie.md`, mémoire long terme).
+- **Blocage rencontré** : le nom principal de la Page ("Nom") ne pouvait pas être changé directement — Facebook affichait *"Impossible de changer votre nom sur Facebook pour le moment car vous l'avez déjà fait au cours des 60 derniers jours"*, résidu d'une tentative de renommage antérieure. Ce verrou dure typiquement 60 jours après un changement/rejet.
+- **Ce qui a pu être fait malgré le verrou** (ces champs sont indépendants du "Nom" principal) :
+  - **Nom de profil / identifiant** changé en `footballpassionfr` → nouvelle URL publique : `https://www.facebook.com/footballpassionfr`.
+  - **Nom principal** finalement passé à `footballpassion.fr` (le 19 août 2026) — accepté par Facebook mais avec un mauvais formatage (style URL, sans espace ni majuscules, à cause d'une confusion entre le champ "Nom" et "Nom de profil" pendant la manipulation). Ce nom est maintenant lui aussi verrouillé pour 60 jours (jusqu'à environ **le 18 octobre 2026**).
+  - **Autre nom (AKA)** ajouté via `À propos → Noms → Autres noms` : `Football Passion` (type "Pseudo", option "Affiché en haut de la Page" cochée) — s'affiche maintenant correctement à côté du nom principal : *"footballpassion.fr (Football Passion)"*.
+- **État actuel (19 août 2026)** : Page publique affichant "footballpassion.fr (Football Passion)", URL `facebook.com/footballpassionfr`, 227 followers conservés. Photo de couverture et de profil encore à l'ancienne identité visuelle CDM 2026 — pas encore mises à jour.
+- **Reste à faire** :
+  - Changer photo de profil et photo de couverture pour l'identité visuelle Football Passion.
+  - Mettre à jour la bio/description (actuellement encore "Actu, analyses et pronostics CDM 2026") et le lien site web (actuellement `coupe-du-monde-2026.info`, à remplacer par `football-passion.fr`).
+  - **Vers le 18 octobre 2026** (60 jours après le 19 août) : retenter le changement du "Nom" principal, cette fois en tapant correctement `Football Passion` (avec espace et majuscule), pas une variante façon URL.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

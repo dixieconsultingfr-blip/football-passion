@@ -49,7 +49,8 @@ include __DIR__ . '/templates/header.php';
             <img src="/images/logo-fp-icon-512.png" alt="" class="w-16 h-16 rounded-2xl shadow-lg shadow-green-950/50" />
             <h1 class="text-4xl sm:text-5xl font-bold text-white">Football <span class="text-green-400">Passion</span></h1>
         </div>
-        <p class="text-xl text-gray-300 mb-6">Calendriers • Matchs • Analyses • Actualités</p>
+        <p class="text-xl text-gray-300 mb-1">Calendriers • Matchs • Analyses • Actualités</p>
+        <p class="text-sm text-green-500/80 font-medium mb-6">football-passion.fr</p>
         <div class="flex flex-wrap justify-center gap-2">
             <?php foreach ($categories as $cat): ?>
             <?php $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']); ?>

@@ -47,16 +47,26 @@ Hiérarchie (classes utilisées) :
 
 ---
 
-## 4. Logo
+## 4. Logo — Concept C : monogramme "FP"
 
-**État actuel : pas de logo image.** La marque s'affiche uniquement en texte : `⚽ Football Passion` (emoji ballon + wordmark, `text-2xl font-bold text-green-400`), dans le header et en avatar/couverture des réseaux sociaux (actuellement encore l'ancien visuel "Coupe du Monde 2026").
+**Statut : validé et implémenté (19 août 2026).** Trois pistes ont été présentées (A — ballon intégré au mot "Football", B — écusson circulaire façon logo de compétition, C — monogramme "FP"). **Le concept C a été retenu** pour sa robustesse technique : c'est le seul des trois qui reste parfaitement lisible à 16×16 px (taille favicon).
 
-**Recommandé** : créer un logo simple (ballon stylisé + texte, ou monogramme "FP") en `.webp`/`.svg`, décliné en :
-- Version horizontale (header du site, signature email)
-- Version carrée/icône seule (favicon, avatar réseaux sociaux)
-- Fond transparent, lisible sur fond sombre (`#030712`/`#111827`) ET sur fond clair (au cas où)
+**Description** : carré à coins arrondis (`rx` ≈ 23% de la largeur) fond `#111827`, liseré fin `#15803d`, monogramme "FP" centré (F en blanc `#f3f4f6`, P en vert `#4ade80`, police système en gras), souligné d'un trait vert horizontal.
 
-**⚠️ Favicon manquant** : `templates/header.php` référence `/images/favicon.ico` mais ce fichier n'existe pas dans `images/`. Le site n'affiche donc actuellement aucune icône d'onglet — à corriger dès qu'un visuel de marque est prêt (voir procédure).
+**Fichiers produits** (`images/`) :
+| Fichier | Usage |
+|---|---|
+| `favicon.svg` | Favicon navigateurs modernes (vectoriel, toutes tailles) |
+| `favicon.ico` | Favicon fallback (multi-résolution 16/32/48 px, embarqué PNG) |
+| `apple-touch-icon.png` | Icône iOS/Android à l'ajout sur écran d'accueil (180×180) |
+| `logo-fp-icon-512.png` | Icône haute résolution — à utiliser comme photo de profil Facebook/Instagram (512×512, à recadrer en cercle par la plateforme) |
+| `logo-football-passion.svg` | Wordmark complet (icône + texte "Football Passion") — utilisé dans le header du site |
+
+**Header du site** : `templates/header.php` affiche désormais `logo-football-passion.svg` à la place de l'ancien texte `⚽ Football Passion`.
+
+**✅ Favicon corrigé** : le fichier était référencé mais absent (voir version précédente de cette charte) — c'est maintenant résolu, `favicon.svg` + `favicon.ico` + `apple-touch-icon.png` sont tous en place et liés dans `<head>`.
+
+**Reste à faire** : uploader `logo-fp-icon-512.png` comme photo de profil sur la page Facebook `facebook.com/footballpassionfr` (et Instagram une fois migré) — voir checklist section 7.
 
 ---
 
@@ -94,10 +104,10 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 
 ## 7. Actions restantes (checklist)
 
-- [ ] Créer un logo Football Passion (image, pas juste texte) — voir section 4
-- [ ] Ajouter `images/favicon.ico` (et idéalement un `favicon.png` haute résolution)
+- [x] Créer un logo Football Passion (image, pas juste texte) — concept C implémenté, voir section 4
+- [x] Ajouter `images/favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
 - [ ] Remplacer photo de couverture Facebook (identité CDM 2026 → Football Passion)
-- [ ] Remplacer photo de profil Facebook
+- [ ] Remplacer photo de profil Facebook (utiliser `images/logo-fp-icon-512.png`)
 - [ ] Mettre à jour la bio Facebook (retirer mention CDM 2026)
 - [ ] Mettre à jour le lien site Facebook → `football-passion.fr`
 - [ ] Vers le 18 octobre 2026 : finaliser le renommage du nom principal de la Page (verrouillé 60 jours, voir procédure 3.32)

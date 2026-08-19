@@ -242,6 +242,7 @@ L'utilisateur colle des captures d'écran ou du texte copié depuis un site de s
 2. **ID** : prochain `id` libre à partir de `9000000` (convention établie section 3.22 de `procedure-football-passion.md`), incrémental.
 3. **Noms d'équipes en ASCII pur** (pas d'accents) pour éviter le bug de mojibake documenté en 3.22 — ex. `Saint-Etienne` pas `Saint-Étienne`, `Bodo/Glimt` pas `Bodø/Glimt`.
 4. **`status`** : `FINISHED` + scores si le match a déjà eu lieu, sinon `SCHEDULED` avec `heure` renseignée et scores `null`.
+4bis. **`journee`** (entier) : renseigner le numéro de journée quand la source l'indique (ex. "Journée 3 sur 34" sur flashscore.fr) — utilisé pour grouper "Derniers résultats"/"Prochains matchs" par journée plutôt que par date (une journée s'étale souvent sur 2-3 jours).
 5. `git pull origin deploy` **avant** toute modification (n8n peut avoir committé entre-temps sur L1/CL), puis ajouter les entrées via script PowerShell (jamais de JSON écrit en dur dans le message pour de gros volumes — toujours passer par `ConvertFrom-Json`/`ConvertTo-Json`, sans wrapper `@()` autour de `ConvertFrom-Json` — voir bug documenté en 3.22).
 6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
 7. `git add data/matchs.json && git commit && git push origin deploy`.

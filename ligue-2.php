@@ -37,19 +37,27 @@ usort($classement, fn($a, $b) =>
     ?: strcmp($a['club'], $b['club'])
 );
 
-// ── Derniers résultats : uniquement la dernière journée jouée (dernière date FINISHED) ──
+// ── Derniers résultats : uniquement la dernière journée jouée (numéro de journée, pas la date —
+//    une journée peut s'étaler sur plusieurs jours) ──
 $resultats = array_values($termines);
 usort($resultats, fn($a, $b) => strcmp($b['date'], $a['date']));
-$derniereDate = $resultats[0]['date'] ?? null;
-$derniersResultats = $derniereDate ? array_values(array_filter($resultats, fn($m) => $m['date'] === $derniereDate)) : [];
+$derniersResultats = [];
+$derniereJournee = null;
+if (!empty($resultats)) {
+    $derniereJournee = $resultats[0]['journee'] ?? null;
+    $derniersResultats = $derniereJournee !== null
+        ? array_values(array_filter($resultats, fn($m) => ($m['journee'] ?? null) === $derniereJournee))
+        : array_values(array_filter($resultats, fn($m) => $m['date'] === $resultats[0]['date']));
+}
 
-// ── Prochains matchs, groupés par journée (date) pour éviter de répéter la date à chaque ligne ──
+// ── Prochains matchs, groupés par journée (numéro), pas par date ──
 $aVenir = array_values(array_filter($matchsL2, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
-$aVenir = array_slice($aVenir, 0, 15);
+$aVenir = array_slice($aVenir, 0, 20);
 $parJournee = [];
 foreach ($aVenir as $m) {
-    $parJournee[$m['date']][] = $m;
+    $cle = $m['journee'] ?? $m['date'];
+    $parJournee[$cle][] = $m;
 }
 
 // ── Actualités liées ──
@@ -99,8 +107,8 @@ include __DIR__ . '/templates/header.php';
         <!-- Derniers résultats -->
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl font-bold text-white">Derniers résultats</h2>
-                <a href="/calendrier.php?comp=L2" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Tout voir →</a>
+                <h2 class="text-xl font-bold text-white">Derniers résultats<?= $derniereJournee !== null ? ' — Journée ' . (int)$derniereJournee : '' ?></h2>
+                <a href="/archives.php?comp=L2&saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
             </div>
             <?php if (empty($derniersResultats)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
@@ -138,15 +146,17 @@ include __DIR__ . '/templates/header.php';
             </div>
             <?php else: ?>
             <div class="space-y-5">
-                <?php foreach ($parJournee as $date => $matchsJour): ?>
+                <?php foreach ($parJournee as $cle => $matchsJour): ?>
                 <div>
-                    <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2"><?= date_fr_jour($date) ?></p>
+                    <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                        <?= ctype_digit((string)$cle) ? 'Journée ' . (int)$cle : date_fr_jour($cle) ?>
+                    </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         <?php foreach ($matchsJour as $m): ?>
                         <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center gap-3">
-                            <?php if (!empty($m['heure'])): ?>
-                            <div class="text-gray-500 text-xs w-10 shrink-0"><?= htmlspecialchars($m['heure']) ?></div>
-                            <?php endif; ?>
+                            <div class="text-gray-500 text-[11px] w-16 shrink-0 leading-tight">
+                                <?= date_fr_relatif($m['date']) ?><?= !empty($m['heure']) ? '<br>' . htmlspecialchars($m['heure']) : '' ?>
+                            </div>
                             <div class="flex-1 min-w-0 flex items-center justify-center gap-2">
                                 <span class="text-white text-sm text-right flex-1 truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
                                 <span class="text-gray-600 text-xs px-1 shrink-0">vs</span>

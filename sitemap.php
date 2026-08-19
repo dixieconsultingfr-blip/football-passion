@@ -23,10 +23,18 @@ if (is_dir($archiveDir)) {
     foreach (glob($archiveDir . '/*.json') as $file) {
         $base = basename($file, '.json');
         if (preg_match('/^([A-Za-z0-9]+)-(\d{4}-\d{4})$/', $base, $mtc)) {
-            $archivePages[] = "/archives.php?comp=" . urlencode($mtc[1]) . "&saison=" . urlencode($mtc[2]);
+            $archivePages["$mtc[1]-$mtc[2]"] = "/archives.php?comp=" . urlencode($mtc[1]) . "&saison=" . urlencode($mtc[2]);
         }
     }
 }
+// Saisons en cours (pas encore archivées) : présentes dans matchs.json avec au moins un résultat
+$matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
+foreach ($matchsAll as $m) {
+    if (($m['status'] ?? '') !== 'FINISHED' || empty($m['competition'])) { continue; }
+    $s = $m['saison'] ?? saison_fr($m['date']);
+    $archivePages["$m[competition]-$s"] = "/archives.php?comp=" . urlencode($m['competition']) . "&saison=" . urlencode($s);
+}
+$archivePages = array_values($archivePages);
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?>

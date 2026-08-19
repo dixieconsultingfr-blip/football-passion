@@ -33,6 +33,13 @@ function date_fr_jour(string $date): string {
     return $jour . ' ' . date_fr_long($date);
 }
 
+function saison_fr(string $date): string {
+    $d = new DateTime($date);
+    $mois = (int)$d->format('n');
+    $annee = (int)$d->format('Y');
+    return $mois >= 7 ? "$annee-" . ($annee + 1) : ($annee - 1) . "-$annee";
+}
+
 function date_fr_relatif(string $date): string {
     $today = new DateTime('today');
     $d = new DateTime($date);

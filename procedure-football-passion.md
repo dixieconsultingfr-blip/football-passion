@@ -227,6 +227,14 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - Ajout des résultats/matchs L2 journée 1 et 2 (18 entrées, `id` 9000060-9000077) selon le même procédé que les qualifs CL et Europa League.
 - **Documentation formalisée dans `CLAUDE.md`** (section n8n — Automation) : procédure standard en 7 étapes pour toute compétition manuelle (extraction sans hallucination, ID `>= 9000000`, noms ASCII purs, `git pull` avant modification, script PowerShell sans `@()` autour de `ConvertFrom-Json`, vérification anti-mojibake, commit+push) — à appliquer directement sans redemander confirmation à chaque nouvelle capture d'écran fournie par l'utilisateur.
 
+### 3.30 Numéro de journée + historique de saison consultable en direct
+- **Demande utilisateur** : afficher le numéro de journée dans "Derniers résultats"/"Prochains matchs" de `ligue-2.php`, et garder un historique consultable sur le long terme (saison 2026-2027) plutôt que de dépendre uniquement de l'archivage à 45 jours (section 3.28).
+- **Champ `journee`** ajouté aux 27 matchs L2 déjà en base (backfill par plage d'`id` : 9000060-9000068 → J1, 9000069-9000077 → J2, 9000078-9000086 → J3) et à la procédure de saisie manuelle (`CLAUDE.md`, étape 4bis) pour toutes les prochaines journées.
+- **`ligue-2.php`** : "Derniers résultats" et "Prochains matchs" groupés par `journee` (plus par date) — une journée peut s'étaler sur plusieurs jours (ex. Ven/Sam/Lun pour J3), le regroupement par date seule aurait cassé l'affichage.
+- **`archives.php` retravaillé** : ne se limite plus aux fichiers déjà archivés dans `data/archives/`. Fusionne désormais à la volée les résultats `FINISHED` encore présents dans `data/matchs.json` (saison en cours, pas encore purgée) avec l'archive existante le cas échéant, dédoublonnage par `id`. Le sélecteur de saisons liste donc aussi la saison en cours dès le premier résultat. Affichage groupé par journée si le champ est renseigné.
+- **Nouvelle fonction partagée `saison_fr()`** dans `blog/helpers.php` (calcul de la saison sportive depuis une date, même logique que `Get-Saison` dans `scripts/archive-old-matches.ps1`), utilisée par `archives.php` et `sitemap.php`.
+- Lien direct ajouté sur `ligue-2.php` : "Historique de la saison →" pointe vers `archives.php?comp=L2&saison=2026-2027`, visible dès qu'il y a au moins un résultat.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

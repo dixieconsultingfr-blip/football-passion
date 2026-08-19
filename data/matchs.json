@@ -6716,7 +6716,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  9000061,
@@ -6728,7 +6729,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  1
     },
     {
         "id":  9000062,
@@ -6740,7 +6742,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  9000063,
@@ -6752,7 +6755,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  4,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  9000064,
@@ -6764,7 +6768,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  1
     },
     {
         "id":  9000065,
@@ -6776,7 +6781,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  3
+        "score_ext":  3,
+        "journee":  1
     },
     {
         "id":  9000066,
@@ -6788,7 +6794,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  9000067,
@@ -6800,7 +6807,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  9000068,
@@ -6812,7 +6820,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  9000069,
@@ -6824,7 +6833,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  3
+        "score_ext":  3,
+        "journee":  2
     },
     {
         "id":  9000070,
@@ -6836,7 +6846,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  9000071,
@@ -6848,7 +6859,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  9000072,
@@ -6860,7 +6872,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  9000073,
@@ -6872,7 +6885,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  9000074,
@@ -6884,7 +6898,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  9000075,
@@ -6896,7 +6911,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  9000076,
@@ -6908,7 +6924,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  9000077,
@@ -6920,7 +6937,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  9000078,
@@ -6932,7 +6950,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000079,
@@ -6944,7 +6963,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000080,
@@ -6956,7 +6976,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000081,
@@ -6968,7 +6989,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000082,
@@ -6980,7 +7002,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000083,
@@ -6992,7 +7015,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000084,
@@ -7004,7 +7028,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000085,
@@ -7016,7 +7041,8 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     },
     {
         "id":  9000086,
@@ -7028,6 +7054,7 @@
         "stade":  "",
         "status":  "SCHEDULED",
         "score_dom":  null,
-        "score_ext":  null
+        "score_ext":  null,
+        "journee":  3
     }
 ]

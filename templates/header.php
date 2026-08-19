@@ -10,13 +10,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 </head>
 <body class="bg-gray-950 text-gray-100">
     <header class="bg-gray-900 border-b border-green-500">
         <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-green-400">
-                ⚽ Football Passion
+            <a href="/" class="flex items-center">
+                <img src="/images/logo-football-passion.svg" alt="Football Passion" class="h-8 w-auto" />
             </a>
             <ul class="flex gap-6">
                 <li><a href="/" class="hover:text-green-400">Accueil</a></li>

@@ -96,10 +96,17 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 | Photo de couverture | 820 × 312 px (desktop) | `.jpg`/`.png`, < 100 Ko idéalement |
 | Photo de profil | 170 × 170 px (affiché ~128×128) | `.png` fond transparent si logo, sinon `.jpg` |
 | Image de publication (lien/actu) | 1200 × 630 px (ratio 1.91:1) | `.webp`/`.jpg` — même format que les vignettes d'articles du site |
+| Reel / Story (vidéo ou image) | **1080 × 1920 px (ratio 9:16, vertical)** | `.png`/`.mp4` — contenu essentiel centré entre y=280 et y=1650 pour éviter les UI superposées (légendes, boutons) |
+
+⚠️ **Toujours prévoir les deux formats (paysage 1200×630 + vertical 1080×1920)** pour toute vignette destinée à un post — un visuel paysage envoyé pour un Reel se fait recadrer/zoomer automatiquement par Facebook/Canva, coupant une partie du texte (vécu avec la vignette d'annonce du renommage, corrigé en section 6 ci-dessous).
 
 **Cohérence avec le site** : réutiliser la palette (fond sombre `#030712`/`#111827`, accent vert `#4ade80`/`#22c55e`) sur les visuels de couverture et les images de publication, pour que la Page FB soit immédiatement identifiable comme la même marque que football-passion.fr.
 
 **Photo de couverture — faite** : `images/charte-graphique/facebook-cover.png` (820×312), même identité que le bandeau héro du site (logo FP, texture terrain, halos verts), zone bas-gauche laissée libre pour ne pas être recouverte par l'avatar de la Page. À uploader manuellement sur `facebook.com/footballpassionfr` (upload de fichier non automatisable depuis cet environnement).
+
+**Vignettes du post d'annonce (renommage CDM 2026 → Football Passion)** :
+- `images/charte-graphique/facebook-post-annonce-nouveau-nom.png` (1200×630, paysage) — pour post classique/lien.
+- `images/charte-graphique/facebook-reel-annonce-nouveau-nom.png` (1080×1920, vertical) — pour Reel/Story, créée après coup car la version paysage se faisait recadrer par Canva/Facebook sur le format Reel (texte coupé sur les côtés).
 
 **État actuel — à mettre à jour** (voir section 7) : couverture et photo de profil encore à l'identité "Coupe du Monde 2026" (trophée doré sur fond noir), bio encore "Actu, analyses et pronostics CDM 2026", lien site encore `coupe-du-monde-2026.info`.
 

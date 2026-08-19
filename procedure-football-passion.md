@@ -235,6 +235,11 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Nouvelle fonction partagée `saison_fr()`** dans `blog/helpers.php` (calcul de la saison sportive depuis une date, même logique que `Get-Saison` dans `scripts/archive-old-matches.ps1`), utilisée par `archives.php` et `sitemap.php`.
 - Lien direct ajouté sur `ligue-2.php` : "Historique de la saison →" pointe vers `archives.php?comp=L2&saison=2026-2027`, visible dès qu'il y a au moins un résultat.
 
+### 3.31 Vidéos LFP bloquées en embed — utiliser un lien externe, pas un iframe
+- **Constat** : l'iframe YouTube intégrée dans l'article Trophée des champions (section précédente) affichait "Vidéo non disponible — contenu LFP bloqué sur ce site" au lieu de la vidéo. La Ligue de Football Professionnel désactive l'embed externe sur ses contenus vidéo officiels (contrairement aux vidéos Facebook utilisées pour l'article Zidane, qui s'intègrent normalement).
+- **Correction** : remplacé l'`<iframe>` par un lien externe classique (`<a target="_blank" rel="nofollow noopener noreferrer">`) vers la page YouTube, stylé comme une carte cliquable.
+- **Règle pour l'avenir** : ne pas utiliser d'iframe `youtube.com/embed/...` pour du contenu vidéo officiel LFP/Ligue 1 — toujours un lien externe direct. Les vidéos Facebook et les vidéos YouTube non-LFP peuvent en revanche être embarquées normalement (déjà validé avec l'article Zidane).
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

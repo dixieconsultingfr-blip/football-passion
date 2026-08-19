@@ -110,7 +110,7 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 - [x] Créer un logo Football Passion (image, pas juste texte) — concept C implémenté, voir section 4
 - [x] Ajouter `favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
 - [x] Créer la photo de couverture Facebook — `images/charte-graphique/facebook-cover.png` (820×312), à uploader manuellement sur la Page (fichier prêt, upload non automatisable)
-- [ ] Remplacer photo de profil Facebook (utiliser `images/charte-graphique/logo-fp-icon-512.png`)
+- [x] Remplacer photo de profil et photo de couverture Facebook (faites, 19 août 2026 — rendu validé par l'utilisateur)
 - [ ] Mettre à jour la bio Facebook (retirer mention CDM 2026)
 - [ ] Mettre à jour le lien site Facebook → `football-passion.fr`
 - [ ] Vers le 18 octobre 2026 : finaliser le renommage du nom principal de la Page (verrouillé 60 jours, voir procédure 3.32)

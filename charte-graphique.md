@@ -53,16 +53,17 @@ Hiérarchie (classes utilisées) :
 
 **Description** : carré à coins arrondis (`rx` ≈ 23% de la largeur) fond `#111827`, liseré fin `#15803d`, monogramme "FP" centré (F en blanc `#f3f4f6`, P en vert `#4ade80`, police système en gras), souligné d'un trait vert horizontal.
 
-**Fichiers produits** (`images/`) :
+**Fichiers produits** — regroupés dans `images/charte-graphique/` (tous les assets d'identité de marque, séparés des vignettes d'articles et des logos de compétitions tierces qui restent respectivement à la racine de `images/` et dans `images/logo/`) :
 | Fichier | Usage |
 |---|---|
 | `favicon.svg` | Favicon navigateurs modernes (vectoriel, toutes tailles) |
 | `favicon.ico` | Favicon fallback (multi-résolution 16/32/48 px, embarqué PNG) |
 | `apple-touch-icon.png` | Icône iOS/Android à l'ajout sur écran d'accueil (180×180) |
 | `logo-fp-icon-512.png` | Icône haute résolution — à utiliser comme photo de profil Facebook/Instagram (512×512, à recadrer en cercle par la plateforme) |
-| `logo-football-passion.svg` | Wordmark complet (icône + texte "Football Passion") — utilisé dans le header du site |
+| `logo-football-passion.svg` | Wordmark complet (icône + texte) — utilisé dans le header du site |
+| `facebook-cover.png` | Photo de couverture Facebook (820×312) |
 
-**Header du site** : `templates/header.php` affiche désormais `logo-football-passion.svg` à la place de l'ancien texte `⚽ Football Passion`.
+**Header du site** : `templates/header.php` affiche `logo-football-passion.svg` à la place de l'ancien texte `⚽ Football Passion`. Le texte du wordmark a ensuite été ajusté à la demande de l'utilisateur pour afficher `football-passion.fr` (couleurs conservées : blanc + vert) plutôt que "Football Passion", afin de renforcer le nom de domaine exact face à la concurrence sur le nom.
 
 **✅ Favicon corrigé** : le fichier était référencé mais absent (voir version précédente de cette charte) — c'est maintenant résolu, `favicon.svg` + `favicon.ico` + `apple-touch-icon.png` sont tous en place et liés dans `<head>`.
 
@@ -98,7 +99,7 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 
 **Cohérence avec le site** : réutiliser la palette (fond sombre `#030712`/`#111827`, accent vert `#4ade80`/`#22c55e`) sur les visuels de couverture et les images de publication, pour que la Page FB soit immédiatement identifiable comme la même marque que football-passion.fr.
 
-**Photo de couverture — faite** : `images/facebook-cover.png` (820×312), même identité que le bandeau héro du site (logo FP, texture terrain, halos verts), zone bas-gauche laissée libre pour ne pas être recouverte par l'avatar de la Page. À uploader manuellement sur `facebook.com/footballpassionfr` (upload de fichier non automatisable depuis cet environnement).
+**Photo de couverture — faite** : `images/charte-graphique/facebook-cover.png` (820×312), même identité que le bandeau héro du site (logo FP, texture terrain, halos verts), zone bas-gauche laissée libre pour ne pas être recouverte par l'avatar de la Page. À uploader manuellement sur `facebook.com/footballpassionfr` (upload de fichier non automatisable depuis cet environnement).
 
 **État actuel — à mettre à jour** (voir section 7) : couverture et photo de profil encore à l'identité "Coupe du Monde 2026" (trophée doré sur fond noir), bio encore "Actu, analyses et pronostics CDM 2026", lien site encore `coupe-du-monde-2026.info`.
 
@@ -107,9 +108,9 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 ## 7. Actions restantes (checklist)
 
 - [x] Créer un logo Football Passion (image, pas juste texte) — concept C implémenté, voir section 4
-- [x] Ajouter `images/favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
-- [x] Créer la photo de couverture Facebook — `images/facebook-cover.png` (820×312), à uploader manuellement sur la Page (fichier prêt, upload non automatisable)
-- [ ] Remplacer photo de profil Facebook (utiliser `images/logo-fp-icon-512.png`)
+- [x] Ajouter `favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
+- [x] Créer la photo de couverture Facebook — `images/charte-graphique/facebook-cover.png` (820×312), à uploader manuellement sur la Page (fichier prêt, upload non automatisable)
+- [ ] Remplacer photo de profil Facebook (utiliser `images/charte-graphique/logo-fp-icon-512.png`)
 - [ ] Mettre à jour la bio Facebook (retirer mention CDM 2026)
 - [ ] Mettre à jour le lien site Facebook → `football-passion.fr`
 - [ ] Vers le 18 octobre 2026 : finaliser le renommage du nom principal de la Page (verrouillé 60 jours, voir procédure 3.32)

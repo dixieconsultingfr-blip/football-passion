@@ -46,7 +46,7 @@ include __DIR__ . '/templates/header.php';
 
     <div class="relative py-16 px-6 text-center">
         <div class="inline-flex items-center gap-4 mb-6">
-            <img src="/images/logo-fp-icon-512.png" alt="" class="w-16 h-16 rounded-2xl shadow-lg shadow-green-950/50" />
+            <img src="/images/charte-graphique/logo-fp-icon-512.png" alt="" class="w-16 h-16 rounded-2xl shadow-lg shadow-green-950/50" />
             <h1 class="text-4xl sm:text-5xl font-bold text-white">Football <span class="text-green-400">Passion</span></h1>
         </div>
         <p class="text-xl text-gray-300 mb-1">Calendriers • Matchs • Analyses • Actualités</p>

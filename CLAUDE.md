@@ -13,6 +13,7 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Auteur** : Jérôme Henry (Dixie Consulting)
 **Stack** : PHP 8 vanilla + Tailwind CSS + JSON + n8n
 **Hébergement** : Hostinger (même config que CDM 2026)
+**Charte graphique** (site + réseaux sociaux) : voir `charte-graphique.md` à la racine du projet.
 **Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`) ping le webhook Hostinger (secret `HOSTINGER_WEBHOOK_URL`) → Hostinger pull automatiquement via son intégration Git native (hPanel → Avancé → Git). Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
 ## 🚨 Règle critique — Journal de procédure

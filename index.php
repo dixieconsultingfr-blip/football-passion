@@ -18,11 +18,34 @@ $meta_desc = 'Hub evergreen football. Calendriers, matchs, analyses, actualités
 include __DIR__ . '/templates/header.php';
 ?>
 
-<section class="py-16 bg-gradient-to-r from-green-900 to-gray-900 rounded-lg mb-12">
-    <div class="text-center">
-        <h1 class="text-5xl font-bold mb-4">⚽ Football Passion</h1>
-        <p class="text-xl text-gray-300">Calendriers • Matchs • Analyses • Actualités</p>
-        <p class="text-sm text-gray-400 mt-2">L1 • L2 • Champions League • Europa • Euro • Coupe du Monde • CAN • France</p>
+<section class="relative overflow-hidden rounded-2xl mb-12 border border-gray-800">
+    <!-- Fond -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900"></div>
+
+    <!-- Texture terrain (cercle central + ligne médiane, tres discret) -->
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <line x1="400" y1="0" x2="400" y2="320" stroke="#4ade80" stroke-width="1" opacity="0.08"/>
+        <circle cx="400" cy="160" r="70" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.08"/>
+        <circle cx="400" cy="160" r="3" fill="#4ade80" opacity="0.15"/>
+        <path d="M0,0 L0,90 A90,90 0 0,0 90,0 Z" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.06"/>
+        <path d="M800,320 L800,230 A90,90 0 0,0 710,320 Z" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.06"/>
+    </svg>
+
+    <!-- Halo -->
+    <div class="absolute -top-24 -right-16 w-72 h-72 bg-green-500/10 blur-3xl rounded-full pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-16 w-72 h-72 bg-green-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="relative py-16 px-6 text-center">
+        <div class="inline-flex items-center gap-4 mb-6">
+            <img src="/images/logo-fp-icon-512.png" alt="" class="w-16 h-16 rounded-2xl shadow-lg shadow-green-950/50" />
+            <h1 class="text-4xl sm:text-5xl font-bold text-white">Football <span class="text-green-400">Passion</span></h1>
+        </div>
+        <p class="text-xl text-gray-300 mb-6">Calendriers • Matchs • Analyses • Actualités</p>
+        <div class="flex flex-wrap justify-center gap-2">
+            <?php foreach (['L1','L2','Champions League','Europa','Euro','Coupe du Monde','CAN','France'] as $comp): ?>
+            <span class="px-3 py-1 text-xs font-semibold text-gray-400 border border-gray-700 rounded-full"><?= htmlspecialchars($comp) ?></span>
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>
 

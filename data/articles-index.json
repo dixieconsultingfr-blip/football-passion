@@ -1,5 +1,19 @@
 [
     {
+        "id":  7,
+        "slug":  "trophee-des-champions-2026-lens-bat-psg",
+        "titre":  "Lens renverse le PSG et s\u0027offre un Trophée des champions historique",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "RC Lens",
+                           "PSG"
+                       ],
+        "date":  "2026-08-19",
+        "extrait":  "Le RC Lens a créé la surprise en s\u0027imposant 1-0 face au Paris Saint-Germain lors du Trophée des champions 2026, décrochant le tout premier de son histoire malgré plus d\u0027une heure passée à dix contre onze.",
+        "vignette":  "/images/trophee-champions-2026-2027-lens-psg.webp",
+        "image_alt":  "Les joueurs du RC Lens celebrant le Trophee des champions 2026 face au PSG"
+    },
+    {
         "id":  6,
         "slug":  "l2-saint-etienne-victoire-sochaux-journee-1",
         "titre":  "Ligue 2 : Saint-Étienne frappe un grand coup dès la première journée",

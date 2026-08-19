@@ -32,7 +32,14 @@ include __DIR__ . '/templates/header.php';
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <?php foreach ($categories as $cat): ?>
         <?php
-        $hubs = ['france' => '/equipe-france.php', 'euro' => '/euro.php', 'ligue-2' => '/ligue-2.php'];
+        $hubs = [
+            'france'           => '/equipe-france.php',
+            'euro'             => '/euro.php',
+            'ligue-1'          => '/ligue-1.php',
+            'ligue-2'          => '/ligue-2.php',
+            'champions-league' => '/champions-league.php',
+            'europa-league'    => '/europa-league.php',
+        ];
         $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']);
         ?>
         <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">

@@ -2,10 +2,10 @@
 require_once __DIR__ . '/blog/helpers.php';
 
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
-$matchsL2  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'L2'));
+$matchsL1  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'L1'));
 
 // ── Classement calculé depuis les résultats FINISHED (pas de saisie manuelle) ──
-$termines = array_filter($matchsL2, fn($m) => ($m['status'] ?? '') === 'FINISHED');
+$termines = array_filter($matchsL1, fn($m) => ($m['status'] ?? '') === 'FINISHED');
 $table = [];
 foreach ($termines as $m) {
     foreach ([
@@ -37,8 +37,7 @@ usort($classement, fn($a, $b) =>
     ?: strcmp($a['club'], $b['club'])
 );
 
-// ── Derniers résultats : uniquement la dernière journée jouée (numéro de journée, pas la date —
-//    une journée peut s'étaler sur plusieurs jours) ──
+// ── Derniers résultats : uniquement la dernière journée jouée (numéro de journée si connu, sinon date) ──
 $resultats = array_values($termines);
 usort($resultats, fn($a, $b) => strcmp($b['date'], $a['date']));
 $derniersResultats = [];
@@ -50,8 +49,8 @@ if (!empty($resultats)) {
         : array_values(array_filter($resultats, fn($m) => $m['date'] === $resultats[0]['date']));
 }
 
-// ── Prochains matchs, groupés par journée (numéro), pas par date ──
-$aVenir = array_values(array_filter($matchsL2, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
+// ── Prochains matchs, groupés par journée si connue, sinon par date ──
+$aVenir = array_values(array_filter($matchsL1, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
 $aVenir = array_slice($aVenir, 0, 20);
 $parJournee = [];
@@ -62,11 +61,11 @@ foreach ($aVenir as $m) {
 
 // ── Actualités liées ──
 $articlesAll = load_articles_index(__DIR__);
-$articlesL2  = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'L2'));
-usort($articlesL2, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
+$articlesL1  = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'L1'));
+usort($articlesL1, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'Ligue 2 — Classement, résultats et actualités 2026-2027';
-$meta_desc  = "Classement en direct de la Ligue 2 2026-2027, calendrier des résultats et prochains matchs, actualités du championnat.";
+$page_title = 'Ligue 1 — Classement, résultats et actualités 2026-2027';
+$meta_desc  = "Classement en direct de la Ligue 1 2026-2027, calendrier des résultats et prochains matchs, actualités du championnat.";
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -74,9 +73,9 @@ include __DIR__ . '/templates/header.php';
 {
   "@context": "https://schema.org",
   "@type": "SportsEvent",
-  "name": "Ligue 2 2026-2027",
+  "name": "Ligue 1 2026-2027",
   "sport": "Football",
-  "url": "https://football-passion.fr/ligue-2.php"
+  "url": "https://football-passion.fr/ligue-1.php"
 }
 </script>
 
@@ -84,17 +83,17 @@ include __DIR__ . '/templates/header.php';
 <nav class="text-xs text-gray-500 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
-    <span class="text-gray-400">Ligue 2</span>
+    <span class="text-gray-400">Ligue 1</span>
 </nav>
 
 <!-- Hero -->
 <header class="mb-10 flex items-center gap-4">
     <span class="inline-flex items-center justify-center w-14 h-14 bg-white rounded-xl p-2 shrink-0">
-        <img src="/images/logo/logo-ligue-2.png" alt="Logo Ligue 2" class="w-full h-full object-contain" />
+        <img src="/images/logo/logo-ligue-1.webp" alt="Logo Ligue 1" class="w-full h-full object-contain" />
     </span>
     <div>
         <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Championnat de France</p>
-        <h1 class="text-4xl font-bold text-white mb-1">Ligue 2</h1>
+        <h1 class="text-4xl font-bold text-white mb-1">Ligue 1</h1>
         <p class="text-gray-400 text-sm">Saison 2026-2027 · Classement, résultats et actualités</p>
     </div>
 </header>
@@ -108,7 +107,7 @@ include __DIR__ . '/templates/header.php';
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl font-bold text-white">Derniers résultats<?= $derniereJournee !== null ? ' — Journée ' . (int)$derniereJournee : '' ?></h2>
-                <a href="/archives.php?comp=L2&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
+                <a href="/archives.php?comp=L1&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
             </div>
             <?php if (empty($derniersResultats)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
@@ -179,14 +178,14 @@ include __DIR__ . '/templates/header.php';
         <!-- Actualités liées -->
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
             <h2 class="text-lg font-bold text-white mb-3">Actualités</h2>
-            <?php if (empty($articlesL2)): ?>
+            <?php if (empty($articlesL1)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
                 Aucun article publié pour le moment.
                 <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
             </div>
             <?php else: ?>
             <div class="space-y-3">
-                <?php foreach (array_slice($articlesL2, 0, 4) as $a): ?>
+                <?php foreach (array_slice($articlesL1, 0, 4) as $a): ?>
                 <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
                     <?php if (!empty($a['vignette'])): ?>
                     <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
@@ -200,7 +199,7 @@ include __DIR__ . '/templates/header.php';
                 </a>
                 <?php endforeach; ?>
             </div>
-            <a href="/blog?cat=L2" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L2 →</a>
+            <a href="/blog?cat=L1" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L1 →</a>
             <?php endif; ?>
         </section>
 
@@ -246,9 +245,9 @@ include __DIR__ . '/templates/header.php';
 
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">
-    <a href="/ligue-1.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">⚽ Ligue 1</a>
+    <a href="/ligue-2.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">⚽ Ligue 2</a>
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier toutes compétitions</a>
-    <a href="/archives.php?comp=L2&amp;saison=2026-2027" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Tous les résultats de la Ligue 2</a>
+    <a href="/archives.php?comp=L1&amp;saison=2026-2027" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Tous les résultats de la Ligue 1</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

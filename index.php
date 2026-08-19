@@ -12,6 +12,15 @@ $logosCompetitions = [
     'Europa' => '/images/logo/logo-europa-league.webp',
 ];
 
+$hubs = [
+    'france'           => '/equipe-france.php',
+    'euro'             => '/euro.php',
+    'ligue-1'          => '/ligue-1.php',
+    'ligue-2'          => '/ligue-2.php',
+    'champions-league' => '/champions-league.php',
+    'europa-league'    => '/europa-league.php',
+];
+
 $page_title = 'Football Passion — L1, L2, Champions League, Europa, Euro, CDM';
 $meta_desc = 'Hub evergreen football. Calendriers, matchs, analyses, actualités de la Ligue 1, Champions League, Europa League, Euro, Coupe du Monde, CAN et Équipe de France.';
 
@@ -42,8 +51,9 @@ include __DIR__ . '/templates/header.php';
         </div>
         <p class="text-xl text-gray-300 mb-6">Calendriers • Matchs • Analyses • Actualités</p>
         <div class="flex flex-wrap justify-center gap-2">
-            <?php foreach (['L1','L2','Champions League','Europa','Euro','Coupe du Monde','CAN','France'] as $comp): ?>
-            <span class="px-3 py-1 text-xs font-semibold text-gray-400 border border-gray-700 rounded-full"><?= htmlspecialchars($comp) ?></span>
+            <?php foreach ($categories as $cat): ?>
+            <?php $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']); ?>
+            <a href="<?= htmlspecialchars($catHref) ?>" class="px-3 py-1 text-xs font-semibold text-gray-400 border border-gray-700 rounded-full hover:border-green-600 hover:text-green-400 transition-colors"><?= htmlspecialchars($cat['name']) ?></a>
             <?php endforeach; ?>
         </div>
     </div>
@@ -54,17 +64,7 @@ include __DIR__ . '/templates/header.php';
     <h2 class="text-3xl font-bold mb-6">Catégories</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <?php foreach ($categories as $cat): ?>
-        <?php
-        $hubs = [
-            'france'           => '/equipe-france.php',
-            'euro'             => '/euro.php',
-            'ligue-1'          => '/ligue-1.php',
-            'ligue-2'          => '/ligue-2.php',
-            'champions-league' => '/champions-league.php',
-            'europa-league'    => '/europa-league.php',
-        ];
-        $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']);
-        ?>
+        <?php $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']); ?>
         <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
             <div class="flex items-center gap-2 mb-1">
                 <?php if (!empty($logosCompetitions[$cat['code']])): ?>

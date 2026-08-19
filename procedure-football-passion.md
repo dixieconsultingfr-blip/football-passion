@@ -253,6 +253,12 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
   - Mettre à jour la bio/description (actuellement encore "Actu, analyses et pronostics CDM 2026") et le lien site web (actuellement `coupe-du-monde-2026.info`, à remplacer par `football-passion.fr`).
   - **Vers le 18 octobre 2026** (60 jours après le 19 août) : retenter le changement du "Nom" principal, cette fois en tapant correctement `Football Passion` (avec espace et majuscule), pas une variante façon URL.
 
+### 3.33 Logo Football Passion (concept C) + bandeau héro de l'accueil
+- **Logo retenu** : concept C, monogramme "FP" (voir présentation en artifact, trois pistes comparées). Fichiers produits via un script PowerShell (`System.Drawing`, pas d'outil de conversion d'image disponible sur la machine — ni ImageMagick, ni Python) : `images/favicon.svg`, `images/favicon.ico` (16/32/48 multi-résolution), `images/apple-touch-icon.png` (180×180), `images/logo-fp-icon-512.png` (512×512, pour avatar réseaux sociaux), `images/logo-football-passion.svg` (wordmark complet pour le header).
+- **Bug corrigé en cours de route** : le premier rendu du monogramme affichait le "P" décalé trop à droite (mesure manuelle de la largeur du "F" faussée par le bearing par défaut de `MeasureString`). Corrigé en passant à `StringFormat.GenericTypographic` pour une mesure de texte fidèle.
+- **`templates/header.php`** : remplace le texte `⚽ Football Passion` par `logo-football-passion.svg`, favicon enfin présent (référencé mais absent auparavant — voir `charte-graphique.md`).
+- **Bandeau héro de l'accueil (`index.php`) validé par l'utilisateur** : remplace l'ancien bloc `bg-gradient-to-r` plat par une bannière avec le logo FP (badge arrondi), une texture terrain discrète en SVG inline (ligne médiane, cercle central, arcs de corner, opacité ~6-15%), deux halos verts diffus (`blur-3xl`), et les compétitions affichées en pastilles (`border-gray-700 rounded-full`) plutôt qu'en texte séparé par des puces.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

@@ -17,6 +17,7 @@ $staticPages = [
     ['loc' => '/politique-confidentialite.php', 'changefreq' => 'yearly',  'priority' => '0.1'],
 ];
 
+// Saisons déjà purgées de matchs.json (figées, ne changent plus) → changefreq faible
 $archivePages = [];
 $archiveDir = __DIR__ . '/data/archives';
 if (is_dir($archiveDir)) {
@@ -27,14 +28,18 @@ if (is_dir($archiveDir)) {
         }
     }
 }
-// Saisons en cours (pas encore archivées) : présentes dans matchs.json avec au moins un résultat
+// Saisons en cours (résultats encore dans matchs.json) → changent à chaque journée
+$saisonsEnCours = [];
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
 foreach ($matchsAll as $m) {
     if (($m['status'] ?? '') !== 'FINISHED' || empty($m['competition'])) { continue; }
     $s = $m['saison'] ?? saison_fr($m['date']);
-    $archivePages["$m[competition]-$s"] = "/archives.php?comp=" . urlencode($m['competition']) . "&saison=" . urlencode($s);
+    $cle = "$m[competition]-$s";
+    if (isset($archivePages[$cle])) { continue; } // déjà couverte par l'archive figée
+    $saisonsEnCours[$cle] = "/archives.php?comp=" . urlencode($m['competition']) . "&saison=" . urlencode($s);
 }
 $archivePages = array_values($archivePages);
+$saisonsEnCours = array_values($saisonsEnCours);
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?>
@@ -59,6 +64,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     <loc>https://football-passion.fr<?= htmlspecialchars($loc) ?></loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+<?php endforeach; ?>
+<?php foreach ($saisonsEnCours as $loc): ?>
+  <url>
+    <loc>https://football-passion.fr<?= htmlspecialchars($loc) ?></loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 <?php endforeach; ?>
 </urlset>

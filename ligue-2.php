@@ -108,7 +108,7 @@ include __DIR__ . '/templates/header.php';
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl font-bold text-white">Derniers résultats<?= $derniereJournee !== null ? ' — Journée ' . (int)$derniereJournee : '' ?></h2>
-                <a href="/archives.php?comp=L2&saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
+                <a href="/archives.php?comp=L2&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
             </div>
             <?php if (empty($derniersResultats)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
@@ -248,7 +248,7 @@ include __DIR__ . '/templates/header.php';
 <section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">
     <a href="/blog?cat=L1" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">⚽ Ligue 1</a>
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier toutes compétitions</a>
-    <a href="/archives.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Archives des saisons</a>
+    <a href="/archives.php?comp=L2&amp;saison=2026-2027" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Tous les résultats de la Ligue 2</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

@@ -1,5 +1,19 @@
 [
     {
+        "id":  8,
+        "slug":  "psg-rennes-inverse-roazhon-park-2026",
+        "titre":  "Ligue 1 : PSG - Rennes inversé au Roazhon Park",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "PSG",
+                           "Stade Rennais"
+                       ],
+        "date":  "2026-08-20",
+        "extrait":  "Initialement prévu au Parc des Princes ce dimanche 23 août 2026, le choc entre le PSG et Rennes est inversé par la LFP. La pelouse parisienne étant impraticable après la canicule, la rencontre se jouera au Roazhon Park.",
+        "vignette":  "/images/psg-rennes-inverse-roazhon-park-2026.png",
+        "image_alt":  "Rennes contre PSG au Roazhon Park le 23 aout 2026, match deplace en Ligue 1"
+    },
+    {
         "id":  7,
         "slug":  "trophee-des-champions-2026-lens-bat-psg",
         "titre":  "Lens renverse le PSG et s\u0027offre un Trophée des champions historique",

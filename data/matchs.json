@@ -98,11 +98,11 @@
     {
         "id":  559713,
         "competition":  "L1",
-        "domicile":  "Paris Saint-Germain FC",
-        "exterieur":  "Stade Rennais FC 1901",
+        "domicile":  "Stade Rennais FC 1901",
+        "exterieur":  "Paris Saint-Germain FC",
         "date":  "2026-08-23",
-        "heure":  "18:45",
-        "stade":  "",
+        "heure":  "20:45",
+        "stade":  "Roazhon Park",
         "status":  "SCHEDULED",
         "score_dom":  null,
         "score_ext":  null

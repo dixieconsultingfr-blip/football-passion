@@ -1,4 +1,9 @@
 ErrorDocument 404 /404.php
 
 RewriteEngine On
+
+# Force www -> non-www (canonique : football-passion.fr, sans www)
+RewriteCond %{HTTP_HOST} ^www\.football-passion\.fr$ [NC]
+RewriteRule ^(.*)$ https://football-passion.fr/$1 [L,R=301]
+
 RewriteRule ^sitemap\.xml$ sitemap.php [L]

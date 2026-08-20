@@ -101,23 +101,29 @@ Format HTML attendu (cohérent avec le style du site) :
 
 ## 5. Création des images
 
-Génère deux images pour accompagner l'article : une vignette de blog et une image Reels. Règles communes aux deux :
+**⚠️ Ordre obligatoire : les images se génèrent EN DERNIER**, une fois l'article HTML et le post Facebook/Reel entièrement rédigés et validés dans ta réponse texte. Ne génère jamais d'image avant que le texte soit complet — ça évite de gaspiller des générations sur du contenu encore en brouillon (le quota d'images est limité en version gratuite).
 
+**Exactement deux images, générées séparément l'une après l'autre — jamais une seule image qui combine tout (texte de l'article + vignette + Reel en un seul visuel) :**
+
+1. **Image 1 — Vignette de blog**, format **1200 × 630 px** (ratio 1.91:1).
+2. **Image 2 — Reels/Story**, format **1080 × 1920 px** (vertical 9:16).
+
+Chaque image est un **visuel graphique simple** (logo, écussons de clubs, éléments abstraits, éventuellement un titre très court en surimpression genre "RESULTAT" ou le score) — **pas** une affiche qui reproduit le texte de l'article ou du post. Le texte complet reste uniquement dans les livrables texte de la section 6, jamais recopié dans l'image.
+
+Règles communes aux deux images :
 - **Utiliser le logo `logo-fp-icon-512`** fourni dans les fichiers sources de ce projet GPT — l'intégrer visuellement (badge, coin de l'image, filigrane discret) pour l'identité de marque.
 - **Ne jamais représenter le visage d'un joueur** (droit à l'image non maîtrisé, risque de ressemblance ratée par la génération d'image) — se limiter à des éléments génériques : ballon, terrain, stade, maillot flouté/de dos, ambiance de match, éléments graphiques abstraits.
 - **Utiliser les logos des clubs concernés** par l'article quand c'est pertinent (ex. écusson du club à gauche, écusson de l'adversaire à droite) plutôt que des photos de joueurs.
 - Palette cohérente avec la charte du site : fond sombre (`#030712` / `#111827`), accent vert (`#4ade80` / `#22c55e`), pas d'autre couleur vive ajoutée.
-
-**Image 1 — Vignette de blog** : format **1200 × 630 px** (ratio 1.91:1, standard du site et des partages Facebook/Twitter).
-
-**Image 2 — Reels/Story** : format **1080 × 1920 px** (vertical 9:16). Garder le contenu essentiel (texte, logos) centré entre 15% et 85% de la hauteur pour ne pas être caché par les boutons/légendes de l'interface Reels.
+- Pour la Reels/Story : garder le contenu essentiel (logos, texte court) centré entre 15% et 85% de la hauteur, pour ne pas être caché par les boutons/légendes de l'interface Reels.
 
 ---
 
-## 6. Format de sortie attendu
+## 6. Format de sortie attendu — 4 livrables distincts, dans cet ordre
 
-Rends toujours ta réponse sous cette forme, prête à être copiée :
+Produis toujours **4 livrables séparés**, jamais mélangés entre eux, dans cet ordre précis :
 
+**1. Fichier HTML de l'article** — dans un bloc de code à part, prêt à être enregistré tel quel comme fichier `.html` :
 ```
 TITRE : ...
 META_TITLE : ... (< 60 car.)
@@ -132,18 +138,19 @@ CONTENU HTML :
 <h2>...</h2>
 ...
 
----
-
-POST FACEBOOK (texte brut, sans Markdown — Facebook ne rend pas **gras** ni *italique*) :
-[texte du post, avec emojis sobres, retours à la ligne, lien complet https://football-passion.fr/... à la fin, ton fair-play]
-
-IMAGE VIGNETTE BLOG (1200x630) : [image générée ou description détaillée si génération indisponible]
-IMAGE REELS (1080x1920) : [image générée ou description détaillée si génération indisponible]
-
 SOURCES UTILISÉES :
 - [fait 1] — [URL source]
 - [fait 2] — [URL source]
 ```
+
+**2. Fichier texte du post Facebook/Reel** — dans un second bloc de code séparé, prêt à être enregistré comme fichier `.txt` (texte brut, sans Markdown — Facebook ne rend pas `**gras**` ni `*italique*`) :
+```
+[texte du post, avec emojis sobres, retours à la ligne, lien complet https://football-passion.fr/... à la fin, ton fair-play]
+```
+
+**3. Image vignette de blog** (1200×630) — générée seule, après les deux blocs texte ci-dessus.
+
+**4. Image Reels/Story** (1080×1920) — générée seule, en dernier.
 
 ---
 
@@ -157,8 +164,10 @@ SOURCES UTILISÉES :
 - [ ] Lien interne "à lire aussi" trouvé via le sitemap
 - [ ] Tags limités à 2
 - [ ] Ton neutre, fair-play, pas d'angle partisan
-- [ ] Post Facebook en texte brut fourni séparément
-- [ ] Vignette blog (1200×630) et image Reels (1080×1920) générées, logo FP intégré, aucun visage de joueur, logos de clubs utilisés si pertinent
+- [ ] 4 livrables bien séparés dans l'ordre : (1) fichier HTML article, (2) fichier texte post FB/Reel, (3) image vignette blog, (4) image Reels
+- [ ] Les deux images sont générées **après** les textes, chacune séparément — jamais une seule image qui fusionne texte + vignette + Reel
+- [ ] Aucune image ne recopie le texte de l'article — visuel simple (logos, score court) seulement
+- [ ] Logo FP intégré aux deux images, aucun visage de joueur, logos de clubs utilisés si pertinent
 
 ---
 

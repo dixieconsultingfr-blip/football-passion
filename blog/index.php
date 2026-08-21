@@ -152,7 +152,7 @@ include BASE_PATH . '/templates/header.php';
     <?php foreach ($articles_page as $a): ?>
     <article class="bg-gray-800 rounded-xl border border-gray-700 hover:border-green-600 transition-colors overflow-hidden flex flex-col">
         <?php if (!empty($a['vignette'])): ?>
-        <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="block h-40 overflow-hidden">
+        <a href="/blog/<?= urlencode($a['slug']) ?>" class="block h-40 overflow-hidden">
             <img src="<?= htmlspecialchars($a['vignette']) ?>"
                  alt="<?= htmlspecialchars($a['titre']) ?>"
                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" />
@@ -172,7 +172,7 @@ include BASE_PATH . '/templates/header.php';
             </div>
 
             <h2 class="text-base font-bold text-white leading-snug mb-3 flex-1">
-                <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="hover:text-green-400 transition-colors">
+                <a href="/blog/<?= urlencode($a['slug']) ?>" class="hover:text-green-400 transition-colors">
                     <?= htmlspecialchars($a['titre']) ?>
                 </a>
             </h2>
@@ -181,7 +181,7 @@ include BASE_PATH . '/templates/header.php';
                 <?= htmlspecialchars(mb_substr($a['extrait'], 0, 130)) ?>…
             </p>
 
-            <a href="/blog?slug=<?= urlencode($a['slug']) ?>"
+            <a href="/blog/<?= urlencode($a['slug']) ?>"
                class="text-green-400 hover:text-green-300 text-sm font-semibold transition-colors self-start">
                 Lire →
             </a>

@@ -187,7 +187,7 @@ include __DIR__ . '/templates/header.php';
             <?php else: ?>
             <div class="space-y-3">
                 <?php foreach (array_slice($articlesL2, 0, 4) as $a): ?>
-                <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
+                <a href="/blog/<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
                     <?php if (!empty($a['vignette'])): ?>
                     <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
                         <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">

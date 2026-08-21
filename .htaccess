@@ -7,3 +7,6 @@ RewriteCond %{HTTP_HOST} ^www\.football-passion\.fr$ [NC]
 RewriteRule ^(.*)$ https://football-passion.fr/$1 [L,R=301]
 
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# URL propre pour les articles : /blog/mon-slug -> /blog/index.php?slug=mon-slug
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog/index.php?slug=$1 [L,QSA]

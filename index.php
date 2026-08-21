@@ -96,7 +96,7 @@ include __DIR__ . '/templates/header.php';
                     • <?php echo htmlspecialchars($article['date']); ?>
                 </p>
                 <p class="text-gray-300 mb-4"><?php echo htmlspecialchars($article['extrait']); ?></p>
-                <a href="/blog?slug=<?php echo urlencode($article['slug']); ?>" class="text-green-400 hover:text-green-300">Lire la suite →</a>
+                <a href="/blog/<?php echo urlencode($article['slug']); ?>" class="text-green-400 hover:text-green-300">Lire la suite →</a>
             </article>
             <?php endforeach; ?>
         </div>

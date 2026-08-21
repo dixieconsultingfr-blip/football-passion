@@ -136,7 +136,7 @@ include __DIR__ . '/templates/header.php';
     <?php else: ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <?php foreach (array_slice($articlesFrance, 0, 6) as $a): ?>
-        <a href="/blog?slug=<?= urlencode($a['slug']) ?>" class="flex flex-col bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl overflow-hidden transition-colors">
+        <a href="/blog/<?= urlencode($a['slug']) ?>" class="flex flex-col bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl overflow-hidden transition-colors">
             <?php if (!empty($a['vignette'])): ?>
             <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
                 <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">

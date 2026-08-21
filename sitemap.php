@@ -58,7 +58,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 <?php endforeach; ?>
 <?php foreach ($articles as $a): ?>
   <url>
-    <loc>https://football-passion.fr/blog?slug=<?= urlencode($a['slug']) ?></loc>
+    <loc>https://football-passion.fr/blog/<?= urlencode($a['slug']) ?></loc>
     <lastmod><?= htmlspecialchars($a['date']) ?></lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

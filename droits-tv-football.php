@@ -85,7 +85,12 @@ include __DIR__ . '/templates/header.php';
 
     <!-- ══════════ SECTION 1 — LIGUE 1+ ══════════ -->
     <section class="mb-10">
-        <h2 class="text-2xl font-bold text-white mb-4">Regarder 100 % de la Ligue 1 McDonald's : l'offre Ligue 1+ au crible</h2>
+        <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex items-center justify-center h-12 px-3 bg-white rounded-xl shrink-0">
+                <img src="/images/logo/Logo-diffusion-ligue-1+.webp" alt="Logo Ligue 1+" class="h-6 w-auto object-contain" />
+            </span>
+            <h2 class="text-2xl font-bold text-white">Regarder 100 % de la Ligue 1 McDonald's : l'offre Ligue 1+ au crible</h2>
+        </div>
         <p class="text-gray-300 leading-relaxed mb-6">
             Pour cette saison 2026-2027, la solution incontournable pour suivre le championnat de France s'appelle Ligue 1+. Si votre objectif est uniquement de vibrer au rythme de la Ligue 1 (et de la Ligue 3), c'est l'option la plus directe du marché — encore faut-il choisir la bonne formule.
         </p>

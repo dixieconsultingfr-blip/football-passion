@@ -118,9 +118,9 @@ Pas d'icônes SVG/librairie d'icônes — volontairement simple (emoji natifs, z
 - [x] Ajouter `favicon.ico` + `favicon.svg` + `apple-touch-icon.png`
 - [x] Créer la photo de couverture Facebook — `images/charte-graphique/facebook-cover.png` (820×312), à uploader manuellement sur la Page (fichier prêt, upload non automatisable)
 - [x] Remplacer photo de profil et photo de couverture Facebook (faites, 19 août 2026 — rendu validé par l'utilisateur)
-- [ ] Mettre à jour la bio Facebook (retirer mention CDM 2026)
-- [x] Lien site Facebook → `football-passion.fr` déjà présent dans la section "Liens" de la Page (lien "site officiel : football-passion")
-- [~] **Décision différée (19 août 2026)** : la section "Liens" de la Page contient encore un lien "site officiel : coupe-du-monde.INFO" et un lien Instagram intitulé "...de coupe-du-monde-2026.info". L'utilisateur a choisi de les garder tels quels pour l'instant et d'y revenir plus tard (renommer ou supprimer).
+- [x] Mettre à jour la bio Facebook (21 août 2026 — nouvelle bio Football Passion en place, mention CDM 2026 retirée)
+- [x] Lien "Site web" du profil → `football-passion.fr` (21 août 2026)
+- [x] Section "Liens" nettoyée (21 août 2026) : libellé Instagram renommé (ne mentionne plus coupe-du-monde-2026.info), lien "coupe-du-monde.INFO" traité selon le choix de l'utilisateur — lien "football-passion.fr" et Dixie Consulting inchangés
 - [ ] Vers le 18 octobre 2026 : finaliser le renommage du nom principal de la Page (verrouillé 60 jours, voir procédure 3.32)
 - [ ] Aligner l'identité Instagram (`@cdm2026.info` actuellement — à renommer ou migrer selon la même logique que Facebook)
 

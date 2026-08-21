@@ -29,7 +29,7 @@ $articlesCL  = array_values(array_filter($articlesAll, fn($a) =>
 usort($articlesCL, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
 $page_title = 'Champions League — Résultats et actualités 2026-2027';
-$meta_desc  = "Résultats et calendrier de la Ligue des champions 2026-2027 : qualifications, phase de ligue, actualités.";
+$meta_desc  = "Résultats, calendrier et pronostics Ligue des champions 2026-2027 : qualifications, phase de ligue, actualités et infos abonnement.";
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -58,7 +58,7 @@ include __DIR__ . '/templates/header.php';
     <div>
         <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Coupe d'Europe</p>
         <h1 class="text-4xl font-bold text-white mb-1">Champions League</h1>
-        <p class="text-gray-400 text-sm">Saison 2026-2027 · Résultats et actualités</p>
+        <p class="text-gray-400 text-sm">Saison 2026-2027 · Résultats, pronostics et actualités</p>
     </div>
 </header>
 

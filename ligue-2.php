@@ -66,7 +66,7 @@ $articlesL2  = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'
 usort($articlesL2, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
 $page_title = 'Ligue 2 — Classement, résultats et actualités 2026-2027';
-$meta_desc  = "Classement en direct de la Ligue 2 2026-2027, calendrier des résultats et prochains matchs, actualités du championnat.";
+$meta_desc  = "Classement, résultats et pronostics Ligue 2 2026-2027 : calendrier, actualités et infos abonnement pour suivre tout le championnat.";
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -95,7 +95,7 @@ include __DIR__ . '/templates/header.php';
     <div>
         <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Championnat de France</p>
         <h1 class="text-4xl font-bold text-white mb-1">Ligue 2</h1>
-        <p class="text-gray-400 text-sm">Saison 2026-2027 · Classement, résultats et actualités</p>
+        <p class="text-gray-400 text-sm">Saison 2026-2027 · Classement, résultats, pronostics et actualités</p>
     </div>
 </header>
 

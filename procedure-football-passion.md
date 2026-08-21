@@ -321,6 +321,14 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Appliqué immédiatement** : ajout d'un tableau comparatif des 4 formules Ligue 1+ (prix, utilisateurs, engagement) dans l'article `ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027.json`, repris du style déjà utilisé dans l'article PSG-Rennes (fond sombre, bordure verte `#16a34a`, `overflow-x:auto` responsive) — sert désormais de référence de style pour les futurs tableaux.
 - **Vignette de l'article** : `images/ligue-1-plus-comment-regarder-2026-2027.webp` fournie par l'utilisateur (visuel Ligue 1+ avec logos de clubs, cohérent avec la charte FP).
 
+### 3.42 Champ "tour" + badge "saison" sur `calendrier.php`, résultats CL et Europa League qualifs/barrages (21 août 2026)
+- **Demande** : marquer la saison en cours et le tour de la compétition (ex. "3e tour de qualification · Manche 1 sur 2") sur `calendrier.php?comp=CL`, plus mise à jour des résultats depuis des captures d'écran fournies par l'utilisateur.
+- **Nouveau champ `tour`** ajouté aux entrées manuelles de qualification/barrages (`data/matchs.json`) — chaîne descriptive complète (ex. `"Europa League - Barrages - Manche 2 sur 2"`), affichée sur chaque carte de match dans `calendrier.php` quand elle est renseignée.
+- **Badge saison** : `Saison 2026-2027` affiché à côté du H1 quand un filtre compétition est actif, calculé dynamiquement via `saison_fr(date('Y-m-d'))` (fonction déjà existante dans `blog/helpers.php`, utilisée par `archives.php`) — **aucune valeur codée en dur**, fonctionne automatiquement pour les saisons futures.
+- **Champions League** : résultats de la Manche 2 du 3e tour de qualification (10 matchs) et de la Manche 1 des barrages (4 matchs manquants) complétés depuis les captures ; correction de date sur LASK - Celtic Glasgow (26/08 et non 25/08).
+- **Europa League** : ajout de 50 rencontres de qualification manuelles (3e tour manche 1+2, barrages manche 1+2) — équipes issues des tours préliminaires de Champions League. Cohérence vérifiée entre les 3 captures (score de la manche + cumul agrégé) avant écriture, conformément à la règle anti-hallucination.
+- **⚠️ Incident détecté et corrigé** : la Manche 2 du 3e tour Europa League avait déjà été pré-créée le 7 août (`ids 9000047-9000059`, statut `SCHEDULED` sans score, commit `9a92f00`) — non repérée avant l'ajout des nouvelles données, ce qui a créé 13 doublons (`ids 9000100-9000112`). Corrigé : suppression des doublons, mise à jour des entrées d'origine avec les vrais résultats + libellé `tour`. **Leçon retenue : avant d'ajouter manuellement des matchs d'un tour de qualification, toujours vérifier par équipes/dates si des entrées SCHEDULED placeholder n'existent pas déjà dans `matchs.json`** (`grep`/filtre PowerShell sur les noms d'équipes concernées) plutôt que de supposer l'absence de données.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

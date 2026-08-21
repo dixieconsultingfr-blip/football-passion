@@ -1,5 +1,19 @@
 [
     {
+        "id":  10,
+        "slug":  "ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027",
+        "titre":  "Ligue 1+ : comment regarder tous les matchs de la saison 2026-2027 ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1+",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-21",
+        "extrait":  "Pour la saison 2026-2027, c'est Ligue 1+ qui détient l'intégralité des droits TV du championnat de France. Entre les quatre formules disponibles, prix et conditions d'engagement, voici comment s'y retrouver.",
+        "vignette":  "/images/ligue-1-plus-comment-regarder-2026-2027.webp",
+        "image_alt":  "Le logo Ligue 1+ diffuseur exclusif de la Ligue 1 saison 2026-2027"
+    },
+    {
         "id":  9,
         "slug":  "om-strasbourg-ouverture-ligue-1-2026-2027",
         "titre":  "OM – Strasbourg : la Ligue 1 2026-2027 ouvre ses portes ce soir",

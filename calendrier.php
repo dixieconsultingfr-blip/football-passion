@@ -4,18 +4,20 @@ require_once __DIR__ . '/blog/helpers.php';
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
 
 $competitions = [
-    'L1'      => 'Ligue 1',
-    'L2'      => 'Ligue 2',
-    'CL'      => 'Champions League',
-    'Europa'  => 'Europa League',
-    'France'  => 'Équipe de France',
+    'L1'         => 'Ligue 1',
+    'L2'         => 'Ligue 2',
+    'CL'         => 'Champions League',
+    'Europa'     => 'Europa League',
+    'Conference' => 'Ligue Conférence',
+    'France'     => 'Équipe de France',
 ];
 
 $logosCompetitions = [
-    'L1'     => '/images/logo/logo-ligue-1.webp',
-    'L2'     => '/images/logo/logo-ligue-2.png',
-    'CL'     => '/images/logo/logo-champions-league.webp',
-    'Europa' => '/images/logo/logo-europa-league.webp',
+    'L1'         => '/images/logo/logo-ligue-1.webp',
+    'L2'         => '/images/logo/logo-ligue-2.png',
+    'CL'         => '/images/logo/logo-champions-league.webp',
+    'Europa'     => '/images/logo/logo-europa-league.webp',
+    'Conference' => '/images/logo/logo-conference-uefa.png',
 ];
 
 $filtre = $_GET['comp'] ?? '';

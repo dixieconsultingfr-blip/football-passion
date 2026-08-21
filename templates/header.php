@@ -13,6 +13,10 @@
     <link rel="icon" type="image/svg+xml" href="/images/charte-graphique/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/images/charte-graphique/favicon.ico" />
     <link rel="apple-touch-icon" href="/images/charte-graphique/apple-touch-icon.png" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1397315006076063"
+     crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-950 text-gray-100">
     <header class="bg-gray-900 border-b border-green-500">

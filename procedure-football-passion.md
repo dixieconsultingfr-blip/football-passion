@@ -272,6 +272,13 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Formats vidéo Facebook** communiqués à l'utilisateur (post feed, vidéo de couverture, Reels) suite à sa question.
 - **L'utilisateur a transformé l'image 1200×630 en vidéo via Canva** pour publier le post — ratio proche du 16:9 recommandé, compatible sans ajustement nécessaire.
 
+### 3.36 Bilan Football Passion vs CDM 2026 + début de stratégie de monétisation
+- **Point complet demandé par l'utilisateur** (21 août 2026) : bilan de ce qui a été construit sur Football Passion (16 pages, architecture données scalable, automatisation n8n L1/CL + procédure manuelle L2/Europa/qualifs CL/France, SEO — sitemap/robots/redirection www, identité de marque, réseaux sociaux, 9 articles publiés), comparé aux fonctionnalités de `coupe-du-monde-2026` (newsletter Brevo, panel admin, chatbot, sondages, ~20 pages équipe/confédération — que FP n'a pas encore).
+- **Décision stratégique actée** : préparer dès maintenant le terrain SEO pour une **monétisation future** (liens sponsorisés, publicité) autour des mots-clés **"pronostic"** et **"abonnement"**, ciblés sur les 3 compétitions à plus fort trafic potentiel : Ligue 1, Ligue 2, Champions League.
+- **Mots-clés intégrés** dans `ligue-1.php`, `ligue-2.php`, `champions-league.php` : `meta_desc` reformulée (mention "pronostics" + "infos abonnement") et sous-titre du bandeau héro modifié pour inclure "pronostics" en texte visible (le poids SEO du texte visible étant supérieur à celui de la seule meta description).
+- **"Abonnement" volontairement laissé uniquement en meta_desc pour l'instant**, pas encore dans le texte visible des pages — aucune fonctionnalité d'abonnement/diffusion TV n'existe encore sur le site, éviter une promesse vide en visible tant que la section correspondante (ex. comparateur d'offres, lien affilié diffuseur) n'est pas construite.
+- **Piste de plan d'action proposée** (non actée, à discuter) : court terme = nettoyage bio/liens Facebook (voir 3.32/3.35) + Google Search Console + récupération de la newsletter Brevo existante ; moyen terme = finalisation renommage FB (~18 oct.) + automatisation n8n rédaction (base : `instructions-gpt-redaction.md`) + éventuelles pages club prioritaires (OM en tête, cohérent avec la stratégie éditoriale) ; plus tard = panel admin léger, engagement communautaire.
+
 ---
 
 ## 4. Cloudflare Turnstile (anti-robot du formulaire de contact)

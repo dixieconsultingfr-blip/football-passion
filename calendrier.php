@@ -91,6 +91,8 @@ include __DIR__ . '/templates/header.php';
             <div class="flex-1 flex flex-col items-center justify-center gap-1">
                 <?php if (!empty($m['tour'])): ?>
                 <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                <?php elseif (!empty($m['journee'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
                 <?php endif; ?>
                 <div class="flex items-center justify-center gap-3 w-full">
                     <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
@@ -130,6 +132,8 @@ include __DIR__ . '/templates/header.php';
             <div class="flex-1 flex flex-col items-center justify-center gap-1">
                 <?php if (!empty($m['tour'])): ?>
                 <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                <?php elseif (!empty($m['journee'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
                 <?php endif; ?>
                 <div class="flex items-center justify-center gap-3 w-full">
                     <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>

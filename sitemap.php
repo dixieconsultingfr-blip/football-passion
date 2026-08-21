@@ -15,6 +15,7 @@ $staticPages = [
     ['loc' => '/europa-league.php',             'changefreq' => 'daily',   'priority' => '0.8'],
     ['loc' => '/equipe-france.php',             'changefreq' => 'weekly',  'priority' => '0.8'],
     ['loc' => '/euro.php',                      'changefreq' => 'weekly',  'priority' => '0.7'],
+    ['loc' => '/droits-tv-football.php',         'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => '/a-propos.php',                  'changefreq' => 'monthly', 'priority' => '0.3'],
     ['loc' => '/contact.php',                   'changefreq' => 'monthly', 'priority' => '0.3'],
     ['loc' => '/mentions-legales.php',          'changefreq' => 'yearly',  'priority' => '0.1'],

@@ -25,6 +25,7 @@
                 <li><a href="/calendrier.php" class="hover:text-green-400">Calendrier</a></li>
                 <li><a href="/archives.php" class="hover:text-green-400">Archives</a></li>
                 <li><a href="/blog" class="hover:text-green-400">Blog</a></li>
+                <li><a href="/droits-tv-football.php" class="hover:text-green-400">Droits TV</a></li>
             </ul>
         </nav>
     </header>

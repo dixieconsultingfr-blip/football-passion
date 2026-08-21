@@ -24,6 +24,55 @@ include __DIR__ . '/templates/header.php';
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quand a lieu l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'Euro 2028 (Championnat d'Europe de football) se déroule du 9 juin au 9 juillet 2028. Les qualifications UEFA débutent dès le 25 mars 2027 et se terminent le 28 mars 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Où se déroule l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'Euro 2028 se joue au Royaume-Uni et en République d'Irlande, dans 9 stades répartis sur 8 villes : Londres (Wembley, Tottenham Hotspur Stadium), Cardiff, Manchester, Liverpool, Newcastle, Birmingham, Glasgow et Dublin. Le match d'ouverture a lieu à Cardiff, la finale à Wembley."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Coupe d'Europe 2028, Euro 2028 : est-ce la même compétition ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. \"Coupe d'Europe\" est une appellation courante pour désigner le Championnat d'Europe de football (UEFA Euro), organisé tous les quatre ans. L'édition 2028 est donc l'Euro 2028, au Royaume-Uni et en Irlande."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'Euro 2028 est-il la Coupe du Monde 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, il n'y a pas de Coupe du Monde en 2028 — la Coupe du Monde de football se joue tous les quatre ans, avec une édition en 2026 (États-Unis, Canada, Mexique) puis la suivante en 2030 (Espagne, Maroc, Portugal). En 2028, la seule grande compétition internationale de sélections en Europe est l'Euro, aussi appelé Coupe d'Europe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'équipes participent à l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "24 équipes participent à l'Euro 2028, réparties en 6 groupes de 4. Les deux premiers de chaque groupe et les quatre meilleurs troisièmes se qualifient pour les huitièmes de finale, pour un total de 51 matchs."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Breadcrumb -->
 <nav class="text-xs text-gray-500 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
@@ -188,6 +237,64 @@ include __DIR__ . '/templates/header.php';
     <p class="text-gray-600 text-xs mt-2 italic">
         * Calendrier indicatif basé sur les informations officielles UEFA. Les dates exactes des matchs seront confirmées ultérieurement.
     </p>
+</section>
+
+<!-- FAQ -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : Euro 2028</h2>
+    <div class="space-y-3">
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Quand a lieu l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                L'Euro 2028 (Championnat d'Europe de football) se déroule du 9 juin au 9 juillet 2028. Les qualifications UEFA débutent dès le 25 mars 2027 et se terminent le 28 mars 2028.
+            </p>
+        </details>
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Où se déroule l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                L'Euro 2028 se joue au Royaume-Uni et en République d'Irlande, dans 9 stades répartis sur 8 villes : Londres (Wembley, Tottenham Hotspur Stadium), Cardiff, Manchester, Liverpool, Newcastle, Birmingham, Glasgow et Dublin. Le match d'ouverture a lieu à Cardiff, la finale à Wembley.
+            </p>
+        </details>
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Coupe d'Europe 2028, Euro 2028 : est-ce la même compétition ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                Oui. « Coupe d'Europe » est une appellation courante pour désigner le Championnat d'Europe de football (UEFA Euro), organisé tous les quatre ans. L'édition 2028 est donc l'Euro 2028, au Royaume-Uni et en Irlande.
+            </p>
+        </details>
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                L'Euro 2028 est-il la Coupe du Monde 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                Non, il n'y a pas de Coupe du Monde en 2028 — la Coupe du Monde de football se joue tous les quatre ans, avec une édition en 2026 (États-Unis, Canada, Mexique) puis la suivante en 2030 (Espagne, Maroc, Portugal). En 2028, la seule grande compétition internationale de sélections en Europe est l'Euro, aussi appelé Coupe d'Europe.
+            </p>
+        </details>
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Combien d'équipes participent à l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                24 équipes participent à l'Euro 2028, réparties en 6 groupes de 4. Les deux premiers de chaque groupe et les quatre meilleurs troisièmes se qualifient pour les huitièmes de finale, pour un total de 51 matchs.
+            </p>
+        </details>
+
+    </div>
 </section>
 
 <!-- Actualités liées -->

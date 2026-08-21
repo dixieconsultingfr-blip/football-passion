@@ -1,5 +1,19 @@
 [
     {
+        "id":  12,
+        "slug":  "marseille-strasbourg-4-0-journee-1-2026-2027",
+        "titre":  "Marseille lance sa saison en battant Strasbourg 4-0 et prend la tête de la Ligue 1",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OM",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-21",
+        "extrait":  "L'Olympique de Marseille a parfaitement lancé sa saison 2026-2027 en s'imposant 4-0 face à Strasbourg ce vendredi au Vélodrome. Portés par un doublé d'Amine Gouiri, les Marseillais prennent la tête de la Ligue 1 dès la première journée.",
+        "vignette":  "/images/marseille-strasbourg-4-0-journee-1-2026-2027.png",
+        "image_alt":  "OM 4-0 Strasbourg, resultat de la 1ere journee de Ligue 1 2026-2027"
+    },
+    {
         "id":  11,
         "slug":  "saint-etienne-grenoble-ligue-2-journee-3-2026",
         "titre":  "Saint-Étienne vise sa 3e victoire consécutive en Ligue 2 face à Grenoble",

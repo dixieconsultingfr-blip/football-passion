@@ -105,6 +105,7 @@ football-passion/                  ← racine du dépôt = racine du site
 - ✅ Introduire des avis éditoriaux ("À notre sens...")
 - ✅ Citer des données précises (stats, dates réelles)
 - ✅ Varier les introductions — ne pas répéter le même pattern
+- ✅ **Ajouter un tableau HTML quand l'article contient des données comparables** (prix, formules, statistiques, calendrier...) — Google valorise les tableaux structurés (rich snippets, meilleure compréhension du contenu). Voir le format utilisé dans `data/articles/ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027.json` comme référence de style (fond sombre, bordure verte `#16a34a`, `overflow-x:auto` pour le responsive).
 
 ---
 

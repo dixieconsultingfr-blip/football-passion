@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/blog/helpers.php';
+
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
 
 $competitions = [
@@ -40,7 +42,14 @@ include __DIR__ . '/templates/header.php';
 </nav>
 
 <header class="mb-8">
-    <h1 class="text-4xl font-bold text-white mb-2">Calendrier</h1>
+    <div class="flex items-center gap-3 mb-2">
+        <h1 class="text-4xl font-bold text-white">Calendrier</h1>
+        <?php if ($filtre): ?>
+        <span class="bg-gray-800 border border-green-700 text-green-400 text-xs font-semibold px-3 py-1 rounded-full">
+            Saison <?= htmlspecialchars(saison_fr(date('Y-m-d'))) ?>
+        </span>
+        <?php endif; ?>
+    </div>
     <p class="text-gray-400 text-sm">Prochains matchs et derniers résultats, toutes compétitions confondues.</p>
 </header>
 
@@ -77,10 +86,15 @@ include __DIR__ . '/templates/header.php';
             <div class="text-gray-500 text-xs sm:w-32 shrink-0">
                 <?= date('d/m/Y', strtotime($m['date'])) ?><?= !empty($m['heure']) ? ' · ' . htmlspecialchars($m['heure']) : '' ?>
             </div>
-            <div class="flex-1 flex items-center justify-center gap-3">
-                <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                <span class="text-gray-600 text-xs px-2">vs</span>
-                <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+            <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                <?php if (!empty($m['tour'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                <?php endif; ?>
+                <div class="flex items-center justify-center gap-3 w-full">
+                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                    <span class="text-gray-600 text-xs px-2">vs</span>
+                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                </div>
             </div>
             <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
                 <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
@@ -111,10 +125,15 @@ include __DIR__ . '/templates/header.php';
         <?php foreach (array_slice($termines, 0, 15) as $m): ?>
         <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div class="text-gray-500 text-xs sm:w-32 shrink-0"><?= date('d/m/Y', strtotime($m['date'])) ?></div>
-            <div class="flex-1 flex items-center justify-center gap-3">
-                <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
-                <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+            <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                <?php if (!empty($m['tour'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                <?php endif; ?>
+                <div class="flex items-center justify-center gap-3 w-full">
+                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                    <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
+                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                </div>
             </div>
             <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
                 <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>

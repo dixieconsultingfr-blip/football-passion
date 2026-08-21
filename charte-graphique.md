@@ -10,6 +10,8 @@ Hub evergreen football grand public : L1, L2, Champions League, Europa League, �
 
 **Ton éditorial** : passion + fair-play + neutralité entre clubs — *"que le meilleur gagne, prône le beau jeu"*. Pas d'angle partisan (ex. pas d'angle OM affiché, trop clivant). Avis éditoriaux mesurés ("à notre sens...") plutôt que des titres putaclic.
 
+**Application concrète sur les posts réseaux sociaux d'avant-match** : l'encouragement final ne doit jamais viser un seul club. Toujours souhaiter bonne chance aux deux équipes (ex. "Allez l'OM, allez Strasbourg !" plutôt que "Allez l'OM !" seul) — cohérent avec la neutralité éditoriale, même quand l'article traite d'un club en particulier.
+
 **Anti-hallucination** : jamais de fait inventé (score, compo, statistique, citation) — seulement des données fournies ou vérifiées. Voir `CLAUDE.md` pour le détail complet des règles de contenu.
 
 ---

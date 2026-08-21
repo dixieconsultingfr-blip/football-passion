@@ -6400,7 +6400,8 @@
         "status":  "FINISHED",
         "score_dom":  3,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000035,
@@ -6413,7 +6414,8 @@
         "status":  "FINISHED",
         "score_dom":  0,
         "score_ext":  0,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000036,
@@ -6426,7 +6428,8 @@
         "status":  "FINISHED",
         "score_dom":  1,
         "score_ext":  0,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000037,
@@ -6439,7 +6442,8 @@
         "status":  "FINISHED",
         "score_dom":  1,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000038,
@@ -6452,7 +6456,8 @@
         "status":  "FINISHED",
         "score_dom":  0,
         "score_ext":  3,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000039,
@@ -6465,7 +6470,8 @@
         "status":  "FINISHED",
         "score_dom":  2,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000040,
@@ -6478,7 +6484,8 @@
         "status":  "FINISHED",
         "score_dom":  1,
         "score_ext":  0,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000041,
@@ -6491,7 +6498,8 @@
         "status":  "FINISHED",
         "score_dom":  0,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000042,
@@ -6504,7 +6512,8 @@
         "status":  "FINISHED",
         "score_dom":  1,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000043,
@@ -6517,7 +6526,8 @@
         "status":  "FINISHED",
         "score_dom":  1,
         "score_ext":  0,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000044,
@@ -6530,7 +6540,8 @@
         "status":  "FINISHED",
         "score_dom":  0,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000045,
@@ -6543,7 +6554,8 @@
         "status":  "FINISHED",
         "score_dom":  3,
         "score_ext":  0,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000046,
@@ -6556,7 +6568,8 @@
         "status":  "FINISHED",
         "score_dom":  6,
         "score_ext":  1,
-        "saison":  "2026-2027"
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 1 sur 2"
     },
     {
         "id":  9000047,
@@ -6566,10 +6579,11 @@
         "date":  "2026-08-11",
         "heure":  "18:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  2,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000048,
@@ -6579,10 +6593,11 @@
         "date":  "2026-08-13",
         "heure":  "19:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  0,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000049,
@@ -6592,10 +6607,11 @@
         "date":  "2026-08-13",
         "heure":  "19:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  2,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000050,
@@ -6605,10 +6621,11 @@
         "date":  "2026-08-13",
         "heure":  "19:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  3,
+        "score_ext":  3,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000051,
@@ -6618,10 +6635,11 @@
         "date":  "2026-08-13",
         "heure":  "19:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  0,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000052,
@@ -6631,23 +6649,25 @@
         "date":  "2026-08-13",
         "heure":  "19:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000053,
         "competition":  "Europa",
         "domicile":  "KI Klaksvik",
         "exterieur":  "Lech Poznan",
-        "date":  "2026-08-13",
+        "date":  "2026-08-14",
         "heure":  "19:30",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  0,
+        "score_ext":  5,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000054,
@@ -6657,10 +6677,11 @@
         "date":  "2026-08-13",
         "heure":  "19:30",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  3,
+        "score_ext":  2,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000055,
@@ -6670,10 +6691,11 @@
         "date":  "2026-08-13",
         "heure":  "20:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  3,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000056,
@@ -6683,10 +6705,11 @@
         "date":  "2026-08-13",
         "heure":  "20:30",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  3,
+        "score_ext":  2,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000057,
@@ -6696,10 +6719,11 @@
         "date":  "2026-08-13",
         "heure":  "20:30",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000058,
@@ -6709,10 +6733,11 @@
         "date":  "2026-08-13",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000059,
@@ -6722,10 +6747,11 @@
         "date":  "2026-08-13",
         "heure":  "21:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
-        "saison":  "2026-2027"
+        "status":  "FINISHED",
+        "score_dom":  5,
+        "score_ext":  1,
+        "saison":  "2026-2027",
+        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000060,
@@ -7246,175 +7272,6 @@
         "score_dom":  null,
         "score_ext":  null,
         "tour":  "Barrages - Manche 2 sur 2"
-    },
-    {
-        "id":  9000100,
-        "competition":  "Europa",
-        "domicile":  "Saburtalo",
-        "exterieur":  "Larne",
-        "date":  "2026-08-11",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  2,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000101,
-        "competition":  "Europa",
-        "domicile":  "Omonia",
-        "exterieur":  "Lincoln FC",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  0,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000102,
-        "competition":  "Europa",
-        "domicile":  "CS U Craiova",
-        "exterieur":  "KuPS",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  2,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000103,
-        "competition":  "Europa",
-        "domicile":  "Paphos",
-        "exterieur":  "RB Salzburg",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  3,
-        "score_ext":  3,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000104,
-        "competition":  "Europa",
-        "domicile":  "Besiktas",
-        "exterieur":  "Hradec Kralove",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  0,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000105,
-        "competition":  "Europa",
-        "domicile":  "Gornik Zabrze",
-        "exterieur":  "Ferencvaros TC",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000106,
-        "competition":  "Europa",
-        "domicile":  "Vikingur Reykjavik",
-        "exterieur":  "Thoune",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  3,
-        "score_ext":  2,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000107,
-        "competition":  "Europa",
-        "domicile":  "CSKA Sofia",
-        "exterieur":  "Maccabi Tel Aviv",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  3,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000108,
-        "competition":  "Europa",
-        "domicile":  "Anderlecht",
-        "exterieur":  "PAOK",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  3,
-        "score_ext":  2,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000109,
-        "competition":  "Europa",
-        "domicile":  "Glasgow Rangers",
-        "exterieur":  "Jagiellonia Bialystok",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000110,
-        "competition":  "Europa",
-        "domicile":  "Hearts",
-        "exterieur":  "Benfica",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  1,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000111,
-        "competition":  "Europa",
-        "domicile":  "Egnatia",
-        "exterieur":  "Shamrock Rovers",
-        "date":  "2026-08-13",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  5,
-        "score_ext":  1,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
-    },
-    {
-        "id":  9000112,
-        "competition":  "Europa",
-        "domicile":  "KI Klaksvik",
-        "exterieur":  "Lech Poznan",
-        "date":  "2026-08-14",
-        "heure":  "",
-        "stade":  "",
-        "status":  "FINISHED",
-        "score_dom":  0,
-        "score_ext":  5,
-        "tour":  "Europa League - 3e tour de qualification - Manche 2 sur 2"
     },
     {
         "id":  9000113,

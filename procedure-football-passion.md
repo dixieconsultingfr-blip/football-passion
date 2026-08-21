@@ -307,6 +307,7 @@ Objectif : donner à Google des signaux clairs d'auteur identifié et de site fi
 - **Référencement interne** : page ajoutée à `sitemap.php` (priorité 0.7, changefreq monthly), au footer (colonne Compétitions, libellé "Guide droits TV") et à la nav du header (libellé "Droits TV") — visibilité maximale car c'est une page à vocation de monétisation.
 - **Image d'en-tête** : pas encore générée — emplacement en commentaire dans le code (`images/droits-tv-football-2026-2027.webp` à créer puis décommenter).
 - **Google AdSense** : script de vérification (`ca-pub-1397315006076063`) ajouté dans `templates/header.php` (`<head>`, sur toutes les pages du site) pour valider la propriété football-passion.fr côté Google AdSense. Vérifié en production via `curl` sur la homepage — script bien présent. Les deux emplacements placeholder de `droits-tv-football.php` sont prêts à recevoir les balises `<ins class="adsbygoogle">` une fois les unités publicitaires créées côté AdSense.
+- **Site validé par AdSense** (21 août 2026, 13:02) — statut "Examen demandé" : Google effectue désormais une revue du site avant activation effective des annonces, délai annoncé de quelques jours à 4 semaines. Rien à faire côté site en attendant ; à suivre pour activer les unités publicitaires dans les emplacements réservés une fois l'examen validé.
 
 ---
 

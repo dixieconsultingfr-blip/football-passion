@@ -2,11 +2,12 @@
 require_once __DIR__ . '/blog/helpers.php';
 
 $competitions = [
-    'L1'      => 'Ligue 1',
-    'L2'      => 'Ligue 2',
-    'CL'      => 'Champions League',
-    'Europa'  => 'Europa League',
-    'France'  => 'Équipe de France',
+    'L1'         => 'Ligue 1',
+    'L2'         => 'Ligue 2',
+    'CL'         => 'Champions League',
+    'Europa'     => 'Europa League',
+    'Conference' => 'Ligue Conférence',
+    'France'     => 'Équipe de France',
 ];
 
 $archiveDir = __DIR__ . '/data/archives';
@@ -113,12 +114,18 @@ include __DIR__ . '/templates/header.php';
 <h2 class="text-2xl font-bold text-white mb-5"><?= htmlspecialchars($competitions[$comp] ?? $comp) ?> — Saison <?= htmlspecialchars($saison) ?></h2>
 
 <?php
-// Regroupement par journée si le champ est disponible sur les matchs, sinon liste simple
+// Regroupement par journée si disponible, sinon par tour (qualifs/barrages), sinon liste simple
 $parJournee = null;
+$parTour    = null;
 if (($matchsAffiches[0]['journee'] ?? null) !== null) {
     $parJournee = [];
     foreach ($matchsAffiches as $m) {
         $parJournee[$m['journee'] ?? 0][] = $m;
+    }
+} elseif (!empty(array_filter($matchsAffiches, fn($m) => !empty($m['tour'])))) {
+    $parTour = [];
+    foreach ($matchsAffiches as $m) {
+        $parTour[$m['tour'] ?? 'Phase de groupes'][] = $m;
     }
 }
 ?>
@@ -130,6 +137,31 @@ if (($matchsAffiches[0]['journee'] ?? null) !== null) {
         <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Journée <?= (int)$num ?></p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <?php foreach ($matchsJournee as $m): ?>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-3">
+                <div class="flex-1 min-w-0 space-y-1.5">
+                    <div class="flex justify-between items-center gap-2 text-sm">
+                        <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
+                    </div>
+                    <div class="flex justify-between items-center gap-2 text-sm">
+                        <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                        <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
+                    </div>
+                </div>
+                <div class="text-gray-500 text-xs shrink-0"><?= date('d/m/Y', strtotime($m['date'])) ?></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <?php endforeach; ?>
+</div>
+<?php elseif ($parTour !== null): ?>
+<div class="space-y-6">
+    <?php foreach ($parTour as $libelle => $matchsTour): ?>
+    <div>
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2"><?= htmlspecialchars($libelle) ?></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <?php foreach ($matchsTour as $m): ?>
             <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-3">
                 <div class="flex-1 min-w-0 space-y-1.5">
                     <div class="flex justify-between items-center gap-2 text-sm">

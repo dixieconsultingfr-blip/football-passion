@@ -14,7 +14,7 @@ $logosCompetitions = [
 
 $hubs = [
     'france'           => '/equipe-france.php',
-    'euro'             => '/euro.php',
+    'euro'             => '/euro-2028.php',
     'ligue-1'          => '/ligue-1.php',
     'ligue-2'          => '/ligue-2.php',
     'champions-league' => '/champions-league.php',

@@ -20,7 +20,7 @@ include __DIR__ . '/templates/header.php';
     { "@type": "Country", "name": "Royaume-Uni" },
     { "@type": "Country", "name": "Irlande" }
   ],
-  "url": "https://football-passion.fr/euro.php"
+  "url": "https://football-passion.fr/euro-2028.php"
 }
 </script>
 
@@ -100,6 +100,34 @@ include __DIR__ . '/templates/header.php';
     </section>
 
 </div>
+
+<!-- Stades -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Les 9 stades retenus</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <?php
+        $stades = [
+            ['Wembley Stadium', 'Londres', '90 652', true],
+            ['Principality Stadium', 'Cardiff', '73 952', false],
+            ['Tottenham Hotspur Stadium', 'Londres', '62 322', false],
+            ['Etihad Stadium', 'Manchester', '61 000', false],
+            ['Everton Stadium', 'Liverpool', '52 679', false],
+            ['St James\' Park', 'Newcastle', '52 305', false],
+            ['Villa Park', 'Birmingham', '52 190', false],
+            ['Hampden Park', 'Glasgow', '52 032', false],
+            ['Aviva Stadium', 'Dublin', '51 711', false],
+        ];
+        foreach ($stades as [$nom, $ville, $capacite, $finale]): ?>
+        <div class="bg-gray-800 border <?= $finale ? 'border-green-600' : 'border-gray-700' ?> rounded-xl p-4">
+            <?php if ($finale): ?>
+            <span class="text-green-400 text-[10px] font-bold uppercase tracking-wider">🏆 Finale</span>
+            <?php endif; ?>
+            <div class="text-white font-semibold text-sm mt-1"><?= htmlspecialchars($nom) ?></div>
+            <div class="text-gray-500 text-xs mt-1"><?= htmlspecialchars($ville) ?> · <?= htmlspecialchars($capacite) ?> places</div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 <!-- La France de Zidane -->
 <section class="mb-12">

@@ -10,3 +10,6 @@ RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
 # URL propre pour les articles : /blog/mon-slug -> /blog/index.php?slug=mon-slug
 RewriteRule ^blog/([a-z0-9-]+)/?$ blog/index.php?slug=$1 [L,QSA]
+
+# euro.php renomme en euro-2028.php (URL exact-match pour le SEO)
+RewriteRule ^euro\.php$ /euro-2028.php [L,R=301]

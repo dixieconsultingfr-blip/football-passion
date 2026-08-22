@@ -33,6 +33,25 @@ usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date']
 $termines = array_values(array_filter($matchsFiltres, fn($m) => ($m['status'] ?? '') === 'FINISHED'));
 usort($termines, fn($a, $b) => strcmp($b['date'], $a['date']));
 
+// ── Regroupe une liste de matchs par competition, dans l'ordre fixe defini par $competitions ──
+function grouper_par_competition(array $matchs, array $ordreCompetitions): array {
+    $groupes = [];
+    foreach ($matchs as $m) {
+        $groupes[$m['competition'] ?? '?'][] = $m;
+    }
+    $resultat = [];
+    foreach (array_keys($ordreCompetitions) as $code) {
+        if (!empty($groupes[$code])) {
+            $resultat[$code] = $groupes[$code];
+            unset($groupes[$code]);
+        }
+    }
+    foreach ($groupes as $code => $liste) {
+        $resultat[$code] = $liste;
+    }
+    return $resultat;
+}
+
 $page_title = 'Calendrier — Ligue 1, Ligue 2, Champions League, Europa League, Équipe de France';
 $meta_desc  = "Calendrier et résultats en direct : Ligue 1, Ligue 2, Champions League, Europa League et Équipe de France, mis à jour automatiquement.";
 include __DIR__ . '/templates/header.php';
@@ -84,37 +103,37 @@ include __DIR__ . '/templates/header.php';
         </span>
         <h2 class="text-2xl font-bold text-white">En direct</h2>
     </div>
-    <div class="space-y-3">
-        <?php foreach ($enDirect as $m): ?>
-        <div class="bg-gray-800 border border-red-800/40 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <div class="text-red-400 text-xs font-bold uppercase tracking-wide sm:w-32 shrink-0">En direct</div>
-            <div class="flex-1 flex flex-col items-center justify-center gap-1">
-                <?php if (!empty($m['tour'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
-                <?php elseif (!empty($m['journee'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
-                <?php endif; ?>
-                <div class="flex items-center justify-center gap-3 w-full">
-                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                    <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
-                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+    <?php foreach (grouper_par_competition($enDirect, $competitions) as $code => $matchsGroupe): ?>
+    <div class="mb-5 last:mb-0">
+        <div class="flex items-center gap-2 mb-2.5">
+            <?php if (!empty($logosCompetitions[$code])): ?>
+            <span class="inline-flex items-center justify-center w-5 h-5 bg-white rounded-full p-0.5 shrink-0">
+                <img src="<?= htmlspecialchars($logosCompetitions[$code]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+            </span>
+            <?php endif; ?>
+            <h3 class="text-green-400 text-xs font-bold uppercase tracking-wider"><?= htmlspecialchars($competitions[$code] ?? $code) ?></h3>
+        </div>
+        <div class="space-y-2">
+            <?php foreach ($matchsGroupe as $m): ?>
+            <div class="bg-gray-800 border border-red-800/40 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                <div class="text-red-400 text-xs font-bold uppercase tracking-wide sm:w-24 shrink-0">En direct</div>
+                <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                    <?php if (!empty($m['tour'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <?php elseif (!empty($m['journee'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <?php endif; ?>
+                    <div class="flex items-center justify-center gap-3 w-full">
+                        <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
+                        <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
-                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
-                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                    </span>
-                    <?php endif; ?>
-                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
-                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
-                    </span>
-                </span>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
     </div>
+    <?php endforeach; ?>
 </section>
 <?php endif; ?>
 
@@ -128,39 +147,39 @@ include __DIR__ . '/templates/header.php';
         <span class="text-gray-600 text-xs">Le calendrier se met à jour automatiquement dès que les compétitions reprennent.</span>
     </div>
     <?php else: ?>
-    <div class="space-y-3">
-        <?php foreach (array_slice($aVenir, 0, 15) as $m): ?>
-        <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <div class="text-gray-500 text-xs sm:w-32 shrink-0">
-                <?= date('d/m/Y', strtotime($m['date'])) ?><?= !empty($m['heure']) ? ' · ' . htmlspecialchars($m['heure']) : '' ?>
-            </div>
-            <div class="flex-1 flex flex-col items-center justify-center gap-1">
-                <?php if (!empty($m['tour'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
-                <?php elseif (!empty($m['journee'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
-                <?php endif; ?>
-                <div class="flex items-center justify-center gap-3 w-full">
-                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                    <span class="text-gray-600 text-xs px-2">vs</span>
-                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+    <?php foreach (grouper_par_competition(array_slice($aVenir, 0, 20), $competitions) as $code => $matchsGroupe): ?>
+    <div class="mb-6 last:mb-0">
+        <div class="flex items-center gap-2 mb-2.5">
+            <?php if (!empty($logosCompetitions[$code])): ?>
+            <span class="inline-flex items-center justify-center w-5 h-5 bg-white rounded-full p-0.5 shrink-0">
+                <img src="<?= htmlspecialchars($logosCompetitions[$code]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+            </span>
+            <?php endif; ?>
+            <h3 class="text-green-400 text-xs font-bold uppercase tracking-wider"><?= htmlspecialchars($competitions[$code] ?? $code) ?></h3>
+        </div>
+        <div class="space-y-2">
+            <?php foreach ($matchsGroupe as $m): ?>
+            <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                <div class="text-gray-500 text-xs sm:w-32 shrink-0">
+                    <?= date('d/m/Y', strtotime($m['date'])) ?><?= !empty($m['heure']) ? ' · ' . htmlspecialchars($m['heure']) : '' ?>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                    <?php if (!empty($m['tour'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <?php elseif (!empty($m['journee'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <?php endif; ?>
+                    <div class="flex items-center justify-center gap-3 w-full">
+                        <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-gray-600 text-xs px-2">vs</span>
+                        <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
-                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
-                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                    </span>
-                    <?php endif; ?>
-                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
-                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
-                    </span>
-                </span>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
     </div>
+    <?php endforeach; ?>
     <?php endif; ?>
 </section>
 
@@ -173,37 +192,37 @@ include __DIR__ . '/templates/header.php';
         Aucun résultat disponible pour le moment dans cette sélection.
     </div>
     <?php else: ?>
-    <div class="space-y-3">
-        <?php foreach (array_slice($termines, 0, 15) as $m): ?>
-        <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <div class="text-gray-500 text-xs sm:w-32 shrink-0"><?= date('d/m/Y', strtotime($m['date'])) ?></div>
-            <div class="flex-1 flex flex-col items-center justify-center gap-1">
-                <?php if (!empty($m['tour'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
-                <?php elseif (!empty($m['journee'])): ?>
-                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
-                <?php endif; ?>
-                <div class="flex items-center justify-center gap-3 w-full">
-                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
-                    <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
-                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+    <?php foreach (grouper_par_competition(array_slice($termines, 0, 20), $competitions) as $code => $matchsGroupe): ?>
+    <div class="mb-6 last:mb-0">
+        <div class="flex items-center gap-2 mb-2.5">
+            <?php if (!empty($logosCompetitions[$code])): ?>
+            <span class="inline-flex items-center justify-center w-5 h-5 bg-white rounded-full p-0.5 shrink-0">
+                <img src="<?= htmlspecialchars($logosCompetitions[$code]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+            </span>
+            <?php endif; ?>
+            <h3 class="text-green-400 text-xs font-bold uppercase tracking-wider"><?= htmlspecialchars($competitions[$code] ?? $code) ?></h3>
+        </div>
+        <div class="space-y-2">
+            <?php foreach ($matchsGroupe as $m): ?>
+            <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                <div class="text-gray-500 text-xs sm:w-32 shrink-0"><?= date('d/m/Y', strtotime($m['date'])) ?></div>
+                <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                    <?php if (!empty($m['tour'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <?php elseif (!empty($m['journee'])): ?>
+                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <?php endif; ?>
+                    <div class="flex items-center justify-center gap-3 w-full">
+                        <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
+                        <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
-                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
-                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                    </span>
-                    <?php endif; ?>
-                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
-                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
-                    </span>
-                </span>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
     </div>
+    <?php endforeach; ?>
     <?php endif; ?>
 </section>
 

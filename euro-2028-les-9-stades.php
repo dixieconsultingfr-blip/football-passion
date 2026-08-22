@@ -69,7 +69,7 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-2">Les 6 stades en Angleterre</h2>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">1. Wembley Stadium — Londres</h3>
+        <h3 id="wembley-stadium" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">1. Wembley Stadium — Londres</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-wembley-stadium.jpg" alt="Vue aérienne du Wembley Stadium à Londres" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -84,7 +84,7 @@ include __DIR__ . '/templates/header.php';
             Wembley aura un rôle central dans le tournoi : des matchs de la phase de groupes, un quart de finale, les deux demi-finales et la finale du 9 juillet 2028. La dernière semaine de la compétition se déroulera entièrement dans l'enceinte londonienne.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">2. Tottenham Hotspur Stadium — Londres</h3>
+        <h3 id="tottenham-hotspur-stadium" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">2. Tottenham Hotspur Stadium — Londres</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-tottenham-hotspur-stadium.jpg" alt="Vue aérienne du Tottenham Hotspur Stadium à Londres" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -99,7 +99,7 @@ include __DIR__ . '/templates/header.php';
             Son programme pour l'Euro 2028 comprendra plusieurs matchs de la phase de groupes et un huitième de finale. Londres sera ainsi la seule ville de la compétition à proposer deux stades différents.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">3. Etihad Stadium — Manchester</h3>
+        <h3 id="etihad-stadium" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">3. Etihad Stadium — Manchester</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-etihad-stadium-manchester.jpg" alt="Vue aérienne de l'Etihad Stadium à Manchester" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -114,7 +114,7 @@ include __DIR__ . '/templates/header.php';
             À l'occasion de l'Euro 2028, Manchester recevra plusieurs matchs de groupes et un huitième de finale — l'un des principaux pôles footballistiques du tournoi.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">4. Everton Stadium — Liverpool</h3>
+        <h3 id="everton-stadium" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">4. Everton Stadium — Liverpool</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-everton-stadium-liverpool.jpg" alt="Vue aérienne de l'Everton Stadium à Liverpool" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -129,7 +129,7 @@ include __DIR__ . '/templates/header.php';
             Le stade accueillera plusieurs matchs de la phase de groupes et un huitième de finale — une première exposition internationale majeure pour cette enceinte récente.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">5. St James' Park — Newcastle</h3>
+        <h3 id="st-james-park" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">5. St James' Park — Newcastle</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-st-james-park-newcastle.jpg" alt="Vue aérienne de St James' Park à Newcastle" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -144,7 +144,7 @@ include __DIR__ . '/templates/header.php';
             Le programme de St James' Park sera composé de plusieurs matchs de groupes et d'un huitième de finale.
         </p>
 
-        <h3 class="text-xl font-bold text-white mt-6 mb-2">6. Villa Park — Birmingham</h3>
+        <h3 id="villa-park" class="text-xl font-bold text-white mt-6 mb-2 scroll-mt-24">6. Villa Park — Birmingham</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-villa-park-birmingham.jpg" alt="Vue aérienne de Villa Park à Birmingham" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -162,7 +162,7 @@ include __DIR__ . '/templates/header.php';
 
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade de l'Euro 2028 en Écosse</h2>
-        <h3 class="text-xl font-bold text-white mb-2">Hampden Park — Glasgow</h3>
+        <h3 id="hampden-park" class="text-xl font-bold text-white mb-2 scroll-mt-24">Hampden Park — Glasgow</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-hampden-park-glasgow.jpg" alt="Vue aérienne de Hampden Park à Glasgow" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -180,7 +180,7 @@ include __DIR__ . '/templates/header.php';
 
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade du pays de Galles</h2>
-        <h3 class="text-xl font-bold text-white mb-2">Principality Stadium — Cardiff</h3>
+        <h3 id="principality-stadium" class="text-xl font-bold text-white mb-2 scroll-mt-24">Principality Stadium — Cardiff</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-principality-stadium-cardiff.jpg" alt="Le Principality Stadium vu depuis Westgate Street, à Cardiff" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">
@@ -198,7 +198,7 @@ include __DIR__ . '/templates/header.php';
 
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade de l'Euro 2028 en Irlande</h2>
-        <h3 class="text-xl font-bold text-white mb-2">Aviva Stadium — Dublin</h3>
+        <h3 id="aviva-stadium" class="text-xl font-bold text-white mb-2 scroll-mt-24">Aviva Stadium — Dublin</h3>
         <figure class="mt-3 mb-3">
             <img src="/images/stades/euro-2028-aviva-stadium-dublin.jpg" alt="L'Aviva Stadium à Dublin, vu depuis la rivière Dodder" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
             <figcaption class="text-gray-600 text-[11px] mt-1.5">

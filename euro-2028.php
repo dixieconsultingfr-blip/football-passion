@@ -161,24 +161,27 @@ include __DIR__ . '/templates/header.php';
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         <?php
         $stades = [
-            ['Wembley Stadium', 'Londres', '90 652', true],
-            ['Principality Stadium', 'Cardiff', '73 952', false],
-            ['Tottenham Hotspur Stadium', 'Londres', '62 322', false],
-            ['Etihad Stadium', 'Manchester', '61 000', false],
-            ['Everton Stadium', 'Liverpool', '52 679', false],
-            ['St James\' Park', 'Newcastle', '52 305', false],
-            ['Villa Park', 'Birmingham', '52 190', false],
-            ['Hampden Park', 'Glasgow', '52 032', false],
-            ['Aviva Stadium', 'Dublin', '51 711', false],
+            ['Wembley Stadium', 'Londres', '90 652', true, 'wembley-stadium', 'euro-2028-wembley-stadium.jpg'],
+            ['Principality Stadium', 'Cardiff', '73 952', false, 'principality-stadium', 'euro-2028-principality-stadium-cardiff.jpg'],
+            ['Tottenham Hotspur Stadium', 'Londres', '62 322', false, 'tottenham-hotspur-stadium', 'euro-2028-tottenham-hotspur-stadium.jpg'],
+            ['Etihad Stadium', 'Manchester', '61 000', false, 'etihad-stadium', 'euro-2028-etihad-stadium-manchester.jpg'],
+            ['Everton Stadium', 'Liverpool', '52 679', false, 'everton-stadium', 'euro-2028-everton-stadium-liverpool.jpg'],
+            ['St James\' Park', 'Newcastle', '52 305', false, 'st-james-park', 'euro-2028-st-james-park-newcastle.jpg'],
+            ['Villa Park', 'Birmingham', '52 190', false, 'villa-park', 'euro-2028-villa-park-birmingham.jpg'],
+            ['Hampden Park', 'Glasgow', '52 032', false, 'hampden-park', 'euro-2028-hampden-park-glasgow.jpg'],
+            ['Aviva Stadium', 'Dublin', '51 711', false, 'aviva-stadium', 'euro-2028-aviva-stadium-dublin.jpg'],
         ];
-        foreach ($stades as [$nom, $ville, $capacite, $finale]): ?>
-        <div class="bg-gray-800 border <?= $finale ? 'border-green-600' : 'border-gray-700' ?> rounded-xl p-4">
-            <?php if ($finale): ?>
-            <span class="text-green-400 text-[10px] font-bold uppercase tracking-wider">🏆 Finale</span>
-            <?php endif; ?>
-            <div class="text-white font-semibold text-sm mt-1"><?= htmlspecialchars($nom) ?></div>
-            <div class="text-gray-500 text-xs mt-1"><?= htmlspecialchars($ville) ?> · <?= htmlspecialchars($capacite) ?> places</div>
-        </div>
+        foreach ($stades as [$nom, $ville, $capacite, $finale, $ancre, $image]): ?>
+        <a href="/euro-2028-les-9-stades.php#<?= htmlspecialchars($ancre) ?>" class="bg-gray-800 border <?= $finale ? 'border-green-600' : 'border-gray-700' ?> hover:border-green-500 rounded-xl overflow-hidden transition-colors block">
+            <img src="/images/stades/<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($nom) ?>" class="w-full h-28 object-cover" loading="lazy" />
+            <div class="p-4">
+                <?php if ($finale): ?>
+                <span class="text-green-400 text-[10px] font-bold uppercase tracking-wider">🏆 Finale</span>
+                <?php endif; ?>
+                <div class="text-white font-semibold text-sm mt-1"><?= htmlspecialchars($nom) ?></div>
+                <div class="text-gray-500 text-xs mt-1"><?= htmlspecialchars($ville) ?> · <?= htmlspecialchars($capacite) ?> places</div>
+            </div>
+        </a>
         <?php endforeach; ?>
     </div>
     <a href="/euro-2028-les-9-stades.php" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-4">

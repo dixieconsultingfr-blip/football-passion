@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="/images/charte-graphique/apple-touch-icon.png" />
 
     <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-1397315006076063">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1397315006076063"
      crossorigin="anonymous"></script>
 </head>

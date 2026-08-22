@@ -67,7 +67,9 @@ include __DIR__ . '/templates/header.php';
     </header>
 
     <figure class="mb-10">
+        <h2 class="text-xl font-bold text-white mb-3 text-center">Où se trouvent les 9 stades de l'Euro 2028 ?</h2>
         <img src="/images/stades/carte-stades-euro-2028.jpg" alt="Carte des 9 stades de l'Euro 2028 au Royaume-Uni et en Irlande" class="w-full max-w-md mx-auto rounded-xl border border-gray-700" loading="lazy" />
+        <figcaption class="text-gray-500 text-xs mt-2 text-center">Répartition géographique des 9 stades retenus, au Royaume-Uni et en Irlande</figcaption>
     </figure>
 
     <section class="mb-10">

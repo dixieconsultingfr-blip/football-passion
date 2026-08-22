@@ -5,8 +5,17 @@ $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true
 $matchsL2  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'L2'));
 
 // ── Classement calculé depuis les résultats FINISHED (pas de saisie manuelle) ──
+// Toutes les équipes du calendrier apparaissent dans le classement dès la 1ere journee,
+// meme sans match joue (0 pt, comme sur le classement officiel Google/LFP).
 $termines = array_filter($matchsL2, fn($m) => ($m['status'] ?? '') === 'FINISHED');
 $table = [];
+foreach ($matchsL2 as $m) {
+    foreach ([$m['domicile'] ?? null, $m['exterieur'] ?? null] as $eq) {
+        if ($eq !== null && !isset($table[$eq])) {
+            $table[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
+        }
+    }
+}
 foreach ($termines as $m) {
     foreach ([
         ['equipe' => $m['domicile'] ?? '?', 'bp' => $m['score_dom'] ?? 0, 'bc' => $m['score_ext'] ?? 0],

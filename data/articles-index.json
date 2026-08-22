@@ -1,5 +1,19 @@
 [
     {
+        "id":  14,
+        "slug":  "lens-auxerre-5-2-journee-1-2026-2027",
+        "titre":  "Lens survole Auxerre 5-2 pour son entrée en Ligue 1 et grimpe sur le podium",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "RC Lens",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-22",
+        "extrait":  "Pour son premier match de la saison 2026-2027, le RC Lens a livré un festival offensif face à l'AJ Auxerre : 5-2 à Bollaert-Delelis, avec un doublé sur pénalty de Florian Thauvin et une expulsion auxerroise dès la 35e minute.",
+        "vignette":  "/images/lens-auxerre-5-2-journee-1-2026-2027.jpg",
+        "image_alt":  "RC Lens 5-2 AJ Auxerre, 1ere journee de Ligue 1 2026-2027"
+    },
+    {
         "id":  13,
         "slug":  "nantes-rodez-2-5-journee-3-2026",
         "titre":  "Ligue 2 – Journée 3 : Nantes dans la tourmente après une nouvelle déroute",

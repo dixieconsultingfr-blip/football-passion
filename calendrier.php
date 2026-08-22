@@ -58,7 +58,7 @@ include __DIR__ . '/templates/header.php';
 ?>
 
 <!-- Breadcrumb -->
-<nav class="text-xs text-gray-500 mb-8 flex items-center gap-2">
+<nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
     <span class="text-gray-400">Calendrier</span>
@@ -119,9 +119,9 @@ include __DIR__ . '/templates/header.php';
                 <div class="text-red-400 text-xs font-bold uppercase tracking-wide sm:w-24 shrink-0">En direct</div>
                 <div class="flex-1 flex flex-col items-center justify-center gap-1">
                     <?php if (!empty($m['tour'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
                     <?php elseif (!empty($m['journee'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
                     <?php endif; ?>
                     <div class="flex items-center justify-center gap-3 w-full">
                         <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
@@ -165,9 +165,9 @@ include __DIR__ . '/templates/header.php';
                 </div>
                 <div class="flex-1 flex flex-col items-center justify-center gap-1">
                     <?php if (!empty($m['tour'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
                     <?php elseif (!empty($m['journee'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
                     <?php endif; ?>
                     <div class="flex items-center justify-center gap-3 w-full">
                         <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
@@ -208,9 +208,9 @@ include __DIR__ . '/templates/header.php';
                 <div class="text-gray-500 text-xs sm:w-32 shrink-0"><?= date('d/m/Y', strtotime($m['date'])) ?></div>
                 <div class="flex-1 flex flex-col items-center justify-center gap-1">
                     <?php if (!empty($m['tour'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
                     <?php elseif (!empty($m['journee'])): ?>
-                    <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                    <span class="text-gray-400 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
                     <?php endif; ?>
                     <div class="flex items-center justify-center gap-3 w-full">
                         <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>

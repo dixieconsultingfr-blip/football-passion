@@ -17,7 +17,7 @@ include __DIR__ . '/templates/header.php';
 ?>
 
 <!-- Breadcrumb -->
-<nav class="text-xs text-gray-500 mb-8 flex items-center gap-2">
+<nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
     <span class="text-gray-400">Coupe du Monde</span>

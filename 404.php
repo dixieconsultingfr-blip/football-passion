@@ -30,7 +30,7 @@ include __DIR__ . '/templates/header.php';
         <div class="grid grid-cols-2 gap-3 text-sm">
             <a href="/calendrier.php" class="text-gray-400 hover:text-green-400 transition-colors">📅 Calendrier des matchs</a>
             <a href="/blog?cat=France" class="text-gray-400 hover:text-green-400 transition-colors">🇫🇷 Équipe de France</a>
-            <a href="/blog?cat=CDM" class="text-gray-400 hover:text-green-400 transition-colors">🏆 Coupe du Monde</a>
+            <a href="/coupe-du-monde-2030.php" class="text-gray-400 hover:text-green-400 transition-colors">🏆 Coupe du Monde</a>
             <a href="/blog?cat=CL" class="text-gray-400 hover:text-green-400 transition-colors">⭐ Champions League</a>
             <a href="/a-propos.php" class="text-gray-400 hover:text-green-400 transition-colors">👤 À propos</a>
             <a href="/contact.php" class="text-gray-400 hover:text-green-400 transition-colors">✉️ Contact</a>

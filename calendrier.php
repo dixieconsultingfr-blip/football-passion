@@ -100,14 +100,16 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                 </div>
             </div>
-            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
-                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                </span>
-                <?php endif; ?>
-                <span class="text-gray-500 text-xs font-semibold uppercase">
-                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
+                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
+                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                    </span>
+                    <?php endif; ?>
+                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
+                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                    </span>
                 </span>
             </div>
         </div>
@@ -144,14 +146,16 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                 </div>
             </div>
-            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
-                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                </span>
-                <?php endif; ?>
-                <span class="text-green-500 text-xs font-semibold uppercase">
-                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
+                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
+                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                    </span>
+                    <?php endif; ?>
+                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
+                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                    </span>
                 </span>
             </div>
         </div>
@@ -185,14 +189,16 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                 </div>
             </div>
-            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
-                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
-                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
-                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
-                </span>
-                <?php endif; ?>
-                <span class="text-gray-500 text-xs font-semibold uppercase">
-                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+            <div class="flex items-center justify-start sm:justify-end sm:w-32 shrink-0">
+                <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-700 rounded-full pl-1 pr-2.5 py-1">
+                    <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                    <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                        <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                    </span>
+                    <?php endif; ?>
+                    <span class="text-white text-[11px] font-bold uppercase tracking-wide">
+                        <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                    </span>
                 </span>
             </div>
         </div>

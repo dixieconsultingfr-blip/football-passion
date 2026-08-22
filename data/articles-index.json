@@ -1,5 +1,19 @@
 [
     {
+        "id":  13,
+        "slug":  "nantes-rodez-2-5-journee-3-2026",
+        "titre":  "Ligue 2 – Journée 3 : Nantes dans la tourmente après une nouvelle déroute",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "Nantes",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-08-22",
+        "extrait":  "Le début de saison vire au cauchemar pour le FC Nantes. Malgré un doublé de Killian Corredor et une avance à la pause, les Canaris se sont effondrés en seconde période et s'inclinent 2-5 face à Rodez à la Beaujoire.",
+        "vignette":  "/images/nantes-rodez-2-5-journee-3-2026.jpg",
+        "image_alt":  "FC Nantes 2-5 Rodez, 3e defaite consecutive en Ligue 2 2026-2027"
+    },
+    {
         "id":  12,
         "slug":  "marseille-strasbourg-4-0-journee-1-2026-2027",
         "titre":  "Marseille lance sa saison en battant Strasbourg 4-0 et prend la tête de la Ligue 1",

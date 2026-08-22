@@ -66,6 +66,10 @@ include __DIR__ . '/templates/header.php';
         </p>
     </header>
 
+    <figure class="mb-10">
+        <img src="/images/stades/carte-stades-euro-2028.jpg" alt="Carte des 9 stades de l'Euro 2028 au Royaume-Uni et en Irlande" class="w-full max-w-md mx-auto rounded-xl border border-gray-700" loading="lazy" />
+    </figure>
+
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-2">Les 6 stades en Angleterre</h2>
 

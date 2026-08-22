@@ -157,7 +157,7 @@ include __DIR__ . '/templates/header.php';
 <section class="flex flex-wrap gap-4 justify-center pb-4">
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier</a>
     <a href="/blog?cat=France" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles France</a>
-    <a href="/coupe-du-monde-2030.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏆 Coupe du Monde</a>
+    <a href="/coupe-du-monde.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏆 Coupe du Monde</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

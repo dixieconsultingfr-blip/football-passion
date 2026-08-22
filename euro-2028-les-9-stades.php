@@ -66,12 +66,16 @@ include __DIR__ . '/templates/header.php';
         </p>
     </header>
 
-    <!-- TODO vignettes des stades à venir : images/euro-2028-{stade}.webp, à intégrer dans chaque section ci-dessous -->
-
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-2">Les 6 stades en Angleterre</h2>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">1. Wembley Stadium — Londres</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-wembley-stadium.jpg" alt="Vue aérienne du Wembley Stadium à Londres" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 90 652 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Wembley est le stade emblématique du football anglais et la principale enceinte de l'Euro 2028. Reconstruit sur le site de l'ancien stade, il est reconnaissable à son immense arche blanche et à ses tribunes entièrement couvertes. Le stade londonien possède une expérience considérable des grands événements internationaux : il a notamment accueilli la finale de l'Euro 2020, plusieurs finales de Ligue des champions et la finale de l'Euro féminin 2022.
@@ -81,6 +85,12 @@ include __DIR__ . '/templates/header.php';
         </p>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">2. Tottenham Hotspur Stadium — Londres</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-tottenham-hotspur-stadium.jpg" alt="Vue aérienne du Tottenham Hotspur Stadium à Londres" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 62 322 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Inauguré en 2019, le Tottenham Hotspur Stadium représente la génération moderne des stades multifonctionnels. Son architecture contemporaine, ses équipements technologiques et sa pelouse rétractable en font l'une des enceintes les plus avancées d'Europe.
@@ -90,6 +100,12 @@ include __DIR__ . '/templates/header.php';
         </p>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">3. Etihad Stadium — Manchester</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-etihad-stadium-manchester.jpg" alt="Vue aérienne de l'Etihad Stadium à Manchester" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler, recadrée par Blackcat — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 61 000 places (désigné « Manchester City Stadium » par l'UEFA)</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Le stade de Manchester City, installé dans l'est de la ville, fait partie d'un vaste complexe sportif et de loisirs. Il est régulièrement utilisé pour les matchs de Premier League et les compétitions européennes.
@@ -99,6 +115,12 @@ include __DIR__ . '/templates/header.php';
         </p>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">4. Everton Stadium — Liverpool</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-everton-stadium-liverpool.jpg" alt="Vue aérienne de l'Everton Stadium à Liverpool" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 52 679 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Liverpool ne sera pas représentée par Anfield, le stade historique des Reds, mais par la nouvelle enceinte d'Everton. Situé sur les docks de Bramley-Moore, l'Everton Stadium constitue un nouveau repère architectural sur les rives de la Mersey.
@@ -108,6 +130,12 @@ include __DIR__ . '/templates/header.php';
         </p>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">5. St James' Park — Newcastle</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-st-james-park-newcastle.jpg" alt="Vue aérienne de St James' Park à Newcastle" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 52 305 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Situé au cœur de Newcastle, St James' Park est l'un des stades les plus reconnaissables de la Premier League. Son implantation urbaine, ses tribunes imposantes et l'ambiance réputée de ses supporters en font un lieu particulièrement marquant.
@@ -117,6 +145,12 @@ include __DIR__ . '/templates/header.php';
         </p>
 
         <h3 class="text-xl font-bold text-white mt-6 mb-2">6. Villa Park — Birmingham</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-villa-park-birmingham.jpg" alt="Vue aérienne de Villa Park à Birmingham" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Arne Müseler — <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0 DE</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 52 190 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Villa Park, domicile d'Aston Villa, fait partie des stades historiques du football anglais. Ouverte à la fin du XIXe siècle, l'enceinte associe patrimoine architectural et aménagements modernes, dans le quartier d'Aston au nord de Birmingham.
@@ -129,6 +163,12 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade de l'Euro 2028 en Écosse</h2>
         <h3 class="text-xl font-bold text-white mb-2">Hampden Park — Glasgow</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-hampden-park-glasgow.jpg" alt="Vue aérienne de Hampden Park à Glasgow" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Dan Kearney, recadrée par Blackcat — <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 3.0</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 52 032 places</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Hampden Park est le stade national de l'Écosse et l'un des lieux les plus historiques du football européen. L'enceinte a déjà participé à l'histoire du Championnat d'Europe puisqu'elle faisait partie des stades retenus pour l'Euro 2020, et elle est associée à de nombreux moments marquants du football continental — dont la finale de la Ligue des champions 2002.
@@ -141,6 +181,12 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade du pays de Galles</h2>
         <h3 class="text-xl font-bold text-white mb-2">Principality Stadium — Cardiff</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-principality-stadium-cardiff.jpg" alt="Le Principality Stadium vu depuis Westgate Street, à Cardiff" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : Dominic Nelson — <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">CC BY-SA 4.0</a>
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 73 952 places (désigné « National Stadium of Wales » par l'UEFA)</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Situé au centre de Cardiff, ce stade est particulièrement connu pour les matchs de rugby de l'équipe galloise, mais il a également accueilli de grandes rencontres de football. Son toit rétractable permet d'organiser des matchs dans des conditions plus régulières, quelles que soient la météo et la saison.
@@ -153,6 +199,12 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Le stade de l'Euro 2028 en Irlande</h2>
         <h3 class="text-xl font-bold text-white mb-2">Aviva Stadium — Dublin</h3>
+        <figure class="mt-3 mb-3">
+            <img src="/images/stades/euro-2028-aviva-stadium-dublin.jpg" alt="L'Aviva Stadium à Dublin, vu depuis la rivière Dodder" class="w-full rounded-xl border border-gray-700 aspect-video object-cover" loading="lazy" />
+            <figcaption class="text-gray-600 text-[11px] mt-1.5">
+                Photo : tarafuku10 — domaine public
+            </figcaption>
+        </figure>
         <p class="text-gray-500 text-sm mb-3">Capacité indicative : 51 711 places (désigné « Dublin Arena » par l'UEFA)</p>
         <p class="text-gray-300 leading-relaxed mb-3">
             Situé sur Lansdowne Road, ce stade moderne accueille aussi bien l'équipe nationale irlandaise de football que la sélection de rugby. Il a déjà reçu plusieurs événements internationaux majeurs, dont des finales européennes de clubs.

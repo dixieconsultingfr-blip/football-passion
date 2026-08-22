@@ -129,6 +129,9 @@ include __DIR__ . '/templates/header.php';
             </div>
             <?php endforeach; ?>
         </div>
+        <a href="/euro-2028-les-8-villes-hotes.php" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
+            Découvrir les 8 villes hôtes en détail →
+        </a>
     </section>
 
     <!-- Format -->
@@ -178,6 +181,9 @@ include __DIR__ . '/templates/header.php';
         </div>
         <?php endforeach; ?>
     </div>
+    <a href="/euro-2028-les-9-stades.php" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-4">
+        Voir le détail de chaque stade et les matchs accueillis →
+    </a>
 </section>
 
 <!-- La France de Zidane -->

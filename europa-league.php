@@ -13,7 +13,8 @@ $derniersResultats = $derniereDate !== null
     : [];
 
 // ── Prochains matchs, groupés par date ──
-$aVenir = array_values(array_filter($matchsEL, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
+$enDirect = array_values(array_filter($matchsEL, fn($m) => ($m['status'] ?? '') === 'LIVE'));
+$aVenir = array_values(array_filter($matchsEL, fn($m) => !in_array($m['status'] ?? 'SCHEDULED', ['FINISHED', 'LIVE'], true)));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
 $aVenir = array_slice($aVenir, 0, 20);
 $parDate = [];
@@ -66,6 +67,36 @@ include __DIR__ . '/templates/header.php';
 
     <!-- Colonne principale : résultats + prochains matchs -->
     <div class="lg:col-span-2 space-y-6">
+
+        <?php if (!empty($enDirect)): ?>
+        <!-- En direct -->
+        <section class="bg-gray-900/40 border border-red-800/50 rounded-2xl p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                </span>
+                <h2 class="text-xl font-bold text-white">En direct</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <?php foreach ($enDirect as $m): ?>
+                <div class="bg-gray-800 border border-red-800/40 rounded-lg p-3 flex items-center justify-between gap-3">
+                    <div class="flex-1 min-w-0 space-y-1.5">
+                        <div class="flex justify-between items-center gap-2 text-sm">
+                            <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                            <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
+                        </div>
+                        <div class="flex justify-between items-center gap-2 text-sm">
+                            <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                            <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
+                        </div>
+                    </div>
+                    <div class="text-right text-[11px] text-red-400 font-bold shrink-0 uppercase tracking-wide">En direct</div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        <?php endif; ?>
 
         <!-- Derniers résultats -->
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">

@@ -25,7 +25,9 @@ $matchsFiltres = $filtre
     ? array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === $filtre))
     : $matchsAll;
 
-$aVenir = array_values(array_filter($matchsFiltres, fn($m) => ($m['status'] ?? 'SCHEDULED') !== 'FINISHED'));
+$enDirect = array_values(array_filter($matchsFiltres, fn($m) => ($m['status'] ?? '') === 'LIVE'));
+
+$aVenir = array_values(array_filter($matchsFiltres, fn($m) => !in_array($m['status'] ?? 'SCHEDULED', ['FINISHED', 'LIVE'], true)));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
 
 $termines = array_values(array_filter($matchsFiltres, fn($m) => ($m['status'] ?? '') === 'FINISHED'));
@@ -71,6 +73,48 @@ include __DIR__ . '/templates/header.php';
     </a>
     <?php endforeach; ?>
 </div>
+
+<?php if (!empty($enDirect)): ?>
+<!-- En direct -->
+<section class="mb-8">
+    <div class="flex items-center gap-2 mb-5">
+        <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+        </span>
+        <h2 class="text-2xl font-bold text-white">En direct</h2>
+    </div>
+    <div class="space-y-3">
+        <?php foreach ($enDirect as $m): ?>
+        <div class="bg-gray-800 border border-red-800/40 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <div class="text-red-400 text-xs font-bold uppercase tracking-wide sm:w-32 shrink-0">En direct</div>
+            <div class="flex-1 flex flex-col items-center justify-center gap-1">
+                <?php if (!empty($m['tour'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide"><?= htmlspecialchars($m['tour']) ?></span>
+                <?php elseif (!empty($m['journee'])): ?>
+                <span class="text-gray-500 text-[11px] uppercase tracking-wide">Journée <?= (int)$m['journee'] ?></span>
+                <?php endif; ?>
+                <div class="flex items-center justify-center gap-3 w-full">
+                    <span class="text-white font-semibold text-sm text-right flex-1"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                    <span class="text-green-400 font-bold text-sm px-2"><?= $m['score_dom'] ?? '-' ?> – <?= $m['score_ext'] ?? '-' ?></span>
+                    <span class="text-white font-semibold text-sm flex-1"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                </div>
+            </div>
+            <div class="flex items-center gap-1.5 justify-start sm:justify-end sm:w-28 shrink-0">
+                <?php if (!empty($logosCompetitions[$m['competition'] ?? ''])): ?>
+                <span class="inline-flex items-center justify-center w-4 h-4 bg-white rounded-full p-0.5 shrink-0">
+                    <img src="<?= htmlspecialchars($logosCompetitions[$m['competition']]) ?>" alt="" class="w-full h-full object-contain" loading="lazy" />
+                </span>
+                <?php endif; ?>
+                <span class="text-gray-500 text-xs font-semibold uppercase">
+                    <?= htmlspecialchars($competitions[$m['competition'] ?? ''] ?? ($m['competition'] ?? '')) ?>
+                </span>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+<?php endif; ?>
 
 <!-- Prochains matchs -->
 <section class="mb-12">

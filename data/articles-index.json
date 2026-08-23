@@ -1,5 +1,19 @@
 [
     {
+        "id":  15,
+        "slug":  "euro-2028-zidane-prepare-sa-liste",
+        "titre":  "En route pour l'Euro 2028 : Zidane prépare sa liste et son équipe",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "France",
+                           "Zidane"
+                       ],
+        "date":  "2026-08-23",
+        "extrait":  "Les Bleus entrent dans une nouvelle ère. Officiellement nommé sélectionneur le 28 juillet 2026, Zinédine Zidane dispose de quatre ans pour construire une sélection compétitive, avec l'Euro 2028 comme premier grand objectif.",
+        "vignette":  "/images/euro-2028-zidane-prepare-sa-liste.jpg",
+        "image_alt":  "Zinedine Zidane, nouveau selectionneur de l'equipe de France, prepare sa liste pour l'Euro 2028"
+    },
+    {
         "id":  14,
         "slug":  "lens-auxerre-5-2-journee-1-2026-2027",
         "titre":  "Lens survole Auxerre 5-2 pour son entrée en Ligue 1 et grimpe sur le podium",

@@ -10,6 +10,7 @@ $logosCompetitions = [
     'L2'     => '/images/logo/logo-ligue-2.png',
     'CL'     => '/images/logo/logo-champions-league.webp',
     'Europa' => '/images/logo/logo-europa-league.webp',
+    'France' => '/images/logo/logo-equipe-france.svg',
 ];
 
 $hubs = [

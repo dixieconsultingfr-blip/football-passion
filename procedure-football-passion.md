@@ -461,7 +461,18 @@ Suite à la demande de vérification du référencement des pages `euro-2028-les
 - **Open Graph absent** : tout partage d'un lien football-passion.fr sur Facebook/Twitter (ex. les posts FB de match) affiche un aperçu générique sans image/titre/description personnalisés — impact direct sur le CTR social, alors que le site produit justement des posts FB régulièrement.
 - **BreadcrumbList absent** : prive Google d'un signal structuré supplémentaire pour l'affichage du fil d'Ariane dans les résultats de recherche (le breadcrumb visuel existe déjà sur les pages, juste pas en JSON-LD).
 
-**Non corrigé à ce stade** — modification `templates/header.php` = site-wide, à valider avant application. Noté aussi dans la stratégie long terme (mémoire `project_cdm_strategie`).
+### 3.51 Correctif SEO site-wide : canonical, Open Graph, Twitter Card — 23 août 2026
+
+Suite au constat de la section 3.50, correction appliquée dans `templates/header.php` (donc sur toutes les pages du site) :
+- `<link rel="canonical">` calculé automatiquement depuis `$_SERVER['REQUEST_URI']` (sans query string), overridable via une variable optionnelle `$canonical_url` si une page en a besoin.
+- Balises Open Graph complètes (`og:type`, `og:site_name`, `og:locale`, `og:url`, `og:title`, `og:description`, `og:image`) avec fallback sur `logo-fp-icon-512.png` si la page ne fournit pas `$og_image`.
+- Twitter Card (`summary_large_image`) alignée sur les mêmes valeurs.
+- `blog/index.php` (vue article individuel) câble automatiquement `$og_image` sur la vignette de l'article (déjà au format 1200x630/16:9) et `$og_type = 'article'`.
+- `euro-2028.php`, `euro-2028-les-9-stades.php`, `euro-2028-les-8-villes-hotes.php` reçoivent chacune une `$og_image` dédiée (photo Wembley / carte des stades).
+
+**BreadcrumbList non traité** : contrairement au canonical/OG (génériques via header.php), un schema `BreadcrumbList` correct nécessite de connaître la hiérarchie de chaque page individuellement — pas automatisable depuis le header commun. Reste un chantier séparé, page par page, si jugé prioritaire.
+
+D'autres pages du site (ligue-1.php, calendrier.php, etc.) utilisent encore l'image de fallback générique — leur donner une `$og_image` dédiée est une amélioration incrémentale possible plus tard, pas un blocage.
 
 ---
 

@@ -91,9 +91,9 @@
         "date": "2026-08-23",
         "heure": "17:15",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559713,

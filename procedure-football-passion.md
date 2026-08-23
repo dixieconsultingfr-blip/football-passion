@@ -478,6 +478,16 @@ D'autres pages du site (ligue-1.php, calendrier.php, etc.) utilisent encore l'im
 
 Vérification dans GSC (Sitemaps envoyés) : `https://football-passion.fr/sitemap.xml` (soumis le 21 août 2026) affiche le statut **« Opération effectuée »**, dernière lecture le 23 août 2026, **42 pages découvertes**, 0 vidéo. Confirme que le sitemap est bien lu et exploité par Google — aucune action requise, simple point de suivi.
 
+### 3.53 Correctif convertisseur gras Unicode pour posts Facebook (accents) — 23 août 2026
+
+Les posts FB générés pour ce site (texte prêt à coller, jamais publié directement) utilisent un script PowerShell qui convertit `**texte**`/`# titre` en gras Unicode réel (police "Mathematical Bold", ex. 𝐀𝐁𝐂), car Facebook n'interprète pas le Markdown.
+
+**Bug découvert** : la plage Unicode "Mathematical Bold" ne couvre que A-Z/a-z/0-9 ASCII — un caractère accentué (`É`, `à`, `ê`...) présent dans un segment en gras (ex. "BOUDÉ") n'était pas converti et restait affiché en police normale, cassant visuellement l'uniformité du gras au milieu du mot.
+
+**Correction** : le script mappe désormais chaque lettre accentuée courante du français vers sa lettre de base en gras Unicode + un caractère combinant Unicode pour l'accent (ex. `É` → lettre `E` en gras U+1D404 + accent aigu combinant U+0301), ce qui restitue visuellement l'accent par-dessus la lettre en gras. Couvre à/â/ä, ç, è/é/ê/ë, î/ï, ô/ö, ù/û/ü (majuscules et minuscules).
+
+**Autre ajustement de style** : sur demande explicite, le titre d'accroche d'un post FB ne doit **pas** être entièrement en majuscules/gras — seul le nom des clubs/équipes (ex. "PSG - RENNES") reste en gras capitales, le reste de la phrase d'accroche est en gras minuscules normal (casse de phrase). Convention à réutiliser pour les prochains posts.
+
 ---
 
 *Dernière mise à jour : 5 août 2026*

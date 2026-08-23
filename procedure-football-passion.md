@@ -474,6 +474,10 @@ Suite au constat de la section 3.50, correction appliquée dans `templates/heade
 
 D'autres pages du site (ligue-1.php, calendrier.php, etc.) utilisent encore l'image de fallback générique — leur donner une `$og_image` dédiée est une amélioration incrémentale possible plus tard, pas un blocage.
 
+### 3.52 Sitemap confirmé opérationnel dans Google Search Console — 23 août 2026
+
+Vérification dans GSC (Sitemaps envoyés) : `https://football-passion.fr/sitemap.xml` (soumis le 21 août 2026) affiche le statut **« Opération effectuée »**, dernière lecture le 23 août 2026, **42 pages découvertes**, 0 vidéo. Confirme que le sitemap est bien lu et exploité par Google — aucune action requise, simple point de suivi.
+
 ---
 
 *Dernière mise à jour : 5 août 2026*

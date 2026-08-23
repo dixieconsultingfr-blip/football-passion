@@ -488,6 +488,14 @@ Les posts FB générés pour ce site (texte prêt à coller, jamais publié dire
 
 **Autre ajustement de style** : sur demande explicite, le titre d'accroche d'un post FB ne doit **pas** être entièrement en majuscules/gras — seul le nom des clubs/équipes (ex. "PSG - RENNES") reste en gras capitales, le reste de la phrase d'accroche est en gras minuscules normal (casse de phrase). Convention à réutiliser pour les prochains posts.
 
+### 3.54 Playlists Facebook (Meta Business Suite) — 23 août 2026
+
+Création des premières playlists sur la page Facebook Football Passion, pour regrouper les reels par thème (recommandation faite par Meta lui-même, structure proposée : Ligue 1, Ligue 2, Champions/Europa League, Équipe de France, Route vers l'Euro 2028, Prochains matchs de la semaine).
+
+**Astuce d'usage découverte** : dans Meta Business Suite (Contenu → Publications et reels), pour associer un reel déjà publié à une playlist existante après coup, l'option n'est pas dans le menu "..." de la ligne du reel — il faut cliquer sur le **lien hypertexte affiché sous la vignette/image** du reel dans la liste. C'est ce lien qui ouvre l'option de rattachement à une playlist.
+
+Couvertures des playlists : logos de compétition déjà disponibles dans `images/logo/` (`logo-ligue-1.webp`, `logo-ligue-2.png`, `logo-champions-league.webp`, `logo-europa-league.webp`) — pas de logo FFF ni Euro 2028 en local à ce jour, à créer si besoin.
+
 ---
 
 *Dernière mise à jour : 5 août 2026*

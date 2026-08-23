@@ -6,6 +6,7 @@ usort($articlesEuro, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date'
 
 $page_title = 'Euro 2028 — Dates, pays hôtes, stades et qualifications';
 $meta_desc  = "Tout savoir sur l'Euro 2028 au Royaume-Uni et en Irlande : dates, stades, format, qualifications et objectifs des Bleus de Zidane.";
+$og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
 include __DIR__ . '/templates/header.php';
 ?>
 

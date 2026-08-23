@@ -25,6 +25,8 @@ if ($slug !== '') {
 
     $page_title = htmlspecialchars($article['meta_title'] ?? $article['titre']) . ' — Football Passion';
     $meta_desc  = $article['meta_desc'] ?? $article['extrait'];
+    $og_image   = $article['image'] ?? $article['vignette'] ?? null;
+    $og_type    = 'article';
     include BASE_PATH . '/templates/header.php';
 ?>
 <!-- Breadcrumb -->

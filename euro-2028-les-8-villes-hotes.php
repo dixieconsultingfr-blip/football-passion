@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Euro 2028 : les 8 villes hôtes du Royaume-Uni et d\'Irlande';
 $meta_desc  = "Londres, Cardiff, Manchester, Liverpool, Newcastle, Birmingham, Glasgow, Dublin : découvrez les 8 villes hôtes de l'Euro 2028 et les 4 nations qui accueillent le tournoi.";
+$og_image   = '/images/stades/carte-stades-euro-2028.jpg';
 include __DIR__ . '/templates/header.php';
 ?>
 

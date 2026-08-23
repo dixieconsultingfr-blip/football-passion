@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Euro 2028 : les 9 stades — capacités et matchs par enceinte';
 $meta_desc  = "Découvrez les 9 stades de l'Euro 2028 : Wembley, Principality Stadium, Tottenham Hotspur Stadium, Etihad Stadium et les autres. Capacités et répartition des matchs.";
+$og_image   = '/images/stades/carte-stades-euro-2028.jpg';
 include __DIR__ . '/templates/header.php';
 ?>
 

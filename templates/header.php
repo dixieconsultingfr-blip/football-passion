@@ -6,6 +6,33 @@
     <meta name="description" content="<?php echo htmlspecialchars($meta_desc ?? 'Hub evergreen football — L1, L2, CL, Europa, Euro, CDM, CAN'); ?>" />
     <title><?php echo htmlspecialchars($page_title ?? 'Football Passion'); ?></title>
 
+    <?php
+    $og_url_final   = $canonical_url ?? ('https://football-passion.fr' . strtok($_SERVER['REQUEST_URI'] ?? '/', '?'));
+    $og_title_final = $page_title ?? 'Football Passion';
+    $og_desc_final  = $meta_desc  ?? 'Hub evergreen football — L1, L2, CL, Europa, Euro, CDM, CAN';
+    $og_image_final = $og_image   ?? 'https://football-passion.fr/images/charte-graphique/logo-fp-icon-512.png';
+    if ($og_image_final !== '' && $og_image_final[0] === '/') {
+        $og_image_final = 'https://football-passion.fr' . $og_image_final;
+    }
+    $og_type_final = $og_type ?? 'website';
+    ?>
+    <link rel="canonical" href="<?php echo htmlspecialchars($og_url_final); ?>" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="<?php echo htmlspecialchars($og_type_final); ?>" />
+    <meta property="og:site_name" content="Football Passion" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="<?php echo htmlspecialchars($og_url_final); ?>" />
+    <meta property="og:title" content="<?php echo htmlspecialchars($og_title_final); ?>" />
+    <meta property="og:description" content="<?php echo htmlspecialchars($og_desc_final); ?>" />
+    <meta property="og:image" content="<?php echo htmlspecialchars($og_image_final); ?>" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($og_title_final); ?>" />
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($og_desc_final); ?>" />
+    <meta name="twitter:image" content="<?php echo htmlspecialchars($og_image_final); ?>" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 

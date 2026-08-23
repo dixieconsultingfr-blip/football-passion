@@ -443,4 +443,26 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ---
 
+### 3.50 Audit SEO des sous-pages Euro 2028 (stades + villes hôtes) — 23 août 2026
+
+Suite à la demande de vérification du référencement des pages `euro-2028-les-9-stades.php` et `euro-2028-les-8-villes-hotes.php` :
+
+**Ce qui est correct sur les deux pages** :
+- `page_title`/`meta_desc` uniques et distincts de `euro-2028.php` (pas de duplicate title/desc).
+- Un seul `<h1>` par page, distinct.
+- Schema `FAQPage` présent sur les deux.
+- Les deux pages sont référencées dans `sitemap.php`.
+- Maillage interne bidirectionnel complet : `euro-2028.php` ↔ chaque sous-page ↔ l'autre sous-page (breadcrumb + boutons "Retour" + liens contextuels).
+
+**Lacune découverte — site-wide, pas spécifique à ces deux pages** : `templates/header.php` ne génère **aucune balise `<link rel="canonical">`, aucune balise Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`), aucune Twitter Card, et aucun schema `BreadcrumbList`** — sur aucune page du site (vérifié par grep sur l'ensemble du repo, 0 occurrence).
+
+**Pourquoi c'est important** :
+- **Canonical absent** : risque de contenu dupliqué non arbitré par Google, notamment si `euro-2028-les-9-stades.php`/`euro-2028-les-8-villes-hotes.php` chevauchent en partie le contenu de `euro-2028.php` (stades, villes) — pas critique à ce stade (peu de pages, contenu suffisamment différencié), mais deviendra un vrai risque quand le site grossira.
+- **Open Graph absent** : tout partage d'un lien football-passion.fr sur Facebook/Twitter (ex. les posts FB de match) affiche un aperçu générique sans image/titre/description personnalisés — impact direct sur le CTR social, alors que le site produit justement des posts FB régulièrement.
+- **BreadcrumbList absent** : prive Google d'un signal structuré supplémentaire pour l'affichage du fil d'Ariane dans les résultats de recherche (le breadcrumb visuel existe déjà sur les pages, juste pas en JSON-LD).
+
+**Non corrigé à ce stade** — modification `templates/header.php` = site-wide, à valider avant application. Noté aussi dans la stratégie long terme (mémoire `project_cdm_strategie`).
+
+---
+
 *Dernière mise à jour : 5 août 2026*

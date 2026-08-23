@@ -1,5 +1,19 @@
 [
     {
+        "id":  16,
+        "slug":  "psg-rennes-quand-ou-chaine-2026",
+        "titre":  "PSG - Rennes inversé : quand, où, sur quelle chaîne voir le match ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "PSG",
+                           "Stade Rennais"
+                       ],
+        "date":  "2026-08-23",
+        "extrait":  "Le match PSG - Rennes a changé de lieu suite à la décision de la LFP, mais reste bien programmé ce dimanche. Voici la date, l'heure, le stade et la chaîne pour ne rien manquer de la rencontre.",
+        "vignette":  "/images/psg-rennes-quand-ou-chaine-2026.jpg",
+        "image_alt":  "PSG contre Rennes, infos pratiques du match inverse au Roazhon Park"
+    },
+    {
         "id":  15,
         "slug":  "euro-2028-zidane-prepare-sa-liste",
         "titre":  "En route pour l'Euro 2028 : Zidane prépare sa liste et son équipe",

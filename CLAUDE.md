@@ -16,6 +16,8 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Charte graphique** (site + réseaux sociaux) : voir `charte-graphique.md` à la racine du projet.
 **Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`) ping le webhook Hostinger (secret `HOSTINGER_WEBHOOK_URL`) → Hostinger pull automatiquement via son intégration Git native (hPanel → Avancé → Git). Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
+**Sites satellites** : `coupe-du-monde-2026.info` (projet séparé, repo `coupe-du-monde-2026`) est un **site satellite** de football-passion.fr, conservé comme archive SEO jusqu'à fin 2027 (expiration prévue ensuite). Depuis le pivot stratégique de juillet 2026, football-passion.fr est le hub evergreen central — les futurs tournois (Euro 2028, CDM 2030/2034) vivent en pages internes ici plutôt qu'en nouveaux domaines dédiés.
+
 ## 🚨 Règle critique — Journal de procédure
 
 **Après chaque action sur ce projet** (nouvelle page, fonctionnalité, config, service tiers, correction), mettre à jour `procedure-football-passion.md` (à la racine, hors `public_html/`) en ajoutant une entrée décrivant l'action, dans l'ordre chronologique.

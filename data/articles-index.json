@@ -1,5 +1,19 @@
 [
     {
+        "id":  19,
+        "slug":  "bordeaux-tribunal-administratif-relegation-2026",
+        "titre":  "Bordeaux débouté par le tribunal administratif : la relégation confirmée",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "Bordeaux",
+                           "DNCG"
+                       ],
+        "date":  "2026-08-24",
+        "extrait":  "Le tribunal administratif de Paris a confirmé la décision de la DNCG excluant les Girondins de Bordeaux de tous les championnats nationaux. Le club, racheté fin juillet par le fonds Sparta Capital, étudie désormais les voies de recours restantes.",
+        "vignette":  "/images/bordeaux-tribunal-administratif-relegation-2026.jpg",
+        "image_alt":  "Girondins de Bordeaux debouts par le tribunal administratif de Paris, aout 2026"
+    },
+    {
         "id":  18,
         "slug":  "rennes-psg-2-2-le-havre-monaco-0-1-journee-1-2026-2027",
         "titre":  "Ligue 1 - Journée 1 : le PSG accroché à Rennes, Monaco arrache la victoire au Havre",

@@ -168,11 +168,18 @@ include __DIR__ . '/templates/header.php';
             <!-- TODO : remplacer href="#" par le lien d'affiliation dès qu'il sera disponible, et ajouter rel="sponsored noopener noreferrer" -->
         </div>
 
-        <!-- Emplacement publicitaire AdSense 300x250 (rectangle) — reserve pour un 2e bloc AdSense dedie, pas encore cree au 24 aout 2026 -->
+        <!-- Emplacement publicitaire AdSense (rectangle) -->
         <div class="flex justify-center">
-            <div class="flex items-center justify-center w-[300px] max-w-full h-[250px] bg-gray-900 border border-dashed border-gray-700 rounded text-gray-600 text-xs">
-                Emplacement publicitaire 300×250 (Google AdSense)
-            </div>
+            <!-- FP-DROITS-TV -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1397315006076063"
+                 data-ad-slot="6597827779"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </section>
 

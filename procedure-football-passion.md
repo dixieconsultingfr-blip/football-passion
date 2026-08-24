@@ -496,6 +496,16 @@ Création des premières playlists sur la page Facebook Football Passion, pour r
 
 Couvertures des playlists : logos de compétition déjà disponibles dans `images/logo/` (`logo-ligue-1.webp`, `logo-ligue-2.png`, `logo-champions-league.webp`, `logo-europa-league.webp`) — pas de logo FFF ni Euro 2028 en local à ce jour, à créer si besoin.
 
+### 3.55 Exception éditoriale assumée : soutien à Bordeaux dans son dossier DNCG — 24 août 2026
+
+Article publié sur la relégation administrative des Girondins de Bordeaux (`bordeaux-tribunal-administratif-relegation-2026`), suite à la décision du tribunal administratif de Paris confirmant leur exclusion de tous les championnats nationaux.
+
+**Position éditoriale explicite, demandée par l'utilisateur** : contrairement à la ligne éditoriale générale du site (neutralité entre clubs, "que le meilleur gagne" — voir mémoire `project_cdm_strategie`), Football Passion prend position en faveur de Bordeaux sur ce dossier précis. Justification assumée dans l'article : le palmarès historique du club (6 titres de champion de France, 4 Coupes de France, 3 Coupes de la Ligue, une finale de Coupe UEFA 1996 — faits vérifiés) et l'injustice perçue d'une exclusion actée sur un point de calendrier procédural plutôt que sur le fond du dossier financier.
+
+**Catégorie** : classé en `France` (et non `L2`), le club étant désormais exclu de tous les championnats nationaux, donc plus rattachable à une compétition suivie par le site.
+
+**Portée de l'exception** : ceci ne change pas la ligne éditoriale générale du site (toujours neutre entre clubs pour le contenu sportif courant) — c'est une prise de position spécifique au dossier existentiel de Bordeaux, à reconduire uniquement pour les prochains articles sur ce sujet précis, pas à généraliser à d'autres clubs sans nouvelle demande explicite.
+
 ---
 
 *Dernière mise à jour : 5 août 2026*

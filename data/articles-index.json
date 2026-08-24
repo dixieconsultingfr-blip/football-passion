@@ -1,5 +1,19 @@
 [
     {
+        "id":  20,
+        "slug":  "ferran-torres-chouchou-parc-des-princes",
+        "titre":  "Ferran Torres, déjà le nouveau chouchou du Parc des Princes ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "PSG",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-24",
+        "extrait":  "Quelques semaines après avoir offert la Coupe du Monde 2026 à l'Espagne, Ferran Torres a déjà conquis le Parc des Princes. Entré à la mi-temps face à Rennes, l'attaquant espagnol a inscrit un doublé en 11 minutes pour arracher le match nul.",
+        "vignette":  "/images/ferran-torres-chouchou-parc-des-princes.jpg",
+        "image_alt":  "Ferran Torres, nouveau chouchou du Parc des Princes avec le PSG"
+    },
+    {
         "id":  19,
         "slug":  "bordeaux-tribunal-administratif-relegation-2026",
         "titre":  "Bordeaux débouté par le tribunal administratif : la relégation confirmée",

@@ -98,8 +98,8 @@
     {
         "id": 559713,
         "competition": "L1",
-        "domicile": "Stade Rennais FC 1901",
-        "exterieur": "Paris Saint-Germain FC",
+        "domicile": "Paris Saint-Germain FC",
+        "exterieur": "Stade Rennais FC 1901",
         "date": "2026-08-23",
         "heure": "20:45",
         "stade": "",
@@ -2390,8 +2390,8 @@
     {
         "id": 559514,
         "competition": "L1",
-        "domicile": "Paris Saint-Germain FC",
-        "exterieur": "Stade Rennais FC 1901",
+        "domicile": "Stade Rennais FC 1901",
+        "exterieur": "Paris Saint-Germain FC",
         "date": "2027-03-06",
         "heure": "01:00",
         "stade": "",

@@ -1,5 +1,19 @@
 [
     {
+        "id":  21,
+        "slug":  "essentiel-jour-dembele-repos-ligue-1-2026-2027",
+        "titre":  "Dembélé mis au repos, Ligue 1 déjà au sommet : l'essentiel du jour",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "PSG",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-25",
+        "extrait":  "Ce mardi 25 août, le PSG a annoncé qu'Ousmane Dembélé, Ballon d'Or 2025, est mis au repos jusqu'à lundi et sera forfait à Lille. Explications et tour d'horizon d'une Ligue 1 qui démarre fort.",
+        "vignette":  "/images/essentiel-jour-dembele-repos-ligue-1-2026-2027.jpg",
+        "image_alt":  "Dembele mis au repos par le PSG, actualite Ligue 1 du 25 aout 2026"
+    },
+    {
         "id":  20,
         "slug":  "ferran-torres-chouchou-parc-des-princes",
         "titre":  "Ferran Torres, déjà le nouveau chouchou du Parc des Princes ?",

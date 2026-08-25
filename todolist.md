@@ -7,6 +7,7 @@ Suivi des actions en attente. Le détail/historique complet de chaque action res
 ## ⏳ En attente (délai externe, rien à faire pour l'instant)
 
 - [ ] **Facebook — renommage du nom principal de la Page** : verrouillé 60 jours suite à un précédent changement. Déblocage prévu **~18 octobre 2026**. Une fois débloqué : finaliser le nom principal "Football Passion" (actuellement affiché via le username `footballpassionfr` + AKA).
+- [ ] **Google AdSense — annonces pas encore visibles** : code correctement en place sur `droits-tv-football.php` (vérifié en live le 24 août 2026), mais aucune annonce ne s'affiche encore. Normal dans les 24-48h suivant l'approbation du site — Google met du temps à commencer à diffuser. **À revérifier le 26-27 août 2026** (avoir désactivé tout bloqueur de pub pour le test).
 
 ## 🔲 À faire, pas de blocage externe
 

@@ -269,6 +269,14 @@ L'utilisateur colle des captures d'écran ou du texte copié depuis un site de s
 6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
 7. `git add data/matchs.json && git commit && git push origin deploy`.
 
+**🚨 Piège PowerShell découvert le 26 août 2026 — wrapper `{"value": [...]}` inattendu** : appeler `ConvertTo-Json` **directement sur le résultat brut de `ConvertFrom-Json`** (même après avoir muté des objets dedans via `Where-Object`) peut produire un objet enveloppé `{"value": [...], "Count": N}` au lieu d'un tableau JSON simple — a transformé `matchs.json` en fichier quasi vide lors d'un test raté avec `-AsArray` (paramètre inexistant en Windows PowerShell 5.1). **Toujours reconstruire un tableau propre avant `ConvertTo-Json`** :
+```powershell
+$matchList = [System.Collections.Generic.List[object]]::new()
+foreach ($m in $matchArray) { $matchList.Add($m) }   # $matchArray = $data.value si wrapper deja present, sinon $data
+$json = ConvertTo-Json $matchList -Depth 10
+```
+Ne jamais faire `ConvertTo-Json $data -Depth 10` directement. **Toujours vérifier le résultat avant de committer** : `head -c 50 data/matchs.json` doit afficher `[` puis un premier objet, jamais `{"value":`. Si le fichier fait moins de quelques centaines de lignes après une modification censée être mineure, c'est le signe d'une perte de données — restaurer immédiatement avec `git checkout -- data/matchs.json` avant de retenter.
+
 ---
 
 ## 🌍 Catégories & Structure

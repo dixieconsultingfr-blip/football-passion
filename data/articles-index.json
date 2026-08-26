@@ -1,5 +1,19 @@
 [
     {
+        "id":  23,
+        "slug":  "partager-abonnement-ligue-1-plus",
+        "titre":  "Est-il possible de partager son abonnement Ligue 1+ ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1+",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-26",
+        "extrait":  "Ligue 1+ autorise officiellement jusqu'à 2 connexions simultanées sur la plupart de ses formules. Voici quelles offres permettent réellement de partager son abonnement, et comment diviser la facture avec un proche.",
+        "vignette":  "/images/partager-abonnement-ligue-1-plus.jpg",
+        "image_alt":  "Est-il possible de partager son abonnement Ligue 1+ a plusieurs"
+    },
+    {
         "id":  22,
         "slug":  "tirage-ligue-des-champions-2026-2027",
         "titre":  "Ligue des Champions 2026-2027 : le tirage approche, la France en embuscade",

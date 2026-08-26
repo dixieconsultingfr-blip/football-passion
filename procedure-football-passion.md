@@ -506,6 +506,19 @@ Article publié sur la relégation administrative des Girondins de Bordeaux (`bo
 
 **Portée de l'exception** : ceci ne change pas la ligne éditoriale générale du site (toujours neutre entre clubs pour le contenu sportif courant) — c'est une prise de position spécifique au dossier existentiel de Bordeaux, à reconduire uniquement pour les prochains articles sur ce sujet précis, pas à généraliser à d'autres clubs sans nouvelle demande explicite.
 
+### 3.56 Recherche E-E-A-T et corrections — 26 août 2026
+
+Recherche approfondie sur les critères Google E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), en particulier la mise à jour de mars 2026 qui renforce le poids du signal "Experience" (contenu avec point de vue vérifiable > compilation impersonnelle).
+
+**Corrections techniques appliquées** :
+- Byline auteur sur les articles de blog : le nom "Jérôme Henry" était affiché en texte brut, sans lien — désormais un lien vers `/a-propos.php` (page déjà bien pourvue en schema.org `Person`).
+- Ajout du schema `NewsArticle` (headline, description, image, auteur, éditeur, dates) sur `blog/index.php`, absent jusque-là — lacune technique importante pour l'association contenu ↔ auteur identifiable aux yeux de Google. Sécurisé avec `JSON_HEX_TAG` pour éviter tout risque d'injection si un titre contenait `</script>`.
+- Support du champ optionnel `date_maj` (voir `CLAUDE.md`) : affiché sur la page article (« mis à jour le... ») quand présent, et utilisé comme `dateModified` du schema (sinon la date de publication sert de repli). À ajouter uniquement lors d'une vraie correction a posteriori (ex. score corrigé), jamais systématiquement à la création.
+
+**Convention éditoriale durable ajoutée dans `CLAUDE.md`** : chaque article de fond doit inclure un avis personnel assumé (formules variées : "à notre sens", "mon avis"...), dans le respect de la ligne éditoriale du site (fair play, beau jeu, jugement assumé sur les choix tactiques des entraîneurs, soutien aux clubs français en coupes d'Europe, neutralité stricte entre clubs français). Documenté en détail dans `CLAUDE.md` section "Avis éditorial assumé".
+
+**Mentions légales et politique de confidentialité déjà mises à jour la veille** (SIRET/RCS/TVA Dixie Consulting SASU, divulgation Google AdSense) — voir sections précédentes de ce journal, non répétées ici.
+
 ---
 
 *Dernière mise à jour : 5 août 2026*

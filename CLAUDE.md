@@ -104,10 +104,25 @@ football-passion/                  ← racine du dépôt = racine du site
 
 - ✅ Varier la longueur des paragraphes
 - ✅ Éviter les listes à puces systématiques
-- ✅ Introduire des avis éditoriaux ("À notre sens...")
 - ✅ Citer des données précises (stats, dates réelles)
 - ✅ Varier les introductions — ne pas répéter le même pattern
 - ✅ **Ajouter un tableau HTML quand l'article contient des données comparables** (prix, formules, statistiques, calendrier...) — Google valorise les tableaux structurés (rich snippets, meilleure compréhension du contenu). Voir le format utilisé dans `data/articles/ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027.json` comme référence de style (fond sombre, bordure verte `#16a34a`, `overflow-x:auto` pour le responsive).
+
+### ✍️ Avis éditorial assumé — signal E-E-A-T (Experience)
+
+**Chaque article de fond doit inclure un vrai avis personnel assumé**, pas juste un résumé neutre des faits — c'est le signal "Experience" que Google valorise depuis la mise à jour de mars 2026 (contenu avec un point de vue vérifiable, pas juste une compilation impersonnelle).
+
+**Formulations à utiliser** : "À notre sens...", "Mon avis...", "Ce qui nous marque...", "On pense que...", "Franchement..." — varier les formules, ne pas toujours utiliser la même.
+
+**L'avis doit rester dans la ligne éditoriale du site** (voir mémoire `project_cdm_strategie` : passion + fair play + neutralité entre clubs, "que le meilleur gagne, prône le beau jeu") :
+- ✅ Apprécier le beau jeu, l'audace tactique, la prise de risque — indépendamment du club
+- ✅ Commenter les choix tactiques des entraîneurs (formation, changements, gestion de groupe) avec un vrai point de vue, pas juste les décrire
+- ✅ Saluer le fair play, la sportivité, les belles histoires humaines
+- ✅ Soutenir les clubs français en compétitions européennes (CL, Europa, Conférence) — un angle patriotique assumé, sans tomber dans le partisan entre clubs français entre eux
+- ❌ Ne jamais prendre parti pour un club français contre un autre club français (reste la neutralité de base)
+- ❌ Pas d'attaque personnelle contre un joueur/entraîneur/dirigeant — critique du jeu ou des choix, jamais de la personne
+
+**Exception documentée** : le dossier Bordeaux/DNCG (voir procédure section 3.55) sort de la neutralité habituelle par décision explicite de l'utilisateur — cas isolé, pas un précédent généralisable sans nouvelle demande.
 
 ---
 
@@ -156,9 +171,12 @@ football-passion/                  ← racine du dépôt = racine du site
   "slug": "slug-en-kebab-case",
   "extrait": "Résumé court (2-3 phrases)",
   "contenu": "<p>Contenu HTML...</p>",
-  "date": "2026-07-29"
+  "date": "2026-07-29",
+  "date_maj": "2026-07-31"
 }
 ```
+
+**Champ `date_maj` (optionnel)** — signal E-E-A-T (voir section dédiée plus bas). À ajouter uniquement quand le contenu publié est corrigé ou complété après coup (ex. score corrigé après une erreur de l'API, info mise à jour). Ne pas l'ajouter systématiquement à la création — seulement lors d'une vraie modification ultérieure. Affiché sur la page article (« mis à jour le... ») et utilisé comme `dateModified` dans le schema `NewsArticle`.
 
 **🚨 Procédure obligatoire pour ajouter un nouvel article** :
 1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).

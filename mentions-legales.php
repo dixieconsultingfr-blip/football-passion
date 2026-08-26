@@ -21,10 +21,15 @@ include __DIR__ . '/templates/header.php';
         <section class="bg-gray-800 rounded-xl border border-gray-700 p-6">
             <h2 class="text-xl font-bold text-white mb-4">Éditeur du site</h2>
             <ul class="space-y-2 text-sm">
-                <li><span class="text-gray-500">Nom :</span> Jérôme Henry</li>
-                <li><span class="text-gray-500">Entreprise :</span> Dixie Consulting</li>
+                <li><span class="text-gray-500">Directeur de la publication :</span> Jérôme Henry</li>
+                <li><span class="text-gray-500">Entreprise :</span> Dixie Consulting SASU</li>
+                <li><span class="text-gray-500">Forme juridique :</span> Société par Actions Simplifiée Unipersonnelle (SASU)</li>
+                <li><span class="text-gray-500">Capital social :</span> 1 200 €</li>
+                <li><span class="text-gray-500">SIRET :</span> 979 909 397</li>
+                <li><span class="text-gray-500">RCS :</span> Marseille</li>
+                <li><span class="text-gray-500">TVA intracommunautaire :</span> FR 31 979909397</li>
                 <li><span class="text-gray-500">Activité :</span> Consultant et formateur en intelligence artificielle</li>
-                <li><span class="text-gray-500">Localisation :</span> Aubagne, France</li>
+                <li><span class="text-gray-500">Siège social :</span> 5 parc des platanes, 13400 Aubagne, France</li>
                 <li><span class="text-gray-500">Contact :</span>
                     <a href="/contact.php" class="text-green-400 hover:text-green-300">Formulaire de contact</a>
                 </li>

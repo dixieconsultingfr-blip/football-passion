@@ -39,7 +39,7 @@ if ($slug !== '') {
       "description": <?= json_encode($article['extrait'], JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>,
       "image": [<?= json_encode($articleImageAbs) ?>],
       "datePublished": <?= json_encode($article['date'] . 'T08:00:00+02:00') ?>,
-      "dateModified": <?= json_encode($article['date'] . 'T08:00:00+02:00') ?>,
+      "dateModified": <?= json_encode(($article['date_maj'] ?? $article['date']) . 'T08:00:00+02:00') ?>,
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": <?= json_encode($articleUrlAbs) ?>
@@ -75,6 +75,9 @@ if ($slug !== '') {
                 <?= htmlspecialchars($article['categorie']) ?>
             </span>
             <time class="text-gray-500 text-sm"><?= date_fr_long($article['date']) ?></time>
+            <?php if (!empty($article['date_maj']) && $article['date_maj'] !== $article['date']): ?>
+            <span class="text-gray-600 text-sm">· mis à jour le <?= date_fr_long($article['date_maj']) ?></span>
+            <?php endif; ?>
             <span class="text-gray-600 text-sm">· <a href="/a-propos.php" class="hover:text-green-400 transition-colors"><?= htmlspecialchars($article['auteur']) ?></a></span>
         </div>
 

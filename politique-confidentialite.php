@@ -15,7 +15,7 @@ include __DIR__ . '/templates/header.php';
 
     <h1 class="text-4xl font-bold text-white mb-2">Politique de confidentialité</h1>
     <p class="text-gray-500 text-sm mb-10">
-        Dernière mise à jour : 1er août 2026 — Conforme au Règlement Général sur la Protection des Données (RGPD).
+        Dernière mise à jour : 24 août 2026 — Conforme au Règlement Général sur la Protection des Données (RGPD).
     </p>
 
     <div class="space-y-8 text-gray-300 leading-relaxed">
@@ -67,9 +67,14 @@ include __DIR__ . '/templates/header.php';
                             <td class="py-2 pr-4">Session PHP (technique, indispensable)</td>
                             <td class="py-2">Session</td>
                         </tr>
-                        <tr>
+                        <tr class="border-b border-gray-700">
                             <td class="py-2 pr-4 text-white font-mono text-xs">_ga, _gid</td>
                             <td class="py-2 pr-4">Statistiques de visite anonymisées (si Google Analytics activé)</td>
+                            <td class="py-2">13 mois max</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 pr-4 text-white font-mono text-xs">__gads, __gpi, IDE, test_cookie</td>
+                            <td class="py-2 pr-4">Publicité personnalisée et mesure de performance (Google AdSense)</td>
                             <td class="py-2">13 mois max</td>
                         </tr>
                     </tbody>
@@ -78,6 +83,25 @@ include __DIR__ . '/templates/header.php';
             <p class="text-sm mt-4 text-gray-400">
                 Vous pouvez refuser ou supprimer les cookies via les paramètres de votre navigateur à tout moment.
                 Le refus des cookies analytiques n'affecte pas votre accès au contenu.
+            </p>
+        </section>
+
+        <section class="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <h2 class="text-xl font-bold text-white mb-4">Publicité (Google AdSense)</h2>
+            <p class="text-sm mb-3">
+                Football Passion affiche des annonces publicitaires fournies par Google AdSense pour financer le fonctionnement du site.
+                Google et ses partenaires publicitaires peuvent utiliser des cookies pour diffuser des annonces basées sur vos visites
+                précédentes sur ce site ou d'autres sites internet.
+            </p>
+            <p class="text-sm mb-3">
+                Vous pouvez désactiver la publicité personnalisée en consultant les
+                <a href="https://adssettings.google.com" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300">paramètres des annonces Google</a>,
+                ou en visitant <a href="https://www.aboutads.info" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300">www.aboutads.info</a>
+                pour vous désinscrire des cookies de certains réseaux publicitaires tiers.
+            </p>
+            <p class="text-sm text-gray-400">
+                Pour en savoir plus sur l'utilisation des données par Google sur les sites partenaires :
+                <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300">policies.google.com/technologies/partner-sites</a>.
             </p>
         </section>
 
@@ -141,6 +165,9 @@ include __DIR__ . '/templates/header.php';
                 </li>
                 <li><strong class="text-white">Facebook / Meta</strong> — si vous cliquez sur nos liens vers notre page Facebook, les conditions de Meta s'appliquent.
                     <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300 ml-1">Politique Meta →</a>
+                </li>
+                <li><strong class="text-white">Google AdSense</strong> — régie publicitaire du site.
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300 ml-1">Politique de confidentialité Google →</a>
                 </li>
             </ul>
         </section>

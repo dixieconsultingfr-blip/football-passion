@@ -31,6 +31,9 @@ include __DIR__ . '/templates/header.php';
                 <li><span class="text-gray-500">Site professionnel :</span>
                     <a href="https://www.dixie.consulting" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">www.dixie.consulting</a>
                 </li>
+                <li><span class="text-gray-500">En savoir plus :</span>
+                    <a href="/a-propos.php" class="text-green-400 hover:text-green-300">page À propos</a>
+                </li>
             </ul>
         </section>
 

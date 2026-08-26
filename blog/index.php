@@ -28,7 +28,37 @@ if ($slug !== '') {
     $og_image   = $article['image'] ?? $article['vignette'] ?? null;
     $og_type    = 'article';
     include BASE_PATH . '/templates/header.php';
-?>
+    $articleImageAbs = 'https://football-passion.fr' . ($article['image'] ?? $article['vignette'] ?? '/images/charte-graphique/logo-fp-icon-512.png');
+    $articleUrlAbs   = 'https://football-passion.fr/blog/' . rawurlencode($article['slug']);
+    ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": <?= json_encode($article['titre'], JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>,
+      "description": <?= json_encode($article['extrait'], JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>,
+      "image": [<?= json_encode($articleImageAbs) ?>],
+      "datePublished": <?= json_encode($article['date'] . 'T08:00:00+02:00') ?>,
+      "dateModified": <?= json_encode($article['date'] . 'T08:00:00+02:00') ?>,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": <?= json_encode($articleUrlAbs) ?>
+      },
+      "author": {
+        "@type": "Person",
+        "name": <?= json_encode($article['auteur']) ?>,
+        "url": "https://football-passion.fr/a-propos.php"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Football Passion",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://football-passion.fr/images/charte-graphique/logo-fp-icon-512.png"
+        }
+      }
+    }
+    </script>
 <!-- Breadcrumb -->
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
@@ -45,7 +75,7 @@ if ($slug !== '') {
                 <?= htmlspecialchars($article['categorie']) ?>
             </span>
             <time class="text-gray-500 text-sm"><?= date_fr_long($article['date']) ?></time>
-            <span class="text-gray-600 text-sm">· <?= htmlspecialchars($article['auteur']) ?></span>
+            <span class="text-gray-600 text-sm">· <a href="/a-propos.php" class="hover:text-green-400 transition-colors"><?= htmlspecialchars($article['auteur']) ?></a></span>
         </div>
 
         <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-5">

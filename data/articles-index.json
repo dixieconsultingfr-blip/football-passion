@@ -1,5 +1,19 @@
 [
     {
+        "id":  24,
+        "slug":  "tirage-champions-league-clubs-francais-2026-2027",
+        "titre":  "Ligue des Champions : les adversaires de PSG, Lens et Lille dévoilés",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "PSG"
+                       ],
+        "date":  "2026-08-27",
+        "extrait":  "Le tirage au sort de la phase de ligue de Ligue des Champions 2026-2027 a eu lieu au Grimaldi Forum de Monaco. Barcelone, Manchester City, Bayern Munich, Arsenal, Liverpool : voici le programme complet de PSG, Lens et Lille.",
+        "vignette":  "/images/tirage-champions-league-clubs-francais-2026-2027.jpg",
+        "image_alt":  "Adversaires de PSG, Lens et Lille en phase de ligue de Champions League 2026-2027"
+    },
+    {
         "id":  23,
         "slug":  "partager-abonnement-ligue-1-plus",
         "titre":  "Est-il possible de partager son abonnement Ligue 1+ ?",

@@ -7268,9 +7268,9 @@
         "date":  "2026-08-26",
         "heure":  "21:00",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  2,
         "tour":  "Barrages - Manche 2 sur 2"
     },
     {

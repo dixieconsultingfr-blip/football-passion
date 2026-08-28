@@ -1,5 +1,19 @@
 [
     {
+        "id":  25,
+        "slug":  "programme-ligue-1-journee-2-2026-2027",
+        "titre":  "Ligue 1 - Journée 2 : le programme complet, Lille reçoit le PSG en ouverture",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1",
+                           "PSG"
+                       ],
+        "date":  "2026-08-27",
+        "extrait":  "Après une première journée à scores fleuves, place à la 2e journée de Ligue 1 2026-2027. Au programme : Lille - PSG en ouverture vendredi soir, et Monaco - Marseille pour clôturer le week-end dimanche.",
+        "vignette":  "/images/programme-ligue-1-journee-2-2026-2027.jpg",
+        "image_alt":  "Programme complet de la journee 2 de Ligue 1 2026-2027"
+    },
+    {
         "id":  24,
         "slug":  "tirage-champions-league-clubs-francais-2026-2027",
         "titre":  "Ligue des Champions : les adversaires de PSG, Lens et Lille dévoilés",

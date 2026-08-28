@@ -1,5 +1,19 @@
 [
     {
+        "id":  26,
+        "slug":  "lille-psg-2-2-remontada-journee-2-2026-2027",
+        "titre":  "Lille 2-2 PSG : encore un coup de mental parisien dans les arrêts de jeu",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "PSG",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-28",
+        "extrait":  "Mené 2-0 jusqu'à la 85e minute au Stade Pierre-Mauroy, le PSG a de nouveau fait parler son mental pour arracher le match nul (2-2) grâce à des buts de Vitinha et Marquinhos dans les arrêts de jeu, sur fond de polémique autour du temps additionnel.",
+        "vignette":  "/images/lille-psg-2-2-remontada-journee-2-2026-2027.jpg",
+        "image_alt":  "Lille 2-2 PSG, remontada parisienne en fin de match, journee 2 Ligue 1 2026-2027"
+    },
+    {
         "id":  25,
         "slug":  "programme-ligue-1-journee-2-2026-2027",
         "titre":  "Ligue 1 - Journée 2 : le programme complet, Lille reçoit le PSG en ouverture",

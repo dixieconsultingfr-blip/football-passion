@@ -1,5 +1,19 @@
 [
     {
+        "id":  27,
+        "slug":  "tirage-europa-league-clubs-francais-2026-2027",
+        "titre":  "Europa League : les adversaires de l'OM, Rennes et Lyon dévoilés",
+        "categorie":  "Europa",
+        "etiquettes":  [
+                           "Europa League",
+                           "OM"
+                       ],
+        "date":  "2026-08-28",
+        "extrait":  "Le tirage au sort de la phase de ligue d'Europa League 2026-2027 a eu lieu vendredi 28 août. Leverkusen, Juventus, Celtic Glasgow : voici le programme complet de l'OM, du Stade Rennais et de l'Olympique Lyonnais.",
+        "vignette":  "/images/tirage-europa-league-clubs-francais-2026-2027.jpg",
+        "image_alt":  "Adversaires de l'OM, Rennes et Lyon en phase de ligue d'Europa League 2026-2027"
+    },
+    {
         "id":  26,
         "slug":  "lille-psg-2-2-remontada-journee-2-2026-2027",
         "titre":  "Lille 2-2 PSG : encore un coup de mental parisien dans les arrêts de jeu",

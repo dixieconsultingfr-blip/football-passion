@@ -139,7 +139,7 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 2
     },
@@ -176,7 +176,7 @@
         "heure": "20:45",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 1,
+        "score_dom": 2,
         "score_ext": 2
     },
     {

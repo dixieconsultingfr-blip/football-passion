@@ -141,7 +141,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 1
+        "score_ext": 2
     },
     {
         "id": 559706,
@@ -164,7 +164,7 @@
         "heure": "20:45",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 0,
+        "score_dom": 1,
         "score_ext": 1
     },
     {

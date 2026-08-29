@@ -139,9 +139,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559706,
@@ -151,9 +151,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559708,
@@ -163,9 +163,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559710,
@@ -175,9 +175,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559707,

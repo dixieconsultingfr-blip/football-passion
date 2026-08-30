@@ -127,9 +127,9 @@
         "date": "2026-08-29",
         "heure": "17:15",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 2,
-        "score_ext": 1
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559705,
@@ -139,9 +139,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 1,
-        "score_ext": 2
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559706,
@@ -151,9 +151,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 1,
-        "score_ext": 1
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559708,
@@ -163,9 +163,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 1,
-        "score_ext": 3
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559710,
@@ -175,9 +175,9 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 2,
-        "score_ext": 2
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559707,

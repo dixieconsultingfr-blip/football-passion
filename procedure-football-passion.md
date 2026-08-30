@@ -557,6 +557,16 @@ Retour utilisateur sur l'article J2 (section 3.59) : le tableau de résultats ma
 
 **Convention durable ajoutée dans `CLAUDE.md`** (section anti-footprint) : tout tableau de résultats/calendrier doit désormais systématiquement inclure ces trois repères (caption + colonne date + phrase de contexte), pas seulement pour cet article.
 
+### 3.61 Monaco 2-0 OM confirmé, article dédié et correction factuelle des prénoms — 30 août 2026
+
+Le match Monaco-OM (dernière affiche de la journée 2, en direct au moment de la section 3.60) s'est terminé sur un score de 2-0. Mise à jour de `matchs.json` (statut `FINISHED`) et de l'article J2 (section 3.59) : tableau, titre, extrait et meta corrigés, `date_maj` ajouté (correction a posteriori d'un contenu déjà publié — voir convention `date_maj` dans `CLAUDE.md`).
+
+**Nouvel article dédié** (id 29, `monaco-om-2-0-brunner-journee-2-2026-2027`) rédigé à partir d'un live-blog complet fourni par l'utilisateur (source : 20 Minutes, journaliste Nicolas Camus) — reformulé intégralement dans le style éditorial du site, jamais copié tel quel (règle anti-plagiat). Doublé de Paris Brunner (13e, 54e), Monaco prend seul la tête du classement (6 pts) devant Paris FC et Lille, l'OM retombe 8e (3 pts).
+
+**Incident anti-hallucination évité** : le live-blog source ne donne que des noms de famille pour la plupart des joueurs (« Brunner », « De Lange », « Egan-Riley »...). Une première version de l'article inventait des prénoms plausibles mais non vérifiés (« Paul Brunner », coach monégasque « Adi Hütter », « Amir Abdallah », « Georges Kondogbia »...) — repéré avant publication, corrigé par recherche web ciblée (confirmation : le joueur est bien **Paris Brunner**, attaquant allemand né en 2006, ex-Dortmund ; l'entraîneur de l'AS Monaco est **Filipe Luis**, celui de l'OM **Bruno Genesio**, déjà correct). Pour tous les autres joueurs dont le prénom n'a pas été vérifié, le nom de famille seul a été conservé plutôt que d'inventer un prénom — convention à réappliquer systématiquement pour tout article basé sur un live-blog ou une transcription qui ne donne que des noms de famille.
+
+Lien interne ajouté depuis l'article J2 (section 3.59) vers ce nouvel article, sur le modèle déjà utilisé pour Lille-PSG (section 3.59) — éviter la duplication de contenu détaillé entre l'article de synthèse et l'article de match dédié.
+
 ---
 
 *Dernière mise à jour : 30 août 2026*

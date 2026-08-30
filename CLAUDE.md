@@ -83,6 +83,7 @@ football-passion/                  ← racine du dépôt = racine du site
 - ❌ Droits TV / chaînes de diffusion
 - ❌ Citations entre guillemets
 - ❌ Horaires/dates non confirmés
+- ❌ Prénoms de joueurs non fournis par la source (un live-blog ou une transcription donne souvent le nom de famille seul, ex. « Brunner », « De Lange ») — ne jamais compléter par un prénom mémorisé/plausible sans vérification (voir incident section 3.61 de `procedure-football-passion.md` : « Paul Brunner » et coach « Adi Hütter » inventés, corrigés en « Paris Brunner » et « Filipe Luis » après recherche web). Par défaut, garder le nom de famille seul (usage journalistique courant) ; ne compléter le prénom que si une recherche web le confirme explicitement.
 
 **Règle** : n'écrire que ce qui est fourni ou vérifié (WebSearch/WebFetch).
 

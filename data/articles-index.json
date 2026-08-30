@@ -1,15 +1,29 @@
 [
     {
+        "id":  29,
+        "slug":  "monaco-om-2-0-brunner-journee-2-2026-2027",
+        "titre":  "Monaco 2-0 OM : le doublé de Brunner envoie l\u0027ASM en tête de la Ligue 1",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Monaco",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-08-30",
+        "extrait":  "Portée par un doublé de son jeune attaquant allemand Paris Brunner, l\u0027AS Monaco a dominé l\u0027Olympique de Marseille (2-0) ce dimanche au stade Louis-II et s\u0027installe seule en tête de la Ligue 1 après deux journées, tandis que l\u0027OM retombe déjà dans le ventre mou.",
+        "vignette":  "/images/monaco-om-2-0-brunner-journee-2-2026-2027.jpg",
+        "image_alt":  "AS Monaco 2-0 Olympique de Marseille, journée 2 de Ligue 1 2026-2027"
+    },
+    {
         "id":  28,
         "slug":  "ligue-1-journee-2-resultats-2026-2027",
-        "titre":  "Ligue 1 - Journée 2 : une journée riche en buts, Monaco s'impose face à l'OM",
+        "titre":  "Ligue 1 - Journée 2 : une journée riche en buts, Monaco s\u0027impose face à l\u0027OM",
         "categorie":  "L1",
         "etiquettes":  [
                            "Ligue 1",
                            "Journée 2"
                        ],
         "date":  "2026-08-30",
-        "extrait":  "La 2e journée de Ligue 1 2026-2027 a tenu ses promesses : un money time à rebondissements à Lille, une démonstration du Paris FC, plusieurs surprises, et Monaco qui s'impose face à l'OM pour clore le tableau.",
+        "extrait":  "La 2e journée de Ligue 1 2026-2027 a tenu ses promesses : un money time à rebondissements à Lille, une démonstration du Paris FC, plusieurs surprises, et Monaco qui s\u0027impose face à l\u0027OM pour clore le tableau.",
         "vignette":  "/images/l1-j2-sans-om.jpg",
         "image_alt":  "Tableau des résultats de la journée 2 de Ligue 1 2026-2027"
     },

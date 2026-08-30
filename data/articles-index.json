@@ -1,17 +1,31 @@
 [
     {
+        "id":  28,
+        "slug":  "ligue-1-journee-2-resultats-2026-2027",
+        "titre":  "Ligue 1 - Journée 2 : une journée riche en buts, en attendant Monaco - OM",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1",
+                           "Journée 2"
+                       ],
+        "date":  "2026-08-30",
+        "extrait":  "La 2e journée de Ligue 1 2026-2027 a tenu ses promesses : un money time à rebondissements à Lille, une démonstration du Paris FC et plusieurs surprises. Il ne manque plus que Monaco - Marseille pour clore le tableau.",
+        "vignette":  "/images/l1-j2-sans-om.jpg",
+        "image_alt":  "Tableau des résultats de la journée 2 de Ligue 1 2026-2027, Monaco-OM restant à jouer"
+    },
+    {
         "id":  27,
         "slug":  "tirage-europa-league-clubs-francais-2026-2027",
-        "titre":  "Europa League : les adversaires de l'OM, Rennes et Lyon dévoilés",
+        "titre":  "Europa League : les adversaires de l\u0027OM, Rennes et Lyon dévoilés",
         "categorie":  "Europa",
         "etiquettes":  [
                            "Europa League",
                            "OM"
                        ],
         "date":  "2026-08-28",
-        "extrait":  "Le tirage au sort de la phase de ligue d'Europa League 2026-2027 a eu lieu vendredi 28 août. Leverkusen, Juventus, Celtic Glasgow : voici le programme complet de l'OM, du Stade Rennais et de l'Olympique Lyonnais.",
+        "extrait":  "Le tirage au sort de la phase de ligue d\u0027Europa League 2026-2027 a eu lieu vendredi 28 août. Leverkusen, Juventus, Celtic Glasgow : voici le programme complet de l\u0027OM, du Stade Rennais et de l\u0027Olympique Lyonnais.",
         "vignette":  "/images/tirage-europa-league-clubs-francais-2026-2027.jpg",
-        "image_alt":  "Adversaires de l'OM, Rennes et Lyon en phase de ligue d'Europa League 2026-2027"
+        "image_alt":  "Adversaires de l\u0027OM, Rennes et Lyon en phase de ligue d\u0027Europa League 2026-2027"
     },
     {
         "id":  26,
@@ -23,7 +37,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-28",
-        "extrait":  "Mené 2-0 jusqu'à la 85e minute au Stade Pierre-Mauroy, le PSG a de nouveau fait parler son mental pour arracher le match nul (2-2) grâce à des buts de Vitinha et Marquinhos dans les arrêts de jeu, sur fond de polémique autour du temps additionnel.",
+        "extrait":  "Mené 2-0 jusqu\u0027à la 85e minute au Stade Pierre-Mauroy, le PSG a de nouveau fait parler son mental pour arracher le match nul (2-2) grâce à des buts de Vitinha et Marquinhos dans les arrêts de jeu, sur fond de polémique autour du temps additionnel.",
         "vignette":  "/images/lille-psg-2-2-remontada-journee-2-2026-2027.jpg",
         "image_alt":  "Lille 2-2 PSG, remontada parisienne en fin de match, journee 2 Ligue 1 2026-2027"
     },
@@ -65,7 +79,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-26",
-        "extrait":  "Ligue 1+ autorise officiellement jusqu'à 2 connexions simultanées sur la plupart de ses formules. Voici quelles offres permettent réellement de partager son abonnement, et comment diviser la facture avec un proche.",
+        "extrait":  "Ligue 1+ autorise officiellement jusqu\u0027à 2 connexions simultanées sur la plupart de ses formules. Voici quelles offres permettent réellement de partager son abonnement, et comment diviser la facture avec un proche.",
         "vignette":  "/images/partager-abonnement-ligue-1-plus.jpg",
         "image_alt":  "Est-il possible de partager son abonnement Ligue 1+ a plusieurs"
     },
@@ -80,21 +94,21 @@
                        ],
         "date":  "2026-08-25",
         "date_maj":  "2026-08-26",
-        "extrait":  "Le tirage au sort de la phase de ligue de Ligue des Champions aura lieu jeudi 27 août au Grimaldi Forum de Monaco. Rappel du format à 36 équipes — la France ne sera finalement représentée que par PSG, Lille et Lens, l'Olympique Lyonnais ayant été éliminé par Fenerbahçe.",
+        "extrait":  "Le tirage au sort de la phase de ligue de Ligue des Champions aura lieu jeudi 27 août au Grimaldi Forum de Monaco. Rappel du format à 36 équipes — la France ne sera finalement représentée que par PSG, Lille et Lens, l\u0027Olympique Lyonnais ayant été éliminé par Fenerbahçe.",
         "vignette":  "/images/tirage-ligue-des-champions-2026-2027.jpg",
         "image_alt":  "Tirage au sort de la Ligue des Champions 2026-2027 au Grimaldi Forum de Monaco"
     },
     {
         "id":  21,
         "slug":  "essentiel-jour-dembele-repos-ligue-1-2026-2027",
-        "titre":  "Dembélé mis au repos, Ligue 1 déjà au sommet : l'essentiel du jour",
+        "titre":  "Dembélé mis au repos, Ligue 1 déjà au sommet : l\u0027essentiel du jour",
         "categorie":  "L1",
         "etiquettes":  [
                            "PSG",
                            "Ligue 1"
                        ],
         "date":  "2026-08-25",
-        "extrait":  "Ce mardi 25 août, le PSG a annoncé qu'Ousmane Dembélé, Ballon d'Or 2025, est mis au repos jusqu'à lundi et sera forfait à Lille. Explications et tour d'horizon d'une Ligue 1 qui démarre fort.",
+        "extrait":  "Ce mardi 25 août, le PSG a annoncé qu\u0027Ousmane Dembélé, Ballon d\u0027Or 2025, est mis au repos jusqu\u0027à lundi et sera forfait à Lille. Explications et tour d\u0027horizon d\u0027une Ligue 1 qui démarre fort.",
         "vignette":  "/images/essentiel-jour-dembele-repos-ligue-1-2026-2027.jpg",
         "image_alt":  "Dembele mis au repos par le PSG, actualite Ligue 1 du 25 aout 2026"
     },
@@ -108,7 +122,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-24",
-        "extrait":  "Quelques semaines après avoir offert la Coupe du Monde 2026 à l'Espagne, Ferran Torres a déjà conquis le Parc des Princes. Entré à la mi-temps face à Rennes, l'attaquant espagnol a inscrit un doublé en 11 minutes pour arracher le match nul.",
+        "extrait":  "Quelques semaines après avoir offert la Coupe du Monde 2026 à l\u0027Espagne, Ferran Torres a déjà conquis le Parc des Princes. Entré à la mi-temps face à Rennes, l\u0027attaquant espagnol a inscrit un doublé en 11 minutes pour arracher le match nul.",
         "vignette":  "/images/ferran-torres-chouchou-parc-des-princes.jpg",
         "image_alt":  "Ferran Torres, nouveau chouchou du Parc des Princes avec le PSG"
     },
@@ -136,7 +150,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-23",
-        "extrait":  "Le PSG, contraint de jouer à Roazhon Park suite à l'inversion du match, n'a arraché le nul qu'en fin de rencontre face à Rennes (2-2). Au même moment, Monaco s'imposait de justesse au Havre (0-1) grâce à Eric Dier.",
+        "extrait":  "Le PSG, contraint de jouer à Roazhon Park suite à l\u0027inversion du match, n\u0027a arraché le nul qu\u0027en fin de rencontre face à Rennes (2-2). Au même moment, Monaco s\u0027imposait de justesse au Havre (0-1) grâce à Eric Dier.",
         "vignette":  "/images/rennes-psg-2-2-le-havre-monaco-0-1-journee-1-2026-2027.jpg",
         "image_alt":  "Resume Rennes 2-2 PSG et Le Havre 0-1 Monaco, journee 1 de Ligue 1 2026-2027"
     },
@@ -150,23 +164,23 @@
                            "Stade Rennais"
                        ],
         "date":  "2026-08-23",
-        "extrait":  "Le match PSG - Rennes a changé de lieu suite à la décision de la LFP, mais reste bien programmé ce dimanche. Voici la date, l'heure, le stade et la chaîne pour ne rien manquer de la rencontre.",
+        "extrait":  "Le match PSG - Rennes a changé de lieu suite à la décision de la LFP, mais reste bien programmé ce dimanche. Voici la date, l\u0027heure, le stade et la chaîne pour ne rien manquer de la rencontre.",
         "vignette":  "/images/psg-rennes-quand-ou-chaine-2026.jpg",
         "image_alt":  "PSG contre Rennes, infos pratiques du match inverse au Roazhon Park"
     },
     {
         "id":  15,
         "slug":  "euro-2028-zidane-prepare-sa-liste",
-        "titre":  "En route pour l'Euro 2028 : Zidane prépare sa liste et son équipe",
+        "titre":  "En route pour l\u0027Euro 2028 : Zidane prépare sa liste et son équipe",
         "categorie":  "France",
         "etiquettes":  [
                            "France",
                            "Zidane"
                        ],
         "date":  "2026-08-23",
-        "extrait":  "Les Bleus entrent dans une nouvelle ère. Officiellement nommé sélectionneur le 28 juillet 2026, Zinédine Zidane dispose de quatre ans pour construire une sélection compétitive, avec l'Euro 2028 comme premier grand objectif.",
+        "extrait":  "Les Bleus entrent dans une nouvelle ère. Officiellement nommé sélectionneur le 28 juillet 2026, Zinédine Zidane dispose de quatre ans pour construire une sélection compétitive, avec l\u0027Euro 2028 comme premier grand objectif.",
         "vignette":  "/images/euro-2028-zidane-prepare-sa-liste.jpg",
-        "image_alt":  "Zinedine Zidane, nouveau selectionneur de l'equipe de France, prepare sa liste pour l'Euro 2028"
+        "image_alt":  "Zinedine Zidane, nouveau selectionneur de l\u0027equipe de France, prepare sa liste pour l\u0027Euro 2028"
     },
     {
         "id":  14,
@@ -178,7 +192,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-22",
-        "extrait":  "Pour son premier match de la saison 2026-2027, le RC Lens a livré un festival offensif face à l'AJ Auxerre : 5-2 à Bollaert-Delelis, avec un doublé sur pénalty de Florian Thauvin et une expulsion auxerroise dès la 35e minute.",
+        "extrait":  "Pour son premier match de la saison 2026-2027, le RC Lens a livré un festival offensif face à l\u0027AJ Auxerre : 5-2 à Bollaert-Delelis, avec un doublé sur pénalty de Florian Thauvin et une expulsion auxerroise dès la 35e minute.",
         "vignette":  "/images/lens-auxerre-5-2-journee-1-2026-2027.jpg",
         "image_alt":  "RC Lens 5-2 AJ Auxerre, 1ere journee de Ligue 1 2026-2027"
     },
@@ -192,7 +206,7 @@
                            "Ligue 2"
                        ],
         "date":  "2026-08-22",
-        "extrait":  "Le début de saison vire au cauchemar pour le FC Nantes. Malgré un doublé de Killian Corredor et une avance à la pause, les Canaris se sont effondrés en seconde période et s'inclinent 2-5 face à Rodez à la Beaujoire.",
+        "extrait":  "Le début de saison vire au cauchemar pour le FC Nantes. Malgré un doublé de Killian Corredor et une avance à la pause, les Canaris se sont effondrés en seconde période et s\u0027inclinent 2-5 face à Rodez à la Beaujoire.",
         "vignette":  "/images/nantes-rodez-2-5-journee-3-2026.jpg",
         "image_alt":  "FC Nantes 2-5 Rodez, 3e defaite consecutive en Ligue 2 2026-2027"
     },
@@ -206,7 +220,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-21",
-        "extrait":  "L'Olympique de Marseille a parfaitement lancé sa saison 2026-2027 en s'imposant 4-0 face à Strasbourg ce vendredi au Vélodrome. Portés par un doublé d'Amine Gouiri, les Marseillais prennent la tête de la Ligue 1 dès la première journée.",
+        "extrait":  "L\u0027Olympique de Marseille a parfaitement lancé sa saison 2026-2027 en s\u0027imposant 4-0 face à Strasbourg ce vendredi au Vélodrome. Portés par un doublé d\u0027Amine Gouiri, les Marseillais prennent la tête de la Ligue 1 dès la première journée.",
         "vignette":  "/images/marseille-strasbourg-4-0-journee-1-2026-2027.jpg",
         "image_alt":  "OM 4-0 Strasbourg, resultat de la 1ere journee de Ligue 1 2026-2027"
     },
@@ -220,9 +234,9 @@
                            "Ligue 2"
                        ],
         "date":  "2026-08-21",
-        "extrait":  "Après un début de saison parfait, l'AS Saint-Étienne s'apprête à disputer un match clé pour confirmer son statut de leader. Face à Grenoble ce samedi, les Verts peuvent signer une troisième victoire de rang en Ligue 2.",
+        "extrait":  "Après un début de saison parfait, l\u0027AS Saint-Étienne s\u0027apprête à disputer un match clé pour confirmer son statut de leader. Face à Grenoble ce samedi, les Verts peuvent signer une troisième victoire de rang en Ligue 2.",
         "vignette":  "/images/saint-etienne-grenoble-ligue-2-2026.png",
-        "image_alt":  "Logo de l'AS Saint-Etienne avant le match face a Grenoble en Ligue 2"
+        "image_alt":  "Logo de l\u0027AS Saint-Etienne avant le match face a Grenoble en Ligue 2"
     },
     {
         "id":  10,
@@ -234,7 +248,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-21",
-        "extrait":  "Pour la saison 2026-2027, c'est Ligue 1+ qui détient l'intégralité des droits TV du championnat de France. Entre les quatre formules disponibles, prix et conditions d'engagement, voici comment s'y retrouver.",
+        "extrait":  "Pour la saison 2026-2027, c\u0027est Ligue 1+ qui détient l\u0027intégralité des droits TV du championnat de France. Entre les quatre formules disponibles, prix et conditions d\u0027engagement, voici comment s\u0027y retrouver.",
         "vignette":  "/images/ligue-1-plus-comment-regarder-2026-2027.webp",
         "image_alt":  "Le logo Ligue 1+ diffuseur exclusif de la Ligue 1 saison 2026-2027"
     },
@@ -248,9 +262,9 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-21",
-        "extrait":  "La Ligue 1 2026-2027 démarre ce vendredi 21 août avec une affiche très attendue entre l'Olympique de Marseille et Strasbourg. Le coup d'envoi sera donné à 20h45 au Stade Vélodrome, avec une nouvelle ère qui commence pour l'OM sous les ordres de Bruno Genesio.",
+        "extrait":  "La Ligue 1 2026-2027 démarre ce vendredi 21 août avec une affiche très attendue entre l\u0027Olympique de Marseille et Strasbourg. Le coup d\u0027envoi sera donné à 20h45 au Stade Vélodrome, avec une nouvelle ère qui commence pour l\u0027OM sous les ordres de Bruno Genesio.",
         "vignette":  "/images/om-strasbourg-ouverture-ligue-1-2026-2027.png",
-        "image_alt":  "Le stade Velodrome de l'OM avant le coup d'envoi de la Ligue 1 2026-2027"
+        "image_alt":  "Le stade Velodrome de l\u0027OM avant le coup d\u0027envoi de la Ligue 1 2026-2027"
     },
     {
         "id":  8,

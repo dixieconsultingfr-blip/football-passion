@@ -519,6 +519,36 @@ Recherche approfondie sur les critères Google E-E-A-T (Experience, Expertise, A
 
 **Mentions légales et politique de confidentialité déjà mises à jour la veille** (SIRET/RCS/TVA Dixie Consulting SASU, divulgation Google AdSense) — voir sections précédentes de ce journal, non répétées ici.
 
+### 3.57 Prototype de génération d'images titre + phrase choc (n8n/Pillow) — 30 août 2026
+
+Démarrage de l'automatisation de la création d'images (branche "Pillow" du futur workflow n8n). Principe validé avec l'utilisateur : Claude Code recherche des faits vérifiés à partir d'un prompt court (ex. "Saint-Étienne en route vers la 4e victoire ?"), produit un **Titre** + une **Phrase choc**, ensuite superposés sur un template graphique.
+
+Deux templates Canva fournis par l'utilisateur dans `images/charte-graphique/` : `model_l2_FB.png` (941×1672, portrait, pour Facebook/Reel) et `model_l2_vignette_site.webp` (1731×909, paysage, pour la vignette d'article).
+
+Exemple travaillé : Saint-Étienne, 3 victoires sur 3 sous Ian Cathro (nouveau coach depuis le 8 juin 2026), prochain match à Dijon le 31 août 2026 — faits vérifiés par recherche web avant rédaction (règle anti-hallucination).
+
+Prototype de positionnement du texte réalisé en PowerShell/System.Drawing (`preview-l2-templates.ps1`, script de session, non versionné) pour valider tailles de police et zones de texte avant d'écrire le vrai code de production. Un bug de troncature du titre (police trop grande / zone trop étroite) corrigé par réduction de la taille de police (40pt → 34pt sur le template portrait).
+
+### 3.58 Endpoint `generate-image.php` (GD) — décision d'architecture n8n — 30 août 2026
+
+**Constat** : l'instance n8n de l'utilisateur (`n8n.srv814711.hstgr.cloud`) est une offre managée Hostinger, pas un VPS avec accès SSH — le node "Execute Command" n'y est pas disponible (comme sur n8n Cloud), et le node "Code" en Python tourne en Pyodide (bac à sable WebAssembly, sans accès disque ni `pip install`), donc inutilisable pour du traitement d'image avec Pillow.
+
+**Décision** : plutôt que Python+Pillow, le traitement d'image se fait en **PHP + GD**, directement sur l'hébergement Hostinger de football-passion.fr (cohérent avec le stack existant, pas de nouveau service à héberger). Création de `generate-image.php` à la racine : endpoint HTTP POST (JSON `{secret, template, titre1, titre2, phrase, output}`), protégé par une clé secrète (`GENERATE_IMAGE_SECRET` dans `config/secrets.php`), qui charge un template (`images/charte-graphique/`), dessine le texte avec retour à la ligne automatique (`imagettftext` + calcul de largeur via `imagettfbbox`), et enregistre le résultat en JPEG dans `images/`. Logique de positionnement (portrait vs paysage) reprise du prototype PowerShell de la section 3.57.
+
+**Police retenue : Montserrat** (Bold + SemiBold, licence SIL Open Font License, gratuite) — cohérente avec l'esprit géométrique/condensé du logo FP. Fichiers `.ttf` récupérés depuis le dépôt officiel du projet Montserrat (`github.com/JulietaUla/Montserrat`, versions à poids fixes — la version distribuée par Google Fonts est désormais une police variable, non exploitable telle quelle par `imagettftext`) et ajoutés dans `fonts/` à la racine du dépôt.
+
+**Diagnostic GD réalisé en production** (script temporaire `gd-check.php`, supprimé après usage) : PHP 8.3.30, GD 2.3.3 avec support complet FreeType, WebP (lecture/écriture), PNG, JPEG — aucune limitation côté serveur.
+
+**Blocage restant** : `config/secrets.php` n'est jamais déployé automatiquement (fichier gitignoré, dépôt public — voir règle critique en tête de `CLAUDE.md`). La constante `GENERATE_IMAGE_SECRET` doit être ajoutée manuellement au fichier existant sur Hostinger. Upload bloqué le 30 août 2026 par un problème d'accès au gestionnaire de fichiers côté utilisateur — noté dans `todolist.md`, à reprendre dès que l'accès est rétabli.
+
+### 3.59 Article : Ligue 1 journée 2, tous les résultats (Monaco-OM en attente) — 30 août 2026
+
+Article de récapitulatif complet de la 2e journée de Ligue 1 2026-2027 (id 28, `ligue-1-journee-2-resultats-2026-2027`), les 8 rencontres jouées vérifiées contre `data/matchs.json` avant rédaction (Lille 2-2 PSG, Strasbourg 2-1 Lens, Auxerre 1-3 Angers, Brest 2-2 Toulouse, Lyon 1-1 Le Havre, Lorient 1-2 Troyes, Paris FC 3-0 Nice, Rennes 3-2 Le Mans), tableau HTML récapitulatif inclus, lien interne vers l'article dédié Lille-PSG (id 26) pour éviter la duplication de contenu détaillé. Monaco-OM signalé comme non encore joué, réservé pour un article séparé.
+
+Vignette fournie par l'utilisateur (`l1 j2 sans om.webp`, 1731×909) redimensionnée à 1200×630 (largeur max de la charte) et réencodée en JPEG qualité 82 (158,6 Ko) — pas d'encodeur WebP local disponible (limitation connue, voir sections précédentes).
+
+**Incident et correction** : la première tentative d'ajout de l'entrée dans `articles-index.json` via un script PowerShell contenant le texte accentué en dur a produit un mojibake réel (`journÃ©e` au lieu de `journée`) — repéré par la vérification systématique `grep -c "Ã"`, fichier restauré via `git checkout` avant tout commit. Corrigé en écrivant l'entrée dans un fichier JSON séparé via l'outil Write (règle déjà documentée dans `CLAUDE.md`, réappliquée ici après un oubli ponctuel).
+
 ---
 
-*Dernière mise à jour : 5 août 2026*
+*Dernière mise à jour : 30 août 2026*

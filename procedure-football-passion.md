@@ -549,6 +549,14 @@ Vignette fournie par l'utilisateur (`l1 j2 sans om.webp`, 1731×909) redimension
 
 **Incident et correction** : la première tentative d'ajout de l'entrée dans `articles-index.json` via un script PowerShell contenant le texte accentué en dur a produit un mojibake réel (`journÃ©e` au lieu de `journée`) — repéré par la vérification systématique `grep -c "Ã"`, fichier restauré via `git checkout` avant tout commit. Corrigé en écrivant l'entrée dans un fichier JSON séparé via l'outil Write (règle déjà documentée dans `CLAUDE.md`, réappliquée ici après un oubli ponctuel).
 
+### 3.60 Enrichissement SEO du tableau de résultats (contexte compétition/journée/saison) — 30 août 2026
+
+Retour utilisateur sur l'article J2 (section 3.59) : le tableau de résultats manquait de repères de contexte (numéro de journée, saison, compétition) — problématique pour le référencement, un tableau isolé de scores étant ambigu pour Google sans ces informations.
+
+**Corrections appliquées sur l'article** : ajout d'une balise `<caption>` dans le tableau (« Résultats de la Ligue 1, journée 2, saison 2026-2027 »), ajout d'une colonne `Date` par rencontre, et ajout d'une phrase d'intro juste avant le tableau répétant le contexte en texte brut (« Championnat de France de Ligue 1 (L1), saison 2026-2027, journée 2 sur 34 »).
+
+**Convention durable ajoutée dans `CLAUDE.md`** (section anti-footprint) : tout tableau de résultats/calendrier doit désormais systématiquement inclure ces trois repères (caption + colonne date + phrase de contexte), pas seulement pour cet article.
+
 ---
 
 *Dernière mise à jour : 30 août 2026*

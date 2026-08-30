@@ -107,6 +107,7 @@ football-passion/                  ← racine du dépôt = racine du site
 - ✅ Citer des données précises (stats, dates réelles)
 - ✅ Varier les introductions — ne pas répéter le même pattern
 - ✅ **Ajouter un tableau HTML quand l'article contient des données comparables** (prix, formules, statistiques, calendrier...) — Google valorise les tableaux structurés (rich snippets, meilleure compréhension du contenu). Voir le format utilisé dans `data/articles/ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027.json` comme référence de style (fond sombre, bordure verte `#16a34a`, `overflow-x:auto` pour le responsive).
+- ✅ **Un tableau de résultats/calendrier doit toujours porter son contexte complet** (signal SEO — retour utilisateur du 30 août 2026, voir `procedure-football-passion.md` section 3.60) : compétition (L1, L2, CL...), numéro de journée, saison. Concrètement : une balise `<caption>` dans le `<table>` (ex. « Résultats de la Ligue 1, journée 2, saison 2026-2027 »), une colonne `Date` par ligne, et une phrase d'intro juste avant le tableau qui répète ce contexte en texte brut (ex. « Championnat de France de Ligue 1 (L1), saison 2026-2027, journée X sur 34 »). Un tableau de scores sans ces repères est ambigu pour Google (et pour un lecteur qui arrive via une recherche, sans avoir lu le paragraphe précédent).
 
 ### ✍️ Avis éditorial assumé — signal E-E-A-T (Experience)
 

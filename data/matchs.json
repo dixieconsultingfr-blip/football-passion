@@ -115,9 +115,9 @@
         "date": "2026-08-28",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 2
     },
     {
         "id": 559704,
@@ -200,7 +200,7 @@
         "heure": "17:15",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 2,
+        "score_dom": 3,
         "score_ext": 2
     },
     {

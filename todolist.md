@@ -8,6 +8,7 @@ Suivi des actions en attente. Le détail/historique complet de chaque action res
 
 - [ ] **Facebook — renommage du nom principal de la Page** : verrouillé 60 jours suite à un précédent changement. Déblocage prévu **~18 octobre 2026**. Une fois débloqué : finaliser le nom principal "Football Passion" (actuellement affiché via le username `footballpassionfr` + AKA).
 - [ ] **Google AdSense — annonces pas encore visibles** : code correctement en place sur `droits-tv-football.php` (vérifié en live le 24 août 2026), mais aucune annonce ne s'affiche encore. Normal dans les 24-48h suivant l'approbation du site — Google met du temps à commencer à diffuser. **À revérifier le 26-27 août 2026** (avoir désactivé tout bloqueur de pub pour le test).
+- [ ] **Upload manuel de `config/secrets.php` sur Hostinger** — bloqué le 30 août 2026 par un problème d'accès au gestionnaire de fichiers Hostinger côté utilisateur. Nécessaire pour activer l'endpoint `generate-image.php` (automatisation n8n titre+phrase choc / Pillow-GD) : ajouter la constante `GENERATE_IMAGE_SECRET = '5Yi6O7nxDBzxkWi5S8WlWkJfAmroTJdFgKISQ4rqa4Q'` au fichier existant (garder `TURNSTILE_SECRET_KEY`). Sans ça, l'endpoint renvoie une erreur 500 (constante non définie). À refaire dès que l'accès Hostinger est rétabli.
 
 ## 🔲 À faire, pas de blocage externe
 

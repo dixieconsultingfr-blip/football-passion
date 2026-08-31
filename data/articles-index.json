@@ -1,5 +1,19 @@
 [
     {
+        "id":  30,
+        "slug":  "ligue-2-journee-4-classement-2026-2027",
+        "titre":  "Ligue 2 - Journée 4 : Saint-Étienne fait le plein, Nantes enfin récompensé",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "Ligue 2",
+                           "Journée 4"
+                       ],
+        "date":  "2026-08-31",
+        "extrait":  "Saint-Étienne réalise le sans-faute avec 4 victoires en 4 matchs et prend le large en tête de la Ligue 2, pendant que Nantes arrache un dramatique premier point à Guingamp. Reims et Montpellier complètent le podium.",
+        "vignette":  "/images/ligue-2-journee-4-classement-2026-2027.jpg",
+        "image_alt":  "Classement de la Ligue 2 après la journée 4, saison 2026-2027"
+    },
+    {
         "id":  29,
         "slug":  "monaco-om-2-0-brunner-journee-2-2026-2027",
         "titre":  "Monaco 2-0 OM : le doublé de Brunner envoie l\u0027ASM en tête de la Ligue 1",

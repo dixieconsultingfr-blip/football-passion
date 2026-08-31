@@ -585,6 +585,14 @@ Premier point de suivi chiffré de la page Facebook depuis la reprise de la Ligu
 
 **Enseignement retenu** : les posts factuels de résultats (récaps de journée, comptes rendus de match comme Lille-PSG ou Monaco-OM) semblent être le principal moteur de croissance actuel de la page, davantage que la portée naturelle liée aux abonnés existants. Point d'amélioration identifié : soigner l'accroche des 3 premières secondes des reels/vidéos pour limiter le décrochage précoce.
 
+### 3.63 Article Ligue 2 journée 4 et première vignette produite via le template titre + phrase choc — 31 août 2026
+
+Article de classement complet (id 30, `ligue-2-journee-4-classement-2026-2027`) : Saint-Étienne 4 victoires sur 4 (12 points, aucune défaite), Nantes qui arrache un dramatique premier point à Guingamp (mené 0-2, passé devant 3-2 grâce à un doublé de Younoussa et un but de Joujou, puis égalisé sur penalty à la 96e par Guingamp), Reims et Montpellier sur le podium à 8 points. Classement des 18 clubs vérifié ligne par ligne contre une capture d'écran fournie par l'utilisateur — concordance totale avec le calcul déjà fait à la main lors des posts Facebook précédents (voir section 3.62 pour le contexte des posts FB de cette journée).
+
+**Première vignette produite en conditions réelles avec le template `model_l2_vignette_site.webp`** (prototype validé en section 3.57) : titre et phrase choc écrits dans un fichier JSON séparé (`vignette-l2-j4-texte.json`, via l'outil Write, jamais en dur dans le `.ps1` — règle mojibake) puis superposés via un script PowerShell/System.Drawing repris du prototype.
+
+**Bug découvert et corrigé** : le prototype de la section 3.57 dessinait le texte directement sur l'image source à sa résolution native (1731×909) et l'enregistrait telle quelle, dépassant la largeur max de 1200px fixée par la charte (`CLAUDE.md`). Ajout d'une étape de redimensionnement final vers 1200px de large (même technique `HighQualityBicubic` que pour les vignettes photo) avant l'encodage JPEG — à reporter dans `generate-image.php` (section 3.58) une fois l'upload de `config/secrets.php` débloqué, ce script PHP ayant le même défaut potentiel.
+
 ---
 
 *Dernière mise à jour : 31 août 2026*

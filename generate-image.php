@@ -145,11 +145,24 @@ if ($isPortrait) {
     }
 }
 
-// ── Export JPEG (qualite 85) ────────────────────────────────────────────────
+// ── Aplatit la transparence eventuelle ──────────────────────────────────────
 $flat = imagecreatetruecolor($width, $height);
 $bg = imagecolorallocate($flat, 3, 7, 18); // fond de secours si l'image source a de la transparence
 imagefill($flat, 0, 0, $bg);
 imagecopy($flat, $src, 0, 0, 0, 0, $width, $height);
+
+// ── Redimensionne a la largeur max de la charte (1200px) avant export JPEG ──
+$maxWidthCharte = 1200;
+if ($width > $maxWidthCharte) {
+    $finalWidth  = $maxWidthCharte;
+    $finalHeight = (int) round($height * ($maxWidthCharte / $width));
+    $resized = imagecreatetruecolor($finalWidth, $finalHeight);
+    imagecopyresampled($resized, $flat, 0, 0, 0, 0, $finalWidth, $finalHeight, $width, $height);
+    imagedestroy($flat);
+    $flat = $resized;
+    $width = $finalWidth;
+    $height = $finalHeight;
+}
 
 $ok = imagejpeg($flat, $outputPath, 85);
 

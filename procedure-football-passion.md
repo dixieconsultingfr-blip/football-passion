@@ -567,6 +567,24 @@ Le match Monaco-OM (dernière affiche de la journée 2, en direct au moment de l
 
 Lien interne ajouté depuis l'article J2 (section 3.59) vers ce nouvel article, sur le modèle déjà utilisé pour Lille-PSG (section 3.59) — éviter la duplication de contenu détaillé entre l'article de synthèse et l'article de match dédié.
 
+### 3.62 Statistiques Facebook — bilan à 28 jours (3-30 août 2026) — 31 août 2026
+
+Premier point de suivi chiffré de la page Facebook depuis la reprise de la Ligue 1.
+
+**Vue d'ensemble de la page (28 derniers jours, 3-30 août 2026)** :
+- Vues totales : 109 557 (+2377 % vs période précédente)
+- Vues de 3 secondes : 49 338 (+3525 %)
+- Vues de 1 minute : 0 (normal, pas encore de format vidéo long — reels/voix off pas encore lancés)
+- Followers : 368 au total (+57,1 %), dont 129 followers nets sur la période, 2 anciens followers perdus
+- Croissance des vues nettement accélérée à partir du 18 août 2026, coïncidant avec la reprise de la Ligue 1 (journée 1) et la montée en cadence de publication (tirages CL/Europa, comptes rendus de match, articles dédiés)
+
+**Meilleur post de la période : « Ligue 1 – Journée 2 : une deuxième journée riche en buts ! »** (le post-carrousel de résultats, voir article id 28 en section 3.59) :
+- 51 142 vues, dont 99,8 % auprès de non-followers (54 followers actifs seulement) → forte portée organique/algorithmique, largement au-delà de l'audience actuelle de la page
+- 46 632 spectateur(ice)s, 236 interactions (202 likes, 4 ❤️, 1 😆)
+- Durée de visionnage moyenne : 9 secondes, avec un décrochage marqué dès la 4e seconde
+
+**Enseignement retenu** : les posts factuels de résultats (récaps de journée, comptes rendus de match comme Lille-PSG ou Monaco-OM) semblent être le principal moteur de croissance actuel de la page, davantage que la portée naturelle liée aux abonnés existants. Point d'amélioration identifié : soigner l'accroche des 3 premières secondes des reels/vidéos pour limiter le décrochage précoce.
+
 ---
 
-*Dernière mise à jour : 30 août 2026*
+*Dernière mise à jour : 31 août 2026*

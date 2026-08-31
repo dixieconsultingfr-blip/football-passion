@@ -432,6 +432,18 @@
         "score_ext": null
     },
     {
+        "id": 559682,
+        "competition": "L1",
+        "domicile": "AS Monaco FC",
+        "exterieur": "Racing Club de Lens",
+        "date": "2026-09-18",
+        "heure": "20:45",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
         "id": 559676,
         "competition": "L1",
         "domicile": "AJ Auxerre",
@@ -468,18 +480,6 @@
         "score_ext": null
     },
     {
-        "id": 559679,
-        "competition": "L1",
-        "domicile": "Paris FC",
-        "exterieur": "RC Strasbourg Alsace",
-        "date": "2026-09-19",
-        "heure": "02:00",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
         "id": 559680,
         "competition": "L1",
         "domicile": "Toulouse FC",
@@ -504,10 +504,10 @@
         "score_ext": null
     },
     {
-        "id": 559682,
+        "id": 559683,
         "competition": "L1",
-        "domicile": "AS Monaco FC",
-        "exterieur": "Racing Club de Lens",
+        "domicile": "Olympique Lyonnais",
+        "exterieur": "Stade Rennais FC 1901",
         "date": "2026-09-19",
         "heure": "02:00",
         "stade": "",
@@ -516,12 +516,12 @@
         "score_ext": null
     },
     {
-        "id": 559683,
+        "id": 559679,
         "competition": "L1",
-        "domicile": "Olympique Lyonnais",
-        "exterieur": "Stade Rennais FC 1901",
+        "domicile": "Paris FC",
+        "exterieur": "RC Strasbourg Alsace",
         "date": "2026-09-19",
-        "heure": "02:00",
+        "heure": "17:15",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,

@@ -613,6 +613,14 @@ Suite à la page paris sportifs Euro 2028 (section 3.64), extension de la strat�
 
 Les trois pages sont désormais interconnectées (liens internes croisés) et référencées dans `sitemap.php`. Déployées et vérifiées en direct (200 OK sur les deux nouvelles pages).
 
+### 3.66 Bandeau de navigation + page qualifications Euro 2028 / liste Zidane — 1er septembre 2026
+
+**Bandeau de navigation** ajouté en haut de `euro-2028.php` (juste sous le hero) : liens rapides vers toutes les sous-pages (villes hôtes, stades, où regarder, paris sportifs, qualifications, équipe de France) — améliore le maillage interne pour le SEO et la navigation utilisateur, en plus des liens déjà présents en bas de page.
+
+**Nouvelle page `euro-2028-qualifications.php`** : format et calendrier des qualifications (tirage au sort le 6 décembre 2026 à Belfast, matchs du 25 mars 2027 au 28 mars 2028, 54 nations UEFA en 12 groupes, 12 vainqueurs + 8 meilleurs deuxièmes qualifiés directement, mécanisme des 2 places réservées aux pays hôtes) — faits vérifiés par recherche web (Wikipédia FR + UEFA.com). Section dédiée à la première liste de Zinédine Zidane comme sélectionneur : annonce le 18 septembre 2026 à 18h au siège de la FFF, rassemblement dès le 21 septembre, matchs de Ligue des Nations en Turquie (25/09) puis en Belgique (28/09) — dates confirmées par recherche, mais **aucun nom de joueur inventé** puisque la liste n'est pas encore annoncée à la date de rédaction (règle anti-hallucination stricte sur les compositions d'équipe) : la page indique explicitement qu'elle sera mise à jour dès l'annonce officielle.
+
+Page ajoutée au bandeau de navigation, au sitemap, déployée et vérifiée en direct (200 OK).
+
 ---
 
 *Dernière mise à jour : 1er septembre 2026*

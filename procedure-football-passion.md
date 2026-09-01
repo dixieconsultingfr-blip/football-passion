@@ -603,6 +603,16 @@ Création de `euro-2028-paris-sportifs.php`, sous-page de `euro-2028.php`, dans 
 
 Page ajoutée au sitemap (`sitemap.php`) et liée depuis `euro-2028.php` (bouton « Paris sportifs Euro 2028 » dans la section liens internes). Déployée et vérifiée en direct (200 OK, contenu affiché correctement).
 
+### 3.65 Deux nouvelles pages SEO : droits TV Euro 2028 + paris sportifs Coupe du Monde 2030 — 1er septembre 2026
+
+Suite à la page paris sportifs Euro 2028 (section 3.64), extension de la stratégie de positionnement SEO anticipé avec deux nouvelles pages.
+
+**`comment-regarder-euro-2028.php`** — guide de diffusion TV, sur le modèle de `droits-tv-football.php`. Faits vérifiés par recherche web ciblée (deux requêtes croisées) avant rédaction, l'utilisateur ayant transmis une analyse externe à vérifier : TF1 détient l'exclusivité de tous les matchs de l'équipe de France (qualifications, amicaux, Ligue des Nations) jusqu'en 2028 ; beIN SPORTS détient l'intégralité des 51 matchs de la phase finale ; **TF1 et M6 se partagent 25 de ces matchs en clair** (correction importante : une première hypothèse de travail excluait M6 du dispositif, infirmée par la recherche — confirmé par plusieurs sources concordantes : universfreebox.com, info.fr, megazap.fr). Tableau récapitulatif ajouté, avec précision explicite que la répartition détaillée match par match des 25 rencontres en clair n'est pas encore publiée.
+
+**`coupe-du-monde-2030-paris-sportifs.php`** — réplique de la page Euro 2028 (section 3.64) pour la Coupe du Monde 2030 (Espagne/Portugal/Maroc + matchs du centenaire en Amérique du Sud), même logique de primeur Google sur un horizon encore plus long (plus de 3 ans), mêmes mentions ANJ obligatoires en haut et bas de page.
+
+Les trois pages sont désormais interconnectées (liens internes croisés) et référencées dans `sitemap.php`. Déployées et vérifiées en direct (200 OK sur les deux nouvelles pages).
+
 ---
 
 *Dernière mise à jour : 1er septembre 2026*

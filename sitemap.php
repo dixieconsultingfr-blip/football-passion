@@ -18,6 +18,7 @@ $staticPages = [
     ['loc' => '/euro-2028.php',                  'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/euro-2028-les-9-stades.php',     'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/euro-2028-les-8-villes-hotes.php', 'changefreq' => 'monthly', 'priority' => '0.6'],
+    ['loc' => '/euro-2028-paris-sportifs.php',    'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/coupe-du-monde.php',             'changefreq' => 'monthly', 'priority' => '0.5'],
     ['loc' => '/coupe-du-monde-2030.php',        'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/coupe-du-monde-2030-les-stades.php', 'changefreq' => 'monthly', 'priority' => '0.6'],

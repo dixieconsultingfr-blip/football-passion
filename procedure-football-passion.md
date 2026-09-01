@@ -621,6 +621,17 @@ Les trois pages sont désormais interconnectées (liens internes croisés) et r�
 
 Page ajoutée au bandeau de navigation, au sitemap, déployée et vérifiée en direct (200 OK).
 
+### 3.67 Page Ligue des Nations 2026-2027 (compétition avant l'Euro 2028) — 1er septembre 2026
+
+Nouvelle page `ligue-des-nations-2026-2027.php` : l'utilisateur a fourni une note de recherche externe à vérifier avant publication (dates approximatives, format). Vérification par 3 recherches web croisées, avec corrections notables par rapport à la note fournie :
+- Phase de ligue : confirmée du **24 septembre au 17 novembre 2026** (la note utilisateur indiquait à tort une fin au 6 octobre — seules les 3 premières journées de la France se situent début octobre).
+- Groupe de la France en Ligue A : Italie, Belgique, Turquie (Turquie-France 25/09, Belgique-France 28/09, France-Italie 2/10).
+- Quarts de finale : mars 2027 (aller-retour, 8 meilleures équipes de Ligue A).
+- Finale à quatre : confirmée du 9 au 13 juin 2027 (demi-finales 9-10 juin, petite finale et finale le 13 juin).
+- Qualifications Euro 2028 : phase de groupes mars-novembre 2027, barrages en mars 2028 — précision apportée par rapport à la page qualifications déjà publiée (section 3.66), qui donnait la fenêtre globale (25 mars 2027 - 28 mars 2028) sans détailler la coupure groupes/barrages.
+
+Page structurée autour d'une frise "route vers l'Euro 2028" (Ligue des Nations → Qualifications → Barrages → Euro 2028), avec le calendrier complet et le groupe France en détail. Liée depuis le bandeau de navigation Euro 2028, la page qualifications, et `equipe-france.php`. Ajoutée au sitemap, déployée et vérifiée en direct (200 OK).
+
 ---
 
 *Dernière mise à jour : 1er septembre 2026*

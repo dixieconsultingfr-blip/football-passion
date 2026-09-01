@@ -175,6 +175,7 @@ include __DIR__ . '/templates/header.php';
     <a href="/coupe-du-monde-2030-les-stades.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏟️ Les stades</a>
     <a href="/coupe-du-monde-2030-les-villes-hotes.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏙️ Les villes hôtes</a>
     <a href="/equipe-france.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🇫🇷 Équipe de France</a>
+    <a href="/coupe-du-monde-2030-paris-sportifs.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🎲 Paris sportifs CDM 2030</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

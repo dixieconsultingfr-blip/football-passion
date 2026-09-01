@@ -593,6 +593,16 @@ Article de classement complet (id 30, `ligue-2-journee-4-classement-2026-2027`) 
 
 **Bug découvert et corrigé** : le prototype de la section 3.57 dessinait le texte directement sur l'image source à sa résolution native (1731×909) et l'enregistrait telle quelle, dépassant la largeur max de 1200px fixée par la charte (`CLAUDE.md`). Ajout d'une étape de redimensionnement final vers 1200px de large (même technique `HighQualityBicubic` que pour les vignettes photo) avant l'encodage JPEG — à reporter dans `generate-image.php` (section 3.58) une fois l'upload de `config/secrets.php` débloqué, ce script PHP ayant le même défaut potentiel.
 
+### 3.64 Page "Paris sportifs Euro 2028" — positionnement SEO anticipé — 1er septembre 2026
+
+Création de `euro-2028-paris-sportifs.php`, sous-page de `euro-2028.php`, dans une logique de référencement anticipé (« primeur Google ») : capter le trafic de recherche sur les paris sportifs Euro 2028 dès maintenant, deux ans avant le tournoi, plutôt que d'attendre que la concurrence SEO se soit installée sur ces requêtes.
+
+**Contenu** : page volontairement évolutive vu l'horizon à deux ans (pas de cotes inventées, aucun opérateur nommé comme partenaire) — calendrier réaliste de l'ouverture progressive des marchés de paris (mars 2027 qualifications → printemps 2028 tirage au sort → cotes complètes juin-juillet 2028), rappel du cadre légal français (agrément ANJ obligatoire), les types de paris courants pour un tournoi à élimination directe, et 3 questions FAQ avec schema `FAQPage`.
+
+**Mentions légales obligatoires (réglementation ANJ)** : recherche effectuée pour vérifier le texte exact requis. Bandeau de mise en garde ajouté en haut ET en bas de page — « Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 09 74 75 13 13 (appel non surtaxé) », mention « jeu interdit aux mineurs », rappel que seuls les opérateurs agréés ANJ sont autorisés, section dédiée « Jouer de manière responsable » avec lien vers joueurs-info-service.fr. Précision explicite que le site ne perçoit aujourd'hui aucune commission d'affiliation — à mettre à jour le jour où un partenariat serait mis en place (ajouter alors `rel=\"sponsored noopener noreferrer\"` sur les liens, comme déjà prévu pour `droits-tv-football.php`).
+
+Page ajoutée au sitemap (`sitemap.php`) et liée depuis `euro-2028.php` (bouton « Paris sportifs Euro 2028 » dans la section liens internes). Déployée et vérifiée en direct (200 OK, contenu affiché correctement).
+
 ---
 
-*Dernière mise à jour : 31 août 2026*
+*Dernière mise à jour : 1er septembre 2026*

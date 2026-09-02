@@ -1,5 +1,19 @@
 [
     {
+        "id":  31,
+        "slug":  "malick-fofana-depart-ol-sunderland-2026",
+        "titre":  "Malick Fofana quitte l\u0027OL pour Sunderland : bonne affaire ou pépite bradée ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OL",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-09-02",
+        "extrait":  "Officialisé dans la nuit du 2 septembre, le départ de Malick Fofana vers Sunderland met fin à un feuilleton de mercato à rebondissements. Retour sur les détails de l\u0027opération et sur ce que ce transfert dit de la situation actuelle de l\u0027OL.",
+        "vignette":  "/images/malick-fofana-depart-ol-sunderland-2026.jpg",
+        "image_alt":  "Malick Fofana quitte l\u0027Olympique Lyonnais pour Sunderland, transfert officiel 2026"
+    },
+    {
         "id":  30,
         "slug":  "ligue-2-journee-4-classement-2026-2027",
         "titre":  "Ligue 2 - Journée 4 : Saint-Étienne fait le plein, Nantes enfin récompensé",

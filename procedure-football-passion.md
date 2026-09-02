@@ -632,6 +632,12 @@ Nouvelle page `ligue-des-nations-2026-2027.php` : l'utilisateur a fourni une not
 
 Page structurée autour d'une frise "route vers l'Euro 2028" (Ligue des Nations → Qualifications → Barrages → Euro 2028), avec le calendrier complet et le groupe France en détail. Liée depuis le bandeau de navigation Euro 2028, la page qualifications, et `equipe-france.php`. Ajoutée au sitemap, déployée et vérifiée en direct (200 OK).
 
+### 3.68 Article Malick Fofana (OL → Sunderland) — 2 septembre 2026
+
+Article id 31 (`malick-fofana-depart-ol-sunderland-2026`) sur le départ de Malick Fofana vers Sunderland, faits vérifiés par recherche web avant rédaction : transfert officialisé dans la nuit du 2 septembre, feuilleton avec un passage éclair par un accord avec Crystal Palace avant le retour de Sunderland, opération à 30 M€ + 5 M€ de bonus + 12,5 % à la revente (35 M€ au total, en retrait des 40 M€ espérés), 21 ans, 2 buts en 6 matchs cette saison, 84 matchs et 19 buts au total sous le maillot lyonnais. Post FB et texte voix off produits à partir des mêmes faits vérifiés (post amélioré à partir d'une première proposition de l'utilisateur, fusionnant le feuilleton Crystal Palace de ma version avec le ton et les hashtags de la sienne).
+
+**Nouveau bug d'encodage identifié** : un script PowerShell référençant en dur le chemin `"...\fofana départ vignette.webp"` (avec l'accent tapé directement dans le `.ps1`) a provoqué une `FileNotFoundException` — le nom de fichier était corrompu en mémoire (`dǸpart` au lieu de `départ`), confirmant une fois de plus le piège documenté en `CLAUDE.md` (PowerShell lit le `.ps1` en ANSI système sans BOM). **Corrigé en évitant complètement l'accent** via un filtre `Get-ChildItem` avec un caractère générique (`"fofana d*part vignette.webp"`) plutôt qu'en écrivant le nom exact — solution plus rapide que de passer par un fichier JSON séparé quand il s'agit seulement de localiser un fichier (pas d'en écrire le contenu accentué).
+
 ---
 
-*Dernière mise à jour : 1er septembre 2026*
+*Dernière mise à jour : 2 septembre 2026*

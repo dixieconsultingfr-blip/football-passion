@@ -235,9 +235,9 @@
         "date": "2026-09-04",
         "heure": "19:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559697,

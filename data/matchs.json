@@ -115,7 +115,7 @@
         "date": "2026-08-28",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 2,
         "score_ext": 2
     },
@@ -127,7 +127,7 @@
         "date": "2026-08-29",
         "heure": "17:15",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 2,
         "score_ext": 1
     },
@@ -139,7 +139,7 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 1,
         "score_ext": 2
     },
@@ -151,7 +151,7 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 1,
         "score_ext": 1
     },
@@ -163,7 +163,7 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 1,
         "score_ext": 3
     },
@@ -175,7 +175,7 @@
         "date": "2026-08-29",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 2,
         "score_ext": 2
     },
@@ -187,7 +187,7 @@
         "date": "2026-08-30",
         "heure": "15:00",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 3,
         "score_ext": 0
     },
@@ -199,7 +199,7 @@
         "date": "2026-08-30",
         "heure": "17:15",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 3,
         "score_ext": 2
     },
@@ -211,7 +211,7 @@
         "date": "2026-08-30",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 2,
         "score_ext": 0
     },
@@ -223,7 +223,7 @@
         "date": "2026-09-03",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
+        "status": "SCHEDULED",
         "score_dom": 0,
         "score_ext": 1
     },
@@ -247,9 +247,9 @@
         "date": "2026-09-04",
         "heure": "21:05",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 559695,

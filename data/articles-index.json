@@ -1,5 +1,19 @@
 [
     {
+        "id":  32,
+        "slug":  "lille-leader-ligue-1-journee-3-2026-2027",
+        "titre":  "Lille en tête de la Ligue 1 après 3 journées : vers quel objectif cette saison ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "LOSC",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-09-04",
+        "extrait":  "Avec 2 victoires et un match nul en 3 journées, Lille s\u0027installe provisoirement en tête du championnat. Entre ambition légitime et prudence nécessaire, quel objectif réaliste pour le LOSC cette saison ?",
+        "vignette":  "/images/lille-leader-ligue-1-journee-3-2026-2027.jpg",
+        "image_alt":  "Le LOSC en tête du classement de Ligue 1 après 3 journées, saison 2026-2027"
+    },
+    {
         "id":  31,
         "slug":  "malick-fofana-depart-ol-sunderland-2026",
         "titre":  "Malick Fofana quitte l\u0027OL pour Sunderland : bonne affaire ou pépite bradée ?",

@@ -91,6 +91,15 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
 </section>
 <?php endif; ?>
 
+<?php if (!empty($joueur['clin_oeil'])): ?>
+<section class="mb-12">
+    <div class="bg-green-900/10 border border-green-800 rounded-xl p-6">
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">😉 Le saviez-vous ?</p>
+        <p class="text-gray-300 text-sm leading-relaxed"><?= htmlspecialchars($joueur['clin_oeil']) ?></p>
+    </div>
+</section>
+<?php endif; ?>
+
 <!-- Statut Euro 2028 (dynamique) -->
 <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Statut pour l'Euro 2028</h2>

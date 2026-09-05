@@ -43,6 +43,18 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1"><?= htmlspecialchars($joueur['poste']) ?> · N°<?= (int)$joueur['numero_selection'] ?> en Bleu</p>
     <h1 class="text-4xl font-bold text-white mb-4"><?= htmlspecialchars($joueur['nom']) ?></h1>
 
+    <?php if (!empty($joueur['photo'])): ?>
+    <figure class="mb-6">
+        <img src="<?= htmlspecialchars($joueur['photo']) ?>" alt="<?= htmlspecialchars($joueur['nom']) ?> avec l'équipe de France" class="w-full max-w-2xl rounded-xl border border-gray-700" loading="eager" />
+        <?php if (!empty($joueur['photo_credit_auteur'])): ?>
+        <figcaption class="text-gray-600 text-xs mt-2">
+            Photo : <?= htmlspecialchars($joueur['photo_credit_auteur']) ?>,
+            <a href="<?= htmlspecialchars($joueur['photo_credit_licence_url']) ?>" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400"><?= htmlspecialchars($joueur['photo_credit_licence']) ?></a>
+        </figcaption>
+        <?php endif; ?>
+    </figure>
+    <?php endif; ?>
+
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <div>
             <p class="text-gray-500 text-xs mb-1">Né le</p>

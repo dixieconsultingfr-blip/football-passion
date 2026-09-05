@@ -47,7 +47,7 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
     <figure class="mb-6">
         <img src="<?= htmlspecialchars($joueur['photo']) ?>" alt="<?= htmlspecialchars($joueur['nom']) ?> avec l'équipe de France" class="w-full max-w-2xl rounded-xl border border-gray-700" loading="eager" />
         <?php if (!empty($joueur['photo_credit_auteur'])): ?>
-        <figcaption class="text-gray-400 text-xs mt-2">
+        <figcaption class="text-green-400/60 text-xs mt-2">
             Photo : <?= htmlspecialchars($joueur['photo_credit_auteur']) ?>,
             <a href="<?= htmlspecialchars($joueur['photo_credit_licence_url']) ?>" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400"><?= htmlspecialchars($joueur['photo_credit_licence']) ?></a>
         </figcaption>
@@ -57,19 +57,19 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
 
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <div>
-            <p class="text-gray-400 text-xs mb-1">Né le</p>
+            <p class="text-green-400/60 text-xs mb-1">Né le</p>
             <p class="text-white text-sm font-semibold"><?= date_fr_long($joueur['date_naissance']) ?></p>
         </div>
         <div>
-            <p class="text-gray-400 text-xs mb-1">Lieu de naissance</p>
+            <p class="text-green-400/60 text-xs mb-1">Lieu de naissance</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['lieu_naissance']) ?></p>
         </div>
         <div>
-            <p class="text-gray-400 text-xs mb-1">Club actuel</p>
+            <p class="text-green-400/60 text-xs mb-1">Club actuel</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['club_actuel']) ?> (n°<?= (int)$joueur['numero_club'] ?>)</p>
         </div>
         <div>
-            <p class="text-gray-400 text-xs mb-1">Taille</p>
+            <p class="text-green-400/60 text-xs mb-1">Taille</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['taille']) ?></p>
         </div>
     </div>

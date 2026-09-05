@@ -25,7 +25,7 @@ $dateMaj         = $statut['date_maj'] ?? null;
 function badge_statut(?bool $val, string $labelOui, string $labelNon, string $labelAttente): string {
     if ($val === true)  return '<span class="inline-flex items-center gap-1.5 bg-green-900/30 border border-green-700 text-green-400 text-xs font-semibold px-3 py-1.5 rounded-full">✅ ' . htmlspecialchars($labelOui) . '</span>';
     if ($val === false) return '<span class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 text-gray-400 text-xs font-semibold px-3 py-1.5 rounded-full">➖ ' . htmlspecialchars($labelNon) . '</span>';
-    return '<span class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 text-gray-500 text-xs font-semibold px-3 py-1.5 rounded-full">⏳ ' . htmlspecialchars($labelAttente) . '</span>';
+    return '<span class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 text-gray-400 text-xs font-semibold px-3 py-1.5 rounded-full">⏳ ' . htmlspecialchars($labelAttente) . '</span>';
 }
 ?>
 
@@ -47,7 +47,7 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
     <figure class="mb-6">
         <img src="<?= htmlspecialchars($joueur['photo']) ?>" alt="<?= htmlspecialchars($joueur['nom']) ?> avec l'équipe de France" class="w-full max-w-2xl rounded-xl border border-gray-700" loading="eager" />
         <?php if (!empty($joueur['photo_credit_auteur'])): ?>
-        <figcaption class="text-gray-600 text-xs mt-2">
+        <figcaption class="text-gray-400 text-xs mt-2">
             Photo : <?= htmlspecialchars($joueur['photo_credit_auteur']) ?>,
             <a href="<?= htmlspecialchars($joueur['photo_credit_licence_url']) ?>" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400"><?= htmlspecialchars($joueur['photo_credit_licence']) ?></a>
         </figcaption>
@@ -57,19 +57,19 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
 
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <div>
-            <p class="text-gray-500 text-xs mb-1">Né le</p>
+            <p class="text-gray-400 text-xs mb-1">Né le</p>
             <p class="text-white text-sm font-semibold"><?= date_fr_long($joueur['date_naissance']) ?></p>
         </div>
         <div>
-            <p class="text-gray-500 text-xs mb-1">Lieu de naissance</p>
+            <p class="text-gray-400 text-xs mb-1">Lieu de naissance</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['lieu_naissance']) ?></p>
         </div>
         <div>
-            <p class="text-gray-500 text-xs mb-1">Club actuel</p>
+            <p class="text-gray-400 text-xs mb-1">Club actuel</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['club_actuel']) ?> (n°<?= (int)$joueur['numero_club'] ?>)</p>
         </div>
         <div>
-            <p class="text-gray-500 text-xs mb-1">Taille</p>
+            <p class="text-gray-400 text-xs mb-1">Taille</p>
             <p class="text-white text-sm font-semibold"><?= htmlspecialchars($joueur['taille']) ?></p>
         </div>
     </div>
@@ -120,7 +120,7 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
             <?= badge_statut($convoqueQualifs, 'Convoqué pour les qualifications', 'Non retenu pour les qualifications', 'Liste des qualifications pas encore annoncée') ?>
             <?= badge_statut($convoqueFinale, 'Sélectionné pour l\'Euro 2028', 'Non retenu pour l\'Euro 2028', 'Liste de l\'Euro 2028 pas encore annoncée') ?>
         </div>
-        <p class="text-gray-500 text-xs">
+        <p class="text-gray-400 text-xs">
             Statut mis à jour le <?= $dateMaj ? date_fr_long($dateMaj) : 'non renseigné' ?>. Cette fiche est actualisée à chaque annonce officielle de sélection —
             <a href="/euro-2028-qualifications.php" class="text-green-400 hover:text-green-300 underline">suivre le calendrier complet des qualifications</a>.
         </p>

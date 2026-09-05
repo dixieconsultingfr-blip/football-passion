@@ -83,11 +83,11 @@ include __DIR__ . '/templates/header.php';
                 <div class="bg-gray-800 border border-red-800/40 rounded-lg p-3 flex items-center justify-between gap-3">
                     <div class="flex-1 min-w-0 space-y-1.5">
                         <div class="flex justify-between items-center gap-2 text-sm">
-                            <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                            <span class="text-white leading-tight"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
                             <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
                         </div>
                         <div class="flex justify-between items-center gap-2 text-sm">
-                            <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                            <span class="text-white leading-tight"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                             <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
                         </div>
                     </div>
@@ -114,11 +114,11 @@ include __DIR__ . '/templates/header.php';
                 <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-3">
                     <div class="flex-1 min-w-0 space-y-1.5">
                         <div class="flex justify-between items-center gap-2 text-sm">
-                            <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                            <span class="text-white leading-tight"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
                             <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
                         </div>
                         <div class="flex justify-between items-center gap-2 text-sm">
-                            <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                            <span class="text-white leading-tight"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                             <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
                         </div>
                     </div>
@@ -150,9 +150,9 @@ include __DIR__ . '/templates/header.php';
                             <div class="text-gray-500 text-xs w-10 shrink-0"><?= htmlspecialchars($m['heure']) ?></div>
                             <?php endif; ?>
                             <div class="flex-1 min-w-0 flex items-center justify-center gap-2">
-                                <span class="text-white text-sm text-right flex-1 truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                                <span class="text-white text-sm text-right flex-1 leading-tight"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
                                 <span class="text-gray-600 text-xs px-1 shrink-0">vs</span>
-                                <span class="text-white text-sm flex-1 truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                                <span class="text-white text-sm flex-1 leading-tight"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                             </div>
                         </div>
                         <?php endforeach; ?>

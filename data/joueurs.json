@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nom": "Kylian Mbappé",
+    "slug": "kylian-mbappe",
+    "poste": "Attaquant",
+    "date_naissance": "1998-12-20",
+    "lieu_naissance": "Paris (19e arrondissement)",
+    "taille": "1,78 m",
+    "club_actuel": "Real Madrid",
+    "numero_club": 10,
+    "numero_selection": 10,
+    "note": "Devenu le meilleur buteur de l'histoire de l'équipe de France durant la Coupe du Monde 2026.",
+    "statut_euro2028": {
+      "convoque_qualifs": null,
+      "convoque_finale": null,
+      "date_maj": "2026-09-05"
+    }
+  }
+]

@@ -72,3 +72,20 @@ function load_article(string $basePath, string $slug): ?array {
     }
     return json_decode($raw, true) ?: null;
 }
+
+function load_joueurs(string $basePath): array {
+    $raw = @file_get_contents($basePath . '/data/joueurs.json');
+    if (!$raw) return [];
+    if (str_starts_with($raw, "\xEF\xBB\xBF")) {
+        $raw = substr($raw, 3);
+    }
+    return json_decode($raw, true) ?? [];
+}
+
+function load_joueur(string $basePath, string $slug): ?array {
+    if (!preg_match('/^[a-z0-9-]+$/', $slug)) return null;
+    foreach (load_joueurs($basePath) as $j) {
+        if (($j['slug'] ?? '') === $slug) return $j;
+    }
+    return null;
+}

@@ -3,6 +3,7 @@ header('Content-Type: application/xml; charset=utf-8');
 require_once __DIR__ . '/blog/helpers.php';
 
 $articles = load_articles_index(__DIR__);
+$joueurs = load_joueurs(__DIR__);
 
 $staticPages = [
     ['loc' => '/',                              'changefreq' => 'daily',   'priority' => '1.0'],
@@ -74,6 +75,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     <lastmod><?= htmlspecialchars($a['date']) ?></lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+<?php endforeach; ?>
+<?php foreach ($joueurs as $j): ?>
+  <url>
+    <loc>https://football-passion.fr/joueur.php?slug=<?= urlencode($j['slug']) ?></loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 <?php endforeach; ?>
 <?php foreach ($archivePages as $loc): ?>

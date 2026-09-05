@@ -124,6 +124,23 @@ include __DIR__ . '/templates/header.php';
 
 </div>
 
+<!-- Joueurs -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Les joueurs des Bleus</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <?php foreach (load_joueurs(__DIR__) as $j): ?>
+        <a href="/joueur.php?slug=<?= urlencode($j['slug']) ?>" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 flex items-center gap-4 transition-colors">
+            <span class="text-3xl font-bold text-green-400 shrink-0">#<?= (int)$j['numero_selection'] ?></span>
+            <div>
+                <div class="text-white font-semibold"><?= htmlspecialchars($j['nom']) ?></div>
+                <div class="text-gray-500 text-xs mt-1"><?= htmlspecialchars($j['poste']) ?> · <?= htmlspecialchars($j['club_actuel']) ?></div>
+            </div>
+        </a>
+        <?php endforeach; ?>
+    </div>
+    <p class="text-gray-600 text-xs mt-3 italic">Effectif en cours de complétion, mis à jour au fil des annonces de sélection.</p>
+</section>
+
 <!-- Actualités liées -->
 <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Actualités — Équipe de France</h2>

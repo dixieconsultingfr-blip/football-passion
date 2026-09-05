@@ -67,6 +67,30 @@ function badge_statut(?bool $val, string $labelOui, string $labelNon, string $la
     <?php endif; ?>
 </header>
 
+<?php if (!empty($joueur['bio'])): ?>
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Parcours</h2>
+    <p class="text-gray-300 leading-relaxed bg-gray-800 rounded-xl border border-gray-700 p-6"><?= htmlspecialchars($joueur['bio']) ?></p>
+</section>
+<?php endif; ?>
+
+<?php if (!empty($joueur['forme_club_2026_27']) || !empty($joueur['palmares_cdm2026']) || !empty($joueur['ballon_or_2026'])): ?>
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">En forme, en club et en sélection</h2>
+    <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
+        <?php if (!empty($joueur['forme_club_2026_27'])): ?>
+        <p>⚽ <?= htmlspecialchars($joueur['forme_club_2026_27']) ?></p>
+        <?php endif; ?>
+        <?php if (!empty($joueur['palmares_cdm2026'])): ?>
+        <p>🏆 <?= htmlspecialchars($joueur['palmares_cdm2026']) ?></p>
+        <?php endif; ?>
+        <?php if (!empty($joueur['ballon_or_2026'])): ?>
+        <p>🥇 <?= htmlspecialchars($joueur['ballon_or_2026']) ?></p>
+        <?php endif; ?>
+    </div>
+</section>
+<?php endif; ?>
+
 <!-- Statut Euro 2028 (dynamique) -->
 <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Statut pour l'Euro 2028</h2>

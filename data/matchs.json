@@ -319,9 +319,9 @@
         "date": "2026-09-06",
         "heure": "20:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 1
     },
     {
         "id": 559689,

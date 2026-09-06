@@ -646,6 +646,16 @@ Nouvelle fonctionnalité demandée par l'utilisateur : une fiche par joueur de l
 
 **Point de vigilance sourcing** : l'utilisateur a fourni un très gros pavé de résultats Google bruts sur Mbappé (extraits d'articles de presse, réactions Facebook/X, rumeurs) pour amorcer la fiche. Ce contenu n'a pas été repris tel quel — ni le texte du panneau de connaissances Google (paraphrase de Wikipédia), ni les posts réseaux sociaux, ni les rumeurs (vie privée, projet d'enlèvement, etc.), pour rester dans la ligne éditoriale du site (faits sportifs vérifiés uniquement, jamais de vie privée) et éviter toute reproduction de contenu protégé. Seuls des faits factuels courts et recoupés ont été retenus (date/lieu de naissance, taille, club, numéro), reformulés dans nos propres mots. Le nombre exact de sélections/buts en Bleu n'a pas été indiqué : les sources trouvées se contredisaient (58, 64 et 66 buts selon les articles) et la fiche FFF officielle a renvoyé une erreur 403 — seule la mention qualitative « meilleur buteur de l'histoire de l'équipe de France » a été retenue, confirmée de façon cohérente par toutes les sources.
 
+### 3.70 Premier bilan Google Search Console + optimisation CTR — 6 septembre 2026
+
+Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via captures d'écran (pas d'accès MCP direct à ce jour, voir todolist) : 49 clics, 1 830 impressions, CTR moyen 2,7 %, position moyenne 12,5 — nette accélération à partir du 28 août, cohérente avec la montée en cadence de publication déjà constatée côté Facebook (section 3.62).
+
+**Requête à fort potentiel identifiée** : « partage abonnement ligue 1 plus » — 69 impressions mais seulement 1 clic, position 8,0. L'article concerné (id 23, `partager-abonnement-ligue-1-plus.json`) avait un meta title/desc correct mais peu accrocheur. Réécrits pour un CTR meilleur à position égale : title passé de « Peut-on partager son abonnement Ligue 1+ ? » à « Partager son abonnement Ligue 1+ : oui, voici comment » (réponse immédiate dans le titre, meilleur alignement avec l'intention de recherche), meta description resserrée autour du chiffre concret (99,50 € par personne).
+
+**Signal positif relevé** : la requête « zidane euro 2028 » est déjà en position 2,0 malgré un volume encore faible — validation précoce de la stratégie de contenu anticipé sur l'Euro 2028 (sections 3.64-3.66).
+
+**Indexation** : 70 pages indexées contre 102 non indexées, réparties en 6 motifs. Analyse à froid des 2 motifs bénins (« page avec redirection », 58 pages — redirections http/www attendues ; « autre page avec balise canonique correcte », 24 pages — déduplication qui fonctionne comme prévu depuis le correctif du 23 août, section 3.51) et repérage de 3 motifs à surveiller de plus près : « page en double sans URL canonique sélectionnée » (6), « introuvable 404 » (5), « explorée actuellement non indexée » (1). Détail des URLs concernées demandé à l'utilisateur (accès GSC direct nécessaire, non disponible depuis cette session) — analyse à poursuivre dès réception.
+
 ---
 
-*Dernière mise à jour : 5 septembre 2026*
+*Dernière mise à jour : 6 septembre 2026*

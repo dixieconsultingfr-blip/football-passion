@@ -23,13 +23,14 @@ if ($slug !== '') {
         exit;
     }
 
-    $page_title = htmlspecialchars($article['meta_title'] ?? $article['titre']) . ' — Football Passion';
-    $meta_desc  = $article['meta_desc'] ?? $article['extrait'];
-    $og_image   = $article['image'] ?? $article['vignette'] ?? null;
-    $og_type    = 'article';
+    $page_title   = htmlspecialchars($article['meta_title'] ?? $article['titre']) . ' — Football Passion';
+    $meta_desc    = $article['meta_desc'] ?? $article['extrait'];
+    $og_image     = $article['image'] ?? $article['vignette'] ?? null;
+    $og_type      = 'article';
+    $articleUrlAbs = 'https://football-passion.fr/blog/' . rawurlencode($article['slug']);
+    $canonical_url = $articleUrlAbs;
     include BASE_PATH . '/templates/header.php';
     $articleImageAbs = 'https://football-passion.fr' . ($article['image'] ?? $article['vignette'] ?? '/images/charte-graphique/logo-fp-icon-512.png');
-    $articleUrlAbs   = 'https://football-passion.fr/blog/' . rawurlencode($article['slug']);
     ?>
     <script type="application/ld+json">
     {

@@ -22,6 +22,47 @@ foreach ($aVenir as $m) {
     $parDate[$m['date']][] = $m;
 }
 
+// ── Classement de la phase de ligue (format 36 équipes depuis 2024-2025) ──
+// La phase de qualifications (juillet-août) inclut des clubs qui ne participent pas
+// à la phase de ligue : on filtre donc sur la date de début de la phase de ligue
+// (8 septembre 2026) pour n'obtenir que les 36 clubs et leurs 144 matchs (8 par club).
+$matchsPhaseLigue = array_values(array_filter($matchsCL, fn($m) => ($m['date'] ?? '') >= '2026-09-08'));
+$termines2 = array_filter($matchsPhaseLigue, fn($m) => ($m['status'] ?? '') === 'FINISHED');
+$tableCL = [];
+foreach ($matchsPhaseLigue as $m) {
+    foreach ([$m['domicile'] ?? null, $m['exterieur'] ?? null] as $eq) {
+        if ($eq !== null && !isset($tableCL[$eq])) {
+            $tableCL[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
+        }
+    }
+}
+foreach ($termines2 as $m) {
+    foreach ([
+        ['equipe' => $m['domicile'] ?? '?', 'bp' => $m['score_dom'] ?? 0, 'bc' => $m['score_ext'] ?? 0],
+        ['equipe' => $m['exterieur'] ?? '?', 'bp' => $m['score_ext'] ?? 0, 'bc' => $m['score_dom'] ?? 0],
+    ] as $c) {
+        $eq = $c['equipe'];
+        $tableCL[$eq]['MJ']++;
+        $tableCL[$eq]['BP'] += $c['bp'];
+        $tableCL[$eq]['BC'] += $c['bc'];
+        if ($c['bp'] > $c['bc'])       { $tableCL[$eq]['G']++; }
+        elseif ($c['bp'] === $c['bc']) { $tableCL[$eq]['N']++; }
+        else                            { $tableCL[$eq]['P']++; }
+    }
+}
+foreach ($tableCL as &$t) {
+    $t['DB']  = $t['BP'] - $t['BC'];
+    $t['Pts'] = $t['G'] * 3 + $t['N'];
+}
+unset($t);
+$classementCL = array_values($tableCL);
+usort($classementCL, fn($a, $b) =>
+    $b['Pts'] <=> $a['Pts']
+    ?: $b['DB'] <=> $a['DB']
+    ?: $b['BP'] <=> $a['BP']
+    ?: strcmp($a['club'], $b['club'])
+);
+
 // ── Actualités liées ──
 $articlesAll = load_articles_index(__DIR__);
 $articlesCL  = array_values(array_filter($articlesAll, fn($a) =>
@@ -199,6 +240,54 @@ include __DIR__ . '/templates/header.php';
     </div>
 
 </div>
+
+<!-- Classement phase de ligue -->
+<section class="mb-10">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-white">Classement — phase de ligue</h2>
+    </div>
+    <div class="flex flex-wrap gap-4 mb-4 text-xs">
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-green-900/40 border border-green-700 inline-block"></span> <span class="text-gray-400">1-8 : qualifiés directs (8es de finale)</span></span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-amber-900/40 border border-amber-700 inline-block"></span> <span class="text-gray-400">9-24 : barrages</span></span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-red-900/30 border border-red-800 inline-block"></span> <span class="text-gray-400">25-36 : éliminés</span></span>
+    </div>
+    <div class="bg-gray-900/40 border border-gray-800 rounded-2xl overflow-x-auto">
+        <table class="w-full text-sm">
+            <caption class="sr-only">Classement de la phase de ligue de la Ligue des champions 2026-2027</caption>
+            <thead>
+                <tr class="text-gray-500 uppercase text-xs border-b border-gray-700">
+                    <th class="text-left px-4 py-3 font-semibold">Club</th>
+                    <th class="text-center px-2 py-3 font-semibold">MJ</th>
+                    <th class="text-center px-2 py-3 font-semibold">G</th>
+                    <th class="text-center px-2 py-3 font-semibold">N</th>
+                    <th class="text-center px-2 py-3 font-semibold">P</th>
+                    <th class="text-center px-2 py-3 font-semibold">BP</th>
+                    <th class="text-center px-2 py-3 font-semibold">BC</th>
+                    <th class="text-center px-2 py-3 font-semibold">DB</th>
+                    <th class="text-center px-4 py-3 font-semibold text-green-400">Pts</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+                <?php foreach ($classementCL as $i => $c): $rang = $i + 1; ?>
+                <tr class="<?= $rang <= 8 ? 'bg-green-900/10' : ($rang <= 24 ? 'bg-amber-900/5' : 'bg-red-900/10') ?>">
+                    <td class="px-4 py-2.5 text-white font-medium whitespace-nowrap">
+                        <span class="text-gray-500 font-normal mr-2 inline-block w-5"><?= $rang ?></span><?= htmlspecialchars($c['club']) ?>
+                    </td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['MJ'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['G'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['N'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['P'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BP'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['BC'] ?></td>
+                    <td class="px-2 py-2.5 text-center text-gray-400"><?= $c['DB'] > 0 ? '+' . $c['DB'] : $c['DB'] ?></td>
+                    <td class="px-4 py-2.5 text-center text-green-400 font-bold"><?= $c['Pts'] ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé automatiquement à partir des résultats de la phase de ligue (36 clubs, 8 matchs chacun).</p>
+</section>
 
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">

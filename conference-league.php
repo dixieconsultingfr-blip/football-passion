@@ -2,10 +2,10 @@
 require_once __DIR__ . '/blog/helpers.php';
 
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
-$matchsCL  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'CL'));
+$matchsCE  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'Conference'));
 
 // ── Derniers résultats : la dernière date jouée ──
-$termines = array_values(array_filter($matchsCL, fn($m) => ($m['status'] ?? '') === 'FINISHED'));
+$termines = array_values(array_filter($matchsCE, fn($m) => ($m['status'] ?? '') === 'FINISHED'));
 usort($termines, fn($a, $b) => strcmp($b['date'], $a['date']));
 $derniereDate = $termines[0]['date'] ?? null;
 $derniersResultats = $derniereDate !== null
@@ -13,8 +13,8 @@ $derniersResultats = $derniereDate !== null
     : [];
 
 // ── Prochains matchs, groupés par date ──
-$enDirect = array_values(array_filter($matchsCL, fn($m) => ($m['status'] ?? '') === 'LIVE'));
-$aVenir = array_values(array_filter($matchsCL, fn($m) => !in_array($m['status'] ?? 'SCHEDULED', ['FINISHED', 'LIVE'], true)));
+$enDirect = array_values(array_filter($matchsCE, fn($m) => ($m['status'] ?? '') === 'LIVE'));
+$aVenir = array_values(array_filter($matchsCE, fn($m) => !in_array($m['status'] ?? 'SCHEDULED', ['FINISHED', 'LIVE'], true)));
 usort($aVenir, fn($a, $b) => strcmp($a['date'] . ($a['heure'] ?? ''), $b['date'] . ($b['heure'] ?? '')));
 $aVenir = array_slice($aVenir, 0, 20);
 $parDate = [];
@@ -22,17 +22,17 @@ foreach ($aVenir as $m) {
     $parDate[$m['date']][] = $m;
 }
 
-// ── Classement de la phase de ligue (format 36 équipes depuis 2024-2025) ──
-// La phase de qualifications (juillet-août) inclut des clubs qui ne participent pas
-// à la phase de ligue : on filtre donc sur la date de début de la phase de ligue
-// (8 septembre 2026) pour n'obtenir que les 36 clubs et leurs 144 matchs (8 par club).
-$matchsPhaseLigue = array_values(array_filter($matchsCL, fn($m) => ($m['date'] ?? '') >= '2026-09-08'));
+// ── Classement de la phase de ligue (format 36 équipes, 6 matchs chacun) ──
+// La Ligue Conférence utilise le même format Swiss que la CL et l'EL, mais avec
+// seulement 6 journées (contre 8). Compétition non synchronisée automatiquement
+// par n8n (voir CLAUDE.md) : saisie manuelle requise.
+$matchsPhaseLigue = array_values(array_filter($matchsCE, fn($m) => ($m['date'] ?? '') >= '2026-10-15'));
 $termines2 = array_filter($matchsPhaseLigue, fn($m) => ($m['status'] ?? '') === 'FINISHED');
-$tableCL = [];
+$tableCE = [];
 foreach ($matchsPhaseLigue as $m) {
     foreach ([$m['domicile'] ?? null, $m['exterieur'] ?? null] as $eq) {
-        if ($eq !== null && !isset($tableCL[$eq])) {
-            $tableCL[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
+        if ($eq !== null && !isset($tableCE[$eq])) {
+            $tableCE[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
         }
     }
 }
@@ -42,21 +42,21 @@ foreach ($termines2 as $m) {
         ['equipe' => $m['exterieur'] ?? '?', 'bp' => $m['score_ext'] ?? 0, 'bc' => $m['score_dom'] ?? 0],
     ] as $c) {
         $eq = $c['equipe'];
-        $tableCL[$eq]['MJ']++;
-        $tableCL[$eq]['BP'] += $c['bp'];
-        $tableCL[$eq]['BC'] += $c['bc'];
-        if ($c['bp'] > $c['bc'])       { $tableCL[$eq]['G']++; }
-        elseif ($c['bp'] === $c['bc']) { $tableCL[$eq]['N']++; }
-        else                            { $tableCL[$eq]['P']++; }
+        $tableCE[$eq]['MJ']++;
+        $tableCE[$eq]['BP'] += $c['bp'];
+        $tableCE[$eq]['BC'] += $c['bc'];
+        if ($c['bp'] > $c['bc'])       { $tableCE[$eq]['G']++; }
+        elseif ($c['bp'] === $c['bc']) { $tableCE[$eq]['N']++; }
+        else                            { $tableCE[$eq]['P']++; }
     }
 }
-foreach ($tableCL as &$t) {
+foreach ($tableCE as &$t) {
     $t['DB']  = $t['BP'] - $t['BC'];
     $t['Pts'] = $t['G'] * 3 + $t['N'];
 }
 unset($t);
-$classementCL = array_values($tableCL);
-usort($classementCL, fn($a, $b) =>
+$classementCE = array_values($tableCE);
+usort($classementCE, fn($a, $b) =>
     $b['Pts'] <=> $a['Pts']
     ?: $b['DB'] <=> $a['DB']
     ?: $b['BP'] <=> $a['BP']
@@ -65,13 +65,13 @@ usort($classementCL, fn($a, $b) =>
 
 // ── Actualités liées ──
 $articlesAll = load_articles_index(__DIR__);
-$articlesCL  = array_values(array_filter($articlesAll, fn($a) =>
-    ($a['categorie'] ?? '') === 'CL' || in_array('Champions League', $a['etiquettes'] ?? [])
+$articlesCE  = array_values(array_filter($articlesAll, fn($a) =>
+    ($a['categorie'] ?? '') === 'Conference' || in_array('Ligue Conférence', $a['etiquettes'] ?? [])
 ));
-usort($articlesCL, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
+usort($articlesCE, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'Champions League — Résultats et actualités 2026-2027';
-$meta_desc  = "Résultats, calendrier et pronostics Ligue des champions 2026-2027 : qualifications, phase de ligue, actualités et infos abonnement.";
+$page_title = 'Ligue Conférence — Résultats et actualités 2026-2027';
+$meta_desc  = "Résultats et calendrier de la Ligue Europa Conférence 2026-2027 : phase de ligue, classement et actualités.";
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -79,9 +79,9 @@ include __DIR__ . '/templates/header.php';
 {
   "@context": "https://schema.org",
   "@type": "SportsEvent",
-  "name": "UEFA Champions League 2026-2027",
+  "name": "UEFA Europa Conference League 2026-2027",
   "sport": "Football",
-  "url": "https://football-passion.fr/champions-league.php"
+  "url": "https://football-passion.fr/conference-league.php"
 }
 </script>
 
@@ -89,18 +89,18 @@ include __DIR__ . '/templates/header.php';
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
-    <span class="text-gray-400">Champions League</span>
+    <span class="text-gray-400">Ligue Conférence</span>
 </nav>
 
 <!-- Hero -->
 <header class="mb-10 flex items-center gap-4">
     <span class="inline-flex items-center justify-center w-14 h-14 bg-white rounded-xl p-2 shrink-0">
-        <img src="/images/logo/logo-champions-league.webp" alt="Logo Ligue des champions" class="w-full h-full object-contain" />
+        <img src="/images/logo/logo-conference-uefa.png" alt="Logo Ligue Europa Conférence" class="w-full h-full object-contain" />
     </span>
     <div>
         <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Coupe d'Europe</p>
-        <h1 class="text-4xl font-bold text-white mb-1">Champions League</h1>
-        <p class="text-gray-400 text-sm">Saison 2026-2027 · Résultats, pronostics et actualités</p>
+        <h1 class="text-4xl font-bold text-white mb-1">Ligue Europa Conférence</h1>
+        <p class="text-gray-400 text-sm">Saison 2026-2027 · Résultats et actualités</p>
     </div>
 </header>
 
@@ -143,7 +143,7 @@ include __DIR__ . '/templates/header.php';
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl font-bold text-white">Derniers résultats</h2>
-                <a href="/archives.php?comp=CL&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
+                <a href="/archives.php?comp=Conference&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>
             </div>
             <?php if (empty($derniersResultats)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
@@ -212,14 +212,14 @@ include __DIR__ . '/templates/header.php';
         <!-- Actualités liées -->
         <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5">
             <h2 class="text-lg font-bold text-white mb-3">Actualités</h2>
-            <?php if (empty($articlesCL)): ?>
+            <?php if (empty($articlesCE)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
                 Aucun article publié pour le moment.
                 <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
             </div>
             <?php else: ?>
             <div class="space-y-3">
-                <?php foreach (array_slice($articlesCL, 0, 6) as $a): ?>
+                <?php foreach (array_slice($articlesCE, 0, 6) as $a): ?>
                 <a href="/blog/<?= urlencode($a['slug']) ?>" class="flex gap-3 bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg overflow-hidden transition-colors p-2.5">
                     <?php if (!empty($a['vignette'])): ?>
                     <div class="w-16 h-16 shrink-0 rounded-md overflow-hidden">
@@ -233,7 +233,7 @@ include __DIR__ . '/templates/header.php';
                 </a>
                 <?php endforeach; ?>
             </div>
-            <a href="/blog?cat=CL" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles CL →</a>
+            <a href="/blog?cat=Conference" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles Ligue Conférence →</a>
             <?php endif; ?>
         </section>
 
@@ -251,9 +251,14 @@ include __DIR__ . '/templates/header.php';
         <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-amber-900/40 border border-amber-700 inline-block"></span> <span class="text-gray-400">9-24 : barrages</span></span>
         <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-red-900/30 border border-red-800 inline-block"></span> <span class="text-gray-400">25-36 : éliminés</span></span>
     </div>
+    <?php if (empty($classementCE)): ?>
+    <div class="bg-gray-800 rounded-xl border border-gray-700 p-8 text-center text-gray-500 text-sm">
+        Le classement s'affichera dès le début de la phase de ligue (15 octobre 2026).
+    </div>
+    <?php else: ?>
     <div class="bg-gray-900/40 border border-gray-800 rounded-2xl overflow-x-auto">
         <table class="w-full text-sm">
-            <caption class="sr-only">Classement de la phase de ligue de la Ligue des champions 2026-2027</caption>
+            <caption class="sr-only">Classement de la phase de ligue de la Ligue Europa Conférence 2026-2027</caption>
             <thead>
                 <tr class="text-gray-500 uppercase text-xs border-b border-gray-700">
                     <th class="text-left px-4 py-3 font-semibold">Club</th>
@@ -268,7 +273,7 @@ include __DIR__ . '/templates/header.php';
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-800">
-                <?php foreach ($classementCL as $i => $c): $rang = $i + 1; ?>
+                <?php foreach ($classementCE as $i => $c): $rang = $i + 1; ?>
                 <tr class="<?= $rang <= 8 ? 'bg-green-900/10' : ($rang <= 24 ? 'bg-amber-900/5' : 'bg-red-900/10') ?>">
                     <td class="px-4 py-2.5 text-white font-medium whitespace-nowrap">
                         <span class="text-gray-500 font-normal mr-2 inline-block w-5"><?= $rang ?></span><?= htmlspecialchars($c['club']) ?>
@@ -286,15 +291,15 @@ include __DIR__ . '/templates/header.php';
             </tbody>
         </table>
     </div>
-    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé automatiquement à partir des résultats de la phase de ligue (36 clubs, 8 matchs chacun).</p>
+    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé automatiquement à partir des résultats de la phase de ligue (36 clubs, 6 matchs chacun). Compétition non synchronisée automatiquement : mise à jour manuelle.</p>
+    <?php endif; ?>
 </section>
 
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">
     <a href="/europa-league.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏆 Europa League</a>
-    <a href="/conference-league.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🥉 Ligue Conférence</a>
+    <a href="/champions-league.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">⭐ Champions League</a>
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier toutes compétitions</a>
-    <a href="/archives.php?comp=CL&amp;saison=2026-2027" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🗂️ Tous les résultats de la Champions League</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

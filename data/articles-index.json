@@ -1,5 +1,19 @@
 [
     {
+        "id":  33,
+        "slug":  "ligue-1-journee-3-resultats-2026-2027",
+        "titre":  "Ligue 1 - Journée 3 : le récap complet et les faits marquants",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1",
+                           "Journée 3"
+                       ],
+        "date":  "2026-09-07",
+        "extrait":  "Monaco enchaîne une 3e victoire de suite et s\u0027installe seul en tête, tandis que l\u0027OM retombe au Vélodrome et que Strasbourg cartonne à Troyes. Retour complet sur la journée 3 de Ligue 1.",
+        "vignette":  "/images/ligue-1-journee-3-resultats-2026-2027.jpg",
+        "image_alt":  "Résultats complets de la journée 3 de Ligue 1, saison 2026-2027"
+    },
+    {
         "id":  32,
         "slug":  "lille-leader-ligue-1-journee-3-2026-2027",
         "titre":  "Lille en tête de la Ligue 1 après 3 journées : vers quel objectif cette saison ?",

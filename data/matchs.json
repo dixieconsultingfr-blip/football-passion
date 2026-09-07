@@ -9,7 +9,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  4,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  1
     },
     {
         "id":  559712,
@@ -21,7 +22,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  5,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  559711,
@@ -33,7 +35,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  559714,
@@ -45,7 +48,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  1
     },
     {
         "id":  559716,
@@ -57,7 +61,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  1
     },
     {
         "id":  559718,
@@ -69,7 +74,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  559717,
@@ -81,7 +87,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  559719,
@@ -93,7 +100,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  1
     },
     {
         "id":  559713,
@@ -105,7 +113,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  1
     },
     {
         "id":  559702,
@@ -117,7 +126,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  2
     },
     {
         "id":  559704,
@@ -129,7 +139,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  559705,
@@ -141,7 +152,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  2
     },
     {
         "id":  559706,
@@ -153,7 +165,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  2
     },
     {
         "id":  559708,
@@ -165,7 +178,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  3
+        "score_ext":  3,
+        "journee":  2
     },
     {
         "id":  559710,
@@ -177,7 +191,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  2
     },
     {
         "id":  559707,
@@ -189,7 +204,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  559709,
@@ -201,7 +217,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  2
     },
     {
         "id":  559703,
@@ -213,7 +230,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  0
+        "score_ext":  0,
+        "journee":  2
     },
     {
         "id":  559696,
@@ -225,7 +243,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  3
     },
     {
         "id":  559699,
@@ -237,7 +256,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  3,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  3
     },
     {
         "id":  559697,
@@ -249,7 +269,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  3
     },
     {
         "id":  559695,
@@ -261,7 +282,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  0,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  3
     },
     {
         "id":  559693,
@@ -273,7 +295,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  3
     },
     {
         "id":  559701,
@@ -285,7 +308,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  1
+        "score_ext":  1,
+        "journee":  3
     },
     {
         "id":  559700,
@@ -297,7 +321,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  6
+        "score_ext":  6,
+        "journee":  3
     },
     {
         "id":  559698,
@@ -309,7 +334,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  1,
-        "score_ext":  2
+        "score_ext":  2,
+        "journee":  3
     },
     {
         "id":  559694,
@@ -321,7 +347,8 @@
         "stade":  "",
         "status":  "FINISHED",
         "score_dom":  2,
-        "score_ext":  3
+        "score_ext":  3,
+        "journee":  3
     },
     {
         "id":  559689,

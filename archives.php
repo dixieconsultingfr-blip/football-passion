@@ -67,6 +67,24 @@ if ($comp !== '' && $saison !== '' && preg_match('/^[A-Za-z0-9]+$/', $comp) && p
     });
 }
 
+// ── Article associé à chaque journée (même compétition, étiquette "Journée N") ──
+$articlesParJournee = [];
+if ($comp !== '' && $saison !== '') {
+    $articlesIndex = load_articles_index(__DIR__);
+    foreach ($articlesIndex as $a) {
+        if (($a['categorie'] ?? '') !== $comp) { continue; }
+        foreach ($a['etiquettes'] ?? [] as $etq) {
+            if (preg_match('/^Journée\s+(\d+)$/u', $etq, $mtc)) {
+                $num = (int)$mtc[1];
+                // En cas de plusieurs articles pour la même journée, garder le plus récent
+                if (!isset($articlesParJournee[$num]) || strtotime($a['date']) > strtotime($articlesParJournee[$num]['date'])) {
+                    $articlesParJournee[$num] = $a;
+                }
+            }
+        }
+    }
+}
+
 $page_title = 'Archives — Historique des résultats par saison | Football Passion';
 $meta_desc  = "Historique complet des résultats par saison et par compétition : Ligue 1, Ligue 2, Champions League, Europa League et Équipe de France.";
 include __DIR__ . '/templates/header.php';
@@ -134,17 +152,22 @@ if (($matchsAffiches[0]['journee'] ?? null) !== null) {
 <div class="space-y-6">
     <?php foreach ($parJournee as $num => $matchsJournee): ?>
     <div>
-        <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Journée <?= (int)$num ?></p>
+        <div class="flex items-center justify-between mb-2">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider">Journée <?= (int)$num ?></p>
+            <?php if (isset($articlesParJournee[(int)$num])): $art = $articlesParJournee[(int)$num]; ?>
+            <a href="/blog/<?= urlencode($art['slug']) ?>" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Lire l'article →</a>
+            <?php endif; ?>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <?php foreach ($matchsJournee as $m): ?>
             <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-3">
                 <div class="flex-1 min-w-0 space-y-1.5">
                     <div class="flex justify-between items-center gap-2 text-sm">
-                        <span class="text-white truncate"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
+                        <span class="text-white leading-tight"><?= htmlspecialchars($m['domicile'] ?? '?') ?></span>
                         <span class="text-white font-bold shrink-0"><?= $m['score_dom'] ?? '-' ?></span>
                     </div>
                     <div class="flex justify-between items-center gap-2 text-sm">
-                        <span class="text-white truncate"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
+                        <span class="text-white leading-tight"><?= htmlspecialchars($m['exterieur'] ?? '?') ?></span>
                         <span class="text-white font-bold shrink-0"><?= $m['score_ext'] ?? '-' ?></span>
                     </div>
                 </div>

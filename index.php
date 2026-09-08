@@ -10,6 +10,7 @@ $logosCompetitions = [
     'L2'     => '/images/logo/logo-ligue-2.png',
     'CL'     => '/images/logo/logo-champions-league.webp',
     'Europa' => '/images/logo/logo-europa-league.webp',
+    'Conference' => '/images/logo/logo-conference-uefa.png',
     'France' => '/images/logo/logo-equipe-france.svg',
 ];
 
@@ -21,6 +22,7 @@ $hubs = [
     'ligue-2'          => '/ligue-2.php',
     'champions-league' => '/champions-league.php',
     'europa-league'    => '/europa-league.php',
+    'conference-league' => '/conference-league.php',
 ];
 
 $page_title = 'Football Passion — L1, L2, Champions League, Europa, Euro, CDM';

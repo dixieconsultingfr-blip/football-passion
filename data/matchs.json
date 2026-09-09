@@ -3678,7 +3678,7 @@
         "exterieur": "Aston Villa FC",
         "date": "2026-09-08",
         "heure": "18:45",
-        "stade": "Jan Breydel Stadion",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 3
@@ -3690,7 +3690,7 @@
         "exterieur": "LASK Linz",
         "date": "2026-09-08",
         "heure": "18:45",
-        "stade": "Agia Sophia Stadium",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 0
@@ -3702,7 +3702,7 @@
         "exterieur": "FC Internazionale Milano",
         "date": "2026-09-08",
         "heure": "21:00",
-        "stade": "Estadio Santiago Bernabeu",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 1
@@ -3714,7 +3714,7 @@
         "exterieur": "Manchester City FC",
         "date": "2026-09-08",
         "heure": "21:00",
-        "stade": "Estadio do Dragao",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 0,
         "score_ext": 2
@@ -3726,7 +3726,7 @@
         "exterieur": "Villarreal CF",
         "date": "2026-09-08",
         "heure": "21:00",
-        "stade": "Signal Iduna Park",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 3,
         "score_ext": 2
@@ -3738,7 +3738,7 @@
         "exterieur": "Real Betis Balompié",
         "date": "2026-09-08",
         "heure": "21:00",
-        "stade": "Stade Pierre Mauroy",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 3
@@ -3750,7 +3750,7 @@
         "exterieur": "Feyenoord Rotterdam",
         "date": "2026-09-09",
         "heure": "18:45",
-        "stade": "Camp Nou",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 5,
         "score_ext": 1
@@ -3762,7 +3762,7 @@
         "exterieur": "Viking FK",
         "date": "2026-09-09",
         "heure": "18:45",
-        "stade": "MHPArena",
+        "stade": "",
         "status": "FINISHED",
         "score_dom": 3,
         "score_ext": 1
@@ -3774,7 +3774,7 @@
         "exterieur": "Club Atlético de Madrid",
         "date": "2026-09-09",
         "heure": "21:00",
-        "stade": "Anfield",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3786,7 +3786,7 @@
         "exterieur": "ŠK Slovan Bratislava",
         "date": "2026-09-09",
         "heure": "21:00",
-        "stade": "Parc des Princes",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3798,7 +3798,7 @@
         "exterieur": "Arsenal FC",
         "date": "2026-09-09",
         "heure": "21:00",
-        "stade": "Diego Armando Maradona",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3810,7 +3810,7 @@
         "exterieur": "Galatasaray SK",
         "date": "2026-09-09",
         "heure": "21:00",
-        "stade": "Estadio Jose Alvalade",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3822,7 +3822,7 @@
         "exterieur": "AS Roma",
         "date": "2026-09-10",
         "heure": "18:45",
-        "stade": "Şükrü Saracoğlu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3834,7 +3834,7 @@
         "exterieur": "FK Shakhtar Donetsk",
         "date": "2026-09-10",
         "heure": "18:45",
-        "stade": "Philips Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3846,7 +3846,7 @@
         "exterieur": "FK Bodø/Glimt",
         "date": "2026-09-10",
         "heure": "21:00",
-        "stade": "Allianz Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3858,7 +3858,7 @@
         "exterieur": "Sabah FK",
         "date": "2026-09-10",
         "heure": "21:00",
-        "stade": "Old Trafford",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3870,7 +3870,7 @@
         "exterieur": "RB Leipzig",
         "date": "2026-09-10",
         "heure": "21:00",
-        "stade": "Stadio Giuseppe Sinigaglia",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3882,7 +3882,7 @@
         "exterieur": "Racing Club de Lens",
         "date": "2026-09-10",
         "heure": "21:00",
-        "stade": "Fortuna Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3894,7 +3894,7 @@
         "exterieur": "Sporting Clube de Portugal",
         "date": "2026-10-13",
         "heure": "18:45",
-        "stade": "Stade Bollaert-Delelis",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3906,7 +3906,7 @@
         "exterieur": "SK Slavia Praha",
         "date": "2026-10-13",
         "heure": "18:45",
-        "stade": "Baku National Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3918,7 +3918,7 @@
         "exterieur": "Club Brugge KV",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Giuseppe Meazza",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3930,7 +3930,7 @@
         "exterieur": "FC Barcelona",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Nef Stadyumu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3942,7 +3942,7 @@
         "exterieur": "Manchester United FC",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Estadio Cívitas Metropolitano",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3954,7 +3954,7 @@
         "exterieur": "Lille OSC",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Emirates Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3966,7 +3966,7 @@
         "exterieur": "FC Bayern München",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Viking Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3978,7 +3978,7 @@
         "exterieur": "PSV",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Red Bull Arena Leipzig",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -3990,7 +3990,7 @@
         "exterieur": "SSC Napoli",
         "date": "2026-10-13",
         "heure": "21:00",
-        "stade": "Estadio de la Cerámica",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4002,7 +4002,7 @@
         "exterieur": "Liverpool FC",
         "date": "2026-10-14",
         "heure": "18:45",
-        "stade": "Raiffeisen-Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4014,7 +4014,7 @@
         "exterieur": "Como 1907",
         "date": "2026-10-14",
         "heure": "18:45",
-        "stade": "De Kuip",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4026,7 +4026,7 @@
         "exterieur": "Real Madrid CF",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Stadio Olimpico, Rome",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4038,7 +4038,7 @@
         "exterieur": "Paris Saint-Germain FC",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Etihad Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4050,7 +4050,7 @@
         "exterieur": "Borussia Dortmund",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Aspmyra Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4062,7 +4062,7 @@
         "exterieur": "Fenerbahçe SK",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Villa Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4074,7 +4074,7 @@
         "exterieur": "FC Porto",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Estadio de La Cartuja",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4086,7 +4086,7 @@
         "exterieur": "PAE AEK",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Stamford Bridge",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4098,7 +4098,7 @@
         "exterieur": "VfB Stuttgart",
         "date": "2026-10-14",
         "heure": "21:00",
-        "stade": "Tehelne Pole",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4110,7 +4110,7 @@
         "exterieur": "Borussia Dortmund",
         "date": "2026-10-20",
         "heure": "18:45",
-        "stade": "Baku National Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4122,7 +4122,7 @@
         "exterieur": "SK Slavia Praha",
         "date": "2026-10-20",
         "heure": "18:45",
-        "stade": "Şükrü Saracoğlu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4134,7 +4134,7 @@
         "exterieur": "PAE AEK",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Etihad Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4146,7 +4146,7 @@
         "exterieur": "Club Atlético de Madrid",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "MHPArena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4158,7 +4158,7 @@
         "exterieur": "Villarreal CF",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Anfield",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4170,7 +4170,7 @@
         "exterieur": "ŠK Slovan Bratislava",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Stadio Olimpico, Rome",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4182,7 +4182,7 @@
         "exterieur": "PSV",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Estadio do Dragao",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4194,7 +4194,7 @@
         "exterieur": "FK Bodø/Glimt",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Diego Armando Maradona",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4206,7 +4206,7 @@
         "exterieur": "FC Barcelona",
         "date": "2026-10-20",
         "heure": "21:00",
-        "stade": "Parc des Princes",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4218,7 +4218,7 @@
         "exterieur": "Manchester United FC",
         "date": "2026-10-21",
         "heure": "18:45",
-        "stade": "Stadio Giuseppe Sinigaglia",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4230,7 +4230,7 @@
         "exterieur": "Galatasaray SK",
         "date": "2026-10-21",
         "heure": "18:45",
-        "stade": "Stade Pierre Mauroy",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4242,7 +4242,7 @@
         "exterieur": "RB Leipzig",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Estadio Santiago Bernabeu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4254,7 +4254,7 @@
         "exterieur": "FK Shakhtar Donetsk",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Giuseppe Meazza",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4266,7 +4266,7 @@
         "exterieur": "Arsenal FC",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Allianz Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4278,7 +4278,7 @@
         "exterieur": "Racing Club de Lens",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Jan Breydel Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4290,7 +4290,7 @@
         "exterieur": "Viking FK",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Villa Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4302,7 +4302,7 @@
         "exterieur": "LASK Linz",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Estadio Jose Alvalade",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4314,7 +4314,7 @@
         "exterieur": "Feyenoord Rotterdam",
         "date": "2026-10-21",
         "heure": "21:00",
-        "stade": "Estadio de La Cartuja",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4326,7 +4326,7 @@
         "exterieur": "Sporting Clube de Portugal",
         "date": "2026-11-03",
         "heure": "18:45",
-        "stade": "Stamford Bridge",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4338,7 +4338,7 @@
         "exterieur": "VfB Stuttgart",
         "date": "2026-11-03",
         "heure": "18:45",
-        "stade": "Nef Stadyumu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4350,7 +4350,7 @@
         "exterieur": "FC Internazionale Milano",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "De Kuip",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4362,7 +4362,7 @@
         "exterieur": "Aston Villa FC",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Camp Nou",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4374,7 +4374,7 @@
         "exterieur": "FC Bayern München",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Estadio Cívitas Metropolitano",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4386,7 +4386,7 @@
         "exterieur": "Paris Saint-Germain FC",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Estadio de la Cerámica",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4398,7 +4398,7 @@
         "exterieur": "AS Roma",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Old Trafford",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4410,7 +4410,7 @@
         "exterieur": "Lille OSC",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Aspmyra Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4422,7 +4422,7 @@
         "exterieur": "ŠK Slovan Bratislava",
         "date": "2026-11-03",
         "heure": "21:00",
-        "stade": "Raiffeisen-Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4434,7 +4434,7 @@
         "exterieur": "Real Madrid CF",
         "date": "2026-11-04",
         "heure": "18:45",
-        "stade": "Agia Sophia Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4446,7 +4446,7 @@
         "exterieur": "Liverpool FC",
         "date": "2026-11-04",
         "heure": "18:45",
-        "stade": "Şükrü Saracoğlu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4458,7 +4458,7 @@
         "exterieur": "Manchester City FC",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Red Bull Arena Leipzig",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4470,7 +4470,7 @@
         "exterieur": "Arsenal FC",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Fortuna Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4482,7 +4482,7 @@
         "exterieur": "Club Brugge KV",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Philips Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4494,7 +4494,7 @@
         "exterieur": "Real Betis Balompié",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Signal Iduna Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4506,7 +4506,7 @@
         "exterieur": "SSC Napoli",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Estadio do Dragao",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4518,7 +4518,7 @@
         "exterieur": "Como 1907",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Stade Bollaert-Delelis",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4530,7 +4530,7 @@
         "exterieur": "Sabah FK",
         "date": "2026-11-04",
         "heure": "21:00",
-        "stade": "Viking Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4542,7 +4542,7 @@
         "exterieur": "Aston Villa FC",
         "date": "2026-11-24",
         "heure": "18:45",
-        "stade": "Nef Stadyumu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4554,7 +4554,7 @@
         "exterieur": "LASK Linz",
         "date": "2026-11-24",
         "heure": "18:45",
-        "stade": "Aspmyra Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4566,7 +4566,7 @@
         "exterieur": "PSV",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Estadio Santiago Bernabeu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4578,7 +4578,7 @@
         "exterieur": "SSC Napoli",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Etihad Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4590,7 +4590,7 @@
         "exterieur": "Borussia Dortmund",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Emirates Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4602,7 +4602,7 @@
         "exterieur": "FC Porto",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "De Kuip",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4614,7 +4614,7 @@
         "exterieur": "Real Betis Balompié",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Tehelne Pole",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4626,7 +4626,7 @@
         "exterieur": "Racing Club de Lens",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Red Bull Arena Leipzig",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4638,7 +4638,7 @@
         "exterieur": "PAE AEK",
         "date": "2026-11-24",
         "heure": "21:00",
-        "stade": "Stadio Giuseppe Sinigaglia",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4650,7 +4650,7 @@
         "exterieur": "FC Barcelona",
         "date": "2026-11-25",
         "heure": "18:45",
-        "stade": "Baku National Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4662,7 +4662,7 @@
         "exterieur": "Villarreal CF",
         "date": "2026-11-25",
         "heure": "18:45",
-        "stade": "Fortuna Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4674,7 +4674,7 @@
         "exterieur": "VfB Stuttgart",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Giuseppe Meazza",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4686,7 +4686,7 @@
         "exterieur": "Viking FK",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Estadio Cívitas Metropolitano",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4698,7 +4698,7 @@
         "exterieur": "AS Roma",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Parc des Princes",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4710,7 +4710,7 @@
         "exterieur": "Liverpool FC",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Jan Breydel Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4722,7 +4722,7 @@
         "exterieur": "FC Bayern München",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Stade Pierre Mauroy",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4734,7 +4734,7 @@
         "exterieur": "Manchester United FC",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Estadio Jose Alvalade",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4746,7 +4746,7 @@
         "exterieur": "Fenerbahçe SK",
         "date": "2026-11-25",
         "heure": "21:00",
-        "stade": "Stamford Bridge",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4758,7 +4758,7 @@
         "exterieur": "Sabah FK",
         "date": "2026-12-08",
         "heure": "18:45",
-        "stade": "Estadio de la Cerámica",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4770,7 +4770,7 @@
         "exterieur": "Feyenoord Rotterdam",
         "date": "2026-12-08",
         "heure": "18:45",
-        "stade": "Viking Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4782,7 +4782,7 @@
         "exterieur": "Manchester City FC",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Camp Nou",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4794,7 +4794,7 @@
         "exterieur": "Paris Saint-Germain FC",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Villa Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4806,7 +4806,7 @@
         "exterieur": "SK Slavia Praha",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Allianz Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4818,7 +4818,7 @@
         "exterieur": "Club Brugge KV",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Diego Armando Maradona",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4830,7 +4830,7 @@
         "exterieur": "Sporting Clube de Portugal",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Stadio Olimpico, Rome",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4842,7 +4842,7 @@
         "exterieur": "RB Leipzig",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Old Trafford",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4854,7 +4854,7 @@
         "exterieur": "Galatasaray SK",
         "date": "2026-12-08",
         "heure": "21:00",
-        "stade": "Agia Sophia Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4866,7 +4866,7 @@
         "exterieur": "Como 1907",
         "date": "2026-12-09",
         "heure": "18:45",
-        "stade": "Estadio de La Cartuja",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4878,7 +4878,7 @@
         "exterieur": "FK Shakhtar Donetsk",
         "date": "2026-12-09",
         "heure": "18:45",
-        "stade": "Tehelne Pole",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4890,7 +4890,7 @@
         "exterieur": "Real Madrid CF",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Emirates Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4902,7 +4902,7 @@
         "exterieur": "FC Internazionale Milano",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Signal Iduna Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4914,7 +4914,7 @@
         "exterieur": "Club Atlético de Madrid",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Philips Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4926,7 +4926,7 @@
         "exterieur": "FC Porto",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Anfield",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4938,7 +4938,7 @@
         "exterieur": "FK Bodø/Glimt",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Stade Bollaert-Delelis",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4950,7 +4950,7 @@
         "exterieur": "Fenerbahçe SK",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "Raiffeisen-Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4962,7 +4962,7 @@
         "exterieur": "Lille OSC",
         "date": "2026-12-09",
         "heure": "21:00",
-        "stade": "MHPArena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4974,7 +4974,7 @@
         "exterieur": "Club Atlético de Madrid",
         "date": "2027-01-19",
         "heure": "18:45",
-        "stade": "Aspmyra Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4986,7 +4986,7 @@
         "exterieur": "Feyenoord Rotterdam",
         "date": "2027-01-19",
         "heure": "18:45",
-        "stade": "Nef Stadyumu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -4998,7 +4998,7 @@
         "exterieur": "LASK Linz",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Estadio Santiago Bernabeu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5010,7 +5010,7 @@
         "exterieur": "Liverpool FC",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Giuseppe Meazza",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5022,7 +5022,7 @@
         "exterieur": "Club Brugge KV",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "MHPArena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5034,7 +5034,7 @@
         "exterieur": "Borussia Dortmund",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Villa Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5046,7 +5046,7 @@
         "exterieur": "AS Roma",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Agia Sophia Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5058,7 +5058,7 @@
         "exterieur": "SK Slavia Praha",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Estadio do Dragao",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5070,7 +5070,7 @@
         "exterieur": "ŠK Slovan Bratislava",
         "date": "2027-01-19",
         "heure": "21:00",
-        "stade": "Stade Pierre Mauroy",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5082,7 +5082,7 @@
         "exterieur": "Villarreal CF",
         "date": "2027-01-20",
         "heure": "18:45",
-        "stade": "Şükrü Saracoğlu",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5094,7 +5094,7 @@
         "exterieur": "SSC Napoli",
         "date": "2027-01-20",
         "heure": "18:45",
-        "stade": "Baku National Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5106,7 +5106,7 @@
         "exterieur": "Manchester City FC",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Stade Bollaert-Delelis",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5118,7 +5118,7 @@
         "exterieur": "FC Barcelona",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Estadio Jose Alvalade",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5130,7 +5130,7 @@
         "exterieur": "Paris Saint-Germain FC",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Stadio Giuseppe Sinigaglia",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5142,7 +5142,7 @@
         "exterieur": "Arsenal FC",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Estadio de La Cartuja",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5154,7 +5154,7 @@
         "exterieur": "FC Bayern München",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Old Trafford",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5166,7 +5166,7 @@
         "exterieur": "PSV",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Viking Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5178,7 +5178,7 @@
         "exterieur": "FK Shakhtar Donetsk",
         "date": "2027-01-20",
         "heure": "21:00",
-        "stade": "Red Bull Arena Leipzig",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5190,7 +5190,7 @@
         "exterieur": "Real Madrid CF",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Stamford Bridge",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5202,7 +5202,7 @@
         "exterieur": "Sporting Clube de Portugal",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Etihad Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5214,7 +5214,7 @@
         "exterieur": "FC Internazionale Milano",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Tehelne Pole",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5226,7 +5226,7 @@
         "exterieur": "Como 1907",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Camp Nou",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5238,7 +5238,7 @@
         "exterieur": "Fenerbahçe SK",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Estadio Cívitas Metropolitano",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5250,7 +5250,7 @@
         "exterieur": "Galatasaray SK",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Parc des Princes",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5262,7 +5262,7 @@
         "exterieur": "Racing Club de Lens",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Anfield",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5274,7 +5274,7 @@
         "exterieur": "Sabah FK",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Emirates Stadium",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5286,7 +5286,7 @@
         "exterieur": "Real Betis Balompié",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Allianz Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5298,7 +5298,7 @@
         "exterieur": "FK Bodø/Glimt",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Jan Breydel Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5310,7 +5310,7 @@
         "exterieur": "PAE AEK",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Signal Iduna Park",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5322,7 +5322,7 @@
         "exterieur": "Aston Villa FC",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Fortuna Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5334,7 +5334,7 @@
         "exterieur": "Lille OSC",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Stadio Olimpico, Rome",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5346,7 +5346,7 @@
         "exterieur": "FC Porto",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Raiffeisen-Arena",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5358,7 +5358,7 @@
         "exterieur": "Manchester United FC",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Estadio de la Cerámica",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5370,7 +5370,7 @@
         "exterieur": "VfB Stuttgart",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Philips Stadion",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5382,7 +5382,7 @@
         "exterieur": "RB Leipzig",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "De Kuip",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null
@@ -5394,7 +5394,7 @@
         "exterieur": "Viking FK",
         "date": "2027-01-27",
         "heure": "21:00",
-        "stade": "Diego Armando Maradona",
+        "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
         "score_ext": null

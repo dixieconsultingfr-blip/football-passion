@@ -3847,8 +3847,8 @@
         "date": "2026-09-10",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
-        "score_dom": 4,
+        "status": "FINISHED",
+        "score_dom": 5,
         "score_ext": 0
     },
     {
@@ -3871,7 +3871,7 @@
         "date": "2026-09-10",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 4,
         "score_ext": 1
     },
@@ -3883,7 +3883,7 @@
         "date": "2026-09-10",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 3
     },

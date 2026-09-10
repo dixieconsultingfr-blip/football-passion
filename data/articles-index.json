@@ -1,5 +1,19 @@
 [
     {
+        "id":  35,
+        "slug":  "champions-league-journee-1-slavia-lens-2026-2027",
+        "titre":  "Ligue des Champions - Journée 1 : Lens renverse le Slavia Prague dans les arrêts de jeu (3-2)",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "RC Lens"
+                       ],
+        "date":  "2026-09-10",
+        "extrait":  "Mené à deux reprises par un Slavia Prague solide et pourtant réduit à dix dès la 49e minute, le RC Lens a renversé la rencontre dans les arrêts de jeu pour s\u0027imposer 3-2. Retour sur un scénario complètement fou pour l\u0027entrée en Ligue des Champions des Sang et Or.",
+        "vignette":  "/images/champions-league-journee-1-slavia-lens-2026-2027.jpg",
+        "image_alt":  "Slavia Prague 2-3 RC Lens, journée 1 de la Ligue des Champions 2026-2027"
+    },
+    {
         "id":  34,
         "slug":  "champions-league-journee-1-lille-real-madrid-2026-2027",
         "titre":  "Ligue des Champions - Journée 1 : Lille chute face au Betis, le Real Madrid démarre bien face à l\u0027Inter",

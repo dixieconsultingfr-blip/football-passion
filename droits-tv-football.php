@@ -24,7 +24,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Qui va diffuser la Ligue 1 en 2026 et 2027 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "C'est la plateforme officielle Ligue 1+, éditée par la Filiale LFP 2, qui détient l'exclusivité et diffuse 100 % des matchs de la Ligue 1 McDonald's et de la Ligue 3 Betclic pour la saison 2026-2027."
+        "text": "C'est la plateforme officielle Ligue 1+, éditée par la Filiale LFP 2, qui détient l'exclusivité et diffuse 100 % des matchs de la Ligue 1 McDonald's. Elle diffuse également l'intégralité des 309 rencontres de la Ligue 3 Betclic, dont elle détient les droits exclusifs pour trois saisons (2026-2027 à 2028-2029)."
       }
     },
     {
@@ -144,6 +144,20 @@ include __DIR__ . '/templates/header.php';
         </div>
     </section>
 
+    <!-- ══════════ SECTION 1BIS — LIGUE 3 BETCLIC ══════════ -->
+    <section class="mb-10">
+        <h2 class="text-2xl font-bold text-white mb-4">🥉 Ligue 3 Betclic : où la regarder ?</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            Depuis la saison 2026-2027, <strong class="text-white">Ligue 1+</strong> est le diffuseur exclusif de la Ligue 3 Betclic (ex-National), pour trois saisons (2026-2027 à 2028-2029). L'intégralité des 309 rencontres de la saison est retransmise, play-offs compris — l'abonnement Ligue 1+ donne donc accès aux deux championnats en même temps.
+        </p>
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-5 mb-6">
+            <p class="text-white font-semibold text-sm mb-2">📅 Programmation type</p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Une affiche de la journée diffusée le jeudi soir, complétée par un multiplex regroupant les autres rencontres le samedi après-midi.
+            </p>
+        </div>
+    </section>
+
     <!-- ══════════ SECTION 2 — LIGUE 2 & COUPES D'EUROPE ══════════ -->
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Ligue 2 BKT et Coupes d'Europe</h2>
@@ -204,7 +218,7 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                    C'est la plateforme officielle Ligue 1+, éditée par la Filiale LFP 2, qui détient l'exclusivité et diffuse 100 % des matchs de la Ligue 1 McDonald's et de la Ligue 3 Betclic pour la saison 2026-2027.
+                    C'est la plateforme officielle Ligue 1+, éditée par la Filiale LFP 2, qui détient l'exclusivité et diffuse 100 % des matchs de la Ligue 1 McDonald's. Elle diffuse également l'intégralité des 309 rencontres de la Ligue 3 Betclic, dont elle détient les droits exclusifs pour trois saisons (2026-2027 à 2028-2029).
                 </p>
             </details>
 

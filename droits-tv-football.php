@@ -3,6 +3,8 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez les offres Ligue 1+, DAZN, Canal+ et beIN Sports pour la saison 2026-2027. Découvrez nos astuces pour regarder le foot au meilleur prix.";
+$date_maj_page = '2026-09-11'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -10,6 +12,8 @@ include __DIR__ . '/templates/header.php';
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "datePublished": "2026-08-01T08:00:00+02:00",
+  "dateModified": "<?= $date_maj_page ?>T08:00:00+02:00",
   "mainEntity": [
     {
       "@type": "Question",
@@ -69,7 +73,10 @@ include __DIR__ . '/templates/header.php';
         <!-- TODO image bannière : 1200x630, à générer/déposer dans /images/ (ex. images/droits-tv-football-2026-2027.webp) puis décommenter :
         <img src="/images/droits-tv-football-2026-2027.webp" alt="Droits TV football 2026-2027 : Ligue 1+, Canal+, beIN Sports" class="w-full rounded-2xl border border-gray-800 mb-6" />
         -->
-        <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-2">Guide abonnement</p>
+        <div class="flex items-center gap-3 mb-2">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-widest">Guide abonnement</p>
+            <span class="text-gray-600 text-xs">· mis à jour le <?= date_fr_long($date_maj_page) ?></span>
+        </div>
         <h1 class="text-4xl font-bold text-white mb-4 leading-tight">Droits TV Football 2026-2027 : Quel abonnement choisir pour ne rien rater ?</h1>
         <p class="text-gray-300 text-lg leading-relaxed border-l-4 border-green-500 pl-4">
             La saison est lancée ! Entre Ligue 1+, DAZN, Canal+ et beIN Sports, la facture peut vite grimper. Voici notre guide complet pour trouver la meilleure offre et regarder vos compétitions favorites au juste prix.
@@ -157,6 +164,9 @@ include __DIR__ . '/templates/header.php';
             </ul>
             <p class="text-gray-500 text-xs">
                 Le Pass Annuel et le Pass Mensuel se regardent sur le web (tv.onefootball.com), l'appli mobile/tablette ou une TV connectée (achat à effectuer au préalable sur le web ou mobile) ; le Pass App Mobile ne fonctionne que dans l'appli iOS/Android. Deux appareils simultanés autorisés par compte. Les résumés et replays de la page créateur Ligue 1+ restent consultables même sans pass complet, selon les droits d'accès.
+            </p>
+            <p class="text-gray-600 text-xs mt-3">
+                ⚠️ Tarifs communiqués par OneFootball, susceptibles d'évoluer à tout moment : vérifiez le prix et les conditions à jour directement dans l'application ou sur <a href="https://onefootballsupport.zendesk.com/hc/fr/articles/39144484562449" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">le centre d'aide OneFootball</a> avant tout achat.
             </p>
         </div>
     </section>
@@ -273,7 +283,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <p class="text-gray-600 text-xs text-center mb-4">
-        Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> et les Conditions Générales d'Abonnement Ligue 1+ (version du 28 juillet 2026) — susceptibles d'évoluer, se référer au site officiel pour toute souscription.
+        Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> (Conditions Générales d'Abonnement Ligue 1+, version du 28 juillet 2026) et sur <a href="https://onefootballsupport.zendesk.com/hc/fr/articles/39144484562449" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">le centre d'aide OneFootball</a> — susceptibles d'évoluer à tout moment, se référer au site ou à l'application officielle pour toute souscription.
     </p>
 
     <!-- Liens internes -->

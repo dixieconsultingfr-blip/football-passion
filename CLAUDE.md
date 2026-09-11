@@ -180,6 +180,11 @@ football-passion/                  ← racine du dépôt = racine du site
 
 **Champ `date_maj` (optionnel)** — signal E-E-A-T (voir section dédiée plus bas). À ajouter uniquement quand le contenu publié est corrigé ou complété après coup (ex. score corrigé après une erreur de l'API, info mise à jour). Ne pas l'ajouter systématiquement à la création — seulement lors d'une vraie modification ultérieure. Affiché sur la page article (« mis à jour le... ») et utilisé comme `dateModified` dans le schema `NewsArticle`.
 
+**🚨 Règle critique — toujours mettre à jour la date de modification après une édition** :
+- **Articles** (`data/articles/{slug}.json`) : mettre à jour (ou ajouter) le champ `date_maj` à la date du jour dès qu'un article déjà publié est modifié (contenu corrigé/complété, ajout d'un embed vidéo, etc.).
+- **Pages piliers statiques** (ex. `droits-tv-football.php`) : ces pages portent une variable `$date_maj_page` en haut du fichier PHP, utilisée à la fois pour l'affichage visible (« mis à jour le... ») et pour le `dateModified` du JSON-LD. **La mettre à jour à la date du jour à chaque modification de contenu** (tarifs, offres, nouvelle section...).
+- Objectif : signal de fraîcheur pour Google (E-E-A-T), à ne jamais oublier après une édition — même mineure — sur ce type de page.
+
 **🚨 Procédure obligatoire pour ajouter un nouvel article** :
 1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
 2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`.

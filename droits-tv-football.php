@@ -48,7 +48,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Comment s'abonner à Ligue 1 Plus ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, ou directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues)."
+        "text": "Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe."
       }
     }
   ]
@@ -248,7 +248,7 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                    Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, ou directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues).
+                    Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe.
                 </p>
             </details>
 

@@ -136,11 +136,28 @@ include __DIR__ . '/templates/header.php';
             </p>
         </div>
 
-        <div class="text-center">
+        <div class="text-center mb-8">
             <a href="#" class="inline-block bg-green-700 hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-lg transition-colors">
                 Comparer toutes les offres sur Ligue 1+
             </a>
             <!-- TODO : remplacer href="#" par le lien d'affiliation dès qu'il sera disponible, et ajouter rel="sponsored noopener noreferrer" -->
+        </div>
+
+        <!-- Bloc alternative OneFootball -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-5">
+            <p class="text-white font-bold text-sm mb-3">📱 Autre option : Ligue 1+ via l'appli OneFootball</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Ligue 1+ est également accessible en France directement depuis l'application OneFootball, avec sa propre grille de pass (distincte des tarifs plus.ligue1.com) :
+            </p>
+            <ul class="text-gray-400 text-sm space-y-1.5 mb-4">
+                <li>✓ Pass App Mobile (30 jours) — <strong class="text-white">12,99 €</strong>, visionnage sur l'appli mobile uniquement</li>
+                <li>✓ Pass Mensuel (30 jours) — <strong class="text-white">19,99 €</strong></li>
+                <li>✓ Pass Demi-Saison — <strong class="text-white">89 €</strong></li>
+                <li>✓ Pass Annuel (365 jours) — <strong class="text-white">169,99 €</strong>, sans renouvellement automatique</li>
+            </ul>
+            <p class="text-gray-500 text-xs">
+                Le Pass Annuel et le Pass Mensuel se regardent sur le web (tv.onefootball.com), l'appli mobile/tablette ou une TV connectée (achat à effectuer au préalable sur le web ou mobile) ; le Pass App Mobile ne fonctionne que dans l'appli iOS/Android. Deux appareils simultanés autorisés par compte. Les résumés et replays de la page créateur Ligue 1+ restent consultables même sans pass complet, selon les droits d'accès.
+            </p>
         </div>
     </section>
 

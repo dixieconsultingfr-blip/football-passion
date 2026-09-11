@@ -141,6 +141,9 @@ include __DIR__ . '/templates/header.php';
             <p class="text-gray-500 text-xs mt-3">
                 ⚠️ Les Pass Offre Limitée et Direct 1 An sont des offres <strong>avec engagement de 12 mois</strong> : la résiliation anticipée n'est pas possible en cours d'engagement (sauf déménagement ou changement de foyer fiscal, justificatifs à l'appui). Seuls le Pass Mensuel et le Pass Mobile sont sans engagement.
             </p>
+            <p class="text-gray-600 text-xs mt-3">
+                ⚠️ Tarifs Ligue 1+ ci-dessus communiqués à titre indicatif, susceptibles d'évoluer à tout moment : vérifiez le prix et les conditions à jour sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> avant toute souscription.
+            </p>
         </div>
 
         <div class="text-center mb-8">

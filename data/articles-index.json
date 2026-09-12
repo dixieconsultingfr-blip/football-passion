@@ -2,16 +2,16 @@
     {
         "id":  37,
         "slug":  "mondial-2026-basket-feminin-france-en-finale",
-        "titre":  "Coupe du monde féminine de basket 2026 : la France en finale à Berlin",
+        "titre":  "Coupe du monde féminine de basket 2026 : France - États-Unis, la finale de rêve à Berlin",
         "categorie":  "CDM",
         "etiquettes":  [
                            "Basket-ball",
                            "Coupe du Monde"
                        ],
         "date":  "2026-09-12",
-        "extrait":  "La France s\u0027est qualifiée pour la finale de la Coupe du monde féminine de basket 2026, organisée à Berlin, en s\u0027imposant largement face à l\u0027Allemagne en demi-finale. Retour sur un parcours sans faute et le programme des dernières journées du tournoi.",
-        "vignette":  "",
-        "image_alt":  ""
+        "extrait":  "La France affrontera les États-Unis, tenants du titre, en finale de la Coupe du monde féminine de basket 2026, dimanche 13 septembre à Berlin. Retour sur le parcours sans faute des deux finalistes.",
+        "vignette":  "/images/mondial-2026-basket-feminin-france-en-finale.jpg",
+        "image_alt":  "France 86-64 Allemagne et Espagne 66-76 Etats-Unis, demi-finales du Mondial 2026 de basket feminin"
     },
     {
         "id":  36,

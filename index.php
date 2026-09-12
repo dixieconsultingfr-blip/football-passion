@@ -20,6 +20,7 @@ $hubs = [
     'coupe-du-monde'   => '/coupe-du-monde.php',
     'ligue-1'          => '/ligue-1.php',
     'ligue-2'          => '/ligue-2.php',
+    'ligue-3'          => '/ligue-3.php',
     'champions-league' => '/champions-league.php',
     'europa-league'    => '/europa-league.php',
     'conference-league' => '/conference-league.php',

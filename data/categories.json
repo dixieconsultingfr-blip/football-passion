@@ -1,6 +1,7 @@
 [
   { "id": 1, "code": "L1", "name": "Ligue 1", "slug": "ligue-1", "description": "Ligue 1 - Championnat de France" },
   { "id": 2, "code": "L2", "name": "Ligue 2", "slug": "ligue-2", "description": "Ligue 2 - Deuxième division française" },
+  { "id": 10, "code": "L3", "name": "Ligue 3", "slug": "ligue-3", "description": "Ligue 3 Betclic - Troisième division française" },
   { "id": 3, "code": "CL", "name": "Champions League", "slug": "champions-league", "description": "Ligue des Champions" },
   { "id": 4, "code": "Europa", "name": "Europa League", "slug": "europa-league", "description": "Ligue Europa" },
   { "id": 9, "code": "Conference", "name": "Ligue Conférence", "slug": "conference-league", "description": "Ligue Europa Conférence" },

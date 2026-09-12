@@ -37,6 +37,7 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="/ligue-1.php" class="hover:text-green-400 transition-colors">Ligue 1</a></li>
                         <li><a href="/ligue-2.php" class="hover:text-green-400 transition-colors">Ligue 2</a></li>
+                        <li><a href="/ligue-3.php" class="hover:text-green-400 transition-colors">Ligue 3</a></li>
                         <li><a href="/champions-league.php" class="hover:text-green-400 transition-colors">Champions League</a></li>
                         <li><a href="/europa-league.php" class="hover:text-green-400 transition-colors">Europa League</a></li>
                         <li><a href="/conference-league.php" class="hover:text-green-400 transition-colors">Ligue Conférence</a></li>

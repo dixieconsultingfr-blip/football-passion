@@ -12,6 +12,7 @@ $staticPages = [
     ['loc' => '/archives.php',                  'changefreq' => 'monthly', 'priority' => '0.4'],
     ['loc' => '/ligue-1.php',                   'changefreq' => 'daily',   'priority' => '0.8'],
     ['loc' => '/ligue-2.php',                   'changefreq' => 'daily',   'priority' => '0.8'],
+    ['loc' => '/ligue-3.php',                   'changefreq' => 'daily',   'priority' => '0.7'],
     ['loc' => '/champions-league.php',          'changefreq' => 'daily',   'priority' => '0.8'],
     ['loc' => '/europa-league.php',             'changefreq' => 'daily',   'priority' => '0.8'],
     ['loc' => '/conference-league.php',         'changefreq' => 'daily',   'priority' => '0.7'],

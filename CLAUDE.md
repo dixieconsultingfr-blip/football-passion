@@ -259,11 +259,11 @@ Recalcule la saison à la volée depuis `date` (indépendant du champ `saison`, 
 
 **Résumé** :
 - Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit.
-- **Décision définitive (7 août 2026) : pas d'upgrade payant.** Ligue 2, Europa League, les tours de qualification/barrages de Champions League, et l'Équipe de France (amicaux/qualifs) restent **manuels en permanence** — ce n'est pas un état transitoire en attendant un upgrade, c'est le mode de fonctionnement retenu.
+- **Décision définitive (7 août 2026) : pas d'upgrade payant.** Ligue 2, Ligue 3 Betclic, Europa League, les tours de qualification/barrages de Champions League, et l'Équipe de France (amicaux/qualifs) restent **manuels en permanence** — ce n'est pas un état transitoire en attendant un upgrade, c'est le mode de fonctionnement retenu.
 - Architecture automatisée : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota, **préserve les entrées manuelles `id >= 9000000`** — voir procédure 3.22) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
 - Piège n8n à connaître : un champ contenant `{{ }}` doit être explicitement basculé en mode **"Expression"** (toggle à côté de "Fixed") pour être évalué — sinon n8n écrit le texte littéral. Déjà corrigé dans ce workflow, mais à surveiller pour tout futur nœud.
 
-### Procédure pour les compétitions manuelles (L2, Europa, qualifs CL, Équipe de France)
+### Procédure pour les compétitions manuelles (L2, L3, Europa, qualifs CL, Équipe de France)
 
 L'utilisateur colle des captures d'écran ou du texte copié depuis un site de scores en direct (type flashscore.fr). Procédure standard, à appliquer sans redemander confirmation à chaque fois :
 
@@ -292,6 +292,7 @@ Ne jamais faire `ConvertTo-Json $data -Depth 10` directement. **Toujours vérifi
 |-----------|-------------|-----------|
 | **L1** | Ligue 1 (FR) | Août-mai + été |
 | **L2** | Ligue 2 (FR) | Août-mai |
+| **L3** | Ligue 3 Betclic (FR, ex-National) | Août-mai |
 | **CL** | Champions League | Septembre-juin |
 | **Europa** | Europa League | Septembre-juin |
 | **CAN** | Coupe d'Afrique | Janvier-février |

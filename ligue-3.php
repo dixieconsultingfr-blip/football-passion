@@ -99,8 +99,8 @@ include __DIR__ . '/templates/header.php';
 
 <!-- Hero -->
 <header class="mb-10 flex items-center gap-4">
-    <span class="inline-flex items-center justify-center w-14 h-14 bg-green-700 rounded-xl shrink-0">
-        <span class="text-white font-bold text-lg">L3</span>
+    <span class="inline-flex items-center justify-center w-14 h-14 bg-white rounded-xl p-2 shrink-0">
+        <img src="/images/logo/Logo_de_la_Ligue_3.svg.webp" alt="Logo Ligue 3 Betclic" class="w-full h-full object-contain" />
     </span>
     <div>
         <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Championnat de France</p>

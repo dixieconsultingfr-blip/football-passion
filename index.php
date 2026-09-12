@@ -8,6 +8,7 @@ $categories = json_decode(file_get_contents(__DIR__ . '/data/categories.json'), 
 $logosCompetitions = [
     'L1'     => '/images/logo/logo-ligue-1.webp',
     'L2'     => '/images/logo/logo-ligue-2.png',
+    'L3'     => '/images/logo/Logo_de_la_Ligue_3.svg.webp',
     'CL'     => '/images/logo/logo-champions-league.webp',
     'Europa' => '/images/logo/logo-europa-league.webp',
     'Conference' => '/images/logo/logo-conference-uefa.png',

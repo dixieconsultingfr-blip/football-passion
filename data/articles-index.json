@@ -1,5 +1,19 @@
 [
     {
+        "id":  37,
+        "slug":  "mondial-2026-basket-feminin-france-en-finale",
+        "titre":  "Coupe du monde féminine de basket 2026 : la France en finale à Berlin",
+        "categorie":  "CDM",
+        "etiquettes":  [
+                           "Basket-ball",
+                           "Coupe du Monde"
+                       ],
+        "date":  "2026-09-12",
+        "extrait":  "La France s\u0027est qualifiée pour la finale de la Coupe du monde féminine de basket 2026, organisée à Berlin, en s\u0027imposant largement face à l\u0027Allemagne en demi-finale. Retour sur un parcours sans faute et le programme des dernières journées du tournoi.",
+        "vignette":  "",
+        "image_alt":  ""
+    },
+    {
         "id":  36,
         "slug":  "rdc-mondial-2026-parcours-historique-leopards",
         "titre":  "RDC au Mondial 2026 : le parcours historique des Léopards, de la phase de groupes aux 32e de finale",

@@ -1,5 +1,19 @@
 [
     {
+        "id":  38,
+        "slug":  "ligue-1-journee-4-resultats-2026-2027",
+        "titre":  "Ligue 1 - Journée 4 : le récap complet et les faits marquants",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1",
+                           "Journée 4"
+                       ],
+        "date":  "2026-09-13",
+        "extrait":  "Lille, Monaco et Rennes se retrouvent à égalité en tête du championnat après une journée 4 riche en matchs nuls. Retour complet sur les résultats et les faits marquants de cette journée de Ligue 1.",
+        "vignette":  "/images/ligue-1-journee-4-resultats-2026-2027.jpg",
+        "image_alt":  "Résultats complets de la journée 4 de Ligue 1, saison 2026-2027"
+    },
+    {
         "id":  37,
         "slug":  "mondial-2026-basket-feminin-france-en-finale",
         "titre":  "Coupe du monde féminine de basket 2026 : France - États-Unis, la finale de rêve à Berlin",

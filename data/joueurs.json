@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nom": "Kylian Mbappé",
+    "slug": "kylian-mbappe",
+    "poste": "Attaquant",
+    "date_naissance": "1998-12-20",
+    "lieu_naissance": "Paris (19e arrondissement)",
+    "taille": "1,78 m",
+    "photo": "/images/joueurs/kylian-mbappe-equipe-france.jpg",
+    "photo_credit_auteur": "Bryan Berlin",
+    "photo_credit_licence": "CC BY-SA 4.0",
+    "photo_credit_licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "club_actuel": "Real Madrid",
+    "numero_club": 10,
+    "numero_selection": 10,
+    "note": "Devenu le meilleur buteur de l'histoire de l'équipe de France durant la Coupe du Monde 2026.",
+    "bio": "Formé au Havre puis révélé à l'AS Monaco dès 2015, Kylian Mbappé a très vite explosé au plus haut niveau avant de rejoindre le Paris Saint-Germain, où il est devenu l'un des attaquants les plus décisifs du football européen. Il porte désormais les couleurs du Real Madrid.",
+    "palmares_cdm2026": "Lors de la Coupe du Monde 2026, il a terminé Soulier d'or du tournoi avec 10 buts inscrits et a reçu le Ballon de bronze. Sur l'ensemble de sa carrière en phase finale de Coupe du Monde, il est devenu le meilleur buteur de l'histoire de la compétition avec 22 réalisations.",
+    "forme_club_2026_27": "Sur le début de la saison 2026-2027 en Liga avec le Real Madrid, il totalise 4 matchs et 4 buts.",
+    "ballon_or_2026": "Cité parmi les prétendants sérieux au Ballon d'Or 2026, sans consensus des observateurs sur son rang exact.",
+    "clin_oeil": "Petit clin d'œil made in Ligue 1 : le petit frère Ethan Mbappé porte lui aussi le maillot floqué Mbappé, du côté du LOSC — de quoi suivre les deux frangins sur deux tableaux bien différents cette saison, la Liga pour l'aîné et la course au podium avec Lille pour le cadet.",
+    "statut_euro2028": {
+      "convoque_qualifs": null,
+      "convoque_finale": null,
+      "date_maj": "2026-09-05"
+    }
+  }
+]

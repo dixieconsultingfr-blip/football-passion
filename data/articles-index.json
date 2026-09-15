@@ -1,5 +1,19 @@
 [
     {
+        "id":  40,
+        "slug":  "lille-peut-il-redevenir-champion-2026-2027",
+        "titre":  "Lille peut-il refaire le coup de 2021 et redevenir champion de France ?",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "LOSC",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-09-15",
+        "extrait":  "Leader après 4 journées de Ligue 1 2026-2027 avec 10 points, Lille peut-il réellement viser un nouveau titre, comme en 2011 et en 2021 ? Retour sur les deux sacres lillois pour mesurer ce que vaut ce début de saison.",
+        "vignette":  "/images/lille-peut-il-redevenir-champion-2026-2027.jpg",
+        "image_alt":  "Lille peut-il redevenir champion de France, comparaison avec les titres de 2011 et 2021"
+    },
+    {
         "id":  39,
         "slug":  "mbappe-dembele-ballon-or-2026-equipe-france",
         "titre":  "Ballon d\u0027Or 2026 : Mbappé assume, Dembélé mise sur le PSG",

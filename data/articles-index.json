@@ -1,5 +1,19 @@
 [
     {
+        "id":  41,
+        "slug":  "premiere-liste-zidane-equipe-france-2026",
+        "titre":  "Première liste de Zidane : quelle place pour Mbappé ? Quelles surprises chez les Bleus ?",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-09-16",
+        "extrait":  "Zinédine Zidane dévoilera sa toute première liste comme sélectionneur de l\u0027équipe de France ce vendredi 18 septembre. Statut de Mbappé, cadres pressentis, jeunes talents surveillés : tour d\u0027horizon avant l\u0027annonce, à l\u0027aube du cycle vers l\u0027Euro 2028.",
+        "vignette":  "/images/premiere-liste-zidane-equipe-france-2026.jpg",
+        "image_alt":  "Premiere liste de Zinedine Zidane selectionneur de l\u0027equipe de France"
+    },
+    {
         "id":  40,
         "slug":  "lille-peut-il-redevenir-champion-2026-2027",
         "titre":  "Lille peut-il refaire le coup de 2021 et redevenir champion de France ?",

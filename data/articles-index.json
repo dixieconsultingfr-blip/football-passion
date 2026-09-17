@@ -1,5 +1,19 @@
 [
     {
+        "id":  42,
+        "slug":  "om-besiktas-quel-public-le-plus-chaud-2026",
+        "titre":  "OM - Besiktas : quel public est le plus chaud, le Vélodrome ou Istanbul ?",
+        "categorie":  "Europa",
+        "etiquettes":  [
+                           "OM",
+                           "Europa League"
+                       ],
+        "date":  "2026-09-17",
+        "extrait":  "L\u0027OM découvre ce jeudi l\u0027une des ambiances les plus réputées d\u0027Europe pour son entrée en Ligue Europa, au Tüpraş Stadium d\u0027Istanbul. Vélodrome ou Besiktas, quel public est le plus chaud ?",
+        "vignette":  "/images/om-besiktas-quel-public-le-plus-chaud-2026.jpg",
+        "image_alt":  "OM contre Besiktas, duel des tribunes entre le Velodrome et Istanbul"
+    },
+    {
         "id":  41,
         "slug":  "premiere-liste-zidane-equipe-france-2026",
         "titre":  "Première liste de Zidane : quelle place pour Mbappé ? Quelles surprises chez les Bleus ?",

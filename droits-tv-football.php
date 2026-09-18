@@ -2,8 +2,8 @@
 // Page pilier SEO — comparatif droits TV football, prépare un futur emplacement de monétisation
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
-$meta_desc  = "Comparez les offres Ligue 1+, DAZN, Canal+ et beIN Sports pour la saison 2026-2027. Découvrez nos astuces pour regarder le foot au meilleur prix.";
-$date_maj_page = '2026-09-11'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
+$date_maj_page = '2026-09-18'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -53,6 +53,14 @@ include __DIR__ . '/templates/header.php';
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sur quelle chaîne voir les matchs de l'équipe de France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les matchs de l'équipe de France en Ligue des nations 2026-2027 sont diffusés en exclusivité et en clair sur TF1 et TF1+, sans abonnement. Le groupe TF1 détient aussi les droits des matchs des Bleus jusqu'en 2028, ce qui inclut les qualifications à l'Euro 2028 prévues en 2027."
       }
     }
   ]
@@ -227,6 +235,43 @@ include __DIR__ . '/templates/header.php';
         </div>
     </section>
 
+    <!-- ══════════ SECTION 2BIS — ÉQUIPE DE FRANCE ══════════ -->
+    <section class="mb-10">
+        <h2 class="text-2xl font-bold text-white mb-4">🇫🇷 Équipe de France : Ligue des nations et qualifications à l'Euro 2028</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            Bonne nouvelle : les matchs des Bleus ne nécessitent aucun abonnement payant. <strong class="text-white">TF1 et TF1+</strong> diffusent en exclusivité et en clair la Ligue des nations 2026-2027 de l'équipe de France, dont le premier rendez-vous de l'ère Zidane, le vendredi 25 septembre en Turquie. Le groupe TF1 détient par ailleurs les droits des matchs des Bleus jusqu'en 2028, ce qui devrait inclure les qualifications à l'Euro 2028.
+        </p>
+
+        <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto mb-4">
+            <table class="w-full text-sm">
+                <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Calendrier de l'équipe de France en Ligue des nations 2026-2027, groupe A1, avec diffusion</caption>
+                <thead>
+                    <tr class="text-gray-500 uppercase text-xs border-b border-gray-700">
+                        <th class="text-left px-4 py-2 font-semibold">Date</th>
+                        <th class="text-left px-4 py-2 font-semibold">Match</th>
+                        <th class="text-left px-4 py-2 font-semibold">Lieu</th>
+                        <th class="text-left px-4 py-2 font-semibold text-green-400">Diffusion</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-700/60 text-gray-300">
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Ven. 25 sept., 20h45</td><td class="px-4 py-2">Turquie - France</td><td class="px-4 py-2">Kocaeli</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Lun. 28 sept., 20h45</td><td class="px-4 py-2">Belgique - France</td><td class="px-4 py-2">Bruxelles</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Ven. 2 oct., 20h45</td><td class="px-4 py-2">France - Italie</td><td class="px-4 py-2">Stade de France</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Lun. 5 oct., 20h45</td><td class="px-4 py-2">France - Belgique</td><td class="px-4 py-2">Stade de France</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Jeu. 12 nov., 20h45</td><td class="px-4 py-2">Italie - France</td><td class="px-4 py-2">Italie</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                    <tr><td class="px-4 py-2 whitespace-nowrap">Dim. 15 nov., 20h45</td><td class="px-4 py-2">France - Turquie</td><td class="px-4 py-2">Bordeaux</td><td class="px-4 py-2 text-green-400">TF1 / TF1+</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="text-gray-400 text-sm leading-relaxed mb-3">
+            Si les Bleus se qualifient, les quarts de finale de la Ligue des nations se joueront du 25 au 30 mars 2027. Côté Euro 2028, le tirage au sort des qualifications aura lieu le 6 décembre 2026 à Belfast (Irlande du Nord), et les matchs aller-retour se disputeront entre mars et novembre 2027.
+        </p>
+        <p class="text-gray-600 text-xs">
+            ⚠️ Calendrier et diffuseur susceptibles d'évoluer : vérifiez la programmation sur <a href="https://www.tf1.fr" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">tf1.fr</a> avant chaque match. Le détail de la liste de Zidane est à retrouver dans <a href="/blog/premiere-liste-zidane-23-bleus-ce-quil-faut-retenir" class="underline hover:text-gray-400">notre article</a>.
+        </p>
+    </section>
+
     <!-- ══════════ SECTION 3 — FAQ ══════════ -->
     <section class="mb-8">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : droits TV et abonnements</h2>
@@ -279,6 +324,16 @@ include __DIR__ . '/templates/header.php';
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
                     Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe.
+                </p>
+            </details>
+
+            <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+                <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                    Sur quelle chaîne voir les matchs de l'équipe de France ?
+                    <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+                </summary>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                    Les matchs de l'équipe de France en Ligue des nations 2026-2027 sont diffusés en exclusivité et en clair sur TF1 et TF1+, sans abonnement. Le groupe TF1 détient aussi les droits des matchs des Bleus jusqu'en 2028, ce qui inclut les qualifications à l'Euro 2028 prévues en 2027.
                 </p>
             </details>
 

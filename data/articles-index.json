@@ -1,5 +1,19 @@
 [
     {
+        "id":  43,
+        "slug":  "premiere-liste-zidane-23-bleus-ce-quil-faut-retenir",
+        "titre":  "Liste de Zidane : 23 Bleus, cinq nouveaux visages et l\u0027absence de Tchouaméni",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-09-18",
+        "extrait":  "Zinédine Zidane a dévoilé sa première liste : 23 joueurs, Mbappé capitaine, cinq nouveaux dont Estéban Lepaul et Lucas Da Cunha, mais sans Tchouaméni ni Kanté. Ce qu\u0027il faut retenir, et le calendrier des Bleus jusqu\u0027au tirage de l\u0027Euro 2028.",
+        "vignette":  "/images/premiere-liste-zidane-equipe-france-2026.jpg",
+        "image_alt":  "Premiere liste de Zinedine Zidane selectionneur de l\u0027equipe de France, 23 joueurs"
+    },
+    {
         "id":  42,
         "slug":  "om-besiktas-quel-public-le-plus-chaud-2026",
         "titre":  "OM - Besiktas : quel public est le plus chaud, le Vélodrome ou Istanbul ?",

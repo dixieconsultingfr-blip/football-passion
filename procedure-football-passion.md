@@ -658,4 +658,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 ---
 
-*Dernière mise à jour : 6 septembre 2026*
+### 3.71 Sous-page Ligue des Nations groupe A1, page L3 et convention date de mise à jour — 18 septembre 2026
+
+- **`ligue-des-nations-groupe-a1.php`** (sous-page de `euro.php`) : calendrier des 6 matchs des Bleus (tableau + diffusion TF1/TF1+), classement calculé à partir du tableau `$matchs` (renseigner `score_dom`/`score_ext` après chaque match), FAQ + JSON-LD, lien vers l'article de la première liste de Zidane. Variable `$date_maj_page` à mettre à jour à chaque modification (voir `CLAUDE.md`). Liée depuis `euro.php` (section « En attendant l'Euro 2028 »), `ligue-des-nations-2026-2027.php` et le sitemap.
+- `droits-tv-football.php` : ajout de la section Équipe de France (TF1/TF1+) et de la question FAQ associée ; `$date_maj_page` mise à jour.
+- Nouvelle page `ligue-3.php` (Ligue 3 Betclic), catégorie `L3`, matchs saisis manuellement comme la L2.
+
+*Dernière mise à jour : 18 septembre 2026*

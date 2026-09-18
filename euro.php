@@ -48,6 +48,26 @@ include __DIR__ . '/templates/header.php';
     </div>
 </section>
 
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-5">En attendant l'Euro 2028</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/ligue-des-nations-groupe-a1.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Équipe de France · Bleus de Zidane</p>
+            <h3 class="text-white font-bold text-xl mb-2">Ligue des Nations — Groupe A1</h3>
+            <p class="text-gray-400 text-sm mb-1">France, Italie, Belgique, Turquie</p>
+            <p class="text-gray-500 text-xs mb-4">6 matchs du 25 septembre au 15 novembre 2026, diffusés sur TF1</p>
+            <span class="text-green-400 text-xs font-semibold">Calendrier, classement et diffusion →</span>
+        </a>
+        <a href="/blog/premiere-liste-zidane-23-bleus-ce-quil-faut-retenir" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">À lire</p>
+            <h3 class="text-white font-bold text-xl mb-2">La première liste de Zidane</h3>
+            <p class="text-gray-400 text-sm mb-1">23 Bleus, cinq nouveaux visages, sans Tchouaméni</p>
+            <p class="text-gray-500 text-xs mb-4">Le premier groupe de la route vers l'Euro 2028</p>
+            <span class="text-green-400 text-xs font-semibold">Lire l'article →</span>
+        </a>
+    </div>
+</section>
+
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pb-4">
     <a href="/equipe-france.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🇫🇷 Équipe de France</a>

@@ -114,8 +114,13 @@ include __DIR__ . '/templates/header.php';
             <li>📅 <strong class="text-white">25 septembre 2026</strong> — Turquie - France</li>
             <li>📅 <strong class="text-white">28 septembre 2026</strong> — Belgique - France</li>
             <li>📅 <strong class="text-white">2 octobre 2026</strong> — France - Italie</li>
-            <li>📅 Journées retour à confirmer, dans la fenêtre du 24 septembre au 17 novembre 2026</li>
+            <li>📅 <strong class="text-white">5 octobre 2026</strong> — France - Belgique</li>
+            <li>📅 <strong class="text-white">12 novembre 2026</strong> — Italie - France</li>
+            <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
+        <p class="pt-2">
+            <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>
+        </p>
     </div>
 </section>
 

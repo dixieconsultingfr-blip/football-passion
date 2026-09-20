@@ -4,7 +4,8 @@ require_once __DIR__ . '/blog/helpers.php';
 $competitions = [
     'L1'         => 'Ligue 1',
     'L2'         => 'Ligue 2',
-    'CL'         => 'Champions League',
+    'L3'         => 'Ligue 3',
+    'CL'        => 'Champions League',
     'Europa'     => 'Europa League',
     'Conference' => 'Ligue Conférence',
     'France'     => 'Équipe de France',
@@ -57,6 +58,11 @@ if ($comp !== '' && $saison !== '' && preg_match('/^[A-Za-z0-9]+$/', $comp) && p
         $idsVus[$m['id']] = $m;
     }
     $matchsAffiches = array_values($idsVus);
+
+    // La L1 est synchronisée par n8n sans champ "journee" : on le reconstitue pour le regroupement
+    if ($comp === 'L1') {
+        $matchsAffiches = completer_journees($matchsAffiches);
+    }
 
     // Tri : par journée si disponible, sinon par date, plus récent en premier
     usort($matchsAffiches, function ($a, $b) {

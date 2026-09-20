@@ -89,3 +89,21 @@ function load_joueur(string $basePath, string $slug): ?array {
     }
     return null;
 }
+
+// Renseigne le numéro de journée manquant (matchs de L1 synchronisés par n8n, qui n'envoie pas de champ "journee").
+// Numéro = rang du match pour l'équipe la plus avancée, en parcourant les matchs dans l'ordre chronologique.
+// Un champ "journee" déjà présent est conservé. L'ordre du tableau d'entrée est préservé.
+function completer_journees(array $matchs): array {
+    $idx = array_keys($matchs);
+    usort($idx, fn($a, $b) => strcmp(($matchs[$a]['date'] ?? '') . ($matchs[$a]['heure'] ?? ''), ($matchs[$b]['date'] ?? '') . ($matchs[$b]['heure'] ?? '')));
+    $rang = [];
+    foreach ($idx as $i) {
+        $dom = $matchs[$i]['domicile'] ?? '';
+        $ext = $matchs[$i]['exterieur'] ?? '';
+        $n = !empty($matchs[$i]['journee']) ? (int)$matchs[$i]['journee'] : max($rang[$dom] ?? 0, $rang[$ext] ?? 0) + 1;
+        if (empty($matchs[$i]['journee'])) { $matchs[$i]['journee'] = $n; }
+        $rang[$dom] = $n;
+        $rang[$ext] = $n;
+    }
+    return $matchs;
+}

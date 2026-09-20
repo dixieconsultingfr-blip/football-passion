@@ -3,6 +3,7 @@ require_once __DIR__ . '/blog/helpers.php';
 
 $matchsAll = json_decode(@file_get_contents(__DIR__ . '/data/matchs.json'), true) ?? [];
 $matchsL1  = array_values(array_filter($matchsAll, fn($m) => ($m['competition'] ?? '') === 'L1'));
+$matchsL1  = completer_journees($matchsL1); // n8n n'envoie pas de champ "journee" pour la L1
 
 // ── Classement calculé depuis les résultats FINISHED (pas de saisie manuelle) ──
 // Toutes les équipes du calendrier apparaissent dans le classement dès la 1ere journee,

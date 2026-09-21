@@ -1,5 +1,19 @@
 [
     {
+        "id":  44,
+        "slug":  "saint-etienne-marque-le-pas-ligue-2-2026-2027",
+        "titre":  "Ligue 2 : Saint-Étienne marque le pas, mais reste leader",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "ASSE",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-09-21",
+        "extrait":  "Après un début de saison parfait avec cinq victoires en cinq journées, Saint-Étienne connaît son premier ralentissement : défaite à Dunkerque (2-1) puis nul à Metz (2-2). Les Verts restent leaders, mais l\u0027écart se réduit.",
+        "vignette":  "/images/saint-etienne-marque-le-pas-ligue-2-2026-2027.jpg",
+        "image_alt":  "Saint-Etienne marque le pas en Ligue 2 : defaite 2-1 a Dunkerque puis nul 2-2 a Metz"
+    },
+    {
         "id":  43,
         "slug":  "premiere-liste-zidane-23-bleus-ce-quil-faut-retenir",
         "titre":  "Liste de Zidane : 23 Bleus, cinq nouveaux visages et l\u0027absence de Tchouaméni",

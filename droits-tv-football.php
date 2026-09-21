@@ -3,7 +3,7 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
-$date_maj_page = '2026-09-18'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$date_maj_page = '2026-09-21'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -53,6 +53,14 @@ include __DIR__ . '/templates/header.php';
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui va diffuser la Ligue 2 en 2026 et 2027 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "beIN SPORTS diffuse 100 % des matchs de la Ligue 2 BKT en direct et en exclusivité pour les saisons 2026-2027 et suivantes, jusqu'en 2028-2029. Les 9 matchs de chaque journée sont proposés en direct ou en multiplex, sur les chaînes beIN SPORTS ou via des offres partenaires comme les bouquets CANAL+ Sport."
       }
     },
     {
@@ -199,13 +207,25 @@ include __DIR__ . '/templates/header.php';
     <!-- ══════════ SECTION 2 — LIGUE 2 & COUPES D'EUROPE ══════════ -->
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Ligue 2 BKT et Coupes d'Europe</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div class="bg-gray-800 border border-gray-700 rounded-xl p-5">
-                <h3 class="text-white font-bold mb-2">🥈 Ligue 2 BKT</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Diffusée principalement par <strong class="text-white">beIN SPORTS</strong>, autour de 15 €/mois sans engagement.
-                </p>
-            </div>
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-5 mb-4">
+            <h3 class="text-white font-bold text-lg mb-3">🥈 Ligue 2 BKT : 100 % des matchs sur beIN SPORTS</h3>
+            <figure class="mb-4">
+                <img src="/images/ligue-2-bkt-100-pour-cent-bein-sports.jpg" alt="Ligue 2 BKT, 100 % des matchs en exclusivité sur beIN SPORTS, cycle 2024-2029" class="w-full max-w-xl rounded-lg border border-gray-700" loading="lazy" />
+                <figcaption class="text-gray-500 text-xs mt-2">La Ligue 2 BKT est diffusée en exclusivité sur beIN SPORTS pour le cycle 2024-2029 — Image : beIN SPORTS</figcaption>
+            </figure>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                Selon l'accord annoncé fin septembre 2025, <a href="https://www.beinregie.beinsports.com/ligue-2-bkt-2026-2027-bein/" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">beIN SPORTS</a> détient l'exclusivité de la Ligue 2 BKT et retransmet la totalité du championnat en direct jusqu'à la saison 2028-2029, y compris pour 2026-2027. Un changement de taille : jusqu'ici, la chaîne ne proposait que deux affiches par journée, le reste étant partagé avec Prime Video et L'Équipe.
+            </p>
+            <ul class="text-gray-400 text-sm space-y-1.5 mb-3">
+                <li>✓ <strong class="text-white">Les 9 matchs de chaque journée</strong>, en direct ou en multiplex</li>
+                <li>✓ Accessible directement sur les chaînes beIN SPORTS, ou via des offres partenaires comme les bouquets <a href="https://boutique.canalplus.com/offres/ligue-2/" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-300">CANAL+ Sport</a></li>
+                <li>✓ Abonnement beIN SPORTS autour de 15 €/mois, sans engagement</li>
+            </ul>
+            <p class="text-gray-600 text-xs">
+                ⚠️ Tarifs et modalités susceptibles d'évoluer : vérifiez l'offre en vigueur sur le site officiel de beIN SPORTS avant toute souscription.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 mb-6">
             <div class="bg-gray-800 border border-gray-700 rounded-xl p-5">
                 <h3 class="text-white font-bold mb-2">⭐ Coupes d'Europe</h3>
                 <p class="text-gray-400 text-sm leading-relaxed">
@@ -324,6 +344,16 @@ include __DIR__ . '/templates/header.php';
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
                     Vous pouvez vous abonner sur le site officiel plus.ligue1.com, via l'application smartphone/TV, directement depuis le décodeur TV de votre opérateur internet (Free, Orange, SFR, Bouygues), ou encore via une plateforme de streaming partenaire comme DAZN, Amazon Prime Video, OneFootball, Molotov, RMC Sport ou L'Équipe.
+                </p>
+            </details>
+
+            <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+                <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                    Qui va diffuser la Ligue 2 en 2026 et 2027 ?
+                    <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+                </summary>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                    beIN SPORTS diffuse 100 % des matchs de la Ligue 2 BKT en direct et en exclusivité pour les saisons 2026-2027 et suivantes, jusqu'en 2028-2029. Les 9 matchs de chaque journée sont proposés en direct ou en multiplex, sur les chaînes beIN SPORTS ou via des offres partenaires comme les bouquets CANAL+ Sport.
                 </p>
             </details>
 

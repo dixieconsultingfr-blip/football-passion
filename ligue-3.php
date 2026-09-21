@@ -215,6 +215,7 @@ include __DIR__ . '/templates/header.php';
                 </div>
                 <?php endforeach; ?>
             </div>
+            <?= bloc_diffusion_prochains_matchs($aVenir, 'Ligue 3', 'Ligue 1+', 'diffuseur exclusif de la Ligue 3 Betclic') ?>
             <?php endif; ?>
         </section>
 

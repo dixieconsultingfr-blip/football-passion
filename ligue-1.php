@@ -210,6 +210,7 @@ include __DIR__ . '/templates/header.php';
                 </div>
                 <?php endforeach; ?>
             </div>
+            <?= bloc_diffusion_prochains_matchs($aVenir, 'Ligue 1', 'Ligue 1+', 'également via DAZN, OneFootball et les box des opérateurs') ?>
             <?php endif; ?>
         </section>
 

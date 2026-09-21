@@ -107,3 +107,40 @@ function completer_journees(array $matchs): array {
     }
     return $matchs;
 }
+
+// "vendredi 25 septembre" (sans année, jour de la semaine en minuscule) — pour les phrases de diffusion.
+function date_fr_jour_court(string $date): string {
+    $jours = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+    $mois  = ['','janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+    $d = new DateTime($date);
+    return $jours[(int)$d->format('w')] . ' ' . $d->format('j') . ' ' . $mois[(int)$d->format('n')];
+}
+
+// Bloc SEO "À quelle heure et sur quelle chaîne ?" généré depuis le prochain match (liste $aVenir triée par date).
+// $chaine : diffuseur (ex. "Ligue 1+"), $precision : complément affiché après la chaîne (facultatif).
+function bloc_diffusion_prochains_matchs(array $aVenir, string $competition, string $chaine, string $precision = ''): string {
+    if (empty($aVenir)) { return ''; }
+    $prochain = $aVenir[0];
+    $heure = !empty($prochain['heure']) ? ' à ' . str_replace(':', 'h', $prochain['heure']) : '';
+    $j = $prochain['journee'] ?? null;
+    $memeJournee = $j !== null ? array_values(array_filter($aVenir, fn($m) => ($m['journee'] ?? null) === $j)) : [$prochain];
+    $dates = array_column($memeJournee, 'date');
+    $h = fn(string $s) => htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+
+    $out  = '<div class="mt-6 pt-5 border-t border-gray-700">';
+    $out .= '<h3 class="text-white font-semibold text-sm mb-2">À quelle heure et sur quelle chaîne regarder les prochains matchs de ' . $h($competition) . ' ?</h3>';
+    $out .= '<p class="text-gray-400 text-sm leading-relaxed">Le prochain match de ' . $h($competition) . ' est <strong class="text-white">'
+          . $h($prochain['domicile'] ?? '?') . ' - ' . $h($prochain['exterieur'] ?? '?') . '</strong>, ' . $h(date_fr_jour_court($prochain['date'])) . $h($heure)
+          . ', en direct sur <strong class="text-white">' . $h($chaine) . '</strong>.';
+    if ($j !== null && count($memeJournee) > 1) {
+        $debut = min($dates); $fin = max($dates);
+        $periode = $debut === $fin ? 'le ' . date_fr_jour_court($debut) : 'du ' . date_fr_jour_court($debut) . ' au ' . date_fr_jour_court($fin);
+        $out .= ' Les ' . count($memeJournee) . ' rencontres restantes de la journée ' . (int)$j . ' se jouent ' . $h($periode) . ', toutes diffusées sur ' . $h($chaine) . ($precision !== '' ? ' (' . $h($precision) . ')' : '') . '.';
+    } elseif ($precision !== '') {
+        $out .= ' Diffusion sur ' . $h($chaine) . ' (' . $h($precision) . ').';
+    }
+    $out .= '</p>';
+    $out .= '<p class="text-gray-600 text-xs mt-2">Horaires et diffuseur susceptibles d\'évoluer. Pour comparer les abonnements, consultez notre <a href="/droits-tv-football.php" class="underline hover:text-gray-400">guide des droits TV</a>.</p>';
+    $out .= '</div>';
+    return $out;
+}

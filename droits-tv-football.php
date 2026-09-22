@@ -3,7 +3,7 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
-$date_maj_page = '2026-09-21'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$date_maj_page = '2026-09-22'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -373,6 +373,29 @@ include __DIR__ . '/templates/header.php';
     <p class="text-gray-600 text-xs text-center mb-4">
         Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> (Conditions Générales d'Abonnement Ligue 1+, version du 28 juillet 2026) et sur <a href="https://onefootballsupport.zendesk.com/hc/fr/articles/39144484562449" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">le centre d'aide OneFootball</a> — susceptibles d'évoluer à tout moment, se référer au site ou à l'application officielle pour toute souscription.
     </p>
+
+    <!-- Guides droits TV par compétition -->
+    <section class="mb-6">
+        <h2 class="text-xl font-bold text-white mb-4">Guides détaillés par compétition</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="/droits-tv-ligue-1.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
+                <p class="text-white font-semibold group-hover:text-green-400 transition-colors">🇫🇷 Droits TV Ligue 1 2026-2027</p>
+                <p class="text-gray-500 text-xs mt-1">Ligue 1+ — formules, prix, partage à 2</p>
+            </a>
+            <a href="/droits-tv-ligue-2.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
+                <p class="text-white font-semibold group-hover:text-green-400 transition-colors">🥈 Droits TV Ligue 2 2026-2027</p>
+                <p class="text-gray-500 text-xs mt-1">beIN Sports — exclusivité totale 2024-2029</p>
+            </a>
+            <a href="/droits-tv-champions-league.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
+                <p class="text-white font-semibold group-hover:text-green-400 transition-colors">⭐ Droits TV Champions League 2026-2027</p>
+                <p class="text-gray-500 text-xs mt-1">Canal+ — PSG, OL, LOSC en C1</p>
+            </a>
+            <a href="/droits-tv-europa-league.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
+                <p class="text-white font-semibold group-hover:text-green-400 transition-colors">🌍 Droits TV Europa League 2026-2027</p>
+                <p class="text-gray-500 text-xs mt-1">Canal+ — l'OM et la Ligue Conférence</p>
+            </a>
+        </div>
+    </section>
 
     <!-- Liens internes -->
     <section class="flex flex-wrap gap-4 justify-center pt-4 pb-2">

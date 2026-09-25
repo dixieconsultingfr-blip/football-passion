@@ -1,5 +1,19 @@
 [
     {
+        "id":  48,
+        "slug":  "eliminatoires-can-2027-classements-journee-1",
+        "titre":  "Éliminatoires CAN 2027 : les 12 classements après la première journée",
+        "categorie":  "CAN",
+        "etiquettes":  [
+                           "CAN 2027",
+                           "Éliminatoires"
+                       ],
+        "date":  "2026-09-25",
+        "extrait":  "La première journée des éliminatoires de la CAN 2027 est terminée : Maroc, RD Congo, Algérie, Côte d'Ivoire, Cameroun ou encore Mali démarrent par une victoire. Voici les classements des 12 groupes.",
+        "vignette":  "/images/eliminatoires-can-2027-classements-journee-1.jpg",
+        "image_alt":  "Eliminatoires de la CAN 2027 : classements des 12 groupes apres la premiere journee"
+    },
+    {
         "id":  47,
         "slug":  "zidane-victoire-turquie-france-debuts-bleus",
         "titre":  "Turquie 0-1 France : Zidane débute par une victoire, mais l'inquiétude Mbappé",

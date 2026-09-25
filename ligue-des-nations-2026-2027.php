@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
+$date_maj_page = '2026-09-25'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
 $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
@@ -13,6 +14,8 @@ include __DIR__ . '/templates/header.php';
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "datePublished": "2026-09-18T08:00:00+02:00",
+  "dateModified": "<?= $date_maj_page ?>T08:00:00+02:00",
   "mainEntity": [
     {
       "@type": "Question",
@@ -53,7 +56,10 @@ include __DIR__ . '/templates/header.php';
 
 <!-- Hero -->
 <header class="mb-10">
-    <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Avant l'Euro 2028</p>
+    <div class="flex items-center gap-3 mb-1">
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-widest">Avant l'Euro 2028</p>
+        <span class="text-gray-600 text-xs">· mis à jour le <?= date_fr_long($date_maj_page) ?></span>
+    </div>
     <h1 class="text-4xl font-bold text-white mb-2">Ligue des Nations 2026-2027</h1>
     <p class="text-gray-400 text-sm mb-4">24 septembre 2026 — 13 juin 2027 · Zinédine Zidane sur le banc des Bleus</p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
@@ -111,13 +117,17 @@ include __DIR__ . '/templates/header.php';
             <strong class="text-white">Turquie</strong>.
         </p>
         <ul class="space-y-1.5 text-gray-400 pt-2 border-t border-gray-700">
-            <li>📅 <strong class="text-white">25 septembre 2026</strong> — Turquie - France</li>
+            <li>✅ <strong class="text-white">25 septembre 2026</strong> — Turquie 0 - 1 France <span class="text-gray-500">(but de Mbappé, 54e)</span></li>
             <li>📅 <strong class="text-white">28 septembre 2026</strong> — Belgique - France</li>
             <li>📅 <strong class="text-white">2 octobre 2026</strong> — France - Italie</li>
             <li>📅 <strong class="text-white">5 octobre 2026</strong> — France - Belgique</li>
             <li>📅 <strong class="text-white">12 novembre 2026</strong> — Italie - France</li>
             <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
+        <p class="pt-2 border-t border-gray-700">
+            <strong class="text-white">Après la 1re journée :</strong> la France, victorieuse 1-0 en Turquie pour le premier match de Zidane, est deuxième du groupe avec 3 points, derrière la Belgique (3 points, différence de buts +2, victorieuse 2-0 de l'Italie).
+            <a href="/blog/turquie-france-heure-chaine-composition-premier-match-zidane" class="text-green-400 hover:text-green-300">Relire notre article sur le match</a>.
+        </p>
         <p class="pt-2">
             <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>
         </p>

@@ -12,13 +12,18 @@ $matchs = [
     ['date' => '2026-11-15', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Turquie',  'lieu' => 'Bordeaux',                      'score_dom' => null, 'score_ext' => null],
 ];
 
-// Classement du groupe calculé depuis les résultats renseignés (uniquement les matchs des Bleus sont détaillés ici).
+// Matchs du groupe sans les Bleus : servent uniquement au classement (non affichés dans le calendrier).
+$autresMatchs = [
+    ['date' => '2026-09-25', 'dom' => 'Italie', 'ext' => 'Belgique', 'score_dom' => 0, 'score_ext' => 2],
+];
+
+// Classement du groupe calculé depuis les résultats renseignés (matchs des Bleus + autres matchs du groupe).
 $equipes = ['France', 'Italie', 'Belgique', 'Turquie'];
 $table = [];
 foreach ($equipes as $eq) {
     $table[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
 }
-foreach ($matchs as $m) {
+foreach (array_merge($matchs, $autresMatchs) as $m) {
     if ($m['score_dom'] === null || $m['score_ext'] === null) { continue; }
     foreach ([[$m['dom'], $m['score_dom'], $m['score_ext']], [$m['ext'], $m['score_ext'], $m['score_dom']]] as [$eq, $bp, $bc]) {
         $table[$eq]['MJ']++;
@@ -192,7 +197,7 @@ include __DIR__ . '/templates/header.php';
             </tbody>
         </table>
     </div>
-    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé à partir des seuls matchs de la France renseignés ci-dessus : il sera complété au fil de la phase de ligue.</p>
+    <p class="text-gray-600 text-xs mt-2 italic">Classement calculé à partir des résultats du groupe A1 renseignés à la main : il est complété au fil de la phase de ligue.</p>
 </section>
 
 <!-- Après la phase de groupes -->

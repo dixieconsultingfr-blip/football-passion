@@ -1,5 +1,19 @@
 [
     {
+        "id":  47,
+        "slug":  "zidane-victoire-turquie-france-debuts-bleus",
+        "titre":  "Turquie 0-1 France : Zidane débute par une victoire, mais l'inquiétude Mbappé",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-09-25",
+        "extrait":  "Vainqueurs 1-0 à Kocaeli grâce à Mbappé, les Bleus offrent à Zinédine Zidane une victoire pour son premier match. Mais le capitaine est sorti blessé au genou. Résumé et enseignements.",
+        "vignette":  "/images/zidane-victoire-turquie-france-ligue-des-nations-2026.jpg",
+        "image_alt":  "Zinedine Zidane et les Bleus fetent la victoire 1-0 en Turquie en Ligue des nations"
+    },
+    {
         "id":  46,
         "slug":  "turquie-france-heure-chaine-composition-premier-match-zidane",
         "titre":  "Turquie - France : heure, chaîne et composition pour le premier match de Zidane",

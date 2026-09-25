@@ -1,5 +1,33 @@
 [
     {
+        "id":  46,
+        "slug":  "turquie-france-heure-chaine-composition-premier-match-zidane",
+        "titre":  "Turquie - France : heure, chaîne et composition pour le premier match de Zidane",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-09-25",
+        "extrait":  "Coup d'envoi à 20h45 ce soir à Kocaeli, en direct sur TF1 et TF1+ : tout savoir sur Turquie - France, le premier match de Zinédine Zidane, avec la composition probable des Bleus.",
+        "vignette":  "/images/turquie-france-zidane-premier-match-ligue-des-nations.jpg",
+        "image_alt":  "Turquie - France en Ligue des nations : premier match de Zinedine Zidane sur le banc des Bleus"
+    },
+    {
+        "id":  45,
+        "slug":  "deschamps-zidane-passage-de-temoin-equipe-de-france",
+        "titre":  "De Deschamps à Zidane : une page se tourne pour l'équipe de France",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Zinédine Zidane"
+                       ],
+        "date":  "2026-09-23",
+        "extrait":  "14 ans à la tête des Bleus, un Mondial, deux finales, une Ligue des nations : c'est le bilan que laisse Didier Deschamps en passant le flambeau à Zinédine Zidane, qui prend son premier banc vendredi face à la Turquie.",
+        "vignette":  "/images/deschamps-zidane-passage-de-temoin-equipe-de-france.jpg",
+        "image_alt":  "Passage de temoin entre Didier Deschamps et Zinedine Zidane a la tete de l'equipe de France"
+    },
+    {
         "id":  44,
         "slug":  "saint-etienne-marque-le-pas-ligue-2-2026-2027",
         "titre":  "Ligue 2 : Saint-Étienne marque le pas, mais reste leader",

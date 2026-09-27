@@ -107,6 +107,20 @@ include __DIR__ . '/templates/header.php';
     </a>
 </section>
 
+<!-- Tous les groupes -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Classements de tous les groupes</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+        Quatorze groupes composent la phase de ligue 2026-2027. Retrouvez le classement de chacun d'entre eux.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2">
+        <a href="/ligue-des-nations-groupe-a1.php" class="text-center bg-green-900/20 border border-green-700 hover:border-green-500 rounded-lg py-3 text-sm font-semibold text-green-400 transition-colors">A 🇫🇷</a>
+        <?php foreach (['b','c','d','e','f','g','h','i','j','k','l','m','n'] as $g): ?>
+        <a href="/ligue-des-nations-groupe-<?= $g ?>.php" class="text-center bg-gray-800 border border-gray-700 hover:border-green-600 rounded-lg py-3 text-sm font-semibold text-white transition-colors"><?= strtoupper($g) ?></a>
+        <?php endforeach; ?>
+    </div>
+</section>
+
 <!-- Le groupe de la France -->
 <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Le groupe de la France en Ligue A</h2>

@@ -664,4 +664,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - `droits-tv-football.php` : ajout de la section Équipe de France (TF1/TF1+) et de la question FAQ associée ; `$date_maj_page` mise à jour.
 - Nouvelle page `ligue-3.php` (Ligue 3 Betclic), catégorie `L3`, matchs saisis manuellement comme la L2.
 
-*Dernière mise à jour : 18 septembre 2026*
+### 3.72 Pages de classement pour les 14 groupes de la Ligue des Nations — 27 septembre 2026
+
+- `templates/ligue-des-nations-groupe-template.php` : template partagé pour les groupes B à N (pas de Bleus), qui n'ont qu'un classement (pas de calendrier match par match, faute de données individuelles fournies). Chaque fichier `ligue-des-nations-groupe-{b..n}.php` ne contient que ses données (`$groupeLettre`, `$groupeEquipesLabel`, `$classement`, `$date_maj_page`) et inclut le template.
+- Le groupe A1 des Bleus garde sa page dédiée existante (`ligue-des-nations-groupe-a1.php`, calendrier + diffusion TF1).
+- `ligue-des-nations-2026-2027.php` : ajout d'une grille de 14 boutons vers chaque groupe. `sitemap.php` : les 13 nouvelles pages ajoutées.
+
+**⚠️ À faire quand l'édition 2026-2027 de la Ligue des Nations sera terminée** (après la finale à quatre, prévue du 9 au 13 juin 2027) : archiver ces 14 pages de groupe (A1 + B à N), sur le modèle de l'archivage déjà en place pour les matchs (`data/archives/`, voir section sur `archive-old-matches.ps1` dans `CLAUDE.md`). Ne pas les laisser dans le menu ou le classement affichés comme si l'édition était en cours une fois la compétition close — prévoir soit une bascule vers une page d'archive dédiée, soit un renommage vers une page « Ligue des Nations 2026-2027 (terminée) », avant de démarrer les pages de l'édition suivante.
+
+*Dernière mise à jour : 27 septembre 2026*

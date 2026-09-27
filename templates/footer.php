@@ -42,6 +42,7 @@
                         <li><a href="/europa-league.php" class="hover:text-green-400 transition-colors">Europa League</a></li>
                         <li><a href="/conference-league.php" class="hover:text-green-400 transition-colors">Ligue Conférence</a></li>
                         <li><a href="/equipe-france.php" class="hover:text-green-400 transition-colors">Équipe de France</a></li>
+                        <li><a href="/ligue-des-nations-2026-2027.php" class="hover:text-green-400 transition-colors">Ligue des Nations</a></li>
                         <li><a href="/coupe-du-monde.php" class="hover:text-green-400 transition-colors">Coupe du Monde</a></li>
                         <li><a href="/droits-tv-football.php" class="hover:text-green-400 transition-colors">Guide droits TV</a></li>
                     </ul>

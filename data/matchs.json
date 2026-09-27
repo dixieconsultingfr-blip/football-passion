@@ -12981,9 +12981,9 @@
         "date":  "2026-09-24",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  3,
+        "score_ext":  2,
         "journee":  8
     },
     {
@@ -12994,9 +12994,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  2,
+        "score_ext":  1,
         "journee":  8
     },
     {
@@ -13007,9 +13007,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  2,
         "journee":  8
     },
     {
@@ -13020,9 +13020,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  1,
         "journee":  8
     },
     {
@@ -13033,22 +13033,22 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  0,
+        "score_ext":  0,
         "journee":  8
     },
     {
         "id":  9000598,
         "competition":  "L3",
-        "domicile":  "Aubagne",
-        "exterieur":  "Fleury 91",
+        "domicile":  "Fleury 91",
+        "exterieur":  "Aubagne",
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  2,
         "journee":  8
     },
     {
@@ -13059,9 +13059,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  1,
         "journee":  8
     },
     {
@@ -13072,9 +13072,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  0,
         "journee":  8
     },
     {
@@ -13085,9 +13085,9 @@
         "date":  "2026-09-26",
         "heure":  "20:45",
         "stade":  "",
-        "status":  "SCHEDULED",
-        "score_dom":  null,
-        "score_ext":  null,
+        "status":  "FINISHED",
+        "score_dom":  1,
+        "score_ext":  2,
         "journee":  8
     }
 ]

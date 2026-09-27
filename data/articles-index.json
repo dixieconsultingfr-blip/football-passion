@@ -1,5 +1,19 @@
 [
     {
+        "id":  49,
+        "slug":  "ligue-des-nations-2026-2027-resultats-journee-1",
+        "titre":  "Ligue des Nations 2026-2027 : tous les résultats de la journée 1",
+        "categorie":  "Euro",
+        "etiquettes":  [
+                           "Ligue des nations",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-09-27",
+        "extrait":  "Victoire de la France en Turquie, festival de la Finlande face à Saint-Marin, remontée spectaculaire de l'Espagne contre l'Angleterre : voici tous les résultats de la journée 1 de la Ligue des Nations 2026-2027.",
+        "vignette":  "/images/ligue-des-nations-2026-2027-resultats-journee-1.jpg",
+        "image_alt":  "Resultats de la journee 1 de la Ligue des nations 2026-2027"
+    },
+    {
         "id":  48,
         "slug":  "eliminatoires-can-2027-classements-journee-1",
         "titre":  "Éliminatoires CAN 2027 : les 12 classements après la première journée",

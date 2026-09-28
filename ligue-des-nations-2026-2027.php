@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-09-25'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
+$date_maj_page = '2026-09-28'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
 $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
@@ -132,15 +132,15 @@ include __DIR__ . '/templates/header.php';
         </p>
         <ul class="space-y-1.5 text-gray-400 pt-2 border-t border-gray-700">
             <li>✅ <strong class="text-white">25 septembre 2026</strong> — Turquie 0 - 1 France <span class="text-gray-500">(but de Mbappé, 54e)</span></li>
-            <li>📅 <strong class="text-white">28 septembre 2026</strong> — Belgique - France</li>
+            <li>✅ <strong class="text-white">28 septembre 2026</strong> — Belgique 0 - 1 France</li>
             <li>📅 <strong class="text-white">2 octobre 2026</strong> — France - Italie</li>
             <li>📅 <strong class="text-white">5 octobre 2026</strong> — France - Belgique</li>
             <li>📅 <strong class="text-white">12 novembre 2026</strong> — Italie - France</li>
             <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
         <p class="pt-2 border-t border-gray-700">
-            <strong class="text-white">Après la 1re journée :</strong> la France, victorieuse 1-0 en Turquie pour le premier match de Zidane, est deuxième du groupe avec 3 points, derrière la Belgique (3 points, différence de buts +2, victorieuse 2-0 de l'Italie).
-            <a href="/blog/turquie-france-heure-chaine-composition-premier-match-zidane" class="text-green-400 hover:text-green-300">Relire notre article sur le match</a>.
+            <strong class="text-white">Après la 2e journée :</strong> la France enchaîne un deuxième succès de rang en s'imposant 1-0 à Bruxelles et prend seule la tête du groupe avec 6 points, devant l'Italie (3 points après son succès 4-1 en Turquie), la Belgique (3 points) et la Turquie (0 point).
+            <a href="/blog/belgique-france-heure-chaine-enjeux-ligue-des-nations" class="text-green-400 hover:text-green-300">Relire notre article sur le match</a>.
         </p>
         <p class="pt-2">
             <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>

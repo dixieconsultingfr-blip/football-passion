@@ -1,5 +1,19 @@
 [
     {
+        "id":  52,
+        "slug":  "belgique-france-olise-coup-de-genie-zidane-deux-victoires",
+        "titre":  "Belgique 0-1 France : le coup de génie d'Olise offre à Zidane sa deuxième victoire",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-09-28",
+        "extrait":  "Michael Olise a inscrit l'unique but de la rencontre à la 88e minute : la France s'impose 0-1 en Belgique et offre à Zinédine Zidane une deuxième victoire de rang, à la tête du groupe A1.",
+        "vignette":  "/images/belgique-france-olise-coup-de-genie-zidane-deux-victoires.jpg",
+        "image_alt":  "Michael Olise marque le but de la victoire de la France en Belgique en Ligue des nations"
+    },
+    {
         "id":  51,
         "slug":  "eliminatoires-can-2027-journee-2-programme-chaines",
         "titre":  "Éliminatoires CAN 2027, journée 2 : programme, horaires et chaînes",

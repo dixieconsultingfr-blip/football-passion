@@ -1,5 +1,19 @@
 [
     {
+        "id":  50,
+        "slug":  "belgique-france-heure-chaine-enjeux-ligue-des-nations",
+        "titre":  "Belgique - France : heure, chaîne et enjeux du deuxième match de Zidane",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-09-28",
+        "extrait":  "Trois jours après la victoire en Turquie, les Bleus de Zidane affrontent la Belgique ce lundi 28 septembre à 20h45, en direct sur TF1. Heure, lieu, chaîne et enjeux du match.",
+        "vignette":  "/images/belgique-france-vrai-test-zidane-ligue-des-nations.jpg",
+        "image_alt":  "Belgique - France en Ligue des nations : le vrai test pour Zinedine Zidane"
+    },
+    {
         "id":  49,
         "slug":  "ligue-des-nations-2026-2027-resultats-journee-1",
         "titre":  "Ligue des Nations 2026-2027 : tous les résultats de la journée 1",

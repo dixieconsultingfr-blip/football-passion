@@ -1,5 +1,19 @@
 [
     {
+        "id":  54,
+        "slug":  "ligue-des-nations-2026-2027-resultats-journee-2",
+        "titre":  "Ligue des Nations : les résultats de la journée 2 et les nouveaux leaders",
+        "categorie":  "Euro",
+        "etiquettes":  [
+                           "Ligue des nations",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-09-29",
+        "extrait":  "Espagne, Suisse, Albanie, Slovaquie et Islande : cinq groupes de la Ligue des Nations 2026-2027 ont livré un nouveau leader lors de la journée 2. Voici tous les résultats.",
+        "vignette":  "/images/ligue-des-nations-2026-2027-resultats-journee-2.jpg",
+        "image_alt":  "Resultats de la journee 2 de la Ligue des nations 2026-2027"
+    },
+    {
         "id":  53,
         "slug":  "eliminatoires-can-2027-algerie-egypte-senegal-vieira",
         "titre":  "Éliminatoires CAN 2027 : l'Algérie renverse le Burundi, l'Égypte impressionne, Vieira lance bien le Sénégal",

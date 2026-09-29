@@ -1,5 +1,19 @@
 [
     {
+        "id":  53,
+        "slug":  "eliminatoires-can-2027-algerie-egypte-senegal-vieira",
+        "titre":  "Éliminatoires CAN 2027 : l'Algérie renverse le Burundi, l'Égypte impressionne, Vieira lance bien le Sénégal",
+        "categorie":  "CAN",
+        "etiquettes":  [
+                           "CAN 2027",
+                           "Éliminatoires"
+                       ],
+        "date":  "2026-09-29",
+        "extrait":  "Deuxième journée mouvementée dans les éliminatoires de la CAN 2027 : l'Algérie revient de 2-0 pour arracher le nul au Burundi, l'Égypte s'impose 5-0, et Patrick Vieira gagne pour ses débuts sur le banc du Sénégal.",
+        "vignette":  "/images/eliminatoires-can-2027-algerie-egypte-senegal-vieira.jpg",
+        "image_alt":  "Eliminatoires CAN 2027 : Algerie, Egypte et Senegal apres la deuxieme journee"
+    },
+    {
         "id":  52,
         "slug":  "belgique-france-olise-coup-de-genie-zidane-deux-victoires",
         "titre":  "Belgique 0-1 France : le coup de génie d'Olise offre à Zidane sa deuxième victoire",

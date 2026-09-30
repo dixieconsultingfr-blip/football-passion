@@ -1,5 +1,19 @@
 [
     {
+        "id":  55,
+        "slug":  "zidane-deja-plus-fort-que-deschamps-debuts-bleus",
+        "titre":  "Équipe de France : Zidane déjà plus fort que Deschamps ?",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-09-30",
+        "extrait":  "Deux matchs, deux victoires : Zidane réussit ses débuts comme aucun sélectionneur des Bleus depuis Aimé Jacquet en 1994. Mais comparer son début de mandat au bilan de 14 ans de Deschamps a ses limites.",
+        "vignette":  "/images/zidane-deja-plus-fort-que-deschamps-debuts-bleus.jpg",
+        "image_alt":  "Zinedine Zidane et Didier Deschamps, comparaison des debuts a la tete de l'equipe de France"
+    },
+    {
         "id":  54,
         "slug":  "ligue-des-nations-2026-2027-resultats-journee-2",
         "titre":  "Ligue des Nations : les résultats de la journée 2 et les nouveaux leaders",

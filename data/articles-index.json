@@ -1,5 +1,19 @@
 [
     {
+        "id":  56,
+        "slug":  "france-italie-olise-bastoni-premier-nul-zidane",
+        "titre":  "France 1-1 Italie : le but d'Olise n'a pas suffi, premier nul de l'ère Zidane",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-10-02",
+        "extrait":  "Après deux victoires, les Bleus de Zidane concèdent leur premier match nul face à l'Italie (1-1). Olise a ouvert le score, Bastoni a égalisé, Upamecano a été expulsé. La France reste en tête du groupe A1.",
+        "vignette":  "/images/france-italie-olise-bastoni-premier-nul-zidane.jpg",
+        "image_alt":  "France - Italie en Ligue des nations : le but d'Olise ne suffit pas, premier nul de Zidane"
+    },
+    {
         "id":  55,
         "slug":  "zidane-deja-plus-fort-que-deschamps-debuts-bleus",
         "titre":  "Équipe de France : Zidane déjà plus fort que Deschamps ?",

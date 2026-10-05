@@ -139,7 +139,7 @@ include __DIR__ . '/templates/header.php';
             <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
         <p class="pt-2 border-t border-gray-700">
-            <strong class="text-white">Après la France - Belgique de la 4e journée :</strong> menés au score, les Bleus ont renversé la Belgique (4-1) au Stade de France et comptent 10 points en 4 matchs, en tête du groupe. La Belgique reste à 6 points.
+            <strong class="text-white">Après la France - Belgique de la 4e journée :</strong> menés au score, les Bleus ont renversé la Belgique (4-1) au Stade de France et comptent 10 points en 4 matchs, en tête du groupe, devant l'Italie (7 points, vainqueur 3-1 de la Turquie) et la Belgique (6 points).
             <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 hover:text-green-300">Lire notre article sur le match</a>.
         </p>
         <p class="pt-2">

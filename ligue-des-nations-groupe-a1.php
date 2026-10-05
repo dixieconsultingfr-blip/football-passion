@@ -17,6 +17,7 @@ $autresMatchs = [
     ['date' => '2026-09-25', 'dom' => 'Italie', 'ext' => 'Belgique', 'score_dom' => 0, 'score_ext' => 2],
     ['date' => '2026-09-28', 'dom' => 'Turquie', 'ext' => 'Italie', 'score_dom' => 1, 'score_ext' => 4],
     ['date' => '2026-10-02', 'dom' => 'Belgique', 'ext' => 'Turquie', 'score_dom' => 3, 'score_ext' => 0],
+    ['date' => '2026-10-05', 'dom' => 'Italie', 'ext' => 'Turquie', 'score_dom' => 3, 'score_ext' => 1],
 ];
 
 // Classement du groupe calculé depuis les résultats renseignés (matchs des Bleus + autres matchs du groupe).

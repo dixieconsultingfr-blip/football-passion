@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-10-02'; // à mettre à jour à chaque résultat ou changement de programme — signal E-E-A-T
+$date_maj_page = '2026-10-05'; // à mettre à jour à chaque résultat ou changement de programme — signal E-E-A-T
 
 // Résultats à renseigner ici après chaque match (score_dom / score_ext, laisser null tant que le match n'est pas joué).
 $matchs = [
     ['date' => '2026-09-25', 'heure' => '20h45', 'dom' => 'Turquie',  'ext' => 'France',   'lieu' => 'Kocaeli',                       'score_dom' => 0, 'score_ext' => 1],
     ['date' => '2026-09-28', 'heure' => '20h45', 'dom' => 'Belgique', 'ext' => 'France',   'lieu' => 'Bruxelles',                     'score_dom' => 0, 'score_ext' => 1],
     ['date' => '2026-10-02', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Italie',   'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 1, 'score_ext' => 1],
-    ['date' => '2026-10-05', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Belgique', 'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => null, 'score_ext' => null],
+    ['date' => '2026-10-05', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Belgique', 'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 4, 'score_ext' => 1],
     ['date' => '2026-11-12', 'heure' => '20h45', 'dom' => 'Italie',   'ext' => 'France',   'lieu' => 'Italie',                        'score_dom' => null, 'score_ext' => null],
     ['date' => '2026-11-15', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Turquie',  'lieu' => 'Bordeaux',                      'score_dom' => null, 'score_ext' => null],
 ];

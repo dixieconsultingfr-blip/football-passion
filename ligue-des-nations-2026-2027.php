@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-10-02'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
+$date_maj_page = '2026-10-05'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
 $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
@@ -134,13 +134,13 @@ include __DIR__ . '/templates/header.php';
             <li>✅ <strong class="text-white">25 septembre 2026</strong> — Turquie 0 - 1 France <span class="text-gray-500">(but de Mbappé, 54e)</span></li>
             <li>✅ <strong class="text-white">28 septembre 2026</strong> — Belgique 0 - 1 France</li>
             <li>✅ <strong class="text-white">2 octobre 2026</strong> — France 1 - 1 Italie</li>
-            <li>📅 <strong class="text-white">5 octobre 2026</strong> — France - Belgique</li>
+            <li>✅ <strong class="text-white">5 octobre 2026</strong> — France 4 - 1 Belgique <span class="text-gray-500">(doublé d'Olise, Doué, Cherki)</span></li>
             <li>📅 <strong class="text-white">12 novembre 2026</strong> — Italie - France</li>
             <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
         <p class="pt-2 border-t border-gray-700">
-            <strong class="text-white">Après la 3e journée :</strong> après deux victoires 1-0, la France est tenue en échec 1-1 par l'Italie au Stade de France mais reste en tête du groupe avec 7 points, devant la Belgique (6 points, large vainqueur 3-0 de la Turquie), l'Italie (4 points) et la Turquie (0 point).
-            <a href="/blog/belgique-france-heure-chaine-enjeux-ligue-des-nations" class="text-green-400 hover:text-green-300">Relire notre article sur le match</a>.
+            <strong class="text-white">Après la France - Belgique de la 4e journée :</strong> menés au score, les Bleus ont renversé la Belgique (4-1) au Stade de France et comptent 10 points en 4 matchs, en tête du groupe. La Belgique reste à 6 points.
+            <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 hover:text-green-300">Lire notre article sur le match</a>.
         </p>
         <p class="pt-2">
             <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>

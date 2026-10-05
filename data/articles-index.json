@@ -1,5 +1,19 @@
 [
     {
+        "id":  57,
+        "slug":  "france-belgique-remontada-bleus-olise-doue-cherki",
+        "titre":  "France 4-1 Belgique : menés, les Bleus renversent tout avec Doué, Cherki et un doublé d'Olise",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Ligue des nations"
+                       ],
+        "date":  "2026-10-05",
+        "extrait":  "Menés 1-0 jusqu'à la 78e minute, les Bleus de Zidane ont renversé la Belgique (4-1) en onze minutes grâce à Doué, Cherki et un doublé de Michael Olise. Récit d'une fin de match renversante.",
+        "vignette":  "/images/france-belgique-remontada-bleus-olise-doue-cherki.jpg",
+        "image_alt":  "France - Belgique en Ligue des nations : la remontada des Bleus avec Olise, Doue et Cherki"
+    },
+    {
         "id":  56,
         "slug":  "france-italie-olise-bastoni-premier-nul-zidane",
         "titre":  "France 1-1 Italie : le but d'Olise n'a pas suffi, premier nul de l'ère Zidane",

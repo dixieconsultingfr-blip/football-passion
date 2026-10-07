@@ -1,5 +1,19 @@
 [
     {
+        "id":  58,
+        "slug":  "ligue-des-nations-journee-4-quatre-matchs-phares",
+        "titre":  "Ligue des Nations, journée 4 : les quatre matchs phares à retenir",
+        "categorie":  "Euro",
+        "etiquettes":  [
+                           "Ligue des nations",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-10-07",
+        "extrait":  "Remontada des Bleus face à la Belgique, quatre victoires en quatre matchs pour le Portugal et l'Espagne, nul sans but entre la Grèce et l'Allemagne : voici les quatre matchs phares de la journée 4 de la Ligue des Nations.",
+        "vignette":  "/images/ligue-des-nations-journee-4-quatre-matchs-phares.jpg",
+        "image_alt":  "Ligue des Nations 2026-2027, journee 4 : France 4-1 Belgique, Portugal 2-1 Norvege, Croatie 1-2 Espagne, Grece 0-0 Allemagne"
+    },
+    {
         "id":  57,
         "slug":  "france-belgique-remontada-bleus-olise-doue-cherki",
         "titre":  "France 4-1 Belgique : menés, les Bleus renversent tout avec Doué, Cherki et un doublé d'Olise",

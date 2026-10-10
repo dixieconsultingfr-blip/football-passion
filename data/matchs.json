@@ -572,7 +572,7 @@
         "heure": "20:45",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 4,
+        "score_dom": 5,
         "score_ext": 1
     },
     {
@@ -597,7 +597,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 1,
-        "score_ext": 0
+        "score_ext": 1
     },
     {
         "id": 559673,

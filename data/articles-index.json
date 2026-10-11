@@ -1,5 +1,19 @@
 [
     {
+        "id":  59,
+        "slug":  "ligue-2-journee-8-asse-rodez-red-star-clermont-2026-2027",
+        "titre":  "Ligue 2, journée 8 : l'ASSE se relance contre Rodez, le Red Star s'impose à Clermont",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "ASSE",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-10-11",
+        "extrait":  "Après deux matchs sans victoire, Saint-Étienne se relance en battant Rodez 2-0. Le Red Star s'impose 3-2 à Clermont, Pau bat Laval 3-2 : voici tous les résultats de la journée 8 de Ligue 2.",
+        "vignette":  "/images/ligue-2-journee-8-asse-rodez-red-star-clermont-2026-2027.jpg",
+        "image_alt":  "Ligue 2 journee 8 : Saint-Etienne bat Rodez 2-0, le Red Star s'impose 3-2 a Clermont"
+    },
+    {
         "id":  58,
         "slug":  "ligue-des-nations-journee-4-quatre-matchs-phares",
         "titre":  "Ligue des Nations, journée 4 : les quatre matchs phares à retenir",

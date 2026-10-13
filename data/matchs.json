@@ -3895,9 +3895,9 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575342,
@@ -3907,9 +3907,9 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575343,

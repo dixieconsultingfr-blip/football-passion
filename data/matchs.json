@@ -3895,7 +3895,7 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 0,
         "score_ext": 2
     },
@@ -3907,7 +3907,7 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 0
     },

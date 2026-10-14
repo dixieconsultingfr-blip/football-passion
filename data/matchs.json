@@ -4029,7 +4029,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 3,
-        "score_ext": 3
+        "score_ext": 4
     },
     {
         "id": 575353,
@@ -4051,7 +4051,7 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 0
     },
@@ -4087,7 +4087,7 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 3,
         "score_ext": 1
     },
@@ -4099,7 +4099,7 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 0,
         "score_ext": 3
     },

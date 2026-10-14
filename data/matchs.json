@@ -4063,8 +4063,8 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
-        "score_dom": 5,
+        "status": "FINISHED",
+        "score_dom": 6,
         "score_ext": 0
     },
     {
@@ -4076,7 +4076,7 @@
         "heure": "21:00",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 2,
+        "score_dom": 3,
         "score_ext": 2
     },
     {
@@ -4088,7 +4088,7 @@
         "heure": "21:00",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 2,
+        "score_dom": 3,
         "score_ext": 1
     },
     {
@@ -4101,7 +4101,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 2
+        "score_ext": 3
     },
     {
         "id": 575359,

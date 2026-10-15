@@ -619,9 +619,9 @@
         "date": "2026-10-11",
         "heure": "15:00",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 2,
-        "score_ext": 1
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559667,
@@ -631,9 +631,9 @@
         "date": "2026-10-11",
         "heure": "17:15",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 4,
-        "score_ext": 1
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559671,
@@ -643,9 +643,9 @@
         "date": "2026-10-11",
         "heure": "20:45",
         "stade": "",
-        "status": "FINISHED",
-        "score_dom": 0,
-        "score_ext": 2
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
     },
     {
         "id": 559661,
@@ -3895,9 +3895,9 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 0,
+        "score_ext": 2
     },
     {
         "id": 575342,
@@ -3907,9 +3907,9 @@
         "date": "2026-10-13",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 0
     },
     {
         "id": 575343,
@@ -3919,9 +3919,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 4
     },
     {
         "id": 575344,
@@ -3931,9 +3931,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 4
     },
     {
         "id": 575345,
@@ -3943,9 +3943,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 0
     },
     {
         "id": 575346,
@@ -3955,9 +3955,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 0
     },
     {
         "id": 575347,
@@ -3967,9 +3967,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 3
     },
     {
         "id": 575348,
@@ -3979,9 +3979,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 0
     },
     {
         "id": 575349,
@@ -3991,9 +3991,9 @@
         "date": "2026-10-13",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 1
     },
     {
         "id": 575350,
@@ -4003,9 +4003,9 @@
         "date": "2026-10-14",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 6
     },
     {
         "id": 575351,
@@ -4015,9 +4015,9 @@
         "date": "2026-10-14",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 2
     },
     {
         "id": 575352,
@@ -4027,9 +4027,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 4
     },
     {
         "id": 575353,
@@ -4039,9 +4039,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 4
     },
     {
         "id": 575354,
@@ -4051,9 +4051,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 0
     },
     {
         "id": 575355,
@@ -4063,9 +4063,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 6,
+        "score_ext": 0
     },
     {
         "id": 575356,
@@ -4075,9 +4075,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 2
     },
     {
         "id": 575357,
@@ -4087,9 +4087,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 1
     },
     {
         "id": 575358,
@@ -4099,9 +4099,9 @@
         "date": "2026-10-14",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "FINISHED",
+        "score_dom": 0,
+        "score_ext": 3
     },
     {
         "id": 575359,

@@ -673,3 +673,13 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 **⚠️ À faire quand l'édition 2026-2027 de la Ligue des Nations sera terminée** (après la finale à quatre, prévue du 9 au 13 juin 2027) : archiver ces 14 pages de groupe (A1 + B à N), sur le modèle de l'archivage déjà en place pour les matchs (`data/archives/`, voir section sur `archive-old-matches.ps1` dans `CLAUDE.md`). Ne pas les laisser dans le menu ou le classement affichés comme si l'édition était en cours une fois la compétition close — prévoir soit une bascule vers une page d'archive dédiée, soit un renommage vers une page « Ligue des Nations 2026-2027 (terminée) », avant de démarrer les pages de l'édition suivante.
 
 *Dernière mise à jour : 27 septembre 2026*
+
+### 3.73 Bug n8n : régression intermittente des statuts de matchs — 15 octobre 2026
+
+- **Constat** : les 18 matchs de la journée 2 de la Ligue des champions (13-14 octobre) apparaissaient `SCHEDULED` sans score le 15 octobre, alors que n8n tourne bien (commits toutes les 5-10 min). Historique git : sur 30 commits, 23 sains (`FINISHED` 18/18) et 7 isolés qui remettent tout à `SCHEDULED`. Même cause probable que les matchs « bloqués en LIVE/SCHEDULED » corrigés à la main sur la L1 depuis septembre.
+- **Cause** : le nœud *Comparer hasUpdate* remplace les données par celles de l'API sans jamais empêcher un retour en arrière de statut. Une réponse API « ancienne » est donc écrite telle quelle.
+- **Correctif** (à coller dans n8n, code complet dans `guide-n8n-workflow.md` section « Correctif anti-régression ») : garde-fou `SCHEDULED < LIVE < FINISHED` à créneau (date + heure) identique.
+- **Statut** : code fourni ; à appliquer dans l'instance n8n (accès hors de la session Claude). Pas de saisie manuelle utile en attendant : le cycle sain suivant restaure les résultats tout seul.
+- **Rappel** : ne jamais committer l'export JSON du workflow (`Football Passion — Récupération matchs.json`) dans ce dépôt public : il contient les identifiants des credentials n8n.
+
+*Dernière mise à jour : 15 octobre 2026*

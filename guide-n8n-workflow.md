@@ -172,3 +172,62 @@ Le plan initial prévoyait des nodes `Merge` explicites pour combiner les branch
 
 - **Ligue 2, Europa League** : nécessitent un upgrade du plan football-data.org (voir section 3).
 - **Équipe de France (amicaux, qualifications)** : football-data.org ne couvre pas ces matchs hors grands tournois (WC/EC). Reste manuel — ajouter directement dans `data/matchs.json` (`"competition": "France"`) le cas échéant.
+
+---
+
+## 🔧 Correctif anti-régression des statuts — 15 octobre 2026
+
+**Symptôme** : par intermittence, un commit n8n remet **tous** les matchs d'une journée à `SCHEDULED` avec scores `null` (ex. les 18 matchs de la journée 2 de la Ligue des champions du 13-14 octobre 2026), alors que le commit précédent les avait en `FINISHED`. Sur 30 commits analysés le 15 octobre : 7 commits « régressifs » isolés, de 5 à 10 minutes chacun, entre des commits sains. Cause la plus probable : une réponse « ancienne » de l'API football-data.org (cache/réplicas non synchronisés) que le workflow écrit telle quelle, car le nœud **Comparer hasUpdate** ne teste que « le contenu est-il différent » (`currentSorted !== newSorted`) et remplace toujours les données par celles de l'API.
+
+**Correctif** (nœud *Comparer hasUpdate*) : un match déjà `FINISHED` ne peut plus redevenir `LIVE`/`SCHEDULED` tant que date et heure n'ont pas changé (un vrai report change le créneau et reste accepté). Ordre de progression : `SCHEDULED` < `LIVE` < `FINISHED`.
+
+```javascript
+const githubFile = $input.all()[0].json;
+const transformed = $('Transformer les matchs').first().json.matches;
+
+const currentContent = Buffer.from(githubFile.content, 'base64').toString('utf8');
+let current;
+try {
+    current = JSON.parse(currentContent);
+} catch (e) {
+    current = [];
+}
+if (!Array.isArray(current) && current && Array.isArray(current.value)) {
+    current = current.value;
+}
+
+// Garde-fou anti-régression : on ne revient jamais en arrière sur le statut d'un match
+const rank = { SCHEDULED: 0, LIVE: 1, FINISHED: 2 };
+const currentById = new Map(current.map(m => [m.id, m]));
+const guarded = transformed.map(n => {
+    const c = currentById.get(n.id);
+    if (!c) return n;
+    const memeCreneau = c.date === n.date && c.heure === n.heure;
+    if (memeCreneau && (rank[c.status] ?? 0) > (rank[n.status] ?? 0)) {
+        return { ...n, status: c.status, score_dom: c.score_dom, score_ext: c.score_ext };
+    }
+    return n;
+});
+
+const manual = current.filter(m => m.id >= 9000000);
+const merged = [...guarded, ...manual];
+
+const sortFn = (a, b) => a.id - b.id;
+const currentSorted = JSON.stringify([...current].sort(sortFn));
+const newSorted = JSON.stringify([...merged].sort(sortFn));
+
+const hasUpdate = currentSorted !== newSorted;
+
+return [{
+    json: {
+        hasUpdate,
+        content: JSON.stringify(merged, null, 4),
+    }
+}];
+```
+
+**Bonus** : ce garde-fou réduit aussi le nombre de commits (et donc de déploiements) puisque les allers-retours « sain → régressif → sain » ne produisent plus de diff.
+
+**Durcissement optionnel** (non appliqué) : dans le workflow, `Fetch L1`, `Fetch CL` et `Transformer les matchs` sont tous branchés en parallèle sur le *Schedule Trigger* ; `Transformer les matchs` relit les deux `Fetch` par nom et ne fonctionne que grâce à l'ordre d'exécution `v1` (haut → bas). Les chaîner en série (`Fetch L1` → `Fetch CL` → `Transformer`) supprimerait cette dépendance fragile.
+
+**Vérification après application** : dans n8n → *Executions*, une exécution qui aurait régressé doit maintenant afficher `hasUpdate: false` ; côté GitHub, plus de commit « Mise a jour automatique des matchs (n8n) » qui repasse des matchs `FINISHED` en `SCHEDULED`.

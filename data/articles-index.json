@@ -1,5 +1,19 @@
 [
     {
+        "id":  62,
+        "slug":  "ligue-des-champions-journee-2-psg-city-lens-lille-real-roma-2026-2027",
+        "titre":  "Ligue des champions, journée 2 : le PSG s'impose à City, Lens et Lille tombent, Mbappé relance le Real",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-10-15",
+        "extrait":  "Soirée contrastée pour les clubs français en Ligue des champions : le PSG s'impose 4-2 à Manchester City, mais Lens (0-2 contre le Sporting) et Lille (0-3 à Arsenal) s'inclinent. Et le Real Madrid de Mbappé renverse la Roma (4-3).",
+        "vignette":  "/images/ligue-des-champions-journee-2-psg-city-lens-lille-real-roma-2026-2027.jpg",
+        "image_alt":  "Ligue des champions journee 2 : PSG vainqueur de Manchester City, Lens et Lille battus, Real Madrid vainqueur a Rome"
+    },
+    {
         "id":  61,
         "slug":  "troyes-om-0-2-genesio-harit-abdelli-journee-6-ligue-1",
         "titre":  "Troyes 0-2 OM : Marseille met fin à sa série noire, mais l'essentiel reste à faire",

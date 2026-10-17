@@ -1,5 +1,19 @@
 [
     {
+        "id":  63,
+        "slug":  "ligue-europa-journee-2-lyon-rennes-om-2026-2027",
+        "titre":  "Ligue Europa, journée 2 : Lyon et Rennes s'imposent, l'OM trébuche face à l'Olympiakos",
+        "categorie":  "Europa",
+        "etiquettes":  [
+                           "Europa League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-10-17",
+        "extrait":  "Soirée contrastée pour les clubs français en Ligue Europa : Lyon bat Crystal Palace 3-2 et Rennes s'impose 2-1 contre l'OFI Crète, mais l'OM s'incline 0-1 face à l'Olympiakos au Vélodrome. Tous les résultats de la journée 2.",
+        "vignette":  "/images/ligue-europa-journee-2-lyon-rennes-om-2026-2027.jpg",
+        "image_alt":  "Ligue Europa journee 2 : Lyon et Rennes vainqueurs, Marseille battu par l'Olympiakos"
+    },
+    {
         "id":  62,
         "slug":  "ligue-des-champions-journee-2-psg-city-lens-lille-real-roma-2026-2027",
         "titre":  "Ligue des champions, journée 2 : le PSG s'impose à City, Lens et Lille tombent, Mbappé relance le Real",

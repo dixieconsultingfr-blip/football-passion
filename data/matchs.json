@@ -715,7 +715,7 @@
         "date": "2026-10-18",
         "heure": "17:15",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 0
     },
@@ -729,7 +729,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 3,
-        "score_ext": 2
+        "score_ext": 3
     },
     {
         "id": 559663,

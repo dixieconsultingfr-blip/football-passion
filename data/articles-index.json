@@ -1,5 +1,19 @@
 [
     {
+        "id":  65,
+        "slug":  "aubagne-ligue-3-portrait-club-premiere-saison-2026-2027",
+        "titre":  "Aubagne en Ligue 3 : portrait d'un club ambitieux pour sa première saison",
+        "categorie":  "L3",
+        "etiquettes":  [
+                           "Ligue 3",
+                           "Aubagne"
+                       ],
+        "date":  "2026-10-18",
+        "extrait":  "Le Sporting Club Aubagne Air-Bel est l'un des clubs les plus modestes de la première édition de la Ligue 3. Histoire, fusion avec Air-Bel, ville de 48 000 habitants et début de saison : portrait d'un club ambitieux.",
+        "vignette":  "/images/aubagne-ligue-3-portrait-club-2026-2027.jpg",
+        "image_alt":  "Aubagne en Ligue 3 : portrait du Sporting Club Aubagne Air-Bel, club fonde en 1989, promu en National en 2024"
+    },
+    {
         "id":  64,
         "slug":  "ligue-2-journee-9-asse-red-star-reims-2026-2027",
         "titre":  "Ligue 2, journée 9 : l'ASSE s'impose au Red Star et file en tête, Reims reste invaincu",

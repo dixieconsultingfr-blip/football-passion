@@ -1,73 +1,87 @@
 [
     {
+        "id":  66,
+        "slug":  "ligue-1-journee-7-resultats-2026-2027",
+        "titre":  "Ligue 1, journée 7 : l\u0027OM s\u0027impose 5-2 à Angers, Paris FC bat Rennes 4-3, quatre clubs à 14 points",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Ligue 1",
+                           "OM"
+                       ],
+        "date":  "2026-10-18",
+        "extrait":  "Le PSG gagne à Strasbourg, l\u0027OM s\u0027impose 5-2 à Angers, Paris FC bat Rennes 4-3 et Lorient surprend Monaco : quatre clubs se retrouvent à 14 points en tête. Résultats, classement et programme de la journée 8.",
+        "vignette":  "/images/ligue-1-journee-7-resultats-2026-2027.jpg",
+        "image_alt":  "Ligue 1 journee 7 : resultats Angers 2-5 Marseille, Paris FC 4-3 Rennes, Strasbourg 1-3 PSG, Lorient 1-0 Monaco"
+    },
+    {
         "id":  65,
         "slug":  "aubagne-ligue-3-portrait-club-premiere-saison-2026-2027",
-        "titre":  "Aubagne en Ligue 3 : portrait d'un club ambitieux pour sa première saison",
+        "titre":  "Aubagne en Ligue 3 : portrait d\u0027un club ambitieux pour sa première saison",
         "categorie":  "L3",
         "etiquettes":  [
                            "Ligue 3",
                            "Aubagne"
                        ],
         "date":  "2026-10-18",
-        "extrait":  "Le Sporting Club Aubagne Air-Bel est l'un des clubs les plus modestes de la première édition de la Ligue 3. Histoire, fusion avec Air-Bel, ville de 48 000 habitants et début de saison : portrait d'un club ambitieux.",
+        "extrait":  "Le Sporting Club Aubagne Air-Bel est l\u0027un des clubs les plus modestes de la première édition de la Ligue 3. Histoire, fusion avec Air-Bel, ville de 48 000 habitants et début de saison : portrait d\u0027un club ambitieux.",
         "vignette":  "/images/aubagne-ligue-3-portrait-club-2026-2027.jpg",
         "image_alt":  "Aubagne en Ligue 3 : portrait du Sporting Club Aubagne Air-Bel, club fonde en 1989, promu en National en 2024"
     },
     {
         "id":  64,
         "slug":  "ligue-2-journee-9-asse-red-star-reims-2026-2027",
-        "titre":  "Ligue 2, journée 9 : l'ASSE s'impose au Red Star et file en tête, Reims reste invaincu",
+        "titre":  "Ligue 2, journée 9 : l\u0027ASSE s\u0027impose au Red Star et file en tête, Reims reste invaincu",
         "categorie":  "L2",
         "etiquettes":  [
                            "ASSE",
                            "Ligue 2"
                        ],
         "date":  "2026-10-18",
-        "extrait":  "Saint-Étienne s'impose 1-0 au Red Star, son plus proche poursuivant, et compte désormais 5 points d'avance. Reims bat Dijon 4-2 et reste invaincu, Laval et Clermont se quittent sur un 3-3. Résultats et classement de la journée 9 de Ligue 2.",
+        "extrait":  "Saint-Étienne s\u0027impose 1-0 au Red Star, son plus proche poursuivant, et compte désormais 5 points d\u0027avance. Reims bat Dijon 4-2 et reste invaincu, Laval et Clermont se quittent sur un 3-3. Résultats et classement de la journée 9 de Ligue 2.",
         "vignette":  "/images/ligue-2-journee-9-resultats-2026-2027.jpg",
         "image_alt":  "Ligue 2 journee 9 : Saint-Etienne gagne au Red Star, Reims bat Dijon 4-2, Laval et Clermont 3-3"
     },
     {
         "id":  63,
         "slug":  "ligue-europa-journee-2-lyon-rennes-om-2026-2027",
-        "titre":  "Ligue Europa, journée 2 : Lyon et Rennes s'imposent, l'OM trébuche face à l'Olympiakos",
+        "titre":  "Ligue Europa, journée 2 : Lyon et Rennes s\u0027imposent, l\u0027OM trébuche face à l\u0027Olympiakos",
         "categorie":  "Europa",
         "etiquettes":  [
                            "Europa League",
                            "Clubs français"
                        ],
         "date":  "2026-10-17",
-        "extrait":  "Soirée contrastée pour les clubs français en Ligue Europa : Lyon bat Crystal Palace 3-2 et Rennes s'impose 2-1 contre l'OFI Crète, mais l'OM s'incline 0-1 face à l'Olympiakos au Vélodrome. Tous les résultats de la journée 2.",
+        "extrait":  "Soirée contrastée pour les clubs français en Ligue Europa : Lyon bat Crystal Palace 3-2 et Rennes s\u0027impose 2-1 contre l\u0027OFI Crète, mais l\u0027OM s\u0027incline 0-1 face à l\u0027Olympiakos au Vélodrome. Tous les résultats de la journée 2.",
         "vignette":  "/images/ligue-europa-journee-2-resultats-2026-2027.jpg",
-        "image_alt":  "Ligue Europa journee 2 : Lyon et Rennes vainqueurs, Marseille battu par l'Olympiakos"
+        "image_alt":  "Ligue Europa journee 2 : Lyon et Rennes vainqueurs, Marseille battu par l\u0027Olympiakos"
     },
     {
         "id":  62,
         "slug":  "ligue-des-champions-journee-2-psg-city-lens-lille-real-roma-2026-2027",
-        "titre":  "Ligue des champions, journée 2 : le PSG s'impose à City, Lens et Lille tombent, Mbappé relance le Real",
+        "titre":  "Ligue des champions, journée 2 : le PSG s\u0027impose à City, Lens et Lille tombent, Mbappé relance le Real",
         "categorie":  "CL",
         "etiquettes":  [
                            "Champions League",
                            "Clubs français"
                        ],
         "date":  "2026-10-15",
-        "extrait":  "Soirée contrastée pour les clubs français en Ligue des champions : le PSG s'impose 4-2 à Manchester City, mais Lens (0-2 contre le Sporting) et Lille (0-3 à Arsenal) s'inclinent. Et le Real Madrid de Mbappé renverse la Roma (4-3).",
+        "extrait":  "Soirée contrastée pour les clubs français en Ligue des champions : le PSG s\u0027impose 4-2 à Manchester City, mais Lens (0-2 contre le Sporting) et Lille (0-3 à Arsenal) s\u0027inclinent. Et le Real Madrid de Mbappé renverse la Roma (4-3).",
         "vignette":  "/images/ligue-des-champions-journee-2-2026-2027-cdl-j2.jpg",
         "image_alt":  "Ligue des champions journee 2 : PSG vainqueur de Manchester City, Lens et Lille battus, Real Madrid vainqueur a Rome"
     },
     {
         "id":  61,
         "slug":  "troyes-om-0-2-genesio-harit-abdelli-journee-6-ligue-1",
-        "titre":  "Troyes 0-2 OM : Marseille met fin à sa série noire, mais l'essentiel reste à faire",
+        "titre":  "Troyes 0-2 OM : Marseille met fin à sa série noire, mais l\u0027essentiel reste à faire",
         "categorie":  "L1",
         "etiquettes":  [
                            "OM",
                            "Ligue 1"
                        ],
         "date":  "2026-10-12",
-        "extrait":  "Après cinq défaites d'affilée toutes compétitions confondues, l'OM s'impose 0-2 à Troyes grâce à Harit (50e) et à un penalty d'Abdelli (90e+8). Une victoire laborieuse mais précieuse, qui sort Marseille de la zone de relégation.",
+        "extrait":  "Après cinq défaites d\u0027affilée toutes compétitions confondues, l\u0027OM s\u0027impose 0-2 à Troyes grâce à Harit (50e) et à un penalty d\u0027Abdelli (90e+8). Une victoire laborieuse mais précieuse, qui sort Marseille de la zone de relégation.",
         "vignette":  "/images/troyes-om-0-2-ligue-1-journee-6-2026-2027.jpg",
-        "image_alt":  "Troyes - Marseille en Ligue 1 : l'OM s'impose 0-2 grace a Harit et Abdelli"
+        "image_alt":  "Troyes - Marseille en Ligue 1 : l\u0027OM s\u0027impose 0-2 grace a Harit et Abdelli"
     },
     {
         "id":  60,
@@ -79,23 +93,23 @@
                            "AS Monaco"
                        ],
         "date":  "2026-10-11",
-        "extrait":  "Lens s'impose 2-1 face à Lyon, Brest écrase Angers 5-1, Lille gagne 1-0 contre Le Havre et le PSG bat Le Mans 3-1. Monaco, accroché 2-2 par Toulouse, reste leader. Résultats et classement de la journée 6 de Ligue 1.",
+        "extrait":  "Lens s\u0027impose 2-1 face à Lyon, Brest écrase Angers 5-1, Lille gagne 1-0 contre Le Havre et le PSG bat Le Mans 3-1. Monaco, accroché 2-2 par Toulouse, reste leader. Résultats et classement de la journée 6 de Ligue 1.",
         "vignette":  "/images/ligue-1-journee-6-resultats-2026-2027.jpg",
         "image_alt":  "Ligue 1 journee 6 : resultats et classement apres Lens-Lyon, Lille-Le Havre, Brest-Angers et Monaco-Toulouse"
     },
     {
         "id":  59,
         "slug":  "ligue-2-journee-8-asse-rodez-red-star-clermont-2026-2027",
-        "titre":  "Ligue 2, journée 8 : l'ASSE se relance contre Rodez, le Red Star s'impose à Clermont",
+        "titre":  "Ligue 2, journée 8 : l\u0027ASSE se relance contre Rodez, le Red Star s\u0027impose à Clermont",
         "categorie":  "L2",
         "etiquettes":  [
                            "ASSE",
                            "Ligue 2"
                        ],
         "date":  "2026-10-11",
-        "extrait":  "Après deux matchs sans victoire, Saint-Étienne se relance en battant Rodez 2-0. Le Red Star s'impose 3-2 à Clermont, Pau bat Laval 3-2 : voici tous les résultats de la journée 8 de Ligue 2.",
+        "extrait":  "Après deux matchs sans victoire, Saint-Étienne se relance en battant Rodez 2-0. Le Red Star s\u0027impose 3-2 à Clermont, Pau bat Laval 3-2 : voici tous les résultats de la journée 8 de Ligue 2.",
         "vignette":  "/images/ligue-2-journee-8-asse-rodez-red-star-clermont-2026-2027.jpg",
-        "image_alt":  "Ligue 2 journee 8 : Saint-Etienne bat Rodez 2-0, le Red Star s'impose 3-2 a Clermont"
+        "image_alt":  "Ligue 2 journee 8 : Saint-Etienne bat Rodez 2-0, le Red Star s\u0027impose 3-2 a Clermont"
     },
     {
         "id":  58,
@@ -107,37 +121,37 @@
                            "Euro 2028"
                        ],
         "date":  "2026-10-07",
-        "extrait":  "Remontada des Bleus face à la Belgique, quatre victoires en quatre matchs pour le Portugal et l'Espagne, nul sans but entre la Grèce et l'Allemagne : voici les quatre matchs phares de la journée 4 de la Ligue des Nations.",
+        "extrait":  "Remontada des Bleus face à la Belgique, quatre victoires en quatre matchs pour le Portugal et l\u0027Espagne, nul sans but entre la Grèce et l\u0027Allemagne : voici les quatre matchs phares de la journée 4 de la Ligue des Nations.",
         "vignette":  "/images/ligue-des-nations-journee-4-quatre-matchs-phares.jpg",
         "image_alt":  "Ligue des Nations 2026-2027, journee 4 : France 4-1 Belgique, Portugal 2-1 Norvege, Croatie 1-2 Espagne, Grece 0-0 Allemagne"
     },
     {
         "id":  57,
         "slug":  "france-belgique-remontada-bleus-olise-doue-cherki",
-        "titre":  "France 4-1 Belgique : menés, les Bleus renversent tout avec Doué, Cherki et un doublé d'Olise",
+        "titre":  "France 4-1 Belgique : menés, les Bleus renversent tout avec Doué, Cherki et un doublé d\u0027Olise",
         "categorie":  "France",
         "etiquettes":  [
                            "Équipe de France",
                            "Ligue des nations"
                        ],
         "date":  "2026-10-05",
-        "extrait":  "Menés 1-0 jusqu'à la 78e minute, les Bleus de Zidane ont renversé la Belgique (4-1) en onze minutes grâce à Doué, Cherki et un doublé de Michael Olise. Récit d'une fin de match renversante.",
+        "extrait":  "Menés 1-0 jusqu\u0027à la 78e minute, les Bleus de Zidane ont renversé la Belgique (4-1) en onze minutes grâce à Doué, Cherki et un doublé de Michael Olise. Récit d\u0027une fin de match renversante.",
         "vignette":  "/images/france-belgique-remontada-bleus-olise-doue-cherki.jpg",
         "image_alt":  "France - Belgique en Ligue des nations : la remontada des Bleus avec Olise, Doue et Cherki"
     },
     {
         "id":  56,
         "slug":  "france-italie-olise-bastoni-premier-nul-zidane",
-        "titre":  "France 1-1 Italie : le but d'Olise n'a pas suffi, premier nul de l'ère Zidane",
+        "titre":  "France 1-1 Italie : le but d\u0027Olise n\u0027a pas suffi, premier nul de l\u0027ère Zidane",
         "categorie":  "France",
         "etiquettes":  [
                            "Équipe de France",
                            "Ligue des nations"
                        ],
         "date":  "2026-10-02",
-        "extrait":  "Après deux victoires, les Bleus de Zidane concèdent leur premier match nul face à l'Italie (1-1). Olise a ouvert le score, Bastoni a égalisé, Upamecano a été expulsé. La France reste en tête du groupe A1.",
+        "extrait":  "Après deux victoires, les Bleus de Zidane concèdent leur premier match nul face à l\u0027Italie (1-1). Olise a ouvert le score, Bastoni a égalisé, Upamecano a été expulsé. La France reste en tête du groupe A1.",
         "vignette":  "/images/france-italie-olise-bastoni-premier-nul-zidane.jpg",
-        "image_alt":  "France - Italie en Ligue des nations : le but d'Olise ne suffit pas, premier nul de Zidane"
+        "image_alt":  "France - Italie en Ligue des nations : le but d\u0027Olise ne suffit pas, premier nul de Zidane"
     },
     {
         "id":  55,
@@ -151,7 +165,7 @@
         "date":  "2026-09-30",
         "extrait":  "Deux matchs, deux victoires : Zidane réussit ses débuts comme aucun sélectionneur des Bleus depuis Aimé Jacquet en 1994. Mais comparer son début de mandat au bilan de 14 ans de Deschamps a ses limites.",
         "vignette":  "/images/zidane-deja-plus-fort-que-deschamps-debuts-bleus.jpg",
-        "image_alt":  "Zinedine Zidane et Didier Deschamps, comparaison des debuts a la tete de l'equipe de France"
+        "image_alt":  "Zinedine Zidane et Didier Deschamps, comparaison des debuts a la tete de l\u0027equipe de France"
     },
     {
         "id":  54,
@@ -170,28 +184,28 @@
     {
         "id":  53,
         "slug":  "eliminatoires-can-2027-algerie-egypte-senegal-vieira",
-        "titre":  "Éliminatoires CAN 2027 : l'Algérie renverse le Burundi, l'Égypte impressionne, Vieira lance bien le Sénégal",
+        "titre":  "Éliminatoires CAN 2027 : l\u0027Algérie renverse le Burundi, l\u0027Égypte impressionne, Vieira lance bien le Sénégal",
         "categorie":  "CAN",
         "etiquettes":  [
                            "CAN 2027",
                            "Éliminatoires"
                        ],
         "date":  "2026-09-29",
-        "extrait":  "Deuxième journée mouvementée dans les éliminatoires de la CAN 2027 : l'Algérie revient de 2-0 pour arracher le nul au Burundi, l'Égypte s'impose 5-0, et Patrick Vieira gagne pour ses débuts sur le banc du Sénégal.",
+        "extrait":  "Deuxième journée mouvementée dans les éliminatoires de la CAN 2027 : l\u0027Algérie revient de 2-0 pour arracher le nul au Burundi, l\u0027Égypte s\u0027impose 5-0, et Patrick Vieira gagne pour ses débuts sur le banc du Sénégal.",
         "vignette":  "/images/eliminatoires-can-2027-algerie-egypte-senegal-vieira.jpg",
         "image_alt":  "Eliminatoires CAN 2027 : Algerie, Egypte et Senegal apres la deuxieme journee"
     },
     {
         "id":  52,
         "slug":  "belgique-france-olise-coup-de-genie-zidane-deux-victoires",
-        "titre":  "Belgique 0-1 France : le coup de génie d'Olise offre à Zidane sa deuxième victoire",
+        "titre":  "Belgique 0-1 France : le coup de génie d\u0027Olise offre à Zidane sa deuxième victoire",
         "categorie":  "France",
         "etiquettes":  [
                            "Équipe de France",
                            "Ligue des nations"
                        ],
         "date":  "2026-09-28",
-        "extrait":  "Michael Olise a inscrit l'unique but de la rencontre à la 88e minute : la France s'impose 0-1 en Belgique et offre à Zinédine Zidane une deuxième victoire de rang, à la tête du groupe A1.",
+        "extrait":  "Michael Olise a inscrit l\u0027unique but de la rencontre à la 88e minute : la France s\u0027impose 0-1 en Belgique et offre à Zinédine Zidane une deuxième victoire de rang, à la tête du groupe A1.",
         "vignette":  "/images/belgique-france-olise-coup-de-genie-zidane-deux-victoires.jpg",
         "image_alt":  "Michael Olise marque le but de la victoire de la France en Belgique en Ligue des nations"
     },
@@ -233,7 +247,7 @@
                            "Euro 2028"
                        ],
         "date":  "2026-09-27",
-        "extrait":  "Victoire de la France en Turquie, festival de la Finlande face à Saint-Marin, remontée spectaculaire de l'Espagne contre l'Angleterre : voici tous les résultats de la journée 1 de la Ligue des Nations 2026-2027.",
+        "extrait":  "Victoire de la France en Turquie, festival de la Finlande face à Saint-Marin, remontée spectaculaire de l\u0027Espagne contre l\u0027Angleterre : voici tous les résultats de la journée 1 de la Ligue des Nations 2026-2027.",
         "vignette":  "/images/ligue-des-nations-2026-2027-resultats-journee-1.jpg",
         "image_alt":  "Resultats de la journee 1 de la Ligue des nations 2026-2027"
     },
@@ -247,14 +261,14 @@
                            "Éliminatoires"
                        ],
         "date":  "2026-09-25",
-        "extrait":  "La première journée des éliminatoires de la CAN 2027 est terminée : Maroc, RD Congo, Algérie, Côte d'Ivoire, Cameroun ou encore Mali démarrent par une victoire. Voici les classements des 12 groupes.",
+        "extrait":  "La première journée des éliminatoires de la CAN 2027 est terminée : Maroc, RD Congo, Algérie, Côte d\u0027Ivoire, Cameroun ou encore Mali démarrent par une victoire. Voici les classements des 12 groupes.",
         "vignette":  "/images/eliminatoires-can-2027-classements-journee-1.jpg",
         "image_alt":  "Eliminatoires de la CAN 2027 : classements des 12 groupes apres la premiere journee"
     },
     {
         "id":  47,
         "slug":  "zidane-victoire-turquie-france-debuts-bleus",
-        "titre":  "Turquie 0-1 France : Zidane débute par une victoire, mais l'inquiétude Mbappé",
+        "titre":  "Turquie 0-1 France : Zidane débute par une victoire, mais l\u0027inquiétude Mbappé",
         "categorie":  "France",
         "etiquettes":  [
                            "Équipe de France",
@@ -275,23 +289,23 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-25",
-        "extrait":  "Coup d'envoi à 20h45 ce soir à Kocaeli, en direct sur TF1 et TF1+ : tout savoir sur Turquie - France, le premier match de Zinédine Zidane, avec la composition probable des Bleus.",
+        "extrait":  "Coup d\u0027envoi à 20h45 ce soir à Kocaeli, en direct sur TF1 et TF1+ : tout savoir sur Turquie - France, le premier match de Zinédine Zidane, avec la composition probable des Bleus.",
         "vignette":  "/images/turquie-france-zidane-premier-match-ligue-des-nations.jpg",
         "image_alt":  "Turquie - France en Ligue des nations : premier match de Zinedine Zidane sur le banc des Bleus"
     },
     {
         "id":  45,
         "slug":  "deschamps-zidane-passage-de-temoin-equipe-de-france",
-        "titre":  "De Deschamps à Zidane : une page se tourne pour l'équipe de France",
+        "titre":  "De Deschamps à Zidane : une page se tourne pour l\u0027équipe de France",
         "categorie":  "France",
         "etiquettes":  [
                            "Équipe de France",
                            "Zinédine Zidane"
                        ],
         "date":  "2026-09-23",
-        "extrait":  "14 ans à la tête des Bleus, un Mondial, deux finales, une Ligue des nations : c'est le bilan que laisse Didier Deschamps en passant le flambeau à Zinédine Zidane, qui prend son premier banc vendredi face à la Turquie.",
+        "extrait":  "14 ans à la tête des Bleus, un Mondial, deux finales, une Ligue des nations : c\u0027est le bilan que laisse Didier Deschamps en passant le flambeau à Zinédine Zidane, qui prend son premier banc vendredi face à la Turquie.",
         "vignette":  "/images/deschamps-zidane-passage-de-temoin-equipe-de-france.jpg",
-        "image_alt":  "Passage de temoin entre Didier Deschamps et Zinedine Zidane a la tete de l'equipe de France"
+        "image_alt":  "Passage de temoin entre Didier Deschamps et Zinedine Zidane a la tete de l\u0027equipe de France"
     },
     {
         "id":  44,

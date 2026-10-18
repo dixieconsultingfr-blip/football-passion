@@ -1,5 +1,19 @@
 [
     {
+        "id":  64,
+        "slug":  "ligue-2-journee-9-asse-red-star-reims-2026-2027",
+        "titre":  "Ligue 2, journée 9 : l'ASSE s'impose au Red Star et file en tête, Reims reste invaincu",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "ASSE",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-10-18",
+        "extrait":  "Saint-Étienne s'impose 1-0 au Red Star, son plus proche poursuivant, et compte désormais 5 points d'avance. Reims bat Dijon 4-2 et reste invaincu, Laval et Clermont se quittent sur un 3-3. Résultats et classement de la journée 9 de Ligue 2.",
+        "vignette":  "/images/ligue-2-journee-9-resultats-2026-2027.jpg",
+        "image_alt":  "Ligue 2 journee 9 : Saint-Etienne gagne au Red Star, Reims bat Dijon 4-2, Laval et Clermont 3-3"
+    },
+    {
         "id":  63,
         "slug":  "ligue-europa-journee-2-lyon-rennes-om-2026-2027",
         "titre":  "Ligue Europa, journée 2 : Lyon et Rennes s'imposent, l'OM trébuche face à l'Olympiakos",

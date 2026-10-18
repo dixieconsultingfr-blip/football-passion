@@ -33,19 +33,23 @@ $tableEL = [];
 foreach ($matchsPhaseLigue as $m) {
     foreach ([$m['domicile'] ?? null, $m['exterieur'] ?? null] as $eq) {
         if ($eq !== null && !isset($tableEL[$eq])) {
-            $tableEL[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0];
+            $tableEL[$eq] = ['club' => $eq, 'MJ' => 0, 'G' => 0, 'N' => 0, 'P' => 0, 'BP' => 0, 'BC' => 0, 'BPE' => 0, 'GE' => 0];
         }
     }
 }
 foreach ($termines2 as $m) {
     foreach ([
-        ['equipe' => $m['domicile'] ?? '?', 'bp' => $m['score_dom'] ?? 0, 'bc' => $m['score_ext'] ?? 0],
-        ['equipe' => $m['exterieur'] ?? '?', 'bp' => $m['score_ext'] ?? 0, 'bc' => $m['score_dom'] ?? 0],
+        ['equipe' => $m['domicile'] ?? '?', 'bp' => $m['score_dom'] ?? 0, 'bc' => $m['score_ext'] ?? 0, 'ext' => false],
+        ['equipe' => $m['exterieur'] ?? '?', 'bp' => $m['score_ext'] ?? 0, 'bc' => $m['score_dom'] ?? 0, 'ext' => true],
     ] as $c) {
         $eq = $c['equipe'];
         $tableEL[$eq]['MJ']++;
         $tableEL[$eq]['BP'] += $c['bp'];
         $tableEL[$eq]['BC'] += $c['bc'];
+        if ($c['ext']) {
+            $tableEL[$eq]['BPE'] += $c['bp'];
+            if ($c['bp'] > $c['bc']) { $tableEL[$eq]['GE']++; }
+        }
         if ($c['bp'] > $c['bc'])       { $tableEL[$eq]['G']++; }
         elseif ($c['bp'] === $c['bc']) { $tableEL[$eq]['N']++; }
         else                            { $tableEL[$eq]['P']++; }
@@ -61,8 +65,18 @@ usort($classementEL, fn($a, $b) =>
     $b['Pts'] <=> $a['Pts']
     ?: $b['DB'] <=> $a['DB']
     ?: $b['BP'] <=> $a['BP']
+    ?: $b['BPE'] <=> $a['BPE']
+    ?: $b['G'] <=> $a['G']
+    ?: $b['GE'] <=> $a['GE']
     ?: strcmp($a['club'], $b['club'])
 );
+// Même rang affiché pour les clubs strictement à égalité sur les critères ci-dessus (comme le classement UEFA).
+$rangsEL = [];
+foreach ($classementEL as $i => $c) {
+    $cle = $c['Pts'] . '|' . $c['DB'] . '|' . $c['BP'] . '|' . $c['BPE'] . '|' . $c['G'] . '|' . $c['GE'];
+    $rangsEL[$i] = ($i > 0 && $cle === $clePrec) ? $rangsEL[$i - 1] : $i + 1;
+    $clePrec = $cle;
+}
 
 // ── Actualités liées ──
 $articlesAll = load_articles_index(__DIR__);
@@ -274,7 +288,7 @@ include __DIR__ . '/templates/header.php';
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-800">
-                <?php foreach ($classementEL as $i => $c): $rang = $i + 1; ?>
+                <?php foreach ($classementEL as $i => $c): $rang = $rangsEL[$i]; ?>
                 <tr class="<?= $rang <= 8 ? 'bg-green-900/10' : ($rang <= 24 ? 'bg-amber-900/5' : 'bg-red-900/10') ?>">
                     <td class="px-4 py-2.5 text-white font-medium whitespace-nowrap">
                         <span class="text-gray-500 font-normal mr-2 inline-block w-5"><?= $rang ?></span><?= htmlspecialchars($c['club']) ?>

@@ -1,5 +1,19 @@
 [
     {
+        "id":  67,
+        "slug":  "ol-nice-2-1-lyon-prend-la-tete-ligue-1-journee-7-2026-2027",
+        "titre":  "OL - Nice (2-1) : Lyon s\u0027en sort de justesse à dix et prend la tête de la Ligue 1",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OL",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-10-19",
+        "extrait":  "Réduit à dix après l\u0027expulsion de Nakamura, l\u0027Olympique Lyonnais a battu l\u0027OGC Nice 2-1 au Groupama Stadium et prend la tête de la Ligue 1 à l\u0027issue de la 7e journée. Un but niçois a été annulé par la VAR dans le temps additionnel.",
+        "vignette":  "/images/ol-nice-2-1-ligue-1-journee-7-2026-2027.jpg",
+        "image_alt":  "OL - Nice 2-1, Ligue 1 journee 7 : buts de Wahi (18e), Sulc (32e) et Tessmann (36e), Lyon prend la tete du championnat"
+    },
+    {
         "id":  66,
         "slug":  "ligue-1-journee-7-resultats-2026-2027",
         "titre":  "Ligue 1, journée 7 : l\u0027OM s\u0027impose 5-2 à Angers, Paris FC bat Rennes 4-3, quatre clubs à 14 points",

@@ -1,5 +1,19 @@
 [
     {
+        "id":  69,
+        "slug":  "mbappe-a-gauche-zidane-bon-choix-equipe-de-france-euro-2028",
+        "titre":  "Mbappé à gauche comme Ronaldo : Zidane fait-il le bon choix pour les Bleus ?",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Équipe de France",
+                           "Euro 2028"
+                       ],
+        "date":  "2026-10-20",
+        "extrait":  "Zidane déplace Kylian Mbappé sur l\u0027aile gauche et confie la pointe à Dembélé, une rupture avec l\u0027ère Deschamps. Comparaison avec Cristiano Ronaldo, avantages, risques défensifs : le bon choix pour les Bleus à l\u0027approche de l\u0027Euro 2028 ?",
+        "vignette":  "/images/mbappe-aile-gauche-zidane-choix-equipe-de-france.jpg",
+        "image_alt":  "Mbappe a gauche, Dembele en pointe, Olise a droite : le choix tactique de Zidane pour l\u0027equipe de France"
+    },
+    {
         "id":  68,
         "slug":  "psg-barcelone-heure-chaine-ligue-des-champions-journee-3-2026-2027",
         "titre":  "PSG - Barcelone : à quelle heure, sur quelle chaîne, le choc de Ligue des champions maintenu ce soir",

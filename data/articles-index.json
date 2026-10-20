@@ -1,5 +1,19 @@
 [
     {
+        "id":  68,
+        "slug":  "psg-barcelone-heure-chaine-ligue-des-champions-journee-3-2026-2027",
+        "titre":  "PSG - Barcelone : à quelle heure, sur quelle chaîne, le choc de Ligue des champions maintenu ce soir",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "PSG"
+                       ],
+        "date":  "2026-10-20",
+        "extrait":  "Le choc PSG - FC Barcelone de la 3e journée de Ligue des champions est maintenu ce mardi 20 octobre à 21h au Parc des Princes, malgré les violences survenues à Paris ce week-end. À quelle heure, sur quelle chaîne, et quels enjeux.",
+        "vignette":  "/images/psg-barcelone-ligue-des-champions-journee-3-2026-2027.jpg",
+        "image_alt":  "PSG - FC Barcelone, Ligue des champions journee 3, mardi 20 octobre 2026 a 21h au Parc des Princes sur Canal+ Foot"
+    },
+    {
         "id":  67,
         "slug":  "ol-nice-2-1-lyon-prend-la-tete-ligue-1-journee-7-2026-2027",
         "titre":  "OL - Nice (2-1) : Lyon s\u0027en sort de justesse à dix et prend la tête de la Ligue 1",

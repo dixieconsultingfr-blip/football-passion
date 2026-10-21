@@ -1,5 +1,19 @@
 [
     {
+        "id":  70,
+        "slug":  "psg-barcelone-4-2-ligue-des-champions-journee-3-2026-2027",
+        "titre":  "PSG - Barcelone (4-2) : Paris renverse le choc et reste en tête de la Ligue des champions",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "PSG"
+                       ],
+        "date":  "2026-10-21",
+        "extrait":  "Le Paris Saint-Germain a battu le FC Barcelone 4-2 mardi soir au Parc des Princes, lors de la 3e journée de Ligue des champions. Rejoint à deux reprises au score, Paris a fait la différence dans les dix dernières minutes. Résultats et classement.",
+        "vignette":  "/images/psg-barcelone-4-2-ligue-des-champions-journee-3-2026-2027.jpg",
+        "image_alt":  "PSG 4-2 FC Barcelone, Ligue des champions journee 3, au Parc des Princes : Doue, Hernandez, Vitinha et Ruiz buteurs"
+    },
+    {
         "id":  69,
         "slug":  "mbappe-a-gauche-zidane-bon-choix-equipe-de-france-euro-2028",
         "titre":  "Mbappé à gauche comme Ronaldo : Zidane fait-il le bon choix pour les Bleus ?",

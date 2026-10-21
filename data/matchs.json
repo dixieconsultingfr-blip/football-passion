@@ -4243,7 +4243,7 @@
         "date": "2026-10-21",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 4,
         "score_ext": 1
     },
@@ -4255,7 +4255,7 @@
         "date": "2026-10-21",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 0
     },
@@ -4291,7 +4291,7 @@
         "date": "2026-10-21",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 3,
         "score_ext": 1
     },
@@ -4303,7 +4303,7 @@
         "date": "2026-10-21",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 3
     },

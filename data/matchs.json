@@ -4244,7 +4244,7 @@
         "heure": "21:00",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 2,
+        "score_dom": 3,
         "score_ext": 0
     },
     {
@@ -4269,7 +4269,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 2,
-        "score_ext": 1
+        "score_ext": 2
     },
     {
         "id": 575373,

@@ -1,5 +1,19 @@
 [
     {
+        "id":  71,
+        "slug":  "ligue-des-champions-journee-3-lille-lens-defaites-real-mbappe-2026-2027",
+        "titre":  "Ligue des champions : soirée noire pour Lille (2-4) et Lens (0-3), Mbappé marque avec le Real",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-10-21",
+        "extrait":  "Pas de réussite pour les clubs français mercredi : Lille a perdu 2-4 contre Galatasaray et Lens 0-3 à Bruges, au lendemain du succès du PSG. Le Real Madrid de Mbappé s\u0027est imposé 4-1 contre Leipzig. Résultats et situation des clubs français.",
+        "vignette":  "/images/ligue-des-champions-journee-3-lille-lens-defaites-2026-2027.jpg",
+        "image_alt":  "Ligue des champions journee 3 : Lille battu 2-4 par Galatasaray, Lens battu 3-0 a Bruges, Real Madrid 4-1 Leipzig"
+    },
+    {
         "id":  70,
         "slug":  "psg-barcelone-4-2-ligue-des-champions-journee-3-2026-2027",
         "titre":  "PSG - Barcelone (4-2) : Paris renverse le choc et reste en tête de la Ligue des champions",

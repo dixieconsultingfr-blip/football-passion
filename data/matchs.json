@@ -4219,9 +4219,9 @@
         "date": "2026-10-21",
         "heure": "18:45",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 4,
-        "score_ext": 0
+        "score_ext": 1
     },
     {
         "id": 575369,
@@ -4231,7 +4231,7 @@
         "date": "2026-10-21",
         "heure": "18:45",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 4
     },

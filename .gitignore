@@ -1,6 +1,7 @@
 # Config sensibles
 config/db.php
 config/api-keys.php
+config/secrets.php
 .env
 .env.local
 

@@ -1,5 +1,19 @@
 [
     {
+        "id":  72,
+        "slug":  "ligue-europa-journee-3-rennes-om-ol-2026-2027",
+        "titre":  "Ligue Europa, journée 3 : Rennes accroche la Juventus (2-2), l\u0027OM et l\u0027OL battus",
+        "categorie":  "Europa",
+        "etiquettes":  [
+                           "Europa League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-10-23",
+        "extrait":  "Soirée contrastée pour les clubs français en Ligue Europa : Rennes a obtenu un point à la Juventus (2-2), tandis que l\u0027OM s\u0027est incliné à Sturm Graz (1-0) et Lyon a lourdement perdu à Hoffenheim (3-0). Bilan et suite du calendrier.",
+        "vignette":  "/images/ligue-europa-journee-3-rennes-om-ol-2026-2027.jpg",
+        "image_alt":  "Ligue Europa journee 3 : Juventus 2-2 Rennes, Sturm Graz 1-0 OM, Hoffenheim 3-0 Lyon"
+    },
+    {
         "id":  71,
         "slug":  "ligue-des-champions-journee-3-lille-lens-defaites-real-mbappe-2026-2027",
         "titre":  "Ligue des champions : soirée noire pour Lille (2-4) et Lens (0-3), Mbappé marque avec le Real",

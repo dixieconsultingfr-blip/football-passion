@@ -1,5 +1,19 @@
 [
     {
+        "id":  73,
+        "slug":  "euro-2028-route-des-bleus-dates-format-qualifications",
+        "titre":  "Euro 2028 : les Bleus lancent leur route vers le Royaume-Uni et l\u0027Irlande",
+        "categorie":  "Euro",
+        "etiquettes":  [
+                           "Euro 2028",
+                           "Équipe de France"
+                       ],
+        "date":  "2026-10-25",
+        "extrait":  "L\u0027Équipe de France aborde un nouveau cycle avec un objectif clair : se qualifier pour l\u0027Euro 2028, organisé au Royaume-Uni et en République d\u0027Irlande du 9 juin au 9 juillet 2028. Dates, stades, format et calendrier des qualifications.",
+        "vignette":  "/images/euro-2028-route-des-bleus-dates-format-qualifications.jpg",
+        "image_alt":  "Euro 2028 : dates, format, tirage des qualifications a Belfast le 6 decembre 2026 et route des Bleus"
+    },
+    {
         "id":  72,
         "slug":  "ligue-europa-journee-3-rennes-om-ol-2026-2027",
         "titre":  "Ligue Europa, journée 3 : Rennes accroche la Juventus (2-2), l\u0027OM et l\u0027OL battus",

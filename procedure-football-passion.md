@@ -682,4 +682,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Statut** : code fourni ; à appliquer dans l'instance n8n (accès hors de la session Claude). Pas de saisie manuelle utile en attendant : le cycle sain suivant restaure les résultats tout seul.
 - **Rappel** : ne jamais committer l'export JSON du workflow (`Football Passion — Récupération matchs.json`) dans ce dépôt public : il contient les identifiants des credentials n8n.
 
-*Dernière mise à jour : 15 octobre 2026*
+### 3.74 Section « Les autres équipes de France » + articles du 18 au 26 octobre 2026
+
+- **Page `equipe-france.php`** : nouvelle section « Les autres équipes de France » (Bleues qualifiées pour la Coupe du monde féminine 2027 au Brésil ; foot-fauteuil champion du monde 2026), avec liens vers les articles. Retour utilisateur : l'équipe de France ne se limite pas aux hommes.
+- **Articles ajoutés (ids 66 à 74)** : L1 J7, OL-Nice 2-1, PSG-Barça (avant-match et 4-2), Mbappé à gauche (Zidane), C1 J3 Lille/Lens/Real, Europa J3, Euro 2028 (route des Bleus, avec section Bleues) et foot-fauteuil champion du monde. Vignettes générées en 1200×675 sous nouveau nom de fichier (cache navigateur 7 jours).
+- **Piège Windows** : le gestionnaire d'identifiants (`git:https://github.com`) avait gardé un autre compte GitHub → push refusé en 403 ; solution : supprimer l'entrée et se reconnecter avec le compte du dépôt.
+- **Piège Hostinger** : le déploiement a parfois pris plus de 10 minutes alors que GitHub Actions était déjà en succès ; un « Déployer » manuel dans hPanel → Avancé → Git débloque.
+- **Règle** : un fait non sourcé (minute d'expulsion, buteurs adverses, club de la ville) n'est pas écrit ; tout lien externe en nofollow.
+
+*Dernière mise à jour : 26 octobre 2026*

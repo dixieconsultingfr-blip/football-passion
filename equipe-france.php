@@ -124,6 +124,41 @@ include __DIR__ . '/templates/header.php';
 
 </div>
 
+<!-- Les autres équipes de France -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Les autres équipes de France</h2>
+    <p class="text-gray-400 text-sm mb-5 max-w-2xl">Les Bleus, ce ne sont pas que les hommes : les Bleues et les sélections handisport portent aussi haut les couleurs de la France.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-sm text-gray-300 leading-relaxed">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Football féminin</p>
+            <h3 class="text-white font-bold text-lg mb-2">Les Bleues</h3>
+            <p>
+                Qualifiées pour la <strong class="text-white">Coupe du monde féminine 2027 au Brésil</strong> depuis le 9 juin 2026
+                (victoire 1-0 contre l'Irlande à Grenoble), les Bleues disputeront le Mondial du 24 juin au 25 juillet 2027.
+                Ce sera leur sixième participation à une Coupe du monde.
+            </p>
+            <a href="/blog/euro-2028-route-des-bleus-dates-format-qualifications" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
+                Lire notre article →
+            </a>
+        </div>
+
+        <div class="bg-gray-800 border border-yellow-800/40 rounded-xl p-6 text-sm text-gray-300 leading-relaxed">
+            <p class="text-yellow-400 text-xs font-semibold uppercase tracking-widest mb-1">Handisport · Foot-fauteuil</p>
+            <h3 class="text-white font-bold text-lg mb-2">Champions du monde 2026</h3>
+            <p>
+                Le 23 octobre 2026 à Buenos Aires, la France a battu l'Angleterre 2-1 après prolongation en finale
+                du Mondial de foot-fauteuil. Après 2017 et 2023, c'est une <strong class="text-white">troisième étoile mondiale</strong>,
+                une première pour une nation dans la discipline.
+            </p>
+            <a href="/blog/foot-fauteuil-france-championne-du-monde-2026-troisieme-etoile" class="inline-flex items-center gap-1 text-yellow-400 hover:text-yellow-300 text-xs font-semibold mt-3">
+                Lire notre article →
+            </a>
+        </div>
+
+    </div>
+</section>
+
 <!-- Joueurs -->
 <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Les joueurs des Bleus</h2>

@@ -138,7 +138,7 @@ include __DIR__ . '/templates/header.php';
                 (victoire 1-0 contre l'Irlande à Grenoble), les Bleues disputeront le Mondial du 24 juin au 25 juillet 2027.
                 Ce sera leur sixième participation à une Coupe du monde.
             </p>
-            <a href="/blog/euro-2028-route-des-bleus-dates-format-qualifications" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
+            <a href="/blog/bleues-mondial-2027-bresil-calendrier-preparation-joueuses" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
                 Lire notre article →
             </a>
         </div>

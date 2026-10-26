@@ -1,5 +1,19 @@
 [
     {
+        "id":  74,
+        "slug":  "foot-fauteuil-france-championne-du-monde-2026-troisieme-etoile",
+        "titre":  "Foot-fauteuil : la France championne du monde 2026, une troisième étoile historique",
+        "categorie":  "France",
+        "etiquettes":  [
+                           "Foot fauteuil",
+                           "Handisport"
+                       ],
+        "date":  "2026-10-26",
+        "extrait":  "L\u0027équipe de France de foot-fauteuil a battu l\u0027Angleterre 2-1 après prolongation en finale du Mondial 2026 à Buenos Aires et devient la première nation à décrocher une troisième étoile. Récit de la finale, sélection et coup de chapeau à des champions qu\u0027on ne voit pas assez.",
+        "vignette":  "/images/foot-fauteuil-france-championne-du-monde-2026-troisieme-etoile.jpg",
+        "image_alt":  "Foot-fauteuil : la France championne du monde 2026, victoire 2-1 contre l\u0027Angleterre, troisieme etoile apres 2017 et 2023"
+    },
+    {
         "id":  73,
         "slug":  "euro-2028-route-des-bleus-dates-format-qualifications",
         "titre":  "Euro 2028 : les Bleus lancent leur route vers le Royaume-Uni et l\u0027Irlande",

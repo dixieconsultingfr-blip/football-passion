@@ -876,48 +876,24 @@
         "score_ext": null
     },
     {
+        "id": 559646,
+        "competition": "L1",
+        "domicile": "OGC Nice",
+        "exterieur": "Stade Rennais FC 1901",
+        "date": "2026-10-30",
+        "heure": "19:00",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
         "id": 559639,
         "competition": "L1",
         "domicile": "Lille OSC",
         "exterieur": "Racing Club de Lens",
         "date": "2026-10-30",
         "heure": "21:05",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
-        "id": 559646,
-        "competition": "L1",
-        "domicile": "OGC Nice",
-        "exterieur": "Stade Rennais FC 1901",
-        "date": "2026-10-31",
-        "heure": "17:15",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
-        "id": 559640,
-        "competition": "L1",
-        "domicile": "Olympique Lyonnais",
-        "exterieur": "Angers SCO",
-        "date": "2026-10-31",
-        "heure": "20:45",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
-        "id": 559641,
-        "competition": "L1",
-        "domicile": "FC Lorient",
-        "exterieur": "Stade Brestois 29",
-        "date": "2026-10-31",
-        "heure": "20:45",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
@@ -948,6 +924,18 @@
         "score_ext": null
     },
     {
+        "id": 559640,
+        "competition": "L1",
+        "domicile": "Olympique Lyonnais",
+        "exterieur": "Angers SCO",
+        "date": "2026-11-01",
+        "heure": "17:15",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
         "id": 559642,
         "competition": "L1",
         "domicile": "Paris FC",
@@ -965,6 +953,18 @@
         "domicile": "Olympique de Marseille",
         "exterieur": "Toulouse FC",
         "date": "2026-11-01",
+        "heure": "20:45",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
+        "id": 559641,
+        "competition": "L1",
+        "domicile": "FC Lorient",
+        "exterieur": "Stade Brestois 29",
+        "date": "2026-11-02",
         "heure": "20:45",
         "stade": "",
         "status": "SCHEDULED",

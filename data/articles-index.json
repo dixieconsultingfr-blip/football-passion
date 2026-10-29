@@ -1,5 +1,19 @@
 [
     {
+        "id":  76,
+        "slug":  "asse-nantes-1-0-boakye-ligue-2-journee-10-2026-2027",
+        "titre":  "Saint-Étienne gagne encore : l\u0027ASSE s\u0027impose sur le gong contre Nantes (1-0) et file en tête de la Ligue 2",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "ASSE",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-10-29",
+        "extrait":  "Saint-Étienne a battu Nantes 1-0 samedi 24 octobre grâce à une tête d\u0027Augustine Boakye à la 90e minute. Une victoire arrachée sur le gong qui conforte le leadership de l\u0027ASSE en Ligue 2. Récit, résultats de la J10 et classement.",
+        "vignette":  "/images/asse-nantes-1-0-boakye-ligue-2-journee-10-2026-2027.jpg",
+        "image_alt":  "Ligue 2 journee 10 : Saint-Etienne bat Nantes 1-0 grace a un but de Boakye a la 90e minute, l\u0027ASSE leader avec 25 points"
+    },
+    {
         "id":  75,
         "slug":  "bleues-mondial-2027-bresil-calendrier-preparation-joueuses",
         "titre":  "Les Bleues au Mondial 2027 : calendrier de préparation et joueuses à suivre",

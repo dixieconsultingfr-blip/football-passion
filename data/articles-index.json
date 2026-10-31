@@ -1,5 +1,19 @@
 [
     {
+        "id":  77,
+        "slug":  "nice-rennes-5-2-wahi-triple-ligue-1-journee-9-2026-2027",
+        "titre":  "Nice - Rennes (5-2) : triplé de Wahi, les Aiglons déroulent à l\u0027Allianz Riviera",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OGC Nice",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-10-31",
+        "extrait":  "L\u0027OGC Nice a corrigé le Stade Rennais 5-2 à l\u0027Allianz Riviera lors de la 9e journée de Ligue 1. Elye Wahi a signé un triplé, Clauss et Amoura ont complété la fête niçoise, alors que Szymański et Dia avaient réduit l\u0027écart pour Rennes.",
+        "vignette":  "/images/nice-rennes-5-2-wahi-triple-ligue-1-journee-9-2026-2027.jpg",
+        "image_alt":  "Ligue 1 journee 9 : OGC Nice 5-2 Stade Rennais, triple d\u0027Elye Wahi, buts de Clauss et Amoura a l\u0027Allianz Riviera"
+    },
+    {
         "id":  76,
         "slug":  "asse-nantes-1-0-boakye-ligue-2-journee-10-2026-2027",
         "titre":  "Saint-Étienne gagne encore : l\u0027ASSE s\u0027impose sur le gong contre Nantes (1-0) et file en tête de la Ligue 2",

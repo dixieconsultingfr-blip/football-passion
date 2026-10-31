@@ -1,5 +1,19 @@
 [
     {
+        "id":  78,
+        "slug":  "qualifications-euro-2028-mode-emploi-barrages-pays-hotes",
+        "titre":  "Qualifications Euro 2028 : mode d\u0027emploi, barrages et places des pays hôtes",
+        "categorie":  "Euro",
+        "etiquettes":  [
+                           "Euro 2028",
+                           "Qualifications"
+                       ],
+        "date":  "2026-10-31",
+        "extrait":  "Douze groupes, vingt qualifiés directs, des barrages en mars 2028 et des places réservées aux pays hôtes : le mode d\u0027emploi des qualifications de l\u0027Euro 2028, à quelques semaines du tirage au sort de Belfast.",
+        "vignette":  "/images/qualifications-euro-2028-mode-emploi-barrages-pays-hotes.jpg",
+        "image_alt":  "Qualifications Euro 2028 : 12 groupes, 20 qualifies directs, barrages en mars 2028, tirage a Belfast le 6 decembre 2026"
+    },
+    {
         "id":  77,
         "slug":  "nice-rennes-5-2-wahi-triple-ligue-1-journee-9-2026-2027",
         "titre":  "Nice - Rennes (5-2) : triplé de Wahi, les Aiglons déroulent à l\u0027Allianz Riviera",

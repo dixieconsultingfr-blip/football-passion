@@ -690,4 +690,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Piège Hostinger** : le déploiement a parfois pris plus de 10 minutes alors que GitHub Actions était déjà en succès ; un « Déployer » manuel dans hPanel → Avancé → Git débloque.
 - **Règle** : un fait non sourcé (minute d'expulsion, buteurs adverses, club de la ville) n'est pas écrit ; tout lien externe en nofollow.
 
-*Dernière mise à jour : 26 octobre 2026*
+
+### 3.75 Mise à jour de la page `euro-2028.php` + article « Qualifications Euro 2028 » — 31 octobre 2026
+
+- **Page `euro-2028.php`** : ajout de `$date_maj_page` (« Mis à jour le ») ; bloc qualifications complété (barrages de mars 2028 à 2, 3 ou 4 billets, places hôtes limitées à 2, accès aux barrages via la Ligue des nations, tirage du 6 décembre 2026 à Belfast) ; calendrier corrigé (qualifications mars-novembre 2027, barrages mars 2028, 54 nations au lieu de 53) ; bilan de Zidane en Ligue des nations (3V 1N, 10 points, groupe A1) ; nouvelle question FAQ (HTML + JSON-LD).
+- **Article id 78** `qualifications-euro-2028-mode-emploi-barrages-pays-hotes` (catégorie Euro) ; liens vers `euro-2028.php`, `euro-2028-qualifications.php` et l'article de la route des Bleus.
+- **Rappel** : le format des barrages et les places hôtes viennent de sources secondaires ; à confirmer sur uefa.com après le tirage du 6 décembre.
+
+*Dernière mise à jour : 31 octobre 2026*

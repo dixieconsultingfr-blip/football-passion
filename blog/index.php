@@ -9,6 +9,22 @@ $slug = trim($_GET['slug'] ?? '');
 if ($slug !== '') {
     $article = preg_match('/^[a-z0-9-]+$/', $slug) ? load_article(BASE_PATH, $slug) : null;
 
+    // URL tronquée (lien coupé sur un réseau social, par ex.) : si le début du slug correspond
+    // à un seul article publié, on redirige en 301 plutôt que d'afficher une 404.
+    if (!$article && preg_match('/^[a-z0-9-]+$/', $slug)) {
+        $prefixe = rtrim($slug, '-');
+        if (strlen($prefixe) >= 8) {
+            $candidats = array_values(array_filter(
+                load_articles_index(BASE_PATH),
+                fn($a) => str_starts_with($a['slug'] ?? '', $prefixe)
+            ));
+            if (count($candidats) === 1) {
+                header('Location: https://football-passion.fr/blog/' . rawurlencode($candidats[0]['slug']), true, 301);
+                exit;
+            }
+        }
+    }
+
     if (!$article) {
         http_response_code(404);
         $page_title = 'Article introuvable – Football Passion';

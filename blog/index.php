@@ -17,7 +17,7 @@ if ($slug !== '') {
         echo '<div class="min-h-64 flex flex-col items-center justify-center py-24 text-center">
             <div class="text-6xl mb-6">⚽</div>
             <h1 class="text-3xl font-bold text-white mb-4">Article introuvable</h1>
-            <a href="/blog" class="text-green-400 hover:text-green-300 border border-green-600 px-6 py-3 rounded transition-colors">← Retour au blog</a>
+            <a href="/blog/" class="text-green-400 hover:text-green-300 border border-green-600 px-6 py-3 rounded transition-colors">← Retour au blog</a>
         </div>';
         include BASE_PATH . '/templates/footer.php';
         exit;
@@ -64,7 +64,7 @@ if ($slug !== '') {
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
-    <a href="/blog" class="hover:text-green-400 transition-colors">Blog</a>
+    <a href="/blog/" class="hover:text-green-400 transition-colors">Blog</a>
     <span>›</span>
     <span class="text-gray-400 truncate max-w-xs"><?= htmlspecialchars($article['titre']) ?></span>
 </nav>
@@ -107,14 +107,14 @@ if ($slug !== '') {
         <?php if (!empty($article['etiquettes'])): ?>
         <div class="flex flex-wrap gap-2 mb-6">
             <?php foreach ($article['etiquettes'] as $tag): ?>
-            <a href="/blog?cat=<?= urlencode($tag) ?>"
+            <a href="/blog/?cat=<?= urlencode($tag) ?>"
                class="text-gray-500 hover:text-green-400 text-xs border border-gray-700 hover:border-green-700 px-2 py-1 rounded transition-colors">
                 #<?= htmlspecialchars($tag) ?>
             </a>
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
-        <a href="/blog" class="text-green-400 hover:text-green-300 text-sm font-semibold transition-colors">← Retour au blog</a>
+        <a href="/blog/" class="text-green-400 hover:text-green-300 text-sm font-semibold transition-colors">← Retour au blog</a>
     </footer>
 </article>
 
@@ -166,13 +166,13 @@ include BASE_PATH . '/templates/header.php';
 
 <!-- Filtres catégories -->
 <div class="flex flex-wrap gap-2 mb-8">
-    <a href="/blog"
+    <a href="/blog/"
        class="text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors
               <?= $cat_filtre === '' ? 'bg-green-700 text-white border-green-700' : 'border-gray-600 text-gray-400 hover:border-green-600 hover:text-green-400' ?>">
         Tous
     </a>
     <?php foreach ($categories as $cat): ?>
-    <a href="/blog?cat=<?= urlencode($cat) ?>"
+    <a href="/blog/?cat=<?= urlencode($cat) ?>"
        class="text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors
               <?= $cat_filtre === $cat ? 'bg-green-700 text-white border-green-700' : 'border-gray-600 text-gray-400 hover:border-green-600 hover:text-green-400' ?>">
         <?= htmlspecialchars($cat) ?>
@@ -230,7 +230,7 @@ include BASE_PATH . '/templates/header.php';
 <?php if ($total_pages > 1): ?>
 <div class="flex justify-center items-center gap-2 mt-8">
     <?php if ($page > 1): ?>
-    <a href="/blog?page=<?= $page - 1 ?><?= $cat_filtre ? '&cat=' . urlencode($cat_filtre) : '' ?>"
+    <a href="/blog/?page=<?= $page - 1 ?><?= $cat_filtre ? '&cat=' . urlencode($cat_filtre) : '' ?>"
        class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-4 py-2 text-sm font-semibold rounded transition-colors">
         ← Précédent
     </a>
@@ -239,7 +239,7 @@ include BASE_PATH . '/templates/header.php';
     <span class="text-gray-500 text-sm">Page <?= $page ?> / <?= $total_pages ?></span>
 
     <?php if ($page < $total_pages): ?>
-    <a href="/blog?page=<?= $page + 1 ?><?= $cat_filtre ? '&cat=' . urlencode($cat_filtre) : '' ?>"
+    <a href="/blog/?page=<?= $page + 1 ?><?= $cat_filtre ? '&cat=' . urlencode($cat_filtre) : '' ?>"
        class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-4 py-2 text-sm font-semibold rounded transition-colors">
         Suivant →
     </a>

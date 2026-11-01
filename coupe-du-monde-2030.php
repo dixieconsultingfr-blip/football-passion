@@ -153,7 +153,7 @@ include __DIR__ . '/templates/header.php';
     <?php if (empty($articlesCDM)): ?>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-sm">
         Aucun article publié pour le moment dans cette catégorie.
-        <a href="/blog" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
+        <a href="/blog/" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
     </div>
     <?php else: ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

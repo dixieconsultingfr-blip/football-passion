@@ -230,7 +230,7 @@ include __DIR__ . '/templates/header.php';
             <?php if (empty($articlesL3)): ?>
             <div class="bg-gray-800 rounded-xl border border-gray-700 p-5 text-center text-gray-500 text-xs">
                 Aucun article publié pour le moment.
-                <a href="/blog" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
+                <a href="/blog/" class="text-green-400 hover:text-green-300 block mt-1">Voir tous les articles →</a>
             </div>
             <?php else: ?>
             <div class="space-y-3">
@@ -248,7 +248,7 @@ include __DIR__ . '/templates/header.php';
                 </a>
                 <?php endforeach; ?>
             </div>
-            <a href="/blog?cat=L3" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L3 →</a>
+            <a href="/blog/?cat=L3" class="block text-center text-green-400 hover:text-green-300 text-xs font-semibold mt-3">Tous les articles L3 →</a>
             <?php endif; ?>
         </section>
 

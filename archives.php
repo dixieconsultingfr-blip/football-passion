@@ -228,7 +228,7 @@ if (($matchsAffiches[0]['journee'] ?? null) !== null) {
 
 <section class="flex flex-wrap gap-4 justify-center pb-4 pt-8">
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier en cours</a>
-    <a href="/blog" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles</a>
+    <a href="/blog/" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

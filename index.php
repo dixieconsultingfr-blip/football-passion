@@ -59,7 +59,7 @@ include __DIR__ . '/templates/header.php';
         <p class="text-sm text-green-500/80 font-medium mb-6">football-passion.fr</p>
         <div class="flex flex-wrap justify-center gap-2">
             <?php foreach ($categories as $cat): ?>
-            <?php $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']); ?>
+            <?php $catHref = $hubs[$cat['slug']] ?? '/blog/?cat=' . urlencode($cat['code']); ?>
             <a href="<?= htmlspecialchars($catHref) ?>" class="px-3 py-1 text-xs font-semibold text-gray-400 border border-gray-700 rounded-full hover:border-green-600 hover:text-green-400 transition-colors"><?= htmlspecialchars($cat['name']) ?></a>
             <?php endforeach; ?>
         </div>
@@ -83,7 +83,7 @@ include __DIR__ . '/templates/header.php';
     <h2 class="text-3xl font-bold mb-6">Catégories</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <?php foreach ($categories as $cat): ?>
-        <?php $catHref = $hubs[$cat['slug']] ?? '/blog?cat=' . urlencode($cat['code']); ?>
+        <?php $catHref = $hubs[$cat['slug']] ?? '/blog/?cat=' . urlencode($cat['code']); ?>
         <a href="<?php echo $catHref; ?>" class="bg-gray-800 p-4 rounded-lg hover:bg-green-900 transition">
             <div class="flex items-center gap-2 mb-1">
                 <?php if (!empty($logosCompetitions[$cat['code']])): ?>

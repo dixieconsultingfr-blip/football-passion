@@ -7,7 +7,7 @@ $joueurs = load_joueurs(__DIR__);
 
 $staticPages = [
     ['loc' => '/',                              'changefreq' => 'daily',   'priority' => '1.0'],
-    ['loc' => '/blog',                          'changefreq' => 'daily',   'priority' => '0.9'],
+    ['loc' => '/blog/',                         'changefreq' => 'daily',   'priority' => '0.9'],
     ['loc' => '/calendrier.php',                'changefreq' => 'hourly',  'priority' => '0.9'],
     ['loc' => '/archives.php',                  'changefreq' => 'monthly', 'priority' => '0.4'],
     ['loc' => '/ligue-1.php',                   'changefreq' => 'daily',   'priority' => '0.8'],

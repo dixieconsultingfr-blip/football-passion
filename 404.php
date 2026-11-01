@@ -20,7 +20,7 @@ include __DIR__ . '/templates/header.php';
         <a href="/" class="bg-green-700 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">
             ← Retour à l'accueil
         </a>
-        <a href="/blog" class="border border-gray-600 text-gray-300 hover:border-green-500 hover:text-green-400 font-bold px-6 py-3 rounded-lg transition-colors text-sm">
+        <a href="/blog/" class="border border-gray-600 text-gray-300 hover:border-green-500 hover:text-green-400 font-bold px-6 py-3 rounded-lg transition-colors text-sm">
             Voir tous les articles
         </a>
     </div>
@@ -29,9 +29,9 @@ include __DIR__ . '/templates/header.php';
         <h2 class="text-sm font-bold text-green-400 uppercase tracking-wider mb-4">Pages populaires</h2>
         <div class="grid grid-cols-2 gap-3 text-sm">
             <a href="/calendrier.php" class="text-gray-400 hover:text-green-400 transition-colors">📅 Calendrier des matchs</a>
-            <a href="/blog?cat=France" class="text-gray-400 hover:text-green-400 transition-colors">🇫🇷 Équipe de France</a>
+            <a href="/blog/?cat=France" class="text-gray-400 hover:text-green-400 transition-colors">🇫🇷 Équipe de France</a>
             <a href="/coupe-du-monde.php" class="text-gray-400 hover:text-green-400 transition-colors">🏆 Coupe du Monde</a>
-            <a href="/blog?cat=CL" class="text-gray-400 hover:text-green-400 transition-colors">⭐ Champions League</a>
+            <a href="/blog/?cat=CL" class="text-gray-400 hover:text-green-400 transition-colors">⭐ Champions League</a>
             <a href="/a-propos.php" class="text-gray-400 hover:text-green-400 transition-colors">👤 À propos</a>
             <a href="/contact.php" class="text-gray-400 hover:text-green-400 transition-colors">✉️ Contact</a>
         </div>

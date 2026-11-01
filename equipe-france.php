@@ -183,7 +183,7 @@ include __DIR__ . '/templates/header.php';
     <?php if (empty($articlesFrance)): ?>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-sm">
         Aucun article publié pour le moment dans cette catégorie.
-        <a href="/blog" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
+        <a href="/blog/" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
     </div>
     <?php else: ?>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -208,7 +208,7 @@ include __DIR__ . '/templates/header.php';
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pb-4">
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier</a>
-    <a href="/blog?cat=France" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles France</a>
+    <a href="/blog/?cat=France" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles France</a>
     <a href="/coupe-du-monde.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏆 Coupe du Monde</a>
     <a href="/ligue-des-nations-2026-2027.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🥇 Ligue des Nations 2026-2027</a>
 </section>

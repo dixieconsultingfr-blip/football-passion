@@ -104,6 +104,18 @@ include __DIR__ . '/header.php';
     </div>
 </section>
 
+<!-- Navigation entre les groupes -->
+<section class="mb-10">
+    <h2 class="text-xl font-bold text-white mb-3">Les autres groupes de la Ligue des Nations</h2>
+    <div class="flex flex-wrap gap-2">
+        <a href="/ligue-des-nations-groupe-a1.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-3 py-1.5 text-xs font-semibold rounded-full transition-colors">Groupe A1 (France)</a>
+        <?php foreach (['b','c','d','e','f','g','h','i','j','k','l','m','n'] as $g):
+            if ($g === strtolower($groupeLettre ?? '')) continue; ?>
+        <a href="/ligue-des-nations-groupe-<?= $g ?>.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-3 py-1.5 text-xs font-semibold rounded-full transition-colors">Groupe <?= strtoupper($g) ?></a>
+        <?php endforeach; ?>
+    </div>
+</section>
+
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pb-4">
     <a href="/ligue-des-nations-2026-2027.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🥇 Ligue des Nations 2026-2027</a>

@@ -703,4 +703,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Corrections** : liens internes `/blog` → `/blog/` (23 fichiers PHP), sitemap `/blog/`, 301 direct des anciennes URLs `?slug=`, 301 de préfixe pour les URLs d'articles tronquées (`blog/index.php`), `robots.txt` (Disallow `newsletter-subscribe.php` et `contact-send.php`), maillage entre les 14 groupes LDN, liens vers `comment-regarder-euro-2028.php` et `euro-2028-les-9-stades.php` depuis les articles Euro.
 - **Incident** : le brouillon non publié `qui-sera-meilleur-congolais-ligue-1-2026-2027.json` a été poussé par erreur (`git add -A` sur `data/articles`) puis retiré aussitôt du dépôt. Règle : ne jamais utiliser `git add -A` sur ce dossier, toujours nommer les fichiers.
 
+### 3.77 Portraits Ligue 3 : vignettes avec logos, tableaux en ordre décroissant — 1er novembre 2026
+
+- **Série portraits Ligue 3** (Aubagne, Bastia, Caen) : vignettes standard (sans score ni classement), avec le logo du club (dossier `images/logo/`, logo Bastia converti de l'AVIF et fond noir détouré) et nouveau nom de fichier à chaque changement (cache navigateur 7 jours). Sources officielles liées en nofollow (sites, chaînes YouTube).
+- **Règle de présentation** : tableaux de résultats d'un club (J1 à Jn) en **ordre décroissant, dernier match en premier** ; caption « …, du plus récent au plus ancien » ; nouvelle ligne insérée en haut à chaque mise à jour. Règle consignée dans `CLAUDE.md`.
+- **Piège regex** : une ligne `<tr>` sans attribut (dernière ligne du tableau) échappait au motif `<tr ` — utiliser `<tr[ >]` et `<tr[^>]*>`.
+
 *Dernière mise à jour : 1er novembre 2026*

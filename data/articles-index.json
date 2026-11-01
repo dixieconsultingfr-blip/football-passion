@@ -1,5 +1,19 @@
 [
     {
+        "id":  80,
+        "slug":  "ligue-2-journee-11-guingamp-asse-3-0-montpellier-2026-2027",
+        "titre":  "Ligue 2, journée 11 : l\u0027ASSE s\u0027incline 3-0 à Guingamp, Montpellier revient à un point",
+        "categorie":  "L2",
+        "etiquettes":  [
+                           "ASSE",
+                           "Ligue 2"
+                       ],
+        "date":  "2026-11-01",
+        "extrait":  "Saint-Étienne a chuté 3-0 à Guingamp samedi 31 octobre, mais reste leader de la Ligue 2 avec 25 points (+12). Montpellier, vainqueur 3-0 à Annecy, n\u0027est plus qu\u0027à un point. Résultats de la J11 et classement.",
+        "vignette":  "/images/ligue-2-journee-11-guingamp-asse-3-0-montpellier-2026-2027.jpg",
+        "image_alt":  "Ligue 2 journee 11 : Guingamp bat Saint-Etienne 3-0, l\u0027ASSE reste leader avec 25 points, Montpellier a 24 points"
+    },
+    {
         "id":  79,
         "slug":  "bastia-ligue-3-portrait-club-ville-histoire-2026-2027",
         "titre":  "Bastia en Ligue 3 : portrait d\u0027un club de légende, de la finale de Coupe UEFA au renouveau",

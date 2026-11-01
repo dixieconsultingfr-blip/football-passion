@@ -697,4 +697,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Article id 78** `qualifications-euro-2028-mode-emploi-barrages-pays-hotes` (catégorie Euro) ; liens vers `euro-2028.php`, `euro-2028-qualifications.php` et l'article de la route des Bleus.
 - **Rappel** : le format des barrages et les places hôtes viennent de sources secondaires ; à confirmer sur uefa.com après le tirage du 6 décembre.
 
-*Dernière mise à jour : 31 octobre 2026*
+### 3.76 Indexation GSC : liens internes, redirections, robots.txt — 1er novembre 2026
+
+- **Relevé** : 195 pages non indexées (94 redirection, 62 canonique, 25 détectée non indexée, 9 « 404 », 4 explorée non indexée, 1 bloquée 4xx), consigné dans `gsc-indexation.md` (catégorie GSC Indexation) avec checklist de suivi tous les 15 jours (cf. `todolist.md`).
+- **Corrections** : liens internes `/blog` → `/blog/` (23 fichiers PHP), sitemap `/blog/`, 301 direct des anciennes URLs `?slug=`, 301 de préfixe pour les URLs d'articles tronquées (`blog/index.php`), `robots.txt` (Disallow `newsletter-subscribe.php` et `contact-send.php`), maillage entre les 14 groupes LDN, liens vers `comment-regarder-euro-2028.php` et `euro-2028-les-9-stades.php` depuis les articles Euro.
+- **Incident** : le brouillon non publié `qui-sera-meilleur-congolais-ligue-1-2026-2027.json` a été poussé par erreur (`git add -A` sur `data/articles`) puis retiré aussitôt du dépôt. Règle : ne jamais utiliser `git add -A` sur ce dossier, toujours nommer les fichiers.
+
+*Dernière mise à jour : 1er novembre 2026*

@@ -1,5 +1,19 @@
 [
     {
+        "id":  79,
+        "slug":  "bastia-ligue-3-portrait-club-ville-histoire-2026-2027",
+        "titre":  "Bastia en Ligue 3 : portrait d\u0027un club de légende, de la finale de Coupe UEFA au renouveau",
+        "categorie":  "L3",
+        "etiquettes":  [
+                           "SC Bastia",
+                           "Ligue 3"
+                       ],
+        "date":  "2026-11-01",
+        "extrait":  "Finaliste de la Coupe UEFA en 1978, vainqueur de la Coupe de France en 1981, tombé jusqu\u0027en National 3 puis remonté : le SC Bastia est l\u0027un des clubs les plus chargés d\u0027histoire de la Ligue 3. Portrait du club, de sa ville et de ce qu\u0027on peut y visiter.",
+        "vignette":  "/images/bastia-ligue-3-portrait-club-ville-histoire-2026-2027.jpg",
+        "image_alt":  "SC Bastia en Ligue 3 : stade Armand-Cesari, Coupe de France 1981, finale de Coupe UEFA 1978, ville de Bastia"
+    },
+    {
         "id":  78,
         "slug":  "qualifications-euro-2028-mode-emploi-barrages-pays-hotes",
         "titre":  "Qualifications Euro 2028 : mode d\u0027emploi, barrages et places des pays hôtes",

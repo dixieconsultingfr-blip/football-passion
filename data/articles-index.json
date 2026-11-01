@@ -1,5 +1,19 @@
 [
     {
+        "id":  82,
+        "slug":  "versailles-ligue-3-portrait-club-chateau-histoire-2026-2027",
+        "titre":  "Versailles en Ligue 3 : portrait du FC Versailles, un club en pleine ascension dans la ville du Roi-Soleil",
+        "categorie":  "L3",
+        "etiquettes":  [
+                           "FC Versailles",
+                           "Ligue 3"
+                       ],
+        "date":  "2026-11-01",
+        "extrait":  "Champion de Division d\u0027Honneur en 2017, de National 2 en 2021, demi-finaliste de la Coupe de France 2022 et 3e de la Ligue 3 après onze journées : le FC Versailles est l\u0027un des clubs les plus ambitieux du championnat. Portrait du club et de la ville du château de Louis XIV.",
+        "vignette":  "/images/versailles-ligue-3-portrait-modele-logo.jpg",
+        "image_alt":  "FC Versailles en Ligue 3, saison 2026-2027 : club fonde en 1989, ville et chateau de Louis XIV"
+    },
+    {
         "id":  81,
         "slug":  "caen-ligue-3-portrait-club-formation-histoire-2026-2027",
         "titre":  "Caen en Ligue 3 : portrait d\u0027un club historique, pépinière de talents, dans la ville de Guillaume le Conquérant",

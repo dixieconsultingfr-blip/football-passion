@@ -709,4 +709,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Règle de présentation** : tableaux de résultats d'un club (J1 à Jn) en **ordre décroissant, dernier match en premier** ; caption « …, du plus récent au plus ancien » ; nouvelle ligne insérée en haut à chaque mise à jour. Règle consignée dans `CLAUDE.md`.
 - **Piège regex** : une ligne `<tr>` sans attribut (dernière ligne du tableau) échappait au motif `<tr ` — utiliser `<tr[ >]` et `<tr[^>]*>`.
 
+- **Modèle de vignette Ligue 3** : titre « CLUB | LIGUE 3 » (et non « EN LIGUE 3 », ambigu), sous-titre « Portrait du club · Saison 2026-2027 », logo du club, quatre cartes d'identité, sans score. Appliqué à Aubagne, Bastia et Caen le 1er novembre 2026 (fichiers `*-ligue-3-portrait-modele-logo.jpg`). Règle consignée dans `CLAUDE.md`.
+
 *Dernière mise à jour : 1er novembre 2026*

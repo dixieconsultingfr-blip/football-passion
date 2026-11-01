@@ -13683,10 +13683,10 @@
         "heure":  "20:00",
         "id":  9000647,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  1,
+        "score_ext":  3,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13696,10 +13696,10 @@
         "heure":  "20:00",
         "id":  9000648,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  1,
+        "score_ext":  0,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13709,10 +13709,10 @@
         "heure":  "20:00",
         "id":  9000649,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  1,
+        "score_ext":  3,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13722,10 +13722,10 @@
         "heure":  "20:00",
         "id":  9000650,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  1,
+        "score_ext":  1,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13735,10 +13735,10 @@
         "heure":  "20:00",
         "id":  9000651,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  1,
+        "score_ext":  0,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13748,10 +13748,10 @@
         "heure":  "14:00",
         "id":  9000652,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  0,
+        "score_ext":  3,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13761,10 +13761,10 @@
         "heure":  "20:00",
         "id":  9000653,
         "journee":  11,
-        "score_dom":  null,
-        "score_ext":  null,
+        "score_dom":  3,
+        "score_ext":  0,
         "stade":  "",
-        "status":  "SCHEDULED"
+        "status":  "FINISHED"
     },
     {
         "competition":  "L2",
@@ -13903,6 +13903,123 @@
         "exterieur":  "Bastia",
         "heure":  "14:45",
         "id":  9000664,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "Dijon",
+        "exterieur":  "Red Star",
+        "heure":  "20:00",
+        "id":  9000665,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "Montpellier",
+        "exterieur":  "Metz",
+        "heure":  "20:00",
+        "id":  9000666,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "Grenoble",
+        "exterieur":  "Reims",
+        "heure":  "20:00",
+        "id":  9000667,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "Nancy",
+        "exterieur":  "Sochaux",
+        "heure":  "20:00",
+        "id":  9000668,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "Boulogne",
+        "exterieur":  "FC Annecy",
+        "heure":  "20:00",
+        "id":  9000669,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-06",
+        "domicile":  "USL Dunkerque",
+        "exterieur":  "Guingamp",
+        "heure":  "20:00",
+        "id":  9000670,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-07",
+        "domicile":  "Clermont",
+        "exterieur":  "Rodez",
+        "heure":  "14:00",
+        "id":  9000671,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-07",
+        "domicile":  "Pau FC",
+        "exterieur":  "Nantes",
+        "heure":  "20:00",
+        "id":  9000672,
+        "journee":  12,
+        "score_dom":  null,
+        "score_ext":  null,
+        "stade":  "",
+        "status":  "SCHEDULED"
+    },
+    {
+        "competition":  "L2",
+        "date":  "2026-11-07",
+        "domicile":  "Saint-Etienne",
+        "exterieur":  "Laval",
+        "heure":  "20:00",
+        "id":  9000673,
         "journee":  12,
         "score_dom":  null,
         "score_ext":  null,

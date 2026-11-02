@@ -20,6 +20,23 @@ Ce fichier garde la progression de la page et les étapes de monétisation (les 
 - **2 novembre 2026** : **activation des étoiles validée par Facebook** (information donnée par l'utilisateur). Les étoiles permettent aux spectateurs de soutenir la page financièrement sur les contenus éligibles (par exemple les vidéos et les lives).
 - **À vérifier / à faire** (voir `todolist.md`) : confirmer dans Meta Business Suite où les étoiles s'affichent (vidéos, reels, lives), les conditions d'éligibilité et de paiement, et noter les premières statistiques. Aucun montant gagné n'est consigné à ce jour.
 
+
+## Statistiques de vues — 90 derniers jours (relevé mensuel, début de mois)
+
+**Rythme** : au début de chaque mois (1er), l'utilisateur transmet les statistiques des 90 derniers jours de Meta Business Suite (Vues, Vues de 3 secondes, Vues de 1 minute, durée de visionnage, Reels / Publications / Stories). Ajouter une ligne au tableau ci-dessous et comparer au relevé précédent.
+
+| Relevé | Période | Vues | Vues de 3 s | Vues de 1 min | Durée de visionnage | Followers |
+|---|---|---:|---:|---:|---|---:|
+| **2026-11-01** | 4 août - 1er nov. 2026 | **295 074** (+651 %) | **133 398** (+878 %) | **739** (+872 %) | « 23 j 2… » (capture tronquée, à compléter) | 615 (au 2 nov.) |
+| 2026-12-01 | 3 sept. - 1er déc. 2026 | | | | | |
+| 2027-01-01 | | | | | | |
+
+**Lecture du relevé du 1er novembre 2026** :
+- Variations calculées par Facebook par rapport aux 90 jours précédents (période de lancement, base très faible) : elles sont élevées surtout à cause de ce point de départ bas.
+- La courbe montre un **pic marqué en août** (cohérent avec le post « Ligue 1 – Journée 2 », 51 142 vues, voir procédure 3.62), puis une activité plus régulière, avec des remontées en septembre et fin octobre.
+- Les **vues de 1 minute** (739) sont apparues avec les vidéos et reels (voix off) : le bilan d'août indiquait 0. C'est le signal à développer pour les étoiles et la monétisation.
+- À compléter au prochain relevé : répartition Reels / Publications / Stories (onglets de la capture) et durée de visionnage complète.
+
 ## Enseignements retenus
 
 - Les posts factuels de résultats (récaps multi-matchs, comptes rendus) sont le principal moteur de croissance (bilan du 31 août 2026).

@@ -730,4 +730,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Relevé** : 615 followers au 2 novembre 2026 (368 au 30 août, 227 au 19 août) ; **activation des étoiles Facebook validée par Facebook** (information de l'utilisateur).
 - **Fichier de suivi** : `facebook-suivi.md` (progression, monétisation, enseignements, historique des relevés) ; tâche récurrente ajoutée à `todolist.md` (relevé tous les 15 jours, avec le suivi GSC).
 
+- **Complément (2 novembre 2026)** : statistiques Facebook des 90 derniers jours (4 août - 1er nov.) : 295 074 vues (+651 %), 133 398 vues de 3 s (+878 %), 739 vues de 1 min (+872 %). Relevé mensuel instauré (début de mois), consigné dans `facebook-suivi.md` et `todolist.md`.
+
 *Dernière mise à jour : 2 novembre 2026*

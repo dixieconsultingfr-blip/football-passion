@@ -1,5 +1,19 @@
 [
     {
+        "id":  84,
+        "slug":  "fonseca-quitte-ol-sporting-portugal-coup-de-tonnerre-2026",
+        "titre":  "Coup de tonnerre à l\u0027OL : Paulo Fonseca quitte Lyon pour le Sporting Portugal, son club de cœur",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "OL",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-11-02",
+        "extrait":  "Paulo Fonseca a annoncé à ses joueurs, lundi 2 novembre 2026, qu\u0027il quitte l\u0027OL pour rejoindre le Sporting Portugal, son club de cœur. Jorge Maciel assurera l\u0027intérim face à la Real Sociedad, puis à Brest. Raisons, indemnité, succession : le point.",
+        "vignette":  "/images/fonseca-quitte-ol-sporting-portugal-coup-de-tonnerre-2026.jpg",
+        "image_alt":  "Paulo Fonseca quitte l\u0027Olympique Lyonnais pour le Sporting Portugal, Jorge Maciel assure l\u0027interim"
+    },
+    {
         "id":  83,
         "slug":  "droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique",
         "titre":  "Droits TV Ligue 1 : la LFP lance un appel d\u0027offres en lot unique pour 2027-2032",
@@ -11,7 +25,7 @@
         "date":  "2026-11-02",
         "extrait":  "La LFP lance un nouvel appel d\u0027offres pour les droits TV de la Ligue 1 sur 2027-2032, deux ans plus tôt que prévu : un lot unique, deux options (diffusion directe ou distribution de Ligue 1+), dépôt des offres du 3 novembre au 7 décembre 2026.",
         "vignette":  "/images/droits-tv-ligue-1-qui-diffusera-2027-vignette.jpg",
-        "image_alt":  "Qui diffusera la Ligue 1 en 2027 ? La LFP lance un appel d'offres pour 2027-2032, Canal+ ou une plateforme internationale"
+        "image_alt":  "Qui diffusera la Ligue 1 en 2027 ? La LFP lance un appel d\u0027offres pour 2027-2032, Canal+ ou une plateforme internationale"
     },
     {
         "id":  82,

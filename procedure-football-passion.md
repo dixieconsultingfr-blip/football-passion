@@ -725,4 +725,9 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Audit** : 83 articles et toutes les pages PHP contrôlés. Seuls 4 liens externes n'avaient pas `nofollow` : 3 vers dixie.consulting (footer, à-propos, mentions légales) et 1 vers hostinger.fr (mentions légales).
 - **Décision** : hostinger.fr passé en `nofollow noopener noreferrer` ; les liens vers **dixie.consulting** (site de l'éditeur) restent en lien suivi, **exception documentée dans `CLAUDE.md`** (section « Liens externes »).
 
+### 3.80 Suivi Facebook : 615 followers et étoiles validées — 2 novembre 2026
+
+- **Relevé** : 615 followers au 2 novembre 2026 (368 au 30 août, 227 au 19 août) ; **activation des étoiles Facebook validée par Facebook** (information de l'utilisateur).
+- **Fichier de suivi** : `facebook-suivi.md` (progression, monétisation, enseignements, historique des relevés) ; tâche récurrente ajoutée à `todolist.md` (relevé tous les 15 jours, avec le suivi GSC).
+
 *Dernière mise à jour : 2 novembre 2026*

@@ -718,4 +718,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Pages** : `droits-tv-ligue-1.php` (nouvelle section « Et après 2027 ? », FAQ HTML + JSON-LD, `$date_maj_page`) et `droits-tv-football.php` (encart + `$date_maj_page`), tous deux au 2 novembre 2026.
 - **À suivre** : après le 7 décembre 2026, mettre à jour avec les candidats et le résultat de l'appel d'offres (voir `todolist.md`).
 
+- **Complément (2 novembre 2026)** : question FAQ « Qui diffusera la Ligue 1 après 2027 ? » ajoutée aussi dans la FAQ de `droits-tv-football.php` (HTML + JSON-LD), en plus de `droits-tv-ligue-1.php`.
+
 *Dernière mise à jour : 2 novembre 2026*

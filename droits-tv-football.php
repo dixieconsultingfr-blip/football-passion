@@ -17,6 +17,14 @@ include __DIR__ . '/templates/header.php';
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Qui diffusera la Ligue 1 après 2027 ? Que prévoit l'appel d'offres de la LFP ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La LFP a lancé un appel d'offres en lot unique pour les droits TV de la Ligue 1 sur les saisons 2027-2028 à 2031-2032, avec dépôt des offres du 3 novembre au 7 décembre 2026. Un diffuseur peut soit diffuser directement la Ligue 1, soit obtenir l'exclusivité de la distribution de Ligue 1+. Le diffuseur n'est pas encore connu. Pour 2026-2027, rien ne change : tous les matchs restent sur Ligue 1+."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Quel est le prix d'un abonnement à la Ligue 1 ?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -311,6 +319,16 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-8">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : droits TV et abonnements</h2>
         <div class="space-y-3">
+
+            <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+                <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                    Qui diffusera la Ligue 1 après 2027 ? Que prévoit l'appel d'offres de la LFP ?
+                    <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+                </summary>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                    La LFP a lancé un appel d'offres en lot unique pour les droits TV de la Ligue 1 sur les saisons 2027-2028 à 2031-2032, avec dépôt des offres du 3 novembre au 7 décembre 2026. Un diffuseur peut soit diffuser directement la Ligue 1, soit obtenir l'exclusivité de la distribution de Ligue 1+. Le diffuseur n'est pas encore connu. Pour 2026-2027, rien ne change : tous les matchs restent sur Ligue 1+. <a href="/blog/droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique" class="text-green-400 hover:text-green-300">Lire notre article →</a>
+                </p>
+            </details>
 
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
                 <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">

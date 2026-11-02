@@ -1,5 +1,19 @@
 [
     {
+        "id":  83,
+        "slug":  "droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique",
+        "titre":  "Droits TV Ligue 1 : la LFP lance un appel d\u0027offres en lot unique pour 2027-2032",
+        "categorie":  "L1",
+        "etiquettes":  [
+                           "Droits TV",
+                           "Ligue 1"
+                       ],
+        "date":  "2026-11-02",
+        "extrait":  "La LFP lance un nouvel appel d\u0027offres pour les droits TV de la Ligue 1 sur 2027-2032, deux ans plus tôt que prévu : un lot unique, deux options (diffusion directe ou distribution de Ligue 1+), dépôt des offres du 3 novembre au 7 décembre 2026.",
+        "vignette":  "/images/droits-tv-ligue-1-appel-offres-lfp-2027-2032.jpg",
+        "image_alt":  "Droits TV Ligue 1 : appel d\u0027offres de la LFP en lot unique pour les saisons 2027-2028 a 2031-2032, depot des offres du 3 novembre au 7 decembre 2026"
+    },
+    {
         "id":  82,
         "slug":  "versailles-ligue-3-portrait-club-chateau-histoire-2026-2027",
         "titre":  "Versailles en Ligue 3 : portrait du FC Versailles, un club en pleine ascension dans la ville du Roi-Soleil",

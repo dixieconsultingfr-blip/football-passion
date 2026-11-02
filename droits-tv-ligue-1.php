@@ -1,7 +1,7 @@
 <?php
 $page_title    = 'Droits TV Ligue 1 2026-2027 : tout savoir sur Ligue 1+';
 $meta_desc     = "Ligue 1+ diffuse 100 % des matchs en 2026-2027. Formules, prix, partage à 2 utilisateurs, plateformes d'accès : le guide complet pour ne rien rater de la Ligue 1 McDonald's.";
-$date_maj_page = '2026-09-22';
+$date_maj_page = '2026-11-02';
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -13,6 +13,14 @@ include __DIR__ . '/templates/header.php';
   "datePublished": "2026-09-22T08:00:00+02:00",
   "dateModified": "<?= $date_maj_page ?>T08:00:00+02:00",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui diffusera la Ligue 1 à partir de 2027-2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On ne le sait pas encore. La LFP a lancé un appel d'offres en lot unique pour les saisons 2027-2028 à 2031-2032, avec dépôt des offres du 3 novembre au 7 décembre 2026. Un diffuseur peut soit diffuser directement la Ligue 1, soit distribuer Ligue 1+ en exclusivité. Pour la saison 2026-2027, rien ne change : la Ligue 1 reste sur Ligue 1+."
+      }
+    },
     {
       "@type": "Question",
       "name": "Sur quelle chaîne voir la Ligue 1 en 2026-2027 ?",
@@ -116,6 +124,35 @@ include __DIR__ . '/templates/header.php';
         </div>
     </section>
 
+    <!-- SECTION 1TER — APPEL D'OFFRES LFP 2027-2032 -->
+    <section class="mb-10">
+        <h2 class="text-2xl font-bold text-white mb-4">Et après 2027 ? Le nouvel appel d'offres de la LFP</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            La LFP a lancé un nouvel appel d'offres pour les droits TV de la Ligue 1 sur les saisons <strong class="text-white">2027-2028 à 2031-2032</strong>, deux ans plus tôt que prévu. Le dépôt des offres s'étend du <strong class="text-white">3 novembre au 7 décembre 2026</strong>. Concrètement, la Ligue 1 pourrait changer de diffuseur dès 2027-2028 : aucun changement n'est à craindre pour la saison en cours, qui reste entièrement sur Ligue 1+.
+        </p>
+        <div class="overflow-x-auto mb-4">
+            <table class="w-full text-sm bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
+                <caption class="text-left text-gray-400 text-xs px-4 py-2">Appel d'offres LFP pour les droits TV de la Ligue 1 (saisons 2027-2028 à 2031-2032) : ce qu'il faut retenir</caption>
+                <thead class="bg-gray-900/60 text-gray-400 text-xs uppercase">
+                    <tr><th class="text-left px-4 py-2">Élément</th><th class="text-left px-4 py-2">Situation</th></tr>
+                </thead>
+                <tbody class="text-gray-300">
+                    <tr class="border-t border-gray-700"><td class="px-4 py-2">Période concernée</td><td class="px-4 py-2">Saisons 2027-2028 à 2031-2032 (cinq saisons)</td></tr>
+                    <tr class="border-t border-gray-700"><td class="px-4 py-2">Dépôt des offres</td><td class="px-4 py-2">Du 3 novembre au 7 décembre 2026</td></tr>
+                    <tr class="border-t border-gray-700"><td class="px-4 py-2">Format</td><td class="px-4 py-2">Un seul lot, tous les matchs de Ligue 1</td></tr>
+                    <tr class="border-t border-gray-700"><td class="px-4 py-2">Options pour les candidats</td><td class="px-4 py-2">Diffuser la Ligue 1 directement, ou distribuer Ligue 1+ en exclusivité</td></tr>
+                    <tr class="border-t border-gray-700"><td class="px-4 py-2">Cadre juridique</td><td class="px-4 py-2">Loi du 3 août 2026 : vente en lot unique possible, sans découpage obligatoire</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-3">
+            Si les offres sont jugées insuffisantes, la LFP peut conserver Ligue 1+ en autofinancement, ce qui lui coûterait environ 60 millions d'euros par an d'après les informations disponibles. Canal+ a évoqué un possible retour, à condition que l'opération ne soit pas déficitaire, mais aucune candidature officielle n'était confirmée lors des dernières informations. À ne pas confondre avec la Liga espagnole, dont les droits ont été renouvelés pour 2027-2032 (DAZN et Telefónica/Movistar Plus+).
+        </p>
+        <a href="/blog/droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold">
+            Lire notre article sur l'appel d'offres →
+        </a>
+    </section>
+
     <!-- SECTION 2 — FORMULES ET PRIX -->
     <section class="mb-10">
         <h2 class="text-2xl font-bold text-white mb-4">Les 4 formules Ligue 1+ et leurs prix</h2>
@@ -212,6 +249,13 @@ include __DIR__ . '/templates/header.php';
     <section class="mb-8">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions — Ligue 1 droits TV</h2>
         <div class="space-y-3">
+            <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+                <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                    Qui diffusera la Ligue 1 à partir de 2027-2028 ?
+                    <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+                </summary>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">On ne le sait pas encore. La LFP a lancé un appel d'offres en lot unique pour les saisons 2027-2028 à 2031-2032, avec dépôt des offres du 3 novembre au 7 décembre 2026. Un diffuseur peut soit diffuser directement la Ligue 1, soit distribuer Ligue 1+ en exclusivité. Pour la saison 2026-2027, rien ne change : la Ligue 1 reste sur Ligue 1+.</p>
+            </details>
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
                 <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
                     Sur quelle chaîne voir la Ligue 1 en 2026-2027 ?

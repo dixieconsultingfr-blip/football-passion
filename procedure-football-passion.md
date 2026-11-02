@@ -711,4 +711,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Modèle de vignette Ligue 3** : titre « CLUB | LIGUE 3 » (et non « EN LIGUE 3 », ambigu), sous-titre « Portrait du club · Saison 2026-2027 », logo du club, quatre cartes d'identité, sans score. Appliqué à Aubagne, Bastia et Caen le 1er novembre 2026 (fichiers `*-ligue-3-portrait-modele-logo.jpg`). Règle consignée dans `CLAUDE.md`.
 
-*Dernière mise à jour : 1er novembre 2026*
+### 3.78 Appel d'offres LFP 2027-2032 : article et mise à jour des pages droits TV — 2 novembre 2026
+
+- **Info** : la LFP lance un appel d'offres en lot unique pour la Ligue 1 (saisons 2027-2028 à 2031-2032), dépôt des offres du 3 novembre au 7 décembre 2026 ; deux options (diffusion directe ou distribution exclusive de Ligue 1+) ; loi du 3 août 2026. Recoupé avec Eurosport et Télésatellite ; le montant d'autofinancement (~60 M€/an) et l'intérêt de Canal+ restent des informations non confirmées officiellement (formulées avec prudence).
+- **Article id 83** `droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique` (catégorie L1, étiquettes Droits TV / Ligue 1), vignette standard.
+- **Pages** : `droits-tv-ligue-1.php` (nouvelle section « Et après 2027 ? », FAQ HTML + JSON-LD, `$date_maj_page`) et `droits-tv-football.php` (encart + `$date_maj_page`), tous deux au 2 novembre 2026.
+- **À suivre** : après le 7 décembre 2026, mettre à jour avec les candidats et le résultat de l'appel d'offres (voir `todolist.md`).
+
+*Dernière mise à jour : 2 novembre 2026*

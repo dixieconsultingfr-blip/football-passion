@@ -3,7 +3,7 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
-$date_maj_page = '2026-09-22'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$date_maj_page = '2026-11-02'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -187,6 +187,21 @@ include __DIR__ . '/templates/header.php';
             <p class="text-gray-600 text-xs mt-3">
                 ⚠️ Tarifs communiqués par OneFootball, susceptibles d'évoluer à tout moment : vérifiez le prix et les conditions à jour directement dans l'application ou sur <a href="https://onefootballsupport.zendesk.com/hc/fr/articles/39144484562449" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">le centre d'aide OneFootball</a> avant tout achat.
             </p>
+        </div>
+    </section>
+
+    <!-- ══════════ ENCART — APPEL D'OFFRES LFP 2027-2032 ══════════ -->
+    <section class="mb-10">
+        <div class="bg-gray-800 border border-yellow-800/50 rounded-xl p-5">
+            <p class="text-yellow-400 text-xs font-semibold uppercase tracking-widest mb-2">À suivre · Ligue 1 après 2027</p>
+            <h2 class="text-xl font-bold text-white mb-2">Nouvel appel d'offres pour les droits TV de la Ligue 1</h2>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                La LFP a lancé un appel d'offres en lot unique pour les saisons 2027-2028 à 2031-2032, avec dépôt des offres du 3 novembre au 7 décembre 2026. Un diffuseur pourra soit diffuser la Ligue 1 directement, soit distribuer Ligue 1+ en exclusivité. Pour la saison 2026-2027, rien ne change : tous les matchs restent sur Ligue 1+.
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs font-semibold">
+                <a href="/blog/droits-tv-ligue-1-appel-offres-lfp-2027-2032-lot-unique" class="text-green-400 hover:text-green-300">Lire notre article →</a>
+                <a href="/droits-tv-ligue-1.php" class="text-green-400 hover:text-green-300">Guide Droits TV Ligue 1 →</a>
+            </div>
         </div>
     </section>
 

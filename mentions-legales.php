@@ -48,7 +48,7 @@ include __DIR__ . '/templates/header.php';
                 <li><span class="text-gray-500">Société :</span> Hostinger International Ltd</li>
                 <li><span class="text-gray-500">Adresse :</span> 61 Lordou Vironos Street, 6023 Larnaca, Chypre</li>
                 <li><span class="text-gray-500">Site :</span>
-                    <a href="https://www.hostinger.fr" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">www.hostinger.fr</a>
+                    <a href="https://www.hostinger.fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 hover:text-green-300">www.hostinger.fr</a>
                 </li>
             </ul>
         </section>

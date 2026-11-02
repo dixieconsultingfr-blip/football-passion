@@ -720,4 +720,9 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Complément (2 novembre 2026)** : question FAQ « Qui diffusera la Ligue 1 après 2027 ? » ajoutée aussi dans la FAQ de `droits-tv-football.php` (HTML + JSON-LD), en plus de `droits-tv-ligue-1.php`.
 
+### 3.79 Audit des liens externes : nofollow — 2 novembre 2026
+
+- **Audit** : 83 articles et toutes les pages PHP contrôlés. Seuls 4 liens externes n'avaient pas `nofollow` : 3 vers dixie.consulting (footer, à-propos, mentions légales) et 1 vers hostinger.fr (mentions légales).
+- **Décision** : hostinger.fr passé en `nofollow noopener noreferrer` ; les liens vers **dixie.consulting** (site de l'éditeur) restent en lien suivi, **exception documentée dans `CLAUDE.md`** (section « Liens externes »).
+
 *Dernière mise à jour : 2 novembre 2026*

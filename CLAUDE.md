@@ -325,6 +325,8 @@ Ne jamais faire `ConvertTo-Json $data -Depth 10` directement. **Toujours vérifi
 
 **Seule exception : liens internes** (entre pages de football-passion.fr) → pas de `nofollow`, pas de `target="_blank"`.
 
+- ✅ **Exception documentée (décision du 2 novembre 2026)** : les liens vers **dixie.consulting** (site professionnel de l'éditeur : `templates/footer.php`, `a-propos.php`, `mentions-legales.php`) restent **sans `nofollow`** (avec `noopener noreferrer`) : c'est un lien volontaire entre sites de l'éditeur, utile en SEO. Tous les autres liens externes restent en `nofollow noopener noreferrer`, sans exception.
+
 ---
 
 ## 📸 Crédits & Licences

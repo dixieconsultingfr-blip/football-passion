@@ -4353,7 +4353,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 0
+        "score_ext": 1
     },
     {
         "id": 575380,
@@ -4364,7 +4364,7 @@
         "heure": "21:00",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 0,
+        "score_dom": 1,
         "score_ext": 0
     },
     {
@@ -4389,7 +4389,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 0
+        "score_ext": 2
     },
     {
         "id": 575383,
@@ -4401,7 +4401,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 0
+        "score_ext": 1
     },
     {
         "id": 575384,

@@ -4461,7 +4461,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 0
+        "score_ext": 1
     },
     {
         "id": 575389,
@@ -4473,7 +4473,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 1
+        "score_ext": 2
     },
     {
         "id": 575390,
@@ -4521,7 +4521,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 2
+        "score_ext": 3
     },
     {
         "id": 575394,

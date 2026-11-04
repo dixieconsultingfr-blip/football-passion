@@ -989,7 +989,7 @@
         "domicile": "AJ Auxerre",
         "exterieur": "Paris FC",
         "date": "2026-11-07",
-        "heure": "19:00",
+        "heure": "17:15",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
@@ -1001,7 +1001,7 @@
         "domicile": "Paris Saint-Germain FC",
         "exterieur": "ES Troyes AC",
         "date": "2026-11-07",
-        "heure": "21:05",
+        "heure": "20:45",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
@@ -4461,7 +4461,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 1,
-        "score_ext": 1
+        "score_ext": 2
     },
     {
         "id": 575389,
@@ -4484,7 +4484,7 @@
         "heure": "21:00",
         "stade": "",
         "status": "LIVE",
-        "score_dom": 0,
+        "score_dom": 1,
         "score_ext": 1
     },
     {
@@ -4521,7 +4521,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 4
+        "score_ext": 6
     },
     {
         "id": 575394,

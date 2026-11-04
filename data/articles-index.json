@@ -1,5 +1,19 @@
 [
     {
+        "id":  86,
+        "slug":  "ligue-des-champions-journee-4-psg-villarreal-6-0-lille-lens-2026-2027",
+        "titre":  "Ligue des champions, J4 : le PSG cartonne à Villarreal (6-0), Lille tient en Norvège, Lens battu 1-9 par Côme",
+        "categorie":  "CL",
+        "etiquettes":  [
+                           "Champions League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-11-04",
+        "extrait":  "Quatrième journée de Ligue des champions contrastée pour les clubs français : le PSG s\u0027impose 6-0 à Villarreal et compte 12 points sur 12, Lille tient en échec Bodø/Glimt (0-0), et Lens s\u0027incline lourdement 1-9 contre Côme. Résultats et classement.",
+        "vignette":  "/images/ligue-des-champions-journee-4-psg-villarreal-6-0-lille-lens-2026-2027.jpg",
+        "image_alt":  "Ligue des champions journee 4 : Villarreal 0-6 PSG, Bodo/Glimt 0-0 Lille, Lens 1-9 Come, AEK 2-3 Real Madrid"
+    },
+    {
         "id":  85,
         "slug":  "zidane-deuxieme-liste-bleus-forfaits-attaque-thauvin-2026",
         "titre":  "Bleus : Dembélé et Lepaul forfaits, Olise incertain, la deuxième liste de Zidane s\u0027annonce chamboulée",

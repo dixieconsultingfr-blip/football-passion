@@ -4507,8 +4507,8 @@
         "date": "2026-11-04",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
-        "score_dom": 3,
+        "status": "FINISHED",
+        "score_dom": 4,
         "score_ext": 1
     },
     {
@@ -4521,7 +4521,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 1,
-        "score_ext": 8
+        "score_ext": 9
     },
     {
         "id": 575394,
@@ -4531,8 +4531,8 @@
         "date": "2026-11-04",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
-        "score_dom": 3,
+        "status": "FINISHED",
+        "score_dom": 4,
         "score_ext": 1
     },
     {

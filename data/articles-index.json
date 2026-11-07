@@ -1,5 +1,19 @@
 [
     {
+        "id":  87,
+        "slug":  "ligue-europa-conference-clubs-francais-om-lyon-rennes-monaco-2026-2027",
+        "titre":  "Les clubs français en Europe : l\u0027OM gagne à Leverkusen, Lyon et Rennes tiennent, Monaco continue son sans-faute",
+        "categorie":  "Europa",
+        "etiquettes":  [
+                           "Europa League",
+                           "Clubs français"
+                       ],
+        "date":  "2026-11-07",
+        "extrait":  "Bonne semaine en Europe pour le football français : l\u0027OM s\u0027impose 1-0 à Leverkusen, Lyon ramène un point de la Real Sociedad (1-1), Rennes tient l\u0027Olympiakos (0-0) et Monaco reste parfait en Ligue Conférence. Le bilan des quatre clubs.",
+        "vignette":  "/images/ligue-europa-conference-clubs-francais-om-lyon-rennes-monaco-2026-2027.jpg",
+        "image_alt":  "Clubs francais en Europe : Leverkusen 0-1 OM, Real Sociedad 1-1 OL, Rennes 0-0 Olympiakos, Monaco 2-0 Nordsjaelland"
+    },
+    {
         "id":  86,
         "slug":  "ligue-des-champions-journee-4-psg-villarreal-6-0-lille-lens-2026-2027",
         "titre":  "Ligue des champions, J4 : le PSG cartonne à Villarreal (6-0), Lille tient en Norvège, Lens battu 1-9 par Côme",

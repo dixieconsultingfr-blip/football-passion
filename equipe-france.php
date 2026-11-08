@@ -106,7 +106,7 @@ include __DIR__ . '/templates/header.php';
         <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
             <p>
                 Après 14 ans à la tête des Bleus (juillet 2012 – juillet 2026), Didier Deschamps a cédé sa place à
-                <strong class="text-white">Zinédine Zidane</strong>, nommé sélectionneur à l'été 2026 avec un
+                <strong class="text-white">Zinédine Zidane</strong>, nommé sélectionneur le 28 juillet 2026 avec un
                 contrat courant jusqu'en 2030. Le nouveau sélectionneur hérite d'un groupe solide, arrivé en
                 demi-finale de la Coupe du Monde 2026 avant de terminer à la 4e place.
             </p>
@@ -123,6 +123,35 @@ include __DIR__ . '/templates/header.php';
     </section>
 
 </div>
+
+<!-- Les Bleus en Ligue des nations -->
+<section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Les Bleus de Zidane en Ligue des nations 2026-2027</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+        Après quatre matchs du groupe A1 (France, Italie, Belgique, Turquie), la France est en tête avec <strong class="text-white">10 points</strong> :
+        trois victoires et un nul, sept buts marqués et deux encaissés. Il reste deux rendez-vous, tous deux diffusés sur TF1 et TF1+ à 20h45,
+        avant les quarts de finale prévus en mars 2027 et le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div class="bg-gray-800 border border-green-800/60 rounded-xl p-5">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Jeudi 12 novembre, 20h45</p>
+            <p class="text-white font-bold text-lg">Italie - France</p>
+            <p class="text-gray-400 text-sm mt-1">Avant-dernière journée du groupe A1, en Italie, sur TF1 et TF1+.</p>
+        </div>
+        <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, 20h45</p>
+            <p class="text-white font-bold text-lg">France - Turquie</p>
+            <p class="text-gray-400 text-sm mt-1">Stade Atlantique, à Bordeaux, sur TF1 et TF1+. Heure, chaîne et composition →</p>
+        </a>
+    </div>
+    <p class="text-gray-400 text-sm leading-relaxed">
+        Les matchs déjà joués : <a href="/blog/zidane-victoire-turquie-france-debuts-bleus" class="text-green-400 underline hover:text-green-300">Turquie 0-1 France</a>,
+        <a href="/blog/belgique-france-olise-coup-de-genie-zidane-deux-victoires" class="text-green-400 underline hover:text-green-300">Belgique 0-1 France</a>,
+        <a href="/blog/france-italie-olise-bastoni-premier-nul-zidane" class="text-green-400 underline hover:text-green-300">France 1-1 Italie</a> et
+        <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 underline hover:text-green-300">France 4-1 Belgique</a>.
+        Le calendrier, le classement et la diffusion sont sur la page du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1 de la Ligue des nations</a>.
+    </p>
+</section>
 
 <!-- Les autres équipes de France -->
 <section class="mb-12">

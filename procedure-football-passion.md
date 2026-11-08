@@ -756,4 +756,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Correction** : `date_maj` recopié dans `data/articles-index.json` pour les 42 articles concernés ; cartes de listes (blog + pages de compétition/hub : 16 fichiers) : « Maj JJ/MM/AAAA » quand `date_maj` existe ; page article (`blog/index.php`) : « Mis à jour le … » à la place de la date de création. `date` reste utilisée pour le tri et `datePublished`.
 - **Règles** dans `CLAUDE.md` : règle d'affichage des dates, `date_maj` à mettre dans l'article **et** l'index, et procédure pas à pas pour récupérer logos et images sur Wikimedia Commons (recherche, métadonnées, contrôle, téléchargement, transparence, crédit auteur et licence).
 
+### 3.84 Article France - Turquie (heure, chaîne, composition) — 8 novembre 2026
+
+- **Origine** : relevé GSC du 8 novembre (requêtes « chaîne/quelle chaîne france turquie », « composition france turquie » en positions 1 à 23, 0 clic) ; point 4 du plan SEO.
+- **Article id 90** `france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026` (catégorie France, étiquettes `["Équipe de France", "Ligue des nations"]`) : heure (dimanche 15 novembre, 20h45, Bordeaux), chaîne (TF1 et TF1+, en clair, d'après `droits-tv-football.php`), tableau d'infos pratiques avec `<caption>`, enjeux du groupe A1 (France 10 points, Italie 7, Belgique 6, Turquie 0, calculés depuis `ligue-des-nations-groupe-a1.php` ; France 1-0 à Kocaeli, but de Mbappé 54e), avis éditorial, liens internes. **Composition volontairement non inventée** : section à compléter le jour du match (règle anti-hallucination). Nom du stade non indiqué (non présent dans les données du site).
+- Vignette au modèle standard (4 cartes), nouveau fichier. À mettre à jour après le 12 novembre et le 15 novembre (voir `todolist.md`).
+
 *Dernière mise à jour : 8 novembre 2026*

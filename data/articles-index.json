@@ -9,6 +9,7 @@
                            "Ligue 3"
                        ],
         "date":  "2026-11-08",
+        "date_maj":  "2026-11-08",
         "extrait":  "Fondé en 1899, surnommé les Diables Rouges, le FC Rouen a connu la Ligue 1, les dépôts de bilan et la Division d\u0027honneur avant de retrouver les sommets. Portrait d\u0027un club historique, 2e de la Ligue 3, et de sa ville.",
         "vignette":  "/images/rouen-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "FC Rouen en Ligue 3, saison 2026-2027 : Diables Rouges, club fonde en 1899, stade Robert-Diochon, cathedrale et Gros-Horloge de Rouen"
@@ -23,6 +24,7 @@
                            "Ligue 3"
                        ],
         "date":  "2026-11-08",
+        "date_maj":  "2026-11-08",
         "extrait":  "Fondé en 1901, monté pour la première fois en Ligue 1 en 2017, l\u0027Amiens SC joue la Ligue 3 en 2026-2027 avec la meilleure défense du championnat. Portrait du club, de son histoire et de sa ville, entre cathédrale et hortillonnages.",
         "vignette":  "/images/amiens-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "Amiens SC en Ligue 3, saison 2026-2027 : club fonde en 1901, stade de la Licorne, cathedrale et hortillonnages d\u0027Amiens"
@@ -51,6 +53,7 @@
                            "Clubs français"
                        ],
         "date":  "2026-11-04",
+        "date_maj":  "2026-11-05",
         "extrait":  "Quatrième journée de Ligue des champions contrastée pour les clubs français : le PSG s\u0027impose 6-0 à Villarreal et compte 12 points sur 12, Lille tient en échec Bodø/Glimt (0-0), et Lens s\u0027incline lourdement 1-9 contre Côme. Résultats et classement.",
         "vignette":  "/images/ligue-des-champions-journee-4-psg-villarreal-6-0-lille-lens-2026-2027.jpg",
         "image_alt":  "Ligue des champions journee 4 : Villarreal 0-6 PSG, Bodo/Glimt 0-0 Lille, Lens 1-9 Come, AEK 2-3 Real Madrid"
@@ -79,6 +82,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-11-02",
+        "date_maj":  "2026-11-02",
         "extrait":  "Paulo Fonseca a annoncé à ses joueurs, lundi 2 novembre 2026, qu\u0027il quitte l\u0027OL pour rejoindre le Sporting Portugal, son club de cœur. Jorge Maciel assurera l\u0027intérim face à la Real Sociedad, puis à Brest. Raisons, indemnité, succession : le point.",
         "vignette":  "/images/fonseca-quitte-ol-sporting-portugal-coup-de-tonnerre-2026.jpg",
         "image_alt":  "Paulo Fonseca quitte l\u0027Olympique Lyonnais pour le Sporting Portugal, Jorge Maciel assure l\u0027interim"
@@ -93,6 +97,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-11-02",
+        "date_maj":  "2026-11-02",
         "extrait":  "La LFP lance un nouvel appel d\u0027offres pour les droits TV de la Ligue 1 sur 2027-2032, deux ans plus tôt que prévu : un lot unique, deux options (diffusion directe ou distribution de Ligue 1+), dépôt des offres du 3 novembre au 7 décembre 2026.",
         "vignette":  "/images/droits-tv-ligue-1-qui-diffusera-2027-vignette.jpg",
         "image_alt":  "Qui diffusera la Ligue 1 en 2027 ? La LFP lance un appel d\u0027offres pour 2027-2032, Canal+ ou une plateforme internationale"
@@ -107,6 +112,7 @@
                            "Ligue 3"
                        ],
         "date":  "2026-11-01",
+        "date_maj":  "2026-11-08",
         "extrait":  "Champion de Division d\u0027Honneur en 2017, de National 2 en 2021, demi-finaliste de la Coupe de France 2022 et 3e de la Ligue 3 après onze journées : le FC Versailles est l\u0027un des clubs les plus ambitieux du championnat. Portrait du club et de la ville du château de Louis XIV.",
         "vignette":  "/images/versailles-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "FC Versailles en Ligue 3, saison 2026-2027 : club fonde en 1989, ville et chateau de Louis XIV"
@@ -121,6 +127,7 @@
                            "Ligue 3"
                        ],
         "date":  "2026-11-01",
+        "date_maj":  "2026-11-08",
         "extrait":  "Fondé en 1913, passé par la Ligue 1, qualifié en Coupe de l\u0027UEFA en 1992 et connu pour son centre de formation, le Stade Malherbe Caen est l\u0027un des clubs les plus chargés d\u0027histoire de la Ligue 3. Portrait du club, de sa ville et de ce qu\u0027on peut y visiter.",
         "vignette":  "/images/caen-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "SM Caen en Ligue 3, saison 2026-2027 : club historique fonde en 1913, centre de formation, stade Michel-d\u0027Ornano, ville de Caen"
@@ -149,6 +156,7 @@
                            "Ligue 3"
                        ],
         "date":  "2026-11-01",
+        "date_maj":  "2026-11-08",
         "extrait":  "Finaliste de la Coupe UEFA en 1978, vainqueur de la Coupe de France en 1981, tombé jusqu\u0027en National 3 puis remonté : le SC Bastia est l\u0027un des clubs les plus chargés d\u0027histoire de la Ligue 3. Portrait du club, de sa ville et de ce qu\u0027on peut y visiter.",
         "vignette":  "/images/bastia-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "SC Bastia en Ligue 3 : stade Armand-Cesari, Coupe de France 1981, finale de Coupe UEFA 1978, ville de Bastia"
@@ -163,6 +171,7 @@
                            "Qualifications"
                        ],
         "date":  "2026-10-31",
+        "date_maj":  "2026-11-01",
         "extrait":  "Douze groupes, vingt qualifiés directs, des barrages en mars 2028 et des places réservées aux pays hôtes : le mode d\u0027emploi des qualifications de l\u0027Euro 2028, à quelques semaines du tirage au sort de Belfast.",
         "vignette":  "/images/qualifications-euro-2028-mode-emploi-barrages-pays-hotes.jpg",
         "image_alt":  "Qualifications Euro 2028 : 12 groupes, 20 qualifies directs, barrages en mars 2028, tirage a Belfast le 6 decembre 2026"
@@ -233,6 +242,7 @@
                            "Équipe de France"
                        ],
         "date":  "2026-10-25",
+        "date_maj":  "2026-10-26",
         "extrait":  "L\u0027Équipe de France aborde un nouveau cycle avec un objectif clair : se qualifier pour l\u0027Euro 2028, organisé au Royaume-Uni et en République d\u0027Irlande du 9 juin au 9 juillet 2028. Dates, stades, format et calendrier des qualifications.",
         "vignette":  "/images/euro-2028-route-des-bleus-dates-format-qualifications.jpg",
         "image_alt":  "Euro 2028 : dates, format, tirage des qualifications a Belfast le 6 decembre 2026 et route des Bleus"
@@ -261,6 +271,7 @@
                            "Clubs français"
                        ],
         "date":  "2026-10-21",
+        "date_maj":  "2026-10-22",
         "extrait":  "Pas de réussite pour les clubs français mercredi : Lille a perdu 2-4 contre Galatasaray et Lens 0-3 à Bruges, au lendemain du succès du PSG. Le Real Madrid de Mbappé s\u0027est imposé 4-1 contre Leipzig. Résultats et situation des clubs français.",
         "vignette":  "/images/ligue-des-champions-journee-3-lille-lens-defaites-2026-2027.jpg",
         "image_alt":  "Ligue des champions journee 3 : Lille battu 2-4 par Galatasaray, Lens battu 3-0 a Bruges, Real Madrid 4-1 Leipzig"
@@ -303,6 +314,7 @@
                            "PSG"
                        ],
         "date":  "2026-10-20",
+        "date_maj":  "2026-10-20",
         "extrait":  "Le choc PSG - FC Barcelone de la 3e journée de Ligue des champions est maintenu ce mardi 20 octobre à 21h au Parc des Princes, malgré les violences survenues à Paris ce week-end. À quelle heure, sur quelle chaîne, et quels enjeux.",
         "vignette":  "/images/psg-barcelone-ligue-des-champions-journee-3-2026-2027.jpg",
         "image_alt":  "PSG - FC Barcelone, Ligue des champions journee 3, mardi 20 octobre 2026 a 21h au Parc des Princes sur Canal+ Foot"
@@ -331,6 +343,7 @@
                            "OM"
                        ],
         "date":  "2026-10-18",
+        "date_maj":  "2026-10-19",
         "extrait":  "Le PSG gagne à Strasbourg, l\u0027OM s\u0027impose 5-2 à Angers, Paris FC bat Rennes 4-3 et Lorient surprend Monaco : quatre clubs se retrouvent à 14 points en tête. Résultats, classement et programme de la journée 8.",
         "vignette":  "/images/ligue-1-journee-7-resultats-2026-2027.jpg",
         "image_alt":  "Ligue 1 journee 7 : resultats Angers 2-5 Marseille, Paris FC 4-3 Rennes, Strasbourg 1-3 PSG, Lorient 1-0 Monaco"
@@ -345,6 +358,7 @@
                            "Aubagne"
                        ],
         "date":  "2026-10-18",
+        "date_maj":  "2026-11-08",
         "extrait":  "Le Sporting Club Aubagne Air-Bel est l\u0027un des clubs les plus modestes de la première édition de la Ligue 3. Histoire, fusion avec Air-Bel, ville de 48 000 habitants et début de saison : portrait d\u0027un club ambitieux.",
         "vignette":  "/images/aubagne-ligue-3-portrait-modele-logo.jpg",
         "image_alt":  "Aubagne en Ligue 3, saison 2026-2027 : Sporting Club Aubagne Air-Bel, ville natale de Marcel Pagnol, santons et ceramique"
@@ -359,6 +373,7 @@
                            "Ligue 2"
                        ],
         "date":  "2026-10-18",
+        "date_maj":  "2026-10-18",
         "extrait":  "Saint-Étienne s\u0027impose 1-0 au Red Star, son plus proche poursuivant, et compte désormais 5 points d\u0027avance. Reims bat Dijon 4-2 et reste invaincu, Laval et Clermont se quittent sur un 3-3. Résultats et classement de la journée 9 de Ligue 2.",
         "vignette":  "/images/ligue-2-journee-9-resultats-2026-2027.jpg",
         "image_alt":  "Ligue 2 journee 9 : Saint-Etienne gagne au Red Star, Reims bat Dijon 4-2, Laval et Clermont 3-3"
@@ -373,6 +388,7 @@
                            "Clubs français"
                        ],
         "date":  "2026-10-17",
+        "date_maj":  "2026-10-18",
         "extrait":  "Soirée contrastée pour les clubs français en Ligue Europa : Lyon bat Crystal Palace 3-2 et Rennes s\u0027impose 2-1 contre l\u0027OFI Crète, mais l\u0027OM s\u0027incline 0-1 face à l\u0027Olympiakos au Vélodrome. Tous les résultats de la journée 2.",
         "vignette":  "/images/ligue-europa-journee-2-resultats-2026-2027.jpg",
         "image_alt":  "Ligue Europa journee 2 : Lyon et Rennes vainqueurs, Marseille battu par l\u0027Olympiakos"
@@ -387,6 +403,7 @@
                            "Clubs français"
                        ],
         "date":  "2026-10-15",
+        "date_maj":  "2026-10-15",
         "extrait":  "Soirée contrastée pour les clubs français en Ligue des champions : le PSG s\u0027impose 4-2 à Manchester City, mais Lens (0-2 contre le Sporting) et Lille (0-3 à Arsenal) s\u0027inclinent. Et le Real Madrid de Mbappé renverse la Roma (4-3).",
         "vignette":  "/images/ligue-des-champions-journee-2-2026-2027-cdl-j2.jpg",
         "image_alt":  "Ligue des champions journee 2 : PSG vainqueur de Manchester City, Lens et Lille battus, Real Madrid vainqueur a Rome"
@@ -401,6 +418,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-10-12",
+        "date_maj":  "2026-10-13",
         "extrait":  "Après cinq défaites d\u0027affilée toutes compétitions confondues, l\u0027OM s\u0027impose 0-2 à Troyes grâce à Harit (50e) et à un penalty d\u0027Abdelli (90e+8). Une victoire laborieuse mais précieuse, qui sort Marseille de la zone de relégation.",
         "vignette":  "/images/troyes-om-0-2-ligue-1-journee-6-2026-2027.jpg",
         "image_alt":  "Troyes - Marseille en Ligue 1 : l\u0027OM s\u0027impose 0-2 grace a Harit et Abdelli"
@@ -415,6 +433,7 @@
                            "AS Monaco"
                        ],
         "date":  "2026-10-11",
+        "date_maj":  "2026-10-11",
         "extrait":  "Lens s\u0027impose 2-1 face à Lyon, Brest écrase Angers 5-1, Lille gagne 1-0 contre Le Havre et le PSG bat Le Mans 3-1. Monaco, accroché 2-2 par Toulouse, reste leader. Résultats et classement de la journée 6 de Ligue 1.",
         "vignette":  "/images/ligue-1-journee-6-resultats-2026-2027.jpg",
         "image_alt":  "Ligue 1 journee 6 : resultats et classement apres Lens-Lyon, Lille-Le Havre, Brest-Angers et Monaco-Toulouse"
@@ -429,6 +448,7 @@
                            "Ligue 2"
                        ],
         "date":  "2026-10-11",
+        "date_maj":  "2026-10-11",
         "extrait":  "Après deux matchs sans victoire, Saint-Étienne se relance en battant Rodez 2-0. Le Red Star s\u0027impose 3-2 à Clermont, Pau bat Laval 3-2 : voici tous les résultats de la journée 8 de Ligue 2.",
         "vignette":  "/images/ligue-2-journee-8-asse-rodez-red-star-clermont-2026-2027.jpg",
         "image_alt":  "Ligue 2 journee 8 : Saint-Etienne bat Rodez 2-0, le Red Star s\u0027impose 3-2 a Clermont"
@@ -443,6 +463,7 @@
                            "Euro 2028"
                        ],
         "date":  "2026-10-07",
+        "date_maj":  "2026-10-07",
         "extrait":  "Remontada des Bleus face à la Belgique, quatre victoires en quatre matchs pour le Portugal et l\u0027Espagne, nul sans but entre la Grèce et l\u0027Allemagne : voici les quatre matchs phares de la journée 4 de la Ligue des Nations.",
         "vignette":  "/images/ligue-des-nations-journee-4-quatre-matchs-phares.jpg",
         "image_alt":  "Ligue des Nations 2026-2027, journee 4 : France 4-1 Belgique, Portugal 2-1 Norvege, Croatie 1-2 Espagne, Grece 0-0 Allemagne"
@@ -457,6 +478,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-10-05",
+        "date_maj":  "2026-10-05",
         "extrait":  "Menés 1-0 jusqu\u0027à la 78e minute, les Bleus de Zidane ont renversé la Belgique (4-1) en onze minutes grâce à Doué, Cherki et un doublé de Michael Olise. Récit d\u0027une fin de match renversante.",
         "vignette":  "/images/france-belgique-remontada-bleus-olise-doue-cherki.jpg",
         "image_alt":  "France - Belgique en Ligue des nations : la remontada des Bleus avec Olise, Doue et Cherki"
@@ -471,6 +493,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-10-02",
+        "date_maj":  "2026-10-02",
         "extrait":  "Après deux victoires, les Bleus de Zidane concèdent leur premier match nul face à l\u0027Italie (1-1). Olise a ouvert le score, Bastoni a égalisé, Upamecano a été expulsé. La France reste en tête du groupe A1.",
         "vignette":  "/images/france-italie-olise-bastoni-premier-nul-zidane.jpg",
         "image_alt":  "France - Italie en Ligue des nations : le but d\u0027Olise ne suffit pas, premier nul de Zidane"
@@ -485,6 +508,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-30",
+        "date_maj":  "2026-09-30",
         "extrait":  "Deux matchs, deux victoires : Zidane réussit ses débuts comme aucun sélectionneur des Bleus depuis Aimé Jacquet en 1994. Mais comparer son début de mandat au bilan de 14 ans de Deschamps a ses limites.",
         "vignette":  "/images/zidane-deja-plus-fort-que-deschamps-debuts-bleus.jpg",
         "image_alt":  "Zinedine Zidane et Didier Deschamps, comparaison des debuts a la tete de l\u0027equipe de France"
@@ -499,6 +523,7 @@
                            "Euro 2028"
                        ],
         "date":  "2026-09-29",
+        "date_maj":  "2026-09-29",
         "extrait":  "Espagne, Suisse, Albanie, Slovaquie et Islande : cinq groupes de la Ligue des Nations 2026-2027 ont livré un nouveau leader lors de la journée 2. Voici tous les résultats.",
         "vignette":  "/images/ligue-des-nations-2026-2027-resultats-journee-2.jpg",
         "image_alt":  "Resultats de la journee 2 de la Ligue des nations 2026-2027"
@@ -513,6 +538,7 @@
                            "Éliminatoires"
                        ],
         "date":  "2026-09-29",
+        "date_maj":  "2026-09-29",
         "extrait":  "Deuxième journée mouvementée dans les éliminatoires de la CAN 2027 : l\u0027Algérie revient de 2-0 pour arracher le nul au Burundi, l\u0027Égypte s\u0027impose 5-0, et Patrick Vieira gagne pour ses débuts sur le banc du Sénégal.",
         "vignette":  "/images/eliminatoires-can-2027-algerie-egypte-senegal-vieira.jpg",
         "image_alt":  "Eliminatoires CAN 2027 : Algerie, Egypte et Senegal apres la deuxieme journee"
@@ -527,6 +553,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-28",
+        "date_maj":  "2026-09-28",
         "extrait":  "Michael Olise a inscrit l\u0027unique but de la rencontre à la 88e minute : la France s\u0027impose 0-1 en Belgique et offre à Zinédine Zidane une deuxième victoire de rang, à la tête du groupe A1.",
         "vignette":  "/images/belgique-france-olise-coup-de-genie-zidane-deux-victoires.jpg",
         "image_alt":  "Michael Olise marque le but de la victoire de la France en Belgique en Ligue des nations"
@@ -541,6 +568,7 @@
                            "Éliminatoires"
                        ],
         "date":  "2026-09-28",
+        "date_maj":  "2026-09-28",
         "extrait":  "La deuxième journée des éliminatoires de la CAN 2027 se joue du 28 septembre au 1er octobre. Programme complet, horaires, stades et chaînes beIN Sports, avec Zimbabwe - RD Congo et Burundi - Algérie.",
         "vignette":  "/images/eliminatoires-can-2027-journee-2-programme-chaines.jpg",
         "image_alt":  "Eliminatoires de la CAN 2027 : programme, horaires et chaines de la deuxieme journee"
@@ -555,6 +583,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-28",
+        "date_maj":  "2026-09-28",
         "extrait":  "Trois jours après la victoire en Turquie, les Bleus de Zidane affrontent la Belgique ce lundi 28 septembre à 20h45, en direct sur TF1. Heure, lieu, chaîne et enjeux du match.",
         "vignette":  "/images/belgique-france-vrai-test-zidane-ligue-des-nations.jpg",
         "image_alt":  "Belgique - France en Ligue des nations : le vrai test pour Zinedine Zidane"
@@ -569,6 +598,7 @@
                            "Euro 2028"
                        ],
         "date":  "2026-09-27",
+        "date_maj":  "2026-09-27",
         "extrait":  "Victoire de la France en Turquie, festival de la Finlande face à Saint-Marin, remontée spectaculaire de l\u0027Espagne contre l\u0027Angleterre : voici tous les résultats de la journée 1 de la Ligue des Nations 2026-2027.",
         "vignette":  "/images/ligue-des-nations-2026-2027-resultats-journee-1.jpg",
         "image_alt":  "Resultats de la journee 1 de la Ligue des nations 2026-2027"
@@ -583,6 +613,7 @@
                            "Éliminatoires"
                        ],
         "date":  "2026-09-25",
+        "date_maj":  "2026-09-25",
         "extrait":  "La première journée des éliminatoires de la CAN 2027 est terminée : Maroc, RD Congo, Algérie, Côte d\u0027Ivoire, Cameroun ou encore Mali démarrent par une victoire. Voici les classements des 12 groupes.",
         "vignette":  "/images/eliminatoires-can-2027-classements-journee-1.jpg",
         "image_alt":  "Eliminatoires de la CAN 2027 : classements des 12 groupes apres la premiere journee"
@@ -597,6 +628,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-25",
+        "date_maj":  "2026-09-25",
         "extrait":  "Vainqueurs 1-0 à Kocaeli grâce à Mbappé, les Bleus offrent à Zinédine Zidane une victoire pour son premier match. Mais le capitaine est sorti blessé au genou. Résumé et enseignements.",
         "vignette":  "/images/zidane-victoire-turquie-france-ligue-des-nations-2026.jpg",
         "image_alt":  "Zinedine Zidane et les Bleus fetent la victoire 1-0 en Turquie en Ligue des nations"
@@ -611,6 +643,7 @@
                            "Ligue des nations"
                        ],
         "date":  "2026-09-25",
+        "date_maj":  "2026-09-25",
         "extrait":  "Coup d\u0027envoi à 20h45 ce soir à Kocaeli, en direct sur TF1 et TF1+ : tout savoir sur Turquie - France, le premier match de Zinédine Zidane, avec la composition probable des Bleus.",
         "vignette":  "/images/turquie-france-zidane-premier-match-ligue-des-nations.jpg",
         "image_alt":  "Turquie - France en Ligue des nations : premier match de Zinedine Zidane sur le banc des Bleus"
@@ -625,6 +658,7 @@
                            "Zinédine Zidane"
                        ],
         "date":  "2026-09-23",
+        "date_maj":  "2026-09-23",
         "extrait":  "14 ans à la tête des Bleus, un Mondial, deux finales, une Ligue des nations : c\u0027est le bilan que laisse Didier Deschamps en passant le flambeau à Zinédine Zidane, qui prend son premier banc vendredi face à la Turquie.",
         "vignette":  "/images/deschamps-zidane-passage-de-temoin-equipe-de-france.jpg",
         "image_alt":  "Passage de temoin entre Didier Deschamps et Zinedine Zidane a la tete de l\u0027equipe de France"
@@ -639,6 +673,7 @@
                            "Ligue 2"
                        ],
         "date":  "2026-09-21",
+        "date_maj":  "2026-09-21",
         "extrait":  "Après un début de saison parfait avec cinq victoires en cinq journées, Saint-Étienne connaît son premier ralentissement : défaite à Dunkerque (2-1) puis nul à Metz (2-2). Les Verts restent leaders, mais l\u0027écart se réduit.",
         "vignette":  "/images/saint-etienne-marque-le-pas-ligue-2-2026-2027.jpg",
         "image_alt":  "Saint-Etienne marque le pas en Ligue 2 : defaite 2-1 a Dunkerque puis nul 2-2 a Metz"
@@ -653,6 +688,7 @@
                            "Euro 2028"
                        ],
         "date":  "2026-09-18",
+        "date_maj":  "2026-09-18",
         "extrait":  "Zinédine Zidane a dévoilé sa première liste : 23 joueurs, Mbappé capitaine, cinq nouveaux dont Estéban Lepaul et Lucas Da Cunha, mais sans Tchouaméni ni Kanté. Ce qu\u0027il faut retenir, et le calendrier des Bleus jusqu\u0027au tirage de l\u0027Euro 2028.",
         "vignette":  "/images/premiere-liste-zidane-equipe-france-2026.jpg",
         "image_alt":  "Premiere liste de Zinedine Zidane selectionneur de l\u0027equipe de France, 23 joueurs"
@@ -667,6 +703,7 @@
                            "Europa League"
                        ],
         "date":  "2026-09-17",
+        "date_maj":  "2026-09-17",
         "extrait":  "L\u0027OM découvre ce jeudi l\u0027une des ambiances les plus réputées d\u0027Europe pour son entrée en Ligue Europa, au Tüpraş Stadium d\u0027Istanbul. Vélodrome ou Besiktas, quel public est le plus chaud ?",
         "vignette":  "/images/om-besiktas-quel-public-le-plus-chaud-2026.jpg",
         "image_alt":  "OM contre Besiktas, duel des tribunes entre le Velodrome et Istanbul"
@@ -709,6 +746,7 @@
                            "Équipe de France"
                        ],
         "date":  "2026-09-13",
+        "date_maj":  "2026-09-14",
         "extrait":  "Meilleur buteur de l\u0027histoire de la Coupe du monde avec 22 buts, Kylian Mbappé estime que 2026 est peut-être « la bonne année » pour le Ballon d\u0027Or. Ousmane Dembélé, de son côté, pense que le trophée restera entre les mains d\u0027un joueur du PSG. Le point sur des déclarations souvent mal résumées.",
         "vignette":  "/images/mbappe-dembele-ballon-or-2026-equipe-france.jpg",
         "image_alt":  "Kylian Mbappe avec l\u0027equipe de France, sur fond de course au Ballon d\u0027Or 2026"
@@ -737,6 +775,7 @@
                            "Coupe du Monde"
                        ],
         "date":  "2026-09-12",
+        "date_maj":  "2026-09-12",
         "extrait":  "La France affrontera les États-Unis, tenants du titre, en finale de la Coupe du monde féminine de basket 2026, dimanche 13 septembre à Berlin. Retour sur le parcours sans faute des deux finalistes.",
         "vignette":  "/images/mondial-2026-basket-feminin-france-en-finale.jpg",
         "image_alt":  "France 86-64 Allemagne et Espagne 66-76 Etats-Unis, demi-finales du Mondial 2026 de basket feminin"
@@ -863,6 +902,7 @@
                            "Journée 2"
                        ],
         "date":  "2026-08-30",
+        "date_maj":  "2026-08-30",
         "extrait":  "La 2e journée de Ligue 1 2026-2027 a tenu ses promesses : un money time à rebondissements à Lille, une démonstration du Paris FC, plusieurs surprises, et Monaco qui s\u0027impose face à l\u0027OM pour clore le tableau.",
         "vignette":  "/images/l1-j2-sans-om.jpg",
         "image_alt":  "Tableau des résultats de la journée 2 de Ligue 1 2026-2027"
@@ -933,6 +973,7 @@
                            "Ligue 1"
                        ],
         "date":  "2026-08-26",
+        "date_maj":  "2026-09-22",
         "extrait":  "Ligue 1+ autorise officiellement jusqu\u0027à 2 connexions simultanées sur la plupart de ses formules. Voici quelles offres permettent réellement de partager son abonnement, et comment diviser la facture avec un proche.",
         "vignette":  "/images/partager-abonnement-ligue-1-plus.jpg",
         "image_alt":  "Est-il possible de partager son abonnement Ligue 1+ a plusieurs"

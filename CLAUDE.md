@@ -156,7 +156,7 @@ football-passion/                  ← racine du dépôt = racine du site
 **Depuis le 5 août 2026**, les articles ne vivent plus dans un unique `data/articles.json` monolithique (non scalable au-delà de quelques dizaines d'articles — diffs Git énormes, tout le contenu HTML relu à chaque page liste). Nouvelle architecture à deux niveaux :
 
 - **`data/articles/{slug}.json`** — un fichier par article, contenu complet (structure ci-dessous). Chargé uniquement à la vue d'un article précis (`load_article($basePath, $slug)` dans `blog/helpers.php`), jamais en liste.
-- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, categorie, etiquettes, date, extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
+- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, categorie, etiquettes, date, date_maj (si l'article a été mis à jour), extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
 
 **Structure complète d'un fichier `data/articles/{slug}.json`** :
 
@@ -186,6 +186,8 @@ football-passion/                  ← racine du dépôt = racine du site
 - **Articles** (`data/articles/{slug}.json`) : mettre à jour (ou ajouter) le champ `date_maj` à la date du jour dès qu'un article déjà publié est modifié (contenu corrigé/complété, ajout d'un embed vidéo, etc.).
 - **Pages piliers statiques** (ex. `droits-tv-football.php`) : ces pages portent une variable `$date_maj_page` en haut du fichier PHP, utilisée à la fois pour l'affichage visible (« mis à jour le... ») et pour le `dateModified` du JSON-LD. **La mettre à jour à la date du jour à chaque modification de contenu** (tarifs, offres, nouvelle section...).
 - Objectif : signal de fraîcheur pour Google (E-E-A-T), à ne jamais oublier après une édition — même mineure — sur ce type de page.
+
+**🚨 Règle d'affichage des dates (8 novembre 2026)** : le site affiche la **date de mise à jour** (`date_maj`) et **non la date de création** dès qu'un article a été mis à jour (cartes de listes : « Maj 08/11/2026 » ; page article : « Mis à jour le 8 novembre 2026 »). La date de création (`date`) n'est affichée qu'à la création de l'article, tant qu'il n'a pas de `date_maj` ; elle reste utilisée pour le tri et pour `datePublished` (schema). **Ne jamais modifier `date` lors d'une mise à jour** : renseigner `date_maj` dans l'article **et** dans son entrée de `data/articles-index.json` (les cartes lisent l'index). Resynchroniser l'index si besoin (script : lire chaque `data/articles/{slug}.json` et recopier `date_maj` dans l'index).
 
 **🚨 Procédure obligatoire pour ajouter un nouvel article** :
 1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
@@ -348,6 +350,14 @@ Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher
 - **Vérifier avant d'utiliser** : que le fichier est bien **le club ou le lieu voulu** (ex. « Logo AC Amiens » est l'Athlétic Club, pas l'Amiens SC) et **le logo actuel** (ex. « Logo FC Rouen 2000 » est l'ancien logo 2000-2009). En cas de doute, ne pas utiliser et demander le fichier à l'utilisateur.
 - Un logo de club reste une **marque déposée** même s'il est en domaine public : l'utiliser comme illustration d'identification du club, jamais comme logo du site.
 - Enregistrer le fichier dans `images/logo/` (nom kebab-case) et noter auteur + licence dans le journal de procédure. Ne rien télécharger depuis une autre source non vérifiée.
+
+**Comment récupérer un logo ou une image sur Wikimedia Commons (pas à pas)** :
+1. **Chercher** (requête simple, type « logo football <ville> » ; essayer aussi « <club> logo », le nom complet du club ou la catégorie) : `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=logo+football+amiens&srnamespace=6&srlimit=15&format=json` (ou parcourir `Category:<club>` avec `list=categorymembers&cmtitle=Category:...&cmtype=file`).
+2. **Lire les métadonnées** de chaque candidat : `...api.php?action=query&titles=File:<nom_avec_underscores>&prop=imageinfo&iiprop=url|extmetadata|size&format=json` → `url`, `Artist` (auteur), `LicenseShortName` (licence), `ImageDescription`, `DateTimeOriginal`, `Restrictions` (« trademarked » = marque déposée).
+3. **Contrôler** le bon club (pas un homonyme : AC Amiens ≠ Amiens SC), le **logo actuel** (pas un ancien), la licence (CC BY, CC BY-SA, domaine public ; éviter les images « non libres »). La page d'un club sur fr.wikipedia peut afficher un logo **non libre** hébergé sur Wikipédia (pas sur Commons) : ne pas le télécharger sans accord de l'utilisateur, demander le fichier.
+4. **Télécharger** l'`url` du fichier (`upload.wikimedia.org/...`) avec un User-Agent explicite (`Invoke-WebRequest ... -UserAgent "FootballPassionBot/1.0 (https://football-passion.fr)"`), vers `images/logo/<nom-kebab-case>.png`.
+5. **Préparer l'image** : les `.webp`/`.avif` se convertissent via PresentationCore (`BitmapDecoder` + `PngBitmapEncoder`) ; **vérifier la transparence** (un fond noir ou blanc opaque se rend transparent par remplissage depuis les bords) ; contrôler visuellement sur le fond de la vignette (bleu foncé).
+6. **Créditer** dans l'article : « Crédit image : <auteur>, licence <licence> (lien), via Wikimedia Commons (lien page du fichier) », liens en `nofollow noopener noreferrer`, et noter auteur + licence + URL dans `procedure-football-passion.md`.
 
 ## 🚀 Déploiement
 

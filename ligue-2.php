@@ -234,7 +234,7 @@ include __DIR__ . '/templates/header.php';
                     </div>
                     <?php endif; ?>
                     <div class="min-w-0 flex flex-col justify-center gap-0.5">
-                        <p class="text-gray-500 text-[11px]"><?= date('d/m/Y', strtotime($a['date'])) ?></p>
+                        <p class="text-gray-500 text-[11px]"><?= !empty($a['date_maj']) ? 'Maj ' : '' ?><?= date('d/m/Y', strtotime($a['date_maj'] ?? $a['date'])) ?></p>
                         <h3 class="text-white font-semibold text-xs leading-snug line-clamp-2"><?= htmlspecialchars($a['titre']) ?></h3>
                     </div>
                 </a>

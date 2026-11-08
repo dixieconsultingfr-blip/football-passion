@@ -91,9 +91,10 @@ if ($slug !== '') {
             <span class="bg-green-900 border border-green-700 text-green-400 text-xs px-3 py-1 rounded font-semibold uppercase tracking-wider">
                 <?= htmlspecialchars($article['categorie']) ?>
             </span>
-            <time class="text-gray-500 text-sm"><?= date_fr_long($article['date']) ?></time>
             <?php if (!empty($article['date_maj']) && $article['date_maj'] !== $article['date']): ?>
-            <span class="text-gray-600 text-sm">· mis à jour le <?= date_fr_long($article['date_maj']) ?></span>
+            <time class="text-gray-500 text-sm" datetime="<?= htmlspecialchars($article['date_maj']) ?>">Mis à jour le <?= date_fr_long($article['date_maj']) ?></time>
+            <?php else: ?>
+            <time class="text-gray-500 text-sm" datetime="<?= htmlspecialchars($article['date']) ?>"><?= date_fr_long($article['date']) ?></time>
             <?php endif; ?>
             <span class="text-gray-600 text-sm">· <a href="/a-propos.php" class="hover:text-green-400 transition-colors"><?= htmlspecialchars($article['auteur']) ?></a></span>
         </div>
@@ -220,7 +221,7 @@ include BASE_PATH . '/templates/header.php';
                 <span class="bg-green-900 text-green-400 text-xs px-2 py-0.5 rounded font-semibold">
                     <?= htmlspecialchars($a['categorie']) ?>
                 </span>
-                <time class="text-gray-500 text-xs"><?= date_fr_short($a['date']) ?></time>
+                <time class="text-gray-500 text-xs"><?= !empty($a['date_maj']) ? 'Maj ' : '' ?><?= date_fr_short($a['date_maj'] ?? $a['date']) ?></time>
             </div>
 
             <h2 class="text-base font-bold text-white leading-snug mb-3 flex-1">

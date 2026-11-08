@@ -749,4 +749,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Amiens (8 novembre 2026, suite)** : logo fourni par l'utilisateur (`logo-amiens-sc-white.webp`, fond noir opaque, sans transparence) : le fond noir relié au bord a été rendu transparent (remplissage par diffusion depuis les bords) -> `images/logo/logo-amiens-sc-transparent.png` ; vignette `amiens-ligue-3-portrait-modele-logo.jpg`. Ajout du lien **nofollow** vers le site officiel (amiensfootball.com) et d'une section « Le stade Crédit Agricole la Licorne » d'après la page officielle `/fans#stade` (renommé le 19 juillet 2018, **12 097 places** selon le club, inauguré le 24 juillet 1999, quartier de Renancourt). La capacité de 13 000 de Wikipédia est remplacée par le chiffre officiel. Piège : un `.webp` peut avoir un fond noir opaque, vérifier l'alpha avant de placer un logo.
 
+### 3.83 Affichage de la date de mise à jour et mode d'emploi Commons — 8 novembre 2026
+
+- **Constat** : les articles mis à jour (ex. Aubagne, publié le 18 octobre) affichaient toujours leur date de création dans les listes, car l'index ne contenait pas `date_maj`. La date de création (`date`) n'a jamais été modifiée lors des mises à jour : seul `date_maj` était renseigné dans l'article.
+- **Demande de l'utilisateur** : afficher la date de mise à jour, pas la date de création (sauf à la création de l'article).
+- **Correction** : `date_maj` recopié dans `data/articles-index.json` pour les 42 articles concernés ; cartes de listes (blog + pages de compétition/hub : 16 fichiers) : « Maj JJ/MM/AAAA » quand `date_maj` existe ; page article (`blog/index.php`) : « Mis à jour le … » à la place de la date de création. `date` reste utilisée pour le tri et `datePublished`.
+- **Règles** dans `CLAUDE.md` : règle d'affichage des dates, `date_maj` à mettre dans l'article **et** l'index, et procédure pas à pas pour récupérer logos et images sur Wikimedia Commons (recherche, métadonnées, contrôle, téléchargement, transparence, crédit auteur et licence).
+
 *Dernière mise à jour : 8 novembre 2026*

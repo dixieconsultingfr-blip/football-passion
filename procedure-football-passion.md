@@ -812,4 +812,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Mise à jour de `equipe-france.php` (8 novembre 2026)** : nouvelle section « Les Bleus de Zidane en Ligue des nations 2026-2027 » (`#ligue-des-nations`) : 10 points après 4 matchs (3 V, 1 N, 7 buts pour, 2 contre), deux cartes pour Italie - France (12 novembre, TF1/TF1+) et France - Turquie (15 novembre, Stade Atlantique, lien vers l'article), liens vers les 4 comptes rendus et vers le groupe A1 ; Zidane « nommé le 28 juillet 2026 ». Les chiffres sont issus des pages du site (groupe A1). À mettre à jour après le 12 et le 15 novembre.
 
+- **Vidéo Facebook intégrée à l'article France - Turquie (8 novembre 2026)** : reel `4601476266794941` (iframe Facebook, `max-width:100%`) après l'introduction, avec lien nofollow vers la page Facebook.
+
 *Dernière mise à jour : 8 novembre 2026*

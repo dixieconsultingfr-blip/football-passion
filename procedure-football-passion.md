@@ -732,4 +732,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Complément (2 novembre 2026)** : statistiques Facebook des 90 derniers jours (4 août - 1er nov.) : 295 074 vues (+651 %), 133 398 vues de 3 s (+878 %), 739 vues de 1 min (+872 %). Relevé mensuel instauré (début de mois), consigné dans `facebook-suivi.md` et `todolist.md`.
 
-*Dernière mise à jour : 2 novembre 2026*
+### 3.81 Ligue 3 : résultats J12, mise à jour des portraits, portraits Amiens et Rouen — 8 novembre 2026
+
+- **Données** : `data/matchs.json` mis à jour (9 résultats de la J12 du 7 novembre, 9 matchs de la J13 : Amiens - Caen le 19 novembre à 20h45, les autres le 21 novembre à 14h45, ids 9000674 à 9000682). Classement recalculé (points, différence, buts marqués) : La Roche VF 27, Rouen 26, Caen 22 (+7), Versailles 22 (+5), Amiens 20 (meilleure défense, 5 buts encaissés), Bastia 13e (15), Aubagne 17e (7), Bourg-Péronnas 18e (6).
+- **Mise à jour des portraits** : Aubagne (65), Bastia (79), Caen (81), Versailles (82) : nouvelle ligne en haut du tableau, rang, bilan, prochain match, `date_maj` au 8 novembre. Vignettes inchangées (modèle sans score).
+- **Nouveaux portraits** : Amiens (id 88, `amiens-ligue-3-portrait-club-histoire-cathedrale-2026-2027`) et Rouen (id 89, `rouen-ligue-3-portrait-diables-rouges-jeanne-d-arc-2026-2027`), faits en avance sur le planning. Sources : Wikipédia (clubs et villes), uniquement les faits écrits dans les pages (rien d'inventé). Vignettes au modèle « CLUB | LIGUE 3 » **sans logo** (aucun fichier fourni) : à régénérer avec le logo quand il sera disponible.
+- **Outil** : script de vignette L3 paramétrable (club, 4 cartes, logo optionnel).
+- **Piège PowerShell** : `R` est un alias d'`Invoke-History` (ne pas nommer une fonction `R`) ; dans `@( ... )`, une concaténation `"a"+[char]0xFB+"t"` sans parenthèses casse le tableau (mois décalés).
+
+*Dernière mise à jour : 8 novembre 2026*

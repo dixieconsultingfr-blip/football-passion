@@ -1,5 +1,33 @@
 [
     {
+        "id":  89,
+        "slug":  "rouen-ligue-3-portrait-diables-rouges-jeanne-d-arc-2026-2027",
+        "titre":  "Rouen en Ligue 3 : portrait des Diables Rouges, club historique et 2e du championnat, dans la ville de Jeanne d\u0027Arc",
+        "categorie":  "L3",
+        "etiquettes":  [
+                           "FC Rouen",
+                           "Ligue 3"
+                       ],
+        "date":  "2026-11-08",
+        "extrait":  "Fondé en 1899, surnommé les Diables Rouges, le FC Rouen a connu la Ligue 1, les dépôts de bilan et la Division d\u0027honneur avant de retrouver les sommets. Portrait d\u0027un club historique, 2e de la Ligue 3, et de sa ville.",
+        "vignette":  "/images/rouen-ligue-3-portrait-modele.jpg",
+        "image_alt":  "FC Rouen en Ligue 3, saison 2026-2027 : Diables Rouges, club fonde en 1899, stade Robert-Diochon, cathedrale et Gros-Horloge de Rouen"
+    },
+    {
+        "id":  88,
+        "slug":  "amiens-ligue-3-portrait-club-histoire-cathedrale-2026-2027",
+        "titre":  "Amiens en Ligue 3 : portrait d\u0027un club picard passé par la Ligue 1, dans la ville de la cathédrale et des hortillonnages",
+        "categorie":  "L3",
+        "etiquettes":  [
+                           "Amiens SC",
+                           "Ligue 3"
+                       ],
+        "date":  "2026-11-08",
+        "extrait":  "Fondé en 1901, monté pour la première fois en Ligue 1 en 2017, l\u0027Amiens SC joue la Ligue 3 en 2026-2027 avec la meilleure défense du championnat. Portrait du club, de son histoire et de sa ville, entre cathédrale et hortillonnages.",
+        "vignette":  "/images/amiens-ligue-3-portrait-modele.jpg",
+        "image_alt":  "Amiens SC en Ligue 3, saison 2026-2027 : club fonde en 1901, stade de la Licorne, cathedrale et hortillonnages d\u0027Amiens"
+    },
+    {
         "id":  87,
         "slug":  "ligue-europa-conference-clubs-francais-om-lyon-rennes-monaco-2026-2027",
         "titre":  "Les clubs français en Europe : l\u0027OM gagne à Leverkusen, Lyon et Rennes tiennent, Monaco continue son sans-faute",

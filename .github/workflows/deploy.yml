@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ✅ Valider les données JSON (bloque le déploiement si erreur)
+        run: python3 scripts/validate-data.py
+
       - name: 🔔 Notify Hostinger webhook
         run: |
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" -d '{}' "${{ secrets.HOSTINGER_WEBHOOK_URL }}")

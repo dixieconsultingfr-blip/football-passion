@@ -785,4 +785,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Correction** : index reconstruit via une `List[object]` (tableau JSON simple, 89 entrées) ; vérification `head -c 30` = `[`.
 - **Règle** : après toute écriture d'un JSON de données (`articles-index.json` compris), vérifier que le fichier commence par `[` et ne contient pas `"value"` ; toujours reconstruire une `List` avant `ConvertTo-Json`.
 
+
+### 3.87 Contrôle automatique des données avant déploiement — 8 novembre 2026
+
+- **Pourquoi** : l'incident 3.86 (index des articles enveloppé dans `{"value": ...}`) a vidé toutes les listes du site sans que rien ne le signale.
+- **Script** `scripts/validate-data.py` (Python 3, testable en local : `python scripts/validate-data.py`) : JSON valide en UTF-8 **sans BOM** ; `articles-index.json` = **tableau** (pas de wrapper), champs `id, slug, titre, categorie, date` présents, ids et slugs **uniques**, chaque entrée a son fichier `data/articles/{slug}.json` ; chaque fichier article est un objet avec `slug` = nom du fichier ; `matchs.json` = tableau d'au moins 50 entrées ; autres JSON de `data/` valides. Les articles absents de l'index (brouillons) donnent un simple avertissement.
+- **Workflow** `.github/workflows/deploy.yml` : étapes `checkout` puis validation **avant** l'appel du webhook Hostinger : si une erreur est détectée, le job échoue et **le déploiement n'est pas déclenché**. Test local : un index avec wrapper `{"value": ...}` est bien refusé (code 1).
+- **À savoir** : n8n commit `matchs.json` toutes les 5 à 10 minutes ; si l'un de ses commits produit un JSON invalide, le déploiement sera bloqué jusqu'à correction (volontaire). Voir l'onglet Actions de GitHub en cas d'échec.
+
 *Dernière mise à jour : 8 novembre 2026*

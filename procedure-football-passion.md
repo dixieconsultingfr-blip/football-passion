@@ -745,4 +745,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Décision de l'utilisateur** : Claude peut chercher les logos et images sur Wikimedia Commons, en **indiquant le nom de l'auteur et la licence**. Règle ajoutée dans `CLAUDE.md` (méthode API, vérifications, crédit).
 - **Test sur Amiens et Rouen (L3)** : aucun logo utilisable. « Logo AC Amiens - 2019.svg » est celui de l'Athlétic Club Amiens (autre club, domaine public, auteur inconnu) ; « Logo FC Rouen 2000.svg » est l'ancien logo 2000-2009 du FC Rouen (domaine public, auteur : Football club de Rouen 1899). Non utilisés. Logos actuels à demander à l'utilisateur.
 
+- **Complément (8 novembre 2026)** : recherche Commons avec une requête simple du type « logo football <ville> » (meilleure que « <club> logo »). **Rouen** : logo trouvé, `Logo Football Club de Rouen.png`, auteur **Yann76**, licence **CC BY-SA 4.0**, enregistré en `images/logo/logo-fc-rouen-1899.png`, vignette régénérée (`rouen-ligue-3-portrait-modele-logo.jpg`) et ligne « Crédit image » ajoutée à l'article 89. **Amiens SC** : aucun logo du bon club sur Commons (seulement celui de l'AC Amiens, autre club) ; seule une photo de fanion existe (`Fanion Amiens SC.jpg`, Geo28000, CC BY-SA 4.0) ; en attente du logo fourni par l'utilisateur.
+
 *Dernière mise à jour : 8 novembre 2026*

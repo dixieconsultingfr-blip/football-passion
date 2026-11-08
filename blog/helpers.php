@@ -118,7 +118,7 @@ function date_fr_jour_court(string $date): string {
 
 // Bloc SEO "À quelle heure et sur quelle chaîne ?" généré depuis le prochain match (liste $aVenir triée par date).
 // $chaine : diffuseur (ex. "Ligue 1+"), $precision : complément affiché après la chaîne (facultatif).
-function bloc_diffusion_prochains_matchs(array $aVenir, string $competition, string $chaine, string $precision = ''): string {
+function bloc_diffusion_prochains_matchs(array $aVenir, string $competition, string $chaine, string $precision = '', string $lienDroits = '/droits-tv-football.php'): string {
     if (empty($aVenir)) { return ''; }
     $prochain = $aVenir[0];
     $heure = !empty($prochain['heure']) ? ' à ' . str_replace(':', 'h', $prochain['heure']) : '';
@@ -140,7 +140,7 @@ function bloc_diffusion_prochains_matchs(array $aVenir, string $competition, str
         $out .= ' Diffusion sur ' . $h($chaine) . ' (' . $h($precision) . ').';
     }
     $out .= '</p>';
-    $out .= '<p class="text-gray-600 text-xs mt-2">Horaires et diffuseur susceptibles d\'évoluer. Pour comparer les abonnements, consultez notre <a href="/droits-tv-football.php" class="underline hover:text-gray-400">guide des droits TV</a>.</p>';
+    $out .= '<p class="text-gray-600 text-xs mt-2">Horaires et diffuseur susceptibles d\'évoluer. Pour comparer les abonnements, consultez notre <a href="' . $h($lienDroits) . '" class="underline hover:text-gray-400">guide des droits TV</a>.</p>';
     $out .= '</div>';
     return $out;
 }

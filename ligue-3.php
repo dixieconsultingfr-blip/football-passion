@@ -215,7 +215,7 @@ include __DIR__ . '/templates/header.php';
                 </div>
                 <?php endforeach; ?>
             </div>
-            <?= bloc_diffusion_prochains_matchs($aVenir, 'Ligue 3', 'Ligue 1+', 'diffuseur exclusif de la Ligue 3 Betclic') ?>
+            <?= bloc_diffusion_prochains_matchs($aVenir, 'Ligue 3', 'Ligue 1+', 'diffuseur exclusif de la Ligue 3 Betclic', '/droits-tv-football.php#ligue-3') ?>
             <?php endif; ?>
         </section>
 
@@ -296,7 +296,7 @@ include __DIR__ . '/templates/header.php';
 <section class="flex flex-wrap gap-4 justify-center pt-8 pb-4">
     <a href="/ligue-2.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🥈 Ligue 2</a>
     <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier toutes compétitions</a>
-    <a href="/droits-tv-football.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📺 Où regarder la Ligue 3 ?</a>
+    <a href="/droits-tv-football.php#ligue-3" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📺 Où regarder la Ligue 3 ?</a>
 </section>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>

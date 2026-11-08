@@ -800,4 +800,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Liens ciblés** : article partage Ligue 1+ vers `/droits-tv-ligue-1.php#formules-prix` ; article France - Turquie vers `/droits-tv-football.php#equipe-de-france`, `/ligue-des-nations-groupe-a1.php#classement` et `#calendrier-diffusion` ; hero de `euro-2028.php` vers `#pays-hotes` et `#stades` (requêtes « euro 2028 lieu », « où se joue l'euro 2028 »).
 - Dates `date_maj_page` non modifiées (aucun changement de contenu factuel).
 
+- **Correctif (8 novembre 2026)** : sur `ligue-3.php`, le bouton « Où regarder la Ligue 3 ? » et le lien « guide des droits TV » du bloc SEO pointaient vers le haut de `droits-tv-football.php`. Ils pointent maintenant vers `/droits-tv-football.php#ligue-3` ; sur `ligue-1.php`, le lien du bloc SEO va vers `/droits-tv-ligue-1.php`. La fonction `bloc_diffusion_prochains_matchs()` (`blog/helpers.php`) accepte un 5e paramètre `$lienDroits` (par défaut `/droits-tv-football.php`).
+
 *Dernière mise à jour : 8 novembre 2026*

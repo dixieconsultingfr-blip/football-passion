@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-10-05'; // à mettre à jour à chaque résultat ou changement de programme — signal E-E-A-T
+$date_maj_page = '2026-11-08'; // à mettre à jour à chaque résultat ou changement de programme — signal E-E-A-T
 
 // Résultats à renseigner ici après chaque match (score_dom / score_ext, laisser null tant que le match n'est pas joué).
 $matchs = [
@@ -9,7 +9,7 @@ $matchs = [
     ['date' => '2026-10-02', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Italie',   'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 1, 'score_ext' => 1],
     ['date' => '2026-10-05', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Belgique', 'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 4, 'score_ext' => 1],
     ['date' => '2026-11-12', 'heure' => '20h45', 'dom' => 'Italie',   'ext' => 'France',   'lieu' => 'Italie',                        'score_dom' => null, 'score_ext' => null],
-    ['date' => '2026-11-15', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Turquie',  'lieu' => 'Bordeaux',                      'score_dom' => null, 'score_ext' => null],
+    ['date' => '2026-11-15', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Turquie',  'lieu' => 'Stade Atlantique, Bordeaux',                    'score_dom' => null, 'score_ext' => null],
 ];
 
 // Matchs du groupe sans les Bleus : servent uniquement au classement (non affichés dans le calendrier).
@@ -49,7 +49,7 @@ $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$slugListe = 'premiere-liste-zidane-23-bleus-ce-quil-faut-retenir';
+$slugListe = 'france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026';
 
 $page_title = 'Ligue des Nations 2026-2027, Groupe A1 : calendrier et diffusion des Bleus';
 $meta_desc  = "Groupe A1 de la Ligue des Nations 2026-2027 : France, Italie, Belgique, Turquie. Calendrier des 6 matchs des Bleus de Zidane, classement et diffusion sur TF1.";
@@ -121,8 +121,8 @@ include __DIR__ . '/templates/header.php';
     <a href="/blog/<?= htmlspecialchars($slugListe) ?>" class="flex flex-col sm:flex-row sm:items-center gap-3 bg-green-900/10 border border-green-800 hover:border-green-600 rounded-xl p-5 transition-colors">
         <div class="flex-1">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-1">À lire avant le coup d'envoi</p>
-            <p class="text-white font-bold">Liste de Zidane : 23 Bleus, cinq nouveaux visages et l'absence de Tchouaméni</p>
-            <p class="text-gray-400 text-sm mt-1">Les 23 joueurs retenus, les absents, le rôle de Mbappé et les premières explications du sélectionneur.</p>
+            <p class="text-white font-bold">France - Turquie : heure, chaîne (TF1) et composition des Bleus</p>
+            <p class="text-gray-400 text-sm mt-1">Dimanche 15 novembre à 20h45 au Stade Atlantique de Bordeaux : où voir le match, les enjeux du groupe A1 et la route vers l'Euro 2028.</p>
         </div>
         <span class="text-green-400 text-xs font-semibold shrink-0">Lire l'article →</span>
     </a>

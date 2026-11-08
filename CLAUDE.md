@@ -280,6 +280,8 @@ L'utilisateur colle des captures d'écran ou du texte copié depuis un site de s
 6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
 7. `git add data/matchs.json && git commit && git push origin deploy`.
 
+**🚨 S'applique aussi à `data/articles-index.json` (incident du 8 novembre 2026, procédure 3.86).**
+
 **🚨 Piège PowerShell découvert le 26 août 2026 — wrapper `{"value": [...]}` inattendu** : appeler `ConvertTo-Json` **directement sur le résultat brut de `ConvertFrom-Json`** (même après avoir muté des objets dedans via `Where-Object`) peut produire un objet enveloppé `{"value": [...], "Count": N}` au lieu d'un tableau JSON simple — a transformé `matchs.json` en fichier quasi vide lors d'un test raté avec `-AsArray` (paramètre inexistant en Windows PowerShell 5.1). **Toujours reconstruire un tableau propre avant `ConvertTo-Json`** :
 ```powershell
 $matchList = [System.Collections.Generic.List[object]]::new()

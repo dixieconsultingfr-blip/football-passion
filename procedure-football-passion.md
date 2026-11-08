@@ -777,4 +777,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Ancres des autres pages droits TV (8 novembre 2026)** : `droits-tv-ligue-1.php` (`#diffuseur-ligue-1-plus`, `#appel-offres-lfp`, `#formules-prix`, `#ou-sabonner`, `#faq`), `droits-tv-ligue-2.php` (`#bein-sports`, `#acceder-bein-sports`, `#faq`), `droits-tv-champions-league.php` (`#canal-plus`, `#acceder-canal-plus`, `#faq`), `droits-tv-europa-league.php` (`#canal-plus`, `#sabonner-canal-plus`, `#faq`), avec `scroll-margin-top`.
 
+
+### 3.86 Incident : index des articles vide (8 novembre 2026) — corrigé
+
+- **Symptôme** (signalé par l'utilisateur) : sur `ligue-1.php`, le bloc « Actualités » affichait « Aucun article publié » ; toutes les listes d'articles (blog, pages compétitions, hubs) étaient vides.
+- **Cause** : en réécrivant `data/articles-index.json` (mise à jour de l'article « partager abonnement Ligue 1+ », commit b4cfc55), le script PowerShell a appelé `ConvertTo-Json` directement sur le résultat de `ConvertFrom-Json`, ce qui a produit le wrapper `{"value": [...], "Count": N}` (piège déjà documenté dans `CLAUDE.md` pour `matchs.json`). PHP ne trouvait plus de tableau d'articles.
+- **Correction** : index reconstruit via une `List[object]` (tableau JSON simple, 89 entrées) ; vérification `head -c 30` = `[`.
+- **Règle** : après toute écriture d'un JSON de données (`articles-index.json` compris), vérifier que le fichier commence par `[` et ne contient pas `"value"` ; toujours reconstruire une `List` avant `ConvertTo-Json`.
+
 *Dernière mise à jour : 8 novembre 2026*

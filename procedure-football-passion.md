@@ -808,4 +808,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Mise à jour de `ligue-des-nations-groupe-a1.php` (8 novembre 2026)** : encart « À lire avant le coup d'envoi » pointant désormais vers l'article France - Turquie (heure, chaîne, composition) au lieu de la liste de septembre ; lieu du 15 novembre : « Stade Atlantique, Bordeaux » ; `$date_maj_page` au 8 novembre 2026. Les résultats (Italie - France du 12 novembre) restent à saisir après le match.
 
+- **Tableau « Équipe de France : Ligue des nations » de `droits-tv-football.php` (8 novembre 2026)** : pour les 4 matchs terminés, ajout du score et de liens vers le compte rendu (articles 47, 52, 56, 57) et, quand il existe, l'avant-match « heure, chaîne » (articles 46 et 50) ; pour France - Turquie, lien « Heure, chaîne et composition » (article 90) et lieu « Stade Atlantique, Bordeaux ». À compléter après Italie - France (12 novembre). Pas d'avant-match pour France - Italie ni France - Belgique (articles inexistants).
+
 *Dernière mise à jour : 8 novembre 2026*

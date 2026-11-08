@@ -771,4 +771,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Complément (8 novembre 2026)** : pages `droits-tv-ligue-1.php` et `droits-tv-football.php` alignées sur la page officielle `ligue1.com/offres-ligue1plus` : **cinq formules** (carte « Pass -26 ans, 11,99 €/mois, 1 écran » ajoutée sur la page Ligue 1), « trois formules sur cinq » pour le partage, Pass Ligue 1 affiché à 19,99 €/mois (14,99 € présenté comme offre de lancement), mention de l'usage personnel et familial, FAQ HTML et JSON-LD mis à jour, `$date_maj_page` au 8 novembre 2026.
 
+- **Vignette France - Turquie améliorée (8 novembre 2026)** : affiche fournie par l'utilisateur (`france turquie.png`, 1254 x 1254, logos FFF, UEFA Nations League et Turquie, heure, lieu, chaîne, enjeu) placée au centre d'une vignette 1200 x 675 sur fond flou de l'affiche (image carrée recadrée sur fond flou) : `france-turquie-ligue-des-nations-15-novembre-2026-affiche.jpg` (196 Ko, nouveau nom de fichier). Ancienne vignette générée supprimée.
+
 *Dernière mise à jour : 8 novembre 2026*

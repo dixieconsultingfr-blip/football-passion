@@ -802,4 +802,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Correctif (8 novembre 2026)** : sur `ligue-3.php`, le bouton « Où regarder la Ligue 3 ? » et le lien « guide des droits TV » du bloc SEO pointaient vers le haut de `droits-tv-football.php`. Ils pointent maintenant vers `/droits-tv-football.php#ligue-3` ; sur `ligue-1.php`, le lien du bloc SEO va vers `/droits-tv-ligue-1.php`. La fonction `bloc_diffusion_prochains_matchs()` (`blog/helpers.php`) accepte un 5e paramètre `$lienDroits` (par défaut `/droits-tv-football.php`).
 
+- **Stade ajouté à l'article France - Turquie (8 novembre 2026)** : « Stade Atlantique Bordeaux Métropole » (cours Jules Ladoumègue), avec la section « Les Bleus de retour au Stade Atlantique » (première venue depuis juin 2024, 7e apparition au total), source : page agenda de la ville de Bordeaux (lien nofollow). Nuances de la source : l'agenda de la mairie indique « de 21h à 23h » (créneau d'événement) alors que le coup d'envoi reste 20h45 ; « 7e apparition au total » n'est pas précisée pour ce seul stade.
+
 *Dernière mise à jour : 8 novembre 2026*

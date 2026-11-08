@@ -793,4 +793,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Workflow** `.github/workflows/deploy.yml` : étapes `checkout` puis validation **avant** l'appel du webhook Hostinger : si une erreur est détectée, le job échoue et **le déploiement n'est pas déclenché**. Test local : un index avec wrapper `{"value": ...}` est bien refusé (code 1).
 - **À savoir** : n8n commit `matchs.json` toutes les 5 à 10 minutes ; si l'un de ses commits produit un JSON invalide, le déploiement sera bloqué jusqu'à correction (volontaire). Voir l'onglet Actions de GitHub en cas d'échec.
 
+
+### 3.88 Ancres utiles aux requêtes GSC — 8 novembre 2026
+
+- **Ancres ajoutées** (avec `scroll-margin-top`) : `euro-2028.php` (`#pays-hotes`, `#format-qualifications`, `#stades`, `#france-zidane`, `#calendrier`, `#faq`), `ligue-des-nations-2026-2027.php` (`#route-euro-2028`, `#classements-groupes`, `#groupe-france`, `#calendrier`, `#faq`), `ligue-des-nations-groupe-a1.php` (`#calendrier-diffusion`, `#classement`, `#apres-le-groupe`, `#faq`). Auparavant : pages droits TV (3.84 et suivants).
+- **Liens ciblés** : article partage Ligue 1+ vers `/droits-tv-ligue-1.php#formules-prix` ; article France - Turquie vers `/droits-tv-football.php#equipe-de-france`, `/ligue-des-nations-groupe-a1.php#classement` et `#calendrier-diffusion` ; hero de `euro-2028.php` vers `#pays-hotes` et `#stades` (requêtes « euro 2028 lieu », « où se joue l'euro 2028 »).
+- Dates `date_maj_page` non modifiées (aucun changement de contenu factuel).
+
 *Dernière mise à jour : 8 novembre 2026*

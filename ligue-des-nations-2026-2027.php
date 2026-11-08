@@ -70,7 +70,7 @@ include __DIR__ . '/templates/header.php';
 </header>
 
 <!-- La route vers l'Euro 2028 -->
-<section class="mb-12">
+<section id="route-euro-2028" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">La route vers l'Euro 2028</h2>
     <div class="bg-gray-800 rounded-xl border border-gray-700 divide-y divide-gray-700">
         <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 px-4 py-3 bg-green-900/10">
@@ -108,7 +108,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Tous les groupes -->
-<section class="mb-12">
+<section id="classements-groupes" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Classements de tous les groupes</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-4">
         Quatorze groupes composent la phase de ligue 2026-2027. Retrouvez le classement de chacun d'entre eux.
@@ -122,7 +122,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Le groupe de la France -->
-<section class="mb-12">
+<section id="groupe-france" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Le groupe de la France en Ligue A</h2>
     <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
         <p>
@@ -149,7 +149,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Calendrier complet -->
-<section class="mb-12">
+<section id="calendrier" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Calendrier complet de la compétition</h2>
     <div class="bg-gray-800 rounded-xl border border-gray-700 divide-y divide-gray-700">
         <?php
@@ -175,7 +175,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- FAQ -->
-<section class="mb-12">
+<section id="faq" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : Ligue des Nations 2026-2027</h2>
     <div class="space-y-3">
 

@@ -100,7 +100,7 @@ include __DIR__ . '/templates/header.php';
     <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>">31 octobre 2026</time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
         Pour la première fois depuis 1996, le Championnat d'Europe revient sur les îles britanniques.
-        Quatre nations hôtes, neuf stades, Wembley pour la finale — et une équipe de France emmenée
+        <a href="#pays-hotes" class="underline hover:text-green-400">Quatre nations hôtes</a>, <a href="#stades" class="underline hover:text-green-400">neuf stades</a>, Wembley pour la finale — et une équipe de France emmenée
         par Zinédine Zidane pour son premier grand tournoi international sur le banc des Bleus.
     </p>
 </header>
@@ -131,7 +131,7 @@ include __DIR__ . '/templates/header.php';
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
 
     <!-- Pays hôtes -->
-    <section>
+    <section id="pays-hotes" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Quatre nations, une même île</h2>
         <div class="space-y-3">
             <?php
@@ -157,7 +157,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- Format -->
-    <section>
+    <section id="format-qualifications" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Format et qualifications</h2>
         <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
             <p>
@@ -181,7 +181,7 @@ include __DIR__ . '/templates/header.php';
 </div>
 
 <!-- Stades -->
-<section class="mb-12">
+<section id="stades" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Les 9 stades retenus</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         <?php
@@ -215,7 +215,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- La France de Zidane -->
-<section class="mb-12">
+<section id="france-zidane" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">La France de Zidane — objectif Wembley</h2>
     <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6">
         <p class="text-gray-300 text-sm leading-relaxed mb-5">
@@ -253,7 +253,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Calendrier -->
-<section class="mb-12">
+<section id="calendrier" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Calendrier</h2>
     <div class="bg-gray-800 rounded-xl border border-gray-700 divide-y divide-gray-700">
         <?php
@@ -284,7 +284,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- FAQ -->
-<section class="mb-12">
+<section id="faq" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : Euro 2028</h2>
     <div class="space-y-3">
 

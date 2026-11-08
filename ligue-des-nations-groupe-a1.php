@@ -129,7 +129,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Calendrier -->
-<section class="mb-12">
+<section id="calendrier-diffusion" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Calendrier et diffusion des matchs des Bleus</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-4">
         Ligue des Nations UEFA 2026-2027, Ligue A, groupe A1 : six rencontres pour l'équipe de France, toutes diffusées sur TF1 et TF1+.
@@ -169,7 +169,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Classement -->
-<section class="mb-12">
+<section id="classement" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Classement du groupe A1</h2>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
@@ -204,7 +204,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Après la phase de groupes -->
-<section class="mb-12">
+<section id="apres-le-groupe" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Après le groupe : quarts de finale et route vers l'Euro 2028</h2>
     <div class="bg-gray-800 rounded-xl border border-gray-700 divide-y divide-gray-700">
         <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 px-4 py-3">
@@ -224,7 +224,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- FAQ -->
-<section class="mb-12">
+<section id="faq" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : groupe A1</h2>
     <div class="space-y-3">
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">

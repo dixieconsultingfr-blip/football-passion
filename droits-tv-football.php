@@ -122,7 +122,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- ══════════ SECTION 1 — LIGUE 1+ ══════════ -->
-    <section class="mb-10">
+    <section id="ligue-1-plus" class="mb-10" style="scroll-margin-top:5rem">
         <div class="flex items-center gap-3 mb-4">
             <span class="inline-flex items-center justify-center h-12 px-3 bg-white rounded-xl shrink-0">
                 <img src="/images/logo/Logo-diffusion-ligue-1+.webp" alt="Logo Ligue 1+" class="h-6 w-auto object-contain" />
@@ -199,7 +199,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- ══════════ ENCART — APPEL D'OFFRES LFP 2027-2032 ══════════ -->
-    <section class="mb-10">
+    <section id="appel-offres-ligue-1" class="mb-10" style="scroll-margin-top:5rem">
         <div class="bg-gray-800 border border-yellow-800/50 rounded-xl p-5">
             <p class="text-yellow-400 text-xs font-semibold uppercase tracking-widest mb-2">À suivre · Ligue 1 après 2027</p>
             <h2 class="text-xl font-bold text-white mb-2">Nouvel appel d'offres pour les droits TV de la Ligue 1</h2>
@@ -214,7 +214,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- ══════════ SECTION 1BIS — LIGUE 3 BETCLIC ══════════ -->
-    <section class="mb-10">
+    <section id="ligue-3" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">🥉 Ligue 3 Betclic : où la regarder ?</h2>
         <p class="text-gray-300 leading-relaxed mb-4">
             Depuis la saison 2026-2027, <strong class="text-white">Ligue 1+</strong> est le diffuseur exclusif de la Ligue 3 Betclic (ex-National), pour trois saisons (2026-2027 à 2028-2029). L'intégralité des 309 rencontres de la saison est retransmise, play-offs compris — l'abonnement Ligue 1+ donne donc accès aux deux championnats en même temps.
@@ -228,7 +228,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- ══════════ SECTION 2 — LIGUE 2 & COUPES D'EUROPE ══════════ -->
-    <section class="mb-10">
+    <section id="ligue-2-coupes-europe" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Ligue 2 BKT et Coupes d'Europe</h2>
         <div class="bg-gray-800 border border-gray-700 rounded-xl p-5 mb-4">
             <h3 class="text-white font-bold text-lg mb-3">🥈 Ligue 2 BKT : 100 % des matchs sur beIN SPORTS</h3>
@@ -279,7 +279,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- ══════════ SECTION 2BIS — ÉQUIPE DE FRANCE ══════════ -->
-    <section class="mb-10">
+    <section id="equipe-de-france" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">🇫🇷 Équipe de France : Ligue des nations et qualifications à l'Euro 2028</h2>
         <p class="text-gray-300 leading-relaxed mb-4">
             Bonne nouvelle : les matchs des Bleus ne nécessitent aucun abonnement payant. <strong class="text-white">TF1 et TF1+</strong> diffusent en exclusivité et en clair la Ligue des nations 2026-2027 de l'équipe de France, dont le premier rendez-vous de l'ère Zidane, le vendredi 25 septembre en Turquie. Le groupe TF1 détient par ailleurs les droits des matchs des Bleus jusqu'en 2028, ce qui devrait inclure les qualifications à l'Euro 2028.
@@ -316,7 +316,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- ══════════ SECTION 3 — FAQ ══════════ -->
-    <section class="mb-8">
+    <section id="faq" class="mb-8" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : droits TV et abonnements</h2>
         <div class="space-y-3">
 
@@ -408,7 +408,7 @@ include __DIR__ . '/templates/header.php';
     </p>
 
     <!-- Guides droits TV par compétition -->
-    <section class="mb-6">
+    <section id="guides-par-competition" class="mb-6" style="scroll-margin-top:5rem">
         <h2 class="text-xl font-bold text-white mb-4">Guides détaillés par compétition</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <a href="/droits-tv-ligue-1.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">

@@ -773,4 +773,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Vignette France - Turquie améliorée (8 novembre 2026)** : affiche fournie par l'utilisateur (`france turquie.png`, 1254 x 1254, logos FFF, UEFA Nations League et Turquie, heure, lieu, chaîne, enjeu) placée au centre d'une vignette 1200 x 675 sur fond flou de l'affiche (image carrée recadrée sur fond flou) : `france-turquie-ligue-des-nations-15-novembre-2026-affiche.jpg` (196 Ko, nouveau nom de fichier). Ancienne vignette générée supprimée.
 
+- **Ancres sur `droits-tv-football.php` (8 novembre 2026)** : ids ajoutés aux sections (`#ligue-1-plus`, `#appel-offres-ligue-1`, `#ligue-3`, `#ligue-2-coupes-europe`, `#equipe-de-france`, `#faq`, `#guides-par-competition`) avec `scroll-margin-top` pour ne pas passer sous l'en-tête. L'article France - Turquie renvoie vers `/droits-tv-football.php#equipe-de-france` (section « Équipe de France : Ligue des nations et qualifications à l'Euro 2028 »).
+
 *Dernière mise à jour : 8 novembre 2026*

@@ -13774,10 +13774,10 @@
         "heure": "20:45",
         "id": 9000654,
         "journee": 11,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13787,10 +13787,10 @@
         "heure": "20:45",
         "id": 9000655,
         "journee": 11,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 4,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",

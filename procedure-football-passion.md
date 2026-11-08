@@ -830,4 +830,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Classement provisoire** (points, différence, buts marqués) : Saint-Etienne 28 (12 matchs), Montpellier 24, Nancy 22, Pau FC 20, Reims 18, Dijon 18, Metz 17, Red Star 17...
 - **Lacune relevée** : **Reims - Sochaux et Red Star - Nancy (J11, programmés le 2 novembre à 20h45) sont encore « SCHEDULED » sans score** : les résultats n'ont jamais été fournis. Le classement de Nancy, Reims, Red Star et Sochaux (11 matchs au lieu de 12) est donc provisoire. À saisir dès que l'utilisateur donne les scores.
 
+- **Lacune comblée (8 novembre 2026)** : Reims 2-0 Sochaux et Red Star 1-4 Nancy (J11, 2 novembre) saisis ; les 18 clubs ont maintenant 12 matchs. Classement : Saint-Etienne 28, **Nancy 25**, Montpellier 24, **Reims 21**, Pau FC 20, Dijon 18, Metz 17, Red Star 17.
+
 *Dernière mise à jour : 8 novembre 2026*

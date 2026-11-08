@@ -823,4 +823,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Composition probable ajoutée à l'article Italie - France (8 novembre 2026)** : à la demande de l'utilisateur, section « La composition probable de l'équipe de France » (4-2-3-1 : Maignan ; Gusto, Konaté, Upamecano, Truffert ; Tchouaméni, Camavinga ; Olise, Doué, Barcola ; Mbappé), alternatives (Rabiot, Zaïre-Emery, Cherki, Thuram, Kalulu, Yoro, Jacquet) et absents (Dembélé, Saliba, Koundé, Koné, Lacroix, Akliouche, Lepaul). **Libellée « probable, non officielle »** car la source du texte fourni n'est pas citée ; tableau avec `<caption>` ; la composition officielle reste à renseigner le jour du match (voir `todolist.md`). Nuance : Akliouche n'était pas « indisponible » mais absent de la liste d'après l'article 85.
 
+
+### 3.90 Ligue 2 : résultats J12 et calendrier J13 — 8 novembre 2026
+
+- **Données** : `data/matchs.json` mis à jour (9 résultats de la J12 des 6 et 7 novembre ; 9 matchs de la J13 : vendredi 20 novembre 20h00 (5 matchs), samedi 21 novembre 14h00 (2) et 20h00 (1), lundi 23 novembre 20h45 Sochaux - USL Dunkerque ; ids 9000683 à 9000691). Le fichier est maintenant écrit en JSON standard (indentation 4) par un script Python.
+- **Classement provisoire** (points, différence, buts marqués) : Saint-Etienne 28 (12 matchs), Montpellier 24, Nancy 22, Pau FC 20, Reims 18, Dijon 18, Metz 17, Red Star 17...
+- **Lacune relevée** : **Reims - Sochaux et Red Star - Nancy (J11, programmés le 2 novembre à 20h45) sont encore « SCHEDULED » sans score** : les résultats n'ont jamais été fournis. Le classement de Nancy, Reims, Red Star et Sochaux (11 matchs au lieu de 12) est donc provisoire. À saisir dès que l'utilisateur donne les scores.
+
 *Dernière mise à jour : 8 novembre 2026*

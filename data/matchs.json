@@ -13917,10 +13917,10 @@
         "heure": "20:00",
         "id": 9000665,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13930,10 +13930,10 @@
         "heure": "20:00",
         "id": 9000666,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 3,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13943,10 +13943,10 @@
         "heure": "20:00",
         "id": 9000667,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 3,
+        "score_ext": 2,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13956,10 +13956,10 @@
         "heure": "20:00",
         "id": 9000668,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13969,10 +13969,10 @@
         "heure": "20:00",
         "id": 9000669,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 3,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13982,10 +13982,10 @@
         "heure": "20:00",
         "id": 9000670,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 3,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -13995,10 +13995,10 @@
         "heure": "14:00",
         "id": 9000671,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -14008,10 +14008,10 @@
         "heure": "20:00",
         "id": 9000672,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 0,
+        "score_ext": 2,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -14021,10 +14021,10 @@
         "heure": "20:00",
         "id": 9000673,
         "journee": 12,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14137,6 +14137,123 @@
         "exterieur": "Paris 13 Atletico",
         "heure": "14:45",
         "id": 9000682,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-20",
+        "domicile": "Red Star",
+        "exterieur": "Pau FC",
+        "heure": "20:00",
+        "id": 9000683,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-20",
+        "domicile": "Metz",
+        "exterieur": "Boulogne",
+        "heure": "20:00",
+        "id": 9000684,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-20",
+        "domicile": "Guingamp",
+        "exterieur": "Rodez",
+        "heure": "20:00",
+        "id": 9000685,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-20",
+        "domicile": "FC Annecy",
+        "exterieur": "Clermont",
+        "heure": "20:00",
+        "id": 9000686,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-20",
+        "domicile": "Nancy",
+        "exterieur": "Dijon",
+        "heure": "20:00",
+        "id": 9000687,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-21",
+        "domicile": "Laval",
+        "exterieur": "Montpellier",
+        "heure": "14:00",
+        "id": 9000688,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-21",
+        "domicile": "Nantes",
+        "exterieur": "Grenoble",
+        "heure": "14:00",
+        "id": 9000689,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-21",
+        "domicile": "Reims",
+        "exterieur": "Saint-Etienne",
+        "heure": "20:00",
+        "id": 9000690,
+        "journee": 13,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L2",
+        "date": "2026-11-23",
+        "domicile": "Sochaux",
+        "exterieur": "USL Dunkerque",
+        "heure": "20:45",
+        "id": 9000691,
         "journee": 13,
         "score_dom": null,
         "score_ext": null,

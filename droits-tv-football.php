@@ -3,7 +3,7 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
-$date_maj_page = '2026-11-02'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$date_maj_page = '2026-11-08'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -28,7 +28,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Quel est le prix d'un abonnement à la Ligue 1 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le prix dépend de la formule choisie sur Ligue 1+ : Pass Mobile à 19,99 €/mois (sans engagement, 1 utilisateur), Pass Mensuel à 24,99 €/mois (sans engagement, 2 utilisateurs), Pass Ligue 1 - Offre Limitée à 14,99 €/mois les 3 premiers mois puis 19,99 €/mois (engagement 12 mois, 2 utilisateurs), ou Pass Direct 1 An à 199 € payables en une fois (engagement 12 mois, 2 utilisateurs)."
+        "text": "Le prix dépend de la formule choisie sur Ligue 1+ : Pass Mobile à 19,99 €/mois (sans engagement, 1 utilisateur), Pass -26 ans à 11,99 €/mois (sans engagement, 1 utilisateur), Pass Mensuel à 24,99 €/mois (sans engagement, 2 utilisateurs), Pass Ligue 1 à 19,99 €/mois (engagement 12 mois, 2 utilisateurs ; une offre limitée à 14,99 € les 3 premiers mois a été proposée en début de saison), ou Pass Direct 1 An à 199 € payables en une fois (engagement 12 mois, 2 utilisateurs)."
       }
     },
     {
@@ -44,7 +44,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Quel est l'abonnement le moins cher à la Ligue 1 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le Pass Ligue 1 - Offre Limitée est l'entrée de gamme à 14,99 €/mois les 3 premiers mois (puis 19,99 €/mois, engagement 12 mois). En partageant le Pass Direct 1 An (199 € pour la saison, 2 utilisateurs autorisés) avec un proche, le coût redescend à 99,50 € par personne."
+        "text": "Le Pass -26 ans (11,99 €/mois, sans engagement, 1 écran) est l'entrée de gamme pour les moins de 26 ans ; pour 2 écrans, le Pass Ligue 1 est à 19,99 €/mois (engagement 12 mois), après une offre de lancement à 14,99 € les 3 premiers mois. En partageant le Pass Direct 1 An (199 € pour la saison, 2 utilisateurs autorisés) avec un proche, le coût redescend à 99,50 € par personne."
       }
     },
     {
@@ -52,7 +52,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Peut-on résilier un abonnement Ligue 1+ en cours de saison ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cela dépend de l'offre. Le Pass Mensuel et le Pass Mobile sont sans engagement et résiliables à tout moment. En revanche, le Pass Ligue 1 - Offre Limitée et le Pass Direct 1 An sont des offres avec engagement de 12 mois : la résiliation anticipée n'est pas possible en cours d'engagement, sauf cas prévus par la loi (déménagement, changement de foyer fiscal, justificatifs à l'appui)."
+        "text": "Cela dépend de l'offre. Le Pass Mensuel, le Pass -26 ans et le Pass Mobile sont sans engagement et résiliables à tout moment. En revanche, le Pass Ligue 1 et le Pass Direct 1 An sont des offres avec engagement de 12 mois : la résiliation anticipée n'est pas possible en cours d'engagement, sauf cas prévus par la loi (déménagement, changement de foyer fiscal, justificatifs à l'appui)."
       }
     },
     {
@@ -163,7 +163,7 @@ include __DIR__ . '/templates/header.php';
                 <strong class="text-white">Le secret du partage d'écran :</strong> le Pass Direct 1 An inclut 2 connexions en simultané. Partagez l'abonnement avec un proche (colocataire, famille) et le coût de la saison complète tombe à <strong class="text-white">99,50 € par personne</strong>.
             </p>
             <p class="text-gray-500 text-xs mt-3">
-                ⚠️ Les Pass Offre Limitée et Direct 1 An sont des offres <strong>avec engagement de 12 mois</strong> : la résiliation anticipée n'est pas possible en cours d'engagement (sauf déménagement ou changement de foyer fiscal, justificatifs à l'appui). Seuls le Pass Mensuel et le Pass Mobile sont sans engagement.
+                ⚠️ Les Pass Ligue 1 et Direct 1 An sont des offres <strong>avec engagement de 12 mois</strong> : la résiliation anticipée n'est pas possible en cours d'engagement (sauf déménagement ou changement de foyer fiscal, justificatifs à l'appui). Seuls le Pass Mensuel, le Pass -26 ans et le Pass Mobile sont sans engagement.
             </p>
             <p class="text-gray-600 text-xs mt-3">
                 ⚠️ Tarifs Ligue 1+ ci-dessus communiqués à titre indicatif, susceptibles d'évoluer à tout moment : vérifiez le prix et les conditions à jour sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> avant toute souscription.
@@ -336,7 +336,7 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                    Le prix dépend de la formule choisie sur Ligue 1+ : Pass Mobile à 19,99 €/mois (sans engagement, 1 utilisateur), Pass Mensuel à 24,99 €/mois (sans engagement, 2 utilisateurs), Pass Ligue 1 - Offre Limitée à 14,99 €/mois les 3 premiers mois puis 19,99 €/mois (engagement 12 mois, 2 utilisateurs), ou Pass Direct 1 An à 199 € payables en une fois (engagement 12 mois, 2 utilisateurs).
+                    Le prix dépend de la formule choisie sur Ligue 1+ : Pass Mobile à 19,99 €/mois (sans engagement, 1 utilisateur), Pass -26 ans à 11,99 €/mois (sans engagement, 1 utilisateur), Pass Mensuel à 24,99 €/mois (sans engagement, 2 utilisateurs), Pass Ligue 1 à 19,99 €/mois (engagement 12 mois, 2 utilisateurs ; une offre limitée à 14,99 € les 3 premiers mois a été proposée en début de saison), ou Pass Direct 1 An à 199 € payables en une fois (engagement 12 mois, 2 utilisateurs).
                 </p>
             </details>
 
@@ -356,7 +356,7 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                    Le Pass Ligue 1 - Offre Limitée est l'entrée de gamme à 14,99 €/mois les 3 premiers mois (puis 19,99 €/mois, engagement 12 mois). En partageant le Pass Direct 1 An (199 € pour la saison, 2 utilisateurs autorisés) avec un proche, le coût redescend à 99,50 € par personne.
+                    Le Pass -26 ans (11,99 €/mois, sans engagement, 1 écran) est l'entrée de gamme pour les moins de 26 ans ; pour 2 écrans, le Pass Ligue 1 est à 19,99 €/mois (engagement 12 mois), après une offre de lancement à 14,99 € les 3 premiers mois. En partageant le Pass Direct 1 An (199 € pour la saison, 2 utilisateurs autorisés) avec un proche, le coût redescend à 99,50 € par personne.
                 </p>
             </details>
 
@@ -366,7 +366,7 @@ include __DIR__ . '/templates/header.php';
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
                 <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                    Cela dépend de l'offre. Le Pass Mensuel et le Pass Mobile sont sans engagement et résiliables à tout moment. En revanche, le Pass Ligue 1 - Offre Limitée et le Pass Direct 1 An sont des offres avec engagement de 12 mois : la résiliation anticipée n'est pas possible en cours d'engagement, sauf cas prévus par la loi (déménagement, changement de foyer fiscal, justificatifs à l'appui).
+                    Cela dépend de l'offre. Le Pass Mensuel, le Pass -26 ans et le Pass Mobile sont sans engagement et résiliables à tout moment. En revanche, le Pass Ligue 1 et le Pass Direct 1 An sont des offres avec engagement de 12 mois : la résiliation anticipée n'est pas possible en cours d'engagement, sauf cas prévus par la loi (déménagement, changement de foyer fiscal, justificatifs à l'appui).
                 </p>
             </details>
 

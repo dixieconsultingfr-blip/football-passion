@@ -1,7 +1,7 @@
 <?php
 $page_title    = 'Droits TV Ligue 1 2026-2027 : tout savoir sur Ligue 1+';
 $meta_desc     = "Ligue 1+ diffuse 100 % des matchs en 2026-2027. Formules, prix, partage à 2 utilisateurs, plateformes d'accès : le guide complet pour ne rien rater de la Ligue 1 McDonald's.";
-$date_maj_page = '2026-11-02';
+$date_maj_page = '2026-11-08';
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -34,7 +34,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Quel est le prix de l'abonnement Ligue 1+ ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Quatre formules : Pass Mobile à 19,99 €/mois (1 écran, sans engagement), Pass Mensuel à 24,99 €/mois (2 écrans, sans engagement), Pass Ligue 1 à 14,99 €/mois les 3 premiers mois puis 19,99 €/mois (2 écrans, engagement 12 mois), Pass Direct 1 An à 199 € pour la saison complète (2 écrans, engagement 12 mois)."
+        "text": "Cinq formules : Pass Mobile à 19,99 €/mois (1 écran, sans engagement), Pass -26 ans à 11,99 €/mois (1 écran, sans engagement), Pass Mensuel à 24,99 €/mois (2 écrans, sans engagement), Pass Ligue 1 à 19,99 €/mois (2 écrans, engagement 12 mois ; une offre de lancement à 14,99 € les premiers mois a été proposée), Pass Direct 1 An à 199 € pour la saison complète (2 écrans, engagement 12 mois)."
       }
     },
     {
@@ -42,7 +42,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Peut-on partager son abonnement Ligue 1+ ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, trois formules sur quatre autorisent 2 connexions simultanées. En partageant le Pass Direct 1 An (199 €) à deux, le coût descend à 99,50 € par personne pour toute la saison."
+        "text": "Oui, trois formules sur cinq autorisent 2 connexions simultanées. En partageant le Pass Direct 1 An (199 €) à deux, le coût descend à 99,50 € par personne pour toute la saison."
       }
     },
     {
@@ -155,14 +155,14 @@ include __DIR__ . '/templates/header.php';
 
     <!-- SECTION 2 — FORMULES ET PRIX -->
     <section class="mb-10">
-        <h2 class="text-2xl font-bold text-white mb-4">Les 4 formules Ligue 1+ et leurs prix</h2>
+        <h2 class="text-2xl font-bold text-white mb-4">Les 5 formules Ligue 1+ et leurs prix</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div class="bg-gray-800 border border-red-800 rounded-xl p-5">
                 <p class="text-xs font-semibold uppercase tracking-wider text-red-400 mb-2">Offre limitée</p>
                 <h3 class="text-white font-bold text-lg mb-1">Pass Ligue 1</h3>
                 <p class="text-3xl font-bold text-green-400 mb-1">14,99 €<span class="text-sm text-gray-400 font-normal"> /mois*</span></p>
-                <p class="text-gray-500 text-xs mb-4">*pendant 3 mois, puis 19,99 €/mois — engagement 12 mois</p>
+                <p class="text-gray-500 text-xs mb-4">*offre de lancement pendant 3 mois, puis 19,99 €/mois — engagement 12 mois. Le site officiel affiche 19,99 €/mois au 8 novembre 2026.</p>
                 <ul class="text-gray-400 text-sm space-y-1.5">
                     <li>✓ 2 écrans simultanés</li>
                     <li>✓ TV, mobile, tablette, PC</li>
@@ -206,7 +206,7 @@ include __DIR__ . '/templates/header.php';
                 Le <strong class="text-white">Pass Direct 1 An</strong> autorise 2 connexions simultanées. Partagé avec un proche, il revient à <strong class="text-white">99,50 € par personne</strong> pour toute la saison — soit moins de 5 € par journée de Ligue 1.
                 Détail complet dans notre guide : <a href="/blog/partager-abonnement-ligue-1-plus" class="text-green-400 underline hover:text-green-300">peut-on partager son abonnement Ligue 1+ ?</a>
             </p>
-            <p class="text-gray-600 text-xs mt-3">⚠️ Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a>, susceptibles d'évoluer à tout moment.</p>
+            <p class="text-gray-600 text-xs mt-3">⚠️ Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a>, susceptibles d'évoluer à tout moment. Voir aussi 
         </div>
     </section>
 
@@ -268,14 +268,14 @@ include __DIR__ . '/templates/header.php';
                     Quel est le prix de l'abonnement Ligue 1+ ?
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
-                <p class="text-gray-400 text-sm leading-relaxed mt-3">Quatre formules : Pass Mobile à 19,99 €/mois (1 écran), Pass Mensuel à 24,99 €/mois (2 écrans, sans engagement), Pass Ligue 1 à 14,99 €/mois pendant 3 mois puis 19,99 €/mois (2 écrans, 12 mois), Pass Direct 1 An à 199 € (2 écrans, 12 mois).</p>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">Cinq formules : Pass Mobile à 19,99 €/mois (1 écran), Pass -26 ans à 11,99 €/mois (1 écran), Pass Mensuel à 24,99 €/mois (2 écrans, sans engagement), Pass Ligue 1 à 19,99 €/mois (2 écrans, 12 mois ; offre de lancement à 14,99 € les premiers mois), Pass Direct 1 An à 199 € (2 écrans, 12 mois).</p>
             </details>
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
                 <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
                     Peut-on partager son abonnement Ligue 1+ ?
                     <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
                 </summary>
-                <p class="text-gray-400 text-sm leading-relaxed mt-3">Oui, trois formules sur quatre autorisent 2 connexions simultanées. En partageant le Pass Direct 1 An à deux, la facture descend à 99,50 € par personne pour toute la saison. Le Pass Mobile est la seule exception : 1 écran uniquement.</p>
+                <p class="text-gray-400 text-sm leading-relaxed mt-3">Oui, trois formules sur cinq autorisent 2 connexions simultanées. En partageant le Pass Direct 1 An à deux, la facture descend à 99,50 € par personne pour toute la saison. Le Pass -26 ans et le Pass Mobile sont limités à 1 écran. Le partage doit rester dans le cadre d'un usage personnel et familial.</p>
             </details>
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
                 <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
@@ -294,7 +294,7 @@ include __DIR__ . '/templates/header.php';
         </div>
     </section>
 
-    <p class="text-gray-600 text-xs text-center mb-6">Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> (Conditions Générales d'Abonnement, juillet 2026) — susceptibles d'évoluer à tout moment.</p>
+    <p class="text-gray-600 text-xs text-center mb-6">Tarifs vérifiés sur <a href="https://plus.ligue1.com/home" target="_blank" rel="nofollow noopener noreferrer" class="underline hover:text-gray-400">plus.ligue1.com</a> (Conditions Générales d'Abonnement, juillet 2026) — susceptibles d'évoluer à tout moment. Voir aussi 
 
     <!-- Liens internes -->
     <section class="mb-8">

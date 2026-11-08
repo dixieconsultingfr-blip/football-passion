@@ -740,4 +740,9 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Outil** : script de vignette L3 paramétrable (club, 4 cartes, logo optionnel).
 - **Piège PowerShell** : `R` est un alias d'`Invoke-History` (ne pas nommer une fonction `R`) ; dans `@( ... )`, une concaténation `"a"+[char]0xFB+"t"` sans parenthèses casse le tableau (mois décalés).
 
+### 3.82 Règle : logos et images depuis Wikimedia Commons — 8 novembre 2026
+
+- **Décision de l'utilisateur** : Claude peut chercher les logos et images sur Wikimedia Commons, en **indiquant le nom de l'auteur et la licence**. Règle ajoutée dans `CLAUDE.md` (méthode API, vérifications, crédit).
+- **Test sur Amiens et Rouen (L3)** : aucun logo utilisable. « Logo AC Amiens - 2019.svg » est celui de l'Athlétic Club Amiens (autre club, domaine public, auteur inconnu) ; « Logo FC Rouen 2000.svg » est l'ancien logo 2000-2009 du FC Rouen (domaine public, auteur : Football club de Rouen 1899). Non utilisés. Logos actuels à demander à l'utilisateur.
+
 *Dernière mise à jour : 8 novembre 2026*

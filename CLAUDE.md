@@ -340,6 +340,15 @@ Toujours utiliser `rel="nofollow noopener noreferrer"` sur les liens de licence 
 
 ---
 
+### 🖼️ Logos et images : chercher d'abord sur Wikimedia Commons (règle du 8 novembre 2026)
+
+Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher d'abord sur [Wikimedia Commons](https://commons.wikimedia.org/wiki/Accueil)** (autorisation de l'utilisateur). Recherche possible par l'API : `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&srnamespace=6&format=json`, puis `prop=imageinfo&iiprop=url|extmetadata|size` pour lire **auteur (Artist), licence (LicenseShortName), URL du fichier et restrictions**.
+
+- **Toujours créditer** : nom de l'auteur et licence (ex. « CC BY-SA 4.0 », « Domaine public »), avec lien vers la page du fichier sur Commons (`rel="nofollow noopener noreferrer"`), dans une ligne « Crédit image » de l'article ou dans le pied de page de la vignette si la licence l'exige.
+- **Vérifier avant d'utiliser** : que le fichier est bien **le club ou le lieu voulu** (ex. « Logo AC Amiens » est l'Athlétic Club, pas l'Amiens SC) et **le logo actuel** (ex. « Logo FC Rouen 2000 » est l'ancien logo 2000-2009). En cas de doute, ne pas utiliser et demander le fichier à l'utilisateur.
+- Un logo de club reste une **marque déposée** même s'il est en domaine public : l'utiliser comme illustration d'identification du club, jamais comme logo du site.
+- Enregistrer le fichier dans `images/logo/` (nom kebab-case) et noter auteur + licence dans le journal de procédure. Ne rien télécharger depuis une autre source non vérifiée.
+
 ## 🚀 Déploiement
 
 ```bash

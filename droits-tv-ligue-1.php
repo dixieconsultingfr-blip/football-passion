@@ -100,7 +100,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 1 — QUI DIFFUSE -->
-    <section class="mb-10">
+    <section id="diffuseur-ligue-1-plus" class="mb-10" style="scroll-margin-top:5rem">
         <div class="flex items-center gap-3 mb-4">
             <span class="inline-flex items-center justify-center h-12 px-3 bg-white rounded-xl shrink-0">
                 <img src="/images/logo/Logo-diffusion-ligue-1+.webp" alt="Logo Ligue 1+" class="h-6 w-auto object-contain" />
@@ -125,7 +125,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 1TER — APPEL D'OFFRES LFP 2027-2032 -->
-    <section class="mb-10">
+    <section id="appel-offres-lfp" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Et après 2027 ? Le nouvel appel d'offres de la LFP</h2>
         <p class="text-gray-300 leading-relaxed mb-4">
             La LFP a lancé un nouvel appel d'offres pour les droits TV de la Ligue 1 sur les saisons <strong class="text-white">2027-2028 à 2031-2032</strong>, deux ans plus tôt que prévu. Le dépôt des offres s'étend du <strong class="text-white">3 novembre au 7 décembre 2026</strong>. Concrètement, la Ligue 1 pourrait changer de diffuseur dès 2027-2028 : aucun changement n'est à craindre pour la saison en cours, qui reste entièrement sur Ligue 1+.
@@ -154,7 +154,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 2 — FORMULES ET PRIX -->
-    <section class="mb-10">
+    <section id="formules-prix" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Les 5 formules Ligue 1+ et leurs prix</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -211,7 +211,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 3 — OÙ S'ABONNER -->
-    <section class="mb-10">
+    <section id="ou-sabonner" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Où s'abonner à Ligue 1+ ?</h2>
         <p class="text-gray-300 leading-relaxed mb-4">Plusieurs points d'entrée pour accéder à Ligue 1+ :</p>
         <div class="space-y-3">
@@ -246,7 +246,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 4 — FAQ -->
-    <section class="mb-8">
+    <section id="faq" class="mb-8" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions — Ligue 1 droits TV</h2>
         <div class="space-y-3">
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">

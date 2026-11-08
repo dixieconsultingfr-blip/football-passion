@@ -76,7 +76,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 1 — QUI DIFFUSE -->
-    <section class="mb-10">
+    <section id="canal-plus" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Canal+ : diffuseur exclusif des Coupes d'Europe en France</h2>
         <p class="text-gray-300 leading-relaxed mb-4">
             <strong class="text-white">Canal+</strong> détient en France les droits exclusifs des trois compétitions de clubs organisées par l'UEFA : la Ligue des Champions, l'Europa League et la Ligue Europa Conférence. Pour la saison 2026-2027, l'intégralité des matchs — des tours préliminaires jusqu'à la finale — est diffusée sur les chaînes du groupe Canal+.
@@ -105,7 +105,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 2 — COMMENT S'ABONNER -->
-    <section class="mb-10">
+    <section id="acceder-canal-plus" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Comment accéder à Canal+ pour voir la Champions League ?</h2>
         <div class="space-y-3 mb-4">
             <div class="bg-gray-800 border border-gray-700 rounded-xl p-4">
@@ -136,7 +136,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 3 — FAQ -->
-    <section class="mb-8">
+    <section id="faq" class="mb-8" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions — Champions League droits TV</h2>
         <div class="space-y-3">
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">

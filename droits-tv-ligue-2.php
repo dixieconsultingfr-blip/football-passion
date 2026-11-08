@@ -84,7 +84,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 1 — QUI DIFFUSE -->
-    <section class="mb-10">
+    <section id="bein-sports" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">beIN Sports : l'exclusivité Ligue 2 jusqu'en 2029</h2>
         <figure class="mb-6">
             <img src="/images/ligue-2-bkt-100-pour-cent-bein-sports.jpg" alt="Ligue 2 BKT 100% sur beIN Sports 2026-2027" class="w-full rounded-xl border border-gray-700" loading="lazy" />
@@ -108,7 +108,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 2 — COMMENT S'ABONNER -->
-    <section class="mb-10">
+    <section id="acceder-bein-sports" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Comment accéder à beIN Sports pour voir la Ligue 2 ?</h2>
         <div class="space-y-3 mb-6">
             <div class="bg-gray-800 border border-gray-700 rounded-xl p-4">
@@ -139,7 +139,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 3 — FAQ -->
-    <section class="mb-8">
+    <section id="faq" class="mb-8" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions — Ligue 2 droits TV</h2>
         <div class="space-y-3">
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">

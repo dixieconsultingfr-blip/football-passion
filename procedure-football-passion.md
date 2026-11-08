@@ -775,4 +775,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Ancres sur `droits-tv-football.php` (8 novembre 2026)** : ids ajoutés aux sections (`#ligue-1-plus`, `#appel-offres-ligue-1`, `#ligue-3`, `#ligue-2-coupes-europe`, `#equipe-de-france`, `#faq`, `#guides-par-competition`) avec `scroll-margin-top` pour ne pas passer sous l'en-tête. L'article France - Turquie renvoie vers `/droits-tv-football.php#equipe-de-france` (section « Équipe de France : Ligue des nations et qualifications à l'Euro 2028 »).
 
+- **Ancres des autres pages droits TV (8 novembre 2026)** : `droits-tv-ligue-1.php` (`#diffuseur-ligue-1-plus`, `#appel-offres-lfp`, `#formules-prix`, `#ou-sabonner`, `#faq`), `droits-tv-ligue-2.php` (`#bein-sports`, `#acceder-bein-sports`, `#faq`), `droits-tv-champions-league.php` (`#canal-plus`, `#acceder-canal-plus`, `#faq`), `droits-tv-europa-league.php` (`#canal-plus`, `#sabonner-canal-plus`, `#faq`), avec `scroll-margin-top`.
+
 *Dernière mise à jour : 8 novembre 2026*

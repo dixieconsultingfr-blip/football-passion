@@ -76,7 +76,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 1 — QUI DIFFUSE -->
-    <section class="mb-10">
+    <section id="canal-plus" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Canal+ : les trois compétitions UEFA réunies</h2>
         <p class="text-gray-300 leading-relaxed mb-4">
             <strong class="text-white">Canal+</strong> détient en France les droits exclusifs des trois compétitions européennes de clubs de l'UEFA pour la saison 2026-2027. Europa League, Ligue des Champions et Ligue Europa Conférence : tous les matchs, de la phase de qualification jusqu'aux finales, sont sur Canal+.
@@ -120,7 +120,7 @@ include __DIR__ . '/templates/header.php';
     </section>
 
     <!-- SECTION 2 — COMMENT S'ABONNER -->
-    <section class="mb-10">
+    <section id="sabonner-canal-plus" class="mb-10" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-4">Comment s'abonner à Canal+ pour voir l'Europa League ?</h2>
         <div class="space-y-3 mb-4">
             <div class="bg-gray-800 border border-gray-700 rounded-xl p-4">
@@ -151,7 +151,7 @@ include __DIR__ . '/templates/header.php';
     </div>
 
     <!-- SECTION 3 — FAQ -->
-    <section class="mb-8">
+    <section id="faq" class="mb-8" style="scroll-margin-top:5rem">
         <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions — Europa League droits TV</h2>
         <div class="space-y-3">
             <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">

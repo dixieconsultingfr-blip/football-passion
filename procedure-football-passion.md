@@ -814,4 +814,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Vidéo Facebook intégrée à l'article France - Turquie (8 novembre 2026)** : reel `4601476266794941` (iframe Facebook, `max-width:100%`) après l'introduction, avec lien nofollow vers la page Facebook.
 
+
+### 3.89 Article Italie - France (heure, chaîne, composition) — 8 novembre 2026
+
+- **Article id 91** `italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026` (catégorie France, étiquettes `["Équipe de France", "Ligue des nations"]`), vignette `italie-france-ligue-des-nations-12-novembre-2026-san-siro.jpg` : jeudi 12 novembre 2026, 20h45, San Siro (Stadio Giuseppe Meazza), Milan, TF1 et TF1+, 5e journée du groupe A1 ; classement (France 10, Italie 7, Belgique 6, Turquie 0) calculé depuis la page du groupe ; rappel du match aller (1-1, article 56) ; section « route vers l'Euro 2028 » (mots-clés) ; composition **non inventée**.
+- **Éléments du texte fourni NON repris** : commentateurs (Margotton, Lizarazu : non vérifiés) ; « un point suffit pour valider les quarts » reformulé en « selon nos calculs, un point de plus suffirait à éviter la 3e place, si l'on s'en tient aux deux premiers de chaque groupe » (calcul fait : avec 11 points la France ne peut pas être dépassée par deux équipes, car l'Italie et la Belgique se rencontrent).
+- **Liens croisés** : article France - Turquie (90) vers l'article Italie - France ; `equipe-france.php` (carte du 12 novembre cliquable) ; `droits-tv-football.php` (lien + lieu San Siro) ; `ligue-des-nations-groupe-a1.php` (lieu San Siro, Milan). Tâche de mise à jour ajoutée à `todolist.md`.
+
 *Dernière mise à jour : 8 novembre 2026*

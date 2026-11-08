@@ -8,7 +8,7 @@ $matchs = [
     ['date' => '2026-09-28', 'heure' => '20h45', 'dom' => 'Belgique', 'ext' => 'France',   'lieu' => 'Bruxelles',                     'score_dom' => 0, 'score_ext' => 1],
     ['date' => '2026-10-02', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Italie',   'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 1, 'score_ext' => 1],
     ['date' => '2026-10-05', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Belgique', 'lieu' => 'Stade de France, Saint-Denis',  'score_dom' => 4, 'score_ext' => 1],
-    ['date' => '2026-11-12', 'heure' => '20h45', 'dom' => 'Italie',   'ext' => 'France',   'lieu' => 'Italie',                        'score_dom' => null, 'score_ext' => null],
+    ['date' => '2026-11-12', 'heure' => '20h45', 'dom' => 'Italie',   'ext' => 'France',   'lieu' => 'San Siro, Milan',                        'score_dom' => null, 'score_ext' => null],
     ['date' => '2026-11-15', 'heure' => '20h45', 'dom' => 'France',   'ext' => 'Turquie',  'lieu' => 'Stade Atlantique, Bordeaux',                    'score_dom' => null, 'score_ext' => null],
 ];
 

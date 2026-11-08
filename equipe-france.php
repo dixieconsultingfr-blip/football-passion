@@ -133,11 +133,11 @@ include __DIR__ . '/templates/header.php';
         avant les quarts de finale prévus en mars 2027 et le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-        <div class="bg-gray-800 border border-green-800/60 rounded-xl p-5">
+        <a href="/blog/italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Jeudi 12 novembre, 20h45</p>
             <p class="text-white font-bold text-lg">Italie - France</p>
-            <p class="text-gray-400 text-sm mt-1">Avant-dernière journée du groupe A1, en Italie, sur TF1 et TF1+.</p>
-        </div>
+            <p class="text-gray-400 text-sm mt-1">San Siro, à Milan, sur TF1 et TF1+. Heure, chaîne et enjeux →</p>
+        </a>
         <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, 20h45</p>
             <p class="text-white font-bold text-lg">France - Turquie</p>

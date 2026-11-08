@@ -76,3 +76,21 @@ Ce fichier garde une trace des relevés d'indexation (les captures GSC ne sont p
 | **2026-11-01** | 94 | 62 | 25 | 9 | 4 | 1 | **195** |
 | 2026-11-15 | | | | | | | |
 | 2026-11-30 | | | | | | | |
+
+---
+
+## Relevé des requêtes GSC — 8 novembre 2026 (période non précisée, environ 70 clics au total)
+
+**Ce qui marche**
+- **Marque** (~29 clics) : « football passion » 16 clics / 226 impr. (pos. 6,2), « footballpassion » 4/17, « foot passion » 3/130 (pos. 9,9), « passion football » 2/165 (pos. 7,8). Pas encore en tête sur la marque ; « football passion srl » (21 impr.) vient d'une société homonyme.
+- **Partage Ligue 1+ / 2 écrans** (~28 clics, ~1 100 impr., pos. 7 à 11) : « partage abonnement ligue 1 plus » 5/194 (pos. 8,9), « ligue 1 plus connexion simultanée » 0/169 (pos. 10,1), « comment partager ligue 1 plus » 1/48, « ligue 1 plus 2 utilisateurs comment ça marche » 3/61. Meilleur filon du site : passer de la position 8-10 à la 3-5.
+- **Aubagne** : « aubagne l3 » pos. 3, « aubagne air bel ligue 3 » pos. 12, « sporting club aubagne air-bel » pos. 13 (portrait indexé).
+
+**Opportunités**
+- **Euro 2028 / lieu** : « euro 2028 lieu » 51 impr. (pos. 9,5) ; requêtes avec **mauvaise année** : « euro 2027 » 57 impr. (pos. 10,5), « euro 2026 » (pos. 26-50) -> ajouter une FAQ « Il n'y a pas d'Euro en 2027 : le prochain est en 2028 ».
+- **Ligue des nations 2027** : « ligue des nations 2027 lieu » 21 impr. (pos. 11,5), « finale ligue des nations 2027 » 8, « coupe d'europe des nations 2027 » 7 (pos. 10).
+- **France - Turquie (15 nov.)** : « chaine/quelle chaine france turquie » ~20 impr. en pos. 1 à 7, 0 clic ; « composition france turquie » pos. 10-23 -> article ou encart « heure et chaîne » avant le 15 novembre.
+- **Résultats/classements L2, Conférence, Europa, CL** : des centaines d'impressions en pos. 40-80 (page 5 à 8) : titres et H1 « Résultats et classement » à renforcer, mais concurrence forte (sites de scores).
+- **Droits TV** : « droit tv » 10 impr. (pos. 24,6), « offre europa league » 19 (pos. 27).
+
+**Actions** : voir `todolist.md` (section SEO GSC).

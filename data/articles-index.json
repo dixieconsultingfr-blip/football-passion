@@ -1,5 +1,19 @@
 [
     {
+        "id": 93,
+        "slug": "ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027",
+        "titre": "Ligue 1, journée 10 : l'OM s'impose à Bollaert (2-1), le PSG garde la tête, le Paris FC sur le podium",
+        "categorie": "L1",
+        "etiquettes": [
+            "OM",
+            "Ligue 1"
+        ],
+        "date": "2026-11-09",
+        "extrait": "L'OM a gagné 2-1 à Lens pour sa cinquième victoire de suite, le PSG a battu Troyes 1-0 et reste leader avec 23 points, le Paris FC monte sur le podium. Tous les résultats de la 10e journée de Ligue 1 et le classement.",
+        "vignette": "/images/ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027.jpg",
+        "image_alt": "Ligue 1 journee 10 : Lens 1-2 Marseille, Paris SG 1-0 Troyes, Lille 2-1 a Rennes, le PSG reste leader avec 23 points"
+    },
+    {
         "id": 92,
         "slug": "ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027",
         "titre": "Ligue 2, journée 12 : l'ASSE répond à Guingamp en battant Laval 2-0, Nancy s'accroche à trois points",

@@ -838,4 +838,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Article** `ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027` (catégorie L2, étiquettes `["ASSE", "Ligue 2"]`) : ASSE 2-0 Laval, leader avec 28 points (+14), Nancy 2e (25 pts) après 1-0 contre Sochaux et 4-1 au Red Star, Montpellier battu 3-2 par Metz (24 pts), Reims battu 3-2 à Grenoble (21 pts), prochain match de l'ASSE à Reims le 21 novembre à 20h. Tableau des résultats J12 et classement top 6 (calculés depuis `matchs.json`, avec `<caption>`), avis éditorial, lien vers l'article J11. Aucun buteur ni minute (non fournis).
 - **Vignette** `ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027.jpg`. Piège : un `sed` avec des `\` dans le chemin du script PowerShell a produit un fichier à la racine du dépôt (`-2-journee-12-...jpg`), déplacé dans `images/` avant tout commit.
 
+
+### 3.92 Article Ligue 1 journée 10 (id 93) — 9 novembre 2026
+
+- **Article** `ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027` (catégorie L1, étiquettes `["OM", "Ligue 1"]`) : résultats J10 (6 au 8 novembre) lus dans `matchs.json` (alimenté par n8n), classement calculé (PSG 23, Lille 21, Paris FC 20, OM 18, Lyon 17, Nice 17, Monaco 16, Rennes 16 ; Le Havre dernier, 2 points), buteurs et minutes **vérifiés sur l'article Ligue 1** (Gouiri 2e, Thauvin 20e de la tête, Abdallah 82e ; Zabarnyi de la tête pour le PSG ; Sinayoko pour le Paris FC), prochaine journée du 20 au 22 novembre.
+- **Vérifications faites sur le texte fourni** : OM 5 victoires de suite en L1 (données) ; PSG « huitième victoire de suite » exact **toutes compétitions** (7e en L1, confirmé par la Ligue 1) ; Lens « 3e défaite de rang » exact toutes compétitions (Lille, Côme en Ligue des champions, OM). Le buteur du Mans (« Colas ») n'est pas confirmé par la Ligue 1 : non repris.
+- **Vignette** `ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027.jpg`.
+
 *Dernière mise à jour : 9 novembre 2026*

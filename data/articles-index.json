@@ -1,5 +1,19 @@
 [
     {
+        "id": 92,
+        "slug": "ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027",
+        "titre": "Ligue 2, journée 12 : l'ASSE répond à Guingamp en battant Laval 2-0, Nancy s'accroche à trois points",
+        "categorie": "L2",
+        "etiquettes": [
+            "ASSE",
+            "Ligue 2"
+        ],
+        "date": "2026-11-09",
+        "extrait": "Saint-Étienne a battu Laval 2-0 samedi 7 novembre et reste leader de la Ligue 2 avec 28 points. Nancy, vainqueur de Sochaux, est deuxième à trois points ; Montpellier et Reims ont perdu. Résultats de la J12 et classement.",
+        "vignette": "/images/ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027.jpg",
+        "image_alt": "Ligue 2 journee 12 : Saint-Etienne bat Laval 2-0 et reste leader avec 28 points, Nancy a 25 points, Montpellier a 24 points"
+    },
+    {
         "id": 91,
         "slug": "italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026",
         "titre": "Italie - France : heure, chaîne (TF1) et composition du match des Bleus à Milan, jeudi 12 novembre 2026",

@@ -832,4 +832,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Lacune comblée (8 novembre 2026)** : Reims 2-0 Sochaux et Red Star 1-4 Nancy (J11, 2 novembre) saisis ; les 18 clubs ont maintenant 12 matchs. Classement : Saint-Etienne 28, **Nancy 25**, Montpellier 24, **Reims 21**, Pau FC 20, Dijon 18, Metz 17, Red Star 17.
 
-*Dernière mise à jour : 8 novembre 2026*
+
+### 3.91 Article Ligue 2 journée 12 (id 92) — 9 novembre 2026
+
+- **Article** `ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027` (catégorie L2, étiquettes `["ASSE", "Ligue 2"]`) : ASSE 2-0 Laval, leader avec 28 points (+14), Nancy 2e (25 pts) après 1-0 contre Sochaux et 4-1 au Red Star, Montpellier battu 3-2 par Metz (24 pts), Reims battu 3-2 à Grenoble (21 pts), prochain match de l'ASSE à Reims le 21 novembre à 20h. Tableau des résultats J12 et classement top 6 (calculés depuis `matchs.json`, avec `<caption>`), avis éditorial, lien vers l'article J11. Aucun buteur ni minute (non fournis).
+- **Vignette** `ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027.jpg`. Piège : un `sed` avec des `\` dans le chemin du script PowerShell a produit un fichier à la racine du dépôt (`-2-journee-12-...jpg`), déplacé dans `images/` avant tout commit.
+
+*Dernière mise à jour : 9 novembre 2026*

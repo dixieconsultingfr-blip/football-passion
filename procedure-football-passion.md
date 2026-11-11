@@ -882,4 +882,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Vérifié** : les 26 matchs de la journée 6 se jouent à la même heure dans chaque groupe (argument de l'avis).
 - **Vignette** `ligue-des-nations-2026-2027-programme-journees-5-et-6.jpg`. Piège : un titre trop long (64 pt) est coupé (`NoWrap`) ; garder le titre court et mettre le détail dans le sous-titre.
 
+- **Diffusion ajoutée à l'article « programme journées 5 et 6 » (11 novembre 2026)** : section « Sur quelle chaîne voir les matchs ? » (`#chaines`) à partir du texte fourni par l'utilisateur (source non citée) : Bleus sur TF1 et TF1+ en direct et en clair (Italie - France le 12 novembre, France - Turquie le 15, 6 matchs en exclusivité TF1/TF1+) ; autres affiches de la Ligue A principalement sur L'Équipe et L'Équipe Live Foot (Turquie - Belgique, Angleterre - Croatie, Tchéquie - Espagne, Serbie - Allemagne, Pays-Bas - Grèce, Slovénie - Suisse, multiplex des 13 et 14 novembre). Libellé « diffusion annoncée, susceptible d'évoluer ». La diffusion des matchs de la journée 6 n'a pas été fournie. Le tableau « Équipe de France » de `droits-tv-football.php` est déjà cohérent (TF1 / TF1+).
+
 *Dernière mise à jour : 11 novembre 2026*

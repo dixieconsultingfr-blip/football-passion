@@ -48,16 +48,17 @@
 </head>
 <body class="bg-gray-950 text-gray-100">
     <header class="bg-gray-900 border-b border-green-500">
-        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="flex items-center">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-y-3">
+            <a href="/" class="flex items-center shrink-0">
                 <img src="/images/charte-graphique/logo-football-passion.svg" alt="Football Passion" class="h-8 w-auto" />
             </a>
-            <ul class="flex gap-6">
+            <ul class="flex flex-wrap gap-x-5 gap-y-2 sm:gap-6 text-sm sm:text-base">
                 <li><a href="/" class="hover:text-green-400">Accueil</a></li>
                 <li><a href="/calendrier.php" class="hover:text-green-400">Calendrier</a></li>
                 <li><a href="/archives.php" class="hover:text-green-400">Archives</a></li>
                 <li><a href="/blog/" class="hover:text-green-400">Blog</a></li>
                 <li><a href="/droits-tv-football.php" class="hover:text-green-400">Droits TV</a></li>
+                <li><a href="/euro-2028.php" class="hover:text-green-400">Euro 2028</a></li>
             </ul>
         </nav>
     </header>

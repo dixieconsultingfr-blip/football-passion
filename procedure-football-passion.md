@@ -914,4 +914,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Menu du haut : entrée « Euro 2028 » ajoutée (11 novembre 2026)** dans `templates/header.php`. Test mobile préalable (375 px) sur le site en ligne : l'ancien menu (5 entrées, `flex gap-6` sans retour à la ligne) **écrasait déjà le logo** (le menu occupait presque toute la largeur) et mettait « Droits TV » sur deux lignes ; une 6e entrée aurait fait déborder la page. Correctif : `nav` en `flex-wrap` avec `gap-y-3`, logo `shrink-0`, menu `flex-wrap` avec `gap-x-5 gap-y-2 text-sm sm:text-base sm:gap-6`. Résultat mesuré à 375 px : logo visible (170 px) sur la 1re ligne, menu sur les lignes suivantes, pas de défilement horizontal ; sur écran large, le menu reste à droite du logo.
 
+- **Carte « France » ajoutée à la section « Les équipes de l'Euro 2028 » d'`euro-2028.php` (11 novembre 2026)** : lien vers `/equipe-france.php#ligue-des-nations` ; la grille passe à 3 colonnes sur grand écran (5 cartes : toutes les équipes, France, 4 nations hôtes, Portugal, Turquie).
+
 *Dernière mise à jour : 11 novembre 2026*

@@ -863,4 +863,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Liens** : bandeau de navigation (chip « Les équipes ») sur `euro-2028.php` et `euro-2028-qualifications.php` ; lien « Voir le statut de toutes les équipes » dans la section « Quatre nations » d'`euro-2028.php` ; ajout au `sitemap.php`. Au passage, la date visible « mis à jour le » d'`euro-2028.php` était écrite en dur (31 octobre 2026) : elle suit maintenant `$date_maj_page`.
 - **Suite de la série** (voir `todolist.md`) : pages/articles Portugal, nations hôtes, prétendants, puis pages par groupe après le tirage.
 
+- **Article Italie - France (id 91) complété le 11 novembre 2026** : section « Le San Siro, La Scala del Calcio » (80 018 places, AC Milan et Inter, nom Giuseppe Meazza depuis 1980, grandes affiches, finale de la Ligue des nations 2021 gagnée par la France contre l'Espagne, première victoire officielle des Bleus dans ce stade) d'après Wikipédia (lien nofollow). Date d'inauguration non reprise (deux dates dans la source). `date_maj` au 11 novembre. Restent à ajouter : le reel Facebook (embed à fournir), l'affiche en vignette, la composition officielle le 12 novembre.
+
 *Dernière mise à jour : 11 novembre 2026*

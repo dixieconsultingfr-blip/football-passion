@@ -1,11 +1,12 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
+$date_maj_page = '2026-11-11'; // à mettre à jour après le tirage du 6 décembre 2026 et à chaque changement — signal E-E-A-T
 $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'Qualifications Euro 2028 : dates et liste des Bleus de Zidane';
-$meta_desc  = "Quand ont lieu les qualifications de l'Euro 2028 ? Tirage au sort le 6 décembre 2026, matchs dès mars 2027. Suivez aussi la première liste de Zinédine Zidane pour l'équipe de France.";
+$page_title = 'Qualifications Euro 2028 : dates, tirage au sort et équipes';
+$meta_desc  = "Qualifications Euro 2028 : tirage au sort le 6 décembre 2026 à Belfast, matchs du 25 mars 2027 au 28 mars 2028, format, équipes à suivre (France, Portugal, Turquie) et pays hôtes.";
 $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -33,10 +34,18 @@ include __DIR__ . '/templates/header.php';
     },
     {
       "@type": "Question",
-      "name": "Quand Zinédine Zidane annonce-t-il sa première liste de joueurs ?",
+      "name": "Où en est l'équipe de France avant les qualifications de l'Euro 2028 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Zinédine Zidane dévoile sa première liste de joueurs comme sélectionneur de l'équipe de France le vendredi 18 septembre 2026 à 18h, au siège de la FFF. Le rassemblement des Bleus débute le 21 septembre, avant deux matchs de Ligue des Nations : en Turquie le 25 septembre, puis en Belgique le 28 septembre."
+        "text": "Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, sont en tête du groupe A1 de la Ligue des Nations avec 10 points après quatre matchs. Ils jouent en Italie le 12 novembre 2026, puis reçoivent la Turquie à Bordeaux le 15 novembre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles équipes sont qualifiées pour l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aucune équipe n'est qualifiée au 11 novembre 2026 : les qualifications débutent le 25 mars 2027, après le tirage au sort du 6 décembre 2026 à Belfast."
       }
     }
   ]
@@ -69,11 +78,12 @@ include __DIR__ . '/templates/header.php';
 <header class="mb-10">
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Route vers l'Euro 2028</p>
     <h1 class="text-4xl font-bold text-white mb-2">Qualifications Euro 2028 et liste des Bleus</h1>
-    <p class="text-gray-400 text-sm mb-4">Tirage au sort le 6 décembre 2026 · Matchs du 25 mars 2027 au 28 mars 2028</p>
+    <p class="text-gray-400 text-sm mb-1">Tirage au sort le 6 décembre 2026 · Matchs du 25 mars 2027 au 28 mars 2028</p>
+    <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
         Avant de retrouver le Royaume-Uni et l'Irlande à l'été 2028, chaque nation européenne doit passer par la case
-        qualifications. Cette page suit les deux temps forts à venir : le calendrier officiel des qualifications, et la
-        constitution du groupe France sous la houlette de Zinédine Zidane.
+        qualifications. Cette page fait le point sur le calendrier officiel des qualifications, sur la situation de l'équipe de France
+        sous la houlette de Zinédine Zidane et sur les autres équipes à suivre. Aucune équipe n'est qualifiée à ce jour.
     </p>
 </header>
 
@@ -98,24 +108,52 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <!-- Zidane et la liste des Bleus -->
-<section class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-4">Zidane et la première liste des Bleus</h2>
+<section id="bleus" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">L'équipe de France avant les qualifications</h2>
     <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
         <p>
-            Nommé sélectionneur de l'équipe de France le 28 juillet 2026, <strong class="text-white">Zinédine Zidane
-            dévoilera sa toute première liste de joueurs le vendredi 18 septembre 2026, à 18h</strong>, au siège de la
-            Fédération Française de Football. Un moment particulièrement suivi puisqu'il s'agit du premier groupe qu'il
-            réunira à la tête des Bleus.
+            Nommé sélectionneur de l'équipe de France le 28 juillet 2026, avec un contrat jusqu'en 2030, <strong class="text-white">Zinédine Zidane</strong>
+            prépare l'Euro 2028 en Ligue des Nations. Après quatre matchs du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1</a>,
+            les Bleus sont en tête avec <strong class="text-white">10 points</strong> (3 victoires, 1 nul), devant l'Italie (7 points), la Belgique (6) et la Turquie (0).
         </p>
         <p>
-            Le rassemblement débute le <strong class="text-white">21 septembre 2026</strong>, avec deux rendez-vous de
-            Ligue des Nations au programme : un déplacement en <strong class="text-white">Turquie le 25 septembre</strong>,
-            puis un match à <strong class="text-white">Bruxelles face à la Belgique le 28 septembre</strong>.
+            Les deux derniers matchs du groupe : <a href="/blog/italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026" class="text-green-400 underline hover:text-green-300">Italie - France</a>
+            le <strong class="text-white">jeudi 12 novembre à 20h45</strong>, puis
+            <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="text-green-400 underline hover:text-green-300">France - Turquie</a>
+            le <strong class="text-white">dimanche 15 novembre à 20h45</strong>, à Bordeaux, tous deux sur TF1 et TF1+.
         </p>
-        <p class="text-gray-500 text-xs pt-2 border-t border-gray-700">
-            La composition précise de cette première liste n'est pas encore connue à ce jour — nous mettrons cette page
-            à jour dès l'annonce officielle du 18 septembre, avec la liste complète des joueurs convoqués.
+        <p>
+            Les listes de Zidane : <a href="/blog/premiere-liste-zidane-23-bleus-ce-quil-faut-retenir" class="text-green-400 underline hover:text-green-300">la première liste</a>
+            (18 septembre) et <a href="/blog/zidane-deuxieme-liste-bleus-forfaits-attaque-thauvin-2026" class="text-green-400 underline hover:text-green-300">la deuxième liste</a> pour le rassemblement de novembre.
+            Toute l'actualité des Bleus est sur la page <a href="/equipe-france.php#ligue-des-nations" class="text-green-400 underline hover:text-green-300">Équipe de France</a>.
         </p>
+    </div>
+</section>
+
+<!-- Autres équipes -->
+<section id="autres-equipes" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Les autres équipes à suivre</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/euro-2028-les-equipes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Toutes les équipes</p>
+            <p class="text-white font-bold text-lg">Statut des 24 places et nations hôtes</p>
+            <p class="text-gray-400 text-sm mt-1">Angleterre, Écosse, pays de Galles et Irlande doivent aussi se qualifier. Voir le statut de chaque équipe →</p>
+        </a>
+        <a href="/euro-2028-portugal.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Portugal</p>
+            <p class="text-white font-bold text-lg">L'après-Cristiano Ronaldo</p>
+            <p class="text-gray-400 text-sm mt-1">Retraite internationale annoncée le 5 novembre 2026, Jorge Jesus, groupe D de la Ligue des Nations →</p>
+        </a>
+        <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>
+            <p class="text-white font-bold text-lg">Sergen Yalçın, nouveau sélectionneur</p>
+            <p class="text-gray-400 text-sm mt-1">Dernière du groupe A1, la Turquie joue en France le 15 novembre →</p>
+        </a>
+        <a href="/ligue-des-nations-2026-2027.php#classements-groupes" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Ligue des Nations</p>
+            <p class="text-white font-bold text-lg">Les classements des 14 groupes</p>
+            <p class="text-gray-400 text-sm mt-1">Phase de groupes jusqu'au 17 novembre, quarts de finale en mars 2027 →</p>
+        </a>
     </div>
 </section>
 
@@ -146,11 +184,21 @@ include __DIR__ . '/templates/header.php';
 
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
-                Quand Zinédine Zidane annonce-t-il sa première liste de joueurs ?
+                Où en est l'équipe de France avant les qualifications de l'Euro 2028 ?
                 <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
             </summary>
             <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                Zinédine Zidane dévoile sa première liste de joueurs comme sélectionneur de l'équipe de France le vendredi 18 septembre 2026 à 18h, au siège de la FFF. Le rassemblement des Bleus débute le 21 septembre, avant deux matchs de Ligue des Nations : en Turquie le 25 septembre, puis en Belgique le 28 septembre.
+                Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, sont en tête du groupe A1 de la Ligue des Nations avec 10 points après quatre matchs. Ils jouent en Italie le 12 novembre 2026, puis reçoivent la Turquie à Bordeaux le 15 novembre.
+            </p>
+        </details>
+
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Quelles équipes sont qualifiées pour l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+                Aucune équipe n'est qualifiée au 11 novembre 2026 : les qualifications débutent le 25 mars 2027, après le tirage au sort du 6 décembre 2026 à Belfast.
             </p>
         </details>
 

@@ -215,10 +215,10 @@ $groupesLigueA = [
 <section id="equipes-a-suivre" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Les équipes à suivre</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <a href="/blog/cristiano-ronaldo-retraite-internationale-portugal-euro-2028" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+        <a href="/euro-2028-portugal.php" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Portugal</p>
             <p class="text-white font-bold text-lg">Un premier Euro sans Cristiano Ronaldo</p>
-            <p class="text-gray-400 text-sm mt-1">Retraite internationale annoncée le 5 novembre 2026, après 23 ans en sélection. Le Portugal joue en Ligue des nations le 14 novembre au Danemark à Braga, puis au pays de Galles à Cardiff. Lire l'article →</p>
+            <p class="text-gray-400 text-sm mt-1">Retraite internationale annoncée le 5 novembre 2026, après 23 ans en sélection. Sélectionneur, groupe D de la Ligue des nations (Danemark le 14 novembre, pays de Galles le 17), palmarès et Euro 2028 : voir la page Portugal →</p>
         </a>
         <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>

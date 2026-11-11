@@ -867,4 +867,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Vignette Italie - France remplacée (11 novembre 2026)** : affiche fournie par l'utilisateur (`Italie–France _ Zidane défie l'Italie à Milan.png`, 941 x 1672, générée par IA, avec portrait réaliste de Zidane), **recadrée sur le haut (1192 px sur 1672)** pour retirer la faute « quats de finale » (au lieu de « quarts ») et la phrase « Zidane attend une grande réaction de ses Bleus » (non sourcée), placée sur fond flou 1200 x 675 en WebP : `italie-france-ligue-des-nations-12-novembre-2026-affiche.webp` (nouveau nom). Ancienne vignette générée supprimée. **Si l'utilisateur régénère l'affiche avec « quarts »**, l'intégrer en entier. Point d'attention : portrait IA réaliste d'une personne réelle (à utiliser avec prudence en dehors du site). Reel Facebook à ajouter quand le code d'intégration sera fourni.
 
+- **Reel Facebook intégré à l'article Italie - France (11 novembre 2026)** : reel `1100099546354059` (iframe `max-width:100%`) après l'introduction, avec lien nofollow vers la page Facebook.
+
 *Dernière mise à jour : 11 novembre 2026*

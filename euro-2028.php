@@ -7,7 +7,7 @@ usort($articlesEuro, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date'
 $page_title = 'Euro 2028 — Dates, pays hôtes, stades et qualifications';
 $meta_desc  = "Tout savoir sur l'Euro 2028 au Royaume-Uni et en Irlande : dates, stades, format, qualifications et objectifs des Bleus de Zidane.";
 $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
-$date_maj_page = '2026-10-31';
+$date_maj_page = '2026-11-11';
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -97,7 +97,7 @@ include __DIR__ . '/templates/header.php';
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Prochain grand tournoi européen</p>
     <h1 class="text-4xl font-bold text-white mb-2">Euro 2028</h1>
     <p class="text-gray-400 text-sm mb-1">9 juin — 9 juillet 2028 · Royaume-Uni &amp; République d'Irlande</p>
-    <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>">31 octobre 2026</time></p>
+    <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
         Pour la première fois depuis 1996, le Championnat d'Europe revient sur les îles britanniques.
         <a href="#pays-hotes" class="underline hover:text-green-400">Quatre nations hôtes</a>, <a href="#stades" class="underline hover:text-green-400">neuf stades</a>, Wembley pour la finale — et une équipe de France emmenée
@@ -109,6 +109,7 @@ include __DIR__ . '/templates/header.php';
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Pages Euro 2028">
     <a href="/euro-2028-les-8-villes-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏙️ Les 8 villes hôtes</a>
     <a href="/euro-2028-les-9-stades.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏟️ Les 9 stades</a>
+    <a href="/euro-2028-les-equipes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🌍 Les équipes</a>
     <a href="/comment-regarder-euro-2028.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📺 Où regarder (TF1, M6, beIN)</a>
     <a href="/euro-2028-paris-sportifs.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🎲 Paris sportifs</a>
     <a href="/euro-2028-qualifications.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📋 Qualifications &amp; liste des Bleus</a>
@@ -153,6 +154,9 @@ include __DIR__ . '/templates/header.php';
         </div>
         <a href="/euro-2028-les-8-villes-hotes.php" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
             Découvrir les 8 villes hôtes en détail →
+        </a>
+        <a href="/euro-2028-les-equipes.php" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3 ml-4">
+            Voir le statut de toutes les équipes →
         </a>
     </section>
 

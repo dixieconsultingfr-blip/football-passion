@@ -855,4 +855,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Vignette de l'article Ronaldo remplacée (11 novembre 2026)** : affiche « Fin d'une ère, Cristiano Ronaldo » fournie par l'utilisateur (PNG 1254 x 1254, générée par IA : silhouette de dos, sans visage ni écusson) placée au centre d'une vignette 1200 x 675 sur fond flou, convertie en **WebP** (116 Ko) avec ffmpeg : `cristiano-ronaldo-retraite-internationale-portugal-euro-2028-affiche.webp` (nouveau nom de fichier). Ancienne vignette générée supprimée. Version carrée 1080 x 1080 WebP (233 Ko) dans `_fb/` pour Facebook.
 
+
+### 3.94 Page hub « Euro 2028 : les équipes » — 11 novembre 2026
+
+- **Nouvelle page** `euro-2028-les-equipes.php` (ancres `#equipes-qualifiees`, `#nations-hotes`, `#qualification`, `#statut`, `#equipes-a-suivre`, `#ligue-a`, `#faq`) : 24 places et chiffres clés (0 équipe qualifiée à ce jour), 4 nations hôtes (stades et groupe de Ligue des nations), système de qualification (25 mars 2027 - 28 mars 2028, 12 groupes, 12 vainqueurs + 8 meilleurs deuxièmes, barrages mars 2028, tirage le 6 décembre 2026 à Belfast), tableau « statut des équipes » avec `<caption>`, équipes à suivre (Portugal avec l'article Ronaldo, France), tableau des 4 groupes de la Ligue A (liens vers les pages de groupe), FAQ HTML + JSON-LD (5 questions), actualités de la catégorie Euro, `$date_maj_page = 2026-11-11`.
+- **Faits** : tous issus des pages existantes du site (`euro-2028.php`, `euro-2028-qualifications.php`, pages de groupes de la Ligue des nations) ; aucune équipe n'est présentée comme qualifiée. **À mettre à jour à chaque qualification, au tirage du 6 décembre 2026 et après chaque étape.**
+- **Liens** : bandeau de navigation (chip « Les équipes ») sur `euro-2028.php` et `euro-2028-qualifications.php` ; lien « Voir le statut de toutes les équipes » dans la section « Quatre nations » d'`euro-2028.php` ; ajout au `sitemap.php`. Au passage, la date visible « mis à jour le » d'`euro-2028.php` était écrite en dur (31 octobre 2026) : elle suit maintenant `$date_maj_page`.
+- **Suite de la série** (voir `todolist.md`) : pages/articles Portugal, nations hôtes, prétendants, puis pages par groupe après le tirage.
+
 *Dernière mise à jour : 11 novembre 2026*

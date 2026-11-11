@@ -24,6 +24,7 @@ $staticPages = [
     ['loc' => '/euro-2028-paris-sportifs.php',    'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/comment-regarder-euro-2028.php',  'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/euro-2028-qualifications.php',    'changefreq' => 'weekly',  'priority' => '0.7'],
+    ['loc' => '/euro-2028-les-equipes.php',       'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/ligue-des-nations-2026-2027.php', 'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/ligue-des-nations-groupe-a1.php', 'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/ligue-des-nations-groupe-b.php', 'changefreq' => 'weekly',  'priority' => '0.5'],

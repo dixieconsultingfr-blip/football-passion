@@ -905,4 +905,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Faits** : stades, capacités et matchs repris de `euro-2028-les-9-stades.php` (Aviva Stadium désigné « Dublin Arena » par l'UEFA, Principality Stadium « National Stadium of Wales ») ; classements et matchs tirés des pages de groupe et du programme des journées 5 et 6. **Aucun sélectionneur cité** (non vérifié).
 - **Liens** : bandeau de navigation (chip « Les 4 nations hôtes ») sur `euro-2028.php`, `euro-2028-les-equipes.php` et `euro-2028-qualifications.php` ; lien dans la section « Quatre nations » d'`euro-2028.php` et dans la section des nations hôtes du hub ; ajout au `sitemap.php`. **À mettre à jour** après chaque match des hôtes en Ligue des Nations (12 au 17 novembre) et au tirage du 6 décembre 2026.
 
+
+### 3.100 Audit de la navigation vers les pages équipes Euro 2028 et corrections — 11 novembre 2026
+
+- **Constat** (depuis `euro-2028.php`) : bandeau de navigation avec « Les équipes » et « Les 4 nations hôtes » (accès en 1 clic), mais **Portugal et Turquie à 2 clics seulement** (via le hub) ; `euro.php` (hub Euro, atteint depuis l'accueil) ne proposait **aucun lien vers les pages équipes** et gardait une carte obsolète (« première liste de Zidane » de septembre) ; **aucun lien vers Euro 2028 dans le pied de page ni l'en-tête** (accès uniquement par l'accueil -> `euro.php` -> `euro-2028.php`, soit 3 clics jusqu'au Portugal et 4 jusqu'à la Turquie).
+- **Corrections** : section « Les équipes de l'Euro 2028 » (`#equipes`) sur `euro-2028.php` avec 4 cartes (toutes les équipes, 4 nations hôtes, Portugal, Turquie) -> Portugal et Turquie à 1 clic ; `euro.php` : cartes « Les équipes », « Les nations hôtes » et « Portugal » à la place de la carte obsolète ; **lien « Euro 2028 » ajouté dans `templates/footer.php`** (liste des compétitions) -> Euro 2028 accessible en 1 clic depuis toutes les pages. Parcours : accueil -> pied de page -> Euro 2028 -> Portugal = 2 clics.
+- **Non fait (à décider)** : entrée « Euro 2028 » dans le menu de l'en-tête (`templates/header.php`, 5 entrées aujourd'hui) ; bandeau « Euro 2028 » sur l'accueil.
+
 *Dernière mise à jour : 11 novembre 2026*

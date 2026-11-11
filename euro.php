@@ -49,7 +49,7 @@ include __DIR__ . '/templates/header.php';
 </section>
 
 <section class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-5">En attendant l'Euro 2028</h2>
+    <h2 class="text-2xl font-bold text-white mb-5">En attendant l'Euro 2028 : les équipes à suivre</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <a href="/ligue-des-nations-groupe-a1.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Équipe de France · Bleus de Zidane</p>
@@ -58,12 +58,26 @@ include __DIR__ . '/templates/header.php';
             <p class="text-gray-500 text-xs mb-4">6 matchs du 25 septembre au 15 novembre 2026, diffusés sur TF1</p>
             <span class="text-green-400 text-xs font-semibold">Calendrier, classement et diffusion →</span>
         </a>
-        <a href="/blog/premiere-liste-zidane-23-bleus-ce-quil-faut-retenir" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
-            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">À lire</p>
-            <h3 class="text-white font-bold text-xl mb-2">La première liste de Zidane</h3>
-            <p class="text-gray-400 text-sm mb-1">23 Bleus, cinq nouveaux visages, sans Tchouaméni</p>
-            <p class="text-gray-500 text-xs mb-4">Le premier groupe de la route vers l'Euro 2028</p>
-            <span class="text-green-400 text-xs font-semibold">Lire l'article →</span>
+        <a href="/euro-2028-les-equipes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Les équipes</p>
+            <h3 class="text-white font-bold text-xl mb-2">Qui sera à l'Euro 2028 ?</h3>
+            <p class="text-gray-400 text-sm mb-1">24 places, aucune équipe qualifiée à ce jour</p>
+            <p class="text-gray-500 text-xs mb-4">Statut des équipes et nations à suivre</p>
+            <span class="text-green-400 text-xs font-semibold">Voir les équipes →</span>
+        </a>
+        <a href="/euro-2028-pays-hotes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Les nations hôtes</p>
+            <h3 class="text-white font-bold text-xl mb-2">Angleterre, Écosse, pays de Galles, Irlande</h3>
+            <p class="text-gray-400 text-sm mb-1">Neuf stades, huit villes</p>
+            <p class="text-gray-500 text-xs mb-4">Chaque stade, de Wembley à l'Aviva Stadium</p>
+            <span class="text-green-400 text-xs font-semibold">Voir les 4 nations hôtes →</span>
+        </a>
+        <a href="/euro-2028-portugal.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-6 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Portugal</p>
+            <h3 class="text-white font-bold text-xl mb-2">L'après-Cristiano Ronaldo</h3>
+            <p class="text-gray-400 text-sm mb-1">Retraite internationale annoncée le 5 novembre 2026</p>
+            <p class="text-gray-500 text-xs mb-4">Jorge Jesus, groupe D, palmarès</p>
+            <span class="text-green-400 text-xs font-semibold">Voir la page Portugal →</span>
         </a>
     </div>
 </section>

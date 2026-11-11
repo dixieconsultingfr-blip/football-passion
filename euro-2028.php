@@ -188,6 +188,34 @@ include __DIR__ . '/templates/header.php';
 
 </div>
 
+<!-- Équipes -->
+<section id="equipes" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Les équipes de l'Euro 2028</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Qui sera au Royaume-Uni et en Irlande en 2028 ? Les qualifications débutent le 25 mars 2027 : en attendant, retrouvez les équipes à suivre.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/euro-2028-les-equipes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Toutes les équipes</p>
+            <p class="text-white font-bold">Statut des 24 places</p>
+            <p class="text-gray-400 text-xs mt-1">Aucune équipe n'est encore qualifiée →</p>
+        </a>
+        <a href="/euro-2028-pays-hotes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Les 4 nations hôtes</p>
+            <p class="text-white font-bold">Angleterre, Écosse, pays de Galles, Irlande</p>
+            <p class="text-gray-400 text-xs mt-1">Leurs stades et leur route vers l'Euro →</p>
+        </a>
+        <a href="/euro-2028-portugal.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Portugal</p>
+            <p class="text-white font-bold">L'après-Cristiano Ronaldo</p>
+            <p class="text-gray-400 text-xs mt-1">Sélectionneur, groupe D, palmarès →</p>
+        </a>
+        <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>
+            <p class="text-white font-bold">Sergen Yalçın, nouveau sélectionneur</p>
+            <p class="text-gray-400 text-xs mt-1">Avant France - Turquie le 15 novembre →</p>
+        </a>
+    </div>
+</section>
+
 <!-- Stades -->
 <section id="stades" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Les 9 stades retenus</h2>

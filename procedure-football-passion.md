@@ -853,4 +853,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Non repris (non vérifié ou sensible)** : la réaction de la Fédération et celle de Jorge Jesus (relayées seulement par des résumés de recherche, pas par les pages lues), le montant exact de l'amende (250 ou 255 euros selon les sources), un titre du 11 novembre disant que Ronaldo aurait « refusé de prendre sa retraite » (non confirmé), le détail du différend avec le sélectionneur. L'article précise qu'aucun match d'adieu n'est confirmé à ce jour.
 - **Vignette** `cristiano-ronaldo-retraite-internationale-portugal-euro-2028.jpg`.
 
+- **Vignette de l'article Ronaldo remplacée (11 novembre 2026)** : affiche « Fin d'une ère, Cristiano Ronaldo » fournie par l'utilisateur (PNG 1254 x 1254, générée par IA : silhouette de dos, sans visage ni écusson) placée au centre d'une vignette 1200 x 675 sur fond flou, convertie en **WebP** (116 Ko) avec ffmpeg : `cristiano-ronaldo-retraite-internationale-portugal-euro-2028-affiche.webp` (nouveau nom de fichier). Ancienne vignette générée supprimée. Version carrée 1080 x 1080 WebP (233 Ko) dans `_fb/` pour Facebook.
+
 *Dernière mise à jour : 11 novembre 2026*

@@ -220,6 +220,11 @@ $groupesLigueA = [
             <p class="text-white font-bold text-lg">Un premier Euro sans Cristiano Ronaldo</p>
             <p class="text-gray-400 text-sm mt-1">Retraite internationale annoncée le 5 novembre 2026, après 23 ans en sélection. Le Portugal joue en Ligue des nations le 14 novembre au Danemark à Braga, puis au pays de Galles à Cardiff. Lire l'article →</p>
         </a>
+        <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>
+            <p class="text-white font-bold text-lg">Un nouveau sélectionneur, Sergen Yalçın</p>
+            <p class="text-gray-400 text-sm mt-1">Dernière du groupe A1 avec 0 point, la Turquie reçoit la Belgique le 12 novembre à Izmir puis joue en France le 15 novembre. Lire l'article →</p>
+        </a>
         <a href="/equipe-france.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">France</p>
             <p class="text-white font-bold text-lg">Les Bleus de Zinédine Zidane</p>

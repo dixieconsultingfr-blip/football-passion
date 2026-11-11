@@ -1,5 +1,19 @@
 [
     {
+        "id": 97,
+        "slug": "turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028",
+        "titre": "Turquie : Sergen Yalçın, la Ligue des Nations et l'Euro 2028, tout savoir sur la sélection turque avant France - Turquie",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Turquie",
+            "Euro 2028"
+        ],
+        "date": "2026-11-11",
+        "extrait": "Dernière du groupe A1 avec zéro point, la Turquie a limogé Vincenzo Montella et nommé Sergen Yalçın. Calendrier, joueurs à connaître, France - Turquie le 15 novembre et route vers l'Euro 2028 : le point sur la sélection turque.",
+        "vignette": "/images/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028.jpg",
+        "image_alt": "Equipe de Turquie : Sergen Yalcin selectionneur, 0 point en Ligue des Nations, Turquie-Belgique le 12 novembre a Izmir, France-Turquie le 15 novembre"
+    },
+    {
         "id": 96,
         "slug": "ligue-des-nations-2026-2027-programme-journees-5-et-6",
         "titre": "Ligue des Nations : le programme complet des journées 5 et 6, du 12 au 17 novembre",
@@ -97,7 +111,8 @@
         "date": "2026-11-08",
         "extrait": "Les Bleus reçoivent la Turquie dimanche 15 novembre 2026 à 20h45 à Bordeaux, pour la dernière journée du groupe A1 de la Ligue des nations. Heure, chaîne (TF1 et TF1+), enjeux et composition : tout ce qu'il faut savoir.",
         "vignette": "/images/france-turquie-ligue-des-nations-15-novembre-2026-affiche.jpg",
-        "image_alt": "France - Turquie, Ligue des nations, dimanche 15 novembre 2026 a 20h45 a Bordeaux, en direct sur TF1 et TF1+"
+        "image_alt": "France - Turquie, Ligue des nations, dimanche 15 novembre 2026 a 20h45 a Bordeaux, en direct sur TF1 et TF1+",
+        "date_maj": "2026-11-11"
     },
     {
         "id": 89,

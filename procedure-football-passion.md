@@ -845,4 +845,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Vérifications faites sur le texte fourni** : OM 5 victoires de suite en L1 (données) ; PSG « huitième victoire de suite » exact **toutes compétitions** (7e en L1, confirmé par la Ligue 1) ; Lens « 3e défaite de rang » exact toutes compétitions (Lille, Côme en Ligue des champions, OM). Le buteur du Mans (« Colas ») n'est pas confirmé par la Ligue 1 : non repris.
 - **Vignette** `ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027.jpg`.
 
-*Dernière mise à jour : 9 novembre 2026*
+
+### 3.93 Série « Euro 2028 : les autres équipes » — article Ronaldo (id 94) — 11 novembre 2026
+
+- **Décision** : développer le référencement Euro 2028 avec du contenu sur les équipes autres que la France : (1) page hub « Euro 2028 : les équipes », (2) Portugal, puis nations hôtes et prétendants, (3) pages par groupe après le tirage du 6 décembre (voir `todolist.md`).
+- **Article id 94** `cristiano-ronaldo-retraite-internationale-portugal-euro-2028` (catégorie Euro, étiquettes `["Portugal", "Euro 2028"]`) : annonce de la retraite internationale de Cristiano Ronaldo le jeudi 5 novembre 2026 (vidéo Instagram). Faits **recoupés sur franceinfo, Paris Match Belgique (AFP) et Le Journal du Real** : 234 sélections et 146 buts (records), débuts en août 2003, 6 Mondiaux (2006-2026) et 6 Euros (2004-2024), 14 buts en phase finale d'Euro, Euro 2016 (1-0 contre la France), Ligues des nations 2019 et 2025, Portugal éliminé en huitièmes du Mondial 2026 par l'Espagne (1-0), départ du rassemblement le 30 septembre, procédure disciplinaire le 10 octobre, prochains matchs (Danemark à Braga le 14 novembre, pays de Galles à Cardiff trois jours plus tard).
+- **Non repris (non vérifié ou sensible)** : la réaction de la Fédération et celle de Jorge Jesus (relayées seulement par des résumés de recherche, pas par les pages lues), le montant exact de l'amende (250 ou 255 euros selon les sources), un titre du 11 novembre disant que Ronaldo aurait « refusé de prendre sa retraite » (non confirmé), le détail du différend avec le sélectionneur. L'article précise qu'aucun match d'adieu n'est confirmé à ce jour.
+- **Vignette** `cristiano-ronaldo-retraite-internationale-portugal-euro-2028.jpg`.
+
+*Dernière mise à jour : 11 novembre 2026*

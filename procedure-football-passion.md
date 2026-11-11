@@ -869,4 +869,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Reel Facebook intégré à l'article Italie - France (11 novembre 2026)** : reel `1100099546354059` (iframe `max-width:100%`) après l'introduction, avec lien nofollow vers la page Facebook.
 
+
+### 3.95 Article « Ligue des Nations, journée 4 : tous les résultats » (id 95) — 11 novembre 2026
+
+- **Article** `ligue-des-nations-2026-2027-resultats-journee-4` (catégorie Euro, étiquettes `["Ligue des nations", "Euro 2028"]`) : les **26 résultats** des 14 groupes de la journée 4 (4 au 6 octobre 2026) fournis par l'utilisateur, groupés par groupe (A1, B à N, correspondance équipes/groupes tirée des pages de groupe du site), tableau des 26 scores avec `<caption>`, tableau des leaders par groupe (classements des pages de groupe, cohérents avec les résultats), lien vers l'article « quatre matchs phares » (id 58), vers Italie - France (J5) et vers le hub Euro 2028. Aucun buteur (non fournis). Publié le 11 novembre 2026, en complément des articles J1 (49), J2 (54) et J4 « matchs phares » (58) ; il n'existe pas d'article de résultats pour la J3.
+- **Vignette** `ligue-des-nations-2026-2027-resultats-journee-4.jpg`. Piège rencontré de nouveau : une concaténation `"a"+[char]0x..+"b"` dans un tableau PowerShell `@(...)` doit être mise entre parenthèses.
+
 *Dernière mise à jour : 11 novembre 2026*

@@ -120,6 +120,21 @@ if ($slug !== '') {
         <?= $article['contenu'] ?>
     </div>
 
+    <?php if (($article['categorie'] ?? '') === 'Euro' || in_array('Euro 2028', $article['etiquettes'] ?? [], true)): ?>
+    <aside class="mt-10 bg-gray-800 border border-green-800/40 rounded-xl p-5" aria-label="Dossier Euro 2028">
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dossier Euro 2028</p>
+        <p class="text-gray-300 text-sm leading-relaxed mb-3">L'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> se joue du 9 juin au 9 juillet 2028 dans quatre pays hôtes : tout savoir sur la date, le lieu et les équipes.</p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+            <li><a href="/euro-2028-pays-hotes.php" class="text-green-400 underline hover:text-green-300">Pays hôtes de l'Euro 2028</a></li>
+            <li><a href="/euro-2028-les-equipes.php" class="text-green-400 underline hover:text-green-300">Les équipes de l'Euro 2028</a></li>
+            <li><a href="/euro-2028-les-9-stades.php" class="text-green-400 underline hover:text-green-300">Les 9 stades</a></li>
+            <li><a href="/euro-2028-les-8-villes-hotes.php" class="text-green-400 underline hover:text-green-300">Où se joue l'Euro 2028 ? Les 8 villes</a></li>
+            <li><a href="/euro-2028-qualifications.php" class="text-green-400 underline hover:text-green-300">Calendrier des qualifications</a></li>
+            <li><a href="/comment-regarder-euro-2028.php" class="text-green-400 underline hover:text-green-300">Où regarder l'Euro 2028</a></li>
+        </ul>
+    </aside>
+    <?php endif; ?>
+
     <footer class="mt-12 pt-6 border-t border-gray-700">
         <?php if (!empty($article['etiquettes'])): ?>
         <div class="flex flex-wrap gap-2 mb-6">

@@ -128,15 +128,15 @@ include __DIR__ . '/templates/header.php';
 <section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Les Bleus de Zidane en Ligue des nations 2026-2027</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-4">
-        Après quatre matchs du groupe A1 (France, Italie, Belgique, Turquie), la France est en tête avec <strong class="text-white">10 points</strong> :
-        trois victoires et un nul, sept buts marqués et deux encaissés. Il reste deux rendez-vous, tous deux diffusés sur TF1 et TF1+ à 20h45,
+        Après cinq matchs du groupe A1 (France, Italie, Belgique, Turquie), la France compte <strong class="text-white">10 points</strong>, à égalité avec l'Italie, qui l'a battue 3-1 à Milan :
+        trois victoires, un nul et une défaite, huit buts marqués et cinq encaissés. Il reste un rendez-vous, diffusé sur TF1 et TF1+ à 20h45,
         avant les quarts de finale prévus en mars 2027 et le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-        <a href="/blog/italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
-            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Jeudi 12 novembre, 20h45</p>
-            <p class="text-white font-bold text-lg">Italie - France</p>
-            <p class="text-gray-400 text-sm mt-1">San Siro, à Milan, sur TF1 et TF1+. Heure, chaîne et enjeux →</p>
+        <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Jeudi 12 novembre, San Siro</p>
+            <p class="text-white font-bold text-lg">Italie 3 - 1 France</p>
+            <p class="text-gray-400 text-sm mt-1">Première défaite de l'ère Zidane, après l'ouverture du score d'Olise. Lire le compte rendu →</p>
         </a>
         <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, 20h45</p>
@@ -147,8 +147,8 @@ include __DIR__ . '/templates/header.php';
     <p class="text-gray-400 text-sm leading-relaxed">
         Les matchs déjà joués : <a href="/blog/zidane-victoire-turquie-france-debuts-bleus" class="text-green-400 underline hover:text-green-300">Turquie 0-1 France</a>,
         <a href="/blog/belgique-france-olise-coup-de-genie-zidane-deux-victoires" class="text-green-400 underline hover:text-green-300">Belgique 0-1 France</a>,
-        <a href="/blog/france-italie-olise-bastoni-premier-nul-zidane" class="text-green-400 underline hover:text-green-300">France 1-1 Italie</a> et
-        <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 underline hover:text-green-300">France 4-1 Belgique</a>.
+        <a href="/blog/france-italie-olise-bastoni-premier-nul-zidane" class="text-green-400 underline hover:text-green-300">France 1-1 Italie</a>,
+        <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 underline hover:text-green-300">France 4-1 Belgique</a> et <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="text-green-400 underline hover:text-green-300">Italie 3-1 France</a>.
         Le calendrier, le classement et la diffusion sont sur la page du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1 de la Ligue des nations</a>.
     </p>
 </section>

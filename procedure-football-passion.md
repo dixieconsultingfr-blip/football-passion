@@ -916,4 +916,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Carte « France » ajoutée à la section « Les équipes de l'Euro 2028 » d'`euro-2028.php` (11 novembre 2026)** : lien vers `/equipe-france.php#ligue-des-nations` ; la grille passe à 3 colonnes sur grand écran (5 cartes : toutes les équipes, France, 4 nations hôtes, Portugal, Turquie).
 
-*Dernière mise à jour : 11 novembre 2026*
+
+### 3.101 Article « Italie 3-1 France » (id 98) et mises à jour après le match — 13 novembre 2026
+
+- **Résultat fourni par l'utilisateur** : Italie 3-1 France, jeudi 12 novembre 2026 à San Siro (5e journée du groupe A1) : Michael Olise ouvre le score (10e minute), l'Italie renverse la rencontre après la pause, doublé de Francesco Pio Esposito et but de Davide Frattesi ; première défaite de l'ère Zidane. Les minutes des buts italiens, la composition officielle et les autres détails n'ont pas été fournis : **non inventés**.
+- **Article id 98** `italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028` (catégorie France, étiquettes `["Équipe de France", "Euro 2028"]`) : compte rendu, bilan des 5 matchs de Zidane (3 V, 1 N, 1 D), tableau des 5 matchs avec `<caption>`, groupe A1 (France et Italie à 10 points), calcul « une victoire contre la Turquie = 13 points et top 2 garanti, car la Belgique ne peut pas dépasser 12 points », section « Euro 2028 » (tirage 6 décembre, qualifications dès le 25 mars 2027, finale à Wembley), avis. **Vignette provisoire générée** (`...-euro-2028.jpg`) : à remplacer par l'image de l'utilisateur (format conseillé 1200 x 675 px, WebP, moins de 300 Ko).
+- **Mises à jour** : article avant-match Italie - France (id 91, encadré « Résultat » en tête) ; article France - Turquie (id 90, paragraphe « enjeux » réécrit après la défaite) ; `ligue-des-nations-groupe-a1.php` (score 3-1 saisi, date de mise à jour) ; `droits-tv-football.php` (score, liens compte rendu/avant-match) ; `equipe-france.php` (bilan après 5 matchs, carte Italie 3-1 France, liste des matchs).
+- **En attente** : le résultat de Turquie - Belgique (12 novembre, 18h00) n'a pas été fourni ; le classement complet du groupe A1 (Belgique, Turquie) et l'article sur la Turquie (id 97) restent à compléter.
+
+*Dernière mise à jour : 13 novembre 2026*

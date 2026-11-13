@@ -1,5 +1,19 @@
 [
     {
+        "id": 99,
+        "slug": "ligue-des-nations-2026-2027-resultats-journee-5-jeudi-12-novembre",
+        "titre": "Ligue des Nations, journée 5 : l'Italie bat la France, l'Espagne et l'Angleterre s'imposent (résultats du 12 novembre)",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Ligue des nations",
+            "Euro 2028"
+        ],
+        "date": "2026-11-13",
+        "extrait": "Italie 3-1 France, Turquie 1-2 Belgique, Angleterre 2-1 Croatie, Tchéquie 0-2 Espagne : les huit résultats de la journée 5 de la Ligue des Nations du jeudi 12 novembre 2026, et les leaders des groupes.",
+        "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-5-jeudi-12-novembre.jpg",
+        "image_alt": "Ligue des Nations journee 5, resultats du 12 novembre 2026 : Italie 3-1 France, Angleterre 2-1 Croatie, Tchequie 0-2 Espagne, Turquie 1-2 Belgique"
+    },
+    {
         "id": 98,
         "slug": "italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028",
         "titre": "Italie 3-1 France : première défaite de l'ère Zidane à San Siro, les Bleus doivent réagir avant l'Euro 2028",

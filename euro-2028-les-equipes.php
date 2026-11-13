@@ -224,12 +224,12 @@ $groupesLigueA = [
         <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>
             <p class="text-white font-bold text-lg">Un nouveau sélectionneur, Sergen Yalçın</p>
-            <p class="text-gray-400 text-sm mt-1">Dernière du groupe A1 avec 0 point, la Turquie reçoit la Belgique le 12 novembre à Izmir puis joue en France le 15 novembre. Lire l'article →</p>
+            <p class="text-gray-400 text-sm mt-1">Dernière du groupe A1 avec 0 point, battue 1-2 par la Belgique à Izmir le 12 novembre, la Turquie joue en France le 15 novembre. Lire l'article →</p>
         </a>
         <a href="/equipe-france.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">France</p>
             <p class="text-white font-bold text-lg">Les Bleus de Zinédine Zidane</p>
-            <p class="text-gray-400 text-sm mt-1">En tête du groupe A1 de la Ligue des nations, avec l'Euro 2028 pour objectif. Toute l'actualité sur la page Équipe de France →</p>
+            <p class="text-gray-400 text-sm mt-1">À égalité avec l'Italie (10 points) dans le groupe A1 après sa défaite 3-1 à Milan, avec l'Euro 2028 pour objectif. Toute l'actualité sur la page Équipe de France →</p>
         </a>
     </div>
 </section>

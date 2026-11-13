@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-10-05'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
+$date_maj_page = '2026-11-13'; // à mettre à jour à chaque résultat ou changement — signal E-E-A-T
 $articlesAll = load_articles_index(__DIR__);
 $articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
 usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
@@ -135,12 +135,12 @@ include __DIR__ . '/templates/header.php';
             <li>✅ <strong class="text-white">28 septembre 2026</strong> — Belgique 0 - 1 France</li>
             <li>✅ <strong class="text-white">2 octobre 2026</strong> — France 1 - 1 Italie</li>
             <li>✅ <strong class="text-white">5 octobre 2026</strong> — France 4 - 1 Belgique <span class="text-gray-500">(doublé d'Olise, Doué, Cherki)</span></li>
-            <li>📅 <strong class="text-white">12 novembre 2026</strong> — Italie - France</li>
+            <li>✅ <strong class="text-white">12 novembre 2026</strong> — Italie 3 - 1 France <span class="text-gray-500">(but d'Olise, doublé d'Esposito et but de Frattesi)</span></li>
             <li>📅 <strong class="text-white">15 novembre 2026</strong> — France - Turquie</li>
         </ul>
         <p class="pt-2 border-t border-gray-700">
-            <strong class="text-white">Après la France - Belgique de la 4e journée :</strong> menés au score, les Bleus ont renversé la Belgique (4-1) au Stade de France et comptent 10 points en 4 matchs, en tête du groupe, devant l'Italie (7 points, vainqueur 3-1 de la Turquie) et la Belgique (6 points).
-            <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 hover:text-green-300">Lire notre article sur le match</a>.
+            <strong class="text-white">Après la 5e journée :</strong> battus 3-1 par l'Italie à Milan, les Bleus comptent 10 points en 5 matchs, à égalité avec l'Italie, devant la Belgique (9 points, vainqueur 2-1 de la Turquie). Ils doivent désormais battre la Turquie le 15 novembre pour valider leur place en quarts.
+            <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="text-green-400 hover:text-green-300">Lire notre compte rendu d'Italie - France</a>.
         </p>
         <p class="pt-2">
             <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>

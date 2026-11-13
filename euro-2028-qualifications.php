@@ -37,7 +37,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Où en est l'équipe de France avant les qualifications de l'Euro 2028 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, sont en tête du groupe A1 de la Ligue des Nations avec 10 points après quatre matchs. Ils jouent en Italie le 12 novembre 2026, puis reçoivent la Turquie à Bordeaux le 15 novembre."
+        "text": "Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, comptent 10 points après cinq matchs dans le groupe A1 de la Ligue des Nations, à égalité avec l'Italie, qui les a battus 3-1 à Milan le 12 novembre 2026. Ils reçoivent la Turquie à Bordeaux le 15 novembre."
       }
     },
     {
@@ -138,14 +138,12 @@ include __DIR__ . '/templates/header.php';
     <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
         <p>
             Nommé sélectionneur de l'équipe de France le 28 juillet 2026, avec un contrat jusqu'en 2030, <strong class="text-white">Zinédine Zidane</strong>
-            prépare l'Euro 2028 en Ligue des Nations. Après quatre matchs du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1</a>,
-            les Bleus sont en tête avec <strong class="text-white">10 points</strong> (3 victoires, 1 nul), devant l'Italie (7 points), la Belgique (6) et la Turquie (0).
+            prépare l'Euro 2028 en Ligue des Nations. Après cinq matchs du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1</a>,
+            les Bleus comptent <strong class="text-white">10 points</strong> (3 victoires, 1 nul, 1 défaite), à égalité avec l'Italie, qui les a battus 3-1 à Milan, devant la Belgique (9 points) et la Turquie (0).
         </p>
         <p>
-            Les deux derniers matchs du groupe : <a href="/blog/italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026" class="text-green-400 underline hover:text-green-300">Italie - France</a>
-            le <strong class="text-white">jeudi 12 novembre à 20h45</strong>, puis
-            <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="text-green-400 underline hover:text-green-300">France - Turquie</a>
-            le <strong class="text-white">dimanche 15 novembre à 20h45</strong>, à Bordeaux, tous deux sur TF1 et TF1+.
+            Le dernier match du groupe : <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="text-green-400 underline hover:text-green-300">France - Turquie</a>
+            le <strong class="text-white">dimanche 15 novembre à 20h45</strong>, à Bordeaux, sur TF1 et TF1+, après la défaite <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="text-green-400 underline hover:text-green-300">3-1 à Milan contre l'Italie</a>.
         </p>
         <p>
             Les listes de Zidane : <a href="/blog/premiere-liste-zidane-23-bleus-ce-quil-faut-retenir" class="text-green-400 underline hover:text-green-300">la première liste</a>
@@ -213,7 +211,7 @@ include __DIR__ . '/templates/header.php';
                 <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
             </summary>
             <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, sont en tête du groupe A1 de la Ligue des Nations avec 10 points après quatre matchs. Ils jouent en Italie le 12 novembre 2026, puis reçoivent la Turquie à Bordeaux le 15 novembre.
+                Les Bleus de Zinédine Zidane, nommé le 28 juillet 2026, comptent 10 points après cinq matchs dans le groupe A1 de la Ligue des Nations, à égalité avec l'Italie, qui les a battus 3-1 à Milan le 12 novembre 2026. Ils reçoivent la Turquie à Bordeaux le 15 novembre.
             </p>
         </details>
 

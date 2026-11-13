@@ -17,6 +17,14 @@ jobs:
       - name: ✅ Valider les données JSON (bloque le déploiement si erreur)
         run: python3 scripts/validate-data.py
 
+      - name: 🧬 Contrôle du contenu dupliqué (avertissement uniquement, ne bloque jamais)
+        continue-on-error: true
+        run: |
+          python3 scripts/check-duplicate-content.py --seuil 10 | tee dup.txt || true
+          if grep -qE "^(DOUBLON|A REFORMULER)" dup.txt; then
+            echo "::warning title=Contenu dupliqué détecté::$(grep -E '^(DOUBLON|A REFORMULER)' dup.txt | head -5 | tr '\n' ' ')"
+          fi
+
       - name: 🔔 Notify Hostinger webhook
         run: |
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" -d '{}' "${{ secrets.HOSTINGER_WEBHOOK_URL }}")

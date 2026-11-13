@@ -932,4 +932,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Autres mises à jour** : article Turquie (id 97 : 5 défaites, 1-2 contre la Belgique pour les débuts de Yalçın, tableau des résultats), article France - Turquie (id 90 : paragraphe Turquie), article Italie 3-1 France (id 98 : Belgique 9 points), page des nations hôtes (Angleterre 2e avec 12 points après 2-1 contre la Croatie).
 - **À faire** : saisir les résultats des 13 et 14 novembre (groupes B, E, F, G, H, K, L, M, N, D) puis la journée 6 (15 au 17 novembre) ; article « résultats de la journée 5 » à rédiger quand tous les matchs seront joués.
 
+- **Vignette Italie 3-1 France remplacée (13 novembre 2026)** : affiche fournie par l'utilisateur (`Italie 3-1 France _ Passion Football.png`, 1672 x 941, 16/9, drapeaux, logo Ligue des Nations, cartes Olise / Esposito / Frattesi / la suite), vérifiée (texte conforme aux faits de l'article) puis redimensionnée en 1200 x 675 et convertie en **WebP** : `italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028-affiche.webp` (nouveau nom). Vignette provisoire générée supprimée. Une vidéo `italie france.mp4` (8,5 Mo) est aussi dans Téléchargements (non utilisée sur le site).
+
 *Dernière mise à jour : 13 novembre 2026*

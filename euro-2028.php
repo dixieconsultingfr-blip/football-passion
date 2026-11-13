@@ -4,10 +4,10 @@ $articlesAll = load_articles_index(__DIR__);
 $articlesEuro = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'Euro'));
 usort($articlesEuro, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'Euro 2028 — Dates, pays hôtes, stades et qualifications';
-$meta_desc  = "Tout savoir sur l'Euro 2028 au Royaume-Uni et en Irlande : dates, stades, format, qualifications et objectifs des Bleus de Zidane.";
+$page_title = 'Euro 2028 (Coupe d\'Europe) : date, lieu, équipes et stades';
+$meta_desc  = "Euro 2028 : du 9 juin au 9 juillet 2028 en Angleterre, Écosse, pays de Galles et Irlande. 24 équipes, 9 stades, finale à Wembley, calendrier et qualifications.";
 $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
-$date_maj_page = '2026-11-11';
+$date_maj_page = '2026-11-13';
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -68,7 +68,7 @@ include __DIR__ . '/templates/header.php';
       "name": "Comment se qualifier pour l'Euro 2028 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les qualifications réunissent 12 groupes de 4 ou 5 équipes, de mars à novembre 2027. Les 12 vainqueurs de groupe et les 8 meilleurs deuxièmes se qualifient directement. Les places restantes se jouent en barrages en mars 2028, auxquels la Ligue des nations 2026-2027 peut donner accès. Le tirage au sort a lieu le 6 décembre 2026 à Belfast."
+        "text": "Les qualifications réunissent 12 groupes de 4 ou 5 équipes, du 25 mars 2027 à novembre 2027 pour la phase de groupes, puis des barrages en mars 2028. Les 12 vainqueurs de groupe et les 8 meilleurs deuxièmes se qualifient directement. Les places restantes se jouent en barrages en mars 2028, auxquels la Ligue des nations 2026-2027 peut donner accès. Le tirage au sort a lieu le 6 décembre 2026 à Belfast."
       }
     },
     {
@@ -95,7 +95,7 @@ include __DIR__ . '/templates/header.php';
 <!-- Hero -->
 <header class="mb-10">
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Prochain grand tournoi européen</p>
-    <h1 class="text-4xl font-bold text-white mb-2">Euro 2028</h1>
+    <h1 class="text-4xl font-bold text-white mb-2">Euro 2028 : date, lieu, équipes et calendrier</h1>
     <p class="text-gray-400 text-sm mb-1">9 juin — 9 juillet 2028 · Royaume-Uni &amp; République d'Irlande</p>
     <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
@@ -104,6 +104,25 @@ include __DIR__ . '/templates/header.php';
         par Zinédine Zidane pour son premier grand tournoi international sur le banc des Bleus.
     </p>
 </header>
+
+<!-- En bref -->
+<section id="en-bref" style="scroll-margin-top:5rem" class="mb-10">
+    <h2 class="text-2xl font-bold text-white mb-4">Euro 2028 en bref : date, lieu, nombre d'équipes</h2>
+    <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6 text-sm text-gray-300 leading-relaxed">
+        <dl class="grid grid-cols-1 sm:grid-cols-[11rem_1fr] gap-x-6 gap-y-3">
+            <dt class="text-green-400 font-semibold">Date de l'Euro 2028</dt>
+            <dd><strong class="text-white">Du 9 juin au 9 juillet 2028</strong> : match d'ouverture à Cardiff le 9 juin, finale à Wembley le dimanche 9 juillet 2028.</dd>
+            <dt class="text-green-400 font-semibold">Où se joue l'Euro 2028 ?</dt>
+            <dd>En <strong class="text-white">Angleterre, Écosse, pays de Galles et Irlande</strong> : <a href="/euro-2028-les-9-stades.php" class="text-green-400 underline hover:text-green-300">9 stades</a> dans <a href="/euro-2028-les-8-villes-hotes.php" class="text-green-400 underline hover:text-green-300">8 villes</a>. Voir les <a href="/euro-2028-pays-hotes.php" class="text-green-400 underline hover:text-green-300">4 nations hôtes</a>.</dd>
+            <dt class="text-green-400 font-semibold">Nombre d'équipes</dt>
+            <dd><strong class="text-white">24 équipes</strong>, réparties en 6 groupes de 4 (<a href="/euro-2028-les-equipes.php" class="text-green-400 underline hover:text-green-300">statut de chaque équipe</a>), pour 51 matchs en 30 jours.</dd>
+            <dt class="text-green-400 font-semibold">Qualifications</dt>
+            <dd>Tirage au sort le <strong class="text-white">6 décembre 2026</strong> à Belfast, premiers matchs le <strong class="text-white">25 mars 2027</strong> : <a href="/euro-2028-qualifications.php" class="text-green-400 underline hover:text-green-300">calendrier des qualifications</a>.</dd>
+            <dt class="text-green-400 font-semibold">Coupe d'Europe, Coupe du monde ?</dt>
+            <dd>« Coupe d'Europe 2028 » désigne le Championnat d'Europe (Euro). Il n'y a pas de Coupe du monde en 2028 : la prochaine aura lieu en 2030.</dd>
+        </dl>
+    </div>
+</section>
 
 <!-- Bandeau de navigation — sous-pages Euro 2028 -->
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Pages Euro 2028">
@@ -375,7 +394,7 @@ include __DIR__ . '/templates/header.php';
                 <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
             </summary>
             <p class="text-gray-400 text-sm leading-relaxed mt-3">
-                Les qualifications réunissent 12 groupes de 4 ou 5 équipes, de mars à novembre 2027. Les 12 vainqueurs de groupe et les 8 meilleurs deuxièmes se qualifient directement (20 équipes). Les places restantes se jouent en barrages en mars 2028, auxquels la Ligue des nations 2026-2027 peut donner accès. Le tirage au sort a lieu le 6 décembre 2026 à Belfast.
+                Les qualifications réunissent 12 groupes de 4 ou 5 équipes, du 25 mars 2027 à novembre 2027 pour la phase de groupes, puis des barrages en mars 2028. Les 12 vainqueurs de groupe et les 8 meilleurs deuxièmes se qualifient directement (20 équipes). Les places restantes se jouent en barrages en mars 2028, auxquels la Ligue des nations 2026-2027 peut donner accès. Le tirage au sort a lieu le 6 décembre 2026 à Belfast.
             </p>
         </details>
 

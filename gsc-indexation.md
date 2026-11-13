@@ -94,3 +94,24 @@ Ce fichier garde une trace des relevés d'indexation (les captures GSC ne sont p
 - **Droits TV** : « droit tv » 10 impr. (pos. 24,6), « offre europa league » 19 (pos. 27).
 
 **Actions** : voir `todolist.md` (section SEO GSC).
+
+---
+
+## Relevé des requêtes « Euro 2028 » — 13 novembre 2026 (période non précisée)
+
+| Requête | Clics | Impressions | Position |
+|---|---:|---:|---:|
+| euro 2028 | 7 | 2 846 | 10,9 |
+| coupe d'europe 2028 | 3 | 1 634 | 10,9 |
+| euro 2028 lieu | 3 | 1 412 | 9,2 |
+| coupe du monde 2028 | 2 | 961 | 7,0 |
+| date euro 2028 | 1 | 370 | 9,5 |
+| calendrier qualification euro 2028 | 2 | 241 | 10,2 |
+| championnat d'europe de football 2028 | 2 | 216 | 10,1 |
+| coupe d europe 2028 | 1 | 233 | 10,8 |
+| cdm 2028 | 3 | 93 | 4,9 |
+| euro 2028 nombre d'équipe | 2 | 9 | 11,2 |
+
+**Lecture** : environ 8 000 impressions pour 26 clics, positions autour de 9 à 11 (bas de la page 1 / haut de la page 2) : le potentiel est le passage dans le top 5. Les requêtes erronées (« coupe du monde 2028 », « cdm 2028 », « coupe d'europe 2028 ») montrent des internautes qui cherchent en réalité l'Euro.
+
+**Actions du 13 novembre 2026** : title/H1/meta de `euro-2028.php` (date, lieu, équipes, « Coupe d'Europe »), bloc « Euro 2028 en bref » (date, lieu, nombre d'équipes, « pas de Coupe du monde en 2028 »), calendrier des qualifications en tableau + title « Calendrier des qualifications Euro 2028 », title « Où se joue l'Euro 2028 ? » sur la page des villes hôtes, bloc Euro 2028 sur la page d'accueil, FAQ alignée (« 25 mars 2027 à novembre 2027 pour la phase de groupes, puis barrages en mars 2028 »). Suivi : comparer les positions au relevé du 15 novembre puis du 30 novembre.

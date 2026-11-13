@@ -66,6 +66,18 @@ include __DIR__ . '/templates/header.php';
     </div>
 </section>
 
+<!-- Euro 2028 -->
+<section class="mb-6">
+    <a href="/euro-2028.php" class="flex flex-col sm:flex-row sm:items-center gap-3 bg-green-900/10 border border-green-800 hover:border-green-600 rounded-xl p-5 transition-colors">
+        <div class="flex-1">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-1">Prochain Euro</p>
+            <p class="text-white font-bold">Euro 2028 : date, lieu, équipes, stades et qualifications</p>
+            <p class="text-gray-400 text-sm mt-1">Du 9 juin au 9 juillet 2028 en Angleterre, Écosse, pays de Galles et Irlande : 24 équipes, 9 stades, finale à Wembley.</p>
+        </div>
+        <span class="text-green-400 text-xs font-semibold shrink-0">Tout savoir sur l'Euro 2028 →</span>
+    </a>
+</section>
+
 <!-- Ligue des Nations -->
 <section class="mb-12">
     <a href="/ligue-des-nations-2026-2027.php" class="flex flex-col sm:flex-row sm:items-center gap-3 bg-green-900/10 border border-green-800 hover:border-green-600 rounded-xl p-5 transition-colors">

@@ -6,8 +6,8 @@ $articlesAll = load_articles_index(__DIR__);
 $articlesEuro = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'Euro'));
 usort($articlesEuro, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'Euro 2028 : les 4 nations hôtes — Angleterre, Écosse, pays de Galles, Irlande';
-$meta_desc  = "Euro 2028 : les 4 nations hôtes (Angleterre, Écosse, pays de Galles, Irlande), leurs 9 stades, leur groupe de Ligue des Nations et leur route vers les qualifications.";
+$page_title = 'Pays hôtes de l\'Euro 2028 : les 4 nations et leurs stades';
+$meta_desc  = "Quels sont les pays hôtes de l'Euro 2028 ? Angleterre, Écosse, pays de Galles et Irlande accueillent le tournoi du 9 juin au 9 juillet 2028 : stades, villes et qualifications.";
 $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
 include __DIR__ . '/templates/header.php';
 
@@ -62,6 +62,22 @@ $nations = [
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Quel est le pays hôte de l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il n'y a pas un seul pays hôte mais quatre : l'Angleterre, l'Écosse, le pays de Galles (les trois nations du Royaume-Uni concernées) et la République d'Irlande. Le tournoi se joue du 9 juin au 9 juillet 2028."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'Irlande du Nord est-elle pays hôte de l'Euro 2028 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Belfast figurait initialement dans le projet avec Casement Park, mais la ville n'accueille finalement pas de match de la phase finale. L'Irlande du Nord reste associée à l'événement : le tirage au sort des qualifications se tient à Belfast le 6 décembre 2026."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Quels pays organisent l'Euro 2028 ?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -114,20 +130,35 @@ $nations = [
     <span>›</span>
     <a href="/euro-2028-les-equipes.php" class="hover:text-green-400 transition-colors">Les équipes</a>
     <span>›</span>
-    <span class="text-gray-400">Les 4 nations hôtes</span>
+    <span class="text-gray-400">Les pays hôtes</span>
 </nav>
 
 <!-- Hero -->
 <header class="mb-10">
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Euro 2028 · Les équipes</p>
-    <h1 class="text-4xl font-bold text-white mb-2">Euro 2028 : les 4 nations hôtes</h1>
-    <p class="text-gray-400 text-sm mb-1">Angleterre · Écosse · pays de Galles · Irlande — 9 stades, 8 villes</p>
+    <h1 class="text-4xl font-bold text-white mb-2">Pays hôtes de l'Euro 2028 : Angleterre, Écosse, pays de Galles, Irlande</h1>
+    <p class="text-gray-400 text-sm mb-1">Pays hôtes de l'Euro 2028 : Angleterre · Écosse · pays de Galles · Irlande — 9 stades, 8 villes</p>
     <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
         L'Euro 2028 se joue du 9 juin au 9 juillet 2028 dans quatre nations. Pour chacune, cette page présente les stades qui accueilleront
         le tournoi, le groupe de Ligue des Nations de l'équipe et sa route vers les qualifications : les hôtes ne sont pas qualifiés d'office.
     </p>
 </header>
+
+<!-- Réponse directe -->
+<section id="en-bref" style="scroll-margin-top:5rem" class="mb-10">
+    <h2 class="text-2xl font-bold text-white mb-4">Quels sont les pays hôtes de l'Euro 2028 ?</h2>
+    <div class="bg-gray-800 rounded-xl border border-green-800/40 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
+        <p>
+            L'Euro 2028 est organisé par <strong class="text-white">quatre pays hôtes</strong> : l'<a href="#angleterre" class="text-green-400 underline hover:text-green-300">Angleterre</a>, l'<a href="#ecosse" class="text-green-400 underline hover:text-green-300">Écosse</a> et le <a href="#pays-de-galles" class="text-green-400 underline hover:text-green-300">pays de Galles</a>, qui forment le Royaume-Uni, ainsi que la
+            <a href="#irlande" class="text-green-400 underline hover:text-green-300">République d'Irlande</a>. Le tournoi se joue <strong class="text-white">du 9 juin au 9 juillet 2028</strong>, dans neuf stades répartis sur huit villes.
+        </p>
+        <p>
+            Le match d'ouverture est prévu à <strong class="text-white">Cardiff</strong> (pays de Galles) le 9 juin 2028 et la finale à <strong class="text-white">Wembley</strong>, à Londres (Angleterre), le 9 juillet 2028.
+            L'Irlande du Nord, ville de Belfast, n'accueille pas de match de la phase finale, mais le tirage au sort des qualifications y a lieu le 6 décembre 2026.
+        </p>
+    </div>
+</section>
 
 <!-- Chiffres clés -->
 <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -234,8 +265,22 @@ $nations = [
 
 <!-- FAQ -->
 <section id="faq" style="scroll-margin-top:5rem" class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : les nations hôtes de l'Euro 2028</h2>
+    <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : les pays hôtes de l'Euro 2028</h2>
     <div class="space-y-3">
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                Quel est le pays hôte de l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Il n'y a pas un seul pays hôte mais quatre : l'Angleterre, l'Écosse, le pays de Galles (les trois nations du Royaume-Uni concernées) et la République d'Irlande. Le tournoi se joue du 9 juin au 9 juillet 2028.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
+                L'Irlande du Nord est-elle pays hôte de l'Euro 2028 ?
+                <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
+            </summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Non. Belfast figurait initialement dans le projet avec Casement Park, mais la ville n'accueille finalement pas de match de la phase finale. L'Irlande du Nord reste associée à l'événement : le tirage au sort des qualifications se tient à Belfast le 6 décembre 2026.</p>
+        </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">
                 Quels pays organisent l'Euro 2028 ?

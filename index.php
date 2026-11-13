@@ -72,7 +72,7 @@ include __DIR__ . '/templates/header.php';
         <div class="flex-1">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-1">Prochain Euro</p>
             <p class="text-white font-bold">Euro 2028 : date, lieu, équipes, stades et qualifications</p>
-            <p class="text-gray-400 text-sm mt-1">Du 9 juin au 9 juillet 2028 en Angleterre, Écosse, pays de Galles et Irlande : 24 équipes, 9 stades, finale à Wembley.</p>
+            <p class="text-gray-400 text-sm mt-1">Du 9 juin au 9 juillet 2028 dans quatre pays hôtes (Angleterre, Écosse, pays de Galles, Irlande) : 24 équipes, 9 stades, finale à Wembley.</p>
         </div>
         <span class="text-green-400 text-xs font-semibold shrink-0">Tout savoir sur l'Euro 2028 →</span>
     </a>

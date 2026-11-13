@@ -84,7 +84,7 @@ $groupesLigueA = [
 <nav class="flex flex-wrap gap-2 mb-8" aria-label="Pages Euro 2028">
     <a href="/euro-2028.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏆 Vue d'ensemble</a>
     <a href="/euro-2028-les-equipes.php" class="inline-flex items-center gap-1.5 bg-green-900/30 border border-green-700 text-white px-4 py-2 text-xs font-semibold rounded-full">🌍 Les équipes</a>
-    <a href="/euro-2028-pays-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇬🇧 Les 4 nations hôtes</a>
+    <a href="/euro-2028-pays-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇬🇧 Les pays hôtes</a>
     <a href="/euro-2028-les-8-villes-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏙️ Les 8 villes hôtes</a>
     <a href="/euro-2028-les-9-stades.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏟️ Les 9 stades</a>
     <a href="/euro-2028-qualifications.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📋 Qualifications</a>
@@ -127,7 +127,7 @@ $groupesLigueA = [
 
 <!-- Nations hôtes -->
 <section id="nations-hotes" style="scroll-margin-top:5rem" class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-2">Les 4 nations hôtes</h2>
+    <h2 class="text-2xl font-bold text-white mb-2">Les 4 pays hôtes de l'Euro 2028</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-5">
         L'Angleterre, l'Écosse, le pays de Galles et l'Irlande accueillent le tournoi. Elles ne sont pas qualifiées d'office :
         elles jouent aussi les qualifications, dans des groupes différents, et 2 places au maximum leur sont réservées si elles échouent
@@ -155,7 +155,7 @@ $groupesLigueA = [
             <p class="text-gray-500 text-xs mt-2">Ligue des nations : <a href="/ligue-des-nations-groupe-g.php" class="text-green-400 underline hover:text-green-300">groupe G</a> (Autriche, Kosovo, Irlande, Israël).</p>
         </div>
     </div>
-    <p class="mt-4"><a href="/euro-2028-pays-hotes.php" class="text-green-400 hover:text-green-300 text-sm font-semibold">Voir la page des 4 nations hôtes, avec leurs stades →</a> <span class="text-gray-600 mx-2">·</span> <a href="/euro-2028-les-8-villes-hotes.php" class="text-green-400 hover:text-green-300 text-sm font-semibold">Découvrir les 8 villes hôtes →</a></p>
+    <p class="mt-4"><a href="/euro-2028-pays-hotes.php" class="text-green-400 hover:text-green-300 text-sm font-semibold">Voir les pays hôtes de l'Euro 2028, avec leurs stades →</a> <span class="text-gray-600 mx-2">·</span> <a href="/euro-2028-les-8-villes-hotes.php" class="text-green-400 hover:text-green-300 text-sm font-semibold">Découvrir les 8 villes hôtes →</a></p>
 </section>
 
 <!-- Comment se qualifier -->

@@ -69,7 +69,7 @@ include __DIR__ . '/templates/header.php';
     <a href="/euro-2028-les-8-villes-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏙️ Les 8 villes hôtes</a>
     <a href="/euro-2028-les-9-stades.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🏟️ Les 9 stades</a>
     <a href="/euro-2028-les-equipes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🌍 Les équipes</a>
-    <a href="/euro-2028-pays-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇬🇧 Les 4 nations hôtes</a>
+    <a href="/euro-2028-pays-hotes.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇬🇧 Les pays hôtes</a>
     <a href="/comment-regarder-euro-2028.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📺 Où regarder</a>
     <a href="/euro-2028-paris-sportifs.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🎲 Paris sportifs</a>
     <a href="/ligue-des-nations-2026-2027.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🥇 Ligue des Nations 2026-2027</a>
@@ -161,7 +161,7 @@ include __DIR__ . '/templates/header.php';
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <a href="/euro-2028-les-equipes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Toutes les équipes</p>
-            <p class="text-white font-bold text-lg">Statut des 24 places et nations hôtes</p>
+            <p class="text-white font-bold text-lg">Statut des 24 places et pays hôtes</p>
             <p class="text-gray-400 text-sm mt-1">Angleterre, Écosse, pays de Galles et Irlande doivent aussi se qualifier. Voir le statut de chaque équipe →</p>
         </a>
         <a href="/euro-2028-portugal.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">

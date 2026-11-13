@@ -924,4 +924,12 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - **Mises à jour** : article avant-match Italie - France (id 91, encadré « Résultat » en tête) ; article France - Turquie (id 90, paragraphe « enjeux » réécrit après la défaite) ; `ligue-des-nations-groupe-a1.php` (score 3-1 saisi, date de mise à jour) ; `droits-tv-football.php` (score, liens compte rendu/avant-match) ; `equipe-france.php` (bilan après 5 matchs, carte Italie 3-1 France, liste des matchs).
 - **En attente** : le résultat de Turquie - Belgique (12 novembre, 18h00) n'a pas été fourni ; le classement complet du groupe A1 (Belgique, Turquie) et l'article sur la Turquie (id 97) restent à compléter.
 
+
+### 3.102 Ligue des Nations journée 5 (résultats du 12 novembre) — 13 novembre 2026
+
+- **Résultats fournis par l'utilisateur** (8 matchs du jeudi 12 novembre) : Arménie 1-1 Chypre, **Turquie 1-2 Belgique**, Italie 3-1 France (déjà traité, 3.101), Tchéquie 0-2 Espagne, Albanie 2-0 Finlande, Saint-Marin 0-2 Biélorussie, Angleterre 2-1 Croatie, Monténégro 2-1 Lettonie.
+- **Pages de groupe mises à jour** (classements, `$date_maj_page` au 13 novembre, « après la journée 5 ») : **C** (Espagne 15, Angleterre 12, Croatie 3, Tchéquie 0), **I** (Albanie 12, Biélorussie 10, Finlande 7, Saint-Marin 0), **J** (Monténégro 13, Chypre 8, Arménie 5, Lettonie 1), **A1** (Turquie - Belgique ajouté : Italie 10, France 10, Belgique 9, Turquie 0). Les autres groupes jouent les 13 et 14 novembre.
+- **Autres mises à jour** : article Turquie (id 97 : 5 défaites, 1-2 contre la Belgique pour les débuts de Yalçın, tableau des résultats), article France - Turquie (id 90 : paragraphe Turquie), article Italie 3-1 France (id 98 : Belgique 9 points), page des nations hôtes (Angleterre 2e avec 12 points après 2-1 contre la Croatie).
+- **À faire** : saisir les résultats des 13 et 14 novembre (groupes B, E, F, G, H, K, L, M, N, D) puis la journée 6 (15 au 17 novembre) ; article « résultats de la journée 5 » à rédiger quand tous les matchs seront joués.
+
 *Dernière mise à jour : 13 novembre 2026*

@@ -1,0 +1,245 @@
+<?php
+require_once __DIR__ . '/blog/helpers.php';
+$articlesAll = load_articles_index(__DIR__);
+$articlesFrance = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'France'));
+usort($articlesFrance, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
+
+$page_title = 'Équipe de France — Palmarès, actualités et parcours des Bleus';
+$meta_desc  = "L'équipe de France de football : palmarès complet, campagne CDM 2026, sélectionneur Zidane et toute l'actualité des Bleus sur Football Passion.";
+include __DIR__ . '/templates/header.php';
+?>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "Équipe de France de football",
+  "sport": "Football",
+  "url": "https://football-passion.fr/equipe-france.php",
+  "memberOf": { "@type": "SportsOrganization", "name": "Fédération Française de Football" },
+  "description": "Équipe nationale masculine de football de la France, double championne du monde (1998, 2018) et double championne d'Europe (1984, 2000)."
+}
+</script>
+
+<!-- Breadcrumb -->
+<nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
+    <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
+    <span>›</span>
+    <span class="text-gray-400">Équipe de France</span>
+</nav>
+
+<!-- Hero -->
+<header class="mb-10 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+    <img src="https://flagcdn.com/h120/fr.png" alt="Drapeau France" width="90" height="60"
+         class="rounded shadow-lg shrink-0" loading="eager">
+    <div>
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Fiche équipe</p>
+        <h1 class="text-4xl font-bold text-white mb-2">Équipe de France</h1>
+        <p class="text-gray-400 leading-relaxed max-w-2xl">
+            Deux étoiles sur le maillot, un vivier de talents renouvelé à chaque génération : les Bleus
+            comptent parmi les nations les plus titrées du football mondial depuis trois décennies.
+            Zinédine Zidane a pris la suite de Didier Deschamps sur le banc à l'été 2026, avec l'Euro 2028
+            et la Coupe du Monde 2030 en ligne de mire.
+        </p>
+    </div>
+</header>
+
+<!-- Chiffres clés -->
+<section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+    <div class="bg-gray-800 border border-yellow-800/40 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-yellow-400">2</div>
+        <div class="text-gray-400 text-xs mt-1">Titres mondiaux<br>1998 · 2018</div>
+    </div>
+    <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-white">2</div>
+        <div class="text-gray-400 text-xs mt-1">Titres européens<br>1984 · 2000</div>
+    </div>
+    <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-white">1</div>
+        <div class="text-gray-400 text-xs mt-1">Ligue des Nations<br>2021</div>
+    </div>
+    <div class="bg-gray-800 border border-green-800/40 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-green-400">2026</div>
+        <div class="text-gray-400 text-xs mt-1">Arrivée de<br>Zidane</div>
+    </div>
+</section>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+
+    <!-- Palmarès -->
+    <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Palmarès en Coupe du Monde</h2>
+        <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="bg-gray-900/60 border-b border-gray-700 text-gray-400 text-xs uppercase">
+                        <th class="text-left px-4 py-2">Année</th>
+                        <th class="text-left px-4 py-2">Hôte</th>
+                        <th class="text-left px-4 py-2">Résultat</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-300">
+                    <?php
+                    $palmares = [
+                        ['2026', 'USA / Canada / Mexique', '4e place'],
+                        ['2022', 'Qatar', '🥈 Finaliste'],
+                        ['2018', 'Russie', '🏆 Championne du monde'],
+                        ['2014', 'Brésil', 'Quart de finale'],
+                        ['2006', 'Allemagne', '🥈 Finaliste'],
+                        ['1998', 'France', '🏆 Championne du monde'],
+                    ];
+                    foreach ($palmares as $p): ?>
+                    <tr class="border-b border-gray-700/60 last:border-0">
+                        <td class="px-4 py-2 font-semibold text-white"><?= $p[0] ?></td>
+                        <td class="px-4 py-2 text-gray-400"><?= $p[1] ?></td>
+                        <td class="px-4 py-2 <?= str_contains($p[2], '🏆') ? 'text-yellow-400 font-semibold' : '' ?>"><?= $p[2] ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- L'ère Zidane -->
+    <section>
+        <h2 class="text-2xl font-bold text-white mb-4">L'ère Zidane</h2>
+        <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
+            <p>
+                Après 14 ans à la tête des Bleus (juillet 2012 – juillet 2026), Didier Deschamps a cédé sa place à
+                <strong class="text-white">Zinédine Zidane</strong>, nommé sélectionneur le 28 juillet 2026 avec un
+                contrat courant jusqu'en 2030. Le nouveau sélectionneur hérite d'un groupe solide, arrivé en
+                demi-finale de la Coupe du Monde 2026 avant de terminer à la 4e place.
+            </p>
+            <p>
+                Les deux prochains grands rendez-vous : l'<strong class="text-white">Euro 2028</strong>
+                (Royaume-Uni et Irlande) et la <strong class="text-white">Coupe du Monde 2030</strong>,
+                co-organisée par le Maroc, l'Espagne et le Portugal.
+            </p>
+            <a href="https://www.coupe-du-monde-2026.info/equipe-france.php" target="_blank" rel="nofollow noopener noreferrer"
+               class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-2">
+                Couverture complète de la campagne 2026 →
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<!-- Les Bleus en Ligue des nations -->
+<section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Les Bleus de Zidane en Ligue des nations 2026-2027</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+        Après quatre matchs du groupe A1 (France, Italie, Belgique, Turquie), la France est en tête avec <strong class="text-white">10 points</strong> :
+        trois victoires et un nul, sept buts marqués et deux encaissés. Il reste deux rendez-vous, tous deux diffusés sur TF1 et TF1+ à 20h45,
+        avant les quarts de finale prévus en mars 2027 et le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <a href="/blog/italie-france-heure-chaine-composition-ligue-des-nations-12-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Jeudi 12 novembre, 20h45</p>
+            <p class="text-white font-bold text-lg">Italie - France</p>
+            <p class="text-gray-400 text-sm mt-1">San Siro, à Milan, sur TF1 et TF1+. Heure, chaîne et enjeux →</p>
+        </a>
+        <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, 20h45</p>
+            <p class="text-white font-bold text-lg">France - Turquie</p>
+            <p class="text-gray-400 text-sm mt-1">Stade Atlantique, à Bordeaux, sur TF1 et TF1+. Heure, chaîne et composition →</p>
+        </a>
+    </div>
+    <p class="text-gray-400 text-sm leading-relaxed">
+        Les matchs déjà joués : <a href="/blog/zidane-victoire-turquie-france-debuts-bleus" class="text-green-400 underline hover:text-green-300">Turquie 0-1 France</a>,
+        <a href="/blog/belgique-france-olise-coup-de-genie-zidane-deux-victoires" class="text-green-400 underline hover:text-green-300">Belgique 0-1 France</a>,
+        <a href="/blog/france-italie-olise-bastoni-premier-nul-zidane" class="text-green-400 underline hover:text-green-300">France 1-1 Italie</a> et
+        <a href="/blog/france-belgique-remontada-bleus-olise-doue-cherki" class="text-green-400 underline hover:text-green-300">France 4-1 Belgique</a>.
+        Le calendrier, le classement et la diffusion sont sur la page du <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 underline hover:text-green-300">groupe A1 de la Ligue des nations</a>.
+    </p>
+</section>
+
+<!-- Les autres équipes de France -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Les autres équipes de France</h2>
+    <p class="text-gray-400 text-sm mb-5 max-w-2xl">Les Bleus, ce ne sont pas que les hommes : les Bleues et les sélections handisport portent aussi haut les couleurs de la France.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-sm text-gray-300 leading-relaxed">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Football féminin</p>
+            <h3 class="text-white font-bold text-lg mb-2">Les Bleues</h3>
+            <p>
+                Qualifiées pour la <strong class="text-white">Coupe du monde féminine 2027 au Brésil</strong> depuis le 9 juin 2026
+                (victoire 1-0 contre l'Irlande à Grenoble), les Bleues disputeront le Mondial du 24 juin au 25 juillet 2027.
+                Ce sera leur sixième participation à une Coupe du monde.
+            </p>
+            <a href="/blog/bleues-mondial-2027-bresil-calendrier-preparation-joueuses" class="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-xs font-semibold mt-3">
+                Lire notre article →
+            </a>
+        </div>
+
+        <div class="bg-gray-800 border border-yellow-800/40 rounded-xl p-6 text-sm text-gray-300 leading-relaxed">
+            <p class="text-yellow-400 text-xs font-semibold uppercase tracking-widest mb-1">Handisport · Foot-fauteuil</p>
+            <h3 class="text-white font-bold text-lg mb-2">Champions du monde 2026</h3>
+            <p>
+                Le 23 octobre 2026 à Buenos Aires, la France a battu l'Angleterre 2-1 après prolongation en finale
+                du Mondial de foot-fauteuil. Après 2017 et 2023, c'est une <strong class="text-white">troisième étoile mondiale</strong>,
+                une première pour une nation dans la discipline.
+            </p>
+            <a href="/blog/foot-fauteuil-france-championne-du-monde-2026-troisieme-etoile" class="inline-flex items-center gap-1 text-yellow-400 hover:text-yellow-300 text-xs font-semibold mt-3">
+                Lire notre article →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Joueurs -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Les joueurs des Bleus</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <?php foreach (load_joueurs(__DIR__) as $j): ?>
+        <a href="/joueur.php?slug=<?= urlencode($j['slug']) ?>" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 flex items-center gap-4 transition-colors">
+            <span class="text-3xl font-bold text-green-400 shrink-0">#<?= (int)$j['numero_selection'] ?></span>
+            <div>
+                <div class="text-white font-semibold"><?= htmlspecialchars($j['nom']) ?></div>
+                <div class="text-gray-500 text-xs mt-1"><?= htmlspecialchars($j['poste']) ?> · <?= htmlspecialchars($j['club_actuel']) ?></div>
+            </div>
+        </a>
+        <?php endforeach; ?>
+    </div>
+    <p class="text-gray-600 text-xs mt-3 italic">Effectif en cours de complétion, mis à jour au fil des annonces de sélection.</p>
+</section>
+
+<!-- Actualités liées -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-5">Actualités — Équipe de France</h2>
+
+    <?php if (empty($articlesFrance)): ?>
+    <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center text-gray-500 text-sm">
+        Aucun article publié pour le moment dans cette catégorie.
+        <a href="/blog/" class="text-green-400 hover:text-green-300 ml-1">Voir tous les articles →</a>
+    </div>
+    <?php else: ?>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <?php foreach (array_slice($articlesFrance, 0, 6) as $a): ?>
+        <a href="/blog/<?= urlencode($a['slug']) ?>" class="flex flex-col bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl overflow-hidden transition-colors">
+            <?php if (!empty($a['vignette'])): ?>
+            <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
+                <img src="<?= htmlspecialchars($a['vignette']) ?>" alt="<?= htmlspecialchars($a['image_alt'] ?? $a['titre']) ?>" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <?php endif; ?>
+            <div class="p-4 flex flex-col gap-2 flex-1">
+                <p class="text-gray-500 text-xs"><?= !empty($a['date_maj']) ? 'Maj ' : '' ?><?= date('d/m/Y', strtotime($a['date_maj'] ?? $a['date'])) ?></p>
+                <h3 class="text-white font-semibold text-sm leading-snug"><?= htmlspecialchars($a['titre']) ?></h3>
+                <p class="text-gray-400 text-xs leading-relaxed flex-1"><?= htmlspecialchars($a['extrait']) ?></p>
+            </div>
+        </a>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+</section>
+
+<!-- Liens internes -->
+<section class="flex flex-wrap gap-4 justify-center pb-4">
+    <a href="/calendrier.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📅 Calendrier</a>
+    <a href="/blog/?cat=France" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📰 Tous les articles France</a>
+    <a href="/coupe-du-monde.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏆 Coupe du Monde</a>
+    <a href="/ligue-des-nations-2026-2027.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🥇 Ligue des Nations 2026-2027</a>
+</section>
+
+<?php include __DIR__ . '/templates/footer.php'; ?>

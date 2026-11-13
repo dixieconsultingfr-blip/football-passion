@@ -361,6 +361,18 @@ Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher
 5. **Préparer l'image** : les `.webp`/`.avif` se convertissent via PresentationCore (`BitmapDecoder` + `PngBitmapEncoder`) ; **vérifier la transparence** (un fond noir ou blanc opaque se rend transparent par remplissage depuis les bords) ; contrôler visuellement sur le fond de la vignette (bleu foncé).
 6. **Créditer** dans l'article : « Crédit image : <auteur>, licence <licence> (lien), via Wikimedia Commons (lien page du fichier) », liens en `nofollow noopener noreferrer`, et noter auteur + licence + URL dans `procedure-football-passion.md`.
 
+
+### 🧬 Règle anti-contenu dupliqué (FP ↔ site satellite CDM 2026, règle du 13 novembre 2026)
+
+**Objectif** : éviter que Google détecte deux pages quasi identiques (sur `football-passion.fr` et `coupe-du-monde-2026.info`, ou entre deux articles du même site), ce qui dilue le référencement.
+
+1. **Un angle propre par site** : l'article du site satellite traite le sujet sous un angle différent (ex. Ronaldo : sa retraite et les chiffres de carrière sur Football Passion ; son dernier Mondial sur CDM 2026). Les chiffres complets, le contexte et les mises à jour vivent sur **football-passion.fr** ; le satellite fait un **résumé court** et **renvoie** vers le hub.
+2. **Texte réécrit, pas copié** : ne jamais coller les mêmes paragraphes sur les deux sites ; reformuler (plan, ordre, vocabulaire). Citations de tiers : courtes (moins de 15 mots), attribuées.
+3. **Titres et meta distincts** : `titre`, `meta_title`, `meta_desc` et `extrait` ne doivent pas être identiques ni quasi identiques d'un site à l'autre.
+4. **Contrôle avant publication (obligatoire)** : `python scripts/check-duplicate-content.py` (tous les articles) ou `--slug mon-slug`. Seuils sur les suites de 8 mots : **< 10 % OK**, **10 à 20 % à reformuler**, **> 20 % doublon : ne pas publier**. Le script compare FP ↔ CDM (`../coupe-du-monde-2026/data/articles.json`) et FP ↔ FP.
+5. **Balise canonique** : chaque page garde sa canonique **vers elle-même** (déjà en place). Si une republication identique est vraiment voulue (cas exceptionnel), mettre sur la copie du satellite une canonique **vers l'article de football-passion.fr** (jamais l'inverse), ou ne pas la publier.
+6. **Ne pas dupliquer les pages hub** : une page de synthèse (ex. `euro-2028-les-equipes.php`) renvoie vers les pages détaillées au lieu de recopier leur contenu ; les FAQ restent propres à chaque page (questions différentes).
+7. **Images** : réutiliser une image est possible, mais avec un `alt` et un nom de fichier propres au site.
 ## 🚀 Déploiement
 
 ```bash

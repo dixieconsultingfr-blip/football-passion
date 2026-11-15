@@ -1005,4 +1005,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, bandeaux unifiés** : tous les bandeaux (L1, L2, L3, Euro 2028, CAN 2027, TV CAN, catégorie CAN du blog) passent par `templates/ticker-resultats.php` : 3 derniers articles de la compétition (`titre_court`) puis scores de la compétition. `templates/can-ticker.php` et la liste en dur d'`euro-2028.php` supprimés. Règle mise à jour dans `CLAUDE.md`.
 
+- **15 novembre 2026, relecture des notes (md)** : `CLAUDE.md` et `README.md` remis en cohérence avec le site actuel (arborescence complète, `articles.json` remplacé par `articles-index.json` + `articles/`, catégories L3 / Conference / Actu, CAN 2027, `data/resultats-selections.json`, `templates/ticker-resultats.php`, scripts, contrôles CI avant déploiement, vignettes WebP / JPG, mention Ligue des Nations et CAN dans la procédure manuelle, date de mise à jour). Note : l'entrée « titre_court » ci-dessus cite encore `can-ticker.php`, supprimé ensuite (voir « bandeaux unifiés »).
+
 *Dernière mise à jour : 15 novembre 2026*

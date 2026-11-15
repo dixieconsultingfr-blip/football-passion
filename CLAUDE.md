@@ -38,35 +38,34 @@ Tout secret va dans **`config/secrets.php`** (fichier gitignore, jamais versionn
 
 ```
 football-passion/                  ← racine du dépôt = racine du site
-├── CLAUDE.md
-├── .gitignore
-├── procedure-football-passion.md
-├── .github/workflows/deploy.yml
-├── index.php
-├── a-propos.php
-├── mentions-legales.php
-├── politique-confidentialite.php
-├── equipe-france.php
-├── euro.php
-├── contact.php           ← formulaire (Turnstile + honeypot)
-├── contact-send.php      ← traitement (mail() natif, destinataire caché)
-├── 404.php
-├── .htaccess
+├── CLAUDE.md, README.md, procedure-football-passion.md, todolist.md, charte-graphique.md, ...  ← notes (hors site)
+├── .gitignore, .htaccess, robots.txt, sitemap.php (lit articles-index.json à la volée)
+├── .github/workflows/deploy.yml  ← validation des données → avertissement doublons → webhook Hostinger
+├── index.php                      ← accueil (bandeau « À LA UNE » + scores, derniers articles)
+├── ligue-1.php, ligue-2.php, ligue-3.php, champions-league.php, europa-league.php, conference-league.php
+├── equipe-france.php, euro.php, coupe-du-monde.php, calendrier.php, archives.php
+├── euro-2028.php + euro-2028-*.php  ← dossier Euro 2028 (équipes, pays hôtes, stades, qualifications, Portugal...)
+├── ligue-des-nations.php (hub), ligue-des-nations-2026-2027.php (édition), ligue-des-nations-groupe-{a1,b..n}.php
+├── can-2027.php, droits-tv-can-2027.php                  ← CAN masculine (éliminatoires)
+├── droits-tv-football.php, droits-tv-{ligue-1,ligue-2,champions-league,europa-league}.php
+├── a-propos.php, mentions-legales.php, politique-confidentialite.php, contact.php, contact-send.php, 404.php
 ├── config/
 │   └── secrets.php        ← gitignore, jamais commité
 ├── templates/
-│   ├── header.php
-│   └── footer.php
+│   ├── header.php, footer.php            ← partagés par toutes les pages
+│   ├── ticker-resultats.php              ← bandeau défilant (articles + scores) de toutes les pages concernées
+│   └── ligue-des-nations-groupe-template.php
 ├── data/
-│   ├── articles-index.json    ← index léger (liste, filtres, homepage)
-│   ├── articles/
-│   │   └── {slug}.json        ← un fichier par article (contenu complet)
-│   ├── categories.json
-│   ├── equipes.json
-│   └── matchs.json
-├── images/
+│   ├── articles-index.json               ← index léger (liste, filtres, accueil, bandeaux)
+│   ├── articles/{slug}.json              ← un fichier par article (contenu complet)
+│   ├── matchs.json                       ← L1/CL par n8n, le reste à la main (id >= 9000000)
+│   ├── resultats-selections.json         ← scores Ligue des Nations et CAN (saisis à la main, pour les bandeaux)
+│   ├── archives/                         ← matchs archivés par compétition et saison
+│   └── categories.json, equipes.json, joueurs.json
+├── scripts/                              ← validate-data.py, check-duplicate-content.py, archive-old-matches.ps1
+├── images/ (et images/logo/)
 └── blog/
-    ├── index.php
+    ├── index.php                         ← liste, filtres de catégorie, page article
     └── helpers.php
 ```
 
@@ -132,19 +131,21 @@ football-passion/                  ← racine du dépôt = racine du site
 
 ## 🖼️ Vignettes d'articles — format
 
-- **Format** : `.webp` (25-35 % plus léger qu'un `.jpg` à qualité égale — meilleur pour le LCP)
+- **Format** : `.webp` (25-35 % plus léger qu'un `.jpg` à qualité égale — meilleur pour le LCP). Les vignettes **fournies par l'utilisateur** (PNG, dossier Téléchargements) se convertissent en WebP 1200 × 675 (ffmpeg). Les vignettes générées par script (System.Drawing) sont en JPG 1200 × 675 (≈ 70-90 Ko), acceptées.
 - **Largeur max** : 1200px, ratio 16:9 recommandé
 - **Poids cible** : 100-300 Ko — jamais de PNG brut ou d'export Canva non compressé
 - **Nommage** : kebab-case descriptif, ex. `deschamps-bilan-14-ans-bleus.webp`
 - **Emplacement** : `images/`
-- Renseigner le même chemin dans `"image"` et `"vignette"` de `articles.json`
+- Renseigner le même chemin dans `"image"` (fichier de l'article) et `"vignette"` (fichier de l'article et entrée de `articles-index.json`)
+- Nouveau nom de fichier à chaque remplacement d'image (cache navigateur 7 jours) : supprimer l'ancien fichier du dépôt s'il n'est plus utilisé.
 
 ## 📁 Dossiers clés
 
 | Dossier | Rôle |
 |---------|------|
-| `data/` | articles.json, matchs.json, categories.json, equipes.json |
-| `templates/` | header.php, footer.php (partagés toutes les pages) |
+| `data/` | articles-index.json, articles/{slug}.json, matchs.json, resultats-selections.json, categories.json, equipes.json, joueurs.json, archives/ |
+| `templates/` | header.php, footer.php (partagés), ticker-resultats.php (bandeaux défilants), gabarit des pages de groupe de la Ligue des Nations |
+| `scripts/` | validate-data.py (bloque le déploiement si les données sont invalides), check-duplicate-content.py, archive-old-matches.ps1 |
 | `images/` | Images du site (kebab-case) |
 | `config/` | config/db.php (gitignore) |
 | `.github/workflows/` | deploy.yml (GitHub Actions) |
@@ -170,7 +171,7 @@ football-passion/                  ← racine du dépôt = racine du site
   "image": "/images/nom-kebab-case.webp",
   "image_alt": "Description alternative",
   "vignette": "/images/nom-kebab-case.webp",
-  "categorie": "L1 | L2 | CL | Europa | Euro | CDM | CAN | France",
+  "categorie": "L1 | L2 | L3 | CL | Europa | Conference | Euro | CDM | CAN | France | Actu",
   "etiquettes": ["Tag1", "Tag2"],
   "slug": "slug-en-kebab-case",
   "extrait": "Résumé court (2-3 phrases)",
@@ -280,6 +281,8 @@ L'utilisateur colle des captures d'écran ou du texte copié depuis un site de s
 6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
 7. `git add data/matchs.json && git commit && git push origin deploy`.
 
+**Ligue des Nations et CAN** : leurs scores ne vont **pas** dans `matchs.json` mais dans `data/resultats-selections.json` (bandeaux) ; classements et calendriers dans les pages (`ligue-des-nations-groupe-*.php`, `can-2027.php`). Ne jamais publier un score non vérifié (source officielle ou fournie par l'utilisateur) : voir la règle anti-hallucination.
+
 **🚨 S'applique aussi à `data/articles-index.json` (incident du 8 novembre 2026, procédure 3.86).**
 
 **🚨 Piège PowerShell découvert le 26 août 2026 — wrapper `{"value": [...]}` inattendu** : appeler `ConvertTo-Json` **directement sur le résultat brut de `ConvertFrom-Json`** (même après avoir muté des objets dedans via `Where-Object`) peut produire un objet enveloppé `{"value": [...], "Count": N}` au lieu d'un tableau JSON simple — a transformé `matchs.json` en fichier quasi vide lors d'un test raté avec `-AsArray` (paramètre inexistant en Windows PowerShell 5.1). **Toujours reconstruire un tableau propre avant `ConvertTo-Json`** :
@@ -301,10 +304,12 @@ Ne jamais faire `ConvertTo-Json $data -Depth 10` directement. **Toujours vérifi
 | **L3** | Ligue 3 Betclic (FR, ex-National) | Août-mai |
 | **CL** | Champions League | Septembre-juin |
 | **Europa** | Europa League | Septembre-juin |
-| **CAN** | Coupe d'Afrique | Janvier-février |
+| **Conference** | Ligue Conférence | Septembre-mai |
+| **CAN** | Coupe d'Afrique des Nations (CAN 2027 : éliminatoires sept. 2026 - mars 2027, phase finale du 19 juin au 17 juillet 2027, Kenya/Tanzanie/Ouganda) | 2026-2027 |
 | **Euro** | Championnat d'Europe | Juin-juillet 2028 |
 | **CDM** | Coupe du Monde | Juin-juillet 2026/2030/2034 |
-| **France** | Équipe de France | Année-rond |
+| **France** | Équipe de France (Ligue des Nations incluse : étiquette « Ligue des nations ») | Année-rond |
+| **Actu** | Actualités générales | — |
 
 ---
 
@@ -400,6 +405,8 @@ git push origin deploy
 
 Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
+**Contrôles automatiques avant déploiement** (`.github/workflows/deploy.yml`) : `python scripts/validate-data.py` **bloque** le déploiement si `articles-index.json` ou `matchs.json` est invalide (par exemple enveloppé dans `{"value": ...}`) ; `scripts/check-duplicate-content.py` publie un **avertissement non bloquant** si deux articles se ressemblent trop. En local, lancer `python scripts/validate-data.py` avant chaque commit touchant aux données.
+
 ---
 
 ## 🔧 Outils & Stack
@@ -427,8 +434,9 @@ Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
 
 - `templates/header.php` — utilisé par toutes les pages
 - `templates/footer.php` — idem
-- `data/articles.json` — toujours valider le JSON
+- `data/articles-index.json` et `data/articles/*.json` — toujours valider le JSON (`python scripts/validate-data.py`)
 - `data/matchs.json` — données officielles
+- `templates/ticker-resultats.php` — utilisé par l'accueil, L1, L2, L3, Euro 2028 et les pages CAN
 
 ---
 
@@ -451,4 +459,4 @@ Ce projet est pensé pour la **scalabilité** et l'**automatisation**. Chaque ar
 
 ---
 
-*Dernière mise à jour : 29 juillet 2026*
+*Dernière mise à jour : 15 novembre 2026*

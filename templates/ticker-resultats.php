@@ -79,7 +79,7 @@ if (!empty($tickerArticles)) {
 
 if (!empty($tickerItems)):
     $tickerMulti = isset($tickerGlobal) || count($tickerComps) > 1;
-    $tickerDuree = max(40, (count($tickerItems) + 5 * count($tickerArts)) * 6);
+    $tickerDuree = max(40, (count($tickerItems) + 3 * count($tickerArts)) * 6);
 ?>
 <style>
 .res-ticker{overflow:hidden;white-space:nowrap}
@@ -95,7 +95,7 @@ if (!empty($tickerItems)):
             <?php for ($i = 0; $i < 2; $i++): $aria = $i ? ' aria-hidden="true" tabindex="-1"' : ''; ?>
             <span class="inline-flex items-center gap-6 pr-6">
                 <?php foreach ($tickerArts as $a): ?>
-                <a href="/blog/<?= urlencode($a['slug']) ?>" class="text-gray-100 hover:text-green-300"<?= $aria ?>><span class="text-green-400 text-xs font-semibold mr-1">📰 À LA UNE</span><?= htmlspecialchars(mb_strimwidth($a['titre'], 0, 78, '…')) ?></a>
+                <a href="/blog/<?= urlencode($a['slug']) ?>" class="text-gray-100 hover:text-green-300"<?= $aria ?>><span class="text-green-400 text-xs font-semibold mr-1">📰 À LA UNE</span><?= htmlspecialchars($a['titre_court'] ?? (mb_strlen($a['titre']) > 48 ? rtrim(mb_substr($a['titre'], 0, mb_strrpos(mb_substr($a['titre'], 0, 48), ' ') ?: 48), ' ,:-') . '…' : $a['titre'])) ?></a>
                 <?php endforeach; ?>
                 <?php foreach ($tickerItems as $r): ?>
                 <a href="<?= htmlspecialchars($tickerLiens[$r['comp']] ?? $tickerLink) ?>" class="text-gray-300 hover:text-white"<?= $aria ?>><?php if ($tickerMulti): ?><em class="not-italic text-green-400 text-xs font-semibold mr-1"><?= htmlspecialchars($r['etiquette']) ?></em><?php endif; ?><?= htmlspecialchars($r['dom']) ?> <strong class="text-white"><?= $r['sd'] ?>-<?= $r['se'] ?></strong> <?= htmlspecialchars($r['ext']) ?></a>

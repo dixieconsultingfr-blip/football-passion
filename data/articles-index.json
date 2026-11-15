@@ -12,7 +12,8 @@
         "extrait": "Samedi 14 novembre 2026, Zinédine Zidane a démenti toute tension avec Kylian Mbappé avant France - Turquie : une relation qui « se passe parfaitement » et des rumeurs qu'il juge sans fondement.",
         "vignette": "/images/zidane-dement-clash-mbappe-france-turquie-ligue-des-nations.webp",
         "image_alt": "Zidane dément tout clash avec Mbappé avant France-Turquie : « Ça se passe parfaitement. Ce sont des bêtises. », Ligue des Nations, Bordeaux 20h45",
-        "date_maj": "2026-11-15"
+        "date_maj": "2026-11-15",
+        "titre_court": "Zidane dément tout clash avec Mbappé"
     },
     {
         "id": 100,
@@ -26,7 +27,8 @@
         "date": "2026-11-15",
         "extrait": "L'Algérie a battu le Togo 1-0 samedi 14 novembre 2026 grâce à un but de Bensebaini à la 76e minute. Les Fennecs gardent la tête du groupe I avec 7 points avant le retour, mardi 17 novembre.",
         "vignette": "/images/eliminatoires-can-2027-algerie-togo-1-0-bensebaini.jpg",
-        "image_alt": "Algerie 1-0 Togo, CAN 2027 qualifications groupe I journee 3, 14 novembre 2026 : but de Bensebaini a la 76e minute"
+        "image_alt": "Algerie 1-0 Togo, CAN 2027 qualifications groupe I journee 3, 14 novembre 2026 : but de Bensebaini a la 76e minute",
+        "titre_court": "Algérie 1-0 Togo en éliminatoires CAN 2027"
     },
     {
         "id": 99,
@@ -41,7 +43,8 @@
         "extrait": "Italie 3-1 France, Pays-Bas 7-0 Grèce, Portugal 1-4 Danemark, Espagne en tête : les 26 résultats de la journée 5 de la Ligue des Nations (12 au 14 novembre 2026) et le leader de chacun des 14 groupes.",
         "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-5-jeudi-12-novembre.jpg",
         "image_alt": "Ligue des Nations journee 5, resultats des 12, 13 et 14 novembre 2026 : Italie 3-1 France, Pays-Bas 7-0 Grece, Portugal 1-4 Danemark",
-        "date_maj": "2026-11-15"
+        "date_maj": "2026-11-15",
+        "titre_court": "Ligue des Nations J5 : tous les résultats"
     },
     {
         "id": 98,
@@ -56,7 +59,8 @@
         "extrait": "Les Bleus s'inclinent 3-1 en Italie malgré l'ouverture du score de Michael Olise : première défaite de l'ère Zidane. Doublé d'Esposito, but de Frattesi, enjeux avant France - Turquie et route vers l'Euro 2028.",
         "vignette": "/images/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028-affiche.webp",
         "image_alt": "Affiche Italie 3-1 France, Ligue des Nations, 12 novembre 2026 : Olise ouvre le score, doublé d'Esposito, but de Frattesi, première défaite de l'ère Zidane",
-        "date_maj": "2026-11-13"
+        "date_maj": "2026-11-13",
+        "titre_court": "Italie 3-1 France : première défaite de Zidane"
     },
     {
         "id": 97,
@@ -71,7 +75,8 @@
         "extrait": "Dernière du groupe A1 avec zéro point, la Turquie a limogé Vincenzo Montella et nommé Sergen Yalçın. Calendrier, joueurs à connaître, France - Turquie le 15 novembre et route vers l'Euro 2028 : le point sur la sélection turque.",
         "vignette": "/images/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028.jpg",
         "image_alt": "Equipe de Turquie : Sergen Yalcin selectionneur, 0 point en Ligue des Nations, Turquie-Belgique le 12 novembre a Izmir, France-Turquie le 15 novembre",
-        "date_maj": "2026-11-13"
+        "date_maj": "2026-11-13",
+        "titre_court": "Turquie : tout savoir avant France - Turquie"
     },
     {
         "id": 96,
@@ -86,7 +91,8 @@
         "extrait": "Du jeudi 12 au mardi 17 novembre 2026, les journées 5 et 6 de la Ligue des Nations concluent la phase de groupes : Italie - France, Portugal - Danemark, Espagne - Angleterre… Le programme complet des 52 matchs.",
         "vignette": "/images/ligue-des-nations-2026-2027-programme-journees-5-et-6.jpg",
         "image_alt": "Ligue des Nations 2026-2027 : programme des journees 5 et 6 du 12 au 17 novembre, Italie-France, Portugal-Danemark, Espagne-Angleterre",
-        "date_maj": "2026-11-11"
+        "date_maj": "2026-11-11",
+        "titre_court": "Ligue des Nations : programme des J5 et J6"
     },
     {
         "id": 95,
@@ -100,7 +106,8 @@
         "date": "2026-11-11",
         "extrait": "Du 4 au 6 octobre 2026, la 4e journée de la Ligue des Nations a livré 26 résultats dans les 14 groupes : France 4-1 Belgique, Portugal 2-1 Norvège, Croatie 1-2 Espagne… Tous les scores et les leaders, avant la 5e journée.",
         "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-4.jpg",
-        "image_alt": "Ligue des Nations 2026-2027 journee 4 : tous les resultats des 14 groupes, France 4-1 Belgique, Portugal 2-1 Norvege, Croatie 1-2 Espagne"
+        "image_alt": "Ligue des Nations 2026-2027 journee 4 : tous les resultats des 14 groupes, France 4-1 Belgique, Portugal 2-1 Norvege, Croatie 1-2 Espagne",
+        "titre_court": "Ligue des Nations : résultats de la J4"
     },
     {
         "id": 94,
@@ -115,7 +122,8 @@
         "extrait": "Jeudi 5 novembre 2026, Cristiano Ronaldo a annoncé sa retraite internationale après 23 ans avec le Portugal : 234 sélections, 146 buts, un Euro et deux Ligues des nations. Les faits, les chiffres et la suite jusqu'à l'Euro 2028.",
         "vignette": "/images/cristiano-ronaldo-retraite-internationale-portugal-euro-2028-affiche.webp",
         "image_alt": "Affiche Fin d'une ere : Cristiano Ronaldo prend sa retraite internationale, 234 selections, 146 buts, Euro 2016, Ligues des nations 2019 et 2025",
-        "date_maj": "2026-11-11"
+        "date_maj": "2026-11-11",
+        "titre_court": "Ronaldo prend sa retraite internationale"
     },
     {
         "id": 93,
@@ -129,7 +137,8 @@
         "date": "2026-11-09",
         "extrait": "L'OM a gagné 2-1 à Lens pour sa cinquième victoire de suite, le PSG a battu Troyes 1-0 et reste leader avec 23 points, le Paris FC monte sur le podium. Tous les résultats de la 10e journée de Ligue 1 et le classement.",
         "vignette": "/images/ligue-1-journee-10-lens-om-2-1-psg-troyes-2026-2027.jpg",
-        "image_alt": "Ligue 1 journee 10 : Lens 1-2 Marseille, Paris SG 1-0 Troyes, Lille 2-1 a Rennes, le PSG reste leader avec 23 points"
+        "image_alt": "Ligue 1 journee 10 : Lens 1-2 Marseille, Paris SG 1-0 Troyes, Lille 2-1 a Rennes, le PSG reste leader avec 23 points",
+        "titre_court": "Ligue 1 J10 : Lens 1-2 OM, PSG 1-0 Troyes"
     },
     {
         "id": 92,

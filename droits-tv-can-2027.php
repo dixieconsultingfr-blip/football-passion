@@ -173,7 +173,7 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
         <p><strong class="text-white">En France :</strong> beIN SPORTS détient les droits de la prochaine CAN et de ses éliminatoires, qui ne sont pas accessibles gratuitement. La chaîne ne diffuse qu'une sélection de matchs à chaque journée : environ un tiers pour les deux premières journées (17 matchs sur 48). Selon Afrik-Foot, tous les matchs du Maroc, de l'Algérie, de la Tunisie, du Sénégal, de la Côte d'Ivoire, du Cameroun et de la RD Congo devraient être diffusés.</p>
         <p><strong class="text-white">En Afrique :</strong> beIN SPORTS (version Mena) détient les droits en Afrique du Nord ; en Afrique subsaharienne francophone, c'est Canal+. Dans la plupart des cas, les chaînes nationales publiques peuvent diffuser gratuitement les matchs de leur équipe nationale.</p>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Source : Afrik-Foot (« Éliminatoires CAN 2027 : quelle chaîne TV les diffuse en France ? », 23 septembre 2026).</p>
+    <p class="text-gray-600 text-xs mt-3">Source : Afrik-Foot (« Éliminatoires CAN 2027 : quelle chaîne TV les diffuse en France ? », 23 septembre 2026). Calendrier et informations officielles : <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>.</p>
 </section>
 
 <section id="programme" style="scroll-margin-top:5rem" class="mb-12">
@@ -198,7 +198,7 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
         </table>
     </div>
     <?php endforeach; ?>
-    <p class="text-gray-600 text-xs mt-3">Sources : programme beIN SPORTS du 9 novembre 2026 (dates, heures françaises, chaînes) ; Kenya - Afrique du Sud (17 novembre, 17h) d'après Foot Mercato, absent de la liste beIN ; scores d'après Foot Mercato. Vérifiez le programme avant chaque match : il peut évoluer.</p>
+    <p class="text-gray-600 text-xs mt-3">Sources : programme beIN SPORTS du 9 novembre 2026 (dates, heures françaises, chaînes) ; Kenya - Afrique du Sud (17 novembre, 17h) d'après Foot Mercato, absent de la liste beIN ; scores d'après Foot Mercato. Vérifiez le programme avant chaque match : il peut évoluer (informations officielles : <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>).</p>
 </section>
 
 <section id="chaines" style="scroll-margin-top:5rem" class="mb-12">

@@ -346,7 +346,7 @@ $calendriers = [
         <p><strong class="text-white">Les règles, d'après Le360 Afrique :</strong> dans les groupes sans pays hôte, les deux premiers se qualifient. Dans les trois groupes qui comptent un pays hôte (<a href="#groupe-d" <?= $lk ?>>groupe D</a> avec le Kenya, <a href="#groupe-h" <?= $lk ?>>groupe H</a> avec l'Ouganda et <a href="#groupe-l" <?= $lk ?>>groupe L</a> avec la Tanzanie), une seule équipe se qualifie en plus de l'hôte. Le compte est cohérent : 9 groupes à deux qualifiés, 3 groupes à un qualifié et 3 hôtes font bien 24 équipes.</p>
         <p><strong class="text-white">Le calendrier :</strong> la journée 4 se joue les 16 et 17 novembre 2026, les journées 5 et 6 les 24 et 28 mars 2027, avant la phase finale du 19 juin au 18 juillet 2027 (52 matchs, 24 équipes). Le nom de la compétition, « Pamoja », signifie « ensemble » en swahili. Les stades et les dates précises des matchs de la phase finale ne sont pas encore confirmés : nous les ajouterons dès l'annonce de la CAF.</p>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Sources : Wikipédia (Coupe d'Afrique des nations 2027, informations susceptibles d'évoluer), Le360 Afrique, CAF. Dates à confirmer par la CAF.</p>
+    <p class="text-gray-600 text-xs mt-3">Sources : Wikipédia (Coupe d'Afrique des nations 2027, informations susceptibles d'évoluer), Le360 Afrique, CAF. Dates à confirmer sur le <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>.</p>
 </section>
 
 <section id="classements" style="scroll-margin-top:5rem" class="mb-12">
@@ -367,7 +367,7 @@ $calendriers = [
         </div>
         <?php endforeach; ?>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (calendrier et résultats de chaque groupe). Seuls les points sont indiqués ; à égalité, le départage retenu est la différence de buts puis les buts marqués, à vérifier avec le règlement officiel de la CAF.</p>
+    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (calendrier et résultats de chaque groupe) ; à vérifier sur le <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>. Seuls les points sont indiqués ; à égalité, le départage retenu est la différence de buts puis les buts marqués, à vérifier avec le règlement officiel de la CAF.</p>
 </section>
 
 <h2 class="sr-only">Résultats et calendrier groupe par groupe</h2>

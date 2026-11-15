@@ -159,7 +159,7 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
     <h2 class="text-2xl font-bold text-white mb-4">Les matchs diffusés sur beIN SPORTS (journée 3)</h2>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
-            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journée 3 : les 9 matchs avec une chaîne beIN SPORTS indiquée</caption>
+            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journée 3 : les 11 matchs avec une chaîne beIN SPORTS indiquée</caption>
             <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-2 font-semibold">Chaîne</th><th class="text-left px-4 py-2 font-semibold">Date et heure</th><th class="text-left px-4 py-2 font-semibold">Rencontre</th></tr></thead>
             <tbody class="divide-y divide-gray-700/60 text-gray-300">
                 <?php foreach ($matchs as $m): if (!$m[5]) continue; ?>

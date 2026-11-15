@@ -993,4 +993,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, TV CAN (suite)** : ajout à `droits-tv-can-2027.php` des droits (beIN SPORTS en France, abonnement ; beIN Mena en Afrique du Nord ; Canal+ en Afrique subsaharienne francophone, source Afrik-Foot du 23/09/2026) et des 17 matchs des journées 1 et 2 diffusés avec leur chaîne. Deux orientations domicile/extérieur divergentes entre Afrik-Foot et Foot Mercato (Mozambique - Sénégal, Tunisie - Botswana) : Foot Mercato retenu. Dates de la phase finale : 19 juin au 18 juillet 2027 (Wikipédia) ou 17 juillet (Afrik-Foot) : mention « à confirmer ».
 
+- **15 novembre 2026, fin de la CAN 2027 vérifiée** : annonce officielle de la CAF (2 mai 2026) = match d'ouverture le samedi 19 juin 2027, finale le samedi 17 juillet 2027 ; journées 5 et 6 des éliminatoires du 22 au 30 mars 2027. `can-2027.php` corrigé (18 juillet de Wikipédia remplacé par 17 juillet ; Foot Africa donnait « 18 juin - 19 juillet », erroné). Le pays hôte de l'ouverture et de la finale reste à annoncer.
+
 *Dernière mise à jour : 15 novembre 2026*

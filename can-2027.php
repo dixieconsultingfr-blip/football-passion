@@ -7,7 +7,7 @@ $articlesCan = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'
 usort($articlesCan, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
 $page_title = 'CAN 2027 : dates, pays hôtes, qualifiés et éliminatoires';
-$meta_desc  = "CAN 2027 du 19 juin au 18 juillet 2027 (Kenya, Tanzanie, Ouganda) : qui est qualifié, comment se qualifier, les 12 groupes des éliminatoires, les classements après la journée 3, le programme des journées 3 et 4 et tous nos articles.";
+$meta_desc  = "CAN 2027 du 19 juin au 17 juillet 2027 (Kenya, Tanzanie, Ouganda) : qui est qualifié, comment se qualifier, les 12 groupes des éliminatoires, les classements après la journée 3, le programme des journées 3 et 4 et tous nos articles.";
 include __DIR__ . '/templates/header.php';
 
 $lk = 'class="text-green-400 underline hover:text-green-300"';
@@ -269,7 +269,7 @@ $calendriers = [
       "name": "Quand débute la CAN 2027 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia (d'autres sources, dont Afrik-Foot, indiquent une fin le 17 juillet). Les dates sont à confirmer par la CAF."
+        "text": "La phase finale de la CAN 2027 se joue du 19 juin au 17 juillet 2027 : match d'ouverture le samedi 19 juin et finale le samedi 17 juillet, selon la CAF. Le pays hôte du match d'ouverture et celui de la finale n'étaient pas encore désignés dans son annonce."
       }
     },
     {
@@ -313,7 +313,7 @@ $calendriers = [
     <h1 class="text-4xl font-bold text-white mb-2">CAN 2027 : dates, pays hôtes, qualifiés et éliminatoires</h1>
     <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
-        La phase finale de la CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda, du 19 juin au 18 juillet 2027. Les éliminatoires réunissent douze groupes de quatre équipes :
+        La phase finale de la CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda, du 19 juin au 17 juillet 2027. Les éliminatoires réunissent douze groupes de quatre équipes :
         retrouvez ici les dates, les qualifiés, les classements, le calendrier et tous nos articles.
     </p>
 </header>
@@ -321,7 +321,7 @@ $calendriers = [
 <section id="en-bref" style="scroll-margin-top:5rem" class="mb-12 bg-gray-800 border border-green-800/40 rounded-xl p-6">
     <h2 class="text-xl font-bold text-white mb-3">CAN 2027 en bref</h2>
     <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
-        <div><dt class="text-green-400 font-semibold">Quand ?</dt><dd class="text-gray-300">Du 19 juin au 18 juillet 2027 (dates à confirmer par la CAF)</dd></div>
+        <div><dt class="text-green-400 font-semibold">Quand ?</dt><dd class="text-gray-300">Du 19 juin au 17 juillet 2027 (dates officielles CAF)</dd></div>
         <div><dt class="text-green-400 font-semibold">Où ?</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, une première en trois pays</dd></div>
         <div><dt class="text-green-400 font-semibold">Format</dt><dd class="text-gray-300">24 équipes, 52 matchs</dd></div>
         <div><dt class="text-green-400 font-semibold">Qualifiés à ce jour</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, d'office comme pays hôtes</dd></div>
@@ -344,9 +344,9 @@ $calendriers = [
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
         <p><strong class="text-white">À ce jour, seuls les trois pays hôtes sont qualifiés :</strong> le Kenya, la Tanzanie et l'Ouganda, d'office. Les 21 autres places se jouent dans les éliminatoires.</p>
         <p><strong class="text-white">Les règles, d'après Le360 Afrique :</strong> dans les groupes sans pays hôte, les deux premiers se qualifient. Dans les trois groupes qui comptent un pays hôte (<a href="#groupe-d" <?= $lk ?>>groupe D</a> avec le Kenya, <a href="#groupe-h" <?= $lk ?>>groupe H</a> avec l'Ouganda et <a href="#groupe-l" <?= $lk ?>>groupe L</a> avec la Tanzanie), une seule équipe se qualifie en plus de l'hôte. Le compte est cohérent : 9 groupes à deux qualifiés, 3 groupes à un qualifié et 3 hôtes font bien 24 équipes.</p>
-        <p><strong class="text-white">Le calendrier :</strong> la journée 4 se joue les 16 et 17 novembre 2026, les journées 5 et 6 les 24 et 28 mars 2027, avant la phase finale du 19 juin au 18 juillet 2027 (52 matchs, 24 équipes). Le nom de la compétition, « Pamoja », signifie « ensemble » en swahili. Les stades et les dates précises des matchs de la phase finale ne sont pas encore confirmés : nous les ajouterons dès l'annonce de la CAF.</p>
+        <p><strong class="text-white">Le calendrier :</strong> la journée 4 se joue les 16 et 17 novembre 2026, les journées 5 et 6 les 24 et 28 mars 2027, avant la phase finale du 19 juin au 17 juillet 2027 (52 matchs, 24 équipes). Le nom de la compétition, « Pamoja », signifie « ensemble » en swahili. Les stades et les dates précises des matchs de la phase finale ne sont pas encore confirmés : nous les ajouterons dès l'annonce de la CAF.</p>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Sources : Wikipédia (Coupe d'Afrique des nations 2027, informations susceptibles d'évoluer), Le360 Afrique, CAF. Dates à confirmer sur le <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>.</p>
+    <p class="text-gray-600 text-xs mt-3">Sources : CAF (annonce du 2 mai 2026 : ouverture le 19 juin 2027, finale le 17 juillet 2027), Wikipédia, Le360 Afrique. Informations officielles sur le <a href="https://www.cafonline.com/fr" target="_blank" rel="nofollow noopener noreferrer" class="text-green-400 underline hover:text-green-300">site officiel de la CAF</a>.</p>
 </section>
 
 <section id="classements" style="scroll-margin-top:5rem" class="mb-12">
@@ -437,7 +437,7 @@ $calendriers = [
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Quand débute la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
-            <p class="text-gray-400 text-sm leading-relaxed mt-3">La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia (d'autres sources, dont Afrik-Foot, indiquent une fin le 17 juillet). Les dates sont à confirmer par la CAF.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">La phase finale de la CAN 2027 se joue du 19 juin au 17 juillet 2027 : match d'ouverture le samedi 19 juin et finale le samedi 17 juillet, selon la CAF. Le pays hôte du match d'ouverture et celui de la finale n'étaient pas encore désignés dans son annonce.</p>
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Qui est qualifié pour la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>

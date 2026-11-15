@@ -6,6 +6,7 @@
  *   $tickerLabel  (string) libellé de gauche
  *   $tickerLink   (string) lien du libellé
  *   $tickerLimit  (int)    nombre de matchs par compétition (défaut 9)
+ *   $tickerGlobal (int)    optionnel : si défini, garde les N matchs les plus récents toutes compétitions confondues
  */
 $tickerLimit = $tickerLimit ?? 9;
 $tickerAll = json_decode(@file_get_contents(__DIR__ . '/../data/matchs.json'), true) ?? [];
@@ -16,6 +17,15 @@ $tickerCourt = [
     'Stade Rennais FC 1901' => 'Rennes', 'Toulouse FC' => 'Toulouse', 'AJ Auxerre' => 'Auxerre',
 ];
 $tickerItems = [];
+$tickerEtiquettes = ['CL' => 'C1', 'Europa' => 'C3', 'Conference' => 'C4'];
+if (isset($tickerGlobal)) {
+    $f = array_values(array_filter($tickerAll, fn($m) => in_array($m['competition'] ?? '', $tickerComps, true) && ($m['status'] ?? '') === 'FINISHED' && $m['score_dom'] !== null && $m['score_ext'] !== null));
+    usort($f, fn($a, $b) => strcmp($b['date'] . ($b['heure'] ?? ''), $a['date'] . ($a['heure'] ?? '')));
+    foreach (array_slice($f, 0, (int) $tickerGlobal) as $m) {
+        $tickerItems[] = [$tickerEtiquettes[$m['competition']] ?? $m['competition'], $tickerCourt[$m['domicile']] ?? $m['domicile'], (int) $m['score_dom'], (int) $m['score_ext'], $tickerCourt[$m['exterieur']] ?? $m['exterieur']];
+    }
+    $tickerComps = [];
+}
 foreach ($tickerComps as $comp) {
     $f = array_values(array_filter($tickerAll, fn($m) => ($m['competition'] ?? '') === $comp && ($m['status'] ?? '') === 'FINISHED' && $m['score_dom'] !== null && $m['score_ext'] !== null));
     usort($f, fn($a, $b) => strcmp($b['date'] . ($b['heure'] ?? ''), $a['date'] . ($a['heure'] ?? '')));
@@ -24,7 +34,7 @@ foreach ($tickerComps as $comp) {
     }
 }
 if (!empty($tickerItems)):
-    $tickerMulti = count($tickerComps) > 1;
+    $tickerMulti = isset($tickerGlobal) || count($tickerComps) > 1;
     $tickerDuree = max(40, count($tickerItems) * 6);
 ?>
 <style>

@@ -34,7 +34,7 @@ include __DIR__ . '/templates/header.php';
 ?>
 
 <?php
-$tickerComps = ['L1', 'L2', 'L3']; $tickerLabel = '⚽ Derniers résultats'; $tickerLink = '/calendrier.php'; $tickerLimit = 6;
+$tickerComps = ['L1', 'L2', 'L3', 'CL', 'Europa', 'Conference']; $tickerLabel = '⚽ Derniers résultats'; $tickerLink = '/calendrier.php'; $tickerGlobal = 24;
 include __DIR__ . '/templates/ticker-resultats.php';
 ?>
 
@@ -117,18 +117,26 @@ include __DIR__ . '/templates/ticker-resultats.php';
 </section>
 
 <!-- Derniers articles -->
+<?php
+// Du plus récent au plus ancien : date de mise à jour si elle existe, sinon date de création ; à égalité, l'article le plus récent (id le plus élevé) d'abord.
+$articlesRecents = $articles;
+usort($articlesRecents, function ($a, $b) {
+    $c = strcmp($b['date_maj'] ?? $b['date'], $a['date_maj'] ?? $a['date']);
+    return $c !== 0 ? $c : ($b['id'] <=> $a['id']);
+});
+?>
 <section class="mb-12">
     <h2 class="text-3xl font-bold mb-6">Derniers articles</h2>
     <?php if (empty($articles)): ?>
         <p class="text-gray-400">Aucun article pour le moment.</p>
     <?php else: ?>
         <div class="grid gap-6">
-            <?php foreach (array_slice($articles, 0, 5) as $article): ?>
+            <?php foreach (array_slice($articlesRecents, 0, 6) as $article): ?>
             <article class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition">
                 <h3 class="text-xl font-bold text-green-400 mb-2"><?php echo htmlspecialchars($article['titre']); ?></h3>
                 <p class="text-sm text-gray-400 mb-3">
                     <span class="bg-gray-700 px-2 py-1 rounded text-xs"><?php echo htmlspecialchars($article['categorie']); ?></span>
-                    • <?php echo htmlspecialchars($article['date']); ?>
+                    • <?php echo !empty($article['date_maj']) ? 'Maj ' : ''; ?><?php echo htmlspecialchars(date('d/m/Y', strtotime($article['date_maj'] ?? $article['date']))); ?>
                 </p>
                 <p class="text-gray-300 mb-4"><?php echo htmlspecialchars($article['extrait']); ?></p>
                 <a href="/blog/<?php echo urlencode($article['slug']); ?>" class="text-green-400 hover:text-green-300">Lire la suite →</a>

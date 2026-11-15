@@ -92,6 +92,11 @@ include __DIR__ . '/templates/header.php';
 }
 </script>
 
+<?php
+$tickerComps = ['L1']; $tickerLabel = '⚽ Ligue 1 · derniers résultats'; $tickerLink = '/ligue-1.php#resultats'; $tickerLimit = 9;
+include __DIR__ . '/templates/ticker-resultats.php';
+?>
+
 <!-- Breadcrumb -->
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
@@ -147,7 +152,7 @@ include __DIR__ . '/templates/header.php';
         <?php endif; ?>
 
         <!-- Derniers résultats -->
-        <section class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
+        <section id="resultats" style="scroll-margin-top:5rem" class="bg-gray-900/40 border border-gray-800 rounded-2xl p-5 sm:p-6">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl font-bold text-white">Derniers résultats<?= $derniereJournee !== null ? ' — Journée ' . (int)$derniereJournee : '' ?></h2>
                 <a href="/archives.php?comp=L1&amp;saison=2026-2027" class="text-green-400 hover:text-green-300 text-xs font-semibold shrink-0">Historique de la saison →</a>

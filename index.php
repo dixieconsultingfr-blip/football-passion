@@ -33,6 +33,11 @@ $meta_desc = 'Hub evergreen football. Calendriers, matchs, analyses, actualités
 include __DIR__ . '/templates/header.php';
 ?>
 
+<?php
+$tickerComps = ['L1', 'L2', 'L3']; $tickerLabel = '⚽ Derniers résultats'; $tickerLink = '/calendrier.php'; $tickerLimit = 6;
+include __DIR__ . '/templates/ticker-resultats.php';
+?>
+
 <section class="relative overflow-hidden rounded-2xl mb-12 border border-gray-800">
     <!-- Fond -->
     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900"></div>

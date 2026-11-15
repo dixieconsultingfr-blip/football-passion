@@ -59,6 +59,7 @@
                 <li><a href="/blog/" class="hover:text-green-400">Blog</a></li>
                 <li><a href="/droits-tv-football.php" class="hover:text-green-400">Droits TV</a></li>
                 <li><a href="/euro-2028.php" class="hover:text-green-400">Euro 2028</a></li>
+                <li><a href="/can-2027.php" class="hover:text-green-400">CAN 2027</a></li>
             </ul>
         </nav>
     </header>

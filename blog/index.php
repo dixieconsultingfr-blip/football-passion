@@ -200,6 +200,10 @@ sort($categories);
 
 $page_title = 'Blog – Football Passion | L1, L2, CL, Europa, CDM, Euro, CAN';
 $meta_desc  = 'Analyses, actualités et décryptages football : Ligue 1, Champions League, Équipe de France, Coupe du Monde, Euro et CAN.';
+if ($cat_filtre === 'CAN' || $cat_filtre === 'CAN 2027') {
+    $page_title = 'CAN 2027 : actualités et éliminatoires – Football Passion';
+    $meta_desc  = 'Tous nos articles sur la CAN 2027 : résultats, classements, programme TV et analyses des éliminatoires, avec le dossier complet CAN 2027.';
+}
 include BASE_PATH . '/templates/header.php';
 ?>
 
@@ -207,6 +211,18 @@ include BASE_PATH . '/templates/header.php';
     <h1 class="text-4xl font-bold text-white mb-2">Blog Football Passion</h1>
     <p class="text-gray-400">Analyses, actus et décryptages football.</p>
 </div>
+
+<?php if ($cat_filtre === 'CAN' || $cat_filtre === 'CAN 2027'): ?>
+<aside class="mb-8 bg-gray-800 border border-green-800/40 rounded-xl p-5" aria-label="Dossier CAN 2027">
+    <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dossier CAN 2027</p>
+    <p class="text-gray-300 text-sm leading-relaxed mb-3">Les éliminatoires de la CAN 2027 (phase finale du 19 juin au 17 juillet 2027 au Kenya, en Tanzanie et en Ouganda) : retrouvez les 12 groupes, les classements et les chaînes.</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-1 text-sm">
+        <li><a href="/can-2027.php" class="text-green-400 underline hover:text-green-300">Page CAN 2027 : groupes et classements</a></li>
+        <li><a href="/can-2027.php#qualification" class="text-green-400 underline hover:text-green-300">Qui est qualifié ?</a></li>
+        <li><a href="/droits-tv-can-2027.php" class="text-green-400 underline hover:text-green-300">CAN 2027 à la TV</a></li>
+    </ul>
+</aside>
+<?php endif; ?>
 
 <!-- Filtres catégories -->
 <div class="flex flex-wrap gap-2 mb-8">

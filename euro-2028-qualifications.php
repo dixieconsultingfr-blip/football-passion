@@ -142,7 +142,7 @@ include __DIR__ . '/templates/header.php';
             les Bleus terminent premiers avec <strong class="text-white">13 points</strong> (4 victoires, 1 nul, 1 défaite), devant la Belgique (12 points), l'Italie (10) et la Turquie (0).
         </p>
         <p>
-            Le dernier match du groupe : <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" class="text-green-400 underline hover:text-green-300">France 2-1 Turquie</a>
+            Le dernier match du groupe : <a href="/blog/france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi" class="text-green-400 underline hover:text-green-300">France 2-1 Turquie</a>
             le <strong class="text-white">dimanche 15 novembre</strong> à Bordeaux, après la défaite <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="text-green-400 underline hover:text-green-300">3-1 à Milan contre l'Italie</a>. Les Bleus se qualifient pour les quarts de finale de mars 2027.
         </p>
         <p>

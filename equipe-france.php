@@ -137,10 +137,10 @@ include __DIR__ . '/templates/header.php';
             <p class="text-white font-bold text-lg">Italie 3 - 1 France</p>
             <p class="text-gray-400 text-sm mt-1">Première défaite de l'ère Zidane, après l'ouverture du score d'Olise. Lire le compte rendu →</p>
         </a>
-        <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+        <a href="/blog/france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, Bordeaux</p>
             <p class="text-white font-bold text-lg">France 2 - 1 Turquie</p>
-            <p class="text-gray-400 text-sm mt-1">Les Bleus terminent premiers du groupe A1. Tous les résultats de la journée 6 →</p>
+            <p class="text-gray-400 text-sm mt-1">Les Bleus terminent premiers du groupe A1 et vont en quarts. Lire le compte rendu →</p>
         </a>
     </div>
     <p class="text-gray-400 text-sm leading-relaxed">

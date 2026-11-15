@@ -136,11 +136,11 @@ include __DIR__ . '/templates/header.php';
             <li>✅ <strong class="text-white">2 octobre 2026</strong> — France 1 - 1 Italie</li>
             <li>✅ <strong class="text-white">5 octobre 2026</strong> — France 4 - 1 Belgique <span class="text-gray-500">(doublé d'Olise, Doué, Cherki)</span></li>
             <li>✅ <strong class="text-white">12 novembre 2026</strong> — Italie 3 - 1 France <span class="text-gray-500">(but d'Olise, doublé d'Esposito et but de Frattesi)</span></li>
-            <li>✅ <strong class="text-white">15 novembre 2026</strong> — France 2 - 1 Turquie</li>
+            <li>✅ <strong class="text-white">15 novembre 2026</strong> — France 2 - 1 Turquie <span class="text-gray-500">(but contre son camp de Topçu, Kroupi)</span></li>
         </ul>
         <p class="pt-2 border-t border-gray-700">
             <strong class="text-white">Après la 6e et dernière journée :</strong> victorieux 2-1 de la Turquie à Bordeaux, les Bleus terminent premiers du groupe A1 avec 13 points (4 victoires, 1 nul, 1 défaite), devant la Belgique (12 points, vainqueur 4-1 de l'Italie) et l'Italie (10 points). Ils se qualifient pour les quarts de finale de mars 2027.
-            <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" class="text-green-400 hover:text-green-300">Lire les résultats du 15 novembre</a>.
+            <a href="/blog/france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi" class="text-green-400 hover:text-green-300">Lire le compte rendu de France - Turquie</a> ou <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" class="text-green-400 hover:text-green-300">tous les résultats du 15 novembre</a>.
         </p>
         <p class="pt-2">
             <a href="/ligue-des-nations-groupe-a1.php" class="text-green-400 hover:text-green-300 text-xs font-semibold">Voir le calendrier détaillé, le classement et la diffusion du groupe A1 →</a>

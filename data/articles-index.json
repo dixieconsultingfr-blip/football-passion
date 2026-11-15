@@ -1,5 +1,20 @@
 [
     {
+        "id": 103,
+        "slug": "france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi",
+        "titre": "France - Turquie (2-1) : les Bleus souffrent mais assurent leur qualification pour les quarts de finale de la Ligue des Nations",
+        "categorie": "France",
+        "etiquettes": [
+            "Équipe de France",
+            "Ligue des nations"
+        ],
+        "date": "2026-11-15",
+        "extrait": "Dimanche 15 novembre 2026 à Bordeaux, les Bleus ont battu la Turquie 2-1 grâce à un but contre son camp de Topçu et au premier but de Kroupi en sélection : ils terminent premiers du groupe A1 et sont en quarts de finale.",
+        "vignette": "/images/france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi.jpg",
+        "image_alt": "France 2-1 Turquie, Ligue des Nations, groupe A1 journee 6, Bordeaux 15 novembre 2026 : buts de Topcu (csc) et Kroupi, qualification pour les quarts de finale",
+        "titre_court": "France 2-1 Turquie : les Bleus en quarts"
+    },
+    {
         "id": 102,
         "slug": "ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre",
         "titre": "Ligue des Nations, journée 6 : la France bat la Turquie 2-1 et finit première, la Belgique écrase l'Italie 4-1 (résultats du 15 novembre)",
@@ -12,7 +27,8 @@
         "extrait": "France 2-1 Turquie, Belgique 4-1 Italie, Espagne 2-3 Angleterre : les huit résultats de la journée 6 de la Ligue des Nations du dimanche 15 novembre 2026, et les classements finaux des groupes A1, C, I et J.",
         "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre.jpg",
         "image_alt": "Ligue des Nations journee 6, resultats du 15 novembre 2026 : France 2-1 Turquie, Belgique 4-1 Italie, Espagne 2-3 Angleterre, Chypre 1-4 Montenegro",
-        "titre_court": "J6 : France 2-1 Turquie, Belgique 4-1 Italie"
+        "titre_court": "J6 : France 2-1 Turquie, Belgique 4-1 Italie",
+        "date_maj": "2026-11-15"
     },
     {
         "id": 101,

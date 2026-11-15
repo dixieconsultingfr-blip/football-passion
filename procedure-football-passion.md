@@ -997,4 +997,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, article CAN id 100** : « Algérie 1-0 Togo » (CAN 2027, groupe I, J3, but de Bensebaini 76e sur passe de Hadj Moussa), rédigé à partir de la fiche Flashscore collée (score, buteur, stats) sans reprise de texte ; classement du groupe recalculé depuis les résultats ; vignette `eliminatoires-can-2027-algerie-togo-1-0-bensebaini.jpg` ; contrôle anti-doublon OK (< 10 %). Cartons et remplacements non repris (libellés Flashscore ambigus).
 
+- **15 novembre 2026, article France id 101** : « Zidane dément tout clash avec Mbappé » (conférence de presse du 14 novembre avant France - Turquie), d'après le texte et la source Le Figaro fournis par l'utilisateur ; reformulé (citations limitées à quelques mots, lien Le Figaro en nofollow), forfait de Mbappé contre l'Italie (gêne aux ischio-jambiers) attribué au Figaro ; vignette `zidane-dement-clash-mbappe-france-turquie-ligue-des-nations.jpg`. Composition officielle non connue : non écrite.
+
 *Dernière mise à jour : 15 novembre 2026*

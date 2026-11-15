@@ -152,7 +152,8 @@
         "date": "2026-11-09",
         "extrait": "Saint-Étienne a battu Laval 2-0 samedi 7 novembre et reste leader de la Ligue 2 avec 28 points. Nancy, vainqueur de Sochaux, est deuxième à trois points ; Montpellier et Reims ont perdu. Résultats de la J12 et classement.",
         "vignette": "/images/ligue-2-journee-12-asse-laval-2-0-nancy-2026-2027.jpg",
-        "image_alt": "Ligue 2 journee 12 : Saint-Etienne bat Laval 2-0 et reste leader avec 28 points, Nancy a 25 points, Montpellier a 24 points"
+        "image_alt": "Ligue 2 journee 12 : Saint-Etienne bat Laval 2-0 et reste leader avec 28 points, Nancy a 25 points, Montpellier a 24 points",
+        "titre_court": "Ligue 2 J12 : l'ASSE bat Laval 2-0"
     },
     {
         "id": 91,
@@ -197,7 +198,8 @@
         "date_maj": "2026-11-08",
         "extrait": "Fondé en 1899, surnommé les Diables Rouges, le FC Rouen a connu la Ligue 1, les dépôts de bilan et la Division d'honneur avant de retrouver les sommets. Portrait d'un club historique, 2e de la Ligue 3, et de sa ville.",
         "vignette": "/images/rouen-ligue-3-portrait-modele-logo.jpg",
-        "image_alt": "FC Rouen en Ligue 3, saison 2026-2027 : Diables Rouges, club fonde en 1899, stade Robert-Diochon, cathedrale et Gros-Horloge de Rouen"
+        "image_alt": "FC Rouen en Ligue 3, saison 2026-2027 : Diables Rouges, club fonde en 1899, stade Robert-Diochon, cathedrale et Gros-Horloge de Rouen",
+        "titre_court": "Rouen en Ligue 3 : portrait du club"
     },
     {
         "id": 88,
@@ -212,7 +214,8 @@
         "date_maj": "2026-11-08",
         "extrait": "Fondé en 1901, monté pour la première fois en Ligue 1 en 2017, l'Amiens SC joue la Ligue 3 en 2026-2027 avec la meilleure défense du championnat. Portrait du club, de son histoire et de sa ville, entre cathédrale et hortillonnages.",
         "vignette": "/images/amiens-ligue-3-portrait-modele-logo.jpg",
-        "image_alt": "Amiens SC en Ligue 3, saison 2026-2027 : club fonde en 1901, stade de la Licorne, cathedrale et hortillonnages d'Amiens"
+        "image_alt": "Amiens SC en Ligue 3, saison 2026-2027 : club fonde en 1901, stade de la Licorne, cathedrale et hortillonnages d'Amiens",
+        "titre_court": "Amiens en Ligue 3 : portrait du club"
     },
     {
         "id": 87,
@@ -270,7 +273,8 @@
         "date_maj": "2026-11-02",
         "extrait": "Paulo Fonseca a annoncé à ses joueurs, lundi 2 novembre 2026, qu'il quitte l'OL pour rejoindre le Sporting Portugal, son club de cœur. Jorge Maciel assurera l'intérim face à la Real Sociedad, puis à Brest. Raisons, indemnité, succession : le point.",
         "vignette": "/images/fonseca-quitte-ol-sporting-portugal-coup-de-tonnerre-2026.jpg",
-        "image_alt": "Paulo Fonseca quitte l'Olympique Lyonnais pour le Sporting Portugal, Jorge Maciel assure l'interim"
+        "image_alt": "Paulo Fonseca quitte l'Olympique Lyonnais pour le Sporting Portugal, Jorge Maciel assure l'interim",
+        "titre_court": "L'OL : Fonseca quitte Lyon pour le Sporting"
     },
     {
         "id": 83,
@@ -285,7 +289,8 @@
         "date_maj": "2026-11-02",
         "extrait": "La LFP lance un nouvel appel d'offres pour les droits TV de la Ligue 1 sur 2027-2032, deux ans plus tôt que prévu : un lot unique, deux options (diffusion directe ou distribution de Ligue 1+), dépôt des offres du 3 novembre au 7 décembre 2026.",
         "vignette": "/images/droits-tv-ligue-1-qui-diffusera-2027-vignette.jpg",
-        "image_alt": "Qui diffusera la Ligue 1 en 2027 ? La LFP lance un appel d'offres pour 2027-2032, Canal+ ou une plateforme internationale"
+        "image_alt": "Qui diffusera la Ligue 1 en 2027 ? La LFP lance un appel d'offres pour 2027-2032, Canal+ ou une plateforme internationale",
+        "titre_court": "Droits TV L1 : appel d'offres 2027-2032"
     },
     {
         "id": 82,
@@ -300,7 +305,8 @@
         "date_maj": "2026-11-08",
         "extrait": "Champion de Division d'Honneur en 2017, de National 2 en 2021, demi-finaliste de la Coupe de France 2022 et 3e de la Ligue 3 après onze journées : le FC Versailles est l'un des clubs les plus ambitieux du championnat. Portrait du club et de la ville du château de Louis XIV.",
         "vignette": "/images/versailles-ligue-3-portrait-modele-logo.jpg",
-        "image_alt": "FC Versailles en Ligue 3, saison 2026-2027 : club fonde en 1989, ville et chateau de Louis XIV"
+        "image_alt": "FC Versailles en Ligue 3, saison 2026-2027 : club fonde en 1989, ville et chateau de Louis XIV",
+        "titre_court": "Versailles en Ligue 3 : portrait du club"
     },
     {
         "id": 81,
@@ -315,7 +321,8 @@
         "date_maj": "2026-11-08",
         "extrait": "Fondé en 1913, passé par la Ligue 1, qualifié en Coupe de l'UEFA en 1992 et connu pour son centre de formation, le Stade Malherbe Caen est l'un des clubs les plus chargés d'histoire de la Ligue 3. Portrait du club, de sa ville et de ce qu'on peut y visiter.",
         "vignette": "/images/caen-ligue-3-portrait-modele-logo.jpg",
-        "image_alt": "SM Caen en Ligue 3, saison 2026-2027 : club historique fonde en 1913, centre de formation, stade Michel-d'Ornano, ville de Caen"
+        "image_alt": "SM Caen en Ligue 3, saison 2026-2027 : club historique fonde en 1913, centre de formation, stade Michel-d'Ornano, ville de Caen",
+        "titre_court": "Caen en Ligue 3 : portrait du club"
     },
     {
         "id": 80,
@@ -329,7 +336,8 @@
         "date": "2026-11-01",
         "extrait": "Saint-Étienne a chuté 3-0 à Guingamp samedi 31 octobre, mais reste leader de la Ligue 2 avec 25 points (+12). Montpellier, vainqueur 3-0 à Annecy, n'est plus qu'à un point. Résultats de la J11 et classement.",
         "vignette": "/images/ligue-2-journee-11-guingamp-asse-3-0-montpellier-2026-2027.jpg",
-        "image_alt": "Ligue 2 journee 11 : Guingamp bat Saint-Etienne 3-0, l'ASSE reste leader avec 25 points, Montpellier a 24 points"
+        "image_alt": "Ligue 2 journee 11 : Guingamp bat Saint-Etienne 3-0, l'ASSE reste leader avec 25 points, Montpellier a 24 points",
+        "titre_court": "Ligue 2 J11 : l'ASSE s'incline à Guingamp"
     },
     {
         "id": 79,
@@ -387,7 +395,8 @@
         "date": "2026-10-29",
         "extrait": "Saint-Étienne a battu Nantes 1-0 samedi 24 octobre grâce à une tête d'Augustine Boakye à la 90e minute. Une victoire arrachée sur le gong qui conforte le leadership de l'ASSE en Ligue 2. Récit, résultats de la J10 et classement.",
         "vignette": "/images/asse-nantes-1-0-boakye-ligue-2-journee-10-2026-2027.jpg",
-        "image_alt": "Ligue 2 journee 10 : Saint-Etienne bat Nantes 1-0 grace a un but de Boakye a la 90e minute, l'ASSE leader avec 25 points"
+        "image_alt": "Ligue 2 journee 10 : Saint-Etienne bat Nantes 1-0 grace a un but de Boakye a la 90e minute, l'ASSE leader avec 25 points",
+        "titre_court": "L'ASSE s'impose 1-0 contre Nantes"
     },
     {
         "id": 75,
@@ -561,7 +570,8 @@
         "date_maj": "2026-10-18",
         "extrait": "Saint-Étienne s'impose 1-0 au Red Star, son plus proche poursuivant, et compte désormais 5 points d'avance. Reims bat Dijon 4-2 et reste invaincu, Laval et Clermont se quittent sur un 3-3. Résultats et classement de la journée 9 de Ligue 2.",
         "vignette": "/images/ligue-2-journee-9-resultats-2026-2027.jpg",
-        "image_alt": "Ligue 2 journee 9 : Saint-Etienne gagne au Red Star, Reims bat Dijon 4-2, Laval et Clermont 3-3"
+        "image_alt": "Ligue 2 journee 9 : Saint-Etienne gagne au Red Star, Reims bat Dijon 4-2, Laval et Clermont 3-3",
+        "titre_court": "Ligue 2 J9 : l'ASSE gagne au Red Star"
     },
     {
         "id": 63,
@@ -726,7 +736,8 @@
         "date_maj": "2026-09-29",
         "extrait": "Deuxième journée mouvementée dans les éliminatoires de la CAN 2027 : l'Algérie revient de 2-0 pour arracher le nul au Burundi, l'Égypte s'impose 5-0, et Patrick Vieira gagne pour ses débuts sur le banc du Sénégal.",
         "vignette": "/images/eliminatoires-can-2027-algerie-egypte-senegal-vieira.jpg",
-        "image_alt": "Eliminatoires CAN 2027 : Algerie, Egypte et Senegal apres la deuxieme journee"
+        "image_alt": "Eliminatoires CAN 2027 : Algerie, Egypte et Senegal apres la deuxieme journee",
+        "titre_court": "CAN 2027 J2 : l'Algérie renverse le Burundi"
     },
     {
         "id": 52,
@@ -756,7 +767,8 @@
         "date_maj": "2026-09-28",
         "extrait": "La deuxième journée des éliminatoires de la CAN 2027 se joue du 28 septembre au 1er octobre. Programme complet, horaires, stades et chaînes beIN Sports, avec Zimbabwe - RD Congo et Burundi - Algérie.",
         "vignette": "/images/eliminatoires-can-2027-journee-2-programme-chaines.jpg",
-        "image_alt": "Eliminatoires de la CAN 2027 : programme, horaires et chaines de la deuxieme journee"
+        "image_alt": "Eliminatoires de la CAN 2027 : programme, horaires et chaines de la deuxieme journee",
+        "titre_court": "CAN 2027 J2 : programme et chaînes"
     },
     {
         "id": 50,
@@ -801,7 +813,8 @@
         "date_maj": "2026-09-25",
         "extrait": "La première journée des éliminatoires de la CAN 2027 est terminée : Maroc, RD Congo, Algérie, Côte d'Ivoire, Cameroun ou encore Mali démarrent par une victoire. Voici les classements des 12 groupes.",
         "vignette": "/images/eliminatoires-can-2027-classements-journee-1.jpg",
-        "image_alt": "Eliminatoires de la CAN 2027 : classements des 12 groupes apres la premiere journee"
+        "image_alt": "Eliminatoires de la CAN 2027 : classements des 12 groupes apres la premiere journee",
+        "titre_court": "CAN 2027 : classements après la J1"
     },
     {
         "id": 47,
@@ -1161,7 +1174,8 @@
         "date_maj": "2026-11-08",
         "extrait": "Ligue 1+ autorise 2 connexions simultanées sur trois de ses cinq formules. Combien d'écrans, comment regarder sur 2 écrans, quel prix par personne et quelles limites au partage de compte : le guide complet.",
         "vignette": "/images/partager-abonnement-ligue-1-plus.jpg",
-        "image_alt": "Est-il possible de partager son abonnement Ligue 1+ a plusieurs"
+        "image_alt": "Est-il possible de partager son abonnement Ligue 1+ a plusieurs",
+        "titre_court": "Partager son abonnement Ligue 1+"
     },
     {
         "id": 22,

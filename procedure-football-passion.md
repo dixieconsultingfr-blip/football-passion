@@ -974,4 +974,11 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - Pages d'édition avec saison dans l'URL (`ligue-des-nations-2026-2027.php`, puis `-2028-2029`) ; URLs de groupes existantes inchangées (indexées).
 - Liens vers le hub : pied de page, bloc d'accueil, `euro-2028.php` (nouvelle section `#ligue-des-nations` + puce), fils d'Ariane (Accueil › Ligue des Nations › 2026-2027 › Groupe X), `sitemap.php`. Convention notée dans `CLAUDE.md`.
 
+### 3.108 Ligue des Nations journée 5 complète (13-14 novembre) et bandeau défilant Euro 2028 — 15 novembre 2026
+
+- Résultats des 18 matchs des 13 et 14 novembre fournis par l'utilisateur (texte collé, sans source officielle citée) : contrôlés (cohérence points/buts, concordance avec les classements après J4 et avec les 18 affiches du programme, article 96) avant publication. Le groupe C1 du texte était confus ; groupes C (A3), I et J inchangés (déjà à jour). Groupes M et N : classements sur 3 à 4 matchs.
+- Classements mis à jour : groupes B, D, E, F, G, H, K, L, M, N (`$classement`, `$date_maj_page`, meta « après la journée 5 »).
+- Article id 99 réécrit : tous les résultats de la J5 (26 matchs, tableau du plus récent au plus ancien, leaders des 14 groupes) ; `date_maj` 15/11 ; slug conservé. Vignette inchangée (mentionne le 12 novembre).
+- `euro-2028.php` : bandeau défilant (26 résultats, 110 s, pause au survol).
+
 *Dernière mise à jour : 15 novembre 2026*

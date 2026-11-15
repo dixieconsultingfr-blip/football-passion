@@ -86,13 +86,37 @@ include __DIR__ . '/templates/header.php';
 <!-- Bandeau défilant : derniers résultats Ligue des Nations -->
 <?php
 $ldnResultats = [
-    ['Italie', 3, 1, 'France'], ['Turquie', 1, 2, 'Belgique'], ['Tchéquie', 0, 2, 'Espagne'], ['Angleterre', 2, 1, 'Croatie'],
-    ['Albanie', 2, 0, 'Finlande'], ['Saint-Marin', 0, 2, 'Biélorussie'], ['Arménie', 1, 1, 'Chypre'], ['Monténégro', 2, 1, 'Lettonie'],
+    ['Irlande du Nord', 1, 0, 'Ukraine'],
+    ['Géorgie', 0, 2, 'Hongrie'],
+    ['Portugal', 1, 4, 'Danemark'],
+    ['Norvège', 3, 1, 'Pays de Galles'],
+    ['Suède', 3, 2, 'Bosnie-Herzégovine'],
+    ['Roumanie', 2, 1, 'Pologne'],
+    ['Autriche', 1, 0, 'Irlande'],
+    ['Kosovo', 0, 0, 'Israël'],
+    ['Pays-Bas', 7, 0, 'Grèce'],
+    ['Serbie', 1, 3, 'Allemagne'],
+    ['Slovénie', 0, 0, 'Suisse'],
+    ['Écosse', 2, 1, 'Macédoine du Nord'],
+    ['Moldavie', 2, 1, 'Kazakhstan'],
+    ['Slovaquie', 2, 2, 'Îles Féroé'],
+    ['Luxembourg', 0, 1, 'Estonie'],
+    ['Bulgarie', 0, 5, 'Islande'],
+    ['Andorre', 2, 0, 'Gibraltar'],
+    ['Liechtenstein', 0, 1, 'Azerbaïdjan'],
+    ['Italie', 3, 1, 'France'],
+    ['Turquie', 1, 2, 'Belgique'],
+    ['Tchéquie', 0, 2, 'Espagne'],
+    ['Angleterre', 2, 1, 'Croatie'],
+    ['Albanie', 2, 0, 'Finlande'],
+    ['Saint-Marin', 0, 2, 'Biélorussie'],
+    ['Arménie', 1, 1, 'Chypre'],
+    ['Monténégro', 2, 1, 'Lettonie'],
 ];
 ?>
 <style>
 .ldn-ticker{overflow:hidden;white-space:nowrap}
-.ldn-track{display:inline-flex;animation:ldn-scroll 40s linear infinite}
+.ldn-track{display:inline-flex;animation:ldn-scroll 110s linear infinite}
 .ldn-ticker:hover .ldn-track{animation-play-state:paused}
 @keyframes ldn-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.ldn-ticker{overflow-x:auto}.ldn-track{animation:none}}
@@ -106,7 +130,7 @@ $ldnResultats = [
                 <?php foreach ($ldnResultats as $r): ?>
                 <span><?= htmlspecialchars($r[0]) ?> <strong class="text-white"><?= $r[1] ?>-<?= $r[2] ?></strong> <?= htmlspecialchars($r[3]) ?></span>
                 <?php endforeach; ?>
-                <span class="text-gray-500">Journée 5 · 12 novembre</span>
+                <span class="text-gray-500">Journée 5 · 12 au 14 novembre</span>
             </a>
             <?php endfor; ?>
         </div>

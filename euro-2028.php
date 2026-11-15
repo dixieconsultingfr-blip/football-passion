@@ -248,7 +248,7 @@ include __DIR__ . '/templates/ticker-resultats.php';
         <a href="/equipe-france.php#ligue-des-nations" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">France</p>
             <p class="text-white font-bold">Les Bleus de Zinédine Zidane</p>
-            <p class="text-gray-400 text-xs mt-1">Battue 3-1 en Italie, France - Turquie le 15 novembre →</p>
+            <p class="text-gray-400 text-xs mt-1">Première du groupe A1 après sa victoire 2-1 contre la Turquie →</p>
         </a>
         <a href="/euro-2028-pays-hotes.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Les pays hôtes</p>
@@ -263,7 +263,7 @@ include __DIR__ . '/templates/ticker-resultats.php';
         <a href="/blog/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Turquie</p>
             <p class="text-white font-bold">Sergen Yalçın, nouveau sélectionneur</p>
-            <p class="text-gray-400 text-xs mt-1">Avant France - Turquie le 15 novembre →</p>
+            <p class="text-gray-400 text-xs mt-1">Battue 2-1 par la France, dernière du groupe A1 →</p>
         </a>
     </div>
 </section>
@@ -312,9 +312,9 @@ include __DIR__ . '/templates/ticker-resultats.php';
             l'une des meilleures nations mondiales après sa 4e place au Mondial 2026.
         </p>
         <p class="text-gray-300 text-sm leading-relaxed mb-5">
-            Bilan en Ligue des nations : après cinq matchs sous Zidane, les Bleus comptent trois victoires
-            (1-0 en Turquie, 1-0 puis 4-1 contre la Belgique), un nul (1-1 contre l'Italie) et une première défaite (3-1 à Milan le 12 novembre),
-            et sont à égalité avec l'Italie avec 10 points dans le groupe A1. Un test grandeur nature avant les qualifications, dont le tirage a lieu le 6 décembre 2026.
+            Bilan en Ligue des nations : après six matchs sous Zidane, les Bleus terminent premiers du groupe A1 avec quatre victoires
+            (1-0 en Turquie, 1-0 puis 4-1 contre la Belgique, 2-1 contre la Turquie à Bordeaux), un nul (1-1 contre l'Italie) et une défaite (3-1 à Milan le 12 novembre),
+            soit 13 points, et se qualifient pour les quarts de finale de mars 2027. Un test grandeur nature avant les qualifications, dont le tirage a lieu le 6 décembre 2026.
             <a href="/blog/euro-2028-route-des-bleus-dates-format-qualifications" class="text-green-400 hover:text-green-300">La route des Bleus vers l'Euro →</a>
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">

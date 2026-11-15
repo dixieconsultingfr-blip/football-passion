@@ -128,9 +128,8 @@ include __DIR__ . '/templates/header.php';
 <section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Les Bleus de Zidane en Ligue des nations 2026-2027</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-4">
-        Après cinq matchs du groupe A1 (France, Italie, Belgique, Turquie), la France compte <strong class="text-white">10 points</strong>, à égalité avec l'Italie, qui l'a battue 3-1 à Milan :
-        trois victoires, un nul et une défaite, huit buts marqués et cinq encaissés. Il reste un rendez-vous, diffusé sur TF1 et TF1+ à 20h45,
-        avant les quarts de finale prévus en mars 2027 et le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
+        Après six matchs du groupe A1 (France, Italie, Belgique, Turquie), la France termine première avec <strong class="text-white">13 points</strong>, devant la Belgique (12) et l'Italie (10) :
+        quatre victoires, un nul et une défaite, dix buts marqués et six encaissés. Elle est qualifiée pour les quarts de finale prévus en mars 2027, avant le tirage au sort des qualifications de l'<a href="/euro-2028.php" class="text-green-400 underline hover:text-green-300">Euro 2028</a> le 6 décembre 2026.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <a href="/blog/italie-france-3-1-premiere-defaite-zidane-ligue-des-nations-euro-2028" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
@@ -138,10 +137,10 @@ include __DIR__ . '/templates/header.php';
             <p class="text-white font-bold text-lg">Italie 3 - 1 France</p>
             <p class="text-gray-400 text-sm mt-1">Première défaite de l'ère Zidane, après l'ouverture du score d'Olise. Lire le compte rendu →</p>
         </a>
-        <a href="/blog/france-turquie-heure-chaine-composition-ligue-des-nations-15-novembre-2026" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
-            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, 20h45</p>
-            <p class="text-white font-bold text-lg">France - Turquie</p>
-            <p class="text-gray-400 text-sm mt-1">Stade Atlantique, à Bordeaux, sur TF1 et TF1+. Heure, chaîne et composition →</p>
+        <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dimanche 15 novembre, Bordeaux</p>
+            <p class="text-white font-bold text-lg">France 2 - 1 Turquie</p>
+            <p class="text-gray-400 text-sm mt-1">Les Bleus terminent premiers du groupe A1. Tous les résultats de la journée 6 →</p>
         </a>
     </div>
     <p class="text-gray-400 text-sm leading-relaxed">

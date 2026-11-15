@@ -1,5 +1,20 @@
 [
     {
+        "id": 102,
+        "slug": "ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre",
+        "titre": "Ligue des Nations, journée 6 : la France bat la Turquie 2-1 et finit première, la Belgique écrase l'Italie 4-1 (résultats du 15 novembre)",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Ligue des nations",
+            "Euro 2028"
+        ],
+        "date": "2026-11-15",
+        "extrait": "France 2-1 Turquie, Belgique 4-1 Italie, Espagne 2-3 Angleterre : les huit résultats de la journée 6 de la Ligue des Nations du dimanche 15 novembre 2026, et les classements finaux des groupes A1, C, I et J.",
+        "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre.jpg",
+        "image_alt": "Ligue des Nations journee 6, resultats du 15 novembre 2026 : France 2-1 Turquie, Belgique 4-1 Italie, Espagne 2-3 Angleterre, Chypre 1-4 Montenegro",
+        "titre_court": "J6 : France 2-1 Turquie, Belgique 4-1 Italie"
+    },
+    {
         "id": 101,
         "slug": "zidane-dement-clash-mbappe-france-turquie-ligue-des-nations",
         "titre": "Zidane dément tout clash avec Mbappé avant France - Turquie : « Ça se passe parfaitement »",
@@ -75,7 +90,7 @@
         "extrait": "Dernière du groupe A1 avec zéro point, la Turquie a limogé Vincenzo Montella et nommé Sergen Yalçın. Calendrier, joueurs à connaître, France - Turquie le 15 novembre et route vers l'Euro 2028 : le point sur la sélection turque.",
         "vignette": "/images/turquie-equipe-nationale-yalcin-ligue-des-nations-euro-2028.jpg",
         "image_alt": "Equipe de Turquie : Sergen Yalcin selectionneur, 0 point en Ligue des Nations, Turquie-Belgique le 12 novembre a Izmir, France-Turquie le 15 novembre",
-        "date_maj": "2026-11-13",
+        "date_maj": "2026-11-15",
         "titre_court": "Turquie : tout savoir avant France - Turquie"
     },
     {
@@ -183,7 +198,7 @@
         "extrait": "Les Bleus reçoivent la Turquie dimanche 15 novembre 2026 à 20h45 à Bordeaux, pour la dernière journée du groupe A1 de la Ligue des nations. Heure, chaîne (TF1 et TF1+), enjeux et composition : tout ce qu'il faut savoir.",
         "vignette": "/images/france-turquie-ligue-des-nations-15-novembre-2026-affiche.jpg",
         "image_alt": "France - Turquie, Ligue des nations, dimanche 15 novembre 2026 a 20h45 a Bordeaux, en direct sur TF1 et TF1+",
-        "date_maj": "2026-11-13"
+        "date_maj": "2026-11-15"
     },
     {
         "id": 89,

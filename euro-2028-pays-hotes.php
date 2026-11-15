@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-13'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
+$date_maj_page = '2026-11-15'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
 
 $articlesAll = load_articles_index(__DIR__);
 $articlesEuro = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'Euro'));
@@ -26,7 +26,7 @@ $nations = [
             ['St James\' Park', 'st-james-park', 'Newcastle', '52 305', 'Groupes et huitième de finale'],
             ['Villa Park', 'villa-park', 'Birmingham', '52 190', 'Groupes et huitième de finale'],
         ],
-        'ldn' => ['Groupe C', '/ligue-des-nations-groupe-c.php', 'Espagne, Croatie, Angleterre, Tchéquie', "2e avec 12 points après une victoire 2-1 contre la Croatie le 12 novembre", 'Espagne - Angleterre le dimanche 15 novembre à 20h45 (dernière journée)'],
+        'ldn' => ['Groupe C', '/ligue-des-nations-groupe-c.php', 'Espagne, Croatie, Angleterre, Tchéquie', "15 points, comme l'Espagne, après sa victoire 3-2 contre elle le 15 novembre (dernière journée)", 'phase de groupes terminée ; quarts de finale en mars 2027'],
     ],
     [
         'id' => 'ecosse', 'nom' => 'Écosse',

@@ -13,6 +13,7 @@
  *   $tickerGlobal   (int)    mode « accueil » : garde les N derniers matchs de chaque compétition de $tickerComps
  *                            (et des sélections), triés du plus récent au plus ancien
  *   $tickerArticles (int)    nombre d'articles récents affichés en tête du bandeau
+ *   $tickerArtCats  (array)  si défini : seuls les articles de ces catégories ou étiquettes (ex. ['L1'], ['CAN', 'CAN 2027'])
  */
 $tickerLimit = $tickerLimit ?? 9;
 $tickerAll = json_decode(@file_get_contents(__DIR__ . '/../data/matchs.json'), true) ?? [];
@@ -38,8 +39,8 @@ foreach ($tickerAll as $m) {
         $tickerPool[] = $m + ['heure' => ''];
     }
 }
+foreach ($tickerSelections as $m) { $tickerPool[] = $m + ['heure' => '']; }
 if (isset($tickerGlobal)) {
-    foreach ($tickerSelections as $m) { $tickerPool[] = $m + ['heure' => '']; }
     $tickerComps = array_merge($tickerComps, ['LDN', 'CAN']);
 }
 
@@ -70,6 +71,9 @@ if (isset($tickerGlobal)) {
 $tickerArts = [];
 if (!empty($tickerArticles)) {
     $arts = load_articles_index(__DIR__ . '/..');
+    if (!empty($tickerArtCats)) {
+        $arts = array_values(array_filter($arts, fn($a) => in_array($a['categorie'] ?? '', $tickerArtCats, true) || array_intersect($tickerArtCats, $a['etiquettes'] ?? [])));
+    }
     usort($arts, function ($a, $b) {
         $c = strcmp($b['date_maj'] ?? $b['date'], $a['date_maj'] ?? $a['date']);
         return $c !== 0 ? $c : ($b['id'] <=> $a['id']);

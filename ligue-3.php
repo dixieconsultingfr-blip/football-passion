@@ -91,7 +91,7 @@ include __DIR__ . '/templates/header.php';
 </script>
 
 <?php
-$tickerComps = ['L3']; $tickerLabel = '⚽ Ligue 3 · derniers résultats'; $tickerLink = '/ligue-3.php#resultats'; $tickerLimit = 9;
+$tickerComps = ['L3']; $tickerLabel = '⚽ Ligue 3 · actus & scores'; $tickerLink = '/ligue-3.php#resultats'; $tickerLimit = 9; $tickerArticles = 3; $tickerArtCats = ['L3'];
 include __DIR__ . '/templates/ticker-resultats.php';
 ?>
 

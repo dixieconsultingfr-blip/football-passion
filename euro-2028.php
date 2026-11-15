@@ -83,59 +83,10 @@ include __DIR__ . '/templates/header.php';
 }
 </script>
 
-<!-- Bandeau défilant : derniers résultats Ligue des Nations -->
 <?php
-$ldnResultats = [
-    ['Irlande du Nord', 1, 0, 'Ukraine'],
-    ['Géorgie', 0, 2, 'Hongrie'],
-    ['Portugal', 1, 4, 'Danemark'],
-    ['Norvège', 3, 1, 'Pays de Galles'],
-    ['Suède', 3, 2, 'Bosnie-Herzégovine'],
-    ['Roumanie', 2, 1, 'Pologne'],
-    ['Autriche', 1, 0, 'Irlande'],
-    ['Kosovo', 0, 0, 'Israël'],
-    ['Pays-Bas', 7, 0, 'Grèce'],
-    ['Serbie', 1, 3, 'Allemagne'],
-    ['Slovénie', 0, 0, 'Suisse'],
-    ['Écosse', 2, 1, 'Macédoine du Nord'],
-    ['Moldavie', 2, 1, 'Kazakhstan'],
-    ['Slovaquie', 2, 2, 'Îles Féroé'],
-    ['Luxembourg', 0, 1, 'Estonie'],
-    ['Bulgarie', 0, 5, 'Islande'],
-    ['Andorre', 2, 0, 'Gibraltar'],
-    ['Liechtenstein', 0, 1, 'Azerbaïdjan'],
-    ['Italie', 3, 1, 'France'],
-    ['Turquie', 1, 2, 'Belgique'],
-    ['Tchéquie', 0, 2, 'Espagne'],
-    ['Angleterre', 2, 1, 'Croatie'],
-    ['Albanie', 2, 0, 'Finlande'],
-    ['Saint-Marin', 0, 2, 'Biélorussie'],
-    ['Arménie', 1, 1, 'Chypre'],
-    ['Monténégro', 2, 1, 'Lettonie'],
-];
+$tickerComps = ['LDN']; $tickerLabel = '🥇 Euro 2028 · Ligue des Nations'; $tickerLink = '/ligue-des-nations.php'; $tickerLimit = 12; $tickerArticles = 3; $tickerArtCats = ['Euro', 'Euro 2028', 'Ligue des nations'];
+include __DIR__ . '/templates/ticker-resultats.php';
 ?>
-<style>
-.ldn-ticker{overflow:hidden;white-space:nowrap}
-.ldn-track{display:inline-flex;animation:ldn-scroll 110s linear infinite}
-.ldn-ticker:hover .ldn-track{animation-play-state:paused}
-@keyframes ldn-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ldn-ticker{overflow-x:auto}.ldn-track{animation:none}}
-</style>
-<div class="mb-6 flex items-stretch bg-gray-800 border border-green-800 rounded-lg overflow-hidden text-sm" role="region" aria-label="Ligue des Nations : derniers résultats">
-    <a href="/ligue-des-nations.php" class="shrink-0 bg-green-700 hover:bg-green-600 text-white font-semibold px-3 py-2 text-xs sm:text-sm flex items-center transition-colors">🥇 Ligue des Nations · derniers résultats</a>
-    <div class="ldn-ticker flex-1 py-2">
-        <div class="ldn-track">
-            <?php for ($i = 0; $i < 2; $i++): ?>
-            <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-5-jeudi-12-novembre" class="inline-flex items-center gap-6 pr-6 text-gray-300 hover:text-white" <?= $i ? 'aria-hidden="true" tabindex="-1"' : '' ?>>
-                <?php foreach ($ldnResultats as $r): ?>
-                <span><?= htmlspecialchars($r[0]) ?> <strong class="text-white"><?= $r[1] ?>-<?= $r[2] ?></strong> <?= htmlspecialchars($r[3]) ?></span>
-                <?php endforeach; ?>
-                <span class="text-gray-500">Journée 5 · 12 au 14 novembre</span>
-            </a>
-            <?php endfor; ?>
-        </div>
-    </div>
-</div>
 
 <!-- Breadcrumb -->
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">

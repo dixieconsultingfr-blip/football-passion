@@ -131,7 +131,10 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
 }
 </script>
 
-<?php include __DIR__ . '/templates/can-ticker.php'; ?>
+<?php
+$tickerComps = ['CAN']; $tickerLabel = '🌍 CAN 2027 · actus & scores'; $tickerLink = '/can-2027.php#classements'; $tickerLimit = 12; $tickerArticles = 3; $tickerArtCats = ['CAN', 'CAN 2027'];
+include __DIR__ . '/templates/ticker-resultats.php';
+?>
 
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2 flex-wrap">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>

@@ -366,7 +366,7 @@ Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher
 
 - **Accueil** : les 3 derniers articles (« À LA UNE », via `titre_court`), puis les 4 derniers scores de chaque compétition triés du plus récent au plus ancien. Sources : `data/matchs.json` (L1, L2, L3, C1, C3, C4, mis à jour par n8n ou à la main) et **`data/resultats-selections.json`** (Ligue des Nations, CAN : saisi à la main).
 - **À mettre à jour après chaque journée de Ligue des Nations ou de CAN** : ajouter les scores dans `data/resultats-selections.json` (`competition` = `LDN` ou `CAN`, `date`, `domicile`, `exterieur`, `score_dom`, `score_ext`). Les scores de L1/L2/L3/coupes d'Europe passent par `matchs.json` et n'ont rien à faire.
-- **Pages L1, L2, L3** : bandeau de leur championnat (9 derniers matchs, automatique). **Euro 2028** : liste saisie dans `euro-2028.php` (`$ldnResultats`). **CAN** : `templates/can-ticker.php` (pages CAN 2027, TV CAN, catégorie CAN du blog), à mettre à jour à la main.
+- **Toutes les pages à bandeau (L1, L2, L3, Euro 2028, CAN 2027, TV CAN, catégorie CAN du blog)** utilisent le même gabarit `templates/ticker-resultats.php` : les 3 derniers articles **de la compétition** (`$tickerArtCats` = catégories ou étiquettes) puis ses derniers scores (`$tickerComps`, `$tickerLimit`). L1/L2/L3 : scores automatiques via `matchs.json`. Euro 2028 (`LDN`) et CAN (`CAN`) : scores à ajouter dans `data/resultats-selections.json`. Pour une nouvelle page, renseigner `$tickerComps`, `$tickerLabel`, `$tickerLink`, `$tickerLimit`, `$tickerArticles`, `$tickerArtCats` avant l'include (voir `ligue-1.php`).
 
 ### 🏆 Convention d'URL des compétitions récurrentes (Ligue des Nations, 15 novembre 2026)
 

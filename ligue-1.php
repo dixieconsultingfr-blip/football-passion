@@ -93,7 +93,7 @@ include __DIR__ . '/templates/header.php';
 </script>
 
 <?php
-$tickerComps = ['L1']; $tickerLabel = '⚽ Ligue 1 · derniers résultats'; $tickerLink = '/ligue-1.php#resultats'; $tickerLimit = 9;
+$tickerComps = ['L1']; $tickerLabel = '⚽ Ligue 1 · actus & scores'; $tickerLink = '/ligue-1.php#resultats'; $tickerLimit = 9; $tickerArticles = 3; $tickerArtCats = ['L1'];
 include __DIR__ . '/templates/ticker-resultats.php';
 ?>
 

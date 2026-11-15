@@ -1003,4 +1003,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, titre_court** : champ `titre_court` ajouté à `data/articles-index.json` (9 derniers articles) pour le bandeau de l'accueil ; règle ajoutée dans `CLAUDE.md` (à renseigner à chaque nouvel article, choisi sans demander, 35 à 48 caractères) avec la section « Bandeaux défilants » (sources et fichiers à mettre à jour : `data/resultats-selections.json`, `templates/can-ticker.php`, `$ldnResultats` d'`euro-2028.php`).
 
+- **15 novembre 2026, bandeaux unifiés** : tous les bandeaux (L1, L2, L3, Euro 2028, CAN 2027, TV CAN, catégorie CAN du blog) passent par `templates/ticker-resultats.php` : 3 derniers articles de la compétition (`titre_court`) puis scores de la compétition. `templates/can-ticker.php` et la liste en dur d'`euro-2028.php` supprimés. Règle mise à jour dans `CLAUDE.md`.
+
 *Dernière mise à jour : 15 novembre 2026*

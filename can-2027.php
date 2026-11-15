@@ -15,7 +15,7 @@ $lk = 'class="text-green-400 underline hover:text-green-300"';
 // Classements après la journée 2 (source : Africa Top Sports, « le classement des 12 groupes avant la 3e journée »). Points uniquement.
 $classements = [
     'A' => [['Maroc', 9], ['Gabon', 6], ['Niger', 3], ['Lesotho', 0]], // après la journée 3 (Foot Mercato)
-    'B' => [['Égypte', 4], ['Angola', 4], ['Malawi', 3], ['Soudan du Sud', 0]],
+    'B' => [['Égypte', 7], ['Angola', 7], ['Malawi', 3], ['Soudan du Sud', 0]], // après la journée 3 (Foot Mercato)
     'C' => [["Côte d'Ivoire", 6], ['Gambie', 6], ['Somalie', 0], ['Ghana', 0]],
     'D' => [['Afrique du Sud', 6], ['Guinée', 3], ['Érythrée', 1], ['Kenya', 1]],
     'E' => [['RD Congo', 6], ['Zimbabwe', 3], ['Guinée équatoriale', 3], ['Sierra Leone', 0]],
@@ -28,7 +28,12 @@ $classements = [
     'L' => [['Guinée-Bissau', 6], ['Nigeria', 3], ['Tanzanie', 1], ['Madagascar', 1]],
 ];
 // Groupes dont la journée 3 est connue (source : Foot Mercato). Les autres groupes restent à la journée 2.
-$journeeJouee = ['A' => 3];
+$journeeJouee = ['A' => 3, 'B' => 3];
+$groupesTitres = ['A' => 'Groupe A : Maroc, Gabon, Niger, Lesotho', 'B' => 'Groupe B : Égypte, Angola, Malawi, Soudan du Sud'];
+$groupesIntro = [
+    'A' => 'Le Maroc compte 9 points sur 9, devant le Gabon (6 points).',
+    'B' => "L'Égypte et l'Angola sont à égalité avec 7 points ; l'Égypte est devant grâce à une meilleure différence de buts (+10 contre +5).",
+];
 // Résultats et calendrier complets par groupe (source : Foot Mercato). [date, match, score ou heure]
 $calendriers = [
     'A' => [
@@ -38,6 +43,14 @@ $calendriers = [
         ['Mar. 17 novembre 2026', 'Lesotho - Gabon', '14h00'], ['Mar. 17 novembre 2026', 'Niger - Maroc', '21h00'],
         ['Mer. 24 mars 2027', 'Gabon - Maroc', '20h00'], ['Mer. 24 mars 2027', 'Lesotho - Niger', '20h00'],
         ['Dim. 28 mars 2027', 'Niger - Gabon', '21h00'], ['Dim. 28 mars 2027', 'Maroc - Lesotho', '21h00'],
+    ],
+    'B' => [
+        ['Ven. 25 septembre 2026', 'Malawi - Soudan du Sud', '2-1'], ['Ven. 25 septembre 2026', 'Égypte - Angola', '0-0'],
+        ['Mar. 29 septembre 2026', 'Soudan du Sud - Égypte', '0-5'], ['Mar. 6 octobre 2026', 'Angola - Malawi', '3-1'],
+        ['Ven. 13 novembre 2026', 'Égypte - Malawi', '5-0'], ['Sam. 14 novembre 2026', 'Angola - Soudan du Sud', '2-0'],
+        ['Mar. 17 novembre 2026', 'Malawi - Égypte', '14h00'], ['Mar. 17 novembre 2026', 'Soudan du Sud - Angola', '14h00'],
+        ['Mer. 24 mars 2027', 'Angola - Égypte', '20h00'], ['Mer. 24 mars 2027', 'Soudan du Sud - Malawi', '20h00'],
+        ['Dim. 28 mars 2027', 'Égypte - Soudan du Sud', '21h00'], ['Dim. 28 mars 2027', 'Malawi - Angola', '21h00'],
     ],
 ];
 // Programme des journées 3 et 4 (source : Le360 Afrique). [journée, date, heure, groupe, match]
@@ -124,6 +137,7 @@ $programme = [
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Sections CAN 2027">
     <a href="#classements" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📊 Classements</a>
     <a href="#groupe-a" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇲🇦 Groupe A</a>
+    <a href="#groupe-b" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇪🇬 Groupe B</a>
     <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📅 Programme J3 et J4</a>
     <a href="#articles" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📰 Nos articles</a>
     <a href="#faq" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">❓ FAQ</a>
@@ -147,26 +161,28 @@ $programme = [
         </div>
         <?php endforeach; ?>
     </div>
-    <p class="text-gray-300 text-xs mt-3">Groupe A mis à jour après la journée 3 (Foot Mercato) ; les autres groupes restent à la journée 2 en attendant les résultats vérifiés.</p>
+    <p class="text-gray-300 text-xs mt-3">Groupes A et B mis à jour après la journée 3 (Foot Mercato) ; les autres groupes restent à la journée 2 en attendant les résultats vérifiés.</p>
     <p class="text-gray-600 text-xs mt-1">Source : Africa Top Sports (« le classement des 12 groupes avant la 3e journée »), croisée avec Le360 Afrique. Seuls les points sont indiqués ; à égalité, l'ordre suit la source. Les résultats des 12 au 14 novembre seront ajoutés dès confirmation.</p>
 </section>
 
-<section id="groupe-a" style="scroll-margin-top:5rem" class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-2">Groupe A : Maroc, Gabon, Niger, Lesotho</h2>
-    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, groupe A : résultats des journées 1 à 3 et calendrier des trois dernières journées. Le Maroc compte 9 points sur 9, devant le Gabon (6 points).</p>
+<?php foreach ($calendriers as $g => $cal): ?>
+<section id="groupe-<?= strtolower($g) ?>" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2"><?= htmlspecialchars($groupesTitres[$g]) ?></h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, groupe <?= $g ?> : résultats des journées 1 à 3 et calendrier des trois dernières journées. <?= htmlspecialchars($groupesIntro[$g]) ?></p>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
-            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Groupe A des éliminatoires de la CAN 2027 : résultats et calendrier, de septembre 2026 à mars 2027</caption>
+            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Groupe <?= $g ?> des éliminatoires de la CAN 2027 : résultats et calendrier, de septembre 2026 à mars 2027</caption>
             <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-2 font-semibold">Date</th><th class="text-left px-4 py-2 font-semibold">Rencontre</th><th class="text-center px-4 py-2 font-semibold">Score / heure</th></tr></thead>
             <tbody class="divide-y divide-gray-700/60 text-gray-300">
-                <?php foreach ($calendriers['A'] as $m): ?>
+                <?php foreach ($cal as $m): ?>
                 <tr><td class="px-4 py-1.5 whitespace-nowrap"><?= $m[0] ?></td><td class="px-4 py-1.5 text-white"><?= htmlspecialchars($m[1]) ?></td><td class="px-4 py-1.5 text-center <?= str_contains($m[2], '-') ? 'text-white font-bold' : 'text-gray-400' ?>"><?= $m[2] ?></td></tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (éliminatoires de la CAN, groupe A). Les horaires à venir sont ceux de cette source (heure française probable) ; ils peuvent différer d'une heure de ceux du programme ci-dessous.</p>
+    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (éliminatoires de la CAN, groupe <?= $g ?>). Les horaires à venir sont ceux de cette source (heure française probable) ; ils peuvent différer d'une heure de ceux du programme ci-dessous.</p>
 </section>
+<?php endforeach; ?>
 
 <section id="programme" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Programme des journées 3 et 4 (12 au 17 novembre 2026)</h2>

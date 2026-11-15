@@ -981,4 +981,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - Article id 99 réécrit : tous les résultats de la J5 (26 matchs, tableau du plus récent au plus ancien, leaders des 14 groupes) ; `date_maj` 15/11 ; slug conservé. Vignette inchangée (mentionne le 12 novembre).
 - `euro-2028.php` : bandeau défilant (26 résultats, 110 s, pause au survol).
 
+### 3.109 Page hub « CAN 2027 » (éliminatoires masculins) — 15 novembre 2026
+
+- Constat : le filtre `/blog/?cat=CAN` fonctionne (3 articles CAN), mais il n'y avait ni page dédiée, ni lien de navigation, ni article sur la journée 3. L'audit externe collé par l'utilisateur disait le contraire et son tableau de scores (J1 à J3) mélangeait les journées et se contredisait (Égypte placée en groupe K, Angola - Soudan du Sud 1-0 ou 2-0) : **non publié**.
+- Création de `can-2027.php` : en bref, classements des 12 groupes après la J2 (points, source Africa Top Sports croisée avec Le360), programme complet J3 et J4 (48 matchs, source Le360), articles CAN, FAQ + JSON-LD. Lien dans le pied de page, encadré « Dossier CAN 2027 » sur les articles CAN, `sitemap.php`.
+- À faire quand les scores vérifiés seront fournis : résultats de la J3 (12 au 14 novembre), mise à jour des classements, article « journée 3 ».
+
 *Dernière mise à jour : 15 novembre 2026*

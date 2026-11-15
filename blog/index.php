@@ -135,6 +135,18 @@ if ($slug !== '') {
     </aside>
     <?php endif; ?>
 
+    <?php if (($article['categorie'] ?? '') === 'CAN' || in_array('CAN 2027', $article['etiquettes'] ?? [], true)): ?>
+    <aside class="mt-10 bg-gray-800 border border-green-800/40 rounded-xl p-5" aria-label="Dossier CAN 2027">
+        <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dossier CAN 2027</p>
+        <p class="text-gray-300 text-sm leading-relaxed mb-3">Éliminatoires de la <a href="/can-2027.php" class="text-green-400 underline hover:text-green-300">CAN 2027</a> : classements des 12 groupes, programme des prochaines journées et tous nos articles.</p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+            <li><a href="/can-2027.php#classements" class="text-green-400 underline hover:text-green-300">Classements des 12 groupes</a></li>
+            <li><a href="/can-2027.php#programme" class="text-green-400 underline hover:text-green-300">Programme des journées 3 et 4</a></li>
+            <li><a href="/blog/?cat=CAN" class="text-green-400 underline hover:text-green-300">Tous les articles CAN</a></li>
+        </ul>
+    </aside>
+    <?php endif; ?>
+
     <footer class="mt-12 pt-6 border-t border-gray-700">
         <?php if (!empty($article['etiquettes'])): ?>
         <div class="flex flex-wrap gap-2 mb-6">

@@ -44,6 +44,7 @@
                         <li><a href="/equipe-france.php" class="hover:text-green-400 transition-colors">Équipe de France</a></li>
                         <li><a href="/ligue-des-nations.php" class="hover:text-green-400 transition-colors">Ligue des Nations</a></li>
                         <li><a href="/euro-2028.php" class="hover:text-green-400 transition-colors">Euro 2028</a></li>
+                        <li><a href="/can-2027.php" class="hover:text-green-400 transition-colors">CAN 2027</a></li>
                         <li><a href="/coupe-du-monde.php" class="hover:text-green-400 transition-colors">Coupe du Monde</a></li>
                         <li><a href="/droits-tv-football.php" class="hover:text-green-400 transition-colors">Guide droits TV</a></li>
                     </ul>

@@ -131,6 +131,8 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
 }
 </script>
 
+<?php include __DIR__ . '/templates/can-ticker.php'; ?>
+
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2 flex-wrap">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>

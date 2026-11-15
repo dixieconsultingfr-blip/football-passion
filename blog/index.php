@@ -213,6 +213,7 @@ include BASE_PATH . '/templates/header.php';
 </div>
 
 <?php if ($cat_filtre === 'CAN' || $cat_filtre === 'CAN 2027'): ?>
+<?php include BASE_PATH . '/templates/can-ticker.php'; ?>
 <aside class="mb-8 bg-gray-800 border border-green-800/40 rounded-xl p-5" aria-label="Dossier CAN 2027">
     <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Dossier CAN 2027</p>
     <p class="text-gray-300 text-sm leading-relaxed mb-3">Les éliminatoires de la CAN 2027 (phase finale du 19 juin au 17 juillet 2027 au Kenya, en Tanzanie et en Ouganda) : retrouvez les 12 groupes, les classements et les chaînes.</p>

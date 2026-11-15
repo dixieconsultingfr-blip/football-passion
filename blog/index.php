@@ -88,9 +88,9 @@ if ($slug !== '') {
 <article class="max-w-3xl mx-auto">
     <header class="mb-8">
         <div class="flex items-center gap-3 mb-4">
-            <span class="bg-green-900 border border-green-700 text-green-400 text-xs px-3 py-1 rounded font-semibold uppercase tracking-wider">
+            <a href="/blog/?cat=<?= urlencode($article['categorie']) ?>" class="bg-green-900 border border-green-700 hover:bg-green-800 hover:border-green-500 text-green-400 hover:text-green-300 text-xs px-3 py-1 rounded font-semibold uppercase tracking-wider transition-colors" title="Tous les articles de la catégorie <?= htmlspecialchars($article['categorie']) ?>">
                 <?= htmlspecialchars($article['categorie']) ?>
-            </span>
+            </a>
             <?php if (!empty($article['date_maj']) && $article['date_maj'] !== $article['date']): ?>
             <time class="text-gray-500 text-sm" datetime="<?= htmlspecialchars($article['date_maj']) ?>">Mis à jour le <?= date_fr_long($article['date_maj']) ?></time>
             <?php else: ?>

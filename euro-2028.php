@@ -7,7 +7,7 @@ usort($articlesEuro, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date'
 $page_title = 'Euro 2028 (Coupe d\'Europe) : date, lieu, équipes et stades';
 $meta_desc  = "Euro 2028 : du 9 juin au 9 juillet 2028 en Angleterre, Écosse, pays de Galles et Irlande. 24 équipes, 9 stades, finale à Wembley, calendrier et qualifications.";
 $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
-$date_maj_page = '2026-11-13';
+$date_maj_page = '2026-11-15';
 include __DIR__ . '/templates/header.php';
 ?>
 
@@ -133,7 +133,7 @@ include __DIR__ . '/templates/header.php';
     <a href="/comment-regarder-euro-2028.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📺 Où regarder (TF1, M6, beIN)</a>
     <a href="/euro-2028-paris-sportifs.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🎲 Paris sportifs</a>
     <a href="/euro-2028-qualifications.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📋 Qualifications &amp; liste des Bleus</a>
-    <a href="/ligue-des-nations-2026-2027.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🥇 Ligue des Nations 2026-2027</a>
+    <a href="/ligue-des-nations.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🥇 Ligue des Nations</a>
     <a href="/equipe-france.php" class="inline-flex items-center gap-1.5 bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇫🇷 Équipe de France</a>
 </nav>
 
@@ -206,6 +206,29 @@ include __DIR__ . '/templates/header.php';
     </section>
 
 </div>
+
+<!-- Ligue des Nations -->
+<section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Ligue des Nations et Euro 2028</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Les éditions impaires de la Ligue des Nations sont liées aux qualifications de l'Euro : la phase de groupes 2026-2027 se termine le 17 novembre 2026, avant le tirage au sort des qualifications du 6 décembre.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/ligue-des-nations.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Compétition</p>
+            <p class="text-white font-bold">Ligue des Nations UEFA</p>
+            <p class="text-gray-400 text-xs mt-1">Format, palmarès et les 14 groupes →</p>
+        </a>
+        <a href="/ligue-des-nations-2026-2027.php" class="bg-gray-800 border border-gray-700 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Édition en cours</p>
+            <p class="text-white font-bold">Ligue des Nations 2026-2027</p>
+            <p class="text-gray-400 text-xs mt-1">Calendrier des Bleus et classements →</p>
+        </a>
+        <a href="/ligue-des-nations-groupe-a1.php" class="bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl p-5 transition-colors block">
+            <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Groupe de la France</p>
+            <p class="text-white font-bold">Groupe A1</p>
+            <p class="text-gray-400 text-xs mt-1">France, Italie, Belgique, Turquie →</p>
+        </a>
+    </div>
+</section>
 
 <!-- Équipes -->
 <section id="equipes" style="scroll-margin-top:5rem" class="mb-12">

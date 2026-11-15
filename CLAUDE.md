@@ -362,6 +362,13 @@ Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher
 6. **Créditer** dans l'article : « Crédit image : <auteur>, licence <licence> (lien), via Wikimedia Commons (lien page du fichier) », liens en `nofollow noopener noreferrer`, et noter auteur + licence + URL dans `procedure-football-passion.md`.
 
 
+### 🏆 Convention d'URL des compétitions récurrentes (Ligue des Nations, 15 novembre 2026)
+
+- **Page hub evergreen sans année** : `/ligue-des-nations.php` (palmarès, format, édition en cours, liens vers les groupes). URL stable à conserver pour le référencement ; elle se met à jour à chaque édition.
+- **Une page par édition, avec la saison dans l'URL** : `/ligue-des-nations-2026-2027.php`, puis `/ligue-des-nations-2028-2029.php` (format à 3 ligues de 18 équipes à partir de 2028).
+- **Pages de groupe** : les URLs existantes (`ligue-des-nations-groupe-a1.php`…) ne changent pas (indexées) ; pour les prochaines éditions, mettre la saison dans l'URL (`ligue-des-nations-2028-2029-groupe-a1.php`).
+- Fil d'Ariane : Accueil › Ligue des Nations › 2026-2027 › Groupe X. Le pied de page, l'accueil et `euro-2028.php` pointent vers le hub sans année.
+
 ### 🧬 Règle anti-contenu dupliqué (FP ↔ site satellite CDM 2026, règle du 13 novembre 2026)
 
 **Objectif** : éviter que Google détecte deux pages quasi identiques (sur `football-passion.fr` et `coupe-du-monde-2026.info`, ou entre deux articles du même site), ce qui dilue le référencement.

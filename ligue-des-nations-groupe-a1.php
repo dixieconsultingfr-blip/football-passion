@@ -96,9 +96,9 @@ include __DIR__ . '/templates/header.php';
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2 flex-wrap">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
-    <a href="/euro.php" class="hover:text-green-400 transition-colors">Euro</a>
+    <a href="/ligue-des-nations.php" class="hover:text-green-400 transition-colors">Ligue des Nations</a>
     <span>›</span>
-    <a href="/ligue-des-nations-2026-2027.php" class="hover:text-green-400 transition-colors">Ligue des Nations 2026-2027</a>
+    <a href="/ligue-des-nations-2026-2027.php" class="hover:text-green-400 transition-colors">2026-2027</a>
     <span>›</span>
     <span class="text-gray-400">Groupe A1</span>
 </nav>

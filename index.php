@@ -80,7 +80,7 @@ include __DIR__ . '/templates/header.php';
 
 <!-- Ligue des Nations -->
 <section class="mb-12">
-    <a href="/ligue-des-nations-2026-2027.php" class="flex flex-col sm:flex-row sm:items-center gap-3 bg-green-900/10 border border-green-800 hover:border-green-600 rounded-xl p-5 transition-colors">
+    <a href="/ligue-des-nations.php" class="flex flex-col sm:flex-row sm:items-center gap-3 bg-green-900/10 border border-green-800 hover:border-green-600 rounded-xl p-5 transition-colors">
         <div class="flex-1">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-1">Avant l'Euro 2028</p>
             <p class="text-white font-bold">Ligue des Nations 2026-2027 : calendrier, classements et diffusion</p>

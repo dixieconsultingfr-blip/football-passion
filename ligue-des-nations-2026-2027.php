@@ -49,9 +49,9 @@ include __DIR__ . '/templates/header.php';
 <nav class="text-xs text-gray-400 mb-8 flex items-center gap-2">
     <a href="/" class="hover:text-green-400 transition-colors">Accueil</a>
     <span>›</span>
-    <a href="/equipe-france.php" class="hover:text-green-400 transition-colors">Équipe de France</a>
+    <a href="/ligue-des-nations.php" class="hover:text-green-400 transition-colors">Ligue des Nations</a>
     <span>›</span>
-    <span class="text-gray-400">Ligue des Nations 2026-2027</span>
+    <span class="text-gray-400">2026-2027</span>
 </nav>
 
 <!-- Hero -->

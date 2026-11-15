@@ -968,4 +968,10 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **Reel Facebook intégré à l'article Italie 3-1 France (13 novembre 2026)** : reel `1637848703891903` (iframe 267 x 476, `max-width:100%`) après l'introduction, avec lien nofollow vers la page Facebook.
 
-*Dernière mise à jour : 13 novembre 2026*
+### 3.107 Page hub evergreen « Ligue des Nations » et convention d'URL — 15 novembre 2026
+
+- Création de `ligue-des-nations.php` (sans année) : édition en cours, fonctionnement, tableau des 14 groupes (équipes relues dans les pages de groupe), palmarès 2019-2025 (source Wikipédia), lien Euro 2028, FAQ 5 questions + JSON-LD, articles étiquetés « Ligue des nations ».
+- Pages d'édition avec saison dans l'URL (`ligue-des-nations-2026-2027.php`, puis `-2028-2029`) ; URLs de groupes existantes inchangées (indexées).
+- Liens vers le hub : pied de page, bloc d'accueil, `euro-2028.php` (nouvelle section `#ligue-des-nations` + puce), fils d'Ariane (Accueil › Ligue des Nations › 2026-2027 › Groupe X), `sitemap.php`. Convention notée dans `CLAUDE.md`.
+
+*Dernière mise à jour : 15 novembre 2026*

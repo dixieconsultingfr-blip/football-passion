@@ -226,25 +226,6 @@ $calendriers = [
         ['Dim. 28 mars 2027', 'Nigeria - Guinée-Bissau', '21h00'],
     ],
 ];
-// Programme des journées 3 et 4 (source : Le360 Afrique). [journée, date, heure, groupe, match]
-$programme = [
-    [3, '12/11', '15h00', 'C', 'Ghana - Somalie'], [3, '12/11', '16h00', 'D', 'Guinée - Érythrée'], [3, '12/11', '16h00', 'E', 'RD Congo - Sierra Leone'],
-    [3, '12/11', '16h00', 'E', 'Guinée équatoriale - Zimbabwe'], [3, '12/11', '16h00', 'L', 'Madagascar - Guinée-Bissau'], [3, '12/11', '19h00', 'C', "Côte d'Ivoire - Gambie"],
-    [3, '12/11', '19h00', 'F', 'Bénin - Centrafrique'], [3, '12/11', '19h00', 'G', 'Cameroun - Namibie'], [3, '12/11', '19h00', 'J', 'Sénégal - Soudan'],
-    [3, '13/11', '13h00', 'G', 'Comores - Congo'], [3, '13/11', '13h00', 'I', 'Zambie - Burundi'], [3, '13/11', '13h00', 'J', 'Mozambique - Éthiopie'],
-    [3, '13/11', '16h00', 'A', 'Gabon - Lesotho'], [3, '13/11', '16h00', 'D', 'Afrique du Sud - Kenya'], [3, '13/11', '16h00', 'F', 'Burkina Faso - Mauritanie'],
-    [3, '13/11', '16h00', 'H', 'Tunisie - Libye'], [3, '13/11', '16h00', 'K', 'Cap-Vert - Liberia'], [3, '13/11', '16h00', 'L', 'Nigeria - Tanzanie'],
-    [3, '13/11', '19h00', 'B', 'Égypte - Malawi'], [3, '13/11', '19h00', 'K', 'Mali - Rwanda'], [3, '13/11', '20h00', 'A', 'Maroc - Niger'],
-    [3, '14/11', '16h00', 'H', 'Ouganda - Botswana'], [3, '14/11', '19h00', 'B', 'Angola - Soudan du Sud'], [3, '14/11', '19h00', 'I', 'Algérie - Togo'],
-    [4, '16/11', '13h00', 'G', 'Namibie - Cameroun'], [4, '16/11', '13h00', 'J', 'Soudan - Sénégal'], [4, '16/11', '13h00', 'E', 'Zimbabwe - Guinée équatoriale'],
-    [4, '16/11', '15h00', 'C', 'Somalie - Ghana'], [4, '16/11', '16h00', 'D', 'Érythrée - Guinée'], [4, '16/11', '16h00', 'F', 'Centrafrique - Bénin'],
-    [4, '17/11', '13h00', 'A', 'Lesotho - Gabon'], [4, '17/11', '13h00', 'B', 'Malawi - Égypte'], [4, '17/11', '13h00', 'B', 'Soudan du Sud - Angola'],
-    [4, '17/11', '13h00', 'I', 'Burundi - Zambie'], [4, '17/11', '13h00', 'J', 'Éthiopie - Mozambique'], [4, '17/11', '13h00', 'L', 'Tanzanie - Nigeria'],
-    [4, '17/11', '16h00', 'C', "Gambie - Côte d'Ivoire"], [4, '17/11', '16h00', 'D', 'Kenya - Afrique du Sud'], [4, '17/11', '16h00', 'E', 'Sierra Leone - RD Congo'],
-    [4, '17/11', '16h00', 'H', 'Libye - Tunisie'], [4, '17/11', '16h00', 'I', 'Togo - Algérie'], [4, '17/11', '16h00', 'L', 'Guinée-Bissau - Madagascar'],
-    [4, '17/11', '19h00', 'F', 'Mauritanie - Burkina Faso'], [4, '17/11', '19h00', 'G', 'Congo - Comores'], [4, '17/11', '19h00', 'H', 'Botswana - Ouganda'],
-    [4, '17/11', '19h00', 'K', 'Rwanda - Mali'], [4, '17/11', '19h00', 'K', 'Liberia - Cap-Vert'], [4, '17/11', '20h00', 'A', 'Niger - Maroc'],
-];
 ?>
 <script type="application/ld+json">
 {
@@ -353,7 +334,7 @@ $programme = [
     <a href="#qualification" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">✅ Qualifiés</a>
     <a href="#classements" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📊 Classements</a>
     <a href="#groupe-a" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🗂️ Les 12 groupes</a>
-    <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📅 Programme J3 et J4</a>
+    <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📺 Programme TV</a>
     <a href="#articles" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📰 Nos articles</a>
     <a href="#faq" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">❓ FAQ</a>
 </nav>
@@ -405,25 +386,14 @@ $programme = [
             </tbody>
         </table>
     </div>
-    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (éliminatoires de la CAN, groupe <?= $g ?>). Les horaires à venir sont ceux de cette source (heure française probable) ; ils peuvent différer d'une heure de ceux du programme ci-dessous.</p>
+    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (éliminatoires de la CAN, groupe <?= $g ?>). Les horaires sont ceux de cette source, en heure française (identiques à ceux de beIN SPORTS).</p>
 </section>
 <?php endforeach; ?>
 
 <section id="programme" style="scroll-margin-top:5rem" class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-2">Programme des journées 3 et 4 (12 au 17 novembre 2026)</h2>
-    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, phase de groupes : les 24 matchs de la journée 3 (du 12 au 14 novembre) puis les 24 matchs de la journée 4 (16 et 17 novembre). Les horaires sont ceux publiés par la source : vérifiez le fuseau horaire et le programme officiel de la CAF avant chaque match.</p>
-    <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
-        <table class="w-full text-sm">
-            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journées 3 et 4 : date, heure, groupe et rencontre</caption>
-            <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-2 font-semibold">J.</th><th class="text-left px-4 py-2 font-semibold">Date</th><th class="text-left px-4 py-2 font-semibold">Heure</th><th class="text-left px-4 py-2 font-semibold">Gr.</th><th class="text-left px-4 py-2 font-semibold">Rencontre</th></tr></thead>
-            <tbody class="divide-y divide-gray-700/60 text-gray-300">
-                <?php foreach ($programme as $p): ?>
-                <tr><td class="px-4 py-1.5 text-gray-500">J<?= $p[0] ?></td><td class="px-4 py-1.5 whitespace-nowrap"><?= $p[1] ?></td><td class="px-4 py-1.5 whitespace-nowrap"><?= $p[2] ?></td><td class="px-4 py-1.5"><?= $p[3] ?></td><td class="px-4 py-1.5 text-white"><?= htmlspecialchars($p[4]) ?></td></tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <p class="text-gray-600 text-xs mt-3">Source : Le360 Afrique, « les programmes et les enjeux des 3e et 4e journées ». Programme du 28 septembre au 1er octobre (journée 2) : <a href="/blog/eliminatoires-can-2027-journee-2-programme-chaines" <?= $lk ?>>horaires, stades et chaînes</a>.</p>
+    <h2 class="text-2xl font-bold text-white mb-2">Programme TV des journées 3 et 4 (12 au 17 novembre 2026)</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Date, heure française et chaîne beIN SPORTS de chacun des 48 matchs des journées 3 et 4 : consultez notre page dédiée.</p>
+    <a href="/droits-tv-can-2027.php" class="inline-flex bg-gray-800 border border-green-800/60 hover:border-green-600 rounded-xl px-5 py-4 text-sm font-semibold text-green-400 transition-colors">📺 CAN 2027 à la TV : chaînes, horaires et programme →</a>
 </section>
 
 <section id="articles" style="scroll-margin-top:5rem" class="mb-12">

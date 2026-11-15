@@ -3,7 +3,7 @@
 // (liens d'affiliation CTA + emplacements publicitaires AdSense, tous deux encore à activer).
 $page_title = 'Droits TV Football 2026-2027 : Quel abonnement choisir ?';
 $meta_desc  = "Comparez Ligue 1+, DAZN, Canal+ et beIN Sports pour 2026-2027, et découvrez où voir les Bleus en clair sur TF1. Nos astuces pour payer moins.";
-$date_maj_page = '2026-11-13'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
+$date_maj_page = '2026-11-15'; // à mettre à jour à chaque modification de tarifs/offres — signal E-E-A-T pour Google
 require_once __DIR__ . '/blog/helpers.php';
 include __DIR__ . '/templates/header.php';
 ?>
@@ -426,6 +426,10 @@ include __DIR__ . '/templates/header.php';
             <a href="/droits-tv-europa-league.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
                 <p class="text-white font-semibold group-hover:text-green-400 transition-colors">🌍 Droits TV Europa League 2026-2027</p>
                 <p class="text-gray-500 text-xs mt-1">Canal+ — l'OM et la Ligue Conférence</p>
+            </a>
+            <a href="/droits-tv-can-2027.php" class="bg-gray-800 border border-gray-700 hover:border-green-700 rounded-xl p-4 transition-colors group">
+                <p class="text-white font-semibold group-hover:text-green-400 transition-colors">🌍 Droits TV CAN 2027 (qualifications)</p>
+                <p class="text-gray-500 text-xs mt-1">beIN SPORTS — horaires et chaînes des journées 3 et 4</p>
             </a>
         </div>
     </section>

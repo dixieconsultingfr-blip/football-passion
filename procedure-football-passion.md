@@ -989,4 +989,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, suite** : les 12 groupes de la CAN 2027 sont renseignés après la journée 3 (résultats, classements, calendrier jusqu'au 28 mars 2027) à partir des pages « Calendrier » de Foot Mercato collées par l'utilisateur (script de génération, 3 matchs joués par équipe contrôlés). Les horaires à venir sont ceux de la source (heure française probable, 1 h de plus que Le360). Articles « journée 3 » et mise à jour des anciens articles : à faire à la demande.
 
+- **15 novembre 2026, page TV** : création de `droits-tv-can-2027.php` (programme beIN SPORTS du 9 novembre 2026 collé par l'utilisateur : 48 matchs des journées 3 et 4, heures françaises, chaînes beIN SPORTS 1, 2, MAX 5 et MAX 6 pour 9 matchs de la J3 ; aucune chaîne pour les autres, rien d'inventé). Kenya - Afrique du Sud (17/11, 17h) ajouté d'après Foot Mercato (absent de la liste beIN). Le tableau Le360 de `can-2027.php` (heures décalées d'une heure) est remplacé par un lien vers cette page. Lien aussi dans `droits-tv-football.php` et `sitemap.php`.
+
 *Dernière mise à jour : 15 novembre 2026*

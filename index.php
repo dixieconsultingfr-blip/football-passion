@@ -34,7 +34,7 @@ include __DIR__ . '/templates/header.php';
 ?>
 
 <?php
-$tickerComps = ['L1', 'L2', 'L3', 'CL', 'Europa', 'Conference']; $tickerLabel = '⚽ Derniers résultats'; $tickerLink = '/calendrier.php'; $tickerGlobal = 24;
+$tickerComps = ['L1', 'L2', 'L3', 'CL', 'Europa', 'Conference']; $tickerLabel = '⚽ Actus & scores'; $tickerLink = '/calendrier.php'; $tickerGlobal = 4; $tickerArticles = 3;
 include __DIR__ . '/templates/ticker-resultats.php';
 ?>
 

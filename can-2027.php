@@ -7,50 +7,223 @@ $articlesCan = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'
 usort($articlesCan, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
 $page_title = 'CAN 2027 : éliminatoires, groupes, classements et calendrier';
-$meta_desc  = "CAN 2027 (Kenya, Tanzanie, Ouganda) : les 12 groupes des éliminatoires, les classements après la journée 2, le programme des journées 3 et 4 et tous nos articles.";
+$meta_desc  = "CAN 2027 (Kenya, Tanzanie, Ouganda) : les 12 groupes des éliminatoires, les classements après la journée 3, le programme des journées 3 et 4 et tous nos articles.";
 include __DIR__ . '/templates/header.php';
 
 $lk = 'class="text-green-400 underline hover:text-green-300"';
 
-// Classements après la journée 2 (source : Africa Top Sports, « le classement des 12 groupes avant la 3e journée »). Points uniquement.
+// Classements après la journée 3 (points ; départage : différence de buts puis buts marqués, ordre indicatif). Source : Foot Mercato, calendrier de chaque groupe.
 $classements = [
-    'A' => [['Maroc', 9], ['Gabon', 6], ['Niger', 3], ['Lesotho', 0]], // après la journée 3 (Foot Mercato)
-    'B' => [['Égypte', 7], ['Angola', 7], ['Malawi', 3], ['Soudan du Sud', 0]], // après la journée 3 (Foot Mercato)
-    'C' => [["Côte d'Ivoire", 6], ['Gambie', 6], ['Somalie', 0], ['Ghana', 0]],
-    'D' => [['Afrique du Sud', 6], ['Guinée', 3], ['Érythrée', 1], ['Kenya', 1]],
-    'E' => [['RD Congo', 6], ['Zimbabwe', 3], ['Guinée équatoriale', 3], ['Sierra Leone', 0]],
-    'F' => [['Bénin', 4], ['Burkina Faso', 4], ['Mauritanie', 3], ['Centrafrique', 0]],
-    'G' => [['Cameroun', 4], ['Comores', 3], ['Namibie', 3], ['Congo', 1]],
-    'H' => [['Ouganda', 4], ['Botswana', 2], ['Tunisie', 2], ['Libye', 1]],
-    'I' => [['Algérie', 4], ['Zambie', 3], ['Togo', 3], ['Burundi', 1]],
-    'J' => [['Sénégal', 4], ['Mozambique', 4], ['Soudan', 3], ['Éthiopie', 0]],
-    'K' => [['Rwanda', 6], ['Mali', 6], ['Cap-Vert', 0], ['Liberia', 0]],
-    'L' => [['Guinée-Bissau', 6], ['Nigeria', 3], ['Tanzanie', 1], ['Madagascar', 1]],
+    'A' => [['Maroc', 9], ['Gabon', 6], ['Niger', 3], ['Lesotho', 0]],
+    'B' => [['Égypte', 7], ['Angola', 7], ['Malawi', 3], ['Soudan du Sud', 0]],
+    'C' => [['Côte d\'Ivoire', 9], ['Gambie', 6], ['Ghana', 3], ['Somalie', 0]],
+    'D' => [['Afrique du Sud', 7], ['Guinée', 6], ['Kenya', 2], ['Érythrée', 1]],
+    'E' => [['RD Congo', 9], ['Zimbabwe', 4], ['Guinée équatoriale', 4], ['Sierra Leone', 0]],
+    'F' => [['Bénin', 7], ['Burkina Faso', 7], ['Mauritanie', 3], ['Centrafrique', 0]],
+    'G' => [['Cameroun', 7], ['Comores', 4], ['Namibie', 3], ['Congo', 2]],
+    'H' => [['Ouganda', 5], ['Libye', 4], ['Botswana', 3], ['Tunisie', 2]],
+    'I' => [['Algérie', 7], ['Zambie', 4], ['Togo', 3], ['Burundi', 2]],
+    'J' => [['Sénégal', 7], ['Mozambique', 4], ['Éthiopie', 3], ['Soudan', 3]],
+    'K' => [['Mali', 9], ['Rwanda', 6], ['Cap-Vert', 3], ['Liberia', 0]],
+    'L' => [['Guinée-Bissau', 7], ['Nigeria', 6], ['Madagascar', 2], ['Tanzanie', 1]],
 ];
-// Groupes dont la journée 3 est connue (source : Foot Mercato). Les autres groupes restent à la journée 2.
-$journeeJouee = ['A' => 3, 'B' => 3];
-$groupesTitres = ['A' => 'Groupe A : Maroc, Gabon, Niger, Lesotho', 'B' => 'Groupe B : Égypte, Angola, Malawi, Soudan du Sud'];
+$groupesTitres = [
+    'A' => 'Groupe A : Maroc, Gabon, Niger, Lesotho',
+    'B' => 'Groupe B : Égypte, Angola, Malawi, Soudan du Sud',
+    'C' => 'Groupe C : Côte d\'Ivoire, Gambie, Ghana, Somalie',
+    'D' => 'Groupe D : Afrique du Sud, Guinée, Kenya, Érythrée',
+    'E' => 'Groupe E : RD Congo, Zimbabwe, Guinée équatoriale, Sierra Leone',
+    'F' => 'Groupe F : Bénin, Burkina Faso, Mauritanie, Centrafrique',
+    'G' => 'Groupe G : Cameroun, Comores, Namibie, Congo',
+    'H' => 'Groupe H : Ouganda, Botswana, Tunisie, Libye',
+    'I' => 'Groupe I : Algérie, Zambie, Togo, Burundi',
+    'J' => 'Groupe J : Sénégal, Mozambique, Soudan, Éthiopie',
+    'K' => 'Groupe K : Mali, Rwanda, Cap-Vert, Liberia',
+    'L' => 'Groupe L : Guinée-Bissau, Nigeria, Tanzanie, Madagascar',
+];
 $groupesIntro = [
-    'A' => 'Le Maroc compte 9 points sur 9, devant le Gabon (6 points).',
-    'B' => "L'Égypte et l'Angola sont à égalité avec 7 points ; l'Égypte est devant grâce à une meilleure différence de buts (+10 contre +5).",
+    'A' => 'Maroc compte 9 points, devant Gabon (6 points).',
+    'B' => 'Égypte et Angola sont à égalité avec 7 points ; Égypte est devant grâce à la différence de buts (+10 contre +4).',
+    'C' => 'Côte d\'Ivoire compte 9 points, devant Gambie (6 points).',
+    'D' => 'Afrique du Sud compte 7 points, devant Guinée (6 points).',
+    'E' => 'RD Congo compte 9 points, devant Zimbabwe (4 points).',
+    'F' => 'Bénin et Burkina Faso sont à égalité avec 7 points ; Bénin est devant grâce à la différence de buts (+4 contre +2).',
+    'G' => 'Cameroun compte 7 points, devant Comores (4 points).',
+    'H' => 'Ouganda compte 5 points, devant Libye (4 points).',
+    'I' => 'Algérie compte 7 points, devant Zambie (4 points).',
+    'J' => 'Sénégal compte 7 points, devant Mozambique (4 points).',
+    'K' => 'Mali compte 9 points, devant Rwanda (6 points).',
+    'L' => 'Guinée-Bissau compte 7 points, devant Nigeria (6 points).',
 ];
 // Résultats et calendrier complets par groupe (source : Foot Mercato). [date, match, score ou heure]
 $calendriers = [
     'A' => [
-        ['Ven. 25 septembre 2026', 'Niger - Lesotho', '2-1'], ['Ven. 25 septembre 2026', 'Maroc - Gabon', '2-0'],
-        ['Mar. 29 septembre 2026', 'Lesotho - Maroc', '0-2'], ['Mar. 29 septembre 2026', 'Gabon - Niger', '2-0'],
-        ['Ven. 13 novembre 2026', 'Gabon - Lesotho', '2-0'], ['Ven. 13 novembre 2026', 'Maroc - Niger', '5-1'],
-        ['Mar. 17 novembre 2026', 'Lesotho - Gabon', '14h00'], ['Mar. 17 novembre 2026', 'Niger - Maroc', '21h00'],
-        ['Mer. 24 mars 2027', 'Gabon - Maroc', '20h00'], ['Mer. 24 mars 2027', 'Lesotho - Niger', '20h00'],
-        ['Dim. 28 mars 2027', 'Niger - Gabon', '21h00'], ['Dim. 28 mars 2027', 'Maroc - Lesotho', '21h00'],
+        ['Ven. 25 septembre 2026', 'Niger - Lesotho', '2-1'],
+        ['Ven. 25 septembre 2026', 'Maroc - Gabon', '2-0'],
+        ['Mar. 29 septembre 2026', 'Lesotho - Maroc', '0-2'],
+        ['Mar. 29 septembre 2026', 'Gabon - Niger', '2-0'],
+        ['Ven. 13 novembre 2026', 'Gabon - Lesotho', '2-0'],
+        ['Ven. 13 novembre 2026', 'Maroc - Niger', '5-1'],
+        ['Mar. 17 novembre 2026', 'Lesotho - Gabon', '14h00'],
+        ['Mar. 17 novembre 2026', 'Niger - Maroc', '21h00'],
+        ['Mer. 24 mars 2027', 'Gabon - Maroc', '20h00'],
+        ['Mer. 24 mars 2027', 'Lesotho - Niger', '20h00'],
+        ['Dim. 28 mars 2027', 'Niger - Gabon', '21h00'],
+        ['Dim. 28 mars 2027', 'Maroc - Lesotho', '21h00'],
     ],
     'B' => [
-        ['Ven. 25 septembre 2026', 'Malawi - Soudan du Sud', '2-1'], ['Ven. 25 septembre 2026', 'Égypte - Angola', '0-0'],
-        ['Mar. 29 septembre 2026', 'Soudan du Sud - Égypte', '0-5'], ['Mar. 6 octobre 2026', 'Angola - Malawi', '3-1'],
-        ['Ven. 13 novembre 2026', 'Égypte - Malawi', '5-0'], ['Sam. 14 novembre 2026', 'Angola - Soudan du Sud', '2-0'],
-        ['Mar. 17 novembre 2026', 'Malawi - Égypte', '14h00'], ['Mar. 17 novembre 2026', 'Soudan du Sud - Angola', '14h00'],
-        ['Mer. 24 mars 2027', 'Angola - Égypte', '20h00'], ['Mer. 24 mars 2027', 'Soudan du Sud - Malawi', '20h00'],
-        ['Dim. 28 mars 2027', 'Égypte - Soudan du Sud', '21h00'], ['Dim. 28 mars 2027', 'Malawi - Angola', '21h00'],
+        ['Ven. 25 septembre 2026', 'Malawi - Soudan du Sud', '2-1'],
+        ['Ven. 25 septembre 2026', 'Égypte - Angola', '0-0'],
+        ['Mar. 29 septembre 2026', 'Soudan du Sud - Égypte', '0-5'],
+        ['Mar. 6 octobre 2026', 'Angola - Malawi', '3-1'],
+        ['Ven. 13 novembre 2026', 'Égypte - Malawi', '5-0'],
+        ['Sam. 14 novembre 2026', 'Angola - Soudan du Sud', '2-0'],
+        ['Mar. 17 novembre 2026', 'Malawi - Égypte', '14h00'],
+        ['Mar. 17 novembre 2026', 'Soudan du Sud - Angola', '14h00'],
+        ['Mer. 24 mars 2027', 'Angola - Égypte', '20h00'],
+        ['Mer. 24 mars 2027', 'Soudan du Sud - Malawi', '20h00'],
+        ['Dim. 28 mars 2027', 'Égypte - Soudan du Sud', '21h00'],
+        ['Dim. 28 mars 2027', 'Malawi - Angola', '21h00'],
+    ],
+    'C' => [
+        ['Jeu. 24 septembre 2026', 'Côte d\'Ivoire - Ghana', '2-0'],
+        ['Ven. 25 septembre 2026', 'Gambie - Somalie', '2-1'],
+        ['Mar. 29 septembre 2026', 'Ghana - Gambie', '2-4'],
+        ['Mar. 29 septembre 2026', 'Somalie - Côte d\'Ivoire', '0-2'],
+        ['Jeu. 12 novembre 2026', 'Ghana - Somalie', '2-0'],
+        ['Jeu. 12 novembre 2026', 'Côte d\'Ivoire - Gambie', '2-1'],
+        ['Lun. 16 novembre 2026', 'Somalie - Ghana', '16h00'],
+        ['Mar. 17 novembre 2026', 'Gambie - Côte d\'Ivoire', '17h00'],
+        ['Mer. 24 mars 2027', 'Somalie - Gambie', '20h00'],
+        ['Mer. 24 mars 2027', 'Ghana - Côte d\'Ivoire', '20h00'],
+        ['Dim. 28 mars 2027', 'Côte d\'Ivoire - Somalie', '21h00'],
+        ['Dim. 28 mars 2027', 'Gambie - Ghana', '21h00'],
+    ],
+    'D' => [
+        ['Sam. 26 septembre 2026', 'Afrique du Sud - Guinée', '2-1'],
+        ['Sam. 26 septembre 2026', 'Kenya - Érythrée', '1-1'],
+        ['Mer. 30 septembre 2026', 'Érythrée - Afrique du Sud', '0-5'],
+        ['Jeu. 1er octobre 2026', 'Guinée - Kenya', '1-0'],
+        ['Jeu. 12 novembre 2026', 'Guinée - Érythrée', '2-1'],
+        ['Ven. 13 novembre 2026', 'Afrique du Sud - Kenya', '2-2'],
+        ['Lun. 16 novembre 2026', 'Érythrée - Guinée', '18h00'],
+        ['Mar. 17 novembre 2026', 'Kenya - Afrique du Sud', '17h00'],
+        ['Mer. 24 mars 2027', 'Guinée - Afrique du Sud', '20h00'],
+        ['Mer. 24 mars 2027', 'Érythrée - Kenya', '20h00'],
+        ['Dim. 28 mars 2027', 'Afrique du Sud - Érythrée', '21h00'],
+        ['Dim. 28 mars 2027', 'Kenya - Guinée', '21h00'],
+    ],
+    'E' => [
+        ['Jeu. 24 septembre 2026', 'RD Congo - Guinée équatoriale', '2-0'],
+        ['Jeu. 24 septembre 2026', 'Sierra Leone - Zimbabwe', '2-3'],
+        ['Lun. 28 septembre 2026', 'Guinée équatoriale - Sierra Leone', '1-0'],
+        ['Lun. 28 septembre 2026', 'Zimbabwe - RD Congo', '1-2'],
+        ['Jeu. 12 novembre 2026', 'RD Congo - Sierra Leone', '3-1'],
+        ['Jeu. 12 novembre 2026', 'Guinée équatoriale - Zimbabwe', '0-0'],
+        ['Lun. 16 novembre 2026', 'Zimbabwe - Guinée équatoriale', '14h00'],
+        ['Mar. 17 novembre 2026', 'Sierra Leone - RD Congo', '17h00'],
+        ['Mer. 24 mars 2027', 'Guinée équatoriale - RD Congo', '20h00'],
+        ['Mer. 24 mars 2027', 'Zimbabwe - Sierra Leone', '20h00'],
+        ['Dim. 28 mars 2027', 'RD Congo - Zimbabwe', '21h00'],
+        ['Dim. 28 mars 2027', 'Sierra Leone - Guinée équatoriale', '21h00'],
+    ],
+    'F' => [
+        ['Jeu. 24 septembre 2026', 'Mauritanie - Centrafrique', '3-1'],
+        ['Ven. 25 septembre 2026', 'Burkina Faso - Bénin', '1-1'],
+        ['Lun. 28 septembre 2026', 'Centrafrique - Burkina Faso', '0-1'],
+        ['Mar. 29 septembre 2026', 'Bénin - Mauritanie', '2-1'],
+        ['Jeu. 12 novembre 2026', 'Bénin - Centrafrique', '4-1'],
+        ['Ven. 13 novembre 2026', 'Burkina Faso - Mauritanie', '1-0'],
+        ['Lun. 16 novembre 2026', 'Centrafrique - Bénin', '17h00'],
+        ['Mar. 17 novembre 2026', 'Mauritanie - Burkina Faso', '20h00'],
+        ['Mer. 24 mars 2027', 'Centrafrique - Mauritanie', '20h00'],
+        ['Mer. 24 mars 2027', 'Bénin - Burkina Faso', '20h00'],
+        ['Dim. 28 mars 2027', 'Mauritanie - Bénin', '21h00'],
+        ['Dim. 28 mars 2027', 'Burkina Faso - Centrafrique', '21h00'],
+    ],
+    'G' => [
+        ['Jeu. 24 septembre 2026', 'Namibie - Congo', '1-0'],
+        ['Jeu. 24 septembre 2026', 'Cameroun - Comores', '3-1'],
+        ['Mar. 29 septembre 2026', 'Comores - Namibie', '1-0'],
+        ['Mar. 29 septembre 2026', 'Congo - Cameroun', '1-1'],
+        ['Jeu. 12 novembre 2026', 'Cameroun - Namibie', '2-0'],
+        ['Ven. 13 novembre 2026', 'Comores - Congo', '0-0'],
+        ['Lun. 16 novembre 2026', 'Namibie - Cameroun', '14h00'],
+        ['Mar. 17 novembre 2026', 'Congo - Comores', '20h00'],
+        ['Mer. 24 mars 2027', 'Comores - Cameroun', '20h00'],
+        ['Mer. 24 mars 2027', 'Congo - Namibie', '20h00'],
+        ['Dim. 28 mars 2027', 'Namibie - Comores', '21h00'],
+        ['Dim. 28 mars 2027', 'Cameroun - Congo', '21h00'],
+    ],
+    'H' => [
+        ['Jeu. 24 septembre 2026', 'Libye - Botswana', '2-2'],
+        ['Jeu. 24 septembre 2026', 'Tunisie - Ouganda', '1-1'],
+        ['Lun. 28 septembre 2026', 'Tunisie - Botswana', '2-2'],
+        ['Mar. 29 septembre 2026', 'Ouganda - Libye', '1-0'],
+        ['Ven. 13 novembre 2026', 'Tunisie - Libye', '0-2'],
+        ['Sam. 14 novembre 2026', 'Ouganda - Botswana', '1-1'],
+        ['Mar. 17 novembre 2026', 'Libye - Tunisie', '17h00'],
+        ['Mar. 17 novembre 2026', 'Botswana - Ouganda', '20h00'],
+        ['Mer. 24 mars 2027', 'Ouganda - Tunisie', '20h00'],
+        ['Mer. 24 mars 2027', 'Botswana - Libye', '20h00'],
+        ['Dim. 28 mars 2027', 'Botswana - Tunisie', '21h00'],
+        ['Dim. 28 mars 2027', 'Libye - Ouganda', '21h00'],
+    ],
+    'I' => [
+        ['Ven. 25 septembre 2026', 'Togo - Burundi', '1-0'],
+        ['Ven. 25 septembre 2026', 'Algérie - Zambie', '3-1'],
+        ['Mar. 29 septembre 2026', 'Burundi - Algérie', '2-2'],
+        ['Mar. 29 septembre 2026', 'Zambie - Togo', '2-0'],
+        ['Ven. 13 novembre 2026', 'Zambie - Burundi', '1-1'],
+        ['Sam. 14 novembre 2026', 'Algérie - Togo', '1-0'],
+        ['Mar. 17 novembre 2026', 'Burundi - Zambie', '14h00'],
+        ['Mar. 17 novembre 2026', 'Togo - Algérie', '17h00'],
+        ['Mer. 24 mars 2027', 'Zambie - Algérie', '20h00'],
+        ['Mer. 24 mars 2027', 'Burundi - Togo', '20h00'],
+        ['Dim. 28 mars 2027', 'Algérie - Burundi', '21h00'],
+        ['Dim. 28 mars 2027', 'Togo - Zambie', '21h00'],
+    ],
+    'J' => [
+        ['Ven. 25 septembre 2026', 'Soudan - Éthiopie', '1-0'],
+        ['Ven. 25 septembre 2026', 'Mozambique - Sénégal', '1-1'],
+        ['Mar. 29 septembre 2026', 'Mozambique - Soudan', '4-1'],
+        ['Mar. 29 septembre 2026', 'Éthiopie - Sénégal', '0-1'],
+        ['Jeu. 12 novembre 2026', 'Sénégal - Soudan', '4-1'],
+        ['Ven. 13 novembre 2026', 'Mozambique - Éthiopie', '0-1'],
+        ['Lun. 16 novembre 2026', 'Soudan - Sénégal', '14h00'],
+        ['Mar. 17 novembre 2026', 'Éthiopie - Mozambique', '14h00'],
+        ['Mer. 24 mars 2027', 'Sénégal - Mozambique', '20h00'],
+        ['Mer. 24 mars 2027', 'Éthiopie - Soudan', '20h00'],
+        ['Dim. 28 mars 2027', 'Soudan - Mozambique', '21h00'],
+        ['Dim. 28 mars 2027', 'Sénégal - Éthiopie', '21h00'],
+    ],
+    'K' => [
+        ['Ven. 25 septembre 2026', 'Rwanda - Liberia', '3-1'],
+        ['Ven. 25 septembre 2026', 'Mali - Cap-Vert', '3-1'],
+        ['Mar. 29 septembre 2026', 'Cap-Vert - Rwanda', '1-2'],
+        ['Mar. 29 septembre 2026', 'Liberia - Mali', '0-1'],
+        ['Ven. 13 novembre 2026', 'Cap-Vert - Liberia', '4-2'],
+        ['Ven. 13 novembre 2026', 'Mali - Rwanda', '3-2'],
+        ['Mar. 17 novembre 2026', 'Liberia - Cap-Vert', '20h00'],
+        ['Mar. 17 novembre 2026', 'Rwanda - Mali', '20h00'],
+        ['Mer. 24 mars 2027', 'Cap-Vert - Mali', '20h00'],
+        ['Mer. 24 mars 2027', 'Liberia - Rwanda', '20h00'],
+        ['Dim. 28 mars 2027', 'Mali - Liberia', '21h00'],
+        ['Dim. 28 mars 2027', 'Rwanda - Cap-Vert', '21h00'],
+    ],
+    'L' => [
+        ['Ven. 25 septembre 2026', 'Tanzanie - Guinée-Bissau', '0-2'],
+        ['Ven. 25 septembre 2026', 'Nigeria - Madagascar', '2-1'],
+        ['Mar. 29 septembre 2026', 'Madagascar - Tanzanie', '1-1'],
+        ['Mar. 29 septembre 2026', 'Guinée-Bissau - Nigeria', '3-0'],
+        ['Jeu. 12 novembre 2026', 'Madagascar - Guinée-Bissau', '1-1'],
+        ['Ven. 13 novembre 2026', 'Nigeria - Tanzanie', '3-1'],
+        ['Mar. 17 novembre 2026', 'Tanzanie - Nigeria', '14h00'],
+        ['Mar. 17 novembre 2026', 'Guinée-Bissau - Madagascar', '17h00'],
+        ['Mer. 24 mars 2027', 'Guinée-Bissau - Tanzanie', '20h00'],
+        ['Mer. 24 mars 2027', 'Madagascar - Nigeria', '20h00'],
+        ['Dim. 28 mars 2027', 'Tanzanie - Madagascar', '21h00'],
+        ['Dim. 28 mars 2027', 'Nigeria - Guinée-Bissau', '21h00'],
     ],
 ];
 // Programme des journées 3 et 4 (source : Le360 Afrique). [journée, date, heure, groupe, match]
@@ -136,21 +309,20 @@ $programme = [
 
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Sections CAN 2027">
     <a href="#classements" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📊 Classements</a>
-    <a href="#groupe-a" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇲🇦 Groupe A</a>
-    <a href="#groupe-b" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🇪🇬 Groupe B</a>
+    <a href="#groupe-a" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🗂️ Les 12 groupes</a>
     <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📅 Programme J3 et J4</a>
     <a href="#articles" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📰 Nos articles</a>
     <a href="#faq" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">❓ FAQ</a>
 </nav>
 
 <section id="classements" style="scroll-margin-top:5rem" class="mb-12">
-    <h2 class="text-2xl font-bold text-white mb-2">Classements des 12 groupes après la journée 2</h2>
-    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, phase de groupes, situation avant la 3e journée (deux matchs joués par équipe). Le détail de chaque journée est dans nos articles : <a href="/blog/eliminatoires-can-2027-classements-journee-1" <?= $lk ?>>classements après la journée 1</a> et <a href="/blog/eliminatoires-can-2027-algerie-egypte-senegal-vieira" <?= $lk ?>>résultats de la journée 2</a>.</p>
+    <h2 class="text-2xl font-bold text-white mb-2">Classements des 12 groupes après la journée 3</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, phase de groupes, situation à l'issue de la 3e journée (12 au 14 novembre 2026, trois matchs joués par équipe). Le détail de chaque groupe est plus bas ; voir aussi nos articles sur la <a href="/blog/eliminatoires-can-2027-classements-journee-1" <?= $lk ?>>journée 1</a> et la <a href="/blog/eliminatoires-can-2027-algerie-egypte-senegal-vieira" <?= $lk ?>>journée 2</a>.</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <?php foreach ($classements as $g => $eq): ?>
         <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
             <table class="w-full text-sm">
-                <caption class="text-left text-green-400 text-xs font-semibold uppercase tracking-wider px-4 pt-3 pb-1">Groupe <?= $g ?> · éliminatoires CAN 2027, après la journée <?= $journeeJouee[$g] ?? 2 ?></caption>
+                <caption class="text-left text-green-400 text-xs font-semibold uppercase tracking-wider px-4 pt-3 pb-1">Groupe <?= $g ?> · éliminatoires CAN 2027, après la journée 3</caption>
                 <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-1 font-semibold">Équipe</th><th class="text-right px-4 py-1 font-semibold">Pts</th></tr></thead>
                 <tbody class="divide-y divide-gray-700/60 text-gray-300">
                     <?php foreach ($eq as $i => $e): ?>
@@ -161,14 +333,14 @@ $programme = [
         </div>
         <?php endforeach; ?>
     </div>
-    <p class="text-gray-300 text-xs mt-3">Groupes A et B mis à jour après la journée 3 (Foot Mercato) ; les autres groupes restent à la journée 2 en attendant les résultats vérifiés.</p>
-    <p class="text-gray-600 text-xs mt-1">Source : Africa Top Sports (« le classement des 12 groupes avant la 3e journée »), croisée avec Le360 Afrique. Seuls les points sont indiqués ; à égalité, l'ordre suit la source. Les résultats des 12 au 14 novembre seront ajoutés dès confirmation.</p>
+    <p class="text-gray-600 text-xs mt-3">Source : Foot Mercato (calendrier et résultats de chaque groupe). Seuls les points sont indiqués ; à égalité, le départage retenu est la différence de buts puis les buts marqués, à vérifier avec le règlement officiel de la CAF.</p>
 </section>
 
+<h2 class="sr-only">Résultats et calendrier groupe par groupe</h2>
 <?php foreach ($calendriers as $g => $cal): ?>
 <section id="groupe-<?= strtolower($g) ?>" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2"><?= htmlspecialchars($groupesTitres[$g]) ?></h2>
-    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, groupe <?= $g ?> : résultats des journées 1 à 3 et calendrier des trois dernières journées. <?= htmlspecialchars($groupesIntro[$g]) ?></p>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, groupe <?= $g ?> : résultats des journées 1 à 3 et calendrier des journées 4 à 6. <?= htmlspecialchars($groupesIntro[$g]) ?></p>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
             <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Groupe <?= $g ?> des éliminatoires de la CAN 2027 : résultats et calendrier, de septembre 2026 à mars 2027</caption>

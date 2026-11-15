@@ -987,4 +987,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 - Création de `can-2027.php` : en bref, classements des 12 groupes après la J2 (points, source Africa Top Sports croisée avec Le360), programme complet J3 et J4 (48 matchs, source Le360), articles CAN, FAQ + JSON-LD. Lien dans le pied de page, encadré « Dossier CAN 2027 » sur les articles CAN, `sitemap.php`.
 - À faire quand les scores vérifiés seront fournis : résultats de la J3 (12 au 14 novembre), mise à jour des classements, article « journée 3 ».
 
+- **15 novembre 2026, suite** : les 12 groupes de la CAN 2027 sont renseignés après la journée 3 (résultats, classements, calendrier jusqu'au 28 mars 2027) à partir des pages « Calendrier » de Foot Mercato collées par l'utilisateur (script de génération, 3 matchs joués par équipe contrôlés). Les horaires à venir sont ceux de la source (heure française probable, 1 h de plus que Le360). Articles « journée 3 » et mise à jour des anciens articles : à faire à la demande.
+
 *Dernière mise à jour : 15 novembre 2026*

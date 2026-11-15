@@ -995,4 +995,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, fin de la CAN 2027 vérifiée** : annonce officielle de la CAF (2 mai 2026) = match d'ouverture le samedi 19 juin 2027, finale le samedi 17 juillet 2027 ; journées 5 et 6 des éliminatoires du 22 au 30 mars 2027. `can-2027.php` corrigé (18 juillet de Wikipédia remplacé par 17 juillet ; Foot Africa donnait « 18 juin - 19 juillet », erroné). Le pays hôte de l'ouverture et de la finale reste à annoncer.
 
+- **15 novembre 2026, article CAN id 100** : « Algérie 1-0 Togo » (CAN 2027, groupe I, J3, but de Bensebaini 76e sur passe de Hadj Moussa), rédigé à partir de la fiche Flashscore collée (score, buteur, stats) sans reprise de texte ; classement du groupe recalculé depuis les résultats ; vignette `eliminatoires-can-2027-algerie-togo-1-0-bensebaini.jpg` ; contrôle anti-doublon OK (< 10 %). Cartons et remplacements non repris (libellés Flashscore ambigus).
+
 *Dernière mise à jour : 15 novembre 2026*

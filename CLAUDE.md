@@ -156,7 +156,7 @@ football-passion/                  ← racine du dépôt = racine du site
 **Depuis le 5 août 2026**, les articles ne vivent plus dans un unique `data/articles.json` monolithique (non scalable au-delà de quelques dizaines d'articles — diffs Git énormes, tout le contenu HTML relu à chaque page liste). Nouvelle architecture à deux niveaux :
 
 - **`data/articles/{slug}.json`** — un fichier par article, contenu complet (structure ci-dessous). Chargé uniquement à la vue d'un article précis (`load_article($basePath, $slug)` dans `blog/helpers.php`), jamais en liste.
-- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, categorie, etiquettes, date, date_maj (si l'article a été mis à jour), extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
+- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, titre_court, categorie, etiquettes, date, date_maj (si l'article a été mis à jour), extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
 
 **Structure complète d'un fichier `data/articles/{slug}.json`** :
 
@@ -191,7 +191,7 @@ football-passion/                  ← racine du dépôt = racine du site
 
 **🚨 Procédure obligatoire pour ajouter un nouvel article** :
 1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
-2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`.
+2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`, **avec un `titre_court`** (règle du 15 novembre 2026) : 35 à 48 caractères, sans guillemets ni point final, qui dit l'essentiel (ex. « Zidane dément tout clash avec Mbappé », « Algérie 1-0 Togo en éliminatoires CAN 2027 »). Il sert au bandeau défilant de l'accueil (`templates/ticker-resultats.php`) ; sans lui, le titre est coupé à 48 caractères. Le choisir soi-même à chaque nouvel article, sans le demander.
 3. Les deux fichiers doivent être commités ensemble — ne jamais ajouter l'un sans l'autre.
 
 **Sitemap** : `sitemap.php` (accessible en `/sitemap.xml` via réécriture `.htaccess`) lit `data/articles-index.json` **à la volée à chaque requête** — aucune régénération manuelle n'est nécessaire. Tant que l'étape 2 ci-dessus est respectée pour chaque nouvel article, le sitemap est automatiquement à jour. `robots.txt` référence son URL.
@@ -361,6 +361,12 @@ Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher
 5. **Préparer l'image** : les `.webp`/`.avif` se convertissent via PresentationCore (`BitmapDecoder` + `PngBitmapEncoder`) ; **vérifier la transparence** (un fond noir ou blanc opaque se rend transparent par remplissage depuis les bords) ; contrôler visuellement sur le fond de la vignette (bleu foncé).
 6. **Créditer** dans l'article : « Crédit image : <auteur>, licence <licence> (lien), via Wikimedia Commons (lien page du fichier) », liens en `nofollow noopener noreferrer`, et noter auteur + licence + URL dans `procedure-football-passion.md`.
 
+
+### 📺 Bandeaux défilants (règle du 15 novembre 2026)
+
+- **Accueil** : les 3 derniers articles (« À LA UNE », via `titre_court`), puis les 4 derniers scores de chaque compétition triés du plus récent au plus ancien. Sources : `data/matchs.json` (L1, L2, L3, C1, C3, C4, mis à jour par n8n ou à la main) et **`data/resultats-selections.json`** (Ligue des Nations, CAN : saisi à la main).
+- **À mettre à jour après chaque journée de Ligue des Nations ou de CAN** : ajouter les scores dans `data/resultats-selections.json` (`competition` = `LDN` ou `CAN`, `date`, `domicile`, `exterieur`, `score_dom`, `score_ext`). Les scores de L1/L2/L3/coupes d'Europe passent par `matchs.json` et n'ont rien à faire.
+- **Pages L1, L2, L3** : bandeau de leur championnat (9 derniers matchs, automatique). **Euro 2028** : liste saisie dans `euro-2028.php` (`$ldnResultats`). **CAN** : `templates/can-ticker.php` (pages CAN 2027, TV CAN, catégorie CAN du blog), à mettre à jour à la main.
 
 ### 🏆 Convention d'URL des compétitions récurrentes (Ligue des Nations, 15 novembre 2026)
 

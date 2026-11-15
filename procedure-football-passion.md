@@ -1001,4 +1001,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, bandeau de l'accueil** : en tête les 3 derniers articles (« À LA UNE »), puis les 4 derniers scores de chaque compétition (L1, L2, L3, C1, C3, C4 depuis `data/matchs.json`, plus Ligue des Nations et CAN depuis `data/resultats-selections.json`, fichier saisi à la main : 26 résultats de la J5 de la LDN et 24 de la J3 de la CAN), triés du plus récent au plus ancien ; chaque élément renvoie vers sa page. **À mettre à jour dans `data/resultats-selections.json` après chaque journée LDN/CAN.**
 
+- **15 novembre 2026, titre_court** : champ `titre_court` ajouté à `data/articles-index.json` (9 derniers articles) pour le bandeau de l'accueil ; règle ajoutée dans `CLAUDE.md` (à renseigner à chaque nouvel article, choisi sans demander, 35 à 48 caractères) avec la section « Bandeaux défilants » (sources et fichiers à mettre à jour : `data/resultats-selections.json`, `templates/can-ticker.php`, `$ldnResultats` d'`euro-2028.php`).
+
 *Dernière mise à jour : 15 novembre 2026*

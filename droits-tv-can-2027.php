@@ -58,6 +58,26 @@ $matchs = [
     ['J4', 'Mar. 17 novembre 2026', '21h', 'A', 'Niger - Maroc', '', ''],
 ];
 
+$anciens = [
+    ['Jeu. 24 septembre 2026', '18h', 'E', 'RD Congo - Guinée équatoriale', '2-0', 'beIN SPORTS 4'],
+    ['Jeu. 24 septembre 2026', '21h', 'C', 'Côte d\'Ivoire - Ghana', '2-0', 'beIN SPORTS 2'],
+    ['Jeu. 24 septembre 2026', '21h', 'G', 'Cameroun - Comores', '3-1', 'beIN SPORTS 4'],
+    ['Jeu. 24 septembre 2026', '21h', 'H', 'Tunisie - Ouganda', '1-1', 'beIN SPORTS 5'],
+    ['Ven. 25 septembre 2026', '18h', 'L', 'Nigeria - Madagascar', '2-1', 'beIN SPORTS 6'],
+    ['Ven. 25 septembre 2026', '21h', 'A', 'Maroc - Gabon', '2-0', 'beIN SPORTS 1'],
+    ['Ven. 25 septembre 2026', '21h', 'I', 'Algérie - Zambie', '3-1', 'beIN SPORTS 2'],
+    ['Ven. 25 septembre 2026', '21h', 'J', 'Mozambique - Sénégal', '1-1', 'beIN SPORTS 4'],
+    ['Ven. 25 septembre 2026', '21h', 'K', 'Mali - Cap-Vert', '3-1', 'beIN SPORTS 5'],
+    ['Ven. 25 septembre 2026', '21h', 'B', 'Égypte - Angola', '0-0', 'beIN SPORTS 7'],
+    ['Lun. 28 septembre 2026', '18h', 'E', 'Zimbabwe - RD Congo', '1-2', 'beIN SPORTS 1'],
+    ['Lun. 28 septembre 2026', '21h', 'H', 'Tunisie - Botswana', '2-2', 'beIN SPORTS 1'],
+    ['Mar. 29 septembre 2026', '15h', 'A', 'Lesotho - Maroc', '0-2', 'beIN SPORTS 1'],
+    ['Mar. 29 septembre 2026', '15h', 'I', 'Burundi - Algérie', '2-2', 'beIN SPORTS 2'],
+    ['Mar. 29 septembre 2026', '18h', 'L', 'Guinée-Bissau - Nigeria', '3-0', 'beIN SPORTS 1'],
+    ['Mar. 29 septembre 2026', '21h', 'C', 'Somalie - Côte d\'Ivoire', '0-2', 'beIN SPORTS 1'],
+    ['Mar. 29 septembre 2026', '21h', 'G', 'Congo - Cameroun', '1-1', 'beIN SPORTS 2'],
+];
+
 $jours = [];
 foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
 ?>
@@ -67,6 +87,22 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
   "@type": "FAQPage",
   "dateModified": "<?= $date_maj_page ?>T08:00:00+01:00",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Peut-on regarder gratuitement les éliminatoires de la CAN 2027 en France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Selon Afrik-Foot, les éliminatoires de la CAN 2027 sont diffusés en France exclusivement par beIN SPORTS, accessible uniquement par abonnement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tous les matchs des éliminatoires de la CAN 2027 sont-ils diffusés en France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. beIN SPORTS ne diffuse qu'une sélection de matchs à chaque journée : 17 matchs sur 48 pour les deux premières journées, selon Afrik-Foot."
+      }
+    },
     {
       "@type": "Question",
       "name": "Sur quelle chaîne voir les éliminatoires de la CAN 2027 ?",
@@ -116,7 +152,7 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
 <section id="en-bref" style="scroll-margin-top:5rem" class="mb-10 bg-gray-800 border border-green-800/40 rounded-xl p-6">
     <h2 class="text-xl font-bold text-white mb-3">Où voir les éliminatoires de la CAN 2027 ?</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-2">
-        D'après le programme publié par <strong class="text-white">beIN SPORTS</strong> le 9 novembre 2026, une partie des matchs passe sur
+        <strong class="text-white">beIN SPORTS</strong> détient les droits des éliminatoires et de la phase finale de la CAN 2027 en France, uniquement par abonnement. D'après son programme du 9 novembre 2026, une partie des matchs passe sur
         <strong class="text-white">beIN SPORTS 1, beIN SPORTS 2, beIN SPORTS MAX 5 et beIN SPORTS MAX 6</strong>.
         Pour les autres rencontres, aucune chaîne n'est indiquée à ce jour : nous complèterons ce tableau dès qu'elle sera connue.
     </p>
@@ -125,10 +161,20 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
 
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Sections de la page">
     <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📅 Programme des matchs</a>
+    <a href="#droits" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🔒 Qui diffuse ?</a>
     <a href="#chaines" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📺 Matchs avec chaîne</a>
     <a href="#faq" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">❓ FAQ</a>
     <a href="/can-2027.php" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🌍 CAN 2027 : groupes et classements</a>
 </nav>
+
+<section id="droits" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Qui diffuse la CAN 2027 en France et en Afrique ?</h2>
+    <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
+        <p><strong class="text-white">En France :</strong> beIN SPORTS détient les droits de la prochaine CAN et de ses éliminatoires, qui ne sont pas accessibles gratuitement. La chaîne ne diffuse qu'une sélection de matchs à chaque journée : environ un tiers pour les deux premières journées (17 matchs sur 48). Selon Afrik-Foot, tous les matchs du Maroc, de l'Algérie, de la Tunisie, du Sénégal, de la Côte d'Ivoire, du Cameroun et de la RD Congo devraient être diffusés.</p>
+        <p><strong class="text-white">En Afrique :</strong> beIN SPORTS (version Mena) détient les droits en Afrique du Nord ; en Afrique subsaharienne francophone, c'est Canal+. Dans la plupart des cas, les chaînes nationales publiques peuvent diffuser gratuitement les matchs de leur équipe nationale.</p>
+    </div>
+    <p class="text-gray-600 text-xs mt-3">Source : Afrik-Foot (« Éliminatoires CAN 2027 : quelle chaîne TV les diffuse en France ? », 23 septembre 2026).</p>
+</section>
 
 <section id="programme" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Programme des journées 3 et 4, jour par jour</h2>
@@ -159,7 +205,7 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
     <h2 class="text-2xl font-bold text-white mb-4">Les matchs diffusés sur beIN SPORTS (journée 3)</h2>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
-            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journée 3 : les 11 matchs avec une chaîne beIN SPORTS indiquée</caption>
+            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journée 3 : les 9 matchs avec une chaîne beIN SPORTS indiquée</caption>
             <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-2 font-semibold">Chaîne</th><th class="text-left px-4 py-2 font-semibold">Date et heure</th><th class="text-left px-4 py-2 font-semibold">Rencontre</th></tr></thead>
             <tbody class="divide-y divide-gray-700/60 text-gray-300">
                 <?php foreach ($matchs as $m): if (!$m[5]) continue; ?>
@@ -170,9 +216,34 @@ foreach ($matchs as $m) { $jours[$m[0] . '|' . $m[1]][] = $m; }
     </div>
 </section>
 
+<section id="journees-1-2" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-2">Journées 1 et 2 : les 17 matchs diffusés sur beIN SPORTS</h2>
+    <p class="text-gray-300 text-sm leading-relaxed mb-4">Éliminatoires de la CAN 2027, journées 1 et 2 (24 septembre au 6 octobre 2026) : les matchs retransmis en France, avec leur chaîne et leur score.</p>
+    <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
+        <table class="w-full text-sm">
+            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Éliminatoires de la CAN 2027, journées 1 et 2 : matchs diffusés sur beIN SPORTS, avec date, heure, groupe, score et chaîne</caption>
+            <thead><tr class="text-gray-500 uppercase text-xs border-b border-gray-700"><th class="text-left px-4 py-2 font-semibold">Date</th><th class="text-left px-4 py-2 font-semibold">Heure</th><th class="text-left px-4 py-2 font-semibold">Gr.</th><th class="text-left px-4 py-2 font-semibold">Rencontre</th><th class="text-center px-4 py-2 font-semibold">Score</th><th class="text-left px-4 py-2 font-semibold">Chaîne</th></tr></thead>
+            <tbody class="divide-y divide-gray-700/60 text-gray-300">
+                <?php foreach ($anciens as $m): ?>
+                <tr><td class="px-4 py-1.5 whitespace-nowrap"><?= htmlspecialchars($m[0]) ?></td><td class="px-4 py-1.5"><?= $m[1] ?></td><td class="px-4 py-1.5"><a href="/can-2027.php#groupe-<?= strtolower($m[2]) ?>" <?= $lk ?>><?= $m[2] ?></a></td><td class="px-4 py-1.5 text-white"><?= htmlspecialchars($m[3]) ?></td><td class="px-4 py-1.5 text-center text-white font-bold"><?= $m[4] ?></td><td class="px-4 py-1.5 text-green-400 font-semibold whitespace-nowrap"><?= $m[5] ?></td></tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-gray-600 text-xs mt-3">Source : Afrik-Foot (programme beIN SPORTS des journées 1 et 2) ; scores d'après Foot Mercato.</p>
+</section>
+
 <section id="faq" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Foire aux questions : CAN 2027 à la TV</h2>
     <div class="space-y-3">
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Peut-on regarder gratuitement les éliminatoires de la CAN 2027 en France ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Non. Selon Afrik-Foot, les éliminatoires de la CAN 2027 sont diffusés en France exclusivement par beIN SPORTS, accessible uniquement par abonnement.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Tous les matchs des éliminatoires de la CAN 2027 sont-ils diffusés en France ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Non. beIN SPORTS ne diffuse qu'une sélection de matchs à chaque journée : 17 matchs sur 48 pour les deux premières journées, selon Afrik-Foot.</p>
+        </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Sur quelle chaîne voir les éliminatoires de la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
             <p class="text-gray-400 text-sm leading-relaxed mt-3">Selon le programme publié par beIN SPORTS le 9 novembre 2026, une partie des matchs est diffusée sur beIN SPORTS 1, beIN SPORTS 2, beIN SPORTS MAX 5 et beIN SPORTS MAX 6. Pour les autres matchs, la chaîne n'est pas indiquée.</p>

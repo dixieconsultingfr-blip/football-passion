@@ -269,7 +269,7 @@ $calendriers = [
       "name": "Quand débute la CAN 2027 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia. Les dates sont à confirmer par la CAF."
+        "text": "La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia (d'autres sources, dont Afrik-Foot, indiquent une fin le 17 juillet). Les dates sont à confirmer par la CAF."
       }
     },
     {
@@ -437,7 +437,7 @@ $calendriers = [
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Quand débute la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
-            <p class="text-gray-400 text-sm leading-relaxed mt-3">La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia. Les dates sont à confirmer par la CAF.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia (d'autres sources, dont Afrik-Foot, indiquent une fin le 17 juillet). Les dates sont à confirmer par la CAF.</p>
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Qui est qualifié pour la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>

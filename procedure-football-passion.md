@@ -991,4 +991,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, page TV** : création de `droits-tv-can-2027.php` (programme beIN SPORTS du 9 novembre 2026 collé par l'utilisateur : 48 matchs des journées 3 et 4, heures françaises, chaînes beIN SPORTS 1, 2, MAX 5 et MAX 6 pour 9 matchs de la J3 ; aucune chaîne pour les autres, rien d'inventé). Kenya - Afrique du Sud (17/11, 17h) ajouté d'après Foot Mercato (absent de la liste beIN). Le tableau Le360 de `can-2027.php` (heures décalées d'une heure) est remplacé par un lien vers cette page. Lien aussi dans `droits-tv-football.php` et `sitemap.php`.
 
+- **15 novembre 2026, TV CAN (suite)** : ajout à `droits-tv-can-2027.php` des droits (beIN SPORTS en France, abonnement ; beIN Mena en Afrique du Nord ; Canal+ en Afrique subsaharienne francophone, source Afrik-Foot du 23/09/2026) et des 17 matchs des journées 1 et 2 diffusés avec leur chaîne. Deux orientations domicile/extérieur divergentes entre Afrik-Foot et Foot Mercato (Mozambique - Sénégal, Tunisie - Botswana) : Foot Mercato retenu. Dates de la phase finale : 19 juin au 18 juillet 2027 (Wikipédia) ou 17 juillet (Afrik-Foot) : mention « à confirmer ».
+
 *Dernière mise à jour : 15 novembre 2026*

@@ -91,7 +91,7 @@ football-passion/                  ← racine du dépôt = racine du site
 **Tous les fichiers JSON** doivent être :
 - ✅ UTF-8 **sans BOM** (commence par `[` ou `{`, pas `EF BB BF`)
 - ✅ Validés avant commit (https://jsonlint.com/)
-- ✅ Triés correctement (`articles.json` par ID décroissant)
+- ✅ `articles-index.json` : un tableau JSON simple (jamais `{"value": ...}`), nouvelle entrée en tête ; le tri d'affichage se fait côté PHP (`load_articles_index`). Le site satellite CDM 2026 utilise encore `articles.json`, trié par ID décroissant.
 
 ### Tailwind CSS — Pas de footprint IA
 

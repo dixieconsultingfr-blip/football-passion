@@ -6,8 +6,8 @@ $articlesAll = load_articles_index(__DIR__);
 $articlesCan = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'CAN' || in_array('CAN 2027', $a['etiquettes'] ?? [], true)));
 usort($articlesCan, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-$page_title = 'CAN 2027 : éliminatoires, groupes, classements et calendrier';
-$meta_desc  = "CAN 2027 (Kenya, Tanzanie, Ouganda) : les 12 groupes des éliminatoires, les classements après la journée 3, le programme des journées 3 et 4 et tous nos articles.";
+$page_title = 'CAN 2027 : dates, pays hôtes, qualifiés et éliminatoires';
+$meta_desc  = "CAN 2027 du 19 juin au 18 juillet 2027 (Kenya, Tanzanie, Ouganda) : qui est qualifié, comment se qualifier, les 12 groupes des éliminatoires, les classements après la journée 3, le programme des journées 3 et 4 et tous nos articles.";
 include __DIR__ . '/templates/header.php';
 
 $lk = 'class="text-green-400 underline hover:text-green-300"';
@@ -274,6 +274,46 @@ $programme = [
         "@type": "Answer",
         "text": "La 3e journée se joue du 12 au 14 novembre 2026 et la 4e journée du 16 au 17 novembre 2026, selon le programme publié par Le360 Afrique."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Où se joue la CAN 2027 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda, une première en trois pays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand débute la CAN 2027 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia. Les dates sont à confirmer par la CAF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui est qualifié pour la CAN 2027 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "À ce jour, seuls les trois pays hôtes sont qualifiés d'office : le Kenya, la Tanzanie et l'Ouganda. Les autres places se jouent dans les éliminatoires jusqu'en mars 2027."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'équipes se qualifient par groupe ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selon Le360 Afrique, les deux premiers de chaque groupe sans pays hôte se qualifient ; dans les groupes D, H et L, qui comptent un pays hôte, une seule équipe se qualifie en plus de l'hôte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand se jouent les dernières journées des éliminatoires ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La journée 4 se joue les 16 et 17 novembre 2026, puis les journées 5 et 6 les 24 et 28 mars 2027."
+      }
     }
   ]
 }
@@ -289,31 +329,44 @@ $programme = [
 
 <header class="mb-10">
     <p class="text-green-400 text-xs font-semibold uppercase tracking-widest mb-1">Coupe d'Afrique des Nations · sélections masculines</p>
-    <h1 class="text-4xl font-bold text-white mb-2">CAN 2027 : éliminatoires, groupes, classements et calendrier</h1>
+    <h1 class="text-4xl font-bold text-white mb-2">CAN 2027 : dates, pays hôtes, qualifiés et éliminatoires</h1>
     <p class="text-gray-500 text-xs mb-4">Mis à jour le <time datetime="<?= $date_maj_page ?>"><?= date_fr_long($date_maj_page) ?></time></p>
     <p class="text-gray-300 leading-relaxed max-w-2xl">
-        La phase finale de la CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda. Les éliminatoires réunissent douze groupes de quatre équipes :
-        retrouvez ici les classements, le programme des journées 3 et 4 et tous nos articles.
+        La phase finale de la CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda, du 19 juin au 18 juillet 2027. Les éliminatoires réunissent douze groupes de quatre équipes :
+        retrouvez ici les dates, les qualifiés, les classements, le calendrier et tous nos articles.
     </p>
 </header>
 
 <section id="en-bref" style="scroll-margin-top:5rem" class="mb-12 bg-gray-800 border border-green-800/40 rounded-xl p-6">
     <h2 class="text-xl font-bold text-white mb-3">CAN 2027 en bref</h2>
     <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
-        <div><dt class="text-green-400 font-semibold">Pays hôtes</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda (organisation conjointe)</dd></div>
-        <div><dt class="text-green-400 font-semibold">Éliminatoires</dt><dd class="text-gray-300">12 groupes de 4 équipes (A à L)</dd></div>
-        <div><dt class="text-green-400 font-semibold">Journées 3 et 4</dt><dd class="text-gray-300">12 au 14 novembre, puis 16 et 17 novembre 2026</dd></div>
-        <div><dt class="text-green-400 font-semibold">Co-organisateurs</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda sont déjà qualifiés ; ils jouent aussi les éliminatoires</dd></div>
+        <div><dt class="text-green-400 font-semibold">Quand ?</dt><dd class="text-gray-300">Du 19 juin au 18 juillet 2027 (dates à confirmer par la CAF)</dd></div>
+        <div><dt class="text-green-400 font-semibold">Où ?</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, une première en trois pays</dd></div>
+        <div><dt class="text-green-400 font-semibold">Format</dt><dd class="text-gray-300">24 équipes, 52 matchs</dd></div>
+        <div><dt class="text-green-400 font-semibold">Qualifiés à ce jour</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, d'office comme pays hôtes</dd></div>
+        <div><dt class="text-green-400 font-semibold">Éliminatoires</dt><dd class="text-gray-300">12 groupes de 4 équipes (A à L), 6 journées, de septembre 2026 à mars 2027</dd></div>
+        <div><dt class="text-green-400 font-semibold">Prochaines journées</dt><dd class="text-gray-300">Journée 4 les 16 et 17 novembre 2026, puis journées 5 et 6 les 24 et 28 mars 2027</dd></div>
     </dl>
 </section>
 
 <nav class="flex flex-wrap gap-2 mb-10" aria-label="Sections CAN 2027">
+    <a href="#qualification" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">✅ Qualifiés</a>
     <a href="#classements" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📊 Classements</a>
     <a href="#groupe-a" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">🗂️ Les 12 groupes</a>
     <a href="#programme" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📅 Programme J3 et J4</a>
     <a href="#articles" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">📰 Nos articles</a>
     <a href="#faq" class="inline-flex bg-gray-800 border border-gray-700 hover:border-green-600 text-gray-300 hover:text-white px-4 py-2 text-xs font-semibold rounded-full transition-colors">❓ FAQ</a>
 </nav>
+
+<section id="qualification" style="scroll-margin-top:5rem" class="mb-12">
+    <h2 class="text-2xl font-bold text-white mb-4">Qui est qualifié pour la CAN 2027 ? Comment se qualifier ?</h2>
+    <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
+        <p><strong class="text-white">À ce jour, seuls les trois pays hôtes sont qualifiés :</strong> le Kenya, la Tanzanie et l'Ouganda, d'office. Les 21 autres places se jouent dans les éliminatoires.</p>
+        <p><strong class="text-white">Les règles, d'après Le360 Afrique :</strong> dans les groupes sans pays hôte, les deux premiers se qualifient. Dans les trois groupes qui comptent un pays hôte (<a href="#groupe-d" <?= $lk ?>>groupe D</a> avec le Kenya, <a href="#groupe-h" <?= $lk ?>>groupe H</a> avec l'Ouganda et <a href="#groupe-l" <?= $lk ?>>groupe L</a> avec la Tanzanie), une seule équipe se qualifie en plus de l'hôte. Le compte est cohérent : 9 groupes à deux qualifiés, 3 groupes à un qualifié et 3 hôtes font bien 24 équipes.</p>
+        <p><strong class="text-white">Le calendrier :</strong> la journée 4 se joue les 16 et 17 novembre 2026, les journées 5 et 6 les 24 et 28 mars 2027, avant la phase finale du 19 juin au 18 juillet 2027 (52 matchs, 24 équipes). Le nom de la compétition, « Pamoja », signifie « ensemble » en swahili. Les stades et les dates précises des matchs de la phase finale ne sont pas encore confirmés : nous les ajouterons dès l'annonce de la CAF.</p>
+    </div>
+    <p class="text-gray-600 text-xs mt-3">Sources : Wikipédia (Coupe d'Afrique des nations 2027, informations susceptibles d'évoluer), Le360 Afrique, CAF. Dates à confirmer par la CAF.</p>
+</section>
 
 <section id="classements" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Classements des 12 groupes après la journée 3</h2>
@@ -407,6 +460,26 @@ $programme = [
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Quand se jouent les journées 3 et 4 des éliminatoires de la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
             <p class="text-gray-400 text-sm leading-relaxed mt-3">La 3e journée se joue du 12 au 14 novembre 2026 et la 4e journée du 16 au 17 novembre 2026, selon le programme publié par Le360 Afrique.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Où se joue la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">La CAN 2027 est organisée conjointement par le Kenya, la Tanzanie et l'Ouganda, une première en trois pays.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Quand débute la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">La phase finale de la CAN 2027 se joue du 19 juin au 18 juillet 2027, selon Wikipédia. Les dates sont à confirmer par la CAF.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Qui est qualifié pour la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">À ce jour, seuls les trois pays hôtes sont qualifiés d'office : le Kenya, la Tanzanie et l'Ouganda. Les autres places se jouent dans les éliminatoires jusqu'en mars 2027.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Combien d'équipes se qualifient par groupe ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Selon Le360 Afrique, les deux premiers de chaque groupe sans pays hôte se qualifient ; dans les groupes D, H et L, qui comptent un pays hôte, une seule équipe se qualifie en plus de l'hôte.</p>
+        </details>
+        <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
+            <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Quand se jouent les dernières journées des éliminatoires ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">La journée 4 se joue les 16 et 17 novembre 2026, puis les journées 5 et 6 les 24 et 28 mars 2027.</p>
         </details>
     </div>
 </section>

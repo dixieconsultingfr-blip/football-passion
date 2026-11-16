@@ -1011,4 +1011,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **15 novembre 2026, article France id 103** : compte rendu de France 2-1 Turquie, rédigé à partir du texte de L'Équipe fourni par l'utilisateur (buts : Topçu csc 47e, Kroupi 80e, Bardakci 90e ; Özer 7 arrêts ; Restes remplace Maignan à la pause ; Pagis premier joueur du Paris FC en Bleu depuis 1973), entièrement reformulé, sans citation ; source mentionnée en bas d'article (sans lien) ; contrôle anti-doublon OK (< 10 %). Vignette générée. Liens vers ce compte rendu ajoutés sur `equipe-france.php`, l'édition 2026-2027 (buteurs), `droits-tv-football.php`, `euro-2028-qualifications.php`, et dans les articles 90, 97 et 102.
 
+- **16 novembre 2026, forme « vs » dans les articles de match** : « France vs Turquie » ajouté (intertitre, meta, alt) à l'article id 103 ; intertitres « France vs Turquie » / « Italie vs France » ajoutés aux articles 90, 91 et 98 ; règle ajoutée dans `CLAUDE.md` (au moins une fois « A vs B », titre en « A - B »).
+
 *Dernière mise à jour : 15 novembre 2026*

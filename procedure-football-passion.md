@@ -1015,4 +1015,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **16 novembre 2026, Ligue des Nations J6 du lundi 16 novembre** : 10 scores fournis par l'utilisateur ajoutés à `data/resultats-selections.json` ; classements mis à jour dans les groupes B, E, K, L, M, N (groupe B : Allemagne, Pays-Bas et Grèce à 11 pts, ordre par différence de buts faute des confrontations directes, à vérifier) ; fiche Écosse corrigée dans `euro-2028-pays-hotes.php` ; article id 104 (`titre_court` « J6 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Écosse », vignette JPG générée) ; notes de mise à jour sur les articles 96 et 102 ; liens du hub mis à jour. Restent les 8 matchs du 17 novembre.
 
-*Dernière mise à jour : 16 novembre 2026*
+- **17 novembre 2026, groupe B** : ordre Allemagne, Pays-Bas, Grèce confirmé par les classements officiels (captures de l'utilisateur, tous groupes A à N sauf F et G concordent) ; réserve sur le départage retirée de l'article id 104.
+
+*Dernière mise à jour : 17 novembre 2026*

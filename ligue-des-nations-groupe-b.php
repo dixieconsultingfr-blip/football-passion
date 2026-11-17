@@ -1,7 +1,7 @@
 <?php
 $groupeLettre = 'B';
 $groupeEquipesLabel = 'Pays-Bas, Grèce, Allemagne, Serbie';
-$date_maj_page = '2026-11-16';
+$date_maj_page = '2026-11-17';
 $classement = [
     ['club' => 'Allemagne', 'MJ' => 6, 'G' => 3, 'N' => 2, 'P' => 1, 'DB' => 8, 'Pts' => 11],
     ['club' => 'Pays-Bas', 'MJ' => 6, 'G' => 3, 'N' => 2, 'P' => 1, 'DB' => 4, 'Pts' => 11],

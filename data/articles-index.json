@@ -1,5 +1,20 @@
 [
     {
+        "id": 105,
+        "slug": "angleterre-espagne-3-2-ligue-des-nations-groupe-c-15-novembre",
+        "titre": "Angleterre - Espagne 3-2 : les Three Lions prennent la tête du groupe C de la Ligue des Nations",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Ligue des nations",
+            "Euro 2028"
+        ],
+        "date": "2026-11-17",
+        "extrait": "L'Angleterre a battu l'Espagne 3-2 le 15 novembre 2026 et prend la première place du groupe C de la Ligue des Nations, avec 15 points comme les Espagnols. Résultats et classement final.",
+        "vignette": "/images/angleterre-espagne-3-2-ligue-des-nations-groupe-c-15-novembre.jpg",
+        "image_alt": "Angleterre vs Espagne 3-2, Ligue des Nations groupe C, 15 novembre 2026 : classement final Angleterre 15 points, Espagne 15 points",
+        "titre_court": "Angleterre 3-2 Espagne : le choc du groupe C"
+    },
+    {
         "id": 104,
         "slug": "ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre",
         "titre": "Ligue des Nations, journée 6 : l'Allemagne écrase les Pays-Bas 5-0, la Suisse bat l'Écosse 4-0 (résultats du 16 novembre)",

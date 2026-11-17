@@ -1017,4 +1017,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **17 novembre 2026, groupe B** : ordre Allemagne, Pays-Bas, Grèce confirmé par les classements officiels (captures de l'utilisateur, tous groupes A à N sauf F et G concordent) ; réserve sur le départage retirée de l'article id 104.
 
+- **17 novembre 2026, article id 105 Angleterre - Espagne 3-2** : texte reformulé à partir d'un article fourni par l'utilisateur ; non repris car non vérifiés : lieu du match (Madrid), minute du but contre son camp (49e dans le texte, 47e dans notre compte rendu), qualification des Anglais pour les quarts, hypothèse d'un quart France - Espagne ; groupe nommé « C » comme sur le site (« A3 » dans la source). Titre court « Angleterre 3-2 Espagne : le choc du groupe C », vignette JPG générée, forme « Angleterre vs Espagne » en H2/meta/alt.
+
 *Dernière mise à jour : 17 novembre 2026*

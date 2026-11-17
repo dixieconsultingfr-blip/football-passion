@@ -1013,4 +1013,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **16 novembre 2026, forme « vs » dans les articles de match** : « France vs Turquie » ajouté (intertitre, meta, alt) à l'article id 103 ; intertitres « France vs Turquie » / « Italie vs France » ajoutés aux articles 90, 91 et 98 ; règle ajoutée dans `CLAUDE.md` (au moins une fois « A vs B », titre en « A - B »).
 
-*Dernière mise à jour : 15 novembre 2026*
+- **16 novembre 2026, Ligue des Nations J6 du lundi 16 novembre** : 10 scores fournis par l'utilisateur ajoutés à `data/resultats-selections.json` ; classements mis à jour dans les groupes B, E, K, L, M, N (groupe B : Allemagne, Pays-Bas et Grèce à 11 pts, ordre par différence de buts faute des confrontations directes, à vérifier) ; fiche Écosse corrigée dans `euro-2028-pays-hotes.php` ; article id 104 (`titre_court` « J6 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Écosse », vignette JPG générée) ; notes de mise à jour sur les articles 96 et 102 ; liens du hub mis à jour. Restent les 8 matchs du 17 novembre.
+
+*Dernière mise à jour : 16 novembre 2026*

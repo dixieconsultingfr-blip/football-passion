@@ -1,5 +1,20 @@
 [
     {
+        "id": 104,
+        "slug": "ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre",
+        "titre": "Ligue des Nations, journée 6 : l'Allemagne écrase les Pays-Bas 5-0, la Suisse bat l'Écosse 4-0 (résultats du 16 novembre)",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Ligue des nations",
+            "Euro 2028"
+        ],
+        "date": "2026-11-16",
+        "extrait": "Allemagne 5-0 Pays-Bas, Suisse 4-0 Écosse, Islande 3-0 Luxembourg : les dix résultats de la journée 6 de la Ligue des Nations du lundi 16 novembre 2026, et le classement des groupes B, E, K, L, M et N.",
+        "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre.jpg",
+        "image_alt": "Ligue des Nations journee 6, resultats du 16 novembre 2026 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Ecosse, Islande 3-0 Luxembourg, Grece 1-0 Serbie",
+        "titre_court": "J6 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Écosse"
+    },
+    {
         "id": 103,
         "slug": "france-turquie-2-1-bleus-quarts-de-finale-ligue-des-nations-kroupi",
         "titre": "France - Turquie (2-1) : les Bleus souffrent mais assurent leur qualification pour les quarts de finale de la Ligue des Nations",
@@ -29,7 +44,7 @@
         "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre.jpg",
         "image_alt": "Ligue des Nations journee 6, resultats du 15 novembre 2026 : France 2-1 Turquie, Belgique 4-1 Italie, Espagne 2-3 Angleterre, Chypre 1-4 Montenegro",
         "titre_court": "J6 : France 2-1 Turquie, Belgique 4-1 Italie",
-        "date_maj": "2026-11-15"
+        "date_maj": "2026-11-16"
     },
     {
         "id": 101,
@@ -123,7 +138,7 @@
         "extrait": "Du jeudi 12 au mardi 17 novembre 2026, les journées 5 et 6 de la Ligue des Nations concluent la phase de groupes : Italie - France, Portugal - Danemark, Espagne - Angleterre… Le programme complet des 52 matchs.",
         "vignette": "/images/ligue-des-nations-2026-2027-programme-journees-5-et-6.jpg",
         "image_alt": "Ligue des Nations 2026-2027 : programme des journees 5 et 6 du 12 au 17 novembre, Italie-France, Portugal-Danemark, Espagne-Angleterre",
-        "date_maj": "2026-11-11",
+        "date_maj": "2026-11-16",
         "titre_court": "Ligue des Nations : programme des J5 et J6"
     },
     {

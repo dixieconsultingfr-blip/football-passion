@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-15'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
+$date_maj_page = '2026-11-16'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
 
 $articlesAll = load_articles_index(__DIR__);
 $articlesEuro = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'Euro'));
@@ -34,7 +34,7 @@ $nations = [
         'stades' => [
             ['Hampden Park', 'hampden-park', 'Glasgow', '52 032', 'Groupes, huitième de finale et quart de finale'],
         ],
-        'ldn' => ['Groupe E', '/ligue-des-nations-groupe-e.php', 'Suisse, Slovénie, Écosse, Macédoine du Nord', "3e avec 4 points, après une défaite 1-2 contre la Slovénie le 6 octobre", 'Écosse - Macédoine du Nord le vendredi 13 novembre à 20h45, puis Suisse - Écosse le lundi 16 novembre à 20h45'],
+        'ldn' => ['Groupe E', '/ligue-des-nations-groupe-e.php', 'Suisse, Slovénie, Écosse, Macédoine du Nord', "3e avec 7 points, après une lourde défaite 0-4 contre la Suisse le 16 novembre (dernière journée)", 'phase de groupes terminée'],
     ],
     [
         'id' => 'pays-de-galles', 'nom' => 'Pays de Galles',

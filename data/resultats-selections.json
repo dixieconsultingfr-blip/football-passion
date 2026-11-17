@@ -462,5 +462,85 @@
   "exterieur": "Angleterre",
   "score_dom": 2,
   "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Kazakhstan",
+  "exterieur": "Slovaquie",
+  "score_dom": 2,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Îles Féroé",
+  "exterieur": "Moldavie",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Estonie",
+  "exterieur": "Bulgarie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Lituanie",
+  "exterieur": "Liechtenstein",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Islande",
+  "exterieur": "Luxembourg",
+  "score_dom": 3,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Allemagne",
+  "exterieur": "Pays-Bas",
+  "score_dom": 5,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Gibraltar",
+  "exterieur": "Malte",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Suisse",
+  "exterieur": "Écosse",
+  "score_dom": 4,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Macédoine du Nord",
+  "exterieur": "Slovénie",
+  "score_dom": 0,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Grèce",
+  "exterieur": "Serbie",
+  "score_dom": 1,
+  "score_ext": 0
  }
 ]

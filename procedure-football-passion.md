@@ -1019,4 +1019,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **17 novembre 2026, article id 105 Angleterre - Espagne 3-2** : texte reformulé à partir d'un article fourni par l'utilisateur ; non repris car non vérifiés : lieu du match (Madrid), minute du but contre son camp (49e dans le texte, 47e dans notre compte rendu), qualification des Anglais pour les quarts, hypothèse d'un quart France - Espagne ; groupe nommé « C » comme sur le site (« A3 » dans la source). Titre court « Angleterre 3-2 Espagne : le choc du groupe C », vignette JPG générée, forme « Angleterre vs Espagne » en H2/meta/alt.
 
-*Dernière mise à jour : 17 novembre 2026*
+- **18 novembre 2026, fin de la phase de groupes de la Ligue des Nations (journée 6 du 17 novembre)** : 8 scores ajoutés à `data/resultats-selections.json` ; classements finaux des groupes D, F, G, H (groupe D : Norvège devant le Danemark à égalité de points grâce aux deux confrontations directes gagnées, 3-2 le 24/09 et 3-2 le 17/11) ; pages `euro-2028-portugal.php` (retard rattrapé : 1-4 contre le Danemark le 14/11, 3-2 au pays de Galles, 15 pts) et `euro-2028-pays-hotes.php` (pays de Galles, Irlande) ; article id 106 (`titre_court` « J6 : Galles 2-3 Portugal, Danemark 2-3 Norvège », vignette JPG, forme « Pays de Galles vs Portugal ») ; note de mise à jour sur l'article 104 ; liens du hub mis à jour. Tous les groupes de la Ligue des Nations sont terminés.
+
+*Dernière mise à jour : 18 novembre 2026*

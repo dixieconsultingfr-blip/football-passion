@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-11'; // à mettre à jour après chaque match du Portugal, tirage et qualification — signal E-E-A-T
+$date_maj_page = '2026-11-18'; // à mettre à jour après chaque match du Portugal, tirage et qualification — signal E-E-A-T
 
 $articlesAll = load_articles_index(__DIR__);
 $articlesPortugal = array_values(array_filter($articlesAll, fn($a) => in_array('Portugal', $a['etiquettes'] ?? [], true)));
@@ -12,10 +12,10 @@ $og_image   = '/images/stades/euro-2028-wembley-stadium.jpg';
 include __DIR__ . '/templates/header.php';
 
 $classementD = [
-    ['Portugal', 12],
-    ['Danemark', 6],
+    ['Portugal', 15],
+    ['Norvège', 9],
+    ['Danemark', 9],
     ['Pays de Galles', 3],
-    ['Norvège', 3],
 ];
 ?>
 
@@ -64,7 +64,7 @@ $classementD = [
       "name": "Quand joue le Portugal en Ligue des nations ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le Portugal reçoit le Danemark le samedi 14 novembre 2026 à 20h45, puis se déplace au pays de Galles, à Cardiff, le mardi 17 novembre à 20h45, pour les deux dernières journées du groupe D."
+        "text": "Le Portugal a perdu 1-4 contre le Danemark le samedi 14 novembre 2026, puis a gagné 3-2 au pays de Galles, à Cardiff, le mardi 17 novembre, pour terminer premier du groupe D avec 15 points."
       }
     },
     {
@@ -116,8 +116,8 @@ $classementD = [
         <div class="text-gray-400 text-xs mt-1">Ligues des nations<br>2019 · 2025</div>
     </div>
     <div class="bg-gray-800 border border-gray-700 rounded-xl p-4 text-center">
-        <div class="text-2xl font-bold text-white">12</div>
-        <div class="text-gray-400 text-xs mt-1">points en 4 matchs<br>groupe D</div>
+        <div class="text-2xl font-bold text-white">15</div>
+        <div class="text-gray-400 text-xs mt-1">points en 6 matchs<br>groupe D</div>
     </div>
     <div class="bg-gray-800 border border-green-800/40 rounded-xl p-4 text-center">
         <div class="text-2xl font-bold text-green-400">5e</div>
@@ -138,7 +138,7 @@ $classementD = [
             </p>
             <p>
                 Au Mondial 2026, le Portugal a été éliminé en huitièmes de finale par l'Espagne (1-0). En Ligue des Nations,
-                il reste sur quatre victoires en quatre matchs dans le groupe D.
+                il a terminé premier du groupe D avec cinq victoires et une défaite.
             </p>
         </div>
     </section>
@@ -165,25 +165,25 @@ $classementD = [
 <section id="ligue-des-nations" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-2">Le Portugal en Ligue des Nations 2026-2027 (groupe D)</h2>
     <p class="text-gray-300 text-sm leading-relaxed mb-4">
-        Le Portugal est en tête du groupe D avec quatre victoires en quatre matchs, dont un 2-1 contre la Norvège le 4 octobre.
-        Il joue ses deux derniers matchs de la phase de groupes à domicile contre le Danemark, puis au pays de Galles, à Cardiff,
+        Le Portugal termine premier du groupe D avec 15 points, cinq victoires et une défaite, dont un 2-1 contre la Norvège le 4 octobre.
+        Il a perdu 1-4 contre le Danemark le 14 novembre, puis a gagné 3-2 au pays de Galles, à Cardiff,
         ville du match d'ouverture de l'<a href="/euro-2028.php#stades" class="text-green-400 underline hover:text-green-300">Euro 2028</a>.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
         <div class="bg-gray-800 border border-green-800/60 rounded-xl p-5">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Samedi 14 novembre, 20h45</p>
-            <p class="text-white font-bold text-lg">Portugal - Danemark</p>
+            <p class="text-white font-bold text-lg">Portugal 1-4 Danemark</p>
             <p class="text-gray-400 text-sm mt-1">5e journée du groupe D, à Braga. Premier match du Portugal depuis la retraite de Ronaldo.</p>
         </div>
         <div class="bg-gray-800 border border-green-800/60 rounded-xl p-5">
             <p class="text-green-400 text-xs font-semibold uppercase tracking-wider mb-2">Mardi 17 novembre, 20h45</p>
-            <p class="text-white font-bold text-lg">Pays de Galles - Portugal</p>
+            <p class="text-white font-bold text-lg">Pays de Galles 2-3 Portugal</p>
             <p class="text-gray-400 text-sm mt-1">6e et dernière journée du groupe D, à Cardiff.</p>
         </div>
     </div>
     <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-x-auto">
         <table class="w-full text-sm">
-            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Ligue des Nations 2026-2027, groupe D : classement après la journée 4 sur 6</caption>
+            <caption class="text-left text-gray-400 text-xs px-4 pt-3 pb-1">Ligue des Nations 2026-2027, groupe D : classement final après la journée 6 sur 6</caption>
             <thead>
                 <tr class="text-gray-500 uppercase text-xs border-b border-gray-700">
                     <th class="text-left px-4 py-2 font-semibold">Rang</th>
@@ -277,7 +277,7 @@ $classementD = [
                 Quand joue le Portugal en Ligue des nations ?
                 <span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span>
             </summary>
-            <p class="text-gray-400 text-sm leading-relaxed mt-3">Le Portugal reçoit le Danemark le samedi 14 novembre 2026 à 20h45, puis se déplace au pays de Galles, à Cardiff, le mardi 17 novembre à 20h45, pour les deux dernières journées du groupe D.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">Le Portugal a perdu 1-4 contre le Danemark le samedi 14 novembre 2026, puis a gagné 3-2 au pays de Galles, à Cardiff, le mardi 17 novembre, pour terminer premier du groupe D avec 15 points.</p>
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">

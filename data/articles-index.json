@@ -1,5 +1,20 @@
 [
     {
+        "id": 106,
+        "slug": "ligue-des-nations-2026-2027-resultats-journee-6-mardi-17-novembre",
+        "titre": "Ligue des Nations, dernière journée : le Portugal gagne 3-2 au pays de Galles, la Norvège bat le Danemark 3-2 (résultats du 17 novembre)",
+        "categorie": "Euro",
+        "etiquettes": [
+            "Ligue des nations",
+            "Euro 2028"
+        ],
+        "date": "2026-11-18",
+        "extrait": "Pays de Galles 2-3 Portugal, Danemark 2-3 Norvège, Irlande 3-0 Kosovo : les huit derniers résultats de la phase de groupes de la Ligue des Nations du mardi 17 novembre 2026 et les classements finaux des groupes D, F, G et H.",
+        "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-mardi-17-novembre.jpg",
+        "image_alt": "Ligue des Nations journee 6, resultats du 17 novembre 2026 : Pays de Galles 2-3 Portugal, Danemark 2-3 Norvege, Hongrie 1-1 Irlande du Nord, Irlande 3-0 Kosovo",
+        "titre_court": "J6 : Galles 2-3 Portugal, Danemark 2-3 Norvège"
+    },
+    {
         "id": 105,
         "slug": "angleterre-espagne-3-2-ligue-des-nations-groupe-c-15-novembre",
         "titre": "Angleterre - Espagne 3-2 : les Three Lions prennent la tête du groupe C de la Ligue des Nations",
@@ -28,7 +43,7 @@
         "vignette": "/images/ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre.jpg",
         "image_alt": "Ligue des Nations journee 6, resultats du 16 novembre 2026 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Ecosse, Islande 3-0 Luxembourg, Grece 1-0 Serbie",
         "titre_court": "J6 : Allemagne 5-0 Pays-Bas, Suisse 4-0 Écosse",
-        "date_maj": "2026-11-17"
+        "date_maj": "2026-11-18"
     },
     {
         "id": 103,

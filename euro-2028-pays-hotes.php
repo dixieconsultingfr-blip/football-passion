@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-16'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
+$date_maj_page = '2026-11-18'; // à mettre à jour après chaque match des hôtes en Ligue des nations, au tirage du 6 décembre 2026 et à chaque qualification
 
 $articlesAll = load_articles_index(__DIR__);
 $articlesEuro = array_values(array_filter($articlesAll, fn($a) => ($a['categorie'] ?? '') === 'Euro'));
@@ -42,7 +42,7 @@ $nations = [
         'stades' => [
             ['Principality Stadium', 'principality-stadium', 'Cardiff', '73 952', "Match d'ouverture (9 juin), groupes, huitième de finale et quart de finale"],
         ],
-        'ldn' => ['Groupe D', '/ligue-des-nations-groupe-d.php', 'Portugal, Norvège, Danemark, Pays de Galles', "3e avec 3 points, à égalité avec la Norvège, après une défaite 0-1 contre le Danemark le 4 octobre", 'Norvège - Pays de Galles le samedi 14 novembre à 18h00, puis Pays de Galles - Portugal le mardi 17 novembre à 20h45, à Cardiff'],
+        'ldn' => ['Groupe D', '/ligue-des-nations-groupe-d.php', 'Portugal, Norvège, Danemark, Pays de Galles', "dernier avec 3 points, après une défaite 2-3 contre le Portugal à Cardiff le 17 novembre (dernière journée)", 'phase de groupes terminée'],
     ],
     [
         'id' => 'irlande', 'nom' => 'Irlande',
@@ -50,7 +50,7 @@ $nations = [
         'stades' => [
             ['Aviva Stadium (« Dublin Arena »)', 'aviva-stadium', 'Dublin', '51 711', 'Groupes, huitième de finale et quart de finale'],
         ],
-        'ldn' => ['Groupe G', '/ligue-des-nations-groupe-g.php', 'Autriche, Kosovo, Irlande, Israël', "3e avec 5 points, à égalité avec le Kosovo, après un 1-1 contre Israël le 4 octobre", 'Autriche - Irlande le samedi 14 novembre à 20h45, puis Irlande - Kosovo le mardi 17 novembre à 20h45'],
+        'ldn' => ['Groupe G', '/ligue-des-nations-groupe-g.php', 'Autriche, Kosovo, Irlande, Israël', "2e avec 8 points, après une victoire 3-0 contre le Kosovo le 17 novembre (dernière journée)", 'phase de groupes terminée'],
     ],
 ];
 ?>

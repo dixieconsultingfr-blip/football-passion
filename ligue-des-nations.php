@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-16'; // page evergreen : à mettre à jour à chaque nouvelle édition, vainqueur ou changement de format
+$date_maj_page = '2026-11-18'; // page evergreen : à mettre à jour à chaque nouvelle édition, vainqueur ou changement de format
 
 $articlesAll = load_articles_index(__DIR__);
 $articlesLdn = array_values(array_filter($articlesAll, fn($a) => in_array('Ligue des nations', $a['etiquettes'] ?? [], true)));
@@ -113,9 +113,9 @@ $palmares = [
         <span class="text-green-400 text-xs font-semibold mt-3 inline-block">Voir l'édition 2026-2027 →</span>
     </a>
     <p class="text-gray-300 text-sm leading-relaxed">
-        Derniers articles : <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre" <?= $lk ?>>les résultats de la journée 6 du 16 novembre</a>,
-        <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" <?= $lk ?>>ceux du 15 novembre</a> et
-        <a href="/blog/ligue-des-nations-2026-2027-programme-journees-5-et-6" <?= $lk ?>>le programme des journées 5 et 6</a>.
+        Derniers articles : <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-mardi-17-novembre" <?= $lk ?>>les derniers résultats du 17 novembre</a>,
+        <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-lundi-16-novembre" <?= $lk ?>>ceux du 16 novembre</a> et
+        <a href="/blog/ligue-des-nations-2026-2027-resultats-journee-6-dimanche-15-novembre" <?= $lk ?>>du 15 novembre</a>.
     </p>
 </section>
 

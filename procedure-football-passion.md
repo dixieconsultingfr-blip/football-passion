@@ -1029,4 +1029,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **18 novembre 2026, article id 107** : vignette fournie par l'utilisateur (« can qualifie.png ») convertie en WebP 1200 × 675 (`can-2027-qualifies-apres-journee-4.webp`), ancienne vignette JPG supprimée.
 
+- **18 novembre 2026, article id 106** : reel Facebook 1133594452803271 intégré sous l'introduction (iframe + lien nofollow vers la page Facebook).
+
 *Dernière mise à jour : 18 novembre 2026*

@@ -1027,4 +1027,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **18 novembre 2026, article id 107 CAN 2027 : les six qualifiés** : texte reformulé à partir de L'Équipe (fourni par l'utilisateur) : Maroc, Sénégal, Cameroun, Mali, Bénin, Burkina Faso qualifiés après la journée 4, plus les trois pays hôtes ; groupes D, H, L (une seule place) ; 4 éliminés (Soudan du Sud, Somalie, Érythrée, Madagascar) selon L'Équipe ; lieu du match Niger - Maroc non repris (non fourni). Vignette JPG générée, lien source nofollow. `can-2027.php` mis à jour (9 qualifiés, 15 places restantes). Les confirmations de qualification annoncées plus tôt comme non vérifiées sont désormais couvertes par cette source.
 
+- **18 novembre 2026, article id 107** : vignette fournie par l'utilisateur (« can qualifie.png ») convertie en WebP 1200 × 675 (`can-2027-qualifies-apres-journee-4.webp`), ancienne vignette JPG supprimée.
+
 *Dernière mise à jour : 18 novembre 2026*

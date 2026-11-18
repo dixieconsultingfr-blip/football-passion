@@ -1023,4 +1023,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **18 novembre 2026, article id 106** : vignette fournie par l'utilisateur (« ldn j6.png », Téléchargements) convertie en WebP 1200 × 675 (`ligue-des-nations-j6-resultats-marquants-15-17-novembre-2026.webp`, 201 Ko), l'ancienne vignette JPG supprimée ; section « Les résultats marquants du 15 au 17 novembre » (6 matchs) ajoutée ; texte du post Facebook fourni non repris tel quel (« qualification arrachée dans les derniers instants » non vérifié).
 
+- **18 novembre 2026, CAN 2027 journée 4 (16 et 17 novembre)** : 24 scores ajoutés à `data/resultats-selections.json`, `can-2027.php` (classements, calendriers, textes « après la journée 4 ») et `droits-tv-can-2027.php`. Le texte collé (attribué à RFI, sans lien) ne comptait que 20 matchs et mélangeait les jours ; scores recoupés avec le tableau complet d'Afrik-Foot (cohérent avec les classements de la journée 3 de la page) et, pour Togo 3-0 Algérie et Soudan 2-4 Sénégal, avec plusieurs médias. Réserve : Éthiopie - Mozambique, noté 0-1 (victoire du Mozambique) d'après Afrik-Foot, alors que le texte collé l'inversait ; non confirmé par une seconde source. Aucune qualification annoncée (non vérifiée).
+
 *Dernière mise à jour : 18 novembre 2026*

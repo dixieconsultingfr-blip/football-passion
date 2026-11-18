@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/blog/helpers.php';
-$date_maj_page = '2026-11-15'; // à mettre à jour quand beIN Sports publie les chaînes de la journée 4 et des journées 5 et 6
+$date_maj_page = '2026-11-18'; // à mettre à jour quand beIN Sports publie les chaînes de la journée 4 et des journées 5 et 6
 
 $page_title = 'CAN 2027 à la TV : où voir les qualifications, chaînes et horaires';
 $meta_desc  = "Où voir les éliminatoires de la CAN 2027 à la télévision : programme des journées 3 et 4 avec date, heure française et chaîne beIN SPORTS pour chaque match.";
@@ -32,30 +32,30 @@ $matchs = [
     ['J3', 'Sam. 14 novembre 2026', '17h', 'H', 'Ouganda - Botswana', '', '1-1'],
     ['J3', 'Sam. 14 novembre 2026', '20h', 'B', 'Angola - Soudan du Sud', '', '2-0'],
     ['J3', 'Sam. 14 novembre 2026', '20h', 'I', 'Algérie - Togo', 'beIN SPORTS 1', '1-0'],
-    ['J4', 'Lun. 16 novembre 2026', '14h', 'E', 'Zimbabwe - Guinée équatoriale', '', ''],
-    ['J4', 'Lun. 16 novembre 2026', '14h', 'G', 'Namibie - Cameroun', '', ''],
-    ['J4', 'Lun. 16 novembre 2026', '14h', 'J', 'Soudan - Sénégal', '', ''],
-    ['J4', 'Lun. 16 novembre 2026', '16h', 'C', 'Somalie - Ghana', '', ''],
-    ['J4', 'Lun. 16 novembre 2026', '17h', 'D', 'Érythrée - Guinée', '', ''],
-    ['J4', 'Lun. 16 novembre 2026', '17h', 'F', 'Centrafrique - Bénin', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'A', 'Lesotho - Gabon', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'B', 'Malawi - Égypte', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'B', 'Soudan du Sud - Angola', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'I', 'Burundi - Zambie', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'J', 'Éthiopie - Mozambique', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '14h', 'L', 'Tanzanie - Nigeria', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'C', 'Gambie - Côte d\'Ivoire', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'E', 'Sierra Leone - RD Congo', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'I', 'Togo - Algérie', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'H', 'Libye - Tunisie', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'L', 'Guinée-Bissau - Madagascar', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '17h', 'D', 'Kenya - Afrique du Sud', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '20h', 'F', 'Mauritanie - Burkina Faso', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '20h', 'G', 'Congo - Comores', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '20h', 'H', 'Botswana - Ouganda', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '20h', 'K', 'Rwanda - Mali', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '20h', 'K', 'Liberia - Cap-Vert', '', ''],
-    ['J4', 'Mar. 17 novembre 2026', '21h', 'A', 'Niger - Maroc', '', ''],
+    ['J4', 'Lun. 16 novembre 2026', '14h', 'E', 'Zimbabwe - Guinée équatoriale', '', '3-0'],
+    ['J4', 'Lun. 16 novembre 2026', '14h', 'G', 'Namibie - Cameroun', '', '0-3'],
+    ['J4', 'Lun. 16 novembre 2026', '14h', 'J', 'Soudan - Sénégal', '', '2-4'],
+    ['J4', 'Lun. 16 novembre 2026', '16h', 'C', 'Somalie - Ghana', '', '0-1'],
+    ['J4', 'Lun. 16 novembre 2026', '17h', 'D', 'Érythrée - Guinée', '', '1-3'],
+    ['J4', 'Lun. 16 novembre 2026', '17h', 'F', 'Centrafrique - Bénin', '', '0-1'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'A', 'Lesotho - Gabon', '', '2-1'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'B', 'Malawi - Égypte', '', '0-0'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'B', 'Soudan du Sud - Angola', '', '0-1'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'I', 'Burundi - Zambie', '', '1-1'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'J', 'Éthiopie - Mozambique', '', '0-1'],
+    ['J4', 'Mar. 17 novembre 2026', '14h', 'L', 'Tanzanie - Nigeria', '', '0-0'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'C', 'Gambie - Côte d\'Ivoire', '', '2-2'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'E', 'Sierra Leone - RD Congo', '', '1-1'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'I', 'Togo - Algérie', '', '3-0'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'H', 'Libye - Tunisie', '', '1-1'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'L', 'Guinée-Bissau - Madagascar', '', '2-0'],
+    ['J4', 'Mar. 17 novembre 2026', '17h', 'D', 'Kenya - Afrique du Sud', '', '1-2'],
+    ['J4', 'Mar. 17 novembre 2026', '20h', 'F', 'Mauritanie - Burkina Faso', '', '1-3'],
+    ['J4', 'Mar. 17 novembre 2026', '20h', 'G', 'Congo - Comores', '', '0-1'],
+    ['J4', 'Mar. 17 novembre 2026', '20h', 'H', 'Botswana - Ouganda', '', '1-1'],
+    ['J4', 'Mar. 17 novembre 2026', '20h', 'K', 'Rwanda - Mali', '', '0-2'],
+    ['J4', 'Mar. 17 novembre 2026', '20h', 'K', 'Liberia - Cap-Vert', '', '2-0'],
+    ['J4', 'Mar. 17 novembre 2026', '21h', 'A', 'Niger - Maroc', '', '0-1'],
 ];
 
 $anciens = [

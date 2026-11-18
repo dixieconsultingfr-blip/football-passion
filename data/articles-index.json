@@ -1,5 +1,20 @@
 [
     {
+        "id": 107,
+        "slug": "can-2027-equipes-qualifiees-apres-4e-journee",
+        "titre": "CAN 2027 : Maroc, Sénégal, Cameroun... les six équipes déjà qualifiées, avec les trois pays hôtes",
+        "categorie": "CAN",
+        "etiquettes": [
+            "CAN 2027",
+            "Éliminatoires"
+        ],
+        "date": "2026-11-18",
+        "extrait": "Après la 4e journée des éliminatoires de la CAN 2027, six sélections sont déjà qualifiées : Maroc, Sénégal, Cameroun, Mali, Bénin et Burkina Faso. Avec les trois pays hôtes, il reste 15 places à prendre en mars 2027.",
+        "vignette": "/images/can-2027-equipes-qualifiees-apres-4e-journee.jpg",
+        "image_alt": "CAN 2027, les qualifiés après la journée 4 des éliminatoires : Maroc, Sénégal, Cameroun, Mali, Bénin, Burkina Faso, plus Kenya, Tanzanie, Ouganda",
+        "titre_court": "CAN 2027 : 6 qualifiés et les 3 pays hôtes"
+    },
+    {
         "id": 106,
         "slug": "ligue-des-nations-2026-2027-resultats-journee-6-mardi-17-novembre",
         "titre": "Ligue des Nations, dernière journée : le Portugal gagne 3-2 au pays de Galles, la Norvège bat le Danemark 3-2 (résultats du 17 novembre)",

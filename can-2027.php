@@ -277,7 +277,7 @@ $calendriers = [
       "name": "Qui est qualifié pour la CAN 2027 ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "À ce jour, seuls les trois pays hôtes sont qualifiés d'office : le Kenya, la Tanzanie et l'Ouganda. Les autres places se jouent dans les éliminatoires jusqu'en mars 2027."
+        "text": "À ce jour, neuf équipes sont qualifiées : les trois pays hôtes d'office (Kenya, Tanzanie, Ouganda) et, après la 4e journée, le Maroc, le Sénégal, le Cameroun, le Mali, le Bénin et le Burkina Faso. Les 15 autres places se jouent jusqu'en mars 2027."
       }
     },
     {
@@ -329,7 +329,7 @@ include __DIR__ . '/templates/ticker-resultats.php';
         <div><dt class="text-green-400 font-semibold">Quand ?</dt><dd class="text-gray-300">Du 19 juin au 17 juillet 2027 (dates officielles CAF)</dd></div>
         <div><dt class="text-green-400 font-semibold">Où ?</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, une première en trois pays</dd></div>
         <div><dt class="text-green-400 font-semibold">Format</dt><dd class="text-gray-300">24 équipes, 52 matchs</dd></div>
-        <div><dt class="text-green-400 font-semibold">Qualifiés à ce jour</dt><dd class="text-gray-300">Kenya, Tanzanie et Ouganda, d'office comme pays hôtes</dd></div>
+        <div><dt class="text-green-400 font-semibold">Qualifiés à ce jour</dt><dd class="text-gray-300">9 équipes : Kenya, Tanzanie et Ouganda (pays hôtes), Maroc, Sénégal, Cameroun, Mali, Bénin et Burkina Faso</dd></div>
         <div><dt class="text-green-400 font-semibold">Éliminatoires</dt><dd class="text-gray-300">12 groupes de 4 équipes (A à L), 6 journées, de septembre 2026 à mars 2027</dd></div>
         <div><dt class="text-green-400 font-semibold">Prochaines journées</dt><dd class="text-gray-300">Journées 5 et 6 les 24 et 28 mars 2027 (journée 4 jouée les 16 et 17 novembre 2026)</dd></div>
     </dl>
@@ -347,7 +347,7 @@ include __DIR__ . '/templates/ticker-resultats.php';
 <section id="qualification" style="scroll-margin-top:5rem" class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-4">Qui est qualifié pour la CAN 2027 ? Comment se qualifier ?</h2>
     <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-sm text-gray-300 leading-relaxed space-y-3">
-        <p><strong class="text-white">À ce jour, seuls les trois pays hôtes sont qualifiés :</strong> le Kenya, la Tanzanie et l'Ouganda, d'office. Les 21 autres places se jouent dans les éliminatoires.</p>
+        <p><strong class="text-white">À ce jour, neuf équipes sont qualifiées :</strong> les trois pays hôtes d'office (Kenya, Tanzanie, Ouganda) et, depuis la 4e journée, le <strong class="text-white">Maroc, le Sénégal, le Cameroun, le Mali, le Bénin et le Burkina Faso</strong> (<a href="/blog/can-2027-equipes-qualifiees-apres-4e-journee" <?= $lk ?>>voir l'article</a>). Les 15 autres places se jouent dans les éliminatoires jusqu'en mars 2027.</p>
         <p><strong class="text-white">Les règles, d'après Le360 Afrique :</strong> dans les groupes sans pays hôte, les deux premiers se qualifient. Dans les trois groupes qui comptent un pays hôte (<a href="#groupe-d" <?= $lk ?>>groupe D</a> avec le Kenya, <a href="#groupe-h" <?= $lk ?>>groupe H</a> avec l'Ouganda et <a href="#groupe-l" <?= $lk ?>>groupe L</a> avec la Tanzanie), une seule équipe se qualifie en plus de l'hôte. Le compte est cohérent : 9 groupes à deux qualifiés, 3 groupes à un qualifié et 3 hôtes font bien 24 équipes.</p>
         <p><strong class="text-white">Le calendrier :</strong> la journée 4 s'est jouée les 16 et 17 novembre 2026, les journées 5 et 6 se jouent les 24 et 28 mars 2027, avant la phase finale du 19 juin au 17 juillet 2027 (52 matchs, 24 équipes). Le nom de la compétition, « Pamoja », signifie « ensemble » en swahili. Les stades et les dates précises des matchs de la phase finale ne sont pas encore confirmés : nous les ajouterons dès l'annonce de la CAF.</p>
     </div>
@@ -446,7 +446,7 @@ include __DIR__ . '/templates/ticker-resultats.php';
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Qui est qualifié pour la CAN 2027 ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>
-            <p class="text-gray-400 text-sm leading-relaxed mt-3">À ce jour, seuls les trois pays hôtes sont qualifiés d'office : le Kenya, la Tanzanie et l'Ouganda. Les autres places se jouent dans les éliminatoires jusqu'en mars 2027.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mt-3">À ce jour, neuf équipes sont qualifiées : les trois pays hôtes d'office (Kenya, Tanzanie, Ouganda) et, après la 4e journée, le Maroc, le Sénégal, le Cameroun, le Mali, le Bénin et le Burkina Faso. Les 15 autres places se jouent jusqu'en mars 2027.</p>
         </details>
         <details class="group bg-gray-800 border border-gray-700 rounded-xl p-5 open:border-green-700">
             <summary class="text-white font-semibold cursor-pointer list-none flex justify-between items-center gap-4">Combien d'équipes se qualifient par groupe ?<span class="text-green-400 shrink-0 group-open:rotate-45 transition-transform">＋</span></summary>

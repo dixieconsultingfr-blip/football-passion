@@ -1,0 +1,802 @@
+[
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Gabon",
+  "exterieur": "Lesotho",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Maroc",
+  "exterieur": "Niger",
+  "score_dom": 5,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Égypte",
+  "exterieur": "Malawi",
+  "score_dom": 5,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-14",
+  "domicile": "Angola",
+  "exterieur": "Soudan du Sud",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Ghana",
+  "exterieur": "Somalie",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Côte d'Ivoire",
+  "exterieur": "Gambie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Guinée",
+  "exterieur": "Érythrée",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Afrique du Sud",
+  "exterieur": "Kenya",
+  "score_dom": 2,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "RD Congo",
+  "exterieur": "Sierra Leone",
+  "score_dom": 3,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Guinée équatoriale",
+  "exterieur": "Zimbabwe",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Bénin",
+  "exterieur": "Centrafrique",
+  "score_dom": 4,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Burkina Faso",
+  "exterieur": "Mauritanie",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Cameroun",
+  "exterieur": "Namibie",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Comores",
+  "exterieur": "Congo",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Tunisie",
+  "exterieur": "Libye",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-14",
+  "domicile": "Ouganda",
+  "exterieur": "Botswana",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Zambie",
+  "exterieur": "Burundi",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-14",
+  "domicile": "Algérie",
+  "exterieur": "Togo",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Sénégal",
+  "exterieur": "Soudan",
+  "score_dom": 4,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Mozambique",
+  "exterieur": "Éthiopie",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Cap-Vert",
+  "exterieur": "Liberia",
+  "score_dom": 4,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Mali",
+  "exterieur": "Rwanda",
+  "score_dom": 3,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-12",
+  "domicile": "Madagascar",
+  "exterieur": "Guinée-Bissau",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-13",
+  "domicile": "Nigeria",
+  "exterieur": "Tanzanie",
+  "score_dom": 3,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Irlande du Nord",
+  "exterieur": "Ukraine",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Géorgie",
+  "exterieur": "Hongrie",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Portugal",
+  "exterieur": "Danemark",
+  "score_dom": 1,
+  "score_ext": 4
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Norvège",
+  "exterieur": "Pays de Galles",
+  "score_dom": 3,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Suède",
+  "exterieur": "Bosnie-Herzégovine",
+  "score_dom": 3,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Roumanie",
+  "exterieur": "Pologne",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Autriche",
+  "exterieur": "Irlande",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-14",
+  "domicile": "Kosovo",
+  "exterieur": "Israël",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Pays-Bas",
+  "exterieur": "Grèce",
+  "score_dom": 7,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Serbie",
+  "exterieur": "Allemagne",
+  "score_dom": 1,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Slovénie",
+  "exterieur": "Suisse",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Écosse",
+  "exterieur": "Macédoine du Nord",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Moldavie",
+  "exterieur": "Kazakhstan",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Slovaquie",
+  "exterieur": "Îles Féroé",
+  "score_dom": 2,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Luxembourg",
+  "exterieur": "Estonie",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Bulgarie",
+  "exterieur": "Islande",
+  "score_dom": 0,
+  "score_ext": 5
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Andorre",
+  "exterieur": "Gibraltar",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-13",
+  "domicile": "Liechtenstein",
+  "exterieur": "Azerbaïdjan",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Turquie",
+  "exterieur": "Belgique",
+  "score_dom": 1,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Italie",
+  "exterieur": "France",
+  "score_dom": 3,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Arménie",
+  "exterieur": "Chypre",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Tchéquie",
+  "exterieur": "Espagne",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Albanie",
+  "exterieur": "Finlande",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Saint-Marin",
+  "exterieur": "Biélorussie",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Angleterre",
+  "exterieur": "Croatie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-12",
+  "domicile": "Monténégro",
+  "exterieur": "Lettonie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Lettonie",
+  "exterieur": "Arménie",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Chypre",
+  "exterieur": "Monténégro",
+  "score_dom": 1,
+  "score_ext": 4
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Finlande",
+  "exterieur": "Saint-Marin",
+  "score_dom": 7,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Biélorussie",
+  "exterieur": "Albanie",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "France",
+  "exterieur": "Turquie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Belgique",
+  "exterieur": "Italie",
+  "score_dom": 4,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Croatie",
+  "exterieur": "Tchéquie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-15",
+  "domicile": "Espagne",
+  "exterieur": "Angleterre",
+  "score_dom": 2,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Kazakhstan",
+  "exterieur": "Slovaquie",
+  "score_dom": 2,
+  "score_ext": 2
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Îles Féroé",
+  "exterieur": "Moldavie",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Estonie",
+  "exterieur": "Bulgarie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Lituanie",
+  "exterieur": "Liechtenstein",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Islande",
+  "exterieur": "Luxembourg",
+  "score_dom": 3,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Allemagne",
+  "exterieur": "Pays-Bas",
+  "score_dom": 5,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Gibraltar",
+  "exterieur": "Malte",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Suisse",
+  "exterieur": "Écosse",
+  "score_dom": 4,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Macédoine du Nord",
+  "exterieur": "Slovénie",
+  "score_dom": 0,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-16",
+  "domicile": "Grèce",
+  "exterieur": "Serbie",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Danemark",
+  "exterieur": "Norvège",
+  "score_dom": 2,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Bosnie-Herzégovine",
+  "exterieur": "Roumanie",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Pays de Galles",
+  "exterieur": "Portugal",
+  "score_dom": 2,
+  "score_ext": 3
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Irlande",
+  "exterieur": "Kosovo",
+  "score_dom": 3,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Ukraine",
+  "exterieur": "Géorgie",
+  "score_dom": 1,
+  "score_ext": 0
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Hongrie",
+  "exterieur": "Irlande du Nord",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Pologne",
+  "exterieur": "Suède",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "LDN",
+  "date": "2026-11-17",
+  "domicile": "Israël",
+  "exterieur": "Autriche",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Lesotho",
+  "exterieur": "Gabon",
+  "score_dom": 2,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Niger",
+  "exterieur": "Maroc",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Malawi",
+  "exterieur": "Égypte",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Soudan du Sud",
+  "exterieur": "Angola",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Somalie",
+  "exterieur": "Ghana",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Gambie",
+  "exterieur": "Côte d'Ivoire",
+  "score_dom": 2,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Érythrée",
+  "exterieur": "Guinée",
+  "score_dom": 1,
+  "score_ext": 3
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Kenya",
+  "exterieur": "Afrique du Sud",
+  "score_dom": 1,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Zimbabwe",
+  "exterieur": "Guinée équatoriale",
+  "score_dom": 3,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Sierra Leone",
+  "exterieur": "RD Congo",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Centrafrique",
+  "exterieur": "Bénin",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Mauritanie",
+  "exterieur": "Burkina Faso",
+  "score_dom": 1,
+  "score_ext": 3
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Namibie",
+  "exterieur": "Cameroun",
+  "score_dom": 0,
+  "score_ext": 3
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Congo",
+  "exterieur": "Comores",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Libye",
+  "exterieur": "Tunisie",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Botswana",
+  "exterieur": "Ouganda",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Burundi",
+  "exterieur": "Zambie",
+  "score_dom": 1,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Togo",
+  "exterieur": "Algérie",
+  "score_dom": 3,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-16",
+  "domicile": "Soudan",
+  "exterieur": "Sénégal",
+  "score_dom": 2,
+  "score_ext": 4
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Éthiopie",
+  "exterieur": "Mozambique",
+  "score_dom": 0,
+  "score_ext": 1
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Rwanda",
+  "exterieur": "Mali",
+  "score_dom": 0,
+  "score_ext": 2
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Liberia",
+  "exterieur": "Cap-Vert",
+  "score_dom": 2,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Tanzanie",
+  "exterieur": "Nigeria",
+  "score_dom": 0,
+  "score_ext": 0
+ },
+ {
+  "competition": "CAN",
+  "date": "2026-11-17",
+  "domicile": "Guinée-Bissau",
+  "exterieur": "Madagascar",
+  "score_dom": 2,
+  "score_ext": 0
+ }
+]

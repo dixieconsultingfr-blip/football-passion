@@ -1045,4 +1045,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, portraits Ligue 3 mis à jour après la journée 13** : Aubagne (65), Bastia (79), Caen (81), Versailles (82), Amiens (88) et Rouen (89) : paragraphe « début de saison » réécrit d'après `data/matchs.json` (rang, points, bilan, buts), ligne de la J13 ajoutée en haut du tableau des résultats, captions « journées 1 à 13 », prochain match (J14 des 3 et 5 décembre), avis ajusté (Caen 5e, Versailles 3e, Rouen à quatre points du leader, Amiens dix matchs sans défaite, Aubagne 16e), `date_maj` à 2026-11-23 dans les articles et l'index. Cannes et Valenciennes (109, 110) étaient déjà à jour.
 
+- **23 novembre 2026, portrait d'Aubagne (id 65)** : infos pratiques du marché aux santons et à la céramique 2026 ajoutées, reformulées d'après un texte fourni par l'utilisateur (14 novembre au 27 décembre, 10h-19h, fermé le 25 décembre, horaires adaptés le 24, entrée libre, animaux non admis, chalets d'artisans, crèches de Daniel Scaturro du 21 novembre au 3 janvier 2027) ; l'ancienne mention « 15 novembre au 28 décembre, à confirmer » est remplacée ; liens nofollow vers l'office de tourisme et la région.
+
 *Dernière mise à jour : 23 novembre 2026*

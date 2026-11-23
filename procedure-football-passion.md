@@ -1037,4 +1037,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, article id 108 Ligue 1 journée 11** : scores contrôlés dans `data/matchs.json` (n8n) ; l'utilisateur en avait fourni 8 sur 9 (Troyes 3-1 Le Havre du 20/11 absent du texte, ajouté d'après matchs.json) ; classement calculé par script (points, différence de buts, buts marqués ; vérifié sur la journée 10) ; aucun buteur cité (non fournis) ; reel Facebook 1017131568103364 intégré ; titre court « L1 J11 : le PSG gagne à Nice, Le Mans bat l'OM », vignette JPG générée, forme « Marseille vs Le Mans ».
 
+- **23 novembre 2026, article id 108** : vignette fournie par l'utilisateur (« l1 j11.png », format vertical 941 × 1672) placée sur un fond flouté 1200 × 675, convertie en WebP (`ligue-1-j11-resultats-nice-psg-marseille-le-mans-2026.webp`) ; ancienne vignette JPG supprimée.
+
 *Dernière mise à jour : 23 novembre 2026*

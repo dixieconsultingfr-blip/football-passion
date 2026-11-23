@@ -1,5 +1,20 @@
 [
     {
+        "id": 108,
+        "slug": "ligue-1-journee-11-nice-psg-marseille-le-mans-2026-2027",
+        "titre": "Ligue 1, journée 11 : le PSG gagne à Nice (3-2), Le Mans renverse l'OM (3-2), le Paris FC deuxième",
+        "categorie": "L1",
+        "etiquettes": [
+            "Ligue 1",
+            "OM"
+        ],
+        "date": "2026-11-23",
+        "extrait": "Nice 2-3 PSG, Paris FC 4-0 Angers, Marseille 2-3 Le Mans : les neuf résultats de la 11e journée de Ligue 1 (20 au 22 novembre 2026) et le classement avec le PSG toujours leader.",
+        "vignette": "/images/ligue-1-journee-11-nice-psg-marseille-le-mans-2026-2027.jpg",
+        "image_alt": "Ligue 1 journee 11, resultats du 20 au 22 novembre 2026 : Nice 2-3 PSG, Paris FC 4-0 Angers, Marseille 2-3 Le Mans, Lille 0-1 Lyon",
+        "titre_court": "L1 J11 : le PSG gagne à Nice, Le Mans bat l'OM"
+    },
+    {
         "id": 107,
         "slug": "can-2027-equipes-qualifiees-apres-4e-journee",
         "titre": "CAN 2027 : Maroc, Sénégal, Cameroun... les six équipes déjà qualifiées, avec les trois pays hôtes",

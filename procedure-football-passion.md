@@ -1035,4 +1035,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, Ligue 3 journée 13** : 8 scores ajoutés dans `data/matchs.json` (Amiens 2-1 Caen, Bastia 4-2 Villefranche Beaujolais, La Roche VF 2-1 Concarneau, AS Cannes 0-0 Aubagne, Quevilly 2-0 Valenciennes, Versailles 3-0 Bourg-Peronnas, Fleury 91 1-0 Rouen, Le Puy Foot 43 0-0 Paris 13 Atletico) ; Orleans - Thionville déplacé au 23/11 à 20h45 (« Aujourd'hui » dans la source), score à saisir après le match ; journée 14 ajoutée (9 matchs, 3 et 5 décembre 2026, ids 9000701 à 9000709). Classement calculé automatiquement par `ligue-3.php`.
 
+- **23 novembre 2026, article id 108 Ligue 1 journée 11** : scores contrôlés dans `data/matchs.json` (n8n) ; l'utilisateur en avait fourni 8 sur 9 (Troyes 3-1 Le Havre du 20/11 absent du texte, ajouté d'après matchs.json) ; classement calculé par script (points, différence de buts, buts marqués ; vérifié sur la journée 10) ; aucun buteur cité (non fournis) ; reel Facebook 1017131568103364 intégré ; titre court « L1 J11 : le PSG gagne à Nice, Le Mans bat l'OM », vignette JPG générée, forme « Marseille vs Le Mans ».
+
 *Dernière mise à jour : 23 novembre 2026*

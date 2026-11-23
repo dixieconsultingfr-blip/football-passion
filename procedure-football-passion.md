@@ -1041,4 +1041,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, article id 108** : vignette remplacée par la version 16:9 fournie (« l1 j11 blog.png ») convertie en WebP 1200 × 675 (`ligue-1-j11-blog-resultats-nice-psg-marseille-le-mans.webp`) ; version verticale sur fond flouté supprimée.
 
+- **23 novembre 2026, série Ligue 3 : deux portraits de clubs (ids 109 et 110)** : AS Cannes (`as-cannes-ligue-3-portrait-club-dragons-croisette-2026-2027`) et Valenciennes (`valenciennes-ligue-3-portrait-club-athenes-du-nord-2026-2027`), faits en avance sur le calendrier du `todolist.md`. Faits tirés de Wikipédia (texte brut lu via l'API, passages seulement résumés écartés : site officiel de Cannes, finale 1933 « contre Rouen » en contradiction avec l'article Rouen, etc.), liens nofollow, classement et tableaux calculés depuis `data/matchs.json` (J13 du 21 novembre incluse), résultats du plus récent au plus ancien. Vignettes au modèle fixe « CLUB | LIGUE 3 » **sans logo** : les logos des deux clubs sont des marques déposées non libres (catégorie « Image non libre de logo » sur fr.wikipedia, introuvables sur Commons), donc non téléchargés sans accord de l'utilisateur. Cross-liens entre les deux portraits (Cannes - Valenciennes 2-1 le 31 octobre, barrages de 1993).
+
 *Dernière mise à jour : 23 novembre 2026*

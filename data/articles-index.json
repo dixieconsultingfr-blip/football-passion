@@ -1,5 +1,35 @@
 [
     {
+        "id": 110,
+        "slug": "valenciennes-ligue-3-portrait-club-athenes-du-nord-2026-2027",
+        "titre": "Valenciennes en Ligue 3 : portrait du VAFC, de la Ligue 1 aux saisons difficiles, dans l'Athènes du Nord",
+        "categorie": "L3",
+        "etiquettes": [
+            "Valenciennes FC",
+            "Ligue 3"
+        ],
+        "date": "2026-11-23",
+        "extrait": "Huit saisons en Ligue 1, une demi-finale de Coupe de France en 2024, l'affaire VA-OM et des périodes difficiles : le Valenciennes FC, 15e de la Ligue 3, a une histoire riche. Portrait du VAFC et de l'Athènes du Nord.",
+        "vignette": "/images/valenciennes-ligue-3-portrait-modele.jpg",
+        "image_alt": "Valenciennes FC en Ligue 3, saison 2026-2027 : VAFC, stade du Hainaut, Athenes du Nord, couleurs rouge et blanc",
+        "titre_court": "Valenciennes en Ligue 3 : portrait du VAFC"
+    },
+    {
+        "id": 109,
+        "slug": "as-cannes-ligue-3-portrait-club-dragons-croisette-2026-2027",
+        "titre": "AS Cannes en Ligue 3 : portrait des Dragons, de la Coupe de France 1932 à la remontée depuis la 7e division, dans la ville du Festival",
+        "categorie": "L3",
+        "etiquettes": [
+            "AS Cannes",
+            "Ligue 3"
+        ],
+        "date": "2026-11-23",
+        "extrait": "Fondée en 1902, vainqueur de la Coupe de France en 1932, exclue des compétitions nationales en 2014 puis remontée depuis la 7e division, l'AS Cannes est de retour en Ligue 3. Portrait des Dragons et de leur ville.",
+        "vignette": "/images/as-cannes-ligue-3-portrait-modele.jpg",
+        "image_alt": "AS Cannes en Ligue 3, saison 2026-2027 : Dragons, club fonde en 1902, stade Pierre-de-Coubertin, Croisette et Palais des festivals de Cannes",
+        "titre_court": "AS Cannes en Ligue 3 : portrait des Dragons"
+    },
+    {
         "id": 108,
         "slug": "ligue-1-journee-11-nice-psg-marseille-le-mans-2026-2027",
         "titre": "Ligue 1, journée 11 : le PSG gagne à Nice (3-2), Le Mans renverse l'OM (3-2), le Paris FC deuxième",

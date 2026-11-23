@@ -1033,4 +1033,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, Ligue 2 journée 13** : 7 scores ajoutés dans `data/matchs.json` (Red Star 2-1 Pau FC, Metz 2-1 Boulogne, Guingamp 1-3 Rodez, FC Annecy 4-2 Clermont, Nancy 1-0 Dijon, Laval 1-0 Montpellier, Reims 0-1 Saint-Etienne) ; Nantes - Grenoble déplacé au 23/11 à 20h45 (indiqué « Aujourd'hui » par la source), Sochaux - USL Dunkerque reste au 23/11 à 20h45 (à saisir après le match) ; journée 14 ajoutée (9 matchs, 4 au 7 décembre 2026, ids 9000692 à 9000700). Classement calculé automatiquement par `ligue-2.php`.
 
+- **23 novembre 2026, Ligue 3 journée 13** : 8 scores ajoutés dans `data/matchs.json` (Amiens 2-1 Caen, Bastia 4-2 Villefranche Beaujolais, La Roche VF 2-1 Concarneau, AS Cannes 0-0 Aubagne, Quevilly 2-0 Valenciennes, Versailles 3-0 Bourg-Peronnas, Fleury 91 1-0 Rouen, Le Puy Foot 43 0-0 Paris 13 Atletico) ; Orleans - Thionville déplacé au 23/11 à 20h45 (« Aujourd'hui » dans la source), score à saisir après le match ; journée 14 ajoutée (9 matchs, 3 et 5 décembre 2026, ids 9000701 à 9000709). Classement calculé automatiquement par `ligue-3.php`.
+
 *Dernière mise à jour : 23 novembre 2026*

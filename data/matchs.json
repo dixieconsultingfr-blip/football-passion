@@ -14034,10 +14034,10 @@
         "heure": "20:45",
         "id": 9000674,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 1,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14047,10 +14047,10 @@
         "heure": "14:45",
         "id": 9000675,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 4,
+        "score_ext": 2,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14060,10 +14060,10 @@
         "heure": "14:45",
         "id": 9000676,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 1,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14073,10 +14073,10 @@
         "heure": "14:45",
         "id": 9000677,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 0,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14086,17 +14086,17 @@
         "heure": "14:45",
         "id": 9000678,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
-        "date": "2026-11-21",
+        "date": "2026-11-23",
         "domicile": "Orleans",
         "exterieur": "Thionville",
-        "heure": "14:45",
+        "heure": "20:45",
         "id": 9000679,
         "journee": 13,
         "score_dom": null,
@@ -14112,10 +14112,10 @@
         "heure": "14:45",
         "id": 9000680,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 3,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14125,10 +14125,10 @@
         "heure": "14:45",
         "id": 9000681,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14138,10 +14138,10 @@
         "heure": "14:45",
         "id": 9000682,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 0,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -14371,6 +14371,123 @@
         "exterieur": "Reims",
         "heure": "19:45",
         "id": 9000700,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-03",
+        "domicile": "Caen",
+        "exterieur": "AS Cannes",
+        "heure": "20:45",
+        "id": 9000701,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Paris 13 Atletico",
+        "exterieur": "Versailles",
+        "heure": "14:45",
+        "id": 9000702,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Aubagne",
+        "exterieur": "Orleans",
+        "heure": "14:45",
+        "id": 9000703,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Rouen",
+        "exterieur": "La Roche VF",
+        "heure": "14:45",
+        "id": 9000704,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Bourg-Peronnas",
+        "exterieur": "Amiens",
+        "heure": "14:45",
+        "id": 9000705,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Valenciennes",
+        "exterieur": "Villefranche Beaujolais",
+        "heure": "14:45",
+        "id": 9000706,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Concarneau",
+        "exterieur": "Le Puy Foot 43",
+        "heure": "14:45",
+        "id": 9000707,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Fleury 91",
+        "exterieur": "Bastia",
+        "heure": "14:45",
+        "id": 9000708,
+        "journee": 14,
+        "score_dom": null,
+        "score_ext": null,
+        "stade": "",
+        "status": "SCHEDULED"
+    },
+    {
+        "competition": "L3",
+        "date": "2026-12-05",
+        "domicile": "Thionville",
+        "exterieur": "Quevilly",
+        "heure": "14:45",
+        "id": 9000709,
         "journee": 14,
         "score_dom": null,
         "score_ext": null,

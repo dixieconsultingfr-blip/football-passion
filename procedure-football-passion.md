@@ -1031,4 +1031,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **18 novembre 2026, article id 106** : reel Facebook 1133594452803271 intégré sous l'introduction (iframe + lien nofollow vers la page Facebook).
 
-*Dernière mise à jour : 18 novembre 2026*
+- **23 novembre 2026, Ligue 2 journée 13** : 7 scores ajoutés dans `data/matchs.json` (Red Star 2-1 Pau FC, Metz 2-1 Boulogne, Guingamp 1-3 Rodez, FC Annecy 4-2 Clermont, Nancy 1-0 Dijon, Laval 1-0 Montpellier, Reims 0-1 Saint-Etienne) ; Nantes - Grenoble déplacé au 23/11 à 20h45 (indiqué « Aujourd'hui » par la source), Sochaux - USL Dunkerque reste au 23/11 à 20h45 (à saisir après le match) ; journée 14 ajoutée (9 matchs, 4 au 7 décembre 2026, ids 9000692 à 9000700). Classement calculé automatiquement par `ligue-2.php`.
+
+*Dernière mise à jour : 23 novembre 2026*

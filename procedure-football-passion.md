@@ -1039,4 +1039,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **23 novembre 2026, article id 108** : vignette fournie par l'utilisateur (« l1 j11.png », format vertical 941 × 1672) placée sur un fond flouté 1200 × 675, convertie en WebP (`ligue-1-j11-resultats-nice-psg-marseille-le-mans-2026.webp`) ; ancienne vignette JPG supprimée.
 
+- **23 novembre 2026, article id 108** : vignette remplacée par la version 16:9 fournie (« l1 j11 blog.png ») convertie en WebP 1200 × 675 (`ligue-1-j11-blog-resultats-nice-psg-marseille-le-mans.webp`) ; version verticale sur fond flouté supprimée.
+
 *Dernière mise à jour : 23 novembre 2026*

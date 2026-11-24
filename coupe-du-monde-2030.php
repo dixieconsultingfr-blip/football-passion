@@ -104,6 +104,7 @@ include __DIR__ . '/templates/header.php';
                 <li>🌍 Places restantes réparties entre les confédérations continentales (UEFA, CAF, CONMEBOL, AFC, CONCACAF, OFC)</li>
                 <li>📅 Matchs du centenaire les 8 et 9 juin 2030 en Amérique du Sud</li>
                 <li>⚽ Tournoi principal du 13 juin au 21 juillet 2030</li>
+                <li>➡️ <a href="/coupe-du-monde-2030-qualifications.php" class="text-green-400 hover:text-green-300 underline">Places, format et calendrier des qualifications</a></li>
             </ul>
         </div>
     </section>
@@ -172,6 +173,7 @@ include __DIR__ . '/templates/header.php';
 
 <!-- Liens internes -->
 <section class="flex flex-wrap gap-4 justify-center pb-4">
+    <a href="/coupe-du-monde-2030-qualifications.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">📋 Qualifications</a>
     <a href="/coupe-du-monde-2030-les-stades.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏟️ Les stades</a>
     <a href="/coupe-du-monde-2030-les-villes-hotes.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🏙️ Les villes hôtes</a>
     <a href="/equipe-france.php" class="border border-green-700 text-green-400 hover:bg-green-700 hover:text-white px-5 py-2 text-sm font-semibold rounded transition-colors">🇫🇷 Équipe de France</a>

@@ -50,6 +50,7 @@ $staticPages = [
     ['loc' => '/coupe-du-monde-2030.php',        'changefreq' => 'weekly',  'priority' => '0.7'],
     ['loc' => '/coupe-du-monde-2030-les-stades.php', 'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/coupe-du-monde-2030-les-villes-hotes.php', 'changefreq' => 'monthly', 'priority' => '0.6'],
+    ['loc' => '/coupe-du-monde-2030-qualifications.php', 'changefreq' => 'monthly', 'priority' => '0.6'],
     ['loc' => '/droits-tv-football.php',         'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => '/droits-tv-ligue-1.php',          'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => '/droits-tv-ligue-2.php',          'changefreq' => 'monthly', 'priority' => '0.7'],

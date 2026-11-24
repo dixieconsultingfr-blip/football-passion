@@ -1560,6 +1560,18 @@
         "score_ext": null
     },
     {
+        "id": 559591,
+        "competition": "L1",
+        "domicile": "Paris FC",
+        "exterieur": "Le Havre AC",
+        "date": "2027-01-02",
+        "heure": "21:00",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
         "id": 559592,
         "competition": "L1",
         "domicile": "FC Lorient",
@@ -1578,18 +1590,6 @@
         "exterieur": "Olympique Lyonnais",
         "date": "2027-01-03",
         "heure": "15:00",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
-        "id": 559591,
-        "competition": "L1",
-        "domicile": "Paris FC",
-        "exterieur": "Le Havre AC",
-        "date": "2027-01-03",
-        "heure": "17:15",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,
@@ -4567,9 +4567,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575398,
@@ -4579,9 +4579,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575399,
@@ -4591,9 +4591,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575400,
@@ -4603,9 +4603,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575401,
@@ -4615,9 +4615,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575402,
@@ -4627,9 +4627,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575403,
@@ -4639,9 +4639,9 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575404,

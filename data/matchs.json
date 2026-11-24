@@ -14099,10 +14099,10 @@
         "heure": "20:45",
         "id": 9000679,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L3",
@@ -14229,10 +14229,10 @@
         "heure": "20:45",
         "id": 9000689,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 1,
+        "score_ext": 0,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",
@@ -14255,10 +14255,10 @@
         "heure": "20:45",
         "id": 9000691,
         "journee": 13,
-        "score_dom": null,
-        "score_ext": null,
+        "score_dom": 2,
+        "score_ext": 3,
         "stade": "",
-        "status": "SCHEDULED"
+        "status": "FINISHED"
     },
     {
         "competition": "L2",

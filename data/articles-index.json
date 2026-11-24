@@ -1,5 +1,35 @@
 [
     {
+        "id": 112,
+        "slug": "ligue-3-journee-13-la-roche-fleury-rouen-bastia-versailles-2026-2027",
+        "titre": "Ligue 3, journée 13 : La Roche VF reste leader, Rouen chute à Fleury, Bastia et Versailles gagnent",
+        "categorie": "L3",
+        "etiquettes": [
+            "Ligue 3",
+            "Journée 13"
+        ],
+        "date": "2026-11-24",
+        "extrait": "La Roche VF 2-1 Concarneau, Fleury 91 1-0 Rouen, Bastia 4-2 Villefranche Beaujolais : les neuf résultats de la 13e journée de Ligue 3 (19 au 23 novembre 2026) et le classement avec La Roche VF leader à 30 points.",
+        "vignette": "/images/ligue-3-journee-13-la-roche-fleury-rouen-bastia-versailles-2026-2027.jpg",
+        "image_alt": "Ligue 3 journee 13, resultats du 19 au 23 novembre 2026 : La Roche VF 2-1 Concarneau, Fleury 91 1-0 Rouen, Bastia 4-2 Villefranche, Amiens 2-1 Caen",
+        "titre_court": "Ligue 3 J13 : La Roche leader, Rouen chute"
+    },
+    {
+        "id": 111,
+        "slug": "ligue-2-journee-13-reims-asse-nancy-sochaux-2026-2027",
+        "titre": "Ligue 2, journée 13 : l'ASSE gagne à Reims (1-0) et reste leader, Nancy toujours deuxième, Sochaux s'enfonce",
+        "categorie": "L2",
+        "etiquettes": [
+            "ASSE",
+            "Ligue 2"
+        ],
+        "date": "2026-11-24",
+        "extrait": "Reims 0-1 Saint-Étienne, Nancy 1-0 Dijon, Sochaux 2-3 Dunkerque : les neuf résultats de la 13e journée de Ligue 2 (20 au 23 novembre 2026) et le classement avec l'ASSE leader à 31 points.",
+        "vignette": "/images/ligue-2-journee-13-reims-asse-nancy-sochaux-2026-2027.jpg",
+        "image_alt": "Ligue 2 journee 13, resultats du 20 au 23 novembre 2026 : Reims 0-1 Saint-Etienne, Nancy 1-0 Dijon, Sochaux 2-3 Dunkerque, Laval 1-0 Montpellier",
+        "titre_court": "Ligue 2 J13 : l'ASSE gagne à Reims 1-0"
+    },
+    {
         "id": 110,
         "slug": "valenciennes-ligue-3-portrait-club-athenes-du-nord-2026-2027",
         "titre": "Valenciennes en Ligue 3 : portrait du VAFC, de la Ligue 1 aux saisons difficiles, dans l'Athènes du Nord",

@@ -4603,7 +4603,7 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 1
     },
@@ -4639,7 +4639,7 @@
         "date": "2026-11-24",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 1,
         "score_ext": 0
     },

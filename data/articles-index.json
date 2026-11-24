@@ -1,5 +1,20 @@
 [
     {
+        "id": 113,
+        "slug": "real-madrid-celta-vigo-2-1-mbappe-penalty-rate-barca-liga-2026",
+        "titre": "Real Madrid - Celta Vigo (2-1) : Mbappé rate un penalty, mais le Real reste à trois points du Barça",
+        "categorie": "Actu",
+        "etiquettes": [
+            "Real Madrid",
+            "Liga"
+        ],
+        "date": "2026-11-24",
+        "extrait": "Real Madrid 2-1 Celta Vigo malgré un penalty manqué par Mbappé, Barcelone 3-2 Villarreal : le Barça garde trois points d'avance en Liga avant la Ligue des champions.",
+        "vignette": "/images/real-madrid-celta-vigo-2-1-mbappe-penalty-barca-liga-2026.webp",
+        "image_alt": "Real Madrid 2-1 Celta Vigo : Kylian Mbappé manque un penalty mais le Real gagne encore, le Barça garde 3 points d'avance en Liga",
+        "titre_court": "Real 2-1 Celta : Mbappé rate un penalty"
+    },
+    {
         "id": 112,
         "slug": "ligue-3-journee-13-la-roche-fleury-rouen-bastia-versailles-2026-2027",
         "titre": "Ligue 3, journée 13 : La Roche VF reste leader, Rouen chute à Fleury, Bastia et Versailles gagnent",

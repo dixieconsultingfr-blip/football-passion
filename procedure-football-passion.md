@@ -1049,4 +1049,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **24 novembre 2026, Ligue 2 et Ligue 3 journée 13** : scores de Nantes 1-0 Grenoble et Sochaux 2-3 Dunkerque (L2) et Orléans 1-0 Thionville (L3) du 23/11 saisis dans `data/matchs.json` ; article L2 id 111 (`ligue-2-journee-13-reims-asse-nancy-sochaux-2026-2027`, buteur Davitashvili attribué à beIN Sports d'après le titre de vidéo fourni, séries calculées : Nancy 7 victoires de suite, Sochaux 5 défaites de suite) et article L3 id 112 (`ligue-3-journee-13-la-roche-fleury-rouen-bastia-versailles-2026-2027`, premier article de journée L3, liens vers les 8 portraits) ; classements calculés par script (6 premiers + 4 derniers) ; vignettes JPG générées ; portrait d'Aubagne : phrase sur Orléans corrigée (14 points). Les autres portraits (déjà à jour J13) n'ont pas changé de rang avec le résultat d'Orléans - Thionville.
 
+- **24 novembre 2026, article Real Madrid / Barça (id 113)** : `real-madrid-celta-vigo-2-1-mbappe-penalty-rate-barca-liga-2026`, catégorie Actu, texte fourni reformulé, reel Facebook 1021739516889802 intégré, vignette `real mbappe.png` convertie en WebP 1200x675. Statistique « 42 % de penaltys » non reprise (non vérifiable) ; penalty du 4 septembre et série de 9 victoires attribués à la presse espagnole.
+
 *Dernière mise à jour : 24 novembre 2026*

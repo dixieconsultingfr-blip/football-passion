@@ -1051,4 +1051,6 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **24 novembre 2026, article Real Madrid / Barça (id 113)** : `real-madrid-celta-vigo-2-1-mbappe-penalty-rate-barca-liga-2026`, catégorie Actu, texte fourni reformulé, reel Facebook 1021739516889802 intégré, vignette `real mbappe.png` convertie en WebP 1200x675. Statistique « 42 % de penaltys » non reprise (non vérifiable) ; penalty du 4 septembre et série de 9 victoires attribués à la presse espagnole.
 
+- **24 novembre 2026, article blessure Désiré Doué (id 114)** : `blessure-desire-doue-rupture-ligament-croise-psg-nice-2026`, catégorie L1, mots-clés « blessure Désiré Doué », « combien de temps absent », « durée de guérison », « qui est blessé au PSG ». Sources : communiqué psg.fr, franceinfo, Foot Mercato, Eurosport, Culturap, France-Jeunes (CNews illisible, 403 : seul son titre est cité). Salaire (≈ 500 000 €/mois, aperçu IA Google) non repris car non vérifié. Aperçu IA « Doué = ischio-jambiers » obsolète (trêve de novembre). Vignette générée par script `vign-doue.ps1` (JPG 1200x675), sans photo du joueur. Durée d'absence à mettre à jour quand le PSG communiquera.
+
 *Dernière mise à jour : 24 novembre 2026*

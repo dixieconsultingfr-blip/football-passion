@@ -4543,9 +4543,9 @@
         "date": "2026-11-24",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575396,
@@ -4555,9 +4555,9 @@
         "date": "2026-11-24",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575397,

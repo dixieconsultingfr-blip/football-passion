@@ -1560,18 +1560,6 @@
         "score_ext": null
     },
     {
-        "id": 559591,
-        "competition": "L1",
-        "domicile": "Paris FC",
-        "exterieur": "Le Havre AC",
-        "date": "2027-01-02",
-        "heure": "21:00",
-        "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
-    },
-    {
         "id": 559592,
         "competition": "L1",
         "domicile": "FC Lorient",
@@ -1590,6 +1578,18 @@
         "exterieur": "Olympique Lyonnais",
         "date": "2027-01-03",
         "heure": "15:00",
+        "stade": "",
+        "status": "SCHEDULED",
+        "score_dom": null,
+        "score_ext": null
+    },
+    {
+        "id": 559591,
+        "competition": "L1",
+        "domicile": "Paris FC",
+        "exterieur": "Le Havre AC",
+        "date": "2027-01-03",
+        "heure": "17:15",
         "stade": "",
         "status": "SCHEDULED",
         "score_dom": null,

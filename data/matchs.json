@@ -4675,7 +4675,7 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 0
     },
@@ -4687,7 +4687,7 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 0
     },
@@ -4713,7 +4713,7 @@
         "stade": "",
         "status": "LIVE",
         "score_dom": 0,
-        "score_ext": 2
+        "score_ext": 3
     },
     {
         "id": 575410,
@@ -4723,7 +4723,7 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "LIVE",
+        "status": "FINISHED",
         "score_dom": 2,
         "score_ext": 1
     },

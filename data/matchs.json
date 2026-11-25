@@ -4675,9 +4675,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575407,
@@ -4687,9 +4687,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575408,
@@ -4699,9 +4699,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575409,
@@ -4711,9 +4711,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575410,
@@ -4723,9 +4723,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575411,
@@ -4735,9 +4735,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575412,
@@ -4747,9 +4747,9 @@
         "date": "2026-11-25",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null
+        "status": "LIVE",
+        "score_dom": 0,
+        "score_ext": 0
     },
     {
         "id": 575413,

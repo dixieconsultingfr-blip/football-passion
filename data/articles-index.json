@@ -1,5 +1,20 @@
 [
     {
+        "id": 116,
+        "slug": "ligue-des-champions-journee-5-psg-roma-lille-bayern-lens-leipzig-2026-2027",
+        "titre": "Ligue des champions, J5 : le PSG tenu en échec par la Roma (2-2), Lille bat le Bayern (2-1), Lens battu à Leipzig",
+        "categorie": "CL",
+        "etiquettes": [
+            "Champions League",
+            "Clubs français"
+        ],
+        "date": "2026-11-26",
+        "extrait": "PSG 2-2 Roma, Lille 2-1 Bayern Munich, Leipzig 3-1 Lens : les 18 résultats de la 5e journée de Ligue des champions (24 et 25 novembre 2026) et le classement de la phase de ligue.",
+        "vignette": "/images/ligue-des-champions-journee-5-psg-roma-lille-bayern-lens-leipzig-2026-2027.webp",
+        "image_alt": "Ligue des champions journee 5 : PSG 2-2 Roma, Lille 2-1 Bayern Munich, Leipzig 3-1 Lens, Barcelone et Liverpool ont frappe fort",
+        "titre_court": "C1 J5 : PSG 2-2 Roma, Lille bat le Bayern"
+    },
+    {
         "id": 115,
         "slug": "can-2025-tas-rend-titre-senegal-maroc-verdict-24-novembre-2026",
         "titre": "CAN 2025 : le TAS rend le titre au Sénégal et annule la décision de la CAF",

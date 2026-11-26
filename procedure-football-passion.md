@@ -672,7 +672,9 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 **⚠️ À faire quand l'édition 2026-2027 de la Ligue des Nations sera terminée** (après la finale à quatre, prévue du 9 au 13 juin 2027) : archiver ces 14 pages de groupe (A1 + B à N), sur le modèle de l'archivage déjà en place pour les matchs (`data/archives/`, voir section sur `archive-old-matches.ps1` dans `CLAUDE.md`). Ne pas les laisser dans le menu ou le classement affichés comme si l'édition était en cours une fois la compétition close — prévoir soit une bascule vers une page d'archive dédiée, soit un renommage vers une page « Ligue des Nations 2026-2027 (terminée) », avant de démarrer les pages de l'édition suivante.
 
-*Dernière mise à jour : 27 septembre 2026*
+- **26 novembre 2026, article Ligue des champions J5 (id 116)** : `ligue-des-champions-journee-5-psg-roma-lille-bayern-lens-leipzig-2026-2027`, catégorie CL ; scores et classement calculés depuis `data/matchs.json` (18 matchs des 24 et 25/11, n8n à jour) : Real 15 pts, PSG 13 (invaincu), Lille 29e (4 pts), Lens 34e (3 pts) ; buteur Udol (Lens) repris du texte fourni ; prochains matchs J6 (8-9/12) tirés de matchs.json. Vignette `ldc blog.png` convertie en WebP 1200x675. Pas de reel Facebook fourni.
+
+*Dernière mise à jour : 26 novembre 2026*
 
 ### 3.73 Bug n8n : régression intermittente des statuts de matchs — 15 octobre 2026
 

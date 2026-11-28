@@ -10485,9 +10485,9 @@
         "date": "2026-11-26",
         "heure": "16:30",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10498,9 +10498,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 4,
         "journee": 4
     },
     {
@@ -10511,9 +10511,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 0,
+        "score_ext": 2,
         "journee": 4
     },
     {
@@ -10524,9 +10524,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 4,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10537,9 +10537,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10550,9 +10550,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10563,9 +10563,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 4,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10576,9 +10576,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 1,
         "journee": 4
     },
     {
@@ -10589,9 +10589,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 3,
         "journee": 4
     },
     {
@@ -10602,9 +10602,9 @@
         "date": "2026-11-26",
         "heure": "18:45",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10615,9 +10615,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 1,
         "journee": 4
     },
     {
@@ -10628,9 +10628,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 3,
+        "score_ext": 2,
         "journee": 4
     },
     {
@@ -10641,9 +10641,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10654,9 +10654,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 2,
         "journee": 4
     },
     {
@@ -10667,9 +10667,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 0,
+        "score_ext": 2,
         "journee": 4
     },
     {
@@ -10680,9 +10680,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 2,
+        "score_ext": 3,
         "journee": 4
     },
     {
@@ -10693,9 +10693,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 4,
+        "score_ext": 0,
         "journee": 4
     },
     {
@@ -10706,9 +10706,9 @@
         "date": "2026-11-26",
         "heure": "21:00",
         "stade": "",
-        "status": "SCHEDULED",
-        "score_dom": null,
-        "score_ext": null,
+        "status": "FINISHED",
+        "score_dom": 1,
+        "score_ext": 1,
         "journee": 4
     },
     {

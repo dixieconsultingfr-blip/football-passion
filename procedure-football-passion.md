@@ -676,6 +676,8 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **28 novembre 2026, Europa League journée 5** : 18 scores du 26/11 saisis dans `data/matchs.json` (le calendrier J5-J8 existait déjà ; ids 9000221 à 9000238 passés en FINISHED), dont OM 1-0 Levski Sofia, NEC Nimègue 3-1 Rennes, Lyon 0-0 Lillestrøm. Programme de la J6 (10/12) vérifié identique au texte fourni, rien à modifier. Pas d'article rédigé (non demandé).
 
+- **28 novembre 2026, Ligue Conférence journée 4** : 18 scores du 26/11 saisis dans `data/matchs.json` (ids 9000401 à 9000418 passés en FINISHED), dont Hearts 2-3 Monaco et Brighton 4-0 Craiova. Programme de la J5 (10/12) vérifié identique au texte fourni, rien à modifier. Pas d'article rédigé (non demandé).
+
 *Dernière mise à jour : 28 novembre 2026*
 
 ### 3.73 Bug n8n : régression intermittente des statuts de matchs — 15 octobre 2026

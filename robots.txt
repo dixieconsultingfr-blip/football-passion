@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Points d'accès techniques (formulaires) : pas de contenu à indexer
+Disallow: /newsletter-subscribe.php
+Disallow: /contact-send.php
+
+Sitemap: https://football-passion.fr/sitemap.xml

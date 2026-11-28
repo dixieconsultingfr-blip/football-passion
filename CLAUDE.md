@@ -13,7 +13,61 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Auteur** : Jérôme Henry (Dixie Consulting)
 **Stack** : PHP 8 vanilla + Tailwind CSS + JSON + n8n
 **Hébergement** : Hostinger (même config que CDM 2026)
-**Déploiement** : GitHub Actions → `deploy` branch
+**Charte graphique** (site + réseaux sociaux) : voir `charte-graphique.md` à la racine du projet.
+**Déploiement** : `git push origin deploy` → GitHub Actions (`.github/workflows/deploy.yml`) ping le webhook Hostinger (secret `HOSTINGER_WEBHOOK_URL`) → Hostinger pull automatiquement via son intégration Git native (hPanel → Avancé → Git). Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
+
+**Sites satellites** : `coupe-du-monde-2026.info` (projet séparé, repo `coupe-du-monde-2026`) est un **site satellite** de football-passion.fr, conservé comme archive SEO jusqu'à fin 2027 (expiration prévue ensuite). Depuis le pivot stratégique de juillet 2026, football-passion.fr est le hub evergreen central — les futurs tournois (Euro 2028, CDM 2030/2034) vivent en pages internes ici plutôt qu'en nouveaux domaines dédiés.
+
+## 🚨 Règle critique — Journal de procédure
+
+**Après chaque action sur ce projet** (nouvelle page, fonctionnalité, config, service tiers, correction), mettre à jour `procedure-football-passion.md` (à la racine, hors `public_html/`) en ajoutant une entrée décrivant l'action, dans l'ordre chronologique.
+
+## 🚨 Règle critique — Dépôt GitHub PUBLIC, jamais de secret en clair
+
+Le dépôt `football-passion` sur GitHub est **public** (contrairement à `coupe-du-monde-2026` qui est privé). **Ne jamais committer de clé secrète, mot de passe ou token en clair dans le code** (Turnstile secret, clés API, etc.).
+
+Tout secret va dans **`config/secrets.php`** (fichier gitignore, jamais versionné) et est chargé via `require`. Après création/modification de ce fichier, il doit être **uploadé manuellement une seule fois** sur Hostinger — il n'est jamais déployé automatiquement puisqu'il n'est pas dans le repo.
+
+## 🚨 Règle critique — Emplacement des fichiers (structure à PLAT, comme CDM 2026)
+
+**Tous les fichiers du site vont directement à la racine du dépôt** — pas de dossier `public_html/` local.
+
+**Raison** : le déploiement automatique passe par l'intégration Git native de Hostinger (hPanel → Avancé → Git), qui clone l'intégralité du dépôt tel quel dans le dossier `public_html` du serveur. Un dossier `public_html/` imbriqué dans le dépôt créerait un niveau de profondeur en trop (`public_html/public_html/index.php`) et casserait le déploiement.
+
+> ⚠️ Historique : une structure `public_html/` locale a été utilisée un temps pour faciliter l'upload manuel, avant l'activation du déploiement Git automatique. Elle a été abandonnée le 1er août 2026 au profit de la structure à plat — voir `procedure-football-passion.md` section 3.16.
+
+```
+football-passion/                  ← racine du dépôt = racine du site
+├── CLAUDE.md, README.md, procedure-football-passion.md, todolist.md, charte-graphique.md, ...  ← notes (hors site)
+├── .gitignore, .htaccess, robots.txt, sitemap.php (lit articles-index.json à la volée)
+├── .github/workflows/deploy.yml  ← validation des données → avertissement doublons → webhook Hostinger
+├── index.php                      ← accueil (bandeau « À LA UNE » + scores, derniers articles)
+├── ligue-1.php, ligue-2.php, ligue-3.php, champions-league.php, europa-league.php, conference-league.php
+├── equipe-france.php, euro.php, coupe-du-monde.php, calendrier.php, archives.php
+├── euro-2028.php + euro-2028-*.php  ← dossier Euro 2028 (équipes, pays hôtes, stades, qualifications, Portugal...)
+├── ligue-des-nations.php (hub), ligue-des-nations-2026-2027.php (édition), ligue-des-nations-groupe-{a1,b..n}.php
+├── can-2027.php, droits-tv-can-2027.php                  ← CAN masculine (éliminatoires)
+├── droits-tv-football.php, droits-tv-{ligue-1,ligue-2,champions-league,europa-league}.php
+├── a-propos.php, mentions-legales.php, politique-confidentialite.php, contact.php, contact-send.php, 404.php
+├── config/
+│   └── secrets.php        ← gitignore, jamais commité
+├── templates/
+│   ├── header.php, footer.php            ← partagés par toutes les pages
+│   ├── ticker-resultats.php              ← bandeau défilant (articles + scores) de toutes les pages concernées
+│   └── ligue-des-nations-groupe-template.php
+├── data/
+│   ├── articles-index.json               ← index léger (liste, filtres, accueil, bandeaux)
+│   ├── articles/{slug}.json              ← un fichier par article (contenu complet)
+│   ├── matchs.json                       ← L1/CL par n8n, le reste à la main (id >= 9000000)
+│   ├── resultats-selections.json         ← scores Ligue des Nations et CAN (saisis à la main, pour les bandeaux)
+│   ├── archives/                         ← matchs archivés par compétition et saison
+│   └── categories.json, equipes.json, joueurs.json
+├── scripts/                              ← validate-data.py, check-duplicate-content.py, archive-old-matches.ps1
+├── images/ (et images/logo/)
+└── blog/
+    ├── index.php                         ← liste, filtres de catégorie, page article
+    └── helpers.php
+```
 
 ---
 
@@ -28,6 +82,7 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 - ❌ Droits TV / chaînes de diffusion
 - ❌ Citations entre guillemets
 - ❌ Horaires/dates non confirmés
+- ❌ Prénoms de joueurs non fournis par la source (un live-blog ou une transcription donne souvent le nom de famille seul, ex. « Brunner », « De Lange ») — ne jamais compléter par un prénom mémorisé/plausible sans vérification (voir incident section 3.61 de `procedure-football-passion.md` : « Paul Brunner » et coach « Adi Hütter » inventés, corrigés en « Paris Brunner » et « Filipe Luis » après recherche web). Par défaut, garder le nom de famille seul (usage journalistique courant) ; ne compléter le prénom que si une recherche web le confirme explicitement.
 
 **Règle** : n'écrire que ce qui est fourni ou vérifié (WebSearch/WebFetch).
 
@@ -36,7 +91,7 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 **Tous les fichiers JSON** doivent être :
 - ✅ UTF-8 **sans BOM** (commence par `[` ou `{`, pas `EF BB BF`)
 - ✅ Validés avant commit (https://jsonlint.com/)
-- ✅ Triés correctement (`articles.json` par ID décroissant)
+- ✅ `articles-index.json` : un tableau JSON simple (jamais `{"value": ...}`), nouvelle entrée en tête ; le tri d'affichage se fait côté PHP (`load_articles_index`). Le site satellite CDM 2026 utilise encore `articles.json`, trié par ID décroissant.
 
 ### Tailwind CSS — Pas de footprint IA
 
@@ -49,25 +104,63 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 - ✅ Varier la longueur des paragraphes
 - ✅ Éviter les listes à puces systématiques
-- ✅ Introduire des avis éditoriaux ("À notre sens...")
 - ✅ Citer des données précises (stats, dates réelles)
 - ✅ Varier les introductions — ne pas répéter le même pattern
+- ✅ **Ajouter un tableau HTML quand l'article contient des données comparables** (prix, formules, statistiques, calendrier...) — Google valorise les tableaux structurés (rich snippets, meilleure compréhension du contenu). Voir le format utilisé dans `data/articles/ligue-1-plus-comment-regarder-tous-les-matchs-2026-2027.json` comme référence de style (fond sombre, bordure verte `#16a34a`, `overflow-x:auto` pour le responsive).
+- ✅ **Un tableau de résultats/calendrier doit toujours porter son contexte complet** (signal SEO — retour utilisateur du 30 août 2026, voir `procedure-football-passion.md` section 3.60) : compétition (L1, L2, CL...), numéro de journée, saison. Concrètement : une balise `<caption>` dans le `<table>` (ex. « Résultats de la Ligue 1, journée 2, saison 2026-2027 »), une colonne `Date` par ligne, et une phrase d'intro juste avant le tableau qui répète ce contexte en texte brut (ex. « Championnat de France de Ligue 1 (L1), saison 2026-2027, journée X sur 34 »). Un tableau de scores sans ces repères est ambigu pour Google (et pour un lecteur qui arrive via une recherche, sans avoir lu le paragraphe précédent).
+- ✅ **Articles de match : écrire au moins une fois la forme « A vs B »** (règle du 16 novembre 2026), de façon naturelle (un intertitre, la description `meta_desc` ou le texte alternatif de l'image), en gardant « A - B » dans le titre, qui reste la forme la plus recherchée en français. Google traite « vs », « - » et « contre » comme des variantes d'une même recherche : une seule occurrence suffit, inutile de bourrer.
+- ✅ **Tableau des résultats d'un club (suite de journées) : ordre décroissant, dernier match en premier** (règle du 1er novembre 2026, pour tous les articles) : les résultats saison d'un club (J1 à Jn) se lisent du plus récent au plus ancien, pour que le lecteur voie le dernier score tout de suite. Ajouter le caption « …, du plus récent au plus ancien ». Lors d'une mise à jour, insérer la nouvelle ligne **en haut** du `<tbody>`. Les tableaux d'une seule journée (tous les matchs du jour) gardent l'ordre chronologique du programme.
+- ✅ **Vignette d'un portrait de club de Ligue 3 : modèle fixe** (règle du 1er novembre 2026) : titre **« CLUB | LIGUE 3 »** (barre verticale, ex. « AUBAGNE | LIGUE 3 », « BASTIA | LIGUE 3 », « CAEN | LIGUE 3 »), jamais « EN LIGUE 3 » (ambigu : montée, descente ou exploit). Sous-titre fixe **« Portrait du club · Saison 2026-2027 »**. En haut à droite, « LIGUE 3 · SAISON 2026-2027 » et le logo du club (dossier `images/logo/`). Quatre cartes d'identité (club, stade, ville/patrimoine, couleurs ou formation), **sans score ni classement** (la vignette ne doit pas bouger à chaque journée). Nouveau nom de fichier à chaque modification (cache navigateur 7 jours).
+
+### ✍️ Avis éditorial assumé — signal E-E-A-T (Experience)
+
+**Chaque article de fond doit inclure un vrai avis personnel assumé**, pas juste un résumé neutre des faits — c'est le signal "Experience" que Google valorise depuis la mise à jour de mars 2026 (contenu avec un point de vue vérifiable, pas juste une compilation impersonnelle).
+
+**Formulations à utiliser** : "À notre sens...", "Mon avis...", "Ce qui nous marque...", "On pense que...", "Franchement..." — varier les formules, ne pas toujours utiliser la même.
+
+**L'avis doit rester dans la ligne éditoriale du site** (voir mémoire `project_cdm_strategie` : passion + fair play + neutralité entre clubs, "que le meilleur gagne, prône le beau jeu") :
+- ✅ Apprécier le beau jeu, l'audace tactique, la prise de risque — indépendamment du club
+- ✅ Commenter les choix tactiques des entraîneurs (formation, changements, gestion de groupe) avec un vrai point de vue, pas juste les décrire
+- ✅ Saluer le fair play, la sportivité, les belles histoires humaines
+- ✅ Soutenir les clubs français en compétitions européennes (CL, Europa, Conférence) — un angle patriotique assumé, sans tomber dans le partisan entre clubs français entre eux
+- ❌ Ne jamais prendre parti pour un club français contre un autre club français (reste la neutralité de base)
+- ❌ Pas d'attaque personnelle contre un joueur/entraîneur/dirigeant — critique du jeu ou des choix, jamais de la personne
+
+**Exception documentée** : le dossier Bordeaux/DNCG (voir procédure section 3.55) sort de la neutralité habituelle par décision explicite de l'utilisateur — cas isolé, pas un précédent généralisable sans nouvelle demande.
 
 ---
+
+## 🖼️ Vignettes d'articles — format
+
+- **Format** : `.webp` (25-35 % plus léger qu'un `.jpg` à qualité égale — meilleur pour le LCP). Les vignettes **fournies par l'utilisateur** (PNG, dossier Téléchargements) se convertissent en WebP 1200 × 675 (ffmpeg). Les vignettes générées par script (System.Drawing) sont en JPG 1200 × 675 (≈ 70-90 Ko), acceptées.
+- **Largeur max** : 1200px, ratio 16:9 recommandé
+- **Poids cible** : 100-300 Ko — jamais de PNG brut ou d'export Canva non compressé
+- **Nommage** : kebab-case descriptif, ex. `deschamps-bilan-14-ans-bleus.webp`
+- **Emplacement** : `images/`
+- Renseigner le même chemin dans `"image"` (fichier de l'article) et `"vignette"` (fichier de l'article et entrée de `articles-index.json`)
+- Nouveau nom de fichier à chaque remplacement d'image (cache navigateur 7 jours) : supprimer l'ancien fichier du dépôt s'il n'est plus utilisé.
 
 ## 📁 Dossiers clés
 
 | Dossier | Rôle |
 |---------|------|
-| `data/` | articles.json, matchs.json, categories.json, equipes.json |
-| `templates/` | header.php, footer.php (partagés toutes les pages) |
+| `data/` | articles-index.json, articles/{slug}.json, matchs.json, resultats-selections.json, categories.json, equipes.json, joueurs.json, archives/ |
+| `templates/` | header.php, footer.php (partagés), ticker-resultats.php (bandeaux défilants), gabarit des pages de groupe de la Ligue des Nations |
+| `scripts/` | validate-data.py (bloque le déploiement si les données sont invalides), check-duplicate-content.py, archive-old-matches.ps1 |
 | `images/` | Images du site (kebab-case) |
 | `config/` | config/db.php (gitignore) |
 | `.github/workflows/` | deploy.yml (GitHub Actions) |
 
 ---
 
-## 📰 Structure d'un article (articles.json)
+## 📰 Structure d'un article — un fichier JSON par article
+
+**Depuis le 5 août 2026**, les articles ne vivent plus dans un unique `data/articles.json` monolithique (non scalable au-delà de quelques dizaines d'articles — diffs Git énormes, tout le contenu HTML relu à chaque page liste). Nouvelle architecture à deux niveaux :
+
+- **`data/articles/{slug}.json`** — un fichier par article, contenu complet (structure ci-dessous). Chargé uniquement à la vue d'un article précis (`load_article($basePath, $slug)` dans `blog/helpers.php`), jamais en liste.
+- **`data/articles-index.json`** — tableau léger de **tous** les articles, utilisé pour la page liste (`/blog`), l'accueil et les pages hub (`equipe-france.php`, `euro.php`) : uniquement `id, slug, titre, titre_court, categorie, etiquettes, date, date_maj (si l'article a été mis à jour), extrait, vignette, image_alt` (pas de `contenu`, `meta_title`, `meta_desc`, `auteur`, `image`). Chargé via `load_articles_index($basePath)`.
+
+**Structure complète d'un fichier `data/articles/{slug}.json`** :
 
 ```json
 {
@@ -76,20 +169,76 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
   "auteur": "Jérôme Henry",
   "meta_title": "Titre SEO < 60 caractères",
   "meta_desc": "Description SEO < 160 caractères",
-  "image": "/images/nom-kebab-case.jpg",
+  "image": "/images/nom-kebab-case.webp",
   "image_alt": "Description alternative",
-  "categorie": "L1 | L2 | CL | Europa | Euro | CDM | CAN | France",
+  "vignette": "/images/nom-kebab-case.webp",
+  "categorie": "L1 | L2 | L3 | CL | Europa | Conference | Euro | CDM | CAN | France | Actu",
   "etiquettes": ["Tag1", "Tag2"],
   "slug": "slug-en-kebab-case",
   "extrait": "Résumé court (2-3 phrases)",
   "contenu": "<p>Contenu HTML...</p>",
-  "date": "2026-07-29"
+  "date": "2026-07-29",
+  "date_maj": "2026-07-31"
 }
 ```
 
-**Important** : articles.json doit être **trié par ID décroissant** (plus récent en tête).
+**Champ `date_maj` (optionnel)** — signal E-E-A-T (voir section dédiée plus bas). À ajouter uniquement quand le contenu publié est corrigé ou complété après coup (ex. score corrigé après une erreur de l'API, info mise à jour). Ne pas l'ajouter systématiquement à la création — seulement lors d'une vraie modification ultérieure. Affiché sur la page article (« mis à jour le... ») et utilisé comme `dateModified` dans le schema `NewsArticle`.
+
+**🚨 Règle critique — toujours mettre à jour la date de modification après une édition** :
+- **Articles** (`data/articles/{slug}.json`) : mettre à jour (ou ajouter) le champ `date_maj` à la date du jour dès qu'un article déjà publié est modifié (contenu corrigé/complété, ajout d'un embed vidéo, etc.).
+- **Pages piliers statiques** (ex. `droits-tv-football.php`) : ces pages portent une variable `$date_maj_page` en haut du fichier PHP, utilisée à la fois pour l'affichage visible (« mis à jour le... ») et pour le `dateModified` du JSON-LD. **La mettre à jour à la date du jour à chaque modification de contenu** (tarifs, offres, nouvelle section...).
+- Objectif : signal de fraîcheur pour Google (E-E-A-T), à ne jamais oublier après une édition — même mineure — sur ce type de page.
+
+**🚨 Règle d'affichage des dates (8 novembre 2026)** : le site affiche la **date de mise à jour** (`date_maj`) et **non la date de création** dès qu'un article a été mis à jour (cartes de listes : « Maj 08/11/2026 » ; page article : « Mis à jour le 8 novembre 2026 »). La date de création (`date`) n'est affichée qu'à la création de l'article, tant qu'il n'a pas de `date_maj` ; elle reste utilisée pour le tri et pour `datePublished` (schema). **Ne jamais modifier `date` lors d'une mise à jour** : renseigner `date_maj` dans l'article **et** dans son entrée de `data/articles-index.json` (les cartes lisent l'index). Resynchroniser l'index si besoin (script : lire chaque `data/articles/{slug}.json` et recopier `date_maj` dans l'index).
+
+**🚨 Procédure obligatoire pour ajouter un nouvel article** :
+1. Créer `data/articles/{slug}.json` avec la structure complète ci-dessus (`id` = dernier id existant + 1).
+2. Ajouter l'entrée correspondante (champs légers uniquement) dans `data/articles-index.json`, **avec un `titre_court`** (règle du 15 novembre 2026) : 35 à 48 caractères, sans guillemets ni point final, qui dit l'essentiel (ex. « Zidane dément tout clash avec Mbappé », « Algérie 1-0 Togo en éliminatoires CAN 2027 »). Il sert au bandeau défilant de l'accueil (`templates/ticker-resultats.php`) ; sans lui, le titre est coupé à 48 caractères. Le choisir soi-même à chaque nouvel article, sans le demander.
+3. Les deux fichiers doivent être commités ensemble — ne jamais ajouter l'un sans l'autre.
+
+**Sitemap** : `sitemap.php` (accessible en `/sitemap.xml` via réécriture `.htaccess`) lit `data/articles-index.json` **à la volée à chaque requête** — aucune régénération manuelle n'est nécessaire. Tant que l'étape 2 ci-dessus est respectée pour chaque nouvel article, le sitemap est automatiquement à jour. `robots.txt` référence son URL.
+
+**Étiquettes** : se limiter à 2 tags pertinents (ex. club + compétition : `["OL", "Champions League"]`). Ne pas ajouter d'étiquettes secondaires (adversaire, entraîneur, joueur cité...) — elles diluent le filtrage par tag sur `/blog?cat=...` et n'apportent pas de valeur de navigation supplémentaire.
+
+⚠️ Toujours écrire le contenu accentué **ou contenant des emoji** (titre, extrait, contenu HTML) via l'outil Write dans un fichier JSON séparé plutôt qu'en dur dans un script `.ps1` — le bug de mojibake touche aussi les emoji, pas seulement les caractères accentués (vu en pratique sur `▶️` dans un lien vidéo, section 3.31 de `procedure-football-passion.md`). Voir aussi section 3.22.
 
 ---
+
+## 📅 Structure d'un match (data/matchs.json)
+
+Consommé par `calendrier.php`. Trié par `date` (croissant pour les matchs à venir, décroissant pour les résultats — géré côté PHP, pas besoin de trier le fichier).
+
+```json
+{
+  "id": 1,
+  "competition": "L1 | L2 | CL | Europa | France",
+  "domicile": "Paris Saint-Germain",
+  "exterieur": "Olympique de Marseille",
+  "date": "2026-08-15",
+  "heure": "21:00",
+  "stade": "Parc des Princes",
+  "status": "SCHEDULED | LIVE | FINISHED",
+  "score_dom": null,
+  "score_ext": null
+}
+```
+
+- `status: FINISHED` + `score_dom`/`score_ext` renseignés → apparaît dans "Derniers résultats"
+- Sinon → apparaît dans "Prochains matchs"
+- `id` unique et stable (utile pour que n8n sache quelle entrée mettre à jour plutôt que dupliquer)
+- `saison` (optionnel, ex. `"2026-2027"`) : ajouté automatiquement par le script d'archivage si absent (calculé depuis `date` : saison = année de juillet à juin suivant)
+
+### Archivage — éviter que matchs.json grossisse indéfiniment
+
+**Depuis le 7 août 2026**, `data/matchs.json` est une **fenêtre glissante** (résultats récents + tous les matchs à venir), pas un historique complet. Les matchs `FINISHED` de plus de 45 jours sont déplacés vers `data/archives/{competition}-{saison}.json` (un fichier par compétition+saison), consultables via `archives.php`.
+
+**Script** : `scripts/archive-old-matches.ps1` — à exécuter périodiquement (manuellement pour l'instant, pas encore automatisé) :
+```bash
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/archive-old-matches.ps1
+```
+Recalcule la saison à la volée depuis `date` (indépendant du champ `saison`, donc fonctionne même sur des matchs synchronisés par n8n qui ne le renseigne pas), fusionne avec l'archive existante sans dupliquer (dédoublonnage par `id`), puis retire ces entrées de `matchs.json`.
+
+`archives.php` liste les saisons/compétitions disponibles en scannant `data/archives/` et affiche les résultats de la sélection. `sitemap.php` référence automatiquement chaque page d'archive existante.
 
 ## 🔄 Données en direct
 
@@ -110,10 +259,40 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 
 ### n8n — Automation
 
-**Workflow** : récupère données football-data.org toutes les 5 min
-- Branches : scores L1/L2/CL/Europa, posts Facebook auto
-- Commit direct sur `data/matchs.json` via GitHub
-- **Garde-fous** : ne committe que si changement réel (sinon épuise quota GitHub Actions)
+✅ **Statut : construit, testé et ACTIF depuis le 4 août 2026.** Workflow `Football Passion — Récupération matchs` sur l'instance self-hébergée `https://n8n.srv814711.hstgr.cloud`, publié et tournant en autonomie toutes les 5 minutes.
+
+📄 **Documentation complète du workflow réel (architecture, code des nœuds, écarts par rapport au plan initial et pourquoi)** : voir `guide-n8n-workflow.md` à la racine du projet.
+
+**Résumé** :
+- Compétitions couvertes : **Ligue 1 (FL1) et Champions League (CL) uniquement**. Ligue 2 (FL2) et Europa League (EL) renvoient une erreur 403 (*"restricted... check your subscription"*) — limitation du plan football-data.org gratuit.
+- **Décision définitive (7 août 2026) : pas d'upgrade payant.** Ligue 2, Ligue 3 Betclic, Europa League, les tours de qualification/barrages de Champions League, et l'Équipe de France (amicaux/qualifs) restent **manuels en permanence** — ce n'est pas un état transitoire en attendant un upgrade, c'est le mode de fonctionnement retenu.
+- Architecture automatisée : Schedule Trigger (5 min) → Fetch L1 + Fetch CL (HTTP) → Transformer les matchs (Code) → GitHub Get matchs.json → Comparer hasUpdate (Code, garde-fou anti-quota, **préserve les entrées manuelles `id >= 9000000`** — voir procédure 3.22) → IF → GitHub Edit matchs.json (commit sur branche `deploy`) → déploiement auto Hostinger.
+- Piège n8n à connaître : un champ contenant `{{ }}` doit être explicitement basculé en mode **"Expression"** (toggle à côté de "Fixed") pour être évalué — sinon n8n écrit le texte littéral. Déjà corrigé dans ce workflow, mais à surveiller pour tout futur nœud.
+
+### Procédure pour les compétitions manuelles (L2, L3, Europa, qualifs CL, Équipe de France)
+
+L'utilisateur colle des captures d'écran ou du texte copié depuis un site de scores en direct (type flashscore.fr). Procédure standard, à appliquer sans redemander confirmation à chaque fois :
+
+1. **Extraire** les matchs (équipes, date, heure, score si le match est terminé) — ne jamais inventer une info absente (règle anti-hallucination).
+2. **ID** : prochain `id` libre à partir de `9000000` (convention établie section 3.22 de `procedure-football-passion.md`), incrémental.
+3. **Noms d'équipes en ASCII pur** (pas d'accents) pour éviter le bug de mojibake documenté en 3.22 — ex. `Saint-Etienne` pas `Saint-Étienne`, `Bodo/Glimt` pas `Bodø/Glimt`.
+4. **`status`** : `FINISHED` + scores si le match a déjà eu lieu, sinon `SCHEDULED` avec `heure` renseignée et scores `null`.
+4bis. **`journee`** (entier) : renseigner le numéro de journée quand la source l'indique (ex. "Journée 3 sur 34" sur flashscore.fr) — utilisé pour grouper "Derniers résultats"/"Prochains matchs" par journée plutôt que par date (une journée s'étale souvent sur 2-3 jours).
+5. `git pull origin deploy` **avant** toute modification (n8n peut avoir committé entre-temps sur L1/CL), puis ajouter les entrées via script PowerShell (jamais de JSON écrit en dur dans le message pour de gros volumes — toujours passer par `ConvertFrom-Json`/`ConvertTo-Json`, sans wrapper `@()` autour de `ConvertFrom-Json` — voir bug documenté en 3.22).
+6. Vérifier absence de mojibake (`grep -c "Ã" data/matchs.json`) avant de committer.
+7. `git add data/matchs.json && git commit && git push origin deploy`.
+
+**Ligue des Nations et CAN** : leurs scores ne vont **pas** dans `matchs.json` mais dans `data/resultats-selections.json` (bandeaux) ; classements et calendriers dans les pages (`ligue-des-nations-groupe-*.php`, `can-2027.php`). Ne jamais publier un score non vérifié (source officielle ou fournie par l'utilisateur) : voir la règle anti-hallucination.
+
+**🚨 S'applique aussi à `data/articles-index.json` (incident du 8 novembre 2026, procédure 3.86).**
+
+**🚨 Piège PowerShell découvert le 26 août 2026 — wrapper `{"value": [...]}` inattendu** : appeler `ConvertTo-Json` **directement sur le résultat brut de `ConvertFrom-Json`** (même après avoir muté des objets dedans via `Where-Object`) peut produire un objet enveloppé `{"value": [...], "Count": N}` au lieu d'un tableau JSON simple — a transformé `matchs.json` en fichier quasi vide lors d'un test raté avec `-AsArray` (paramètre inexistant en Windows PowerShell 5.1). **Toujours reconstruire un tableau propre avant `ConvertTo-Json`** :
+```powershell
+$matchList = [System.Collections.Generic.List[object]]::new()
+foreach ($m in $matchArray) { $matchList.Add($m) }   # $matchArray = $data.value si wrapper deja present, sinon $data
+$json = ConvertTo-Json $matchList -Depth 10
+```
+Ne jamais faire `ConvertTo-Json $data -Depth 10` directement. **Toujours vérifier le résultat avant de committer** : `head -c 50 data/matchs.json` doit afficher `[` puis un premier objet, jamais `{"value":`. Si le fichier fait moins de quelques centaines de lignes après une modification censée être mineure, c'est le signe d'une perte de données — restaurer immédiatement avec `git checkout -- data/matchs.json` avant de retenter.
 
 ---
 
@@ -123,12 +302,40 @@ Calendriers en direct, matchs, analyses, news. Automatisation n8n + football-dat
 |-----------|-------------|-----------|
 | **L1** | Ligue 1 (FR) | Août-mai + été |
 | **L2** | Ligue 2 (FR) | Août-mai |
+| **L3** | Ligue 3 Betclic (FR, ex-National) | Août-mai |
 | **CL** | Champions League | Septembre-juin |
 | **Europa** | Europa League | Septembre-juin |
-| **CAN** | Coupe d'Afrique | Janvier-février |
+| **Conference** | Ligue Conférence | Septembre-mai |
+| **CAN** | Coupe d'Afrique des Nations (CAN 2027 : éliminatoires sept. 2026 - mars 2027, phase finale du 19 juin au 17 juillet 2027, Kenya/Tanzanie/Ouganda) | 2026-2027 |
 | **Euro** | Championnat d'Europe | Juin-juillet 2028 |
 | **CDM** | Coupe du Monde | Juin-juillet 2026/2030/2034 |
-| **France** | Équipe de France | Année-rond |
+| **France** | Équipe de France (Ligue des Nations incluse : étiquette « Ligue des nations ») | Année-rond |
+| **Actu** | Actualités générales | — |
+
+---
+
+## 🔗 Liens externes — règle absolue
+
+**Tout lien vers un site tiers doit avoir `rel="nofollow noopener noreferrer"`**, sans exception.
+
+```html
+<a href="https://exemple.com" target="_blank" rel="nofollow noopener noreferrer">Texte</a>
+```
+
+- `nofollow` : ne transmet pas de jus SEO vers le site externe
+- `noopener` : sécurité (empêche le site cible d'accéder à `window.opener`)
+- `noreferrer` : ne transmet pas le referrer HTTP
+
+**Cas concernés :**
+- Liens de licences (CC BY, CC BY-SA…)
+- Liens vers hébergeur, APIs tierces (football-data.org, Meta, CNIL…)
+- Liens vers réseaux sociaux (Facebook, Instagram…)
+- Liens vers sources d'articles
+- Tout lien dans les pages légales (mentions légales, politique de confidentialité)
+
+**Seule exception : liens internes** (entre pages de football-passion.fr) → pas de `nofollow`, pas de `target="_blank"`.
+
+- ✅ **Exception documentée (décision du 2 novembre 2026)** : les liens vers **dixie.consulting** (site professionnel de l'éditeur : `templates/footer.php`, `a-propos.php`, `mentions-legales.php`) restent **sans `nofollow`** (avec `noopener noreferrer`) : c'est un lien volontaire entre sites de l'éditeur, utile en SEO. Tous les autres liens externes restent en `nofollow noopener noreferrer`, sans exception.
 
 ---
 
@@ -143,6 +350,48 @@ Toujours utiliser `rel="nofollow noopener noreferrer"` sur les liens de licence 
 
 ---
 
+### 🖼️ Logos et images : chercher d'abord sur Wikimedia Commons (règle du 8 novembre 2026)
+
+Pour les logos de clubs, photos de stades, de villes ou de monuments, **chercher d'abord sur [Wikimedia Commons](https://commons.wikimedia.org/wiki/Accueil)** (autorisation de l'utilisateur). Recherche possible par l'API : `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&srnamespace=6&format=json`, puis `prop=imageinfo&iiprop=url|extmetadata|size` pour lire **auteur (Artist), licence (LicenseShortName), URL du fichier et restrictions**.
+
+- **Toujours créditer** : nom de l'auteur et licence (ex. « CC BY-SA 4.0 », « Domaine public »), avec lien vers la page du fichier sur Commons (`rel="nofollow noopener noreferrer"`), dans une ligne « Crédit image » de l'article ou dans le pied de page de la vignette si la licence l'exige.
+- **Vérifier avant d'utiliser** : que le fichier est bien **le club ou le lieu voulu** (ex. « Logo AC Amiens » est l'Athlétic Club, pas l'Amiens SC) et **le logo actuel** (ex. « Logo FC Rouen 2000 » est l'ancien logo 2000-2009). En cas de doute, ne pas utiliser et demander le fichier à l'utilisateur.
+- Un logo de club reste une **marque déposée** même s'il est en domaine public : l'utiliser comme illustration d'identification du club, jamais comme logo du site.
+- Enregistrer le fichier dans `images/logo/` (nom kebab-case) et noter auteur + licence dans le journal de procédure. Ne rien télécharger depuis une autre source non vérifiée.
+
+**Comment récupérer un logo ou une image sur Wikimedia Commons (pas à pas)** :
+1. **Chercher** (requête simple, type « logo football <ville> » ; essayer aussi « <club> logo », le nom complet du club ou la catégorie) : `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=logo+football+amiens&srnamespace=6&srlimit=15&format=json` (ou parcourir `Category:<club>` avec `list=categorymembers&cmtitle=Category:...&cmtype=file`).
+2. **Lire les métadonnées** de chaque candidat : `...api.php?action=query&titles=File:<nom_avec_underscores>&prop=imageinfo&iiprop=url|extmetadata|size&format=json` → `url`, `Artist` (auteur), `LicenseShortName` (licence), `ImageDescription`, `DateTimeOriginal`, `Restrictions` (« trademarked » = marque déposée).
+3. **Contrôler** le bon club (pas un homonyme : AC Amiens ≠ Amiens SC), le **logo actuel** (pas un ancien), la licence (CC BY, CC BY-SA, domaine public ; éviter les images « non libres »). La page d'un club sur fr.wikipedia peut afficher un logo **non libre** hébergé sur Wikipédia (pas sur Commons) : ne pas le télécharger sans accord de l'utilisateur, demander le fichier.
+4. **Télécharger** l'`url` du fichier (`upload.wikimedia.org/...`) avec un User-Agent explicite (`Invoke-WebRequest ... -UserAgent "FootballPassionBot/1.0 (https://football-passion.fr)"`), vers `images/logo/<nom-kebab-case>.png`.
+5. **Préparer l'image** : les `.webp`/`.avif` se convertissent via PresentationCore (`BitmapDecoder` + `PngBitmapEncoder`) ; **vérifier la transparence** (un fond noir ou blanc opaque se rend transparent par remplissage depuis les bords) ; contrôler visuellement sur le fond de la vignette (bleu foncé).
+6. **Créditer** dans l'article : « Crédit image : <auteur>, licence <licence> (lien), via Wikimedia Commons (lien page du fichier) », liens en `nofollow noopener noreferrer`, et noter auteur + licence + URL dans `procedure-football-passion.md`.
+
+
+### 📺 Bandeaux défilants (règle du 15 novembre 2026)
+
+- **Accueil** : les 3 derniers articles (« À LA UNE », via `titre_court`), puis les 4 derniers scores de chaque compétition triés du plus récent au plus ancien. Sources : `data/matchs.json` (L1, L2, L3, C1, C3, C4, mis à jour par n8n ou à la main) et **`data/resultats-selections.json`** (Ligue des Nations, CAN : saisi à la main).
+- **À mettre à jour après chaque journée de Ligue des Nations ou de CAN** : ajouter les scores dans `data/resultats-selections.json` (`competition` = `LDN` ou `CAN`, `date`, `domicile`, `exterieur`, `score_dom`, `score_ext`). Les scores de L1/L2/L3/coupes d'Europe passent par `matchs.json` et n'ont rien à faire.
+- **Toutes les pages à bandeau (L1, L2, L3, Euro 2028, CAN 2027, TV CAN, catégorie CAN du blog)** utilisent le même gabarit `templates/ticker-resultats.php` : les 3 derniers articles **de la compétition** (`$tickerArtCats` = catégories ou étiquettes) puis ses derniers scores (`$tickerComps`, `$tickerLimit`). L1/L2/L3 : scores automatiques via `matchs.json`. Euro 2028 (`LDN`) et CAN (`CAN`) : scores à ajouter dans `data/resultats-selections.json`. Pour une nouvelle page, renseigner `$tickerComps`, `$tickerLabel`, `$tickerLink`, `$tickerLimit`, `$tickerArticles`, `$tickerArtCats` avant l'include (voir `ligue-1.php`).
+
+### 🏆 Convention d'URL des compétitions récurrentes (Ligue des Nations, 15 novembre 2026)
+
+- **Page hub evergreen sans année** : `/ligue-des-nations.php` (palmarès, format, édition en cours, liens vers les groupes). URL stable à conserver pour le référencement ; elle se met à jour à chaque édition.
+- **Une page par édition, avec la saison dans l'URL** : `/ligue-des-nations-2026-2027.php`, puis `/ligue-des-nations-2028-2029.php` (format à 3 ligues de 18 équipes à partir de 2028).
+- **Pages de groupe** : les URLs existantes (`ligue-des-nations-groupe-a1.php`…) ne changent pas (indexées) ; pour les prochaines éditions, mettre la saison dans l'URL (`ligue-des-nations-2028-2029-groupe-a1.php`).
+- Fil d'Ariane : Accueil › Ligue des Nations › 2026-2027 › Groupe X. Le pied de page, l'accueil et `euro-2028.php` pointent vers le hub sans année.
+
+### 🧬 Règle anti-contenu dupliqué (FP ↔ site satellite CDM 2026, règle du 13 novembre 2026)
+
+**Objectif** : éviter que Google détecte deux pages quasi identiques (sur `football-passion.fr` et `coupe-du-monde-2026.info`, ou entre deux articles du même site), ce qui dilue le référencement.
+
+1. **Un angle propre par site** : l'article du site satellite traite le sujet sous un angle différent (ex. Ronaldo : sa retraite et les chiffres de carrière sur Football Passion ; son dernier Mondial sur CDM 2026). Les chiffres complets, le contexte et les mises à jour vivent sur **football-passion.fr** ; le satellite fait un **résumé court** et **renvoie** vers le hub.
+2. **Texte réécrit, pas copié** : ne jamais coller les mêmes paragraphes sur les deux sites ; reformuler (plan, ordre, vocabulaire). Citations de tiers : courtes (moins de 15 mots), attribuées.
+3. **Titres et meta distincts** : `titre`, `meta_title`, `meta_desc` et `extrait` ne doivent pas être identiques ni quasi identiques d'un site à l'autre.
+4. **Contrôle avant publication (obligatoire)** : `python scripts/check-duplicate-content.py` (tous les articles) ou `--slug mon-slug`. Seuils sur les suites de 8 mots : **< 10 % OK**, **10 à 20 % à reformuler**, **> 20 % doublon : ne pas publier**. Le script compare FP ↔ CDM (`../coupe-du-monde-2026/data/articles.json`) et FP ↔ FP.
+5. **Balise canonique** : chaque page garde sa canonique **vers elle-même** (déjà en place). Si une republication identique est vraiment voulue (cas exceptionnel), mettre sur la copie du satellite une canonique **vers l'article de football-passion.fr** (jamais l'inverse), ou ne pas la publier.
+6. **Ne pas dupliquer les pages hub** : une page de synthèse (ex. `euro-2028-les-equipes.php`) renvoie vers les pages détaillées au lieu de recopier leur contenu ; les FAQ restent propres à chaque page (questions différentes).
+7. **Images** : réutiliser une image est possible, mais avec un `alt` et un nom de fichier propres au site.
 ## 🚀 Déploiement
 
 ```bash
@@ -150,9 +399,14 @@ Toujours utiliser `rel="nofollow noopener noreferrer"` sur les liens de licence 
 git push origin deploy
 
 # GitHub Actions se déclenche automatiquement
-# → FTP push vers Hostinger
-# → Site live en ~2 minutes
+# → ping du webhook Hostinger (secret HOSTINGER_WEBHOOK_URL)
+# → Hostinger pull automatiquement via son intégration Git
+# → Site live en ~1-2 minutes
 ```
+
+Identique au mécanisme de coupe-du-monde-2026.info — pas de SFTP.
+
+**Contrôles automatiques avant déploiement** (`.github/workflows/deploy.yml`) : `python scripts/validate-data.py` **bloque** le déploiement si `articles-index.json` ou `matchs.json` est invalide (par exemple enveloppé dans `{"value": ...}`) ; `scripts/check-duplicate-content.py` publie un **avertissement non bloquant** si deux articles se ressemblent trop. En local, lancer `python scripts/validate-data.py` avant chaque commit touchant aux données.
 
 ---
 
@@ -181,8 +435,9 @@ git push origin deploy
 
 - `templates/header.php` — utilisé par toutes les pages
 - `templates/footer.php` — idem
-- `data/articles.json` — toujours valider le JSON
+- `data/articles-index.json` et `data/articles/*.json` — toujours valider le JSON (`python scripts/validate-data.py`)
 - `data/matchs.json` — données officielles
+- `templates/ticker-resultats.php` — utilisé par l'accueil, L1, L2, L3, Euro 2028 et les pages CAN
 
 ---
 
@@ -205,4 +460,4 @@ Ce projet est pensé pour la **scalabilité** et l'**automatisation**. Chaque ar
 
 ---
 
-*Dernière mise à jour : 29 juillet 2026*
+*Dernière mise à jour : 15 novembre 2026*

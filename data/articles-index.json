@@ -1,5 +1,35 @@
 [
     {
+        "id": 117,
+        "slug": "ligue-europa-journee-5-om-levski-rennes-nec-lyon-2026-2027",
+        "titre": "Ligue Europa, journée 5 : l'OM bat Levski Sofia (1-0), Rennes cède à Nimègue (3-1), Lyon accroché (0-0)",
+        "categorie": "Europa",
+        "etiquettes": [
+            "Europa League",
+            "Clubs français"
+        ],
+        "date": "2026-11-28",
+        "extrait": "Marseille 1-0 Levski Sofia, NEC Nimègue 3-1 Rennes, Lyon 0-0 Lillestrøm : les 18 résultats de la 5e journée de Ligue Europa (26 novembre 2026) et le classement de la phase de ligue.",
+        "vignette": "/images/ligue-europa-journee-5-om-levski-rennes-nec-lyon-2026-2027.jpg",
+        "image_alt": "Ligue Europa journee 5 : Marseille 1-0 Levski Sofia, NEC Nimegue 3-1 Rennes, Lyon 0-0 Lillestrom, Bournemouth leader",
+        "titre_court": "Europa League J5 : l'OM gagne, Rennes chute"
+    },
+    {
+        "id": 118,
+        "slug": "ligue-conference-journee-4-hearts-monaco-brighton-ajax-2026-2027",
+        "titre": "Ligue Conférence, journée 4 : Monaco gagne à Hearts (3-2) et reste parfait, Brighton et Ajax s'imposent",
+        "categorie": "Conference",
+        "etiquettes": [
+            "Conference League",
+            "Clubs français"
+        ],
+        "date": "2026-11-28",
+        "extrait": "Hearts 2-3 Monaco, Brighton 4-0 Craiova, Ajax 4-0 Thoune : les 18 résultats de la 4e journée de Ligue Conférence (26 novembre 2026) et le classement avec Monaco leader à 12 points.",
+        "vignette": "/images/ligue-conference-journee-4-hearts-monaco-brighton-ajax-2026-2027.jpg",
+        "image_alt": "Ligue Conference journee 4 : Hearts 2-3 Monaco, Brighton 4-0 Craiova, Ajax 4-0 Thoune, Monaco leader",
+        "titre_court": "Conférence J4 : Monaco gagne à Hearts (3-2)"
+    },
+    {
         "id": 116,
         "slug": "ligue-des-champions-journee-5-psg-roma-lille-bayern-lens-leipzig-2026-2027",
         "titre": "Ligue des champions, J5 : le PSG tenu en échec par la Roma (2-2), Lille bat le Bayern (2-1), Lens battu à Leipzig",

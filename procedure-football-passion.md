@@ -678,6 +678,8 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **28 novembre 2026, Ligue Conférence journée 4** : 18 scores du 26/11 saisis dans `data/matchs.json` (ids 9000401 à 9000418 passés en FINISHED), dont Hearts 2-3 Monaco et Brighton 4-0 Craiova. Programme de la J5 (10/12) vérifié identique au texte fourni, rien à modifier. Pas d'article rédigé (non demandé).
 
+- **28 novembre 2026, articles Ligue Europa J5 (id 117) et Ligue Conférence J4 (id 118)** : `ligue-europa-journee-5-om-levski-rennes-nec-lyon-2026-2027` (catégorie Europa ; OM 24e avec 6 pts, Rennes 22e, Lyon 14e, Bournemouth leader parfait 15 pts) et `ligue-conference-journee-4-hearts-monaco-brighton-ajax-2026-2027` (catégorie Conference ; Monaco leader 12/12, Brighton 10 pts, Ajax meilleure attaque 13 buts, six équipes à 9 pts). Scores et classements calculés depuis `data/matchs.json` (points, différence de buts, buts marqués ; unicité des clubs français vérifiée par script). Vignettes générées par script (`vign-spec.ps1` + `vign-spec.json`), pas de reel Facebook fourni.
+
 *Dernière mise à jour : 28 novembre 2026*
 
 ### 3.73 Bug n8n : régression intermittente des statuts de matchs — 15 octobre 2026

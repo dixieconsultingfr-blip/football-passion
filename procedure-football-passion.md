@@ -674,7 +674,9 @@ Premier point chiffré GSC (3 derniers mois) partagé par l'utilisateur via capt
 
 - **26 novembre 2026, article Ligue des champions J5 (id 116)** : `ligue-des-champions-journee-5-psg-roma-lille-bayern-lens-leipzig-2026-2027`, catégorie CL ; scores et classement calculés depuis `data/matchs.json` (18 matchs des 24 et 25/11, n8n à jour) : Real 15 pts, PSG 13 (invaincu), Lille 29e (4 pts), Lens 34e (3 pts) ; buteur Udol (Lens) repris du texte fourni ; prochains matchs J6 (8-9/12) tirés de matchs.json. Vignette `ldc blog.png` convertie en WebP 1200x675. Pas de reel Facebook fourni.
 
-*Dernière mise à jour : 26 novembre 2026*
+- **28 novembre 2026, Europa League journée 5** : 18 scores du 26/11 saisis dans `data/matchs.json` (le calendrier J5-J8 existait déjà ; ids 9000221 à 9000238 passés en FINISHED), dont OM 1-0 Levski Sofia, NEC Nimègue 3-1 Rennes, Lyon 0-0 Lillestrøm. Programme de la J6 (10/12) vérifié identique au texte fourni, rien à modifier. Pas d'article rédigé (non demandé).
+
+*Dernière mise à jour : 28 novembre 2026*
 
 ### 3.73 Bug n8n : régression intermittente des statuts de matchs — 15 octobre 2026
 
